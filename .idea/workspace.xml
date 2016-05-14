@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0682e8c0-0d4b-444b-bf7d-b4b10f00745e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/physeptools/convert/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/physeptools/convert/fasta2phy.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/physeptools/phylotree/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/physeptools/phylotree/doraxml.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/testdogblocks.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/testdomuscle.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/testdoraxml.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/testfasta2phy.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/protein.fastq" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/protein_alignment.fasta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/protein_alignment.fasta-gb1" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/protein_alignment.fasta-gb1.htm" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/physeptools/dogblocks.py" afterPath="$PROJECT_DIR$/physeptools/phylotree/dogblocks.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/physeptools/domuscle.py" afterPath="$PROJECT_DIR$/physeptools/phylotree/domuscle.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/physeptools/physeptools.py" afterPath="$PROJECT_DIR$/physeptools/phylotree/physep.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="0682e8c0-0d4b-444b-bf7d-b4b10f00745e" name="Default" comment="" />
     <ignored path="physpetools.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -656,7 +639,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="117" y="69" width="938" height="697" extended-state="0" />
+    <frame x="117" y="69" width="938" height="697" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
