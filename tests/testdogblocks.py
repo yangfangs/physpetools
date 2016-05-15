@@ -1,3 +1,3 @@
-from physeptools.phylotree.dogblocks import dogblocks
+from physeptool.phylotree.dogblocks import dogblocks
 
-dogblocks("/home/yangfang/physpetools/testdata/muscle_alignment/protein.fastq.alg","gb1")
+dogblocks("/home/yangfang/physpetools/testdata/concatenate/concatenate.fasta","gb1")

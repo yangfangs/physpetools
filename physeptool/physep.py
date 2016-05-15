@@ -1,10 +1,11 @@
 import argparse
-import sys
-sys.path.append("../")
-from domuscle import domuscle
-from dogblocks import dogblocks
-from doraxml import doraxml
+# import sys
+# sys.path.append("../")
+from phylotree.domuscle import domuscle_file
+from phylotree.dogblocks import dogblocks
+from phylotree.doraxml import doraxml
 from convert.fasta2phy import fasta2phy
+from convert.concatenate import cocat_path
 
 """
 the main module as enter point and contain a main() function to invoke other
@@ -34,14 +35,16 @@ print "now loading data and constructing species phylogenetic tree..."
 
 # in_put = '/home/yangfang/physpetools/testdata/protein.fastq'
 # out_put = '/home/yangfang/physpetools/testdata/phytree.nwk'
-# physep.py -in /home/yangfang/physpetools/testdata/protein.fastq -out /home/yangfang/physpetools/testdata/phytree
+# physep.py -in /home/yangfang/physpetools/testdata/proseqfile -out /home/yangfang/physpetools/testdata/phytree
 
 def main():
     in_put = args.fastafile
     out_put = args.nwkfile
-    out_alg = domuscle(in_put, out_put)
+    out_alg = domuscle_file(in_put, out_put)
     print "alignment done"
-    out_gblock = dogblocks(out_alg, "gb1")
+    out_concat = cocat_path(out_alg)
+    print "concatenate done"
+    out_gblock = dogblocks(out_concat, "gb1")
     print "Gblocks done"
     out_f2p = fasta2phy(out_gblock)
     print "convert fasta to PHYLIP format done"

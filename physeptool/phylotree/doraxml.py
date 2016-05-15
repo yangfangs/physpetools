@@ -17,7 +17,7 @@ def doraxml(inputfile,outputfile):
         pass
     else:
         os.mkdir(outputfile)
-    str = "raxmlHPC-PTHREADS-AVX -f a -T 6 -m PROTGAMMAJTTX -o acn -p 12345 -x 12345 -# 100 -n T1"
+    str = "raxmlHPC-PTHREADS-AVX -f a -T 6 -m PROTGAMMAJTTX -o hsa -p 12345 -x 12345 -# 100 -n T1"
     cmd = str + " -s " + inputfile + " -w " + outputfile
     print cmd
     subprocess.call(cmd, shell=True)
