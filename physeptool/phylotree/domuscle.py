@@ -29,6 +29,12 @@ def domuscle(indata, outdata):
 
 
 def domuscle_file(indata_files, outdata):
+    """
+call muscle software to do alignment
+    :param indata_files: a directory contain more than one file
+    :param outdata: out file after alignment
+    :return: path
+    """
     out_path = os.path.dirname(outdata)
     muscle_dir = os.path.join(out_path, 'muscle_alignment_pro')
     # muscle_dir = os.path.join(indata_files, 'muscle_alignment')

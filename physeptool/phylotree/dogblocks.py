@@ -10,6 +10,12 @@ function call gblock block the anligment data forme muscle.
 # Gblocks protein_alignment.fasta -t=p -e=-gb1 -b4=5 -d=y
 
 def dogblocks(indata, outdata):
+    """
+    do gblocks after muslce and concatenate
+    :param indata: a fasta file input after gblock
+    :param outdata: append name after gblocks
+    :return: a file path of gblocks result
+    """
     alg_name = os.path.basename(indata)
     out_path = os.path.dirname(indata)
     gblock_name = alg_name + '-' + outdata

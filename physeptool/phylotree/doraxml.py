@@ -13,6 +13,11 @@ import subprocess
 
 
 def doraxml(inputfile,outputfile):
+    """
+call RAxML method to construct species tree
+    :param inputfile: abs path of .phy format files
+    :param outputfile: a file contain RAxML result
+    """
     if os.path.exists(outputfile):
         pass
     else:
@@ -21,8 +26,7 @@ def doraxml(inputfile,outputfile):
     cmd = str + " -s " + inputfile + " -w " + outputfile
     print cmd
     subprocess.call(cmd, shell=True)
-    # pro = subprocess.Popen(cmd, stdout=subprocess.PIPE)
-    # pro.communicate()
+
 
 
 
