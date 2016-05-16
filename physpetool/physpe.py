@@ -35,7 +35,7 @@ print "now loading data and constructing species phylogenetic tree..."
 
 # in_put = '/home/yangfang/physpetools/testdata/protein.fastq'
 # out_put = '/home/yangfang/physpetools/testdata/phytree.nwk'
-# physep.py -in /home/yangfang/physpetools/testdata/proseqfile -out /home/yangfang/physpetools/testdata/phytree
+# physpe.py -in /home/yangfang/physpetools/testdata/proseqfile -out /home/yangfang/physpetools/testdata/phytree
 
 def main():
     in_put = args.fastafile

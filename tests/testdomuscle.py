@@ -1,4 +1,4 @@
-from physeptool.phylotree.domuscle import domuscle, domuscle_file
+from physpetool.phylotree.domuscle import domuscle, domuscle_file
 
 # test domuscle fuction
 # input = "/home/yangfang/physpetools/testdata/protein.fastq"

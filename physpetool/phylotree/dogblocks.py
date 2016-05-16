@@ -1,5 +1,5 @@
-import subprocess
 import os
+import subprocess
 
 """
 function call gblock block the anligment data forme muscle.
