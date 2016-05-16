@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0682e8c0-0d4b-444b-bf7d-b4b10f00745e" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/physeptool/__init__.py" afterPath="$PROJECT_DIR$/physpetool/phylotree/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/physeptool/convert/__init__.py" afterPath="$PROJECT_DIR$/physpetool/convert/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/physeptool/convert/concatenate.py" afterPath="$PROJECT_DIR$/physpetool/convert/concatenate.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/physeptool/convert/fasta2phy.py" afterPath="$PROJECT_DIR$/physpetool/convert/fasta2phy.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/physeptool/phylotree/__init__.py" afterPath="$PROJECT_DIR$/physpetool/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/physeptool/phylotree/dogblocks.py" afterPath="$PROJECT_DIR$/physpetool/phylotree/dogblocks.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/physeptool/phylotree/domuscle.py" afterPath="$PROJECT_DIR$/physpetool/phylotree/domuscle.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/physeptool/phylotree/doraxml.py" afterPath="$PROJECT_DIR$/physpetool/phylotree/doraxml.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/physeptool/physep.py" afterPath="$PROJECT_DIR$/physpetool/physpe.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/setup.py" afterPath="$PROJECT_DIR$/setup.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testconcatenate.py" afterPath="$PROJECT_DIR$/tests/testconcatenate.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testdogblocks.py" afterPath="$PROJECT_DIR$/tests/testdogblocks.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testdomuscle.py" afterPath="$PROJECT_DIR$/tests/testdomuscle.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testdoraxml.py" afterPath="$PROJECT_DIR$/tests/testdoraxml.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/testfasta2phy.py" afterPath="$PROJECT_DIR$/tests/testfasta2phy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/physpetool/convert/fasta2phy.py" afterPath="$PROJECT_DIR$/physpetool/convert/fasta2phy.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/physpetool/phylotree/domuscle.py" afterPath="$PROJECT_DIR$/physpetool/phylotree/domuscle.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/physpetool/phylotree/doraxml.py" afterPath="$PROJECT_DIR$/physpetool/phylotree/doraxml.py" />
     </list>
     <ignored path="physpetools.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,8 +29,8 @@
       <file leaf-file-name="domuscle.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/physpetool/phylotree/domuscle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+            <state relative-caret-position="288">
+              <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
               <folding>
                 <element signature="e#0#17#0" expanded="true" />
               </folding>
@@ -50,11 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="physpe.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/physpetool/physpe.py">
+      <file leaf-file-name="testdomuscle.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/testdomuscle.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state relative-caret-position="198">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -70,7 +58,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="setup.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="concatenate.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/physpetool/convert/concatenate.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fasta2phy.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/physpetool/convert/fasta2phy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setup.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/setup.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="324">
@@ -83,9 +91,11 @@
       <file leaf-file-name="doraxml.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/physpetool/phylotree/doraxml.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="576">
-              <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="18">
+              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -137,6 +147,9 @@
         <option value="$PROJECT_DIR$/physeptool/phylotree/dogblocks.py" />
         <option value="$PROJECT_DIR$/physeptool/phylotree/domuscle.py" />
         <option value="$PROJECT_DIR$/setup.py" />
+        <option value="$PROJECT_DIR$/physpetool/phylotree/doraxml.py" />
+        <option value="$PROJECT_DIR$/physpetool/convert/fasta2phy.py" />
+        <option value="$PROJECT_DIR$/physpetool/phylotree/domuscle.py" />
       </list>
     </option>
   </component>
@@ -221,7 +234,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="testdata" />
+              <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -236,6 +249,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="physpetool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="physpetools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="physpetools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="physpetool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="phylotree" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="physpetools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="physpetools" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="physpetool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="convert" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -560,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1463320823134</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="change name">
+      <created>1463381009879</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1463381009879</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -631,7 +687,8 @@
     <MESSAGE value="change setup version" />
     <MESSAGE value="aad concatenate and domuscle_file function" />
     <MESSAGE value="add annotate" />
-    <option name="LAST_COMMIT_MESSAGE" value="add annotate" />
+    <MESSAGE value="change name" />
+    <option name="LAST_COMMIT_MESSAGE" value="change name" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -836,6 +893,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -843,6 +901,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -886,13 +945,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/physpetool/convert/fasta2phy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testdata/concatenate/concatenate.phy" />
     <entry file="file://$PROJECT_DIR$/testdata/concatenate/concatenate.fasta">
       <provider selected="true" editor-type-id="text-editor">
@@ -924,44 +976,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/testdomuscle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/physpetool/phylotree/domuscle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/physpetool/physpe.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/physpetool/phylotree/doraxml.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/physpetool/convert/concatenate.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -974,10 +992,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/testdomuscle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/physpetool/phylotree/domuscle.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/physpetool/convert/concatenate.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/physpetool/phylotree/doraxml.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/setup.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/physpetool/convert/fasta2phy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>

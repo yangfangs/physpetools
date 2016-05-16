@@ -10,6 +10,12 @@ function to call muscle to do alignment
 
 # muscle -in process_L1.txt -out process_L1.afa -maxiters 100
 def domuscle(indata, outdata):
+    """
+    call muscle software to do alignment
+    :param indata: only one file must fasta format
+    :param outdata: the out is abs path with a file name
+    :return: outdata path
+    """
     out_path = os.path.dirname(outdata)
     fa_name = os.path.basename(indata)
     muscle_dir = os.path.join(out_path, 'muscle_alignment')

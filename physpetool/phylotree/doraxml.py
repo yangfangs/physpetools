@@ -1,5 +1,5 @@
 import os
-
+import subprocess
 """
 function to call RAxML construct tree
 
@@ -9,7 +9,7 @@ function to call RAxML construct tree
 # -m PROTGAMMAJTTX -o aoe -p 12345 -x 12345 -#autoMRE
 # -s /home/yangfang/test_raxml/protein_alignment.fasta-gb1.phy -n T1
 
-import subprocess
+
 
 
 def doraxml(inputfile,outputfile):

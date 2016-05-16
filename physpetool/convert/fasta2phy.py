@@ -8,6 +8,10 @@ convert fasta format to PHYLIP(.phy) format
 
 # function to read fasta file
 def read_fasta(fp):
+    """
+    read *.fasta file and parse
+    :param fp: a fasta format file
+    """
     seq_name, seq_pro = None, []
     for line in fp:
         line = line.rstrip()
@@ -20,6 +24,11 @@ def read_fasta(fp):
 
 
 def fasta2phy(inputfile):
+    """
+    convert fasta format file to PHYLIP format
+    :param inputfile: *.fasta file
+    :return: output data path
+    """
     fwfile = inputfile + '.phy'
     fw = open(fwfile, 'w')
     fr = open(inputfile)
