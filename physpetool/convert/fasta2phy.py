@@ -1,11 +1,13 @@
 import os
 
+from physpetool.phylotree.log import getLogging
+
 """
 convert fasta format to PHYLIP(.phy) format
 
 """
 
-
+logfasta2phy = getLogging('convert')
 # function to read fasta file
 def read_fasta(fp):
     """
@@ -43,6 +45,7 @@ def fasta2phy(inputfile):
         fw.write("%d %d\n" % (count, seq_len))
         fp.seek(0, 0)
         for seq_name, seq_pro in read_fasta(fp):
-            print seq_name, seq_pro
+            logfasta2phy.debug("sequence name is {0} sequence is {1}".format(seq_name, seq_pro))
             fw.write("%s %s\n" % (seq_name, seq_pro))
+    logfasta2phy.info("Fasta format converted to PHYLIP format was completed")
     return fwfile

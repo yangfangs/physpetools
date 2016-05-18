@@ -1,12 +1,14 @@
 import os
 import subprocess
 
+from physpetool.phylotree.log import getLogging
+
 """
 function call gblock block the anligment data forme muscle.
 /home/yangfang/physpetools/testdata/muscle_alignment/protein.fastq.alg-gb1
 """
 
-
+loggblocks = getLogging('Gblocks')
 # Gblocks protein_alignment.fasta -t=p -e=-gb1 -b4=5 -d=y
 
 def dogblocks(indata, outdata):
@@ -23,4 +25,5 @@ def dogblocks(indata, outdata):
 
     cmd = "Gblocks " + indata + " -t=p" + " -e=-" + outdata
     subprocess.call(cmd, shell=True)
+    loggblocks.info('Gblocks was completed')
     return gblock_data

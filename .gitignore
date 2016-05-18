@@ -10,3 +10,4 @@ testdata
 evn
 .gitigonre
 .directory
+*.log

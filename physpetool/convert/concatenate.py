@@ -1,10 +1,13 @@
 import os
 
+from physpetool.phylotree.log import getLogging
+
 """
 
 concatenate the muscle alignment files to only one file.
 
 """
+logconcat = getLogging('concatenate')
 
 
 def read_fasta_co(fp):
@@ -48,9 +51,7 @@ def cocat_path(muscle_alg):
     result = 'concatenate.fasta'
     concat_dir = os.path.join(result_dir, 'concatenate')
     # crate a directory to store .phy file
-    if os.path.exists(concat_dir):
-        pass
-    else:
+    if not os.path.exists(concat_dir):
         os.mkdir(concat_dir)
     # write concatenate result to file
     result_path = os.path.join(concat_dir, result)
@@ -64,11 +65,10 @@ def cocat_path(muscle_alg):
     num = len(dict.get(alg_files[0]))
     for i in range(num):
         concat = []
-        print each_k[i]
         for j in alg_files:
             concat.append(dict.get(j)[i])
-        print ''.join(concat)
+        logconcat.debug('> {0} {1}'.format(each_k[i], ''.join(concat)))
         fw.write(each_k[i] + '\n')
         fw.write(''.join(concat) + '\n')
+    logconcat.info("concatenate gene was completed")
     return result_path
-

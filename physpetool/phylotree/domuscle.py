@@ -2,12 +2,15 @@ import subprocess
 import os
 import os.path
 
+from physpetool.phylotree.log import getLogging
+
+
 """
 function to call muscle to do alignment
 
 """
 
-
+logdomuscle = getLogging('muscle')
 # muscle -in process_L1.txt -out process_L1.afa -maxiters 100
 def domuscle(indata, outdata):
     """
@@ -54,4 +57,5 @@ call muscle software to do alignment
         each_pro = os.path.join(indata_files, i)
         cmd = "muscle -in " + each_pro + " -out " + out_alg
         subprocess.call(cmd, shell=True)
+    logdomuscle.info("Multiple sequence alignment by Muscle was completed")
     return muscle_dir
