@@ -12,11 +12,11 @@ Ribosomal protein L14,K02875,K02874
 Ribosomal protein L15,K02877,K17437
 Ribosomal protein L16/L10E,K02866,K02872
 Ribosomal protein L18,K02883,K02882
-Ribosomal protein L22 ,K02891,K02890
-Ribosomal protein L3 ,K02925 ,K02906 
+Ribosomal protein L22,K02891,K02890
+Ribosomal protein L3,K02925 ,K02906 
 Ribosomal protein L5,K02932,K02931
 Ribosomal protein L6P/L9E,K02940,K02939
-Ribosomal protein S11,K02949 ,K02948 
+Ribosomal protein S11,K02949,K02948
 Ribosomal protein S15P/S13E,K02956 ,K02956
 Ribosomal protein S17,K02962,K02961
 Ribosomal protein S2,K02981,K02967
@@ -24,7 +24,7 @@ Ribosomal protein S3,K02985,K02982
 Ribosomal protein S4,K02987,K02986
 Ribosomal protein S5,K02989,K02988
 Ribosomal protein S7,K02993,K02992
-Ribosomal protein S8,K02995 ,K02994 
+Ribosomal protein S8,K02995 ,K02994
 Ribosomal protein S9,K02997,K02996
 Seryl-tRNA synthetase,K01875,K01875
 Arginyl-tRNA synthetase,K01887,K01887
