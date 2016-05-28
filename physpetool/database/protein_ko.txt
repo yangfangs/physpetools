@@ -1,0 +1,31 @@
+Ribosomal protein L1,K02865,K02863
+DNA-directed RNA polymerase subunit alpha,K03040,K03040
+Leucyl-tRNA synthetase,K01869,K01869
+Metal-dependent proteases with chaperone activity,K01409,K01409
+Phenylalanine-tRNA synthethase alpha subunit,K01889,K01889
+Predicted GTPase probable translation factor,K06942,K06942
+Preprotein translocase subunit SecY,K10956,K10956
+Ribosomal protein L11,K02868,K02867
+Ribosomal protein L13,K02873,K02871
+Ribosomal protein L14,K02875,K02874
+Ribosomal protein L15,K02877,K17437
+Ribosomal protein L16/L10E,K02866,K02872
+Ribosomal protein L18,K02883,K02882
+Ribosomal protein L22,K02891,K02890
+Ribosomal protein L3,K02925,K02906
+Ribosomal protein L5,K02932,K02931
+Ribosomal protein L6P/L9E,K02940,K02939
+Ribosomal protein S11,K02949,K02948
+Ribosomal protein S15P/S13E,K02956,K02956
+Ribosomal protein S17,K02962,K02961
+Ribosomal protein S2,K02981,K02967
+Ribosomal protein S3,K02985,K02982
+Ribosomal protein S4,K02987,K02986
+Ribosomal protein S5,K02989,K02988
+Ribosomal protein S7,K02993,K02992
+Ribosomal protein S8,K02995,K02994
+Ribosomal protein S9,K02997,K02996
+Seryl-tRNA synthetase,K01875,K01875
+Arginyl-tRNA synthetase,K01887,K01887
+DNA-directed RNA polymerase beta subunit,K03043,K03043
+Ribosomal protein S13,K02953,K02952
