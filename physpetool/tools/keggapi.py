@@ -16,7 +16,7 @@ def getkolist(ko):
     for line in page:
         html = line.strip().split('\t')
         listko.append(html)
-    return listko
+        # return listko
 
 
 # \nORGANISM    hsa  Homo sapiens (human)\nPATHWAY
@@ -37,5 +37,6 @@ def parsegetpro(propage):
 
 def getprotein(proid):
     # http://rest.kegg.jp/get/hsa:10458+ece:Z5100+pon:100172290
-    url = "http://rest.kegg.jp/get/" + proid +"/aaseq"
+    url = "http://rest.kegg.jp/get/" + proid + "/aaseq"
     page = urllib2.urlopen(url)
+    return page
