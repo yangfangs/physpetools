@@ -6,7 +6,7 @@ from physpetool.phylotree.domuscle import domuscle, domuscle_file
 # domuscle(input, output)
 
 # test domuscle_file fuction
-input = "/home/yangfang/physpetools/testdata/proseqfile"
-output = "/home/yangfang/physpetools/testdata/phytree"
+input = "/home/yangfang/physpetools/testdata/temp/conserved_protein"
+output = "/home/yangfang/physpetools/testdata/phytree/test"
 out_alg = domuscle_file(input, output)
 print out_alg

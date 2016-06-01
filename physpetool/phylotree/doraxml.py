@@ -3,6 +3,7 @@ import subprocess
 
 
 from physpetool.phylotree.log import getLogging
+from physpetool.softwares.path import getlocalpath
 
 logdoraxml = getLogging('RAxML')
 """
@@ -21,9 +22,10 @@ call RAxML method to construct species tree
     :param inputfile: abs path of .phy format files
     :param outputfile: a file contain RAxML result
     """
+    raxmlpath = getlocalpath()
     if not os.path.exists(outputfile):
         os.mkdir(outputfile)
-    str = "raxmlHPC-PTHREADS-AVX -f a -T 6 -m PROTGAMMAJTTX -o acn -p 12345 -x 12345 -# 20 -n T1"
+    str = raxmlpath + "/raxmlHPC-PTHREADS-AVX -f a -T 6 -m PROTGAMMAJTTX -o acn -p 12345 -x 12345 -# 20 -n T1"
     cmd = str + " -s " + inputfile + " -w " + outputfile
     subprocess.call(cmd, shell=True)
     logdoraxml.info("species phylogenetic constructed by RAxML was completed")

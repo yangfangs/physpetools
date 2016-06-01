@@ -14,6 +14,7 @@ setup(
     long_description="long_descr",
     author="Yang Fang",
     author_email="yangfangscu@gmail.com",
-    package_data={'': ['*.md'], 'physpetool': ['database/*.db']},
+    package_data={'': ['*.md'], 'physpetool': ['database/*.db'],
+                  'physpetool': ['softwares/*']},
     url="https://gitlab.com/xiaoxiaoyang/physpetool/tree/master",
 )

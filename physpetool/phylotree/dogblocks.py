@@ -2,6 +2,7 @@ import os
 import subprocess
 
 from physpetool.phylotree.log import getLogging
+from physpetool.softwares.path import getlocalpath
 
 """
 function call gblock block the anligment data forme muscle.
@@ -18,12 +19,13 @@ def dogblocks(indata, outdata):
     :param outdata: append name after gblocks
     :return: a file path of gblocks result
     """
+    gblockpath = getlocalpath()
     alg_name = os.path.basename(indata)
     out_path = os.path.dirname(indata)
     gblock_name = alg_name + '-' + outdata
     gblock_data = os.path.join(out_path, gblock_name)
 
-    cmd = "Gblocks " + indata + " -t=p" + " -e=-" + outdata
+    cmd = gblockpath + "/Gblocks " + indata + " -t=p" + " -e=-" + outdata
     subprocess.call(cmd, shell=True)
     loggblocks.info('Gblocks was completed')
     return gblock_data

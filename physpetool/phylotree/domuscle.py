@@ -3,7 +3,7 @@ import os
 import os.path
 
 from physpetool.phylotree.log import getLogging
-
+from physpetool.softwares.path import getlocalpath
 
 """
 function to call muscle to do alignment
@@ -42,6 +42,7 @@ call muscle software to do alignment
     :param outdata: out file after alignment
     :return: path
     """
+    mupath = getlocalpath()
     out_path = os.path.dirname(outdata)
     muscle_dir = os.path.join(out_path, 'temp/muscle_alignment_pro')
     # muscle_dir = os.path.join(indata_files, 'muscle_alignment')
@@ -51,7 +52,7 @@ call muscle software to do alignment
     for i in pro_name:
         out_alg = os.path.join(muscle_dir, i.split('.')[0])
         each_pro = os.path.join(indata_files, i)
-        cmd = "muscle -in " + each_pro + " -out " + out_alg
+        cmd = mupath + "/muscle -in " + each_pro + " -out " + out_alg
         subprocess.call(cmd, shell=True)
     logdomuscle.info("Multiple sequence alignment by Muscle was completed")
     return muscle_dir
