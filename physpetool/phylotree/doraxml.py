@@ -25,7 +25,7 @@ call RAxML method to construct species tree
     raxmlpath = getlocalpath()
     if not os.path.exists(outputfile):
         os.mkdir(outputfile)
-    str = raxmlpath + "/raxmlHPC-PTHREADS-AVX -f a -T 6 -m PROTGAMMAJTTX -o acn -p 12345 -x 12345 -# 20 -n T1"
+    str = raxmlpath + "/raxmlHPC-PTHREADS-AVX -f a -T 6 -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1"
     cmd = str + " -s " + inputfile + " -w " + outputfile
     subprocess.call(cmd, shell=True)
     logdoraxml.info("species phylogenetic constructed by RAxML was completed")

@@ -78,7 +78,7 @@ def retrieveprotein(proindexlist, outpath):
         f.close()
         logretrieveprotein.info("retrieve " + "Conserved protein p" + str(p) + " success")
         p += 1
-    logretrieveprotein.info("retrieve from Kegg DB " + str(p) + " highly conserved proteins")
+    logretrieveprotein.info("retrieve from Kegg DB " + str(p-1) + " highly conserved proteins")
     return dirname
 
 
@@ -100,8 +100,4 @@ def test():
 
 
 if __name__ == '__main__':
-    # lst = ["hsa", "ptr", "pps", "ggo", "pon", "nle", "mcc", "mcf", "rro", "cjc"]
-    # doretrieve(lst)
-    relpath = os.path.split(os.path.realpath(__file__))[0]
-    print relpath
-
+    test()

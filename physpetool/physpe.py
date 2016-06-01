@@ -6,9 +6,9 @@ from phylotree.dogblocks import dogblocks
 from phylotree.doraxml import doraxml
 from convert.fasta2phy import fasta2phy
 from convert.concatenate import cocat_path
-from physpetool.phylotree.log import getLogging
-from physpetool.phylotree.retrieveprotein import doretrieve, test
-
+from physpetool.phylotree.log import getLogging, setlogdir
+from physpetool.phylotree.retrieveprotein import doretrieve
+import argparse
 """
 the main module as enter point and contain a main() function to invoke other
 script same as pipeline.
@@ -18,7 +18,7 @@ APP_DESC = """
 constructing phylogenetic trees now
 
 """
-import argparse
+
 
 parser = argparse.ArgumentParser(description=APP_DESC)
 
@@ -43,7 +43,7 @@ def main():
 
     in_put = args.fastafile
     out_put = args.nwkfile
-    # test()
+    setlogdir(out_put)
     out_retrieve = doretrieve(in_put, out_put)
     out_alg = domuscle_file(out_retrieve, out_put)
     out_concat = cocat_path(out_alg)
