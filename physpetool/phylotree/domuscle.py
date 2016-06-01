@@ -48,10 +48,8 @@ call muscle software to do alignment
     muscle_dir = os.path.join(out_path, 'muscle_alignment_pro')
     # muscle_dir = os.path.join(indata_files, 'muscle_alignment')
     pro_name = os.listdir(indata_files)
-    if os.path.exists(muscle_dir):
-        pass
-    else:
-        os.mkdir(muscle_dir)
+    if not os.path.exists(muscle_dir):
+        os.makedirs(muscle_dir)
     for i in pro_name:
         out_alg = os.path.join(muscle_dir, i.split('.')[0])
         each_pro = os.path.join(indata_files, i)
