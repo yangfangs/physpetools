@@ -52,7 +52,7 @@ def cocat_path(muscle_alg):
     concat_dir = os.path.join(result_dir, 'concatenate')
     # crate a directory to store .phy file
     if not os.path.exists(concat_dir):
-        os.mkdir(concat_dir)
+        os.makedirs(concat_dir)
     # write concatenate result to file
     result_path = os.path.join(concat_dir, result)
     fw = open(result_path, 'w')

@@ -1,6 +1,4 @@
 import logging
-import os
-import argparse
 
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(name)s[line:%(lineno)d] %(levelname)s %(message)s',
@@ -12,7 +10,7 @@ console = logging.StreamHandler()
 
 console.setLevel(logging.INFO)
 
-formatter = logging.Formatter('%(asctime)s %(name)s[line:%(lineno)d] %(levelname)s %(message)s')
+formatter = logging.Formatter('%(asctime)s %(name)s %(levelname)s: %(message)s')
 
 console.setFormatter(formatter)
 
@@ -21,5 +19,4 @@ logging.getLogger('').addHandler(console)
 
 def getLogging(name):
     return logging.getLogger(name)
-
 

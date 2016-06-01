@@ -21,12 +21,10 @@ def domuscle(indata, outdata):
     """
     out_path = os.path.dirname(outdata)
     fa_name = os.path.basename(indata)
-    muscle_dir = os.path.join(out_path, 'muscle_alignment')
+    muscle_dir = os.path.join(out_path, 'temp/muscle_alignment')
 
-    if os.path.exists(muscle_dir):
-        pass
-    else:
-        os.mkdir(muscle_dir)
+    if not os.path.exists(muscle_dir):
+        os.makedirs(muscle_dir)
     muscle_file = fa_name + '.alg'
 
     out_alg = os.path.join(muscle_dir, muscle_file)
@@ -45,7 +43,7 @@ call muscle software to do alignment
     :return: path
     """
     out_path = os.path.dirname(outdata)
-    muscle_dir = os.path.join(out_path, 'muscle_alignment_pro')
+    muscle_dir = os.path.join(out_path, 'temp/muscle_alignment_pro')
     # muscle_dir = os.path.join(indata_files, 'muscle_alignment')
     pro_name = os.listdir(indata_files)
     if not os.path.exists(muscle_dir):
