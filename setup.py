@@ -1,8 +1,8 @@
 from setuptools import setup, find_packages
 
 version = "0.0.5"
-with open("README.md", "rb") as f:
-    long_descr = f.read().decode("utf-8")
+# with open("README.md", "rb") as f:
+#     long_descr = f.read().decode("utf-8")
 setup(
     name="physpe",
     packages=find_packages(),
