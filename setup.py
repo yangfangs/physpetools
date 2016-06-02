@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = "0.0.6"
+version = "0.0.7"
 # with open("README.rst", "rb") as f:
 #     long_descr = f.read().decode("utf-8")
 long_descr = "one command construct species phylogenetic tree "
