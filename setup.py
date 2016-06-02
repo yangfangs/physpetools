@@ -1,8 +1,9 @@
 from setuptools import setup, find_packages
 
 version = "0.0.6"
-# with open("README.md", "rb") as f:
+# with open("README.rst", "rb") as f:
 #     long_descr = f.read().decode("utf-8")
+long_descr = "one command construct species phylogenetic tree "
 setup(
     name="physpe",
     packages=find_packages(),
@@ -11,10 +12,9 @@ setup(
     },
     version=version,
     description="Python command line to construct phylogenetic tree.",
-    long_description="long_descr",
+    long_description=long_descr,
     author="Yang Fang",
     author_email="yangfangscu@gmail.com",
-    package_data={'': ['*.md'], 'physpetool': ['database/*.db'],
-                  'physpetool': ['softwares/*']},
+    package_data={'': ['*.md'], 'physpetool': ['database/*.db','softwares/*']},
     url="https://gitlab.com/xiaoxiaoyang/physpetool/tree/master",
 )
