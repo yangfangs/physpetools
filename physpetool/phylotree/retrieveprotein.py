@@ -1,6 +1,7 @@
 import os
 import sqlite3
 
+from physpetool.database.dbpath import getlocaldbpath
 from physpetool.phylotree.log import getLogging
 from physpetool.tools.keggapi import getprotein
 
@@ -14,8 +15,10 @@ def getspecies(name, colname):
     :param colname: a list contain colname of DB
     :return: a list contain protein index can be retrieved
     """
+    dbpath = getlocaldbpath()
+    db = os.path.join(dbpath, "proindex.db")
     relist = []
-    conn = sqlite3.connect('physpetool/database/proindex.db')
+    conn = sqlite3.connect(db)
     conn.text_factory = str
     c = conn.cursor()
     connect = "' OR NAME = '".join(name)
@@ -35,7 +38,10 @@ def getspecies(name, colname):
 
 def getcolname():
     """get BD colnames"""
-    conn = sqlite3.connect('physpetool/database/proindex.db')
+    dbpath = getlocaldbpath()
+    db = os.path.join(dbpath, "proindex.db")
+    relist = []
+    conn = sqlite3.connect(db)
     conn.text_factory = str
     c = conn.cursor()
     c.execute("SELECT * FROM keggproindex")
