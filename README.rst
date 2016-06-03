@@ -35,4 +35,7 @@ Usage
 -------------------------------------------------------------------------------
 
 .. cdde-block:: console
+
     $ physpe - in organismlist.txt -out ~/phytree/outfile
+
+
