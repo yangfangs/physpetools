@@ -34,7 +34,7 @@ To upgrade to latest version:
 Usage
 -------------------------------------------------------------------------------
 
-.. cdde-block:: console
+.. code-block:: console
 
     $ physpe - in organismlist.txt -out ~/phytree/outfile
 
