@@ -35,13 +35,14 @@ def domuscle(indata, outdata):
     return out_alg
 
 
-def domuscle_file(indata_files, outdata):
+def domuscle_file(indata_files, outdata, musclepara):
     """
 call muscle software to do alignment
     :param indata_files: a directory contain more than one file
     :param outdata: out file after alignment
     :return: path
     """
+    muscleparas = musclepara.lstrip()
     mupath = getlocalpath()
     out_path = os.path.dirname(outdata)
     muscle_dir = os.path.join(out_path, 'temp/muscle_alignment_pro')
@@ -52,7 +53,7 @@ call muscle software to do alignment
     for i in pro_name:
         out_alg = os.path.join(muscle_dir, i.split('.')[0])
         each_pro = os.path.join(indata_files, i)
-        cmd = mupath + "/muscle -in " + each_pro + " -out " + out_alg
+        cmd = mupath + "/muscle -in " + each_pro + " -out " + out_alg + " " + muscleparas
         subprocess.call(cmd, shell=True)
     logdomuscle.info("Multiple sequence alignment by Muscle was completed")
     return muscle_dir

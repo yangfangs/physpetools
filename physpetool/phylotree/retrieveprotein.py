@@ -11,7 +11,7 @@ logretrieveprotein = getLogging('kegg DB')
 def getspecies(name, colname):
     """
     Get species protein index for DB
-    :param name: a list contain abbreviation species names
+    :param name: a list contain abbreviation species nam
     :param colname: a list contain colname of DB
     :return: a list contain protein index can be retrieved
     """
