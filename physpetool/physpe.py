@@ -29,9 +29,9 @@ def version_info():
 
 parser = argparse.ArgumentParser(description=APP_DESC)
 
-raxmlpara = "-f a -T 6 -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1"
+raxmlpara = "-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1"
 musclepara = '-maxiters 100'
-gblockspara = '-t=p'
+gblockspara = '-t=p -e=-gb1'
 parser = argparse.ArgumentParser(description=APP_DESC)
 
 parser.add_argument('-in', action='store', dest='fastafile',
@@ -72,9 +72,9 @@ def main():
     out_retrieve = doretrieve(in_put, out_put)
     out_alg = domuscle_file(out_retrieve, out_put, args.muscle)
     out_concat = cocat_path(out_alg)
-    out_gblock = dogblocks(out_concat, "gb1", args.gblocks)
+    out_gblock = dogblocks(out_concat, args.gblocks)
     out_f2p = fasta2phy(out_gblock)
-    doraxml(out_f2p, out_put, args.raxml)
+    doraxml(out_f2p, out_put, args.raxml. args.thread)
 
 
 if __name__ == '__main__':
