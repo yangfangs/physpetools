@@ -21,7 +21,7 @@ constructing phylogenetic trees now
 
 
 def version_info():
-    VERSION_INFO = 'V0.0.8'
+    VERSION_INFO = 'V0.0.9'
     MUSCLE_INFO = 'v3.8.31'
     GBLOCKS_INFO = '0.91b'
     RAXML_INFO = 'v8.2.3'
