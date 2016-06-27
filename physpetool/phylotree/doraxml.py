@@ -31,12 +31,11 @@ call RAxML method to construct species tree
         raxmlpararet = ' '.join(raxmlparalist)
     else:
         raxmlpararet = raxmlpara
-
-    print raxmlpararet
+    threadtostr = str(thread)
     raxmlpath = getlocalpath()
     if not os.path.exists(outputfile):
         os.mkdir(outputfile)
-    strs = raxmlpath + "/raxmlHPC-PTHREADS-AVX " + "-T " + thread + " " + raxmlpararet
+    strs = raxmlpath + "/raxmlHPC-PTHREADS-AVX " + "-T " + threadtostr + " " + raxmlpararet
     cmd = strs + " -s " + inputfile + " -w " + outputfile
     subprocess.call(cmd, shell=True)
     logdoraxml.info("species phylogenetic constructed by RAxML was completed")

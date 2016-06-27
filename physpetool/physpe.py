@@ -22,11 +22,16 @@ constructing phylogenetic trees now
 
 def version_info():
     VERSION_INFO = 'V0.0.8'
+    MUSCLE_INFO = 'v3.8.31'
+    GBLOCKS_INFO = '0.91b'
+    RAXML_INFO = 'v8.2.3'
     AUTHOR_INFO = 'Author: Yang Fang'
-    print VERSION_INFO
+    print 'physpe version: ', VERSION_INFO
     print AUTHOR_INFO
-
-
+    print "call software INFO:"
+    print 'muscle version: ', MUSCLE_INFO
+    print 'RAxML version: ', RAXML_INFO
+    print 'Gblocks version: ', GBLOCKS_INFO
 parser = argparse.ArgumentParser(description=APP_DESC)
 
 raxmlpara = "-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1"
@@ -59,7 +64,7 @@ print args.fastafile
 print "outfile is:"
 print args.nwkfile + "\n"
 print "now loading data and constructing species phylogenetic tree..."
-
+print args.thread
 
 # in_put = '/home/yangfang/physpetools/testdata/protein.fastq'
 # out_put = '/home/yangfang/physpetools/testdata/phytree.nwk'
@@ -74,8 +79,8 @@ def main():
     out_concat = cocat_path(out_alg)
     out_gblock = dogblocks(out_concat, args.gblocks)
     out_f2p = fasta2phy(out_gblock)
-    doraxml(out_f2p, out_put, args.raxml. args.thread)
+    doraxml(out_f2p, out_put, args.raxml, args.thread)
 
 
 if __name__ == '__main__':
-    main()
+     main()
