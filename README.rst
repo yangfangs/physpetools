@@ -38,4 +38,27 @@ Usage
 
     $ physpe - in organismlist.txt -out ~/phytree/outfile
 
+Options
+-------------------------------------------------------------------------------
+``-in``  A txt file contain the a abbreviation species name same with KEGG species abbreviation.
+
+``-out`` A directory contain construct Tree files.
+
+``-v`` The version information.
+
+``-t`` Set the threads to construct phylogenetic tree. The default is 1.
+
+
+
+Advance options
+--------------------------------------------------------------------------------
+
+``-muscle``  Set multiple sequence alignment arguments. The default is ``-maxiter 100``
+
+``-gblocks`` Set gblocks arguments. The default is ``-t=p -e=-gb1``
+
+``-raxml``   Set reconstruct phylogenetic tree arguments the detail see RAxML software arguments. The default is
+             ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``
+
+
 
