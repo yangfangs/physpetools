@@ -1,6 +1,6 @@
 import os
 import sqlite3
-
+import time
 from physpetool.database.dbpath import getlocaldbpath
 from physpetool.phylotree.log import getLogging
 from physpetool.tools.keggapi import getprotein
@@ -62,8 +62,11 @@ def retrieveprotein(proindexlist, outpath):
     :param outpath: user input outpath
     :return: retrieve protein path
     """
+    timeformat = '%Y%m%d%H%M%S'
+    timeinfo = str(time.strftime(timeformat))
+    subdir = 'temp/conserved_protein' + timeinfo
     dirname = os.path.dirname(outpath)
-    dirname = os.path.join(dirname, "temp/conserved_protein")
+    dirname = os.path.join(dirname, subdir)
     if not os.path.exists(dirname):
         os.makedirs(dirname)
     p = 1
@@ -90,10 +93,9 @@ def retrieveprotein(proindexlist, outpath):
 
 def doretrieve(specieslistfile, outpath):
     spelist = []
-    with open(specieslistfile, "r") as read:
-        for line in read:
-            st = line.strip()
-            spelist.append(st)
+    for line in specieslistfile:
+        st = line.strip()
+        spelist.append(st)
     logretrieveprotein.info("read species successful")
     colname = getcolname()
     relist = getspecies(spelist, colname)

@@ -1,4 +1,5 @@
 import argparse
+import os
 
 import sys
 
@@ -19,10 +20,10 @@ raxmlpara = "xxxxx"
 
 parser = argparse.ArgumentParser(description=APP_DESC)
 
-parser.add_argument('-in', action='store', dest='fastafile',
-                    help='input file must be contain the species names')
-parser.add_argument('-out', action="store", dest="nwkfile",
-                    help='out file name be String type')
+parser.add_argument('-in', nargs='?', dest='spenames', type=argparse.FileType('r'),
+                    default=sys.stdin, help='input file must be contain the species names')
+parser.add_argument('-out', action="store", dest="outdatafile",
+                    default='Outdata', help='out file name be String type')
 parser.add_argument('-v', '--version', action='store_true',
                     default=False, help='Version information')
 parser.add_argument('-raxml', action='store', dest='raxml',
@@ -40,8 +41,13 @@ if args.version:
     version_info()
     sys.exit(0)
 
-
 if args.raxml:
     print args.raxml
 if args.raxml is raxmlpara:
     print 'defult ffff'
+
+pwd = os.getcwd()
+
+outpath = os.path.join(pwd, args.outdatafile)
+
+print outpath

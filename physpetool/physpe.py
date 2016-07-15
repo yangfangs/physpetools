@@ -1,3 +1,4 @@
+import os
 import sys
 
 from phylotree.domuscle import domuscle_file
@@ -21,7 +22,7 @@ constructing phylogenetic trees now
 
 
 def version_info():
-    VERSION_INFO = 'V0.0.9'
+    VERSION_INFO = 'V0.1.0'
     MUSCLE_INFO = 'v3.8.31'
     GBLOCKS_INFO = '0.91b'
     RAXML_INFO = 'v8.2.3'
@@ -39,10 +40,10 @@ musclepara = '-maxiters 100'
 gblockspara = '-t=p -e=-gb1'
 parser = argparse.ArgumentParser(description=APP_DESC)
 
-parser.add_argument('-in', action='store', dest='fastafile',
-                    help='input file must be contain the species names')
-parser.add_argument('-out', action="store", dest="nwkfile",
-                    help='out file name be String type')
+parser.add_argument('-in', nargs='?', dest='spenames',type=argparse.FileType('r'),
+                    default=sys.stdin, help='input file must be contain the species names')
+parser.add_argument('-out', action="store", dest="outdata",
+                    default='Outdata', help='out file name be String type')
 parser.add_argument('-v', '--version', action='store_true',
                     default=False, help='Version information')
 parser.add_argument('-t', action='store', dest='thread',
@@ -54,25 +55,27 @@ parser.add_argument('-gblocks', action='store', dest='gblocks',
 parser.add_argument('-raxml', action='store', dest='raxml',
                     default=raxmlpara, help='build by raxml')
 args = parser.parse_args()
-print parser.parse_args()
 if args.version:
     version_info()
     sys.exit(0)
 
 print "in put fasta file is:"
-print args.fastafile
+print args.spenames
 print "outfile is:"
-print args.nwkfile + "\n"
+print args.outdata + "\n"
 print "now loading data and constructing species phylogenetic tree..."
 print args.thread
 
 # in_put = '/home/yangfang/physpetools/testdata/protein.fastq'
 # out_put = '/home/yangfang/physpetools/testdata/phytree.nwk'
-# physpe -in /home/yangfang/physpetools/testdata/speciesname.txt -out /home/yangfang/physpetools/testdata/phytree4
+# physpe -in /home/yangfang/physpetools/testdata/speciesname.txt -out /home/yangfang/physpetools/testdata/phytree1
+in_put = args.spenames
+pwd = os.getcwd()
+
+out_put = os.path.join(pwd, args.outdata)
+
 
 def main():
-    in_put = args.fastafile
-    out_put = args.nwkfile
     setlogdir(out_put)
     out_retrieve = doretrieve(in_put, out_put)
     out_alg = domuscle_file(out_retrieve, out_put, args.muscle)

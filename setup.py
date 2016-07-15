@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = "0.0.9"
+version = "0.1.0"
 try:
     LONG_DESCRIPTION = open("README.rst", "rb").read().decode("utf-8")
 except:

@@ -2,6 +2,8 @@ import subprocess
 import os
 import os.path
 
+import time
+
 from physpetool.phylotree.log import getLogging
 from physpetool.softwares.path import getlocalpath
 
@@ -45,7 +47,10 @@ call muscle software to do alignment
     muscleparas = musclepara.lstrip()
     mupath = getlocalpath()
     out_path = os.path.dirname(outdata)
-    muscle_dir = os.path.join(out_path, 'temp/muscle_alignment_pro')
+    timeformat = '%Y%m%d%H%M%S'
+    timeinfo = str(time.strftime(timeformat))
+    subdir = 'temp/muscle_alignment' + timeinfo
+    muscle_dir = os.path.join(out_path, subdir)
     # muscle_dir = os.path.join(indata_files, 'muscle_alignment')
     pro_name = os.listdir(indata_files)
     if not os.path.exists(muscle_dir):

@@ -1,5 +1,7 @@
 import os
 
+import time
+
 from physpetool.phylotree.log import getLogging
 
 """
@@ -49,7 +51,10 @@ def cocat_path(muscle_alg):
     """
     result_dir = os.path.dirname(muscle_alg)
     result = 'concatenate.fasta'
-    concat_dir = os.path.join(result_dir, 'concatenate')
+    timeformat = '%Y%m%d%H%M%S'
+    timeinfo = str(time.strftime(timeformat))
+    subdir = 'concatenate' + timeinfo
+    concat_dir = os.path.join(result_dir, subdir)
     # crate a directory to store .phy file
     if not os.path.exists(concat_dir):
         os.makedirs(concat_dir)
