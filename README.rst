@@ -50,13 +50,28 @@ To upgrade to latest version:
 	$ pip install --upgrade physpe
 
 2. You can install ``physpe`` by download the latest released version:
+
 - Download latest released version **.tar.gz** file　`download <https://gitlab.com/xiaoxiaoyang/physpetools/tags>`_.
+
 - Local installation:
 
 .. code-block:: console
 
 	$ pip install physpetools-v*.tar.gz
 
+3. Use git command
+
+.. code-block:: console
+
+	$ git clone git@gitlab.com:xiaoxiaoyang/physpetools.git
+
+.. code-block:: console
+
+	$ cd physpetools
+
+.. code-block:: console
+
+	$ python setup.py install
 
 Usage
 -------------------------------------------------------------------------------
