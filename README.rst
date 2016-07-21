@@ -37,7 +37,7 @@ Features
 Install
 -------------------------------------------------------------------------------
 
-1.``physpe`` is released on PyPI, so all you need install:
+1. ``physpe`` is released on PyPI, so all you need install:
 
 .. code-block:: console
 
