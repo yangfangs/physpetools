@@ -24,17 +24,20 @@ phylogenetic tree.
 
 Features
 --------------------------------------------------------------------------------
--Easy to use(one command line auto construct phylogenetic tree)
--Multi-selection(selection construct phylogenetic tree by highly conversion protein or 16s RNA)
--Adjustable parameters(User can choice any parameters by own)
--Only provide a species list
+- Easy to use(one command line auto construct phylogenetic tree)
+
+- Multi-selection(selection construct phylogenetic tree by highly conversion protein or 16s RNA)
+
+- Adjustable parameters(User can choice any parameters by own)
+
+- Only provide a species list
 
 
 
 Install
 -------------------------------------------------------------------------------
 
-``physpe`` is released on PyPI, so all you need install:
+1.``physpe`` is released on PyPI, so all you need install:
 
 .. code-block:: console
 
@@ -45,6 +48,14 @@ To upgrade to latest version:
 .. code-block:: console
 
 	$ pip install --upgrade physpe
+
+2. You can install ``physpe`` by download the latest released version:
+- Download latest released version **.tar.gz** file　`download <https://gitlab.com/xiaoxiaoyang/physpetools/tags>`_.
+- Local installation:
+
+.. code-block:: console
+
+	$ pip install physpetools-v*.tar.gz
 
 
 Usage
