@@ -37,7 +37,7 @@ Features
 Install
 -------------------------------------------------------------------------------
 
-1.**physpe** is released on PyPI, so all you need install:
+1. **physpe** is released on PyPI, so all you need install:
 
 .. code-block:: console
 
@@ -49,7 +49,7 @@ To upgrade to latest version:
 
 	$ pip install --upgrade physpe
 
-2.You can install **physpe** by download the latest released version:
+2. You can install **physpe** by download the latest released version:
 
 - Download latest released version **.tar.gz** file　`download <https://gitlab.com/xiaoxiaoyang/physpetools/tags>`_.
 
@@ -59,7 +59,7 @@ To upgrade to latest version:
 
 	$ pip install physpetools-v*.tar.gz
 
-3.Use git command clone **physpe**:
+3. Use git command clone **physpe**:
 
 .. code-block:: console
 
