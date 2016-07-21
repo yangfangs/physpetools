@@ -9,10 +9,26 @@
 
 
 
-Welcome to one command auto construct species phylogenetic tree Documentation
+Documentation of one command auto construct species phylogenetic tree
 ==============================================================================
-The physpe is a python command line software. Users only need to provide a list file,
-which contain the name of the species,the species names must be a abbreviation same with KEGG DATABASE.
+
+Introduction
+------------------------------------------------------------------------------
+In some filed combine species phylogenetic tree do some prediction are very important for instance,
+protein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree
+is necessary,but the process of constructing the tree species is very tedious.
+
+we developing a command line software **physpe**,which only one command line to construct species phylogenetic tree,User only need to provide a contain species names files
+(the species names must be a abbreviation same with **KEGG DATABASE** organisms abbreviation), the **physpe** auto construct species
+phylogenetic tree.
+
+Features
+--------------------------------------------------------------------------------
+-Easy to use(one command line auto construct phylogenetic tree)
+-Multi-selection(selection construct phylogenetic tree by highly conversion protein or 16s RNA)
+-Adjustable parameters(User can choice any parameters by own)
+-Only provide a species list
+
 
 
 Install
