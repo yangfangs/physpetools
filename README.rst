@@ -82,7 +82,7 @@ User should prepare a txt file contain the abbreviation names of organisms examp
 
 .. code-block:: console
 
-    $ physpe - in organism_example_list.txt -out phytree
+    $ physpe -in organism_example_list.txt -out phytree
 
 Options
 -------------------------------------------------------------------------------
