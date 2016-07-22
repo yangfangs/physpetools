@@ -76,11 +76,13 @@ To upgrade to latest version:
 Usage
 -------------------------------------------------------------------------------
 
-User should prepare a txt file contain the abbreviation names of organisms example download
+User should prepare a txt file contain the abbreviation names of organisms example `download <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
+
+
 
 .. code-block:: console
 
-    $ physpe - in organism_example_list.txt -out ~/phytree/outfile
+    $ physpe - in organism_example_list.txt -out phytree
 
 Options
 -------------------------------------------------------------------------------
