@@ -172,9 +172,9 @@ Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This h
 .. table:: Highly conserved proteins
 
 ====================================================   =============       ===============
-      Protein Names                                    Eukaryotes KO       Prokaryotes KO
+Protein Names                                          Eukaryotes KO       Prokaryotes KO
 ====================================================   =============       ===============
-DNA-directed RNA polymerase subunit alpha              K03040              K03040
+DNA-directed RNA polymerase subunit alpha              K03040              K03040
 Ribosomal protein L1                                   K02865              K02863
 Leucyl-tRNA synthetase                                 K01869              K01869
 Metal-dependent proteases with chaperone activity      K01409              K01409
@@ -215,16 +215,3 @@ Ribosomal protein S13                                  K02953              K0295
 with Sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence
 
 
-=============== =============== ======================= ========================
-Platform        Architecture    Binary Interface        Compilers
-=============== =============== ======================= ========================
-Bare metal      any             N/A                     Clang, GCC
-Linux           ARMv6+ [4]_     ARM EABI                Clang, GCC
-Linux           x86             i386 SysV ABI           Clang, GCC
-Linux           x86-64          AMD64 SysV ABI          Clang, GCC
-FreeBSD         x86-64          AMD64 SysV ABI          Clang, GCC
-OpenBSD         x86-64          AMD64 SysV ABI          Clang, GCC
-NetBSD          x86-64          AMD64 SysV ABI          Clang, GCC
-Solaris         x86-64          AMD64 SysV ABI          Clang, GCC
-Mac OS X        x86-64          AMD64 SysV ABI          Clang, GCC
-=============== =============== ======================= ========================
