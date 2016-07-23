@@ -138,10 +138,12 @@ Frequently Asked Questions (FAQ)
 
 - Physpe input/output
 
+
 1.What preparation of user should does for Physpe?
  User should prepare a list contain organisms names(abbreviation name are same with `KEGG DATABASE <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
- one line write one species name only such as`organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
+ one line write one species name only such as `organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
  you can retrieve the abbreviation names of organisms by `KEGG API <http://rest.kegg.jp/list/organism>`_.
+
 
 2.What's Physpe output data mean?
  Physpe output tow data files one is data files contain phylogenetic tree files default names is ``Outdata``, another is a temp files contain
