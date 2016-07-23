@@ -172,7 +172,7 @@ Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This h
 .. table:: Highly conserved proteins
 
 ====================================================   =============       ===============
-Protein names                                          Eukaryotes KO       Prokaryotes KO
+      Protein Names                                    Eukaryotes KO       Prokaryotes KO
 ====================================================   =============       ===============
 DNA-directed RNA polymerase subunit alpha              K03040              K03040
 Ribosomal protein L1                                   K02865              K02863
