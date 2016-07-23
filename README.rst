@@ -215,3 +215,16 @@ Ribosomal protein S13                                  K02953              K0295
 with Sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence
 
 
+=============== =============== ======================= ========================
+Platform        Architecture    Binary Interface        Compilers
+=============== =============== ======================= ========================
+Bare metal      any             N/A                     Clang, GCC
+Linux           ARMv6+ [4]_     ARM EABI                Clang, GCC
+Linux           x86             i386 SysV ABI           Clang, GCC
+Linux           x86-64          AMD64 SysV ABI          Clang, GCC
+FreeBSD         x86-64          AMD64 SysV ABI          Clang, GCC
+OpenBSD         x86-64          AMD64 SysV ABI          Clang, GCC
+NetBSD          x86-64          AMD64 SysV ABI          Clang, GCC
+Solaris         x86-64          AMD64 SysV ABI          Clang, GCC
+Mac OS X        x86-64          AMD64 SysV ABI          Clang, GCC
+=============== =============== ======================= ========================
