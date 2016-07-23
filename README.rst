@@ -161,8 +161,10 @@ Frequently Asked Questions (FAQ)
 1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?
 
  Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
+
  **cite:**
-| Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.
+
+ Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.
 
 31 highly conserved proteins and correspond KEGG DATABASE KO number as follow table:
 
