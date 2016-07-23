@@ -136,17 +136,17 @@ Advance options
 Frequently Asked Questions (FAQ)
 --------------------------------------------------------------------------------
 
-- Physpe input/output
+- **Physpe input/output**
 
 
-1.What preparation of user should does for Physpe?
+**1.What preparation of user should does for Physpe?**
 
 User should prepare a list contain organisms names(abbreviation name are same with `KEGG DATABASE <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
 one line write one species name only such as `organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
 you can retrieve the abbreviation names of organisms by `KEGG API <http://rest.kegg.jp/list/organism>`_.
 
 
-2.What's Physpe output data mean?
+**2.What's Physpe output data mean?**
 
 Physpe output tow data files one is data files contain phylogenetic tree files default names is ``Outdata``, another is a temp files contain
 three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
@@ -156,18 +156,20 @@ three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
 Users can check the quality of every aspect of data by these temp files.
 
 
-- Physpe reconstruct phylogenetic tree DB
+- **Physpe reconstruct phylogenetic tree DB**
 
-1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?
+**1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?**
 
 Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
 
 **cite:**
 
-Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.
+ Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.
 
 31 highly conserved proteins and correspond KEGG DATABASE KO number as follow table:
 
+
+.. table:: Highly conserved proteins
 ====================================================   =============       ===============
 Protein names                                          Eukaryotes KO       Prokaryotes KO
 ====================================================   =============       ===============
@@ -204,7 +206,9 @@ DNA-directed RNA polymerase beta subunit               K03043              K0304
 Ribosomal protein S13                                  K02953              K02952
 ====================================================   ==============      ===============
 
-2.How the 16s RAN database to created?
+
+
+**2.How the 16s RAN database to created?**
 
 16s RAN database created by `SILVA <https://www.arb-silva.de/>`_ rRNA database project, version is SILVA SSU 123.1 release
 with Sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence
