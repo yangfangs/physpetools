@@ -141,30 +141,30 @@ Frequently Asked Questions (FAQ)
 
 1.What preparation of user should does for Physpe?
 
- User should prepare a list contain organisms names(abbreviation name are same with `KEGG DATABASE <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
- one line write one species name only such as `organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
- you can retrieve the abbreviation names of organisms by `KEGG API <http://rest.kegg.jp/list/organism>`_.
+User should prepare a list contain organisms names(abbreviation name are same with `KEGG DATABASE <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
+one line write one species name only such as `organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
+you can retrieve the abbreviation names of organisms by `KEGG API <http://rest.kegg.jp/list/organism>`_.
 
 
 2.What's Physpe output data mean?
 
- Physpe output tow data files one is data files contain phylogenetic tree files default names is ``Outdata``, another is a temp files contain
- three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
+Physpe output tow data files one is data files contain phylogenetic tree files default names is ``Outdata``, another is a temp files contain
+three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
   + conserved_protein: Store the *.fasta format files, which is conserved proteins retrieve by KEGG DATABASE.
   + muscle_alignment: Store files are multiple sequence alignment by muscle.
   + concatenate: Include concatenate highly conserved protein data(*.fasta format file) and Select conserved blocks data(*.fasta-gb1 format file).
- Users can check the quality of every aspect of data by these temp files.
+Users can check the quality of every aspect of data by these temp files.
 
 
 - Physpe reconstruct phylogenetic tree DB
 
 1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?
 
- Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
+Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
 
- **cite:**
+**cite:**
 
- Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.
+Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.
 
 31 highly conserved proteins and correspond KEGG DATABASE KO number as follow table:
 
@@ -205,7 +205,8 @@ Ribosomal protein S13                                  K02953              K0295
 ====================================================   ==============      ===============
 
 2.How the 16s RAN database to created?
- 16s RAN database created by `SILVA <https://www.arb-silva.de/>`_ rRNA database project, version is SILVA SSU 123.1 release
- with Sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence
+
+16s RAN database created by `SILVA <https://www.arb-silva.de/>`_ rRNA database project, version is SILVA SSU 123.1 release
+with Sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence
 
 
