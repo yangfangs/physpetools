@@ -133,4 +133,29 @@ Advance options
              ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``
 
 
+Frequently Asked Questions (FAQ)
+--------------------------------------------------------------------------------
+
+- Physpe input/output
+
+1.What preparation of user should does for Physpe?
+ User should prepare a list contain organisms names(abbreviation name are same with `KEGG DATABASE <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
+ one line write one species name only such as`organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
+ you can retrieve the abbreviation names of organisms by `KEGG API <http://rest.kegg.jp/list/organism>`_.
+
+2.What's Physpe output data mean?
+ Physpe output tow data files one is data files contain phylogenetic tree files default names is ``Outdata``, another is a temp files contain
+ three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
+  + conserved_protein: Store the *.fasta format files, which is conserved proteins retrieve by KEGG DATABASE.
+  + muscle_alignment: Store files are multiple sequence alignment by muscle.
+  + concatenate: Include concatenate highly conserved protein data(*.fasta format file) and Select conserved blocks data(*.fasta-gb1 format file).
+ Users can check the quality of every aspect of data by these temp files.
+
+
+
+
+
+
+
+
 
