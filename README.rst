@@ -169,11 +169,9 @@ Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This h
 31 highly conserved proteins and correspond KEGG DATABASE KO number as follow table:
 
 
-.. table:: Highly conserved proteins
-
-====================================================   =============       ===============
+====================================================   ==============      ===============
 Protein Names                                          Eukaryotes KO       Prokaryotes KO
-====================================================   =============       ===============
+====================================================   ==============      ===============
 DNA-directed RNA polymerase subunit alpha              K03040              K03040
 Ribosomal protein L1                                   K02865              K02863
 Leucyl-tRNA synthetase                                 K01869              K01869
