@@ -136,8 +136,8 @@ Advance options
 Frequently Asked Questions (FAQ)
 --------------------------------------------------------------------------------
 
-- **Physpe input/output**
-
+ Physpe input/output
+ --------------------
 
 **1.What preparation of user should does for Physpe?**
 
@@ -156,8 +156,8 @@ three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
 Users can check the quality of every aspect of data by these temp files.
 
 
-- **Physpe reconstruct phylogenetic tree DB**
-
+ Physpe reconstruct phylogenetic tree DB
+ ----------------------------------------
 **1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?**
 
 Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
