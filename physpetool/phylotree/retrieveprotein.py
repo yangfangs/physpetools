@@ -96,7 +96,7 @@ def doretrieve(specieslistfile, outpath):
     for line in specieslistfile:
         st = line.strip()
         spelist.append(st)
-    logretrieveprotein.info("read species successful")
+    logretrieveprotein.info("Read organisms names successful")
     colname = getcolname()
     relist = getspecies(spelist, colname)
     dirpath = retrieveprotein(relist, outpath)

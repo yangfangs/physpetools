@@ -2,6 +2,11 @@ import os
 
 
 def convert_ncbi_id(read, write):
+    """
+convert taxmap_emble file to accession silva id
+    :param read: taxmap emble file
+    :param write: write file user rename
+    """
     fw = open(write, 'w')
     with open(read) as read:
         for line in read:
@@ -13,6 +18,11 @@ def convert_ncbi_id(read, write):
 
 
 def convert_ncbi_silva(ncbilist, silvalist):
+    """
+convert ncbi id to silva accession
+    :param ncbilist: a txt file contain ncbi id list
+    :param silvalist: a txt file contain silva id list
+    """
     fw = open('ncbi_to_silva_id.txt', 'a')
     with open(ncbilist) as read:
         for line in read:
@@ -28,6 +38,7 @@ def convert_ncbi_silva(ncbilist, silvalist):
                 else:
                     pass
     fw.close()
+
 
 os.chdir('/home/yangfang/physpetools_data/16sRNA')
 # convert_ncbi_id('taxmap_embl_ssu_ref_123.1.txt', 'silva_map_ncbi_ref.txt')

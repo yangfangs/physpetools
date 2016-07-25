@@ -13,27 +13,32 @@ function to call muscle to do alignment
 """
 
 logdomuscle = getLogging('muscle')
+
+
 # muscle -in process_L1.txt -out process_L1.afa -maxiters 100
-def domuscle(indata, outdata):
+def domuscle(indata, outdata, musclepara):
     """
     call muscle software to do alignment
     :param indata: only one file must fasta format
     :param outdata: the out is abs path with a file name
     :return: outdata path
     """
+    muscleparas = musclepara.lstrip()
+    mupath = getlocalpath()
     out_path = os.path.dirname(outdata)
-    fa_name = os.path.basename(indata)
-    muscle_dir = os.path.join(out_path, 'temp/muscle_alignment')
+    timeformat = '%Y%m%d%H%M%S'
+    timeinfo = str(time.strftime(timeformat))
+    subdir = 'temp/16srna_alignment' + timeinfo
+    muscle_dir = os.path.join(out_path, subdir)
 
+    pro_name = os.listdir(indata)
     if not os.path.exists(muscle_dir):
         os.makedirs(muscle_dir)
-    muscle_file = fa_name + '.alg'
-
-    out_alg = os.path.join(muscle_dir, muscle_file)
-
-    cmd = "muscle -in " + indata + " -out " + out_alg
-
+    out_alg = os.path.join(muscle_dir, pro_name[0])
+    each_pro = os.path.join(indata, pro_name[0])
+    cmd = mupath + "/muscle -in " + each_pro + " -out " + out_alg + " " + muscleparas
     subprocess.call(cmd, shell=True)
+    logdomuscle.debug('muscle result path:{0}'.format(out_alg))
     return out_alg
 
 
@@ -49,7 +54,7 @@ call muscle software to do alignment
     out_path = os.path.dirname(outdata)
     timeformat = '%Y%m%d%H%M%S'
     timeinfo = str(time.strftime(timeformat))
-    subdir = 'temp/muscle_alignment' + timeinfo
+    subdir = 'temp/hcp_alignment' + timeinfo
     muscle_dir = os.path.join(out_path, subdir)
     # muscle_dir = os.path.join(indata_files, 'muscle_alignment')
     pro_name = os.listdir(indata_files)
