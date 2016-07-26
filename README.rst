@@ -90,7 +90,7 @@ To upgrade to latest version:
 
 .. code-block:: console
 
-	$ git clone git@gitlab.com:xiaoxiaoyang/physpetools.git
+	$ git clone git@github.com:xiaofeiyangyang/physpetools.git
 
 .. code-block:: console
 
