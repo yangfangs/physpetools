@@ -21,7 +21,7 @@ protein-protein interactions and gene pathway members prediction. In this predic
 is necessary, but the process of constructing the tree species is very tedious.
 
 We developing a command line software **Physpe**, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.
-(the species names must be a abbreviation same with **KEGG DATABASE** organisms abbreviation), the **Physpe** auto reconstruct species phylogenetic tree.
+(the species names must be a abbreviation same with **KEGG database** organisms abbreviation), the **Physpe** auto reconstruct species phylogenetic tree.
 
 Physpe workflow
 ----------------------------------------------------------------------------
@@ -195,7 +195,7 @@ Physpe input/output
 
 **1.What preparation of user should does for Physpe?**
 
-User should prepare a list contain organisms names (abbreviation name are same with `KEGG DATABASE <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
+User should prepare a list contain organisms names (abbreviation name are same with `KEGG database <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
 one line write one species name only such as `organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
 You can retrieve the abbreviation names of organisms by `KEGG API <http://rest.kegg.jp/list/organism>`_.
 
@@ -217,7 +217,7 @@ If you reconstruct phylogenetic tree by SRNA (16s RNA) model temp file include t
 Users can check the quality of every aspect of data by these temp files.
 
 
-Physpe reconstruct phylogenetic tree DB
+Physpe reconstruct phylogenetic tree database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 **1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?**
 
@@ -227,7 +227,7 @@ Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This h
 
  Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.
 
-31 highly conserved proteins and correspond KEGG DATABASE KO number as follow table:
+31 highly conserved proteins and correspond KEGG database KO number as follow table:
 
 
 ====================================================   ==============      ===============
