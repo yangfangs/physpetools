@@ -26,12 +26,12 @@ We developing a command line software **Physpe**, which only one command line to
 Physpe workflow
 ----------------------------------------------------------------------------
 
-.. image:: https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/physpe.png
+.. image:: https://github.com/xiaofeiyangyang/physpetools/blob/master/examples/physpe.png
 
 
 Physpe workflow includes the following steps:
 
-1. Prepare organisms names to reconstruct phylogenetic tree as `example <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
+1. Prepare organisms names to reconstruct phylogenetic tree as `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
 
 2. Choice the way to reconstruct phylogenetic tree, use 16s RNA or Highly conversion proteins.
 
@@ -78,7 +78,7 @@ To upgrade to latest version:
 
 2. You can install **Physpe** by download the latest released version:
 
-- `Download <https://gitlab.com/xiaoxiaoyang/physpetools/tags>`_ latest released version **.tar.gz** file.
+- `Download <https://github.com/xiaofeiyangyang/physpetools/releases>`_ latest released version **.tar.gz** file.
 
 - Local installation:
 
@@ -103,7 +103,7 @@ To upgrade to latest version:
 Usage
 -------------------------------------------------------------------------------
 
-User should prepare a txt file contain the abbreviation names of organisms `example <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
+User should prepare a txt file contain the abbreviation names of organisms `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
 
 Use **Physpe** from the command line like this:
 
@@ -126,7 +126,7 @@ Options
 -out
     A directory include output data (reconstruct tree files). The default output data name is Outdata.
 
--t <int>
+-t
     Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.
 
 -hcp
@@ -183,7 +183,7 @@ The follow is to use RAxML advance options example:
     -x
         Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe set default is 12345
 
-    -\#
+    -#　100
         Specify the number of alternative runs on distinct starting trees. The physpe set default is 100.
 
 
