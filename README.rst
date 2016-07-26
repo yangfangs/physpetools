@@ -26,7 +26,7 @@ We developing a command line software **Physpe**, which only one command line to
 Physpe workflow
 ----------------------------------------------------------------------------
 
-.. image:: https://github.com/xiaofeiyangyang/physpetools/blob/master/examples/physpe.png
+.. image:: https://github.com/xiaofeiyangyang/physpetools/blob/master/examples/physpe2.png
 
 
 Physpe workflow includes the following steps:
