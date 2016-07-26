@@ -120,10 +120,10 @@ Options
 -v
     The version information.
 
--in <species_names.txt>
+-in
     Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
 
--out <directory>
+-out
     A directory include output data (reconstruct tree files). The default output data name is Outdata.
 
 -t <int>
@@ -159,9 +159,9 @@ The follow is to use RAxML advance options example:
     More options about Gblocks please to see `Gblock documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
 -raxml
-    Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``,
+    Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``.
 
-    -f
+    -f a
         rapid Bootstrap analysis and search for best­scoring ML tree in one program run
 
 
