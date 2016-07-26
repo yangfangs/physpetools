@@ -9,18 +9,17 @@
 
 
 
-Documentation of one command auto construct species phylogenetic tree
+Documentation of one command auto reconstruct species phylogenetic tree
 ==============================================================================
 
 Introduction
 ------------------------------------------------------------------------------
 In some filed combine species phylogenetic tree do some prediction are very important for instance,
 protein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree
-is necessary,but the process of constructing the tree species is very tedious.
+is necessary, but the process of constructing the tree species is very tedious.
 
-we developing a command line software **physpe**,which only one command line to construct species phylogenetic tree,User only need to provide a contain species names files
-(the species names must be a abbreviation same with **KEGG DATABASE** organisms abbreviation), the **physpe** auto construct species
-phylogenetic tree.
+We developing a command line software **Physpe**, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.
+(the species names must be a abbreviation same with **KEGG DATABASE** organisms abbreviation), the **Physpe** auto reconstruct species phylogenetic tree.
 
 Physpe workflow
 ----------------------------------------------------------------------------
@@ -30,40 +29,40 @@ Physpe workflow
 
 Physpe workflow includes the following steps:
 
-- Prepare organisms name to reconstruct phylogenetic tree as example `download <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
+1. Prepare organisms names to reconstruct phylogenetic tree as `example <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
 
-- Choice the way to reconstruct phylogenetic tree, use 16s RNA or Highly conversion proteins
+2. Choice the way to reconstruct phylogenetic tree, use 16s RNA or Highly conversion proteins.
 
-- Query database and parse retrieve fasta file
+3. Query database and parse retrieve fasta format files.
 
-- Do multiple sequence alignment by call Muscle
+4. Do multiple sequence alignment by call Muscle.
 
-- Concatenate conserved proteins by physpe
+5. Concatenate conserved proteins by Physpe.
 
-- Select conserved blocks by Call Gblosks
+6. Select conserved blocks by Call Gblosks.
 
-- Reconstructing phylogenetic tree by Call RAxML
+7. Reconstructing phylogenetic tree by Call RAxML.
 
-- Output phylogenetic tree files
+8. Output reconstruct phylogenetic tree files.
 
 
 
 Features
 --------------------------------------------------------------------------------
-- Easy to use(one command line auto construct phylogenetic tree)
+- Easy to use (one command line auto construct phylogenetic tree).
 
-- Multi-selection(selection construct phylogenetic tree by highly conversion protein or 16s RNA)
+- Multi-selection(selection construct phylogenetic tree by highly conversion protein or 16s RNA).
 
-- Adjustable parameters(User can choice any parameters by own)
+- Adjustable parameters(user can choice any enable parameters by own).
 
-- Only provide a species list
+- User need provide a species list (reconstruct phylogenetic tree organisms) only.
 
 
 
 Install
 -------------------------------------------------------------------------------
 
-1. **physpe** is released on PyPI, so all you need install:
+1. **Physpe** is released on PyPI, so all you need install:
 
 .. code-block:: console
 
@@ -75,9 +74,9 @@ To upgrade to latest version:
 
 	$ pip install --upgrade physpe
 
-2. You can install **physpe** by download the latest released version:
+2. You can install **Physpe** by download the latest released version:
 
-- Download latest released version **.tar.gz** file　`download <https://gitlab.com/xiaoxiaoyang/physpetools/tags>`_.
+- `Download <https://gitlab.com/xiaoxiaoyang/physpetools/tags>`_ latest released version **.tar.gz** file.
 
 - Local installation:
 
@@ -85,7 +84,7 @@ To upgrade to latest version:
 
 	$ pip install physpetools-v*.tar.gz
 
-3. Use git command clone **physpe**:
+3. Use git command clone **Physpe**:
 
 .. code-block:: console
 
@@ -102,16 +101,19 @@ To upgrade to latest version:
 Usage
 -------------------------------------------------------------------------------
 
-User should prepare a txt file contain the abbreviation names of organisms example `download <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
+User should prepare a txt file contain the abbreviation names of organisms `example <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
 
-
+Use **Physpe** from the command line like this:
 
 .. code-block:: console
 
-    $ physpe -in organism_example_list.txt -out phytree
+    $ physpe -in organism_example_list.txt [options]*
 
 Options
 -------------------------------------------------------------------------------
+
+-h/--help print help message and exits.
+
 ``-in``  A txt file contain the a abbreviation species name same with KEGG species abbreviation.
 
 ``-out`` A directory contain construct Tree files.

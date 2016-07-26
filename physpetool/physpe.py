@@ -24,17 +24,17 @@ Reconstruct phylogenetic tree
 
 
 def version_info():
-    VERSION_INFO = 'V0.1.1'
-    MUSCLE_INFO = 'v3.8.31'
-    GBLOCKS_INFO = '0.91b'
-    RAXML_INFO = 'v8.2.3'
-    AUTHOR_INFO = 'Author: Yang Fang'
-    print 'physpe version: ', VERSION_INFO
-    print AUTHOR_INFO
+    version_info = 'V0.1.1'
+    muscle_info = 'v3.8.31'
+    gblocks_info = '0.91b'
+    raxml_info = 'v8.2.3'
+    author_info = 'Author: Yang Fang'
+    print 'physpe version: ', version_info
+    print author_info
     print "call software INFO:"
-    print 'muscle version: ', MUSCLE_INFO
-    print 'RAxML version: ', RAXML_INFO
-    print 'Gblocks version: ', GBLOCKS_INFO
+    print 'muscle version: ', muscle_info
+    print 'RAxML version: ', raxml_info
+    print 'Gblocks version: ', gblocks_info
 
 
 parser = argparse.ArgumentParser(description=APP_DESC)
