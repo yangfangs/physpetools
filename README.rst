@@ -195,18 +195,25 @@ Physpe input/output
 
 **1.What preparation of user should does for Physpe?**
 
-User should prepare a list contain organisms names(abbreviation name are same with `KEGG DATABASE <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
+User should prepare a list contain organisms names (abbreviation name are same with `KEGG DATABASE <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
 one line write one species name only such as `organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
-you can retrieve the abbreviation names of organisms by `KEGG API <http://rest.kegg.jp/list/organism>`_.
+You can retrieve the abbreviation names of organisms by `KEGG API <http://rest.kegg.jp/list/organism>`_.
 
 
 **2.What's Physpe output data mean?**
 
-Physpe output tow data files one is data files contain phylogenetic tree files default names is ``Outdata``, another is a temp files contain
-three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
-  + conserved_protein: Store the *.fasta format files, which is conserved proteins retrieve by KEGG DATABASE.
+Physpe output tow data files, the one is contain phylogenetic tree files default names is ``Outdata``, another is a temp file.
+
+If you reconstruct phylogenetic tree by HCP (highly conserved protein) model, temp file include three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
+  + conserved_protein: Store the *.fasta format files, which is conserved proteins retrieve by KEGG database.
   + muscle_alignment: Store files are multiple sequence alignment by muscle.
-  + concatenate: Include concatenate highly conserved protein data(*.fasta format file) and Select conserved blocks data(*.fasta-gb1 format file).
+  + concatenate: Include concatenate highly conserved protein data (*.fasta format file) and select conserved blocks data (*.fasta-gb1 format file).
+
+If you reconstruct phylogenetic tree by SRNA (16s RNA) model temp file include two directory ``16srnadata`` and ``16srna_alignment``.
+  + 16srandata: Stroe  a file name is 16srandata.fata, contain the 16s RNA data retrieve by SILVA database.
+  + 16sran_alignment: Store the *.fasta format is multiple sequence alignment data and the *.fasta-gb1, *fasta-gb1.html are select conserved blocks data (use Gblocks software),
+  the *.phy format file is convert to convert from gblok data by physpe to reconstruct phylogenetic tree.
+
 Users can check the quality of every aspect of data by these temp files.
 
 
@@ -263,18 +270,6 @@ Ribosomal protein S13                                  K02953              K0295
 
 **2.How the 16s RAN database to created?**
 
-16s RAN database created by `SILVA <https://www.arb-silva.de/>`_ rRNA database project, version is SILVA SSU 123.1 release
-with Sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence
+The 16s RAN database was created by `SILVA <https://www.arb-silva.de/>`_ rRNA database project (version: SILVA SSU 123.1 release)
+with sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence.
 
-
---config=FILE
-    Use alternate configuration file (default: 'config')
-
---total
-    Append total stats after listing individual users
-
---merge
-    Merge stats of all users into a single report
-
---debug
-    Turn on debugging output, do not catch exceptions
