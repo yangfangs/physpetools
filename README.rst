@@ -150,20 +150,40 @@ The follow is to use RAxML advance options example:
     $ physpe -in organism_example_list.txt -raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
 -muscle
-    Set multiple sequence alignment parameters. The default is ``-maxiter 100`` meaning is maximum number of iterations to run is set 100. More options about muslce please to see
-    `MUSCLE manual <http://www.drive5.com/muscle/manual/options.html>`_.
+    Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see
+    `MUSCLE Manual <http://www.drive5.com/muscle/manual/options.html>`_.
 
+    -maxiter
+        maximum number of iterations to run is set 100.
 
 -gblocks
-    Set Gblocks parameters. The default is ``-t=p -e=-gb1``, ``-t=p`` is choice type of sequence is protein, ``-e=-gbl1`` mean is eneric file extensionc physep set default is``-gbl1``.
-    More options about Gblocks please to see `Gblock documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
+    Set Gblocks parameters. The default is ``-t=p -e=-gb1``.
+    More options about Gblocks please to see `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
+
+    -t =p
+        Choice type of sequence is protein.
+
+    -e =-gbl1
+        Eneric file extensionc physep set default is -gbl1
 
 -raxml
     Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``.
+    More options about RAxMl please to see `RAxML Manual <http://sco.h-its.org/exelixis/resource/download/NewManual.pdf>`_.
 
     -f a
-        rapid Bootstrap analysis and search for best­scoring ML tree in one program run
+        rapid Bootstrap analysis and search for best­scoring ML tree in one program run.
 
+    -m PROTGAMMAJTTX
+        Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution, physpe set default is PROTGAMMAJTTX.
+
+    -p
+        Specify a random number seed for the parsimony inferences. physep set default is 12345.
+
+    -x
+        Specify an integer number (random seed) and turn on rapid bootstrapping. physpe set default is 12345
+
+    -#
+        Specify the number of alternative runs on distinct starting trees. physpe set default is 100.
 
 
 Frequently Asked Questions (FAQ)
