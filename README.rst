@@ -149,20 +149,20 @@ The follow is to use RAxML advance options example:
 
     $ physpe -in organism_example_list.txt -raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
--muscle <[option]*>
-
+-muscle
     Set multiple sequence alignment parameters. The default is ``-maxiter 100`` meaning is maximum number of iterations to run is set 100. More options about muslce please to see
     `MUSCLE manual <http://www.drive5.com/muscle/manual/options.html>`_.
 
 
--gblocks <[options]*>
+-gblocks
     Set Gblocks parameters. The default is ``-t=p -e=-gb1``, ``-t=p`` is choice type of sequence is protein, ``-e=-gbl1`` mean is eneric file extensionc physep set default is``-gbl1``.
     More options about Gblocks please to see `Gblock documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
 -raxml
     Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``,
-  -f
-    rapid Bootstrap analysis and search for best­scoring ML tree in one program run
+
+    -f
+        rapid Bootstrap analysis and search for best­scoring ML tree in one program run
 
 
 
