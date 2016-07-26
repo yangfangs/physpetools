@@ -171,20 +171,20 @@ The follow is to use RAxML advance options example:
     Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``.
     More options about RAxMl please to see `RAxML Manual <http://sco.h-its.org/exelixis/resource/download/NewManual.pdf>`_.
 
-    -f a
-        rapid Bootstrap analysis and search for best­scoring ML tree in one program run.
+    -f
+        select algorithm. The physpe default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run
 
     -m
-        Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution, The physpe set default is PROTGAMMAJTTX.
+        Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The physpe default set is PROTGAMMAJTTX.
 
     -p
-        Specify a random number seed for the parsimony inferences. The physep set default is 12345.
+        Specify a random number seed for the parsimony inferences. The physep default set is 12345.
 
     -x
-        Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe set default is 12345
+        Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe default set is 12345
 
-    -#　100
-        Specify the number of alternative runs on distinct starting trees. The physpe set default is 100.
+    -\\#
+        Specify the number of alternative runs on distinct starting trees. The physpe default set is 100.
 
 
 Frequently Asked Questions (FAQ)
