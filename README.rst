@@ -12,6 +12,8 @@
 Documentation of one command auto reconstruct species phylogenetic tree
 ==============================================================================
 
+.. contents::
+
 Introduction
 ------------------------------------------------------------------------------
 In some filed combine species phylogenetic tree do some prediction are very important for instance,
@@ -112,17 +114,22 @@ Use **Physpe** from the command line like this:
 Options
 -------------------------------------------------------------------------------
 
--h/--help print help message and exits.
+-h/--help
+    print help message and exits.
 
-``-in``  A txt file contain the a abbreviation species name same with KEGG species abbreviation.
+-in
+    A txt file contain the a abbreviation species name same with KEGG species abbreviation.
 
-``-out`` A directory contain construct Tree files.
+-out
+    A directory contain construct Tree files.
 
-``-v`` The version information.
+``-v``
+    The version information.
 
-``-t`` Set the threads to construct phylogenetic tree. The default is 1.
+``-t``
+  Set the threads to construct phylogenetic tree. The default is 1.
 
-
+.. contents:: :local:
 
 Advance options
 --------------------------------------------------------------------------------
@@ -215,3 +222,14 @@ Ribosomal protein S13                                  K02953              K0295
 with Sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence
 
 
+--config=FILE
+    Use alternate configuration file (default: 'config')
+
+--total
+    Append total stats after listing individual users
+
+--merge
+    Merge stats of all users into a single report
+
+--debug
+    Turn on debugging output, do not catch exceptions
