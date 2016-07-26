@@ -158,7 +158,7 @@ The follow is to use RAxML advance options example:
     Set Gblocks parameters. The default is ``-t=p -e=-gb1``, ``-t=p`` is choice type of sequence is protein, ``-e=-gbl1`` mean is eneric file extensionc physep set default is``-gbl1``.
     More options about Gblocks please to see `Gblock documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
--raxml <[options]*>
+-raxml
     Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``,
 
   -f
