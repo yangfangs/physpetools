@@ -150,6 +150,7 @@ The follow is to use RAxML advance options example:
     $ physpe -in organism_example_list.txt -raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
 -muscle <[option]*>
+
     Set multiple sequence alignment parameters. The default is ``-maxiter 100`` meaning is maximum number of iterations to run is set 100. More options about muslce please to see
     `MUSCLE manual <http://www.drive5.com/muscle/manual/options.html>`_.
 
@@ -160,7 +161,6 @@ The follow is to use RAxML advance options example:
 
 -raxml
     Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``,
-
   -f
     rapid Bootstrap analysis and search for best­scoring ML tree in one program run
 
