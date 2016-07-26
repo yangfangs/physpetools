@@ -183,7 +183,7 @@ The follow is to use RAxML advance options example:
     -x
         Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe set default is 12345
 
-    -#
+    - #
         Specify the number of alternative runs on distinct starting trees. The physpe set default is 100.
 
 
