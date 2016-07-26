@@ -120,11 +120,11 @@ Options
 -v
     The version information.
 
--in
+-in <species_names.txt>
     Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
 
--out
-    A directory include output data (reconstruct tree files).
+-out <directory>
+    A directory include output data (reconstruct tree files). The default output data name is Outdata.
 
 -t <int>
     Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.
@@ -132,7 +132,7 @@ Options
 -hcp
     The hcp (highly conserved protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.
 
--16srna
+-srna
     The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree.
 
 
@@ -140,12 +140,30 @@ Options
 Advance options
 --------------------------------------------------------------------------------
 
-``-muscle``  Set multiple sequence alignment arguments. The default is ``-maxiter 100``
+User enable choice more detail options with Physpe call software, detail advance options input
+``must be enclosed in single quotes``.
 
-``-gblocks`` Set gblocks arguments. The default is ``-t=p -e=-gb1``
+The follow is to use RAxML advance options example:
 
-``-raxml``   Set reconstruct phylogenetic tree arguments the detail see RAxML software arguments. The default is
-             ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``
+.. code-block:: console
+
+    $ physpe -in organism_example_list.txt -raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+
+-muscle <[option]*>
+    Set multiple sequence alignment parameters. The default is ``-maxiter 100`` meaning is maximum number of iterations to run is set 100. More options about muslce please to see
+    `MUSCLE manual <http://www.drive5.com/muscle/manual/options.html>`_.
+
+
+-gblocks <[options]*>
+    Set Gblocks parameters. The default is ``-t=p -e=-gb1``, ``-t=p`` is choice type of sequence is protein, ``-e=-gbl1`` mean is eneric file extensionc physep set default is``-gbl1``.
+    More options about Gblocks please to see `Gblock documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
+
+-raxml <[options]*>
+    Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``,
+
+  -f
+    rapid Bootstrap analysis and search for best­scoring ML tree in one program run
+
 
 
 Frequently Asked Questions (FAQ)

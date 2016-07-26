@@ -62,7 +62,7 @@ parser.add_argument('-raxml', action='store', dest='raxml',
                     default=raxmlpara_pro, help='Build by raxml')
 parser.add_argument('-hcp', action='store_true', dest='HCP',
                     default=False, help='Reconstruct phylogenetic tree by highly conserved proteins')
-parser.add_argument('-16srna', action='store_true', dest='ssurna',
+parser.add_argument('-srna', action='store_true', dest='ssurna',
                     default=False, help='Reconstruct phylogenetic tree by 16s ran')
 args = parser.parse_args()
 if args.version:
