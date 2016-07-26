@@ -12,7 +12,7 @@
 Documentation of one command auto reconstruct species phylogenetic tree
 ==============================================================================
 
-.. contents::
+.. contents:: :local:
 
 Introduction
 ------------------------------------------------------------------------------
@@ -114,22 +114,28 @@ Use **Physpe** from the command line like this:
 Options
 -------------------------------------------------------------------------------
 
--h/--help
-    print help message and exits.
+-h
+    Print help message and exits.
 
--in
-    A txt file contain the a abbreviation species name same with KEGG species abbreviation.
-
--out
-    A directory contain construct Tree files.
-
-``-v``
+-v
     The version information.
 
-``-t``
-  Set the threads to construct phylogenetic tree. The default is 1.
+-in
+    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
 
-.. contents:: :local:
+-out
+    A directory include output data (reconstruct tree files).
+
+-t <int>
+    Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.
+
+-hcp
+    The hcp (highly conserved protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.
+
+-16srna
+    The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree.
+
+
 
 Advance options
 --------------------------------------------------------------------------------
@@ -146,7 +152,7 @@ Frequently Asked Questions (FAQ)
 --------------------------------------------------------------------------------
 
 Physpe input/output
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 **1.What preparation of user should does for Physpe?**
 
@@ -166,7 +172,7 @@ Users can check the quality of every aspect of data by these temp files.
 
 
 Physpe reconstruct phylogenetic tree DB
-----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 **1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?**
 
 Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
