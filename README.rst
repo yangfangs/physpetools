@@ -158,13 +158,14 @@ The follow is to use RAxML advance options example:
 
 -gblocks
     Set Gblocks parameters. The default is ``-t=p -e=-gb1``.
-    More options about Gblocks please to see `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
+    More options about Gblocks please to see
+    `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
-    -t =p
-        Choice type of sequence is protein.
+    -t
+        Choice type of sequence. The physpe default set is protein.
 
-    -e =-gbl1
-        Eneric file extensionc physep set default is -gbl1
+    -e
+        Eneric file extensionc. physep set default is -gbl1.
 
 -raxml
     Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``.
@@ -173,17 +174,17 @@ The follow is to use RAxML advance options example:
     -f a
         rapid Bootstrap analysis and search for best­scoring ML tree in one program run.
 
-    -m PROTGAMMAJTTX
-        Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution, physpe set default is PROTGAMMAJTTX.
+    -m
+        Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution, The physpe set default is PROTGAMMAJTTX.
 
     -p
-        Specify a random number seed for the parsimony inferences. physep set default is 12345.
+        Specify a random number seed for the parsimony inferences. The physep set default is 12345.
 
     -x
-        Specify an integer number (random seed) and turn on rapid bootstrapping. physpe set default is 12345
+        Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe set default is 12345
 
     -#
-        Specify the number of alternative runs on distinct starting trees. physpe set default is 100.
+        Specify the number of alternative runs on distinct starting trees. The physpe set default is 100.
 
 
 Frequently Asked Questions (FAQ)
