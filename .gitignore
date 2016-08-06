@@ -10,4 +10,5 @@ testdata
 evn
 .gitigonre
 .directory
-*.log
+*.logsite/
+site/

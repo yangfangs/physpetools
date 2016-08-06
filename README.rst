@@ -12,6 +12,8 @@
 Documentation of one command auto reconstruct species phylogenetic tree
 ==============================================================================
 
+Documents: `Physpetools documentation <https://xiaofeiyangyang.github.io/physpetools>`_.
+
 .. contents:: :local:
 
 Introduction
