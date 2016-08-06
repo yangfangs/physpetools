@@ -2,23 +2,18 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nFor full documentation visit \nmkdocs.org\n.\n\n\nCommands\n\n\n\n\nmkdocs new [dir-name]\n - Create a new project.\n\n\nmkdocs serve\n - Start the live-reloading docs server.\n\n\nmkdocs build\n - Build the documentation site.\n\n\nmkdocs help\n - Print this help message.\n\n\n\n\nProject layout\n\n\nmkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
+            "text": "Welcome to MkDocs\n\n\nDocumentation of one command auto reconstruct species phylogenetic tree\n\n\nIntroduction\n\n\nIn some filed combine species phylogenetic tree do some prediction are very important for instance,\nprotein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree\nis necessary, but the process of constructing the tree species is very tedious.\n\n\nWe developing a command line software \nPhyspe\n, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.\n(the species names must be a abbreviation same with \nKEGG database\n organisms abbreviation), the \nPhyspe\n auto reconstruct species phylogenetic tree.\n\n\nPhyspe workflow", 
             "title": "Home"
         }, 
         {
             "location": "/#welcome-to-mkdocs", 
-            "text": "For full documentation visit  mkdocs.org .", 
+            "text": "Documentation of one command auto reconstruct species phylogenetic tree", 
             "title": "Welcome to MkDocs"
         }, 
         {
-            "location": "/#commands", 
-            "text": "mkdocs new [dir-name]  - Create a new project.  mkdocs serve  - Start the live-reloading docs server.  mkdocs build  - Build the documentation site.  mkdocs help  - Print this help message.", 
-            "title": "Commands"
-        }, 
-        {
-            "location": "/#project-layout", 
-            "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
-            "title": "Project layout"
+            "location": "/#introduction", 
+            "text": "In some filed combine species phylogenetic tree do some prediction are very important for instance,\nprotein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree\nis necessary, but the process of constructing the tree species is very tedious.  We developing a command line software  Physpe , which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.\n(the species names must be a abbreviation same with  KEGG database  organisms abbreviation), the  Physpe  auto reconstruct species phylogenetic tree.  Physpe workflow", 
+            "title": "Introduction"
         }, 
         {
             "location": "/install/", 
