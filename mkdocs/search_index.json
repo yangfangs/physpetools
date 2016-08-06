@@ -19,6 +19,21 @@
             "location": "/#project-layout", 
             "text": "mkdocs.yml    # The configuration file.\ndocs/\n    index.md  # The documentation homepage.\n    ...       # Other markdown pages, images and other files.", 
             "title": "Project layout"
+        }, 
+        {
+            "location": "/install/", 
+            "text": "download page", 
+            "title": "install"
+        }, 
+        {
+            "location": "/usage/", 
+            "text": "usage", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/tutorial/", 
+            "text": "tutorial", 
+            "title": "Tutorial"
         }
     ]
 }
