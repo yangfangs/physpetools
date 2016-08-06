@@ -2,13 +2,13 @@
     "docs": [
         {
             "location": "/", 
-            "text": "Welcome to MkDocs\n\n\nDocumentation of one command auto reconstruct species phylogenetic tree\n\n\nIntroduction\n\n\nIn some filed combine species phylogenetic tree do some prediction are very important for instance,\nprotein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree\nis necessary, but the process of constructing the tree species is very tedious.\n\n\nWe developing a command line software \nPhyspe\n, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.\n(the species names must be a abbreviation same with \nKEGG database\n organisms abbreviation), the \nPhyspe\n auto reconstruct species phylogenetic tree.\n\n\nPhyspe workflow", 
+            "text": "Documentation of one command auto reconstruct species phylogenetic tree\n\n\nIntroduction\n\n\nIn some filed combine species phylogenetic tree do some prediction are very important for instance,\nprotein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree\nis necessary, but the process of constructing the tree species is very tedious.\n\n\nWe developing a command line software \nPhyspe\n, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.\n(the species names must be a abbreviation same with \nKEGG database\n organisms abbreviation), the \nPhyspe\n auto reconstruct species phylogenetic tree.\n\n\nPhyspe workflow", 
             "title": "Home"
         }, 
         {
-            "location": "/#welcome-to-mkdocs", 
-            "text": "Documentation of one command auto reconstruct species phylogenetic tree", 
-            "title": "Welcome to MkDocs"
+            "location": "/#documentation-of-one-command-auto-reconstruct-species-phylogenetic-tree", 
+            "text": "", 
+            "title": "Documentation of one command auto reconstruct species phylogenetic tree"
         }, 
         {
             "location": "/#introduction", 
