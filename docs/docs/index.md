@@ -1,6 +1,6 @@
-# Welcome to MkDocs
+# Documentation of one command auto reconstruct species phylogenetic tree
 
-Documentation of one command auto reconstruct species phylogenetic tree
+
 
 ## Introduction
 

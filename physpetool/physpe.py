@@ -50,8 +50,6 @@ parser.add_argument('-in', nargs='?', dest='spenames', type=argparse.FileType('r
                     help='Input file must be contain the species names')
 parser.add_argument('-out', action="store", dest="outdata",
                     default='Outdata', help='Out file name be string type')
-parser.add_argument('-v', '--version', action='store_true',
-                    default=False, help='Version information')
 parser.add_argument('-t', action='store', dest='thread',
                     type=int, default=1, help='Set the thread')
 parser.add_argument('-muscle', action='store', dest='muscle',
@@ -64,6 +62,8 @@ parser.add_argument('-hcp', action='store_true', dest='HCP',
                     default=False, help='Reconstruct phylogenetic tree by highly conserved proteins')
 parser.add_argument('-srna', action='store_true', dest='ssurna',
                     default=False, help='Reconstruct phylogenetic tree by 16s ran')
+parser.add_argument('-v', '--version', action='store_true',
+                    default=False, help='Version information')
 args = parser.parse_args()
 if args.version:
     version_info()
