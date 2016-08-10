@@ -16,10 +16,11 @@ retrieve 16s rna form bioinfor.scu.edu.cn
     :return: download file path
     """
     # pares and cheak species names lsit
-    spelist = []
-    for line in spenamelist:
-        st = line.strip()
-        spelist.append(st)
+    # spelist = []
+    # for line in spenamelist:
+    #     st = line.strip()
+    #     spelist.append(st)
+    spelist =spenamelist
     logretrieve16srna.info('Read organisms names successful')
     # makdir tmep directory
     timeformat = '%Y%m%d%H%M%S'

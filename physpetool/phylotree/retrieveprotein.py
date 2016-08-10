@@ -92,10 +92,11 @@ def retrieveprotein(proindexlist, outpath):
 
 
 def doretrieve(specieslistfile, outpath):
-    spelist = []
-    for line in specieslistfile:
-        st = line.strip()
-        spelist.append(st)
+    # spelist = []
+    # for line in specieslistfile:
+    #     st = line.strip()
+    #     spelist.append(st)
+    spelist = specieslistfile
     logretrieveprotein.info("Read organisms names successful")
     colname = getcolname()
     relist = getspecies(spelist, colname)

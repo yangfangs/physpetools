@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = "0.1.1"
+version = "0.1.2"
 try:
     LONG_DESCRIPTION = open("README.rst", "rb").read().decode("utf-8")
 except:
@@ -16,6 +16,6 @@ setup(
     long_description=LONG_DESCRIPTION,
     author="Yang Fang",
     author_email="yangfangscu@gmail.com",
-    package_data={'': ['*.rst'], 'physpetool': ['database/*.db', 'softwares/*']},
+    package_data={'': ['*.rst'], 'physpetool': ['database/*.db', 'softwares/*','database/*.txt']},
     url="https://gitlab.com/xiaoxiaoyang/physpetool/tree/master",
 )

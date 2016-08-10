@@ -12,19 +12,21 @@ from physpetool.phylotree.retrieve16srna import retrieve16srna
 from physpetool.phylotree.retrieveprotein import doretrieve
 import argparse
 
+from physpetool.utils.checkinputfile import checkKeggOrganism, checkSilvaOrganism
+
 """
 the main module as enter point and contain a main() function to invoke other
 script same as pipeline.
 """
 
 APP_DESC = """
-        PHYSPE v0.1.1:
+        PHYSPE v0.1.2:
 Reconstruct phylogenetic tree
 """
 
 
 def version_info():
-    version_info = 'V0.1.1'
+    version_info = 'V0.1.2'
     muscle_info = 'v3.8.31'
     gblocks_info = '0.91b'
     raxml_info = 'v8.2.3'
@@ -83,15 +85,21 @@ print args.thread
 # out_put = '/home/yangfang/physpetools/testdata/phytree.nwk'
 # physpe -in /home/yangfang/physpetools/testdata/speciesname.txt -out /home/yangfang/physpetools/testdata/phytree1
 in_put = args.spenames
+
 pwd = os.getcwd()
 
 out_put = os.path.join(pwd, args.outdata)
 
 
+
+
+
 def main():
     if args.HCP:
         setlogdir(out_put)
-        out_retrieve = doretrieve(in_put, out_put)
+
+        hcp_input = checkKeggOrganism(in_put)
+        out_retrieve = doretrieve(hcp_input, out_put)
         out_alg = domuscle_file(out_retrieve, out_put, args.muscle)
         out_concat = cocat_path(out_alg)
         out_gblock = dogblocks(out_concat, args.gblocks)
@@ -99,7 +107,9 @@ def main():
         doraxml(out_f2p, out_put, args.raxml, args.thread)
     elif args.ssurna:
         setlogdir(out_put)
-        out_retrieve = retrieve16srna(in_put, out_put)
+
+        ssu_input = checkSilvaOrganism(in_put)
+        out_retrieve = retrieve16srna(ssu_input, out_put)
         out_alg = domuscle(out_retrieve, out_put, args.muscle)
         if args.gblocks is gblockspara_pro:
             args.gblocks = gblockspara_dna
