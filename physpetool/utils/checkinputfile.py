@@ -8,6 +8,11 @@ logchecking = getLogging('Checking organisms')
 
 
 def checkKeggOrganism(input):
+    """
+Check input organisms list with KEGG database
+    :param input: a open file list
+    :return: a list contain organisms can be use construct phy tree
+    """
     originaList = []
     for line in input:
         st = line.strip()
@@ -38,6 +43,11 @@ def checkKeggOrganism(input):
 
 
 def checkSilvaOrganism(input):
+    """
+Check input organisms list with SILVA database
+    :param input: a open file list
+    :return: a list contain organisms can be use construct phy tree
+    """
     originaList = []
     for line in input:
         st = line.strip()
