@@ -47,7 +47,7 @@ musclepara = '-maxiters 100'
 gblockspara_pro = '-t=p -e=-gb1'
 gblockspara_dna = '-t=d -e=-gb1'
 parser = argparse.ArgumentParser(description=APP_DESC)
-
+subparsers = parser.add_subparsers(help='more command')
 parser.add_argument('-in', nargs='?', dest='spenames', type=argparse.FileType('r'),
                     help='Input file must be contain the species names')
 parser.add_argument('-out', action="store", dest="outdata",
@@ -66,6 +66,9 @@ parser.add_argument('-srna', action='store_true', dest='ssurna',
                     default=False, help='Reconstruct phylogenetic tree by 16s ran')
 parser.add_argument('-v', '--version', action='store_true',
                     default=False, help='Version information')
+parser_combine = subparsers.add_parser('combine', help='combine tree')
+
+
 args = parser.parse_args()
 if args.version:
     version_info()
