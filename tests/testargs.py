@@ -62,5 +62,3 @@ pwd = os.getcwd()
 outpath = os.path.join(pwd, args.outdatafile)
 
 print outpath
-
-if
