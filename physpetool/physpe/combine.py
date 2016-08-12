@@ -10,10 +10,10 @@ def start_agrs(input):
 Arguments parse
     :param input:  Arguments
     """
-    combine_args = input.add_argument_group("TREE combine OPTIONS")
-    combine_args.add_argument('-in', action='store', dest="inputfile",
+    combine_args = input.add_argument_group("COMBINE OPTIONS")
+    combine_args.add_argument('-i', action='store', dest="inputfile",
                               help='input files name')
-    combine_args.add_argument('-out', action='store', dest="outputfile",
+    combine_args.add_argument('-o', action='store', dest="outputfile",
                               default='combinetree', help='output files name')
 
 

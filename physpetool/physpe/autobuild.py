@@ -34,26 +34,26 @@ def start_args(input):
 Argument parse
     :param input: arguments
     """
-    autobuild_args = input.add_argument_group("TREE AUTOBUILD OPTIONS")
-
+    autobuild_args = input.add_argument_group("AUTOBUILD OPTIONS")
+    advance_args = input.add_argument_group("ADVANCE OPTIONS")
     autobuild_args.add_argument('-i', nargs='?', dest='spenames', type=argparse.FileType('r'),
                         help='Input file must be contain the species names')
     autobuild_args.add_argument('-o', action='store', dest="outdata",
                         default='Outdata', help='Out file name be string type')
     autobuild_args.add_argument('-t', action='store', dest='thread',
                         type=int, default=1, help='Set the thread')
-    autobuild_args.add_argument('--muscle', action='store', dest='muscle',
-                        default=musclepara, help='Alignment by muscle')
-    autobuild_args.add_argument('--gblocks', action='store', dest='gblocks',
-                        default=gblockspara_pro, help='Use gblock')
-    autobuild_args.add_argument('--raxml', action='store', dest='raxml',
-                        default=raxmlpara_pro, help='Build by raxml')
     autobuild_args.add_argument('--hcp', action='store_true', dest='HCP',
                         default=False, help='Reconstruct phylogenetic tree by highly conserved proteins')
     autobuild_args.add_argument('--srna', action='store_true', dest='ssurna',
                         default=False, help='Reconstruct phylogenetic tree by 16s ran')
     autobuild_args.add_argument('-v', '--version', action='store_true',
                         default=False, help='Version information')
+    advance_args.add_argument('--muscle', action='store', dest='muscle',
+                        default=musclepara, help='Alignment by muscle')
+    advance_args.add_argument('--gblocks', action='store', dest='gblocks',
+                        default=gblockspara_pro, help='Use gblock')
+    advance_args.add_argument('--raxml', action='store', dest='raxml',
+                        default=raxmlpara_pro, help='Build by raxml')
 
 
 def starting(args):
