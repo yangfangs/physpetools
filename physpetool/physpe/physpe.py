@@ -42,16 +42,18 @@ def start(input):
     physpe_combine.set_defaults(func=combine.starting)
     combine.start_agrs(physpe_combine)
 
-
-
-
     if len(input) == 1:
         parser.print_usage()
-        print ('Please use program option for details ')
-        print ('for example: physpe autobuild -h')
+        print ('Please use program option for details')
+        print ('Example: \nphyspe autobuild -h')
         return
     args = parser.parse_args(input[1:])
     args.func(args)
+
+
+
+
+
 if __name__ == '__main__':
     main()
 

@@ -6,6 +6,10 @@ APP_DESC = ""
 
 
 def start_agrs(input):
+    """
+Arguments parse
+    :param input:  Arguments
+    """
     combine_args = input.add_argument_group("TREE combine OPTIONS")
     combine_args.add_argument('-in', action='store', dest="inputfile",
                               help='input files name')
@@ -14,6 +18,10 @@ def start_agrs(input):
 
 
 def starting(args):
+    """
+Staring run combine
+    :param args: arguments
+    """
     pwd = os.getcwd()
 
     out_put = os.path.join(pwd, args.outputfile)

@@ -27,7 +27,13 @@ raxmlpara_dna = "-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1"
 musclepara = '-maxiters 100'
 gblockspara_pro = '-t=p -e=-gb1'
 gblockspara_dna = '-t=d -e=-gb1'
+
+
 def start_args(input):
+    """
+Argument parse
+    :param input: arguments
+    """
     autobuild_args = input.add_argument_group("TREE AUTOBUILD OPTIONS")
 
     autobuild_args.add_argument('-in', nargs='?', dest='spenames', type=argparse.FileType('r'),
@@ -51,6 +57,10 @@ def start_args(input):
 
 
 def starting(args):
+    """
+starting run reconstruct tree
+    :param args: arguments
+    """
     print "in put fasta file is:"
     print args.spenames
     print "outfile is:"
@@ -58,14 +68,12 @@ def starting(args):
     print "now loading data and constructing species phylogenetic tree..."
     print args.thread
 
-    # in_put = '/home/yangfang/physpetools/testdata/protein.fastq'
-    # out_put = '/home/yangfang/physpetools/testdata/phytree.nwk'
-    # physpe -in /home/yangfang/physpetools/testdata/speciesname.txt -out /home/yangfang/physpetools/testdata/phytree1
     in_put = args.spenames
 
     pwd = os.getcwd()
 
     out_put = os.path.join(pwd, args.outdata)
+    # reconstruct phylogenetic tree by highly conserved proteins
     if args.HCP:
         setlogdir(out_put)
 
@@ -76,6 +84,7 @@ def starting(args):
         out_gblock = dogblocks(out_concat, args.gblocks)
         out_f2p = fasta2phy(out_gblock)
         doraxml(out_f2p, out_put, args.raxml, args.thread)
+    # reconstruct phylogenetic tree by ssu RNA
     elif args.ssurna:
         setlogdir(out_put)
 
