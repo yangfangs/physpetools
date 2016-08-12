@@ -1,6 +1,8 @@
 from setuptools import setup, find_packages
+from physpetool.version import version
 
-version = "0.1.2"
+physpe_version =version
+
 try:
     LONG_DESCRIPTION = open("README.rst", "rb").read().decode("utf-8")
 except:
@@ -9,9 +11,9 @@ setup(
     name="physpe",
     packages=find_packages(),
     entry_points={
-        "console_scripts": ['physpe = physpetool.physpe:main']
+        "console_scripts": ['physpe = physpetool.physpe.physpe:main']
     },
-    version=version,
+    version=physpe_version,
     description="Python command line to construct phylogenetic tree.",
     long_description=LONG_DESCRIPTION,
     author="Yang Fang",
