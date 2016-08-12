@@ -14,7 +14,7 @@ def populate_args(annotate_args_p):
                           default=sys.stdin, help='sub -in')
 
 def run(args):
-    print args.outdatafile
-    print args.spenames
+    lenth = len(args)
+    print  lenth
+
     print ('hello')
-    print
