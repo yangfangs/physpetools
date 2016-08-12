@@ -18,7 +18,7 @@
         {
             "location": "/install/", 
             "text": "download page", 
-            "title": "install"
+            "title": "Install"
         }, 
         {
             "location": "/usage/", 
@@ -29,6 +29,11 @@
             "location": "/tutorial/", 
             "text": "tutorial", 
             "title": "Tutorial"
+        }, 
+        {
+            "location": "/faq/", 
+            "text": "FAQ", 
+            "title": "FAQ"
         }
     ]
 }

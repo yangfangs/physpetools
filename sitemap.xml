@@ -18,16 +18,24 @@
     
 
     
+        
     <url>
      <loc>None/usage/</loc>
      <lastmod>2016-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>None/tutorial/</loc>
+     <lastmod>2016-08-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
     <url>
-     <loc>None/tutorial/</loc>
+     <loc>None/faq/</loc>
      <lastmod>2016-08-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
