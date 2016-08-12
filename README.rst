@@ -274,5 +274,5 @@ with sequences haven been truncated. Means that all nucleotides that have not be
    :target: https://pypi.python.org/pypi/physpe
 .. |Docs| image:: https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat-square
    :target: https://xiaofeiyangyang.github.io/physpetools/
-.. |License| image:: https://img.shields.io/pypi/l/physpe.svg?style=flat-square
+.. |License| image:: https://img.shields.io/aur/license/yaourt.svg?maxAge=2592000
    :target: https://github.com/xiaofeiyangyang/physpetools/blob/master/LICENSE.txt
