@@ -1,20 +1,13 @@
-
-.. image:: https://travis-ci.org/MacHu-GWU/elementary_math-project.svg?branch=master
-
-.. image:: https://img.shields.io/pypi/v/elementary_math.svg
-
-.. image:: https://img.shields.io/pypi/l/elementary_math.svg
-
-.. image:: https://img.shields.io/pypi/pyversions/elementary_math.svg
-
-
-
-Documentation of one command auto reconstruct species phylogenetic tree
+one command line auto reconstruct phylogenetic tree
 ==============================================================================
+
+|PyPI version| |Docs| |License|
+
 
 Documents: `Physpetools documentation <https://xiaofeiyangyang.github.io/physpetools>`_.
 
 .. contents:: :local:
+
 
 Introduction
 ------------------------------------------------------------------------------
@@ -275,3 +268,11 @@ Ribosomal protein S13                                  K02953              K0295
 The 16s RAN database was created by `SILVA <https://www.arb-silva.de/>`_ rRNA database project (version: SILVA SSU 123.1 release)
 with sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence.
 
+
+
+.. |PyPI version| image:: https://img.shields.io/pypi/v/physpe.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/physpe
+.. |Docs| image:: https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat-square
+   :target: https://xiaofeiyangyang.github.io/physpetools/
+.. |License| image:: https://img.shields.io/pypi/l/physpe.svg?style=flat-square
+   :target: https://github.com/xiaofeiyangyang/physpetools/blob/master/LICENSE.txt
