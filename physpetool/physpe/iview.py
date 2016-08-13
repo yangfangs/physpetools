@@ -32,4 +32,4 @@ Staring run combine
     pwd = os.getcwd()
 
     out_put = os.path.join(pwd, args.outputfile)
-    colorRange(args.inputfile, out_puts, args.colorrange)
+    colorRange(args.inputfile, out_put, args.colorrange)
