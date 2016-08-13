@@ -132,11 +132,208 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
+        <li class="main active"><a href="#frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</a></li>
+        
+            <li><a href="#physpe-inputoutput">Physpe input/output</a></li>
+        
+    
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p>FAQ</p></div>
+<h1 id="frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</h1>
+<h2 id="physpe-inputoutput">Physpe input/output</h2>
+<p><strong>1.What preparation of user should does for Physpe?</strong></p>
+<p>User should prepare a list contain organisms names (abbreviation name are same with <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG database</a>
+one line write one species name only such as <a href="https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt">organism_example_list</a>
+You can retrieve the abbreviation names of organisms by <a href="http://rest.kegg.jp/list/organism">KEGG API</a></p>
+<p><strong>2.What's Physpe output data mean?</strong></p>
+<p>Physpe output tow data files, the one is contain phylogenetic tree files default names is <code>Outdata</code>, another is a temp file.</p>
+<p>If you reconstruct phylogenetic tree by HCP (highly conserved protein) model, temp file include three directory <code>conserved_protein</code>, <code>muscle_alignment</code> and <code>concatenate</code>
+  * conserved_protein: Store the <em>.fasta format files, which is conserved proteins retrieve by KEGG database.
+  * muscle_alignment: Store files are multiple sequence alignment by muscle.
+  * concatenate: Include concatenate highly conserved protein data (</em>.fasta format file) and select conserved blocks data (*.fasta-gb1 format file).</p>
+<p>If you reconstruct phylogenetic tree by SRNA (16s RNA) model temp file include two directory <code>16srnadata</code> and <code>16srna_alignment</code>.
+  * 16srandata: Stroe  a file name is 16srandata.fata, contain the 16s RNA data retrieve by SILVA database.
+  * 16sran_alignment: Store the <em>.fasta format is multiple sequence alignment data and the </em>.fasta-gb1, <em>fasta-gb1.html are select conserved blocks data (use Gblocks software),
+  the </em>.phy format file is convert to convert from gblok data by physpe to reconstruct phylogenetic tree.</p>
+<p>Users can check the quality of every aspect of data by these temp files.</p>
+<p>Physpe reconstruct phylogenetic tree database
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+<strong>1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?</strong></p>
+<p>Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.</p>
+<p><strong>cite:</strong></p>
+<p>Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.</p>
+<p>31 highly conserved proteins and correspond KEGG database KO number as follow table:</p>
+<table>
+<thead>
+<tr>
+<th>Protein Names</th>
+<th>Eukaryotes KO</th>
+<th>Prokaryotes KO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DNA-directed RNA polymerase subunit alpha</td>
+<td>K03040</td>
+<td>K03040</td>
+</tr>
+<tr>
+<td>Ribosomal protein L1</td>
+<td>K02865</td>
+<td>K02863</td>
+</tr>
+<tr>
+<td>Leucyl-tRNA synthetase</td>
+<td>K01869</td>
+<td>K01869</td>
+</tr>
+<tr>
+<td>Metal-dependent proteases with chaperone activity</td>
+<td>K01409</td>
+<td>K01409</td>
+</tr>
+<tr>
+<td>Phenylalanine-tRNA synthethase alpha subunit</td>
+<td>K01889</td>
+<td>K01889</td>
+</tr>
+<tr>
+<td>Predicted GTPase probable translation factor</td>
+<td>K06942</td>
+<td>K06942</td>
+</tr>
+<tr>
+<td>Preprotein translocase subunit SecY</td>
+<td>K10956</td>
+<td>K10956</td>
+</tr>
+<tr>
+<td>Ribosomal protein L11</td>
+<td>K02868</td>
+<td>K02867</td>
+</tr>
+<tr>
+<td>Ribosomal protein L13</td>
+<td>K02873</td>
+<td>K02871</td>
+</tr>
+<tr>
+<td>Ribosomal protein L14</td>
+<td>K02875</td>
+<td>K02874</td>
+</tr>
+<tr>
+<td>Ribosomal protein L15</td>
+<td>K02877</td>
+<td>K17437</td>
+</tr>
+<tr>
+<td>Ribosomal protein L16/L10E</td>
+<td>K02866</td>
+<td>K02872</td>
+</tr>
+<tr>
+<td>Ribosomal protein L18</td>
+<td>K02883</td>
+<td>K02882</td>
+</tr>
+<tr>
+<td>Ribosomal protein L22</td>
+<td>K02891</td>
+<td>K02890</td>
+</tr>
+<tr>
+<td>Ribosomal protein L3</td>
+<td>K02925</td>
+<td>K02906</td>
+</tr>
+<tr>
+<td>Ribosomal protein L5</td>
+<td>K02932</td>
+<td>K02931</td>
+</tr>
+<tr>
+<td>Ribosomal protein L6P/L9E</td>
+<td>K02940</td>
+<td>K02939</td>
+</tr>
+<tr>
+<td>Ribosomal protein S11</td>
+<td>K02949</td>
+<td>K02948</td>
+</tr>
+<tr>
+<td>Ribosomal protein S15P/S13E</td>
+<td>K02956</td>
+<td>K02956</td>
+</tr>
+<tr>
+<td>Ribosomal protein S17</td>
+<td>K02962</td>
+<td>K02961</td>
+</tr>
+<tr>
+<td>Ribosomal protein S2</td>
+<td>K02981</td>
+<td>K02967</td>
+</tr>
+<tr>
+<td>Ribosomal protein S3</td>
+<td>K02985</td>
+<td>K02982</td>
+</tr>
+<tr>
+<td>Ribosomal protein S4</td>
+<td>K02987</td>
+<td>K02986</td>
+</tr>
+<tr>
+<td>Ribosomal protein S5</td>
+<td>K02989</td>
+<td>K02988</td>
+</tr>
+<tr>
+<td>Ribosomal protein S7</td>
+<td>K02993</td>
+<td>K02992</td>
+</tr>
+<tr>
+<td>Ribosomal protein S8</td>
+<td>K02995</td>
+<td>K02994</td>
+</tr>
+<tr>
+<td>Ribosomal protein S9</td>
+<td>K02997</td>
+<td>K02996</td>
+</tr>
+<tr>
+<td>Seryl-tRNA synthetase</td>
+<td>K01875</td>
+<td>K01875</td>
+</tr>
+<tr>
+<td>Arginyl-tRNA synthetase</td>
+<td>K01887</td>
+<td>K01887</td>
+</tr>
+<tr>
+<td>DNA-directed RNA polymerase beta subunit</td>
+<td>K03043</td>
+<td>K03043</td>
+</tr>
+<tr>
+<td>Ribosomal protein S13</td>
+<td>K02953</td>
+<td>K02952</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2.How the 16s RAN database to created?</strong></p>
+<p>The 16s RAN database was created by <code>SILVA &lt;https://www.arb-silva.de/&gt;</code>_ rRNA database project (version: SILVA SSU 123.1 release)
+with sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence.</p></div>
             
         </div>
 
