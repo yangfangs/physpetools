@@ -1,5 +1,7 @@
 import os
 
+from physpetool.view.annotatingtree import colorRange
+
 APP_DESC = ""
 
 
@@ -18,8 +20,8 @@ Arguments parse
                                  default='iview', help="It's a directory name contain iview convert files to \
                                view tree by use iTol v3 web applications. default output directory is iview.")
     annotation_args.add_argument('-r', '--range', action='store', dest="colorrange",
-                                 choices= taxonomy,
-                                 default=False, help="Colored ranges by %s, choice you should choice one." %(taxon))
+                                 choices=taxonomy, default=False,
+                                 help="Colored ranges by %s, choice you should choice one." % (taxon))
 
 
 def starting(args):
@@ -30,6 +32,4 @@ Staring run combine
     pwd = os.getcwd()
 
     out_put = os.path.join(pwd, args.outputfile)
-
-
-
+    colorRange(args.inputfile, out_puts, args.colorrange)
