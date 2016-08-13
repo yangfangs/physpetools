@@ -8,7 +8,7 @@ def start_agrs(input):
 Arguments parse
     :param input:  Arguments
     """
-    taxonomy = ['kingdom', 'phylum', 'class', 'order', 'family', 'genus', 'species']
+    taxonomy = ['kingdom', 'phylum', 'class', 'order']
     taxon = ', '.join(taxonomy)
     annotation_args = input.add_argument_group("ANNOTATION OPTIONS")
     annotation_args.add_argument('-i', action='store', dest="inputfile",

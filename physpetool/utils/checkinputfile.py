@@ -85,3 +85,9 @@ def removeEmptyStr(all):
     return newList
 
 
+def checkFile(filepath):
+    if os.path.isfile(filepath):
+        return filepath
+    else:
+        print("Please input a exact file")
+        exit(0)
