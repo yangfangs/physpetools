@@ -57,7 +57,7 @@ def matchInput(input_organism, taxon):
 
 def colorRange(input, output, taxon):
     if not os.path.exists(output):
-        os.path.makedirs(output)
+        os.makedirs(output)
     fw = open("range_color_by_kingdom", 'ab')
     fw.write('TREE_COLORS\nSEPARATOR TAB\nDATA\n')
     inputfile = checkFile(input)
@@ -68,4 +68,3 @@ def colorRange(input, output, taxon):
         write_data = "{0}\trang\t{1}\t{2}".format(line[0], color, line[1])
         fw.write(write_data)
     fw.close()
-
