@@ -39,5 +39,5 @@ $ cd physpetools
 ```
 
 ```bash
-	$ python setup.py install
+$ python setup.py install
 ```
