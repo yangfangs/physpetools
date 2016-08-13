@@ -3,6 +3,7 @@ import sys
 
 from physpetool.physpe import autobuild
 from physpetool.physpe import combine
+from physpetool.physpe import iview
 from physpetool.version import version_infor
 from physpetool.version import version
 
@@ -41,6 +42,11 @@ def start(input):
     physpe_combine = subparser.add_parser("combine", help="Combine phylogenetic tree")
     physpe_combine.set_defaults(func=combine.starting)
     combine.start_agrs(physpe_combine)
+
+    #iview
+    physpe_iview =subparser.add_parser("iview", help="View tree by iTol")
+    physpe_iview.set_defaults(func=combine.staring)
+    iview.start_arts(physpe_iview)
 
     if len(input) == 1:
         parser.print_usage()
