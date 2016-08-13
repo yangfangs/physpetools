@@ -1,9 +1,11 @@
 site_name: Physpetools
 pages:
 - Home: index.md
-- install: install.md
-- Usage: usage.md
-- Tutorial: tutorial.md
+- Install: install.md
+- Documents:
+    - Usage: usage.md
+    - Tutorial: tutorial.md
+- FAQ: faq.md
 theme: mkdocs
 
 repo_url: https://github.com/xiaofeiyangyang/physpetools
