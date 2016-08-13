@@ -45,7 +45,7 @@ def start(input):
 
     #iview
     physpe_iview =subparser.add_parser("iview", help="View tree by iTol")
-    physpe_iview.set_defaults(func=combine.starting)
+    physpe_iview.set_defaults(func=iview.starting)
     iview.start_agrs(physpe_iview)
 
     if len(input) == 1:
