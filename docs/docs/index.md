@@ -1,5 +1,5 @@
 
-**one command line auto reconstruct phylogenetic tree**
+**One command line auto reconstruct phylogenetic tree**
 
 
 # Introduction
