@@ -136,6 +136,8 @@
         
             <li><a href="#physpe-inputoutput">Physpe input/output</a></li>
         
+            <li><a href="#physpe-reconstruct-phylogenetic-tree-database">Physpe reconstruct phylogenetic tree database</a></li>
+        
     
     </ul>
 </div></div>
@@ -149,21 +151,26 @@ one line write one species name only such as <a href="https://gitlab.com/xiaoxia
 You can retrieve the abbreviation names of organisms by <a href="http://rest.kegg.jp/list/organism">KEGG API</a></p>
 <p><strong>2.What's Physpe output data mean?</strong></p>
 <p>Physpe output tow data files, the one is contain phylogenetic tree files default names is <code>Outdata</code>, another is a temp file.</p>
-<p>If you reconstruct phylogenetic tree by HCP (highly conserved protein) model, temp file include three directory <code>conserved_protein</code>, <code>muscle_alignment</code> and <code>concatenate</code>
-  * conserved_protein: Store the <em>.fasta format files, which is conserved proteins retrieve by KEGG database.
-  * muscle_alignment: Store files are multiple sequence alignment by muscle.
-  * concatenate: Include concatenate highly conserved protein data (</em>.fasta format file) and select conserved blocks data (*.fasta-gb1 format file).</p>
-<p>If you reconstruct phylogenetic tree by SRNA (16s RNA) model temp file include two directory <code>16srnadata</code> and <code>16srna_alignment</code>.
-  * 16srandata: Stroe  a file name is 16srandata.fata, contain the 16s RNA data retrieve by SILVA database.
-  * 16sran_alignment: Store the <em>.fasta format is multiple sequence alignment data and the </em>.fasta-gb1, <em>fasta-gb1.html are select conserved blocks data (use Gblocks software),
-  the </em>.phy format file is convert to convert from gblok data by physpe to reconstruct phylogenetic tree.</p>
+<p>If you reconstruct phylogenetic tree by HCP (highly conserved protein) model, temp file include three directory <code>conserved_protein</code>, <code>muscle_alignment</code> and <code>concatenate</code></p>
+<ul>
+<li>conserved_protein: Store the *.fasta format files, which is conserved proteins retrieve by KEGG database.</li>
+<li>muscle_alignment: Store files are multiple sequence alignment by muscle.</li>
+<li>concatenate: Include concatenate highly conserved protein data (<em>.fasta format file) and select conserved blocks data (</em>.fasta-gb1 format file).</li>
+</ul>
+<p>If you reconstruct phylogenetic tree by SRNA (16s RNA) model temp file include two directory <code>16srnadata</code> and <code>16srna_alignment</code>.</p>
+<ul>
+<li>16srandata: Stroe  a file name is 16srandata.fata, contain the 16s RNA data retrieve by SILVA database.</li>
+<li>16sran_alignment: Store the <em>.fasta format is multiple sequence alignment data and the </em>.fasta-gb1, <em>fasta-gb1.html are select conserved blocks data (use Gblocks software),
+  the </em>.phy format file is convert to convert from gblok data by physpe to reconstruct phylogenetic tree.</li>
+</ul>
 <p>Users can check the quality of every aspect of data by these temp files.</p>
-<p>Physpe reconstruct phylogenetic tree database
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-<strong>1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?</strong></p>
+<h2 id="physpe-reconstruct-phylogenetic-tree-database">Physpe reconstruct phylogenetic tree database</h2>
+<p><strong>1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?</strong></p>
 <p>Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.</p>
 <p><strong>cite:</strong></p>
+<blockquote>
 <p>Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.</p>
+</blockquote>
 <p>31 highly conserved proteins and correspond KEGG database KO number as follow table:</p>
 <table>
 <thead>
@@ -332,7 +339,7 @@ You can retrieve the abbreviation names of organisms by <a href="http://rest.keg
 </tbody>
 </table>
 <p><strong>2.How the 16s RAN database to created?</strong></p>
-<p>The 16s RAN database was created by <code>SILVA &lt;https://www.arb-silva.de/&gt;</code>_ rRNA database project (version: SILVA SSU 123.1 release)
+<p>The 16s RAN database was created by <a href="https://www.arb-silva.de/">SILVA</a> rRNA database project (version: SILVA SSU 123.1 release)
 with sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence.</p></div>
             
         </div>
