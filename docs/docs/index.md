@@ -12,6 +12,45 @@ We developing a command line software **Physpe**, which only one command line to
 (the species names must be a abbreviation same with **KEGG database** organisms abbreviation), the **Physpe** auto reconstruct species phylogenetic tree.
 
 
+# Physpe workflow
+
+
+[workflow](https://github.com/xiaofeiyangyang/physpetools/blob/master/examples/physpe2.png)
+
+
+Physpe workflow includes the following steps:
+
+1. Prepare organisms names to reconstruct phylogenetic tree as `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
+
+2. Choice the way to reconstruct phylogenetic tree, use 16s RNA or Highly conversion proteins.
+
+3. Query database and parse retrieve fasta format files.
+
+4. Do multiple sequence alignment by call Muscle.
+
+5. Concatenate conserved proteins by Physpe.
+
+6. Select conserved blocks by Call Gblosks.
+
+7. Reconstructing phylogenetic tree by Call RAxML.
+
+8. Output reconstruct phylogenetic tree files.
+
+
+
+# Features
+
+- Easy to use (one command line auto construct phylogenetic tree).
+
+- Multi-selection (selection construct phylogenetic tree by highly conversion protein or 16s RNA).
+
+- Adjustable parameters (user can choice any enable parameters by own).
+
+- User need provide a species list (reconstruct phylogenetic tree organisms) only.
+
+- combine best phylogenetic tree (combine multiple tree to a consensus tree)
+
+- view tree by iTol (easy use iview module to view tree)
 
 
 # physpetools module:

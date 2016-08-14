@@ -48,12 +48,15 @@ Features
 --------------------------------------------------------------------------------
 - Easy to use (one command line auto construct phylogenetic tree).
 
-- Multi-selection(selection construct phylogenetic tree by highly conversion protein or 16s RNA).
+- Multi-selection (selection construct phylogenetic tree by highly conversion protein or 16s RNA).
 
-- Adjustable parameters(user can choice any enable parameters by own).
+- Adjustable parameters (user can choice any enable parameters by own).
 
 - User need provide a species list (reconstruct phylogenetic tree organisms) only.
 
+- combine best phylogenetic tree (combine multiple tree to a consensus tree)
+
+- view tree by iTol (easy use iview module to view tree)
 
 
 Install
