@@ -78,6 +78,11 @@ Check input organisms list with SILVA database
 
 
 def removeEmptyStr(all):
+    """
+Remove empty string
+    :param all: input a list
+    :return: a new list
+    """
     newList = []
     for var in all:
         if var:
@@ -86,6 +91,11 @@ def removeEmptyStr(all):
 
 
 def checkFile(filepath):
+    """
+check input files
+    :param filepath: input files
+    :return: input files
+    """
     if os.path.isfile(filepath):
         return filepath
     else:
