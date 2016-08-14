@@ -15,12 +15,12 @@ We developing a command line software **Physpe**, which only one command line to
 # Physpe workflow
 
 
-[workflow](https://github.com/xiaofeiyangyang/physpetools/blob/master/examples/physpe2.png)
+![workflow](https://github.com/xiaofeiyangyang/physpetools/blob/master/examples/physpe2.png)
 
 
 Physpe workflow includes the following steps:
 
-1. Prepare organisms names to reconstruct phylogenetic tree as `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
+1. Prepare organisms names to reconstruct phylogenetic tree as [example](https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt)
 
 2. Choice the way to reconstruct phylogenetic tree, use 16s RNA or Highly conversion proteins.
 
