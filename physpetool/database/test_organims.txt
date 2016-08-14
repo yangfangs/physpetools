@@ -1,5 +1,0 @@
-T01001	hsa	Homo sapiens (human)	Eukaryotes;Animals;Vertebrates;Mammals
-T01005	ptr	Pan troglodytes (chimpanzee)	Eukaryotes;Animals;Vertebrates;Mammals
-T02283	pps	Pan paniscus (bonobo)	Eukaryotes;Archara;Vertebrates;Mammals
-T02442	ggo	Gorilla gorilla gorilla (western lowland gorilla)	Eukaryotes;Bacteira;Vertebrates;Mammals
-T01416	pon	Pongo abelii (Sumatran orangutan)	Eukaryotes;Archara;Vertebrates;Mammals 
