@@ -208,17 +208,49 @@ Use **combine** in command line like this:
 
 .. code-block:: console
 
-    $ physpe -in organism_example_list.txt [options]*
+    $ physpe -i organism_example_list.txt [options]*
 
 
 Combine options
 #####################
+
+-h
+    Print help message and exits.
 
 -i
     Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
 
 -o
     A directory contain combine tree file. The default output data name is combinetree.
+
+iview
+^^^^^^^^^^^^^^^^^^^^
+
+Annotating tree by iTol by iview module.
+
+
+Use **iview** in command line like this:
+
+.. code-block:: console
+
+    $ physpe iview -i organism_example_list.txt -range phylum
+
+
+iview options
+#####################
+
+
+-h
+    Print help message and exits.
+
+-i
+    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
+
+-o
+    A directory contain combine tree file. The default output data name is combinetree.
+
+
+
 
 
 Frequently Asked Questions (FAQ)
