@@ -3,6 +3,11 @@ import random
 
 
 def convert(value):
+    """
+    convert 2------>16
+    :param value: input int type
+    :return: str type(16)
+    """
     if value == 10:
         return "A"
     elif value == 11:
@@ -19,6 +24,11 @@ def convert(value):
 
 
 def rgb2hex(rgb):
+    """
+    Convert RGB to HEX color
+    :param rgb: Rge value example(23,32,44)
+    :return: Hex value example #??????
+    """
     hex = []
     for i in rgb:
         if i == 0:
@@ -34,6 +44,10 @@ def rgb2hex(rgb):
 
 
 def rand_hsl():
+    """
+    Random hsl value
+    :return: rgb_hsl value
+    """
     h = random.uniform(0.02, 0.31) + random.choice([0, 1 / 3.0, 2 / 3.0])
     l = random.uniform(0.3, 0.8)
     s = random.uniform(0.3, 0.8)
@@ -43,6 +57,11 @@ def rand_hsl():
 
 
 def random_color(num):
+    """
+    get random color value
+    :param num: int
+    :return: a list contain Hex color value
+    """
     color = []
     for i in range(num):
         color.append(rgb2hex(rand_hsl()))
