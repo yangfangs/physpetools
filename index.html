@@ -135,6 +135,12 @@
         <li class="main active"><a href="#introduction">Introduction</a></li>
         
     
+        <li class="main "><a href="#physpe-workflow">Physpe workflow</a></li>
+        
+    
+        <li class="main "><a href="#features">Features</a></li>
+        
+    
         <li class="main "><a href="#physpetools-module">physpetools module:</a></li>
         
     
@@ -149,6 +155,56 @@ protein-protein interactions and gene pathway members prediction. In this predic
 is necessary, but the process of constructing the tree species is very tedious.</p>
 <p>We developing a command line software <strong>Physpe</strong>, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.
 (the species names must be a abbreviation same with <strong>KEGG database</strong> organisms abbreviation), the <strong>Physpe</strong> auto reconstruct species phylogenetic tree.</p>
+<h1 id="physpe-workflow">Physpe workflow</h1>
+<p><a href="https://github.com/xiaofeiyangyang/physpetools/blob/master/examples/physpe2.png">workflow</a></p>
+<p>Physpe workflow includes the following steps:</p>
+<ol>
+<li>
+<p>Prepare organisms names to reconstruct phylogenetic tree as <code>example &lt;https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt&gt;</code>_.</p>
+</li>
+<li>
+<p>Choice the way to reconstruct phylogenetic tree, use 16s RNA or Highly conversion proteins.</p>
+</li>
+<li>
+<p>Query database and parse retrieve fasta format files.</p>
+</li>
+<li>
+<p>Do multiple sequence alignment by call Muscle.</p>
+</li>
+<li>
+<p>Concatenate conserved proteins by Physpe.</p>
+</li>
+<li>
+<p>Select conserved blocks by Call Gblosks.</p>
+</li>
+<li>
+<p>Reconstructing phylogenetic tree by Call RAxML.</p>
+</li>
+<li>
+<p>Output reconstruct phylogenetic tree files.</p>
+</li>
+</ol>
+<h1 id="features">Features</h1>
+<ul>
+<li>
+<p>Easy to use (one command line auto construct phylogenetic tree).</p>
+</li>
+<li>
+<p>Multi-selection (selection construct phylogenetic tree by highly conversion protein or 16s RNA).</p>
+</li>
+<li>
+<p>Adjustable parameters (user can choice any enable parameters by own).</p>
+</li>
+<li>
+<p>User need provide a species list (reconstruct phylogenetic tree organisms) only.</p>
+</li>
+<li>
+<p>combine best phylogenetic tree (combine multiple tree to a consensus tree)</p>
+</li>
+<li>
+<p>view tree by iTol (easy use iview module to view tree)</p>
+</li>
+</ul>
 <h1 id="physpetools-module">physpetools module:</h1>
 <ul>
 <li><a href="">autobuild</a>: Auto reconstruct phylogenetic tree</li>
@@ -219,5 +275,5 @@ is necessary, but the process of constructing the tree species is very tedious.<
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-08-14 08:46:31.063384
+Build Date UTC : 2016-08-14 11:56:26.631250
 -->
