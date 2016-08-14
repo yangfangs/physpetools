@@ -55,27 +55,27 @@ Physpe workflow includes the following steps:
 
 # physpetools module:
 
-* [autobuild](): Auto reconstruct phylogenetic tree
+* [autobuild](usage.md#autobuild): Auto reconstruct phylogenetic tree
 
 ```bash
 physpe autobuild -i species_name_list.txt -o Output
 ```
 
 
-* [build](): Reconstruct phylogenetic tree
+* [build](usage.md#build): Reconstruct phylogenetic tree
 
 ```bash
 physpe build -i species.fasta -o Output
 ```
 
-* [combine](): Combine multiple best phylogenetic tree 
+* [combine](usage.md#combine): Combine multiple best phylogenetic tree 
 
 ```bash
 physpe combine -i multiple_tree.tree -o Output
 ```
 
 
-* [iview](): view phylogenetic tree by iTol
+* [iview](usage.md#iview): view phylogenetic tree by iTol
 
 ```bash
 physpe iview -i species_name_list.txt -o ivew -range phylum 

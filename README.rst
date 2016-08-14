@@ -247,7 +247,7 @@ iview options
     Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
 
 -o
-    A directory contain combine tree file. The default output data name is combinetree.
+    A directory contain range text file. The directory name is iverw.
 
 
 

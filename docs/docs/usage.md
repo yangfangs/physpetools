@@ -15,7 +15,8 @@ $ physpe -i organism_example_list.txt [options]*
 
 ### Auto options
 
-
+| option |  Description                                                                                                                  |
+|:------- |:------------------------------------------------------------------------------------------------------------------------------|
 | -h      |  Print help message and exits.                                                                                                |
 |  -v     |  The version information.                                                                                                     |
 |  -i     |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.                           |
@@ -32,13 +33,14 @@ User enable choice more detail options with Physpe call software, detail advance
 
 The follow is to use RAxML advance options example:
 
-.. code-block:: console
+```bash
+$ physpe -i organism_example_list.txt -raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+```
 
-    $ physpe -i organism_example_list.txt -raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
 --muscle
     Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see
-    `MUSCLE Manual <http://www.drive5.com/muscle/manual/options.html>`_.
+    [MUSCLE Manual](http://www.drive5.com/muscle/manual/options.html)
 
     -maxiter
         maximum number of iterations to run is set 100.
@@ -73,6 +75,10 @@ The follow is to use RAxML advance options example:
     -N
         The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.
 
+## build
+
+None
+
 
 ## Combine
 
@@ -82,28 +88,27 @@ User should prepare a combine tree file by Combine command to combine tree files
 
 In Linux you can easy combine more tree to a tree file, for example:
 
-.. code-block:: console
+```bash
+$ cat tree1.tree tree2.tree > combieTree.tree
 
-    $ cat tree1.tree tree2.tree > combieTree.tree
-
+```
 
 Use **combine** in command line like this:
 
-.. code-block:: console
 
-    $ physpe -i organism_example_list.txt [options]*
-
+```bash
+$ physpe -i organism_example_list.txt [options]*
+```
 
 ### Combine options
 
--h
-    Print help message and exits.
 
--i
-    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
+| option  | Description  |
+|---|---|
+|  -h |  Print help message and exits. |
+|  -i |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
+|  -o |  A directory contain combine tree file. The default output data name is combinetree. |
 
--o
-    A directory contain combine tree file. The default output data name is combinetree.
 
 ## iview
 
@@ -119,13 +124,10 @@ Use **iview** in command line like this:
 
 ### iview options
 
+| option  | Description  |
+|---|---|
+|  -h |  Print help message and exits. |
+|  -i |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
+|  -o |  A directory contain range text file. The directory name is iverw. |
 
--h
-    Print help message and exits.
-
--i
-    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
-
--o
-    A directory contain combine tree file. The default output data name is combinetree.
 
