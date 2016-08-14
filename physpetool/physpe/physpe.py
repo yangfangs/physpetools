@@ -63,4 +63,5 @@ def start(input):
 
 if __name__ == '__main__':
     main()
+    # start(['physpe','iview','-i','/home/yangfang/physpetools_data/TOF/testspenames.txt', '-r','phylum'])
 

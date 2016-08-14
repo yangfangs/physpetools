@@ -27,9 +27,8 @@ def rgb2hex(rgb):
             h_left = i / 16
             h_right = i % 16
             h = convert(h_left) + convert(h_right)
-        print h
+
         hex.append(h)
-        print(hex)
     hex_combine = "#" + ''.join(hex)
     return hex_combine
 
@@ -43,10 +42,8 @@ def rand_hsl():
     return (int(rgb[0] * 256), int(rgb[1] * 256), int(rgb[2] * 256))
 
 
-
 def random_color(num):
     color = []
     for i in range(num):
         color.append(rgb2hex(rand_hsl()))
     return color
-
