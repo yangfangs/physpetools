@@ -2,13 +2,18 @@
     "docs": [
         {
             "location": "/", 
-            "text": "one command line auto reconstruct phylogenetic tree\n\n\nIntroduction\n\n\nIn some filed combine species phylogenetic tree do some prediction are very important for instance,\nprotein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree\nis necessary, but the process of constructing the tree species is very tedious.\n\n\nWe developing a command line software \nPhyspe\n, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.\n(the species names must be a abbreviation same with \nKEGG database\n organisms abbreviation), the \nPhyspe\n auto reconstruct species phylogenetic tree.\n\n\nPhyspe workflow", 
+            "text": "One command line auto reconstruct phylogenetic tree\n\n\nIntroduction\n\n\nIn some filed combine species phylogenetic tree do some prediction are very important for instance,\nprotein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree\nis necessary, but the process of constructing the tree species is very tedious.\n\n\nWe developing a command line software \nPhyspe\n, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.\n(the species names must be a abbreviation same with \nKEGG database\n organisms abbreviation), the \nPhyspe\n auto reconstruct species phylogenetic tree.\n\n\nphyspetools module:\n\n\n\n\nautobuild\n: Auto reconstruct phylogenetic tree\n\n\n\n\nphyspe autobuild -i species_name_list.txt -o Output\n\n\n\n\n\n\nbuild\n: Reconstruct phylogenetic tree\n\n\n\n\nphyspe build -i species.fasta -o Output\n\n\n\n\n\n\ncombine\n: Combine multiple best phylogenetic tree \n\n\n\n\nphyspe combine -i multiple_tree.tree -o Output\n\n\n\n\n\n\niview\n: view phylogenetic tree by iTol\n\n\n\n\nphyspe iview -i species_name_list.txt -o ivew -range phylum", 
             "title": "Home"
         }, 
         {
             "location": "/#introduction", 
-            "text": "In some filed combine species phylogenetic tree do some prediction are very important for instance,\nprotein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree\nis necessary, but the process of constructing the tree species is very tedious.  We developing a command line software  Physpe , which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.\n(the species names must be a abbreviation same with  KEGG database  organisms abbreviation), the  Physpe  auto reconstruct species phylogenetic tree.  Physpe workflow", 
+            "text": "In some filed combine species phylogenetic tree do some prediction are very important for instance,\nprotein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree\nis necessary, but the process of constructing the tree species is very tedious.  We developing a command line software  Physpe , which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.\n(the species names must be a abbreviation same with  KEGG database  organisms abbreviation), the  Physpe  auto reconstruct species phylogenetic tree.", 
             "title": "Introduction"
+        }, 
+        {
+            "location": "/#physpetools-module", 
+            "text": "autobuild : Auto reconstruct phylogenetic tree   physpe autobuild -i species_name_list.txt -o Output   build : Reconstruct phylogenetic tree   physpe build -i species.fasta -o Output   combine : Combine multiple best phylogenetic tree    physpe combine -i multiple_tree.tree -o Output   iview : view phylogenetic tree by iTol   physpe iview -i species_name_list.txt -o ivew -range phylum", 
+            "title": "physpetools module:"
         }, 
         {
             "location": "/install/", 

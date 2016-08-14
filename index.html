@@ -135,18 +135,44 @@
         <li class="main active"><a href="#introduction">Introduction</a></li>
         
     
+        <li class="main "><a href="#physpetools-module">physpetools module:</a></li>
+        
+    
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<p><strong>one command line auto reconstruct phylogenetic tree</strong></p>
+<p><strong>One command line auto reconstruct phylogenetic tree</strong></p>
 <h1 id="introduction">Introduction</h1>
 <p>In some filed combine species phylogenetic tree do some prediction are very important for instance,
 protein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree
 is necessary, but the process of constructing the tree species is very tedious.</p>
 <p>We developing a command line software <strong>Physpe</strong>, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.
 (the species names must be a abbreviation same with <strong>KEGG database</strong> organisms abbreviation), the <strong>Physpe</strong> auto reconstruct species phylogenetic tree.</p>
-<p>Physpe workflow</p></div>
+<h1 id="physpetools-module">physpetools module:</h1>
+<ul>
+<li><a href="">autobuild</a>: Auto reconstruct phylogenetic tree</li>
+</ul>
+<pre><code class="bash">physpe autobuild -i species_name_list.txt -o Output
+</code></pre>
+
+<ul>
+<li><a href="">build</a>: Reconstruct phylogenetic tree</li>
+</ul>
+<pre><code class="bash">physpe build -i species.fasta -o Output
+</code></pre>
+
+<ul>
+<li><a href="">combine</a>: Combine multiple best phylogenetic tree </li>
+</ul>
+<pre><code class="bash">physpe combine -i multiple_tree.tree -o Output
+</code></pre>
+
+<ul>
+<li><a href="">iview</a>: view phylogenetic tree by iTol</li>
+</ul>
+<pre><code class="bash">physpe iview -i species_name_list.txt -o ivew -range phylum 
+</code></pre></div>
             
         </div>
 
@@ -193,5 +219,5 @@ is necessary, but the process of constructing the tree species is very tedious.<
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-08-13 03:15:27.788824
+Build Date UTC : 2016-08-14 08:46:31.063384
 -->
