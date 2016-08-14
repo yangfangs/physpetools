@@ -15,13 +15,14 @@ $ physpe -i organism_example_list.txt [options]*
 
 ### Auto options
 
-| -h  | Print help message and exits.  |
-|  -v |  The version information. |
-|  -i |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
-|  -o |  A directory include output data (reconstruct tree files). The default output data name is Outdata. |
-|  -t |  Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1. |
-|  --hcp |  The hcp (highly conserved protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp. |
-|  --srna |  The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree. |
+
+| -h      |  Print help message and exits.                                                                                                |
+|  -v     |  The version information.                                                                                                     |
+|  -i     |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.                           |
+|  -o     |  A directory include output data (reconstruct tree files). The default output data name is Outdata.                           |
+|  -t     |  Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.        |
+|  --hcp  |  The hcp (highly conserved protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp. |
+|  --srna |  The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree.                                           |
 
 
 ### Advance options
@@ -44,7 +45,7 @@ The follow is to use RAxML advance options example:
 
 --gblocks
     Set Gblocks parameters. The default is ``-t=p -e=-gb1``.
-    More options about Gblocks please to see
+    More options about Gblocks please to see 
     `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
     -t
