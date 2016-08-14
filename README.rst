@@ -132,11 +132,11 @@ Auto options
     Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.
 
 --hcp
-    The hcp (highly con.. code-block:: console
 
-    $ physpe -in organism_example_list.txt [options]*served protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.
+    The hcp (highly conserved protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.
 
 --srna
+
     The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree.
 
 

@@ -12,7 +12,6 @@ To upgrade to latest version:
 
 ```bash
 $ pip install --upgrade physpe
-
 ```
 
 ## 2. You can install Physpe by download the latest released version:

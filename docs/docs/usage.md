@@ -1,50 +1,30 @@
-Usage and Examples
-==================
+# Usage and Examples
 
 
 
-Autobuild
-----------
 
-User should prepare a txt file contain the abbreviation names of organisms `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
+## Autobuild
+
+User should prepare a txt file contain the abbreviation names of organisms [example](https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt)
 
 Use **autobuild** in command line like this:
 
-.. code-block:: console
+```bash
+$ physpe -i organism_example_list.txt [options]*
+```
 
-    $ physpe -i organism_example_list.txt [options]*
+### Auto options
 
-
-Auto options
-#####################
-
--h
-    Print help message and exits.
-
--v
-    The version information.
-
--i
-    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
-
--o
-    A directory include output data (reconstruct tree files). The default output data name is Outdata.
-
--t
-    Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.
-
---hcp
-    The hcp (highly con.. code-block:: console
-
-    $ physpe -in organism_example_list.txt [options]*served protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.
-
---srna
-    The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree.
+| -h  | Print help message and exits.  |
+|  -v |  The version information. |
+|  -i |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
+|  -o |  A directory include output data (reconstruct tree files). The default output data name is Outdata. |
+|  -t |  Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1. |
+|  --hcp |  The hcp (highly conserved protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp. |
+|  --srna |  The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree. |
 
 
-
-Advance options
-#####################
+### Advance options
 
 User enable choice more detail options with Physpe call software, detail advance options input
 ``must be enclosed in single quotes``.
@@ -93,8 +73,8 @@ The follow is to use RAxML advance options example:
         The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.
 
 
-Combine
-----------------
+## Combine
+
 
 User should prepare a combine tree file by Combine command to combine tree files.
 
@@ -113,8 +93,7 @@ Use **combine** in command line like this:
     $ physpe -i organism_example_list.txt [options]*
 
 
-Combine options
-#####################
+### Combine options
 
 -h
     Print help message and exits.
@@ -125,8 +104,7 @@ Combine options
 -o
     A directory contain combine tree file. The default output data name is combinetree.
 
-iview
-----------------
+## iview
 
 Annotating tree by iTol by iview module.
 
@@ -138,8 +116,7 @@ Use **iview** in command line like this:
     $ physpe iview -i organism_example_list.txt -range phylum
 
 
-iview options
-#####################
+### iview options
 
 
 -h
