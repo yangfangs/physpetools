@@ -147,31 +147,43 @@
 
 <h1 id="usage-and-examples">Usage and Examples</h1>
 <h2 id="autobuild">Autobuild</h2>
-<p>User should prepare a txt file contain the abbreviation names of organisms <code>example &lt;https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt&gt;</code>_.</p>
+<p>User should prepare a txt file contain the abbreviation names of organisms <a href="https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt">example</a></p>
 <p>Use <strong>autobuild</strong> in command line like this:</p>
-<p>.. code-block:: console</p>
-<pre><code>$ physpe -i organism_example_list.txt [options]*
+<pre><code class="bash">$ physpe -i organism_example_list.txt [options]*
 </code></pre>
-<p>Auto options</p>
-<h6 id="_1"></h6>
-<p>-h
-    Print help message and exits.</p>
-<p>-v
-    The version information.</p>
-<p>-i
-    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.</p>
-<p>-o
-    A directory include output data (reconstruct tree files). The default output data name is Outdata.</p>
-<p>-t
-    Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.</p>
-<p>--hcp
-    The hcp (highly con.. code-block:: console</p>
-<pre><code>$ physpe -in organism_example_list.txt [options]*served protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.
-</code></pre>
-<p>--srna
-    The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree.</p>
-<p>Advance options</p>
-<h6 id="_2"></h6>
+
+<h3 id="auto-options">Auto options</h3>
+<table>
+<thead>
+<tr>
+<th>-h</th>
+<th>Print help message and exits.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-i</td>
+<td>Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.</td>
+</tr>
+<tr>
+<td>-o</td>
+<td>A directory include output data (reconstruct tree files). The default output data name is Outdata.</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.</td>
+</tr>
+<tr>
+<td>--hcp</td>
+<td>The hcp (highly conserved protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.</td>
+</tr>
+<tr>
+<td>--srna</td>
+<td>The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advance-options">Advance options</h3>
 <p>User enable choice more detail options with Physpe call software, detail advance options input
 <code>must be enclosed in single quotes</code>.</p>
 <p>The follow is to use RAxML advance options example:</p>
@@ -222,8 +234,7 @@
 <p>.. code-block:: console</p>
 <pre><code>$ physpe -i organism_example_list.txt [options]*
 </code></pre>
-<p>Combine options</p>
-<h6 id="_3"></h6>
+<h3 id="combine-options">Combine options</h3>
 <p>-h
     Print help message and exits.</p>
 <p>-i
@@ -236,8 +247,7 @@
 <p>.. code-block:: console</p>
 <pre><code>$ physpe iview -i organism_example_list.txt -range phylum
 </code></pre>
-<p>iview options</p>
-<h6 id="_4"></h6>
+<h3 id="iview-options">iview options</h3>
 <p>-h
     Print help message and exits.</p>
 <p>-i
