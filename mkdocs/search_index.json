@@ -52,8 +52,28 @@
         }, 
         {
             "location": "/usage/", 
-            "text": "usage", 
+            "text": "Usage and Examples\n\n\nAutobuild\n\n\nUser should prepare a txt file contain the abbreviation names of organisms \nexample \nhttps://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt\n_.\n\n\nUse \nautobuild\n in command line like this:\n\n\n.. code-block:: console\n\n\n$ physpe -i organism_example_list.txt [options]*\n\n\n\nAuto options\n\n\n\n\n-h\n    Print help message and exits.\n\n\n-v\n    The version information.\n\n\n-i\n    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.\n\n\n-o\n    A directory include output data (reconstruct tree files). The default output data name is Outdata.\n\n\n-t\n    Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.\n\n\n--hcp\n    The hcp (highly con.. code-block:: console\n\n\n$ physpe -in organism_example_list.txt [options]*served protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.\n\n\n\n--srna\n    The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree.\n\n\nAdvance options\n\n\n\n\nUser enable choice more detail options with Physpe call software, detail advance options input\n\nmust be enclosed in single quotes\n.\n\n\nThe follow is to use RAxML advance options example:\n\n\n.. code-block:: console\n\n\n$ physpe -i organism_example_list.txt -raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'\n\n\n\n--muscle\n    Set multiple sequence alignment parameters. The default is \n-maxiter 100\n. More options about muslce please to see\n    \nMUSCLE Manual \nhttp://www.drive5.com/muscle/manual/options.html\n_.\n\n\n-maxiter\n    maximum number of iterations to run is set 100.\n\n\n\n--gblocks\n    Set Gblocks parameters. The default is \n-t=p -e=-gb1\n.\n    More options about Gblocks please to see\n    \nGblocks documentation \nhttp://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html\n_.\n\n\n-t\n    Choice type of sequence. The physpe default set is protein.\n\n-e\n    Eneric file extensionc. physep set default is -gbl1.\n\n\n\n--raxml\n    Set reconstruct phylogenetic tree arguments with RAxML. The default is \n-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1\n.\n    More options about RAxMl please to see \nRAxML Manual \nhttp://sco.h-its.org/exelixis/resource/download/NewManual.pdf\n_.\n\n\n-f\n    select algorithm. The physpe default set is ``a``, rapid Bootstrap analysis and search for best\u00adscoring ML tree in one program run\n\n-m\n    Model of Binary (Morphological), Nucleotide, Multi\u00adState, or Amino Acid Substitution. The physpe default set is PROTGAMMAJTTX.\n\n-p\n    Specify a random number seed for the parsimony inferences. The physep default set is 12345.\n\n-x\n    Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe default set is 12345\n\n-N\n    The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.\n\n\n\nCombine\n\n\nUser should prepare a combine tree file by Combine command to combine tree files.\n\n\nIn Linux you can easy combine more tree to a tree file, for example:\n\n\n.. code-block:: console\n\n\n$ cat tree1.tree tree2.tree \n combieTree.tree\n\n\n\nUse \ncombine\n in command line like this:\n\n\n.. code-block:: console\n\n\n$ physpe -i organism_example_list.txt [options]*\n\n\n\nCombine options\n\n\n\n\n-h\n    Print help message and exits.\n\n\n-i\n    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.\n\n\n-o\n    A directory contain combine tree file. The default output data name is combinetree.\n\n\niview\n\n\nAnnotating tree by iTol by iview module.\n\n\nUse \niview\n in command line like this:\n\n\n.. code-block:: console\n\n\n$ physpe iview -i organism_example_list.txt -range phylum\n\n\n\niview options\n\n\n\n\n-h\n    Print help message and exits.\n\n\n-i\n    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.\n\n\n-o\n    A directory contain combine tree file. The default output data name is combinetree.", 
             "title": "Usage"
+        }, 
+        {
+            "location": "/usage/#usage-and-examples", 
+            "text": "", 
+            "title": "Usage and Examples"
+        }, 
+        {
+            "location": "/usage/#autobuild", 
+            "text": "User should prepare a txt file contain the abbreviation names of organisms  example  https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt _.  Use  autobuild  in command line like this:  .. code-block:: console  $ physpe -i organism_example_list.txt [options]*  Auto options", 
+            "title": "Autobuild"
+        }, 
+        {
+            "location": "/usage/#combine", 
+            "text": "User should prepare a combine tree file by Combine command to combine tree files.  In Linux you can easy combine more tree to a tree file, for example:  .. code-block:: console  $ cat tree1.tree tree2.tree   combieTree.tree  Use  combine  in command line like this:  .. code-block:: console  $ physpe -i organism_example_list.txt [options]*  Combine options", 
+            "title": "Combine"
+        }, 
+        {
+            "location": "/usage/#iview", 
+            "text": "Annotating tree by iTol by iview module.  Use  iview  in command line like this:  .. code-block:: console  $ physpe iview -i organism_example_list.txt -range phylum  iview options", 
+            "title": "iview"
         }, 
         {
             "location": "/tutorial/", 
