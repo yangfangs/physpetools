@@ -13,11 +13,12 @@ def getspecies(name, colname):
     Get species protein index for DB
     :param name: a list contain abbreviation species nam
     :param colname: a list contain colname of DB
-    :return: a list contain protein index can be retrieved
+    :return: a list contain protein index can be retrieved and a match ko list
     """
     dbpath = getlocaldbpath()
     db = os.path.join(dbpath, "proindex.db")
     relist = []
+    match_ko_name = []
     conn = sqlite3.connect(db)
     conn.text_factory = str
     c = conn.cursor()
@@ -30,10 +31,11 @@ def getspecies(name, colname):
         idslist = [str(x[0]) for x in ids]
         if 'None' not in idslist:
             relist.append(idslist)
+            match_ko_name.append(ko)
         else:
             pass
     c.close()
-    return relist
+    return relist, match_ko_name
 
 
 def getcolname():
@@ -55,7 +57,7 @@ def splist(l, s):
     return [l[i:i + s] for i in range(len(l)) if i % s == 0]
 
 
-def retrieveprotein(proindexlist, outpath):
+def retrieveprotein(proindexlist, outpath, matchlist):
     """
     Retrieve proteins form Kegg DB
     :param proindexlist: a list contain protein index
@@ -71,6 +73,8 @@ def retrieveprotein(proindexlist, outpath):
         os.makedirs(dirname)
     p = 1
     for index in proindexlist:
+        hcp_pro_name = hcp_name(matchlist[p - 1])
+
         wfiles = "{0}/p{1}.fasta".format(dirname, p)
         f = open(wfiles, "a")
         spprolist = splist(index, 10)
@@ -85,9 +89,10 @@ def retrieveprotein(proindexlist, outpath):
                 else:
                     f.write(i)
         f.close()
-        logretrieveprotein.info("retrieve " + "Conserved protein p" + str(p) + " success")
+        logretrieveprotein.info(
+            "retrieve highly conserved protein '{0}' success and store in p{1}.fasta file".format(hcp_pro_name, str(p)))
         p += 1
-    logretrieveprotein.info("retrieve from Kegg DB " + str(p-1) + " highly conserved proteins")
+    logretrieveprotein.info("retrieve from Kegg DB " + str(p - 1) + " highly conserved proteins")
     return dirname
 
 
@@ -100,11 +105,13 @@ def doretrieve(specieslistfile, outpath):
     spelist = specieslistfile
     logretrieveprotein.info("Read organisms names successful")
     colname = getcolname()
-    relist = getspecies(spelist, colname)
-    dirpath = retrieveprotein(relist, outpath)
+    relist, matchlist = getspecies(spelist, colname)
+    dirpath = retrieveprotein(relist, outpath, matchlist)
     return dirpath
 
+
 def hcp_name(index):
+    """get highly conserved protein names"""
     ko_path = getlocaldbpath()
     pro_ko = os.path.join(ko_path, "protein_ko.txt")
     with open(pro_ko) as ko:
