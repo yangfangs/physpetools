@@ -61,6 +61,11 @@ Physpe workflow includes the following steps:
 physpe autobuild -i species_name_list.txt -o Output
 ```
 
+* [ebuild](usage.md#ebuild):Extend phylogenetic tree
+
+```
+physpe ebuild -i extend_ran.fasta -o extendtree
+```
 
 * [build](usage.md#build): Reconstruct phylogenetic tree
 

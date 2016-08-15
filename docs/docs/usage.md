@@ -75,6 +75,12 @@ $ physpe -i organism_example_list.txt -raxml '-f a -m GTRGAMMA  -p 12345 -x 1234
     -N
         The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.
 
+
+# ebuild
+
+None...........
+
+
 ## build
 
 None
