@@ -58,6 +58,7 @@ The default option:
   Set Gblocks parameters. The default is ``-t=p -e=-gb1``. More options about Gblocks please to see [Gblocks documentation](http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html).
 
 The default option:
+
 |  option | description                                                 |
 |:--------|:------------------------------------------------------------|
 |  -t     | Choice type of sequence. The physpe default set is protein. |
@@ -74,6 +75,7 @@ The default option:
   Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``. More options about RAxMl please to see [RAxML Manual](http://sco.h-its.org/exelixis/resource/download/NewManual.pdf).
 
 The default option:
+
 |  option | description                                                                                                                          |
 |:--------|:------------------------------------------------------------------------------------------------------------------------------------ |
 |   -f    |  select algorithm. The physpe default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run. |
@@ -82,7 +84,7 @@ The default option:
 |   -x    |  Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe default set is 12345.                           |
 |   -N    |  The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.                  |
 
-s
+
 ## ebuild
 
 None...........
@@ -130,17 +132,16 @@ Annotating tree by iTol by iview module.
 
 Use **iview** in command line like this:
 
-.. code-block:: console
-
-    $ physpe iview -i organism_example_list.txt -range phylum
-
+```bash
+$ physpe iview -i organism_example_list.txt -range phylum
+```
 
 ### iview options
 
-| option  | Description  |
-|---|---|
-|  -h |  Print help message and exits. |
-|  -i |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
-|  -o |  A directory contain range text file. The directory name is iverw. |
+| option | Description                                                                                         |
+|:-------|:----------------------------------------------------------------------------------------------------|
+|  -h    |  Print help message and exits.                                                                      |
+|  -i    |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
+|  -o    |  A directory contain range text file. The directory name is iview.                                  |
 
 
