@@ -42,7 +42,6 @@ def getcolname():
     """get BD colnames"""
     dbpath = getlocaldbpath()
     db = os.path.join(dbpath, "proindex.db")
-    relist = []
     conn = sqlite3.connect(db)
     conn.text_factory = str
     c = conn.cursor()
