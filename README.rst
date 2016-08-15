@@ -176,7 +176,7 @@ The follow is to use RAxML advance options example:
     More options about RAxMl please to see `RAxML Manual <http://sco.h-its.org/exelixis/resource/download/NewManual.pdf>`_.
 
     -f
-        select algorithm. The physpe default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run
+        select algorithm. The physpe default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run.
 
     -m
         Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The physpe default set is PROTGAMMAJTTX.
@@ -185,7 +185,7 @@ The follow is to use RAxML advance options example:
         Specify a random number seed for the parsimony inferences. The physep default set is 12345.
 
     -x
-        Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe default set is 12345
+        Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe default set is 12345.
 
     -N
         The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.
