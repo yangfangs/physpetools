@@ -3,6 +3,7 @@ import sys
 
 from physpetool.physpe import autobuild
 from physpetool.physpe import combine
+from physpetool.physpe import build
 from physpetool.physpe import iview
 from physpetool.version import version_infor
 from physpetool.version import version
@@ -37,15 +38,22 @@ def start(input):
     physpe_autobuid = subparser.add_parser("autobuild", help="Auto reconstruct phylogenetic tree")
     physpe_autobuid.set_defaults(func=autobuild.starting)
     autobuild.start_args(physpe_autobuid)
+
     # combine
     physpe_combine = subparser.add_parser("combine", help="Combine phylogenetic tree")
     physpe_combine.set_defaults(func=combine.starting)
-    combine.start_agrs(physpe_combine)
+    combine.start_args(physpe_combine)
 
     # iview
     physpe_iview = subparser.add_parser("iview", help="View tree by iTol")
     physpe_iview.set_defaults(func=iview.starting)
-    iview.start_agrs(physpe_iview)
+    iview.start_args(physpe_iview)
+
+    # build
+    physpe_build = subparser.add_parser("build", help="Extend phylogenetic tree with new species")
+    physpe_build.set_defaults(func=build.starting)
+    build.start_args(physpe_build)
+
 
     if len(input) == 1:
         parser.print_usage()

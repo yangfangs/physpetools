@@ -5,7 +5,7 @@ from physpetool.phylotree.consensustree import docontree
 APP_DESC = ""
 
 
-def start_agrs(input):
+def start_args(input):
     """
 Arguments parse
     :param input:  Arguments
