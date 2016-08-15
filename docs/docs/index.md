@@ -61,11 +61,6 @@ Physpe workflow includes the following steps:
 physpe autobuild -i species_name_list.txt -o Output
 ```
 
-* [ebuild](usage.md#ebuild):Extend phylogenetic tree
-
-```
-physpe ebuild -i extend_ran.fasta -o extendtree
-```
 
 * [build](usage.md#build): Reconstruct phylogenetic tree
 
@@ -84,4 +79,10 @@ physpe combine -i multiple_tree.tree -o Output
 
 ```bash
 physpe iview -i species_name_list.txt -o ivew -range phylum 
+```
+
+* [check](usage.md#check):Check organisms for extend phylogenetic tree 
+
+```
+physpe check -i organisms.txt -o checkout --protein
 ```

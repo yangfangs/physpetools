@@ -84,8 +84,7 @@ The default option:
 |   -x    |  Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe default set is 12345.                           |
 |   -N    |  The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.                  |
 
-
-## ebuild
+## check
 
 None...........
 

@@ -45,11 +45,11 @@ Argument parse
                                 help='The extended data should be FASTA format.')
     autobuild_args.add_argument('--hcp', action='store_true', dest='HCP',
                                 default=False, help='Reconstruct phylogenetic tree by highly conserved proteins.')
-    autobuild_args.add_argument('--srna', action='store_true', dest='ssurna',
-                                default=False, help='Reconstruct phylogenetic tree by 16s ssu ran.')
     autobuild_args.add_argument('--ehcp', action='store_true', dest='EHCP',
                                 default=False,
                                 help='Reconstruct phylogenetic tree by highly conserved proteins and extended proteins.')
+    autobuild_args.add_argument('--srna', action='store_true', dest='ssurna',
+                                default=False, help='Reconstruct phylogenetic tree by 16s ssu ran.')
     autobuild_args.add_argument('--esrna', action='store_true', dest='essurna',
                                 default=False,
                                 help='Reconstruct phylogenetic tree by 16s ssu rna and extended 16s ssu rna.')
