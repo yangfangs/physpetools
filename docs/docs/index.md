@@ -53,7 +53,7 @@ Physpe workflow includes the following steps:
 - view tree by iTol (easy use iview module to view tree)
 
 
-# physpetools module:
+# Physpe module:
 
 * [autobuild](usage.md#autobuild): Auto reconstruct phylogenetic tree
 
