@@ -92,6 +92,7 @@ def retrieveprotein(proindexlist, outpath):
 
 
 def doretrieve(specieslistfile, outpath):
+    '''main to  retrieve protein from kegg db'''
     # spelist = []
     # for line in specieslistfile:
     #     st = line.strip()
@@ -103,10 +104,11 @@ def doretrieve(specieslistfile, outpath):
     dirpath = retrieveprotein(relist, outpath)
     return dirpath
 
-def test():
-    relpath = os.path.split(os.path.realpath(__file__))[0]
-    print relpath
-
-
-if __name__ == '__main__':
-    test()
+def hcp_name(index):
+    ko_path = getlocaldbpath()
+    pro_ko = os.path.join(ko_path, "protein_ko.txt")
+    with open(pro_ko) as ko:
+        for line in ko:
+            name = line.strip().split(',')
+            if name[1] == index:
+                return name[0]
