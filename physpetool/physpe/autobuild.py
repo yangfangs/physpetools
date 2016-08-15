@@ -87,14 +87,14 @@ starting run reconstruct tree
     # reconstruct phylogenetic tree by ssu RNA
     elif args.ssurna:
         setlogdir(out_put)
-        starting_sran(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread)
+        starting_srna(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread)
     elif args.EHCP:
         pass
 
 
     elif args.essurna:
         setlogdir(out_put)
-        starting_sran(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread, args.extenddata)
+        starting_esrna(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread, args.extenddata)
 
 
 def starting_hcp(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread):
@@ -108,7 +108,7 @@ def starting_hcp(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_th
     doraxml(out_f2p, out_put, args_raxml, args_thread)
 
 
-def starting_sran(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread):
+def starting_srna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
     ssu_input = checkSilvaOrganism(in_put)
     out_retrieve = retrieve16srna(ssu_input, out_put)
@@ -130,7 +130,10 @@ def starting_esrna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_
     extend_check = checkFile(args_extenddata)
     ssu_input = checkSilvaOrganism(in_put)
     out_retrieve = retrieve16srna(ssu_input, out_put)
-    fw = open(out_retrieve, 'ab')
+    retrieve_srna_path = os.path.join(out_retrieve,'16srandata.fasta')
+
+
+    fw = open(retrieve_srna_path, 'ab')
     with open(extend_check) as read:
         for line in read:
             fw.write(line)
