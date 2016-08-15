@@ -135,10 +135,17 @@ Auto options
 
     The hcp (highly conserved protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.
 
+--ehcp
+
+    The ehcp (highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree.
+
 --srna
 
     The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree.
 
+--esrna
+
+    The 16srna (16 SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.
 
 
 Advance options

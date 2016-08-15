@@ -15,16 +15,17 @@ $ physpe -i organism_example_list.txt [options]*
 
 ### Auto options
 
-| option |  Description                                                                                                                  |
-|:------- |:------------------------------------------------------------------------------------------------------------------------------|
-|  -h     |  Print help message and exits.                                                                                                |
-|  -v     |  The version information.                                                                                                     |
-|  -i     |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.                           |
-|  -o     |  A directory include output data (reconstruct tree files). The default output data name is Outdata.                           |
-|  -t     |  Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.        |
-|  --hcp  |  The hcp (highly conserved protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp. |
-|  --srna |  The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree.                                           |
-
+| option |  Description                                                                                                                          |
+|:------- |:-------------------------------------------------------------------------------------------------------------------------------------|
+|  -h     |  Print help message and exits.                                                                                                       |
+|  -v     |  The version information.                                                                                                            |
+|  -i     |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.                                  |
+|  -o     |  A directory include output data (reconstruct tree files). The default output data name is Outdata.                                  |
+|  -t     |  Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.               |
+|  --hcp  |  The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp. |
+|  --ehcp |  The ehcp (highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree. |
+|  --srna |  The 16srna (16 SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.                                              |
+|  --esrna|  The 16srna (16 SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.        |
 
 ### Advance options
 
