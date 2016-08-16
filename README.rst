@@ -291,7 +291,7 @@ Users can check the quality of every aspect of data by these temp files.
 
 
 Physpe reconstruct phylogenetic tree database
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 **1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?**
 
 Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
