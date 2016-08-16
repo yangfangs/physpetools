@@ -169,6 +169,3 @@ def starting_esrna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_
         args_raxml = raxmlpara_dna
     doraxml(out_f2p, out_put, args_raxml, args_thread)
 
-
-def add_ehcp(data_path):
-    pro_name = os.listdir(data_path)
