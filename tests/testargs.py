@@ -55,7 +55,7 @@ parser_a.add_argument('-in', nargs='?', action="store", dest='spenames',
                       default=sys.stdin, help='sub -in')
 
 parser_b.add_argument('-out', action="store", dest="testbout",
-                      default='Outdata', help='sub -outdata')
+                      help='sub -outdata')
 parser_b.add_argument('-in', nargs='?', action="store", dest='testbin',
                       default=sys.stdin, help='sub -indata')
 
@@ -64,6 +64,9 @@ print parser.parse_args()
 if args.version:
     version_info()
     sys.exit(0)
+
+if args.testbout:
+    print 'yes  have muscle parameter'
 
 if args.raxml:
     print args.raxml
@@ -74,7 +77,3 @@ if args.raxml is raxmlpara:
 pwd = os.getcwd()
 outpath = os.path.join(pwd, args.outdatafile)
 print outpath
-
-
-
-

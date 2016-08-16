@@ -68,18 +68,24 @@ def starting(args):
 starting run reconstruct tree
     :param args: arguments
     """
-    print "in put fasta file is:"
-    print args.spenames
-    print "outfile is:"
-    print args.outdata + "\n"
-    print "now loading data and constructing species phylogenetic tree..."
-    print args.thread
+    print ("in put fasta file is:")
+    print (args.spenames)
+    print ("outfile is:")
+    print (args.outdata + "\n")
+    print ("now loading data and constructing species phylogenetic tree...")
 
     in_put = args.spenames
 
     pwd = os.getcwd()
 
     out_put = os.path.join(pwd, args.outdata)
+    if args.extenddata:
+        if os.path.isfile(args.extenddata):
+            args_exted = args.exteddate
+        elif os.path.isdir(args.extenddata):
+            args_exted = os.path.join(pwd, args.extenddata)
+    else:
+        pass
     # reconstruct phylogenetic tree by highly conserved proteins
     if args.HCP:
         setlogdir(out_put)
@@ -89,12 +95,12 @@ starting run reconstruct tree
         setlogdir(out_put)
         starting_srna(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread)
     elif args.EHCP:
-        pass
         setlogdir(out_put)
+        starting_ehcp(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread, args_exted)
 
     elif args.essurna:
         setlogdir(out_put)
-        starting_esrna(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread, args.extenddata)
+        starting_esrna(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread, args_exted)
 
 
 def starting_hcp(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread):
@@ -122,8 +128,24 @@ def starting_srna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_t
         doraxml(out_f2p, out_put, args_raxml, args_thread)
 
 
-def starting_ehcp():
-    pass
+def starting_ehcp(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread, args_exteddata):
+    '''reconstruct phylogenetic tree by ehcp method'''
+    hcp_input = checkKeggOrganism(in_put)
+    out_retrieve = doretrieve(hcp_input, out_put)
+    retrieve_pro = os.listdir(out_retrieve)
+    for reline in retrieve_pro:
+        fw_name = os.path.join(out_retrieve, reline)
+        fr_name = os.path.join(args_exteddata, reline)
+        fw = open(fw_name, 'ab')
+        with open(fr_name) as fr:
+            for line in fr:
+                fw.write(line)
+        fw.close()
+    out_alg = domuscle_file(out_retrieve, out_put, args_muscle)
+    out_concat = cocat_path(out_alg)
+    out_gblock = dogblocks(out_concat, args_gblocks)
+    out_f2p = fasta2phy(out_gblock)
+    doraxml(out_f2p, out_put, args_raxml, args_thread)
 
 
 def starting_esrna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread, args_extenddata):
@@ -146,3 +168,7 @@ def starting_esrna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_
     if args_raxml is raxmlpara_pro:
         args_raxml = raxmlpara_dna
         doraxml(out_f2p, out_put, args_raxml, args_thread)
+
+
+def add_ehcp(data_path):
+    pro_name = os.listdir(data_path)

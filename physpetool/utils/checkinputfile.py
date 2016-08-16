@@ -35,10 +35,10 @@ Check input organisms list with KEGG database
     for che in inputlist:
         originaList.remove(che)
         mislist = originaList
-    if not mislist:
+    if mislist:
         for misabb in mislist:
             logchecking.info("The organism: {0}".format(misabb))
-    logchecking.warning("There organisms can't match in KEGG database so removed and reconstruct phylogenetic tree")
+        logchecking.warning("There organisms can't match in KEGG database so removed and reconstruct phylogenetic tree")
     return inputlist
 
 
@@ -69,10 +69,10 @@ Check input organisms list with SILVA database
     for che in inputlist:
         originaList.remove(che)
         mislist = originaList
-    if not mislist:
+    if mislist:
         for misabb in mislist:
             logchecking.info("The organism: {0}".format(misabb))
-    logchecking.warning("There organisms can't match in SILVA database so removed and reconstruct phylogenetic tree")
+        logchecking.warning("There organisms can't match in SILVA database so removed and reconstruct phylogenetic tree")
 
     return inputlist
 
