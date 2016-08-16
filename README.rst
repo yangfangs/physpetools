@@ -21,7 +21,7 @@ We developing a command line software **Physpe**, which only one command line to
 Physpe workflow
 ----------------------------------------------------------------------------
 
-.. image:: https://github.com/xiaofeiyangyang/physpetools/blob/master/examples/physpe2.png
+.. image:: https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/physpe2.png
 
 
 Physpe workflow includes the following steps:
@@ -74,7 +74,19 @@ To upgrade to latest version:
 
 	$ pip install --upgrade physpe
 
-2. You can install **Physpe** by download the latest released version:
+
+
+2. Download Physpe released version form PypI:
+
+- [Download](https://pypi.python.org/pypi/physpe/) latest released version
+
+- local installation:
+
+.. code-block:: console
+
+    $pip install physpe-*.tar.gz
+
+3. You can install **Physpe** by download the latest released version:
 
 - `Download <https://github.com/xiaofeiyangyang/physpetools/releases>`_ latest released version **.tar.gz** file.
 
@@ -84,7 +96,7 @@ To upgrade to latest version:
 
 	$ pip install physpetools-v*.tar.gz
 
-3. Use git command clone **Physpe**:
+4. Use git command clone **Physpe**:
 
 .. code-block:: console
 

@@ -14,7 +14,18 @@ To upgrade to latest version:
 $ pip install --upgrade physpe
 ```
 
-## 2. You can install Physpe by download the latest released version:
+## 2. Download Physpe released version form PypI:
+
+* [Download](https://pypi.python.org/pypi/physpe/) latest released version
+
+* local installation:
+
+```bash
+pip install physpe-*.tar.gz
+```
+
+
+## 3. You can install Physpe by download the latest released version form github:
 
 * [Download](https://github.com/xiaofeiyangyang/physpetools/releases) latest released version **.tar.gz** file.
 
@@ -26,7 +37,7 @@ $ pip install physpetools-v*.tar.gz
 ```
 
 
-## 3. Use git command clone **Physpe** to install
+## 4. Use git command clone **Physpe** to install
 
 ```bash
 $ git clone git@github.com:xiaofeiyangyang/physpetools.git
