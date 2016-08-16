@@ -1,8 +1,8 @@
 
-**One command line auto reconstruct phylogenetic tree**
+# One command line auto reconstruct phylogenetic tree
 
 
-# Introduction
+## Introduction
 
 In some filed combine species phylogenetic tree do some prediction are very important for instance,
 protein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree
@@ -12,7 +12,7 @@ We developing a command line software **Physpe**, which only one command line to
 (the species names must be a abbreviation same with **KEGG database** organisms abbreviation), the **Physpe** auto reconstruct species phylogenetic tree.
 
 
-# Physpe workflow
+## Physpe workflow
 
 
 ![workflow](img/physpe2.png)
@@ -38,7 +38,7 @@ Physpe workflow includes the following steps:
 
 
 
-# Features
+## Features
 
 - Easy to use (one command line auto construct phylogenetic tree).
 
@@ -53,7 +53,7 @@ Physpe workflow includes the following steps:
 - view tree by iTol (easy use iview module to view tree)
 
 
-# Physpe module:
+## Physpe module:
 
 * [autobuild](usage.md#autobuild): Auto reconstruct phylogenetic tree
 
