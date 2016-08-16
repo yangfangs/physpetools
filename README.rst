@@ -280,7 +280,7 @@ Physpe output tow data files, the one is contain phylogenetic tree files default
 If you reconstruct phylogenetic tree by HCP (highly conserved protein) model, temp file include three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
   + conserved_protein: Store the \*.fasta format files, which is conserved proteins retrieve by KEGG database.
   + muscle_alignment: Store files are multiple sequence alignment by muscle.
-  + concatenate: Include concatenate highly conserved protein data (*.fasta format file) and select conserved blocks data (*.fasta-gb1 format file).
+  + concatenate: Include concatenate highly conserved protein data (\*.fasta format file) and select conserved blocks data (\*.fasta-gb1 format file).
 
 If you reconstruct phylogenetic tree by SRNA (16s RNA) model temp file include two directory ``16srnadata`` and ``16srna_alignment``.
   + 16srandata: Stroe  a file name is 16srandata.fata, contain the 16s RNA data retrieve by SILVA database.
