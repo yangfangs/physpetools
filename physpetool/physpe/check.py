@@ -1,5 +1,6 @@
 import os
 
+from physpetool.utils.checkdb import check_ehcp
 from physpetool.view.annotatingtree import colorRange
 
 APP_DESC = ""
@@ -19,7 +20,7 @@ Arguments parse
                                  default='check', help="It's a directory name contain check result.")
 
     annotation_args.add_argument('-r', '--ehcp', action='store_true', dest="checkehcp",
-                                 default=False, help="Check organisms for extend highly conserved proteins." )
+                                 default=False, help="Check organisms for extend highly conserved proteins.")
 
 
 def starting(args):
@@ -30,4 +31,5 @@ Staring run combine
     pwd = os.getcwd()
 
     out_put = os.path.join(pwd, args.outputfile)
-    colorRange(args.inputfile, out_put, args.colorrange)
+    if args.checkehcp:
+        check_ehcp(args.inputfile, out_put)

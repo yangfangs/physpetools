@@ -101,3 +101,19 @@ check input files
     else:
         print("Please input a exact file")
         exit(0)
+
+
+def readIputFile(inputfile):
+    """
+    prepare and check input file list
+    :param inputfile:
+    :return: inputfile by check list
+    """
+    org_name = []
+    with open(inputfile) as f:
+        for name in f:
+            each_name = name.strip()
+            org_name.append(each_name)
+
+    org_name_check = removeEmptyStr(org_name)
+    return org_name_check

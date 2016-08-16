@@ -1,25 +1,9 @@
 import os
 from physpetool.database.dbpath import getlocaldbpath
-from physpetool.utils.checkinputfile import checkFile, removeEmptyStr
+from physpetool.utils.checkinputfile import checkFile, readIputFile
 from physpetool.utils.colorconvert import random_color
 
 dbpath = getlocaldbpath()
-
-
-def readIputFile(inputfile):
-    """
-    prepare and check input file list
-    :param inputfile:
-    :return: inputfile by check list
-    """
-    org_name = []
-    with open(inputfile) as f:
-        for name in f:
-            each_name = name.strip()
-            org_name.append(each_name)
-
-    org_name_check = removeEmptyStr(org_name)
-    return org_name_check
 
 
 def readTaxDb():

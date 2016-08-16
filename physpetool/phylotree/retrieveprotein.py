@@ -13,7 +13,7 @@ def getspecies(name, colname):
     Get species protein index for DB
     :param name: a list contain abbreviation species nam
     :param colname: a list contain colname of DB
-    :return: a list contain protein index can be retrieved and a match ko list
+    :return: a list contain protein index can be retrieved and a match ko list (is a ko id list)
     """
     dbpath = getlocaldbpath()
     db = os.path.join(dbpath, "proindex.db")
@@ -110,7 +110,7 @@ def doretrieve(specieslistfile, outpath):
 
 
 def hcp_name(index):
-    """get highly conserved protein names"""
+    """get highly conserved protein names from ko list"""
     ko_path = getlocaldbpath()
     pro_ko = os.path.join(ko_path, "protein_ko.txt")
     with open(pro_ko) as ko:
