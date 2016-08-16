@@ -32,7 +32,7 @@
         }, 
         {
             "location": "/install/", 
-            "text": "Install\n\n\n1. Physpe is released on PyPI, so all you need install:\n\n\n$ pip install physpe\n\n\n\n\nTo upgrade to latest version:\n\n\n$ pip install --upgrade physpe\n\n\n\n\n2. You can install Physpe by download the latest released version:\n\n\n\n\n\n\nDownload\n latest released version \n.tar.gz\n file.\n\n\n\n\n\n\nLocal installation:\n\n\n\n\n\n\n$ pip install physpetools-v*.tar.gz\n\n\n\n\n\n3. Use git command clone \nPhyspe\n to install\n\n\n$ git clone git@github.com:xiaofeiyangyang/physpetools.git\n\n\n\n\n$ cd physpetools\n\n\n\n\n\n$ python setup.py install", 
+            "text": "Install\n\n\n1. Physpe is released on PyPI, so all you need install:\n\n\n$ pip install physpe\n\n\n\n\nTo upgrade to latest version:\n\n\n$ pip install --upgrade physpe\n\n\n\n\n2. Download Physpe released version form PypI:\n\n\n\n\n\n\nDownload\n latest released version\n\n\n\n\n\n\nlocal installation:\n\n\n\n\n\n\npip install physpe-*.tar.gz\n\n\n\n\n3. You can install Physpe by download the latest released version form github:\n\n\n\n\n\n\nDownload\n latest released version \n.tar.gz\n file.\n\n\n\n\n\n\nLocal installation:\n\n\n\n\n\n\n$ pip install physpetools-v*.tar.gz\n\n\n\n\n\n4. Use git command clone \nPhyspe\n to install\n\n\n$ git clone git@github.com:xiaofeiyangyang/physpetools.git\n\n\n\n\n$ cd physpetools\n\n\n\n\n\n$ python setup.py install", 
             "title": "Install"
         }, 
         {
@@ -46,14 +46,19 @@
             "title": "1. Physpe is released on PyPI, so all you need install:"
         }, 
         {
-            "location": "/install/#2-you-can-install-physpe-by-download-the-latest-released-version", 
-            "text": "Download  latest released version  .tar.gz  file.    Local installation:    $ pip install physpetools-v*.tar.gz", 
-            "title": "2. You can install Physpe by download the latest released version:"
+            "location": "/install/#2-download-physpe-released-version-form-pypi", 
+            "text": "Download  latest released version    local installation:    pip install physpe-*.tar.gz", 
+            "title": "2. Download Physpe released version form PypI:"
         }, 
         {
-            "location": "/install/#3-use-git-command-clone-physpe-to-install", 
+            "location": "/install/#3-you-can-install-physpe-by-download-the-latest-released-version-form-github", 
+            "text": "Download  latest released version  .tar.gz  file.    Local installation:    $ pip install physpetools-v*.tar.gz", 
+            "title": "3. You can install Physpe by download the latest released version form github:"
+        }, 
+        {
+            "location": "/install/#4-use-git-command-clone-physpe-to-install", 
             "text": "$ git clone git@github.com:xiaofeiyangyang/physpetools.git  $ cd physpetools  $ python setup.py install", 
-            "title": "3. Use git command clone Physpe to install"
+            "title": "4. Use git command clone Physpe to install"
         }, 
         {
             "location": "/usage/", 
