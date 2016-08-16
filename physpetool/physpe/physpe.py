@@ -58,7 +58,7 @@ def start(input):
     # check
     physpe_check = subparser.add_parser("check", help="Check organism database and prepare for extend tree files")
     physpe_check.set_defaults(func=check.starting)
-    check.start_arts(physpe_check)
+    check.start_args(physpe_check)
 
     if len(input) == 1:
         parser.print_usage()

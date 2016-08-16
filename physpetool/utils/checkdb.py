@@ -16,9 +16,13 @@ def check_ehcp(input, output):
     input_list = readIputFile(input_path)
     colname = getcolname()
     relist, match_ko = getspecies(input_list, colname)
-    p = 0
+    p = 1
     for line in match_ko:
         hcpname = hcp_name(line.strip())
-        fw.write("'{0}' ----------------------------------> p{1}.fasta\n".format(hcpname, str(p)))
+        massage = "'{0}' ----------------------------------> p{1}.fasta\n".format(hcpname, str(p))
+        print(massage)
+        fw.write(massage)
         p += 1
+    print("Check extend highly conserved protein is completed.\n")
+    print("Check result is store in {0}".format(open_path))
     fw.close()
