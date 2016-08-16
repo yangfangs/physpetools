@@ -163,11 +163,11 @@ def starting_esrna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_
     out_alg = domuscle(out_retrieve, out_put, args_muscle)
     if args_gblocks is gblockspara_pro:
         args_gblocks = gblockspara_dna
-        out_gblock = dogblocks(out_alg, args_gblocks)
+    out_gblock = dogblocks(out_alg, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
     if args_raxml is raxmlpara_pro:
         args_raxml = raxmlpara_dna
-        doraxml(out_f2p, out_put, args_raxml, args_thread)
+    doraxml(out_f2p, out_put, args_raxml, args_thread)
 
 
 def add_ehcp(data_path):

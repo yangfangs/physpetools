@@ -19,13 +19,13 @@ Arguments parse
     """
     build_args = input.add_argument_group("BUILD OPTIONS")
     advance_args = input.add_argument_group("ADVANCE OPTIONS")
-    build_args.add_argument('-i', action='sotre', dest='input',
+    build_args.add_argument('-i', action='store', dest='input',
                                 help="Input file FASTA format for '--sran' method or a directory contain conserved\
-                                proteins")
+                                proteins for '--hcp' method.")
     build_args.add_argument('-o', action='store', dest="outdata",
                                 default='Outdata', help='Out file name be string type.')
     build_args.add_argument('-t', action='store', dest='thread',
-                                type=int, default=1, help='Set the thread')
+                                type=int, default=1, help='Set the thread.')
     build_args.add_argument('--hcp', action='store_true', dest='HCP',
                                 default=False, help='Reconstruct phylogenetic tree by highly conserved proteins.')
     build_args.add_argument('--srna', action='store_true', dest='ssurna',
@@ -46,10 +46,10 @@ Staring run build
     pwd = os.getcwd()
 
     out_put = os.path.join(pwd, args.outdata)
-    if args.extenddata:
-        if os.path.isfile(args.extenddata):
+    if args.input:
+        if os.path.isfile(args.input):
             args_input = args.input
-        elif os.path.isdir(args.extenddata):
+        elif os.path.isdir(args.input):
             args_input = os.path.join(pwd, args.input)
 
     if args.HCP:

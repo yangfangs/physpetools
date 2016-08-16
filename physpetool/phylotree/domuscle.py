@@ -19,7 +19,7 @@ logdomuscle = getLogging('muscle')
 def domuscle(indata, outdata, musclepara):
     """
     call muscle software to do alignment
-    :param indata: only one file must fasta format
+    :param indata: a director contain a fasta format file or a fasta format file
     :param outdata: the out is abs path with a file name
     :return: outdata path
     """
@@ -30,16 +30,28 @@ def domuscle(indata, outdata, musclepara):
     timeinfo = str(time.strftime(timeformat))
     subdir = 'temp/16srna_alignment' + timeinfo
     muscle_dir = os.path.join(out_path, subdir)
+    # check indata type
+    if os.path.isdir(indata):
+        pro_name = os.listdir(indata)
+        if not os.path.exists(muscle_dir):
+            os.makedirs(muscle_dir)
+        out_alg = os.path.join(muscle_dir, pro_name[0])
+        each_pro = os.path.join(indata, pro_name[0])
+        cmd = mupath + "/muscle -in " + each_pro + " -out " + out_alg + " " + muscleparas
+        subprocess.call(cmd, shell=True)
+        logdomuscle.debug('muscle result path:{0}'.format(out_alg))
+        return out_alg
+    elif os.path.isfile(indata):
+        pro_name = indata
+        if not os.path.exists(muscle_dir):
+            os.makedirs(muscle_dir)
+        out_alg = os.path.join(muscle_dir, pro_name)
+        each_pro = pro_name
+        cmd = mupath + "/muscle -in " + each_pro + " -out " + out_alg + " " + muscleparas
+        subprocess.call(cmd, shell=True)
+        logdomuscle.debug('muscle result path:{0}'.format(out_alg))
+        return out_alg
 
-    pro_name = os.listdir(indata)
-    if not os.path.exists(muscle_dir):
-        os.makedirs(muscle_dir)
-    out_alg = os.path.join(muscle_dir, pro_name[0])
-    each_pro = os.path.join(indata, pro_name[0])
-    cmd = mupath + "/muscle -in " + each_pro + " -out " + out_alg + " " + muscleparas
-    subprocess.call(cmd, shell=True)
-    logdomuscle.debug('muscle result path:{0}'.format(out_alg))
-    return out_alg
 
 
 def domuscle_file(indata_files, outdata, musclepara):
