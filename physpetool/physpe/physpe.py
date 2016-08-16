@@ -2,6 +2,7 @@ import argparse
 import sys
 
 from physpetool.physpe import autobuild
+from physpetool.physpe import check
 from physpetool.physpe import combine
 from physpetool.physpe import build
 from physpetool.physpe import iview
@@ -54,6 +55,10 @@ def start(input):
     physpe_build.set_defaults(func=build.starting)
     build.start_args(physpe_build)
 
+    # check
+    physpe_check = subparser.add_parser("check", help="Check organism database and prepare for extend tree files")
+    physpe_check.set_defaults(func=check.starting)
+    check.start_arts(physpe_check)
 
     if len(input) == 1:
         parser.print_usage()
