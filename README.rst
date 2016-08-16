@@ -4,7 +4,7 @@ One command line auto reconstruct phylogenetic tree
 |PyPI version| |Docs| |License|
 
 
-Documents: `Physpetools documentation <https://xiaofeiyangyang.github.io/physpetools>`_.
+**Documents**: `Physpetools documentation <https://xiaofeiyangyang.github.io/physpetools>`_.
 
 .. contents:: :local:
 

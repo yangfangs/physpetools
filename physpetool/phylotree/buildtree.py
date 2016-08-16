@@ -4,7 +4,7 @@ from physpetool.phylotree.dogblocks import dogblocks
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.doraxml import doraxml
 
-
+# default arguments
 raxmlpara_pro = "-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1"
 raxmlpara_dna = "-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1"
 musclepara = '-maxiters 100'
