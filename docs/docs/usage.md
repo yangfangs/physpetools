@@ -34,7 +34,7 @@ When use autobuild command to reconstruct phylogenetic tree, user should prepare
 
 List format like follow or download [organism_example_list.txt][1]
 
-```
+```bash
 $ cat organism_example_list.txt
 aca
 ace
@@ -46,16 +46,36 @@ adg
 adk
 aeh
 aeq
-
 ```
 
 * Auto build phylogenetic tree by highly conserved proteins:
 
-```
+```bash
+$ physpe autobuild -i organism_example_list.txt --hcp
+Loading organisms names success.....
+
+The result are store in:Outdata
+
+now loading data and constructing species phylogenetic tree......
 
 ```
 
+When auto reconstruct phylogenetic tree completed, you will get file layout like this:
 
+```
+log.log
+Outdata/
+        RAxML_bestTree.T1
+        RAxML_bipartitions.T1
+        RAxML_bipartitionsBranchLabels.T1
+        RAxML_bootstrap.T1
+        RAxML_info.T1
+   temp/
+        concatenate20160817210938/
+                                  
+
+
+```
 
 
 
