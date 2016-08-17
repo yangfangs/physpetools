@@ -136,13 +136,13 @@
         
             <li><a href="#autobuild">Autobuild</a></li>
         
-            <li><a href="#check">check</a></li>
-        
             <li><a href="#build">build</a></li>
         
             <li><a href="#combine">Combine</a></li>
         
             <li><a href="#iview">iview</a></li>
+        
+            <li><a href="#check">check</a></li>
         
     
     </ul>
@@ -156,7 +156,7 @@
 <pre><code class="bash">$ physpe -i organism_example_list.txt [options]*
 </code></pre>
 
-<h3 id="auto-options">Auto options</h3>
+<h3 id="autobuild-options">Autobuild options</h3>
 <table>
 <thead>
 <tr>
@@ -207,7 +207,7 @@
 <p>User enable choice more detail options with Physpe call software, detail advance options input
 <code>must be enclosed in single quotes</code>.</p>
 <p>The follow is to use RAxML advance options example:</p>
-<pre><code class="bash">$ physpe -i organism_example_list.txt -raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+<pre><code class="bash">$ physpe -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 </code></pre>
 
 <p><strong>--muscle</strong></p>
@@ -281,10 +281,134 @@
 </tr>
 </tbody>
 </table>
-<h2 id="check">check</h2>
-<p>None...........</p>
 <h2 id="build">build</h2>
-<p>None</p>
+<p>User can build tree by own 16s rna data or highly conserved proteins.</p>
+<p>Use <strong>build</strong> in command line to reconstruct phylogenetic tree:</p>
+<ul>
+<li>build phylogenetic tree by highly conserved proteins</li>
+</ul>
+<pre><code class="bash">$ physpe build -i example_hcp -o output --hcp
+</code></pre>
+
+<ul>
+<li>build phylogenetic tree by 16s ssu rna data</li>
+</ul>
+<pre><code class="bash">$ physpe build -i example_16s_ssurna.fasta -o output --sran
+</code></pre>
+
+<h3 id="build-options">build options</h3>
+<table>
+<thead>
+<tr>
+<th align="left">option</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-h</td>
+<td align="left">Print help message and exits.</td>
+</tr>
+<tr>
+<td align="left">-i</td>
+<td align="left">Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.</td>
+</tr>
+<tr>
+<td align="left">-o</td>
+<td align="left">A directory include output data (reconstruct tree files). The default output data name is Outdata.</td>
+</tr>
+<tr>
+<td align="left">-t</td>
+<td align="left">Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.</td>
+</tr>
+<tr>
+<td align="left">--hcp</td>
+<td align="left">The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.</td>
+</tr>
+<tr>
+<td align="left">--srna</td>
+<td align="left">The 16srna (16 SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="advance-options_1">Advance options</h3>
+<p>User enable choice more detail options with Physpe call software, detail advance options input
+<code>must be enclosed in single quotes</code>.</p>
+<p>The follow is to use RAxML advance options example:</p>
+<pre><code class="bash">$ physpe -i example_chp  --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1' --hcp
+</code></pre>
+
+<p><strong>--muscle</strong></p>
+<p>Set multiple sequence alignment parameters. The default is <code>-maxiter 100</code>. More options about muslce please to see<a href="http://www.drive5.com/muscle/manual/options.html">MUSCLE Manual</a></p>
+<p>The default option:</p>
+<table>
+<thead>
+<tr>
+<th align="left">option</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-maxiter</td>
+<td align="left">maximum number of iterations to run is set 100.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>--gblocks</strong></p>
+<p>Set Gblocks parameters. The default is <code>-t=p -e=-gb1</code>. More options about Gblocks please to see <a href="http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html">Gblocks documentation</a>.</p>
+<p>The default option:</p>
+<table>
+<thead>
+<tr>
+<th align="left">option</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-t</td>
+<td align="left">Choice type of sequence. The physpe default set is protein.</td>
+</tr>
+<tr>
+<td align="left">-e</td>
+<td align="left">Eneric file extensionc. physep set default is -gbl1.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>--raxml</strong></p>
+<p>Set reconstruct phylogenetic tree arguments with RAxML. The default is <code>-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1</code>. More options about RAxMl please to see <a href="http://sco.h-its.org/exelixis/resource/download/NewManual.pdf">RAxML Manual</a>.</p>
+<p>The default option:</p>
+<table>
+<thead>
+<tr>
+<th align="left">option</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-f</td>
+<td align="left">select algorithm. The physpe default set is <code>a</code>, rapid Bootstrap analysis and search for best­scoring ML tree in one program run.</td>
+</tr>
+<tr>
+<td align="left">-m</td>
+<td align="left">Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The physpe default set is PROTGAMMAJTTX.</td>
+</tr>
+<tr>
+<td align="left">-p</td>
+<td align="left">Specify a random number seed for the parsimony inferences. The physep default set is 12345.</td>
+</tr>
+<tr>
+<td align="left">-x</td>
+<td align="left">Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe default set is 12345.</td>
+</tr>
+<tr>
+<td align="left">-N</td>
+<td align="left">The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="combine">Combine</h2>
 <p>User should prepare a combine tree file by Combine command to combine tree files.</p>
 <p>In Linux you can easy combine more tree to a tree file, for example:</p>
@@ -345,6 +469,38 @@
 <tr>
 <td align="left">-o</td>
 <td align="left">A directory contain range text file. The directory name is iview.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="check">check</h2>
+<p>Use check module  check input organisms match in kegg database or 16s database</p>
+<pre><code class="bash">$ physpe check -i organism_example_list.txt -out check --ehcp
+</code></pre>
+
+<h3 id="check-options">check options</h3>
+<table>
+<thead>
+<tr>
+<th align="left">option</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">-h</td>
+<td align="left">Print help message and exits.</td>
+</tr>
+<tr>
+<td align="left">-i</td>
+<td align="left">Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.</td>
+</tr>
+<tr>
+<td align="left">-o</td>
+<td align="left">A directory contain check result. The directory name is check.</td>
+</tr>
+<tr>
+<td align="left">--echcp</td>
+<td align="left">check input organisms prepare for extend autobuild tree module.</td>
 </tr>
 </tbody>
 </table></div>
