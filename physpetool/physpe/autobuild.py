@@ -36,23 +36,27 @@ Argument parse
     autobuild_args = input.add_argument_group("AUTOBUILD OPTIONS")
     advance_args = input.add_argument_group("ADVANCE OPTIONS")
     autobuild_args.add_argument('-i', nargs='?', dest='spenames', type=argparse.FileType('r'),
-                                help='Input file must be contain the species names.')
+                                help='	Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.')
     autobuild_args.add_argument('-o', action='store', dest="outdata",
-                                default='Outdata', help='Out file name be string type.')
+                                default='Outdata',
+                                help="A directory include output data (reconstruct tree files). The default output data name is Outdata.")
     autobuild_args.add_argument('-t', action='store', dest='thread',
-                                type=int, default=1, help='Set the thread')
+                                type=int, default=1,
+                                help="Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.")
     autobuild_args.add_argument('-e', action='store', dest="extenddata",
-                                help='The extended data should be FASTA format.')
+                                help="The extended data should be FASTA format to extend phylogenetic tree by --ehcp or --esrna option.")
     autobuild_args.add_argument('--hcp', action='store_true', dest='HCP',
-                                default=False, help='Reconstruct phylogenetic tree by highly conserved proteins.')
+                                default=False,
+                                help="The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.")
     autobuild_args.add_argument('--ehcp', action='store_true', dest='EHCP',
                                 default=False,
-                                help='Reconstruct phylogenetic tree by highly conserved proteins and extended proteins.')
+                                help="The ehcp (extend highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree.")
     autobuild_args.add_argument('--srna', action='store_true', dest='ssurna',
-                                default=False, help='Reconstruct phylogenetic tree by 16s ssu ran.')
+                                default=False,
+                                help="The srna (16s SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.")
     autobuild_args.add_argument('--esrna', action='store_true', dest='essurna',
                                 default=False,
-                                help='Reconstruct phylogenetic tree by 16s ssu rna and extended 16s ssu rna.')
+                                help="The esrna (extend 16s SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.")
     autobuild_args.add_argument('-v', '--version', action='store_true',
                                 default=False, help='Version information.')
     advance_args.add_argument('--muscle', action='store', dest='muscle',
@@ -168,4 +172,3 @@ def starting_esrna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_
     if args_raxml is raxmlpara_pro:
         args_raxml = raxmlpara_dna
     doraxml(out_f2p, out_put, args_raxml, args_thread)
-

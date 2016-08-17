@@ -3,9 +3,9 @@
 
 
 
-## Autobuild
+## autobuild
 
-User should prepare a txt file contain the abbreviation names of organisms [example](https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt)
+User should prepare a txt file contain the abbreviation names of organisms [organism_example_list.txt][organism_example_list]
 
 Use **autobuild** in command line like this:
 
@@ -22,10 +22,11 @@ $ physpe -i organism_example_list.txt [options]*
 |  -i     |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.                                  |
 |  -o     |  A directory include output data (reconstruct tree files). The default output data name is Outdata.                                  |
 |  -t     |  Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.               |
+|  -e     |  The extended data should be FASTA format to extend phylogenetic tree by --ehcp or --esrna option.                                  |
 |  --hcp  |  The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp. |
-|  --ehcp |  The ehcp (highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree. |
-|  --srna |  The 16srna (16 SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.                                              |
-|  --esrna|  The 16srna (16 SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.        |
+|  --ehcp |  The ehcp (extend highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree. |
+|  --srna |  The srna (16s SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.                                              |
+|  --esrna|  The esrna (extend 16s SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.        |
 
 ### Advance options
 
@@ -49,11 +50,6 @@ The default option:
 |  -maxiter | maximum number of iterations to run is set 100.  |
 
 
-    
-
-    
-        
-
 **--gblocks**
 
   Set Gblocks parameters. The default is ``-t=p -e=-gb1``. More options about Gblocks please to see [Gblocks documentation](http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html).
@@ -65,11 +61,6 @@ The default option:
 |  -t     | Choice type of sequence. The physpe default set is protein. |
 |  -e     | Eneric file extensionc. physep set default is -gbl1.        |
 
-   
-        
-
-    
-        
 
 **--raxml**
 
@@ -182,7 +173,7 @@ The default option:
 
 
 
-## Combine
+## combine
 
 
 User should prepare a combine tree file by Combine command to combine tree files.
@@ -254,7 +245,7 @@ $ physpe check -i organism_example_list.txt -out check --ehcp
 | --echcp|  check input organisms prepare for extend autobuild tree module.                                  |
 
     
-
+[organism_example_list]: example/organism_example_list.txt
 
 
     
