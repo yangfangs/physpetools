@@ -19,7 +19,7 @@ Arguments parse
     annotation_args.add_argument('-o', action='store', dest="outputfile",
                                  default='check', help="It's a directory name contain check result.")
 
-    annotation_args.add_argument('-r', '--ehcp', action='store_true', dest="checkehcp",
+    annotation_args.add_argument('--ehcp', action='store_true', dest="checkehcp",
                                  default=False, help="Check organisms for extend highly conserved proteins.")
 
 
