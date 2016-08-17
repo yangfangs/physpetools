@@ -131,9 +131,6 @@ autobuild options
 -h
     Print help message and exits.
 
--v
-    The version information.
-
 -i
     Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
 

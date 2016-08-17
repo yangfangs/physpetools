@@ -70,11 +70,9 @@ def starting(args):
 starting run reconstruct tree
     :param args: arguments
     """
-    print ("in put fasta file is:")
-    print (args.spenames)
-    print ("outfile is:")
-    print (args.outdata + "\n")
-    print ("now loading data and constructing species phylogenetic tree...")
+    print ("Loading organisms names success.....\n")
+    print ("The result are store in:{0}\n".format(args.outdata))
+    print ("Now loading data and constructing species phylogenetic tree......")
 
     in_put = args.spenames
 

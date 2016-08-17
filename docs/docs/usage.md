@@ -5,7 +5,7 @@
 
 ## autobuild
 
-User should prepare a txt file contain the abbreviation names of organisms [organism_example_list.txt][organism_example_list]
+User should prepare a txt file contain the abbreviation names of organisms [organism_example_list.txt][1]
 
 Use **autobuild** in command line like this:
 
@@ -18,7 +18,6 @@ $ physpe -i organism_example_list.txt [options]*
 | option |  Description                                                                                                                          |
 |:------- |:-------------------------------------------------------------------------------------------------------------------------------------|
 |  -h     |  Print help message and exits.                                                                                                       |
-|  -v     |  The version information.                                                                                                            |
 |  -i     |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.                                  |
 |  -o     |  A directory include output data (reconstruct tree files). The default output data name is Outdata.                                  |
 |  -t     |  Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.               |
@@ -27,6 +26,52 @@ $ physpe -i organism_example_list.txt [options]*
 |  --ehcp |  The ehcp (extend highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree. |
 |  --srna |  The srna (16s SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.                                              |
 |  --esrna|  The esrna (extend 16s SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.        |
+
+
+### example
+
+When use autobuild command to reconstruct phylogenetic tree, user should prepare a organism list with abbreviation names are same with [KEGG organism list][2]
+
+List format like follow or download [organism_example_list.txt][1]
+
+```
+$ cat organism_example_list.txt
+aca
+ace
+acl
+acn
+aco
+acp
+adg
+adk
+aeh
+aeq
+
+```
+
+* Auto build phylogenetic tree by highly conserved proteins:
+
+```
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ### Advance options
 
@@ -245,7 +290,7 @@ $ physpe check -i organism_example_list.txt -out check --ehcp
 | --echcp|  check input organisms prepare for extend autobuild tree module.                                  |
 
     
-[organism_example_list]: example/organism_example_list.txt
-
+[1]: example/organism_example_list.txt
+[2]: http://www.genome.jp/kegg/catalog/org_list.html
 
     
