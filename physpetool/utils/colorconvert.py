@@ -23,6 +23,22 @@ def convert(value):
     return str(value)
 
 
+def convert_hex(value):
+    if value == "A":
+        return str(10)
+    elif value == "B":
+        return str(11)
+    elif value == "C":
+        return str(12)
+    elif value == "D":
+        return str(13)
+    elif value == "E":
+        return str(14)
+    elif value == "F":
+        return str(15)
+    return str(value)
+
+
 def rgb2hex(rgb):
     """
     Convert RGB to HEX color
@@ -41,6 +57,25 @@ def rgb2hex(rgb):
         hex.append(h)
     hex_combine = "#" + ''.join(hex)
     return hex_combine
+
+
+# #1722DF
+def hex2rgb(hex_value):
+    """
+    Convert hex to rgp
+    :param hex_value: string type example "#1722DF"
+    :return: a rgb color tuple example (23,34,223)
+    """
+    hex = hex_value[1:]
+    hex_splite = [convert_hex(x) for x in hex if x]
+    hex_splite_rgb = splite_string(hex_splite, 2)
+    rgb = [int(line[0]) * 16 + int(line[1]) for line in hex_splite_rgb if line]
+    return tuple(rgb)
+
+
+def splite_string(s, n):
+    """ splite strings to sub"""
+    return [s[i:i + n] for i in range(len(s)) if i % n == 0]
 
 
 def rand_hsl():
