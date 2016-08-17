@@ -134,11 +134,11 @@
     
         <li class="main active"><a href="#usage-and-examples">Usage and Examples</a></li>
         
-            <li><a href="#autobuild">Autobuild</a></li>
+            <li><a href="#autobuild">autobuild</a></li>
         
             <li><a href="#build">build</a></li>
         
-            <li><a href="#combine">Combine</a></li>
+            <li><a href="#combine">combine</a></li>
         
             <li><a href="#iview">iview</a></li>
         
@@ -150,7 +150,7 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="usage-and-examples">Usage and Examples</h1>
-<h2 id="autobuild">Autobuild</h2>
+<h2 id="autobuild">autobuild</h2>
 <p>User should prepare a txt file contain the abbreviation names of organisms <a href="../example/organism_example_list.txt">organism_example_list.txt</a></p>
 <p>Use <strong>autobuild</strong> in command line like this:</p>
 <pre><code class="bash">$ physpe -i organism_example_list.txt [options]*
@@ -186,20 +186,24 @@
 <td align="left">Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.</td>
 </tr>
 <tr>
+<td align="left">-e</td>
+<td align="left">The extended data should be FASTA format to extend phylogenetic tree by --ehcp or --esrna option.</td>
+</tr>
+<tr>
 <td align="left">--hcp</td>
 <td align="left">The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.</td>
 </tr>
 <tr>
 <td align="left">--ehcp</td>
-<td align="left">The ehcp (highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree.</td>
+<td align="left">The ehcp (extend highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree.</td>
 </tr>
 <tr>
 <td align="left">--srna</td>
-<td align="left">The 16srna (16 SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.</td>
+<td align="left">The srna (16s SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.</td>
 </tr>
 <tr>
 <td align="left">--esrna</td>
-<td align="left">The 16srna (16 SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.</td>
+<td align="left">The esrna (extend 16s SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.</td>
 </tr>
 </tbody>
 </table>
@@ -409,7 +413,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="combine">Combine</h2>
+<h2 id="combine">combine</h2>
 <p>User should prepare a combine tree file by Combine command to combine tree files.</p>
 <p>In Linux you can easy combine more tree to a tree file, for example:</p>
 <pre><code class="bash">$ cat tree1.tree tree2.tree &gt; combieTree.tree
