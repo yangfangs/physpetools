@@ -57,8 +57,6 @@ Argument parse
     autobuild_args.add_argument('--esrna', action='store_true', dest='essurna',
                                 default=False,
                                 help="The esrna (extend 16s SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.")
-    autobuild_args.add_argument('-v', '--version', action='store_true',
-                                default=False, help='Version information.')
     advance_args.add_argument('--muscle', action='store', dest='muscle',
                               default=musclepara, help='Alignment by muscle.')
     advance_args.add_argument('--gblocks', action='store', dest='gblocks',
