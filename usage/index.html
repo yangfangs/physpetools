@@ -500,9 +500,9 @@ Outdata/
 <ol>
 <li><strong>Build phylogenetic tree by highly conserved proteins</strong></li>
 </ol>
-<p>User should prepare a directory contain highly conserved proteins such as <a href="../example/example_build_hcp.tar.gz">example_build_hcp</a>. In this example
+<p>When use build to reconstruct phylogenetic tree you should prepare a directory contain highly conserved proteins such as <a href="../example/example_build_srna.fasta">example_build_hcp</a>. In this example
 contain ten highly conserved proteins p1~p10, in each highly conserved proteins contain 10 organism.</p>
-<p>Download <code>example_build_hcp</code> you can use the tar command to unpack:</p>
+<p>Download <a href="../example/example_build_srna.fasta">example_build_hcp</a> you can use the tar command to unpack:</p>
 <pre><code class="bash">$ tar -zxvf example_build_hcp.tar.gz                                                          
 example_build_hcp/                                                                                                   
 example_build_hcp/p1.fasta
@@ -517,7 +517,7 @@ example_build_hcp/p9.fasta
 example_build_hcp/p10.fasta
 </code></pre>
 
-<p>Check each highly conserved proteins contain:</p>
+<p>Check each highly conserved proteins in each files:</p>
 <pre><code class="bash">$ cd  example_build_hcp/
 $ cat p1.fasta 
 &gt;aeh
@@ -572,11 +572,42 @@ MKSVGRLGKILGPRGLMPSAKAGTVTFDVADAIKEIKAGRVEFRVDKTAIIHNMVGKKSF
 EAEKLFENLKVLYRAILKARPASAKGTYVRSFYIAPTMGVGIKIDPVAASKEVAEA
 </code></pre>
 
+<p>Reconstruct phylogenetic tree ues example are by follow command:</p>
+<pre><code class="bash">physpe build -i example_build_hcp -o build_hcp_tree --hcp
+</code></pre>
+
+<p>Few seconds reconstruct phylogenetic tree completed and tree file are store in <code>build_hcp_tree</code> directory</p>
 <p><code>NOTE</code>:</p>
-<ol>
-<li>Prepare how many highly proteins which user decide, we recommend not less than 10 highly conserved proteins</li>
-<li>Each protein must have the same organisms</li>
-</ol>
+<ul>
+<li>Prepare how many highly proteins which user decide, we recommend not less than 10 highly conserved proteins.</li>
+<li>
+<p>Each protein must have the same organisms.</p>
+</li>
+<li>
+<p><strong>Build phylogenetic tree by 16s RNA</strong></p>
+</li>
+</ul>
+<p>Use build command to construct phylogenetic tree by 16s RNA sequence, user should prepare a FASTA format file
+contain each organisms 16s RNA sequence as [example_build_srna][4]. In this example contain ten organism 16s SSU RNA sequence.</p>
+<p>Download [example_build_srna][4] and check the organisms names:</p>
+<pre><code class="bash">$ grep '&gt;' example_build_srna.fasta 
+&gt;aca
+&gt;ace
+&gt;acl
+&gt;acn
+&gt;aco
+&gt;acp
+&gt;adg
+&gt;adk
+&gt;aeh
+&gt;aeq
+</code></pre>
+
+<p>Reconstruct phylogenetic tree ues example are by follow command:</p>
+<pre><code class="bash">physpe build -i example_build_srna.fasta -o build_srna_tree --srna
+</code></pre>
+
+<p>Few seconds reconstruct phylogenetic tree completed and tree file are store in <code>build_srn_tree</code> directory</p>
 <h3 id="advance-options_1">Advance options</h3>
 <p>User enable choice more detail options with Physpe call software, detail advance options input
 <code>must be enclosed in single quotes</code>.</p>
