@@ -48,7 +48,7 @@ aeh
 aeq
 ```
 
-* Auto build phylogenetic tree by highly conserved proteins:
+1. **Auto build phylogenetic tree by highly conserved proteins:**
 
 ```bash
 $ physpe autobuild -i organism_example_list.txt --hcp
@@ -104,10 +104,34 @@ Outdata/
     - hcp_alignment: Contain highly conserved proteins do multiple sequence alignment by muscle.
     - concatenate: Contain the concatenate highly conserved proteins result and select conserved blocks data.
     
-     + concatenate.fasta: Concatenate highly conserved proteins result.
-     + concatenate.fasta-gb1: select conserved blocks result (by Gblocks).
-     + concatenate.fasta-gb1.htm: select conserved blocks result view by html format.
-     + concatenate.fasta-gb1.phy: Convert FASTA format to PHYLIP format
+        + concatenate.fasta: Concatenate highly conserved proteins result.
+        + concatenate.fasta-gb1: select conserved blocks result (by Gblocks).
+        + concatenate.fasta-gb1.htm: select conserved blocks result view by html format.
+        + concatenate.fasta-gb1.phy: Convert FASTA format to PHYLIP format
+
+
+2. **Auto build phylogenetic tree by 16s SSU RNA:**
+
+
+```bash
+$ physpe autobuild -i organism_example_list.txt --srna
+Loading organisms names success.....
+
+The result are store in:Outdata
+
+now loading data and constructing species phylogenetic tree......
+2016-08-18 14:52:09,893 16s DB INFO: Read organisms names success
+```
+
+
+
+
+
+
+
+
+
+
 
 
 

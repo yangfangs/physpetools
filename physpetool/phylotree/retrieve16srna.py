@@ -21,7 +21,7 @@ retrieve 16s rna form bioinfor.scu.edu.cn
     #     st = line.strip()
     #     spelist.append(st)
     spelist =spenamelist
-    logretrieve16srna.info('Read organisms names successful')
+    logretrieve16srna.info('Read organisms names success')
     # makdir tmep directory
     timeformat = '%Y%m%d%H%M%S'
     timeinfo = str(time.strftime(timeformat))
@@ -44,6 +44,7 @@ retrieve 16s rna form bioinfor.scu.edu.cn
         connect.retrbinary(remoteFileName, fw.write, 1024)
         fw.write('\n')
         fw.close()
+        logretrieve16srna.info("Retrieve organism '{0}' 16s SSU RNA sequences data success".format(abb))
     connect.quit()
     logretrieve16srna.debug(dirname)
     return dirname
