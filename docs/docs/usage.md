@@ -71,23 +71,43 @@ Outdata/
         RAxML_bootstrap.T1
         RAxML_info.T1
    temp/
+        conserved_protein20160817210902/
+                                       　p1.fasta
+                                       　p2.fasta
+                                       　p3.fasta
+                                       　......
+        hcp_alignment20160817210936/
+                                    p1.fasta
+                                    p2.fasta
+                                    p2.fasta
+                                    ......
         concatenate20160817210938/
-                                  
-
-
+                                  concatenate.fasta
+                                  concatenate.fasta-gb1
+                                  concatenate.fasta-gb1.htm
+                                  concatenate.fasta-gb1.phy
 ```
 
 
+* log.log: The log information of physpe.
+* Outdata: Contain phylogenetic tree output result. 
+    
+    - RAxML_bestTree.T1: Reconstruct phylogenetic tree by RAxML, it's best ML search tree. 
+    - RAxML_bipartitions.T1: Bipartition tree by RAxML.
+    - RAxML_bipartitionsBranchLabels.T1: Bipartition tree by constructed by RAxML with branch length lables.
+    - RAxML_bootstrap.T1: Bootstrap result by RAxML
+    - RAxML_info.T1: The info of run RAxMl.
+    
+* temp: The temp data by physpe, `it's very important to user to check the key steps`.
 
-
-
-
-
-
-
-
-
-
+    - conserved_protein: Contain highly conserved proteins retrieve form KEGG database.
+    - hcp_alignment: Contain highly conserved proteins do multiple sequence alignment by muscle.
+    - concatenate: Contain the concatenate highly conserved proteins result and select conserved blocks data.
+    
+     + concatenate.fasta: Concatenate highly conserved proteins result.
+     + concatenate.fasta-gb1: select conserved blocks result (by Gblocks).
+     + concatenate.fasta-gb1.htm: select conserved blocks result view by html format.
+     + concatenate.fasta-gb1.phy: Convert FASTA format to PHYLIP format
 
 
 
