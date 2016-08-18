@@ -60,7 +60,7 @@ now loading data and constructing species phylogenetic tree......
 
 ```
 
-When auto reconstruct phylogenetic tree completed, you will get file layout like this:
+When auto reconstruct phylogenetic tree by `hcp` method was completed, you will get file layout like this:
 
 ```
 log.log
@@ -105,8 +105,8 @@ Outdata/
     - concatenate: Contain the concatenate highly conserved proteins result and select conserved blocks data.
     
         + concatenate.fasta: Concatenate highly conserved proteins result.
-        + concatenate.fasta-gb1: select conserved blocks result (by Gblocks).
-        + concatenate.fasta-gb1.htm: select conserved blocks result view by html format.
+        + concatenate.fasta-gb1: Select conserved blocks result (by Gblocks).
+        + concatenate.fasta-gb1.htm: Select conserved blocks result view by html format.
         + concatenate.fasta-gb1.phy: Convert FASTA format to PHYLIP format
 
 
@@ -124,17 +124,48 @@ now loading data and constructing species phylogenetic tree......
 ```
 
 
+When auto reconstruct phylogenetic tree by `srna` method was completed, you will get file layout like this:
 
+```
+log.log
+Outdata/
+        RAxML_bestTree.T1
+        RAxML_bipartitions.T1
+        RAxML_bipartitionsBranchLabels.T1
+        RAxML_bootstrap.T1
+        RAxML_info.T1
+   temp/
+        16srnadata20160818145209/
+                                 16srandata.fasta
 
+        16srna_alignment20160818145236/
+                                  16srandata.fasta
+                                  16srandata.fasta-gb1
+                                  16srandata.fasta-gb1.htm
+                                  16srandata.fasta-gb1.phy
+```
 
+* log.log: The log information of physpe.
+* Outdata: Contain phylogenetic tree output result. 
+    
+    - RAxML_bestTree.T1: Reconstruct phylogenetic tree by RAxML, it's best ML search tree. 
+    - RAxML_bipartitions.T1: Bipartition tree by RAxML.
+    - RAxML_bipartitionsBranchLabels.T1: Bipartition tree by constructed by RAxML with branch length lables.
+    - RAxML_bootstrap.T1: Bootstrap result by RAxML
+    - RAxML_info.T1: The info of run RAxMl.
+    
+* temp: The temp data by physpe, `it's very important to user to check the key steps`.
 
-
-
-
-
-
-
-
+    - 16srnadata: Contain 16s SSU RNA data retrieved form SILVA database.
+    
+        + 16srnadata.fasta: FASTA format data contain input organism 16s SSU RNA data.
+         
+    - 16srna_alignment: Contain the concatenate highly conserved proteins result and select conserved blocks data.
+    
+        + 16srandata.fasta: Contain 16s SSU RNA data with multiple sequence alignment already.
+        + 16srandata.fasta-gb1: Select conserved blocks result (by Gblocks).
+        + 16srandata.fasta-gb1.htm: Select conserved blocks result view by html format.
+        + 16srandata.fasta-gb1.phy: Convert FASTA format to PHYLIP format
 
 
 ### Advance options
