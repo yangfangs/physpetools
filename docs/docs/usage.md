@@ -120,7 +120,7 @@ Outdata/
         + concatenate.fasta-gb1.phy: Convert FASTA format to PHYLIP format
 
 
-2. **Auto build phylogenetic tree by 16s SSU RNA:**
+2.  **Auto build phylogenetic tree by 16s SSU RNA:**
 
 
 ```bash
@@ -270,6 +270,17 @@ $ physpe build -i example_16s_ssurna.fasta -o output --sran
 |  --srna |  The 16srna (16 SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.                                              |
 
 
+### example
+
+1. **Build phylogenetic tree by highly conserved proteins**
+ 
+User should prepare a directory contain highly conserved proteins such as [expmple buid_hcp][3]
+
+
+
+
+
+
 ### Advance options
 
 User enable choice more detail options with Physpe call software, detail advance options input
@@ -405,5 +416,5 @@ $ physpe check -i organism_example_list.txt -out check --ehcp
     
 [1]: example/organism_example_list.txt
 [2]: http://www.genome.jp/kegg/catalog/org_list.html
-
+[3]: example/example_build_hcp.tar.gz
     
