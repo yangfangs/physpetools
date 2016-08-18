@@ -48,7 +48,7 @@ aeh
 aeq
 ```
 
-1. **Auto build phylogenetic tree by highly conserved proteins:**
+#### **Auto build phylogenetic tree by highly conserved proteins:**
 
 ```bash
 $ physpe autobuild -i organism_example_list.txt --hcp
@@ -120,7 +120,7 @@ Outdata/
         + concatenate.fasta-gb1.phy: Convert FASTA format to PHYLIP format
 
 
-2.  **Auto build phylogenetic tree by 16s SSU RNA:**
+####  **Auto build phylogenetic tree by 16s SSU RNA:**
 
 
 ```bash
@@ -237,7 +237,7 @@ The default option:
 
 
 
-## build
+##  build
 
 User can build tree by own 16s rna data or highly conserved proteins.
 
@@ -273,7 +273,7 @@ $ physpe build -i example_16s_ssurna.fasta -o output --sran
 ### example
 
 
-1. **Build phylogenetic tree by highly conserved proteins**
+#### **Build phylogenetic tree by highly conserved proteins**
 
 
 When use build to reconstruct phylogenetic tree you should prepare a directory contain highly conserved proteins such as [example_build_hcp][3]. In this example
@@ -365,12 +365,12 @@ physpe build -i example_build_hcp -o build_hcp_tree --hcp
 Few seconds reconstruct phylogenetic tree completed and tree file are store in `build_hcp_tree` directory
 
 `NOTE`:
-    
+
 * Prepare how many highly proteins which user decide, we recommend not less than 10 highly conserved proteins.
 * Each protein must have the same organisms.
 
 
-2. **Build phylogenetic tree by 16s RNA**
+#### **Build phylogenetic tree by 16s RNA**
 
 Use build command to construct phylogenetic tree by 16s RNA sequence, user should prepare a FASTA format file
 contain each organisms 16s RNA sequence as [example_build_srna][4]. In this example contain ten organism 16s SSU RNA sequence.
