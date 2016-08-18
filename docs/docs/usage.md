@@ -401,19 +401,6 @@ physpe build -i example_build_srna.fasta -o build_srna_tree --srna
 Few seconds reconstruct phylogenetic tree completed and tree file are store in `build_srn_tree` directory
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Advance options
 
 User enable choice more detail options with Physpe call software, detail advance options input
@@ -503,6 +490,12 @@ $ physpe -i organism_example_list.txt [options]*
 |  -h |  Print help message and exits. |
 |  -i |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
 |  -o |  A directory contain combine tree file. The default output data name is combinetree. |
+
+
+### example
+
+
+
 
 
 ## iview
