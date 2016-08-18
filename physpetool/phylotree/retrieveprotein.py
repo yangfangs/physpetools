@@ -89,7 +89,7 @@ def retrieveprotein(proindexlist, outpath, matchlist):
                     f.write(i)
         f.close()
         logretrieveprotein.info(
-            "retrieve highly conserved protein '{0}' success and store in p{1}.fasta file".format(hcp_pro_name, str(p)))
+            "Retrieve highly conserved protein '{0}' success and store in p{1}.fasta file".format(hcp_pro_name, str(p)))
         p += 1
     logretrieveprotein.info("retrieve from Kegg DB " + str(p - 1) + " highly conserved proteins")
     return dirname
@@ -102,7 +102,7 @@ def doretrieve(specieslistfile, outpath):
     #     st = line.strip()
     #     spelist.append(st)
     spelist = specieslistfile
-    logretrieveprotein.info("Read organisms names successful")
+    logretrieveprotein.info("Read organisms names success")
     colname = getcolname()
     relist, matchlist = getspecies(spelist, colname)
     dirpath = retrieveprotein(relist, outpath, matchlist)

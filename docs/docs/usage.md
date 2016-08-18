@@ -57,6 +57,16 @@ Loading organisms names success.....
 The result are store in:Outdata
 
 now loading data and constructing species phylogenetic tree......
+Now loading data and constructing species phylogenetic tree......
+2016-08-18 15:32:06,770 kegg DB INFO: Read organisms names successful
+2016-08-18 15:32:08,380 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L1' success and store in p1.fasta file
+2016-08-18 15:32:09,702 kegg DB INFO: Retrieve highly conserved protein 'DNA-directed RNA polymerase subunit alpha' success and store in p2.fasta file
+2016-08-18 15:32:11,352 kegg DB INFO: Retrieve highly conserved protein 'Leucyl-tRNA synthetase' success and store in p3.fasta file
+2016-08-18 15:32:12,786 kegg DB INFO: Retrieve highly conserved protein 'Metal-dependent proteases with chaperone activity' success and store in p4.fasta file
+2016-08-18 15:32:14,318 kegg DB INFO: Retrieve highly conserved protein 'Phenylalanine-tRNA synthethase alpha subunit' success and store in p5.fasta file
+2016-08-18 15:32:15,854 kegg DB INFO: Retrieve highly conserved protein 'Predicted GTPase probable translation factor' success and store in p6.fasta file
+2016-08-18 15:32:17,049 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L11' success and store in p7.fasta file
+2016-08-18 15:32:18,316 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L13' success and store in p8.fasta file
 
 ```
 
@@ -119,8 +129,16 @@ Loading organisms names success.....
 
 The result are store in:Outdata
 
-now loading data and constructing species phylogenetic tree......
-2016-08-18 14:52:09,893 16s DB INFO: Read organisms names success
+Now loading data and constructing species phylogenetic tree......
+2016-08-18 15:29:31,528 16s DB INFO: Read organisms names success
+2016-08-18 15:29:38,166 16s DB INFO: Retrieve organism 'aca' 16s SSU RNA sequences data success
+2016-08-18 15:29:40,236 16s DB INFO: Retrieve organism 'ace' 16s SSU RNA sequences data success
+2016-08-18 15:29:42,356 16s DB INFO: Retrieve organism 'acl' 16s SSU RNA sequences data success
+2016-08-18 15:29:44,615 16s DB INFO: Retrieve organism 'acn' 16s SSU RNA sequences data success
+2016-08-18 15:29:46,868 16s DB INFO: Retrieve organism 'aco' 16s SSU RNA sequences data success
+2016-08-18 15:29:49,119 16s DB INFO: Retrieve organism 'acp' 16s SSU RNA sequences data success
+2016-08-18 15:29:51,392 16s DB INFO: Retrieve organism 'adg' 16s SSU RNA sequences data success
+
 ```
 
 
@@ -181,7 +199,7 @@ $ physpe -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 123
 
 **--muscle**
 
-  Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see[MUSCLE Manual](http://www.drive5.com/muscle/manual/options.html)
+  Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see [MUSCLE Manual](http://www.drive5.com/muscle/manual/options.html)
 
 The default option:
 
