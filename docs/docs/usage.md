@@ -272,12 +272,14 @@ $ physpe build -i example_16s_ssurna.fasta -o output --sran
 
 ### example
 
+
 1. **Build phylogenetic tree by highly conserved proteins**
- 
-User should prepare a directory contain highly conserved proteins such as [example_build_hcp][3]. In this example
+
+
+When use build to reconstruct phylogenetic tree you should prepare a directory contain highly conserved proteins such as [example_build_hcp][3]. In this example
 contain ten highly conserved proteins p1~p10, in each highly conserved proteins contain 10 organism.
 
-Download `example_build_hcp` you can use the tar command to unpack:
+Download [example_build_hcp][3] you can use the tar command to unpack:
 
 ```bash
 $ tar -zxvf example_build_hcp.tar.gz                                                          
@@ -294,7 +296,7 @@ example_build_hcp/p9.fasta
 example_build_hcp/p10.fasta
 ```
 
-Check each highly conserved proteins contain:
+Check each highly conserved proteins in each files:
 
 
 ```bash
@@ -352,22 +354,61 @@ MKSVGRLGKILGPRGLMPSAKAGTVTFDVADAIKEIKAGRVEFRVDKTAIIHNMVGKKSF
 EAEKLFENLKVLYRAILKARPASAKGTYVRSFYIAPTMGVGIKIDPVAASKEVAEA
 ```
 
+ 
+Reconstruct phylogenetic tree ues example are by follow command:
+
+```bash
+physpe build -i example_build_hcp -o build_hcp_tree --hcp
+```
 
 
-
-
-
-
-
-
-
-
-
+Few seconds reconstruct phylogenetic tree completed and tree file are store in `build_hcp_tree` directory
 
 `NOTE`:
     
-1. Prepare how many highly proteins which user decide, we recommend not less than 10 highly conserved proteins
-2. Each protein must have the same organisms
+* Prepare how many highly proteins which user decide, we recommend not less than 10 highly conserved proteins.
+* Each protein must have the same organisms.
+
+
+2. **Build phylogenetic tree by 16s RNA**
+
+Use build command to construct phylogenetic tree by 16s RNA sequence, user should prepare a FASTA format file
+contain each organisms 16s RNA sequence as [example_build_srna][4]. In this example contain ten organism 16s SSU RNA sequence.
+
+
+Download [example_build_srna][4] and check the organisms names:
+
+```bash
+$ grep '>' example_build_srna.fasta 
+>aca
+>ace
+>acl
+>acn
+>aco
+>acp
+>adg
+>adk
+>aeh
+>aeq
+```
+
+Reconstruct phylogenetic tree ues example are by follow command:
+
+```bash
+physpe build -i example_build_srna.fasta -o build_srna_tree --srna
+```
+
+Few seconds reconstruct phylogenetic tree completed and tree file are store in `build_srn_tree` directory
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -509,4 +550,4 @@ $ physpe check -i organism_example_list.txt -out check --ehcp
 [1]: example/organism_example_list.txt
 [2]: http://www.genome.jp/kegg/catalog/org_list.html
 [3]: example/example_build_hcp.tar.gz
-    
+[3]: example/example_build_srna.fasta    
