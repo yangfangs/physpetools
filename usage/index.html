@@ -170,10 +170,6 @@
 <td align="left">Print help message and exits.</td>
 </tr>
 <tr>
-<td align="left">-v</td>
-<td align="left">The version information.</td>
-</tr>
-<tr>
 <td align="left">-i</td>
 <td align="left">Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.</td>
 </tr>
@@ -207,6 +203,89 @@
 </tr>
 </tbody>
 </table>
+<h3 id="example">example</h3>
+<p>When use autobuild command to reconstruct phylogenetic tree, user should prepare a organism list with abbreviation names are same with <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG organism list</a></p>
+<p>List format like follow or download <a href="../example/organism_example_list.txt">organism_example_list.txt</a></p>
+<pre><code class="bash">$ cat organism_example_list.txt
+aca
+ace
+acl
+acn
+aco
+acp
+adg
+adk
+aeh
+aeq
+</code></pre>
+
+<ul>
+<li>Auto build phylogenetic tree by highly conserved proteins:</li>
+</ul>
+<pre><code class="bash">$ physpe autobuild -i organism_example_list.txt --hcp
+Loading organisms names success.....
+
+The result are store in:Outdata
+
+now loading data and constructing species phylogenetic tree......
+
+</code></pre>
+
+<p>When auto reconstruct phylogenetic tree completed, you will get file layout like this:</p>
+<pre><code>log.log
+Outdata/
+        RAxML_bestTree.T1
+        RAxML_bipartitions.T1
+        RAxML_bipartitionsBranchLabels.T1
+        RAxML_bootstrap.T1
+        RAxML_info.T1
+   temp/
+        conserved_protein20160817210902/
+                                       　p1.fasta
+                                       　p2.fasta
+                                       　p3.fasta
+                                       　......
+        hcp_alignment20160817210936/
+                                    p1.fasta
+                                    p2.fasta
+                                    p2.fasta
+                                    ......
+        concatenate20160817210938/
+                                  concatenate.fasta
+                                  concatenate.fasta-gb1
+                                  concatenate.fasta-gb1.htm
+                                  concatenate.fasta-gb1.phy
+</code></pre>
+
+<ul>
+<li>log.log: The log information of physpe.</li>
+<li>
+<p>Outdata: Contain phylogenetic tree output result. </p>
+<ul>
+<li>RAxML_bestTree.T1: Reconstruct phylogenetic tree by RAxML, it's best ML search tree. </li>
+<li>RAxML_bipartitions.T1: Bipartition tree by RAxML.</li>
+<li>RAxML_bipartitionsBranchLabels.T1: Bipartition tree by constructed by RAxML with branch length lables.</li>
+<li>RAxML_bootstrap.T1: Bootstrap result by RAxML</li>
+<li>RAxML_info.T1: The info of run RAxMl.</li>
+</ul>
+</li>
+<li>
+<p>temp: The temp data by physpe, <code>it's very important to user to check the key steps</code>.</p>
+<ul>
+<li>conserved_protein: Contain highly conserved proteins retrieve form KEGG database.</li>
+<li>hcp_alignment: Contain highly conserved proteins do multiple sequence alignment by muscle.</li>
+<li>
+<p>concatenate: Contain the concatenate highly conserved proteins result and select conserved blocks data.</p>
+</li>
+<li>
+<p>concatenate.fasta: Concatenate highly conserved proteins result.</p>
+</li>
+<li>concatenate.fasta-gb1: select conserved blocks result (by Gblocks).</li>
+<li>concatenate.fasta-gb1.htm: select conserved blocks result view by html format.</li>
+<li>concatenate.fasta-gb1.phy: Convert FASTA format to PHYLIP format</li>
+</ul>
+</li>
+</ul>
 <h3 id="advance-options">Advance options</h3>
 <p>User enable choice more detail options with Physpe call software, detail advance options input
 <code>must be enclosed in single quotes</code>.</p>
