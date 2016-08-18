@@ -219,9 +219,9 @@ aeh
 aeq
 </code></pre>
 
-<ul>
-<li>Auto build phylogenetic tree by highly conserved proteins:</li>
-</ul>
+<ol>
+<li><strong>Auto build phylogenetic tree by highly conserved proteins:</strong></li>
+</ol>
 <pre><code class="bash">$ physpe autobuild -i organism_example_list.txt --hcp
 Loading organisms names success.....
 
@@ -231,7 +231,7 @@ now loading data and constructing species phylogenetic tree......
 
 </code></pre>
 
-<p>When auto reconstruct phylogenetic tree completed, you will get file layout like this:</p>
+<p>When auto reconstruct phylogenetic tree by <code>hcp</code> method was completed, you will get file layout like this:</p>
 <pre><code>log.log
 Outdata/
         RAxML_bestTree.T1
@@ -278,9 +278,73 @@ Outdata/
 <p>concatenate: Contain the concatenate highly conserved proteins result and select conserved blocks data.</p>
 <ul>
 <li>concatenate.fasta: Concatenate highly conserved proteins result.</li>
-<li>concatenate.fasta-gb1: select conserved blocks result (by Gblocks).</li>
-<li>concatenate.fasta-gb1.htm: select conserved blocks result view by html format.</li>
+<li>concatenate.fasta-gb1: Select conserved blocks result (by Gblocks).</li>
+<li>concatenate.fasta-gb1.htm: Select conserved blocks result view by html format.</li>
 <li>concatenate.fasta-gb1.phy: Convert FASTA format to PHYLIP format</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Auto build phylogenetic tree by 16s SSU RNA:</strong></p>
+</li>
+</ul>
+<pre><code class="bash">$ physpe autobuild -i organism_example_list.txt --srna
+Loading organisms names success.....
+
+The result are store in:Outdata
+
+now loading data and constructing species phylogenetic tree......
+2016-08-18 14:52:09,893 16s DB INFO: Read organisms names success
+</code></pre>
+
+<p>When auto reconstruct phylogenetic tree by <code>srna</code> method was completed, you will get file layout like this:</p>
+<pre><code>log.log
+Outdata/
+        RAxML_bestTree.T1
+        RAxML_bipartitions.T1
+        RAxML_bipartitionsBranchLabels.T1
+        RAxML_bootstrap.T1
+        RAxML_info.T1
+   temp/
+        16srnadata20160818145209/
+                                 16srandata.fasta
+
+        16srna_alignment20160818145236/
+                                  16srandata.fasta
+                                  16srandata.fasta-gb1
+                                  16srandata.fasta-gb1.htm
+                                  16srandata.fasta-gb1.phy
+</code></pre>
+
+<ul>
+<li>log.log: The log information of physpe.</li>
+<li>
+<p>Outdata: Contain phylogenetic tree output result. </p>
+<ul>
+<li>RAxML_bestTree.T1: Reconstruct phylogenetic tree by RAxML, it's best ML search tree. </li>
+<li>RAxML_bipartitions.T1: Bipartition tree by RAxML.</li>
+<li>RAxML_bipartitionsBranchLabels.T1: Bipartition tree by constructed by RAxML with branch length lables.</li>
+<li>RAxML_bootstrap.T1: Bootstrap result by RAxML</li>
+<li>RAxML_info.T1: The info of run RAxMl.</li>
+</ul>
+</li>
+<li>
+<p>temp: The temp data by physpe, <code>it's very important to user to check the key steps</code>.</p>
+<ul>
+<li>
+<p>16srnadata: Contain 16s SSU RNA data retrieved form SILVA database.</p>
+<ul>
+<li>16srnadata.fasta: FASTA format data contain input organism 16s SSU RNA data.</li>
+</ul>
+</li>
+<li>
+<p>16srna_alignment: Contain the concatenate highly conserved proteins result and select conserved blocks data.</p>
+<ul>
+<li>16srandata.fasta: Contain 16s SSU RNA data with multiple sequence alignment already.</li>
+<li>16srandata.fasta-gb1: Select conserved blocks result (by Gblocks).</li>
+<li>16srandata.fasta-gb1.htm: Select conserved blocks result view by html format.</li>
+<li>16srandata.fasta-gb1.phy: Convert FASTA format to PHYLIP format</li>
 </ul>
 </li>
 </ul>
