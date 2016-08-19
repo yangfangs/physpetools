@@ -677,7 +677,7 @@ aeq     range   #F1A2B7 Adlercreutzia
 ## check
 
 
-Use check module  check input organisms match in kegg database or 16s database
+Use check module  check input organisms match in kegg database or 16s database.
 
 
 ```bash
@@ -693,9 +693,115 @@ $ physpe check -i organism_example_list.txt -out check --ehcp
 |  -h    |  Print help message and exits.                                                                      |
 |  -i    |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
 |  -o    |  A directory contain check result. The directory name is check.                                     |
-| --echcp|  check input organisms prepare for extend autobuild tree module.                                  |
+| --ehcp|  check input organisms prepare for extend autobuild tree module.                                    |
 
-    
+### example
+
+
+#### check organism for extend autobuild
+
+When user use autobuild to reconstruct phylogenetic tree with `--ehcp` method, you should prepare highly conserved proteins as extend proteins
+for auto build tree. You can determine what proteins to be prepared by the check command. Download example for check [organism_example_list.txt][1]
+
+
+Use check command like follow: 
+
+```bash
+$ physpe check -i organism_example_list.txt --ehcp
+
+'Ribosomal protein L1' ----------------------------------> p1.fasta
+
+'DNA-directed RNA polymerase subunit alpha' ----------------------------------> p2.fasta
+
+'Leucyl-tRNA synthetase' ----------------------------------> p3.fasta
+
+'Metal-dependent proteases with chaperone activity' ----------------------------------> p4.fasta
+
+'Phenylalanine-tRNA synthethase alpha subunit' ----------------------------------> p5.fasta
+
+'Predicted GTPase probable translation factor' ----------------------------------> p6.fasta
+
+'Ribosomal protein L11' ----------------------------------> p7.fasta
+
+'Ribosomal protein L13' ----------------------------------> p8.fasta
+
+'Ribosomal protein L14' ----------------------------------> p9.fasta
+
+'Ribosomal protein L22' ----------------------------------> p10.fasta
+
+'Ribosomal protein L3' ----------------------------------> p11.fasta
+
+'Ribosomal protein L5' ----------------------------------> p12.fasta
+
+'Ribosomal protein S11' ----------------------------------> p13.fasta
+
+'Ribosomal protein S17' ----------------------------------> p14.fasta
+
+'Ribosomal protein S2' ----------------------------------> p15.fasta
+
+'Ribosomal protein S3' ----------------------------------> p16.fasta
+
+'Ribosomal protein S4' ----------------------------------> p17.fasta
+
+'Ribosomal protein S5' ----------------------------------> p18.fasta
+
+'Ribosomal protein S7' ----------------------------------> p19.fasta
+
+'Ribosomal protein S8' ----------------------------------> p20.fasta
+
+'Ribosomal protein S9' ----------------------------------> p21.fasta
+
+'Seryl-tRNA synthetase' ----------------------------------> p22.fasta
+
+'Arginyl-tRNA synthetase' ----------------------------------> p23.fasta
+
+'DNA-directed RNA polymerase beta subunit' ----------------------------------> p24.fasta
+
+'Ribosomal protein S13' ----------------------------------> p25.fasta
+
+Check extend highly conserved protein is completed.
+
+```
+
+This check result write to default directory name is `check`
+
+```bash
+$ cd check
+$ cat physpe_echp_extend.txt 
+'Ribosomal protein L1' ----------------------------------> p1.fasta
+'DNA-directed RNA polymerase subunit alpha' ----------------------------------> p2.fasta
+'Leucyl-tRNA synthetase' ----------------------------------> p3.fasta
+'Metal-dependent proteases with chaperone activity' ----------------------------------> p4.fasta
+'Phenylalanine-tRNA synthethase alpha subunit' ----------------------------------> p5.fasta
+'Predicted GTPase probable translation factor' ----------------------------------> p6.fasta
+'Ribosomal protein L11' ----------------------------------> p7.fasta
+'Ribosomal protein L13' ----------------------------------> p8.fasta
+'Ribosomal protein L14' ----------------------------------> p9.fasta
+'Ribosomal protein L22' ----------------------------------> p10.fasta
+'Ribosomal protein L3' ----------------------------------> p11.fasta
+'Ribosomal protein L5' ----------------------------------> p12.fasta
+'Ribosomal protein S11' ----------------------------------> p13.fasta
+'Ribosomal protein S17' ----------------------------------> p14.fasta
+'Ribosomal protein S2' ----------------------------------> p15.fasta
+'Ribosomal protein S3' ----------------------------------> p16.fasta
+'Ribosomal protein S4' ----------------------------------> p17.fasta
+'Ribosomal protein S5' ----------------------------------> p18.fasta
+'Ribosomal protein S7' ----------------------------------> p19.fasta
+'Ribosomal protein S8' ----------------------------------> p20.fasta
+'Ribosomal protein S9' ----------------------------------> p21.fasta
+'Seryl-tRNA synthetase' ----------------------------------> p22.fasta
+'Arginyl-tRNA synthetase' ----------------------------------> p23.fasta
+'DNA-directed RNA polymerase beta subunit' ----------------------------------> p24.fasta
+'Ribosomal protein S13' ----------------------------------> p25.fasta
+```
+
+In `physpe_echp_extend.txt` file you can 
+
+
+
+
+
+
 [1]: example/organism_example_list.txt
 [2]: http://www.genome.jp/kegg/catalog/org_list.html
 [3]: example/example_build_hcp.tar.gz
