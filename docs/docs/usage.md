@@ -539,7 +539,9 @@ combine/
 
 ## iview
 
-Annotating tree by iTol by iview module.
+Annotating tree by iTol use iview module. User can use iview command to color tree range by kingdom, phylum, class or order.
+the range annotation files can used in [iTol](http://itol.embl.de/), iTol is a very popular online tool for the display, 
+annotation and management of phylogenetic trees. More detail with of iTol in [iTol help](http://itol.embl.de/help.cgi) 
 
 
 Use **iview** in command line like this:
@@ -556,6 +558,121 @@ $ physpe iview -i organism_example_list.txt -range phylum
 |  -i    |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
 |  -o    |  A directory contain range text file. The directory name is iview.                                  |
 |  -r/--range    |Annotating ranges by kingdom, phylum, class or order. The default is phylum.                 |
+
+
+### example
+
+iview Annotating tree by kingdom, phylum, class or order example, download example [organism_example_list.txt][1]
+
+
+#### Annotating tree by kingdom
+
+```bash
+$ physpe iview -i organism_example_list.txt --range kingdom
+Color range by kingdom was complete.
+```
+
+The color range type data are store in iview directory:
+
+```bash
+$ cd iview
+$ cat range_color_by_kingdom.txt 
+TREE_COLORS
+SEPARATOR TAB
+DATA
+aca     range   #BEBF5A Prokaryotes
+ace     range   #BEBF5A Prokaryotes
+acl     range   #BEBF5A Prokaryotes
+acn     range   #BEBF5A Prokaryotes
+aco     range   #BEBF5A Prokaryotes
+acp     range   #BEBF5A Prokaryotes
+adg     range   #BEBF5A Prokaryotes
+adk     range   #BEBF5A Prokaryotes
+aeh     range   #BEBF5A Prokaryotes
+aeq     range   #BEBF5A Prokaryotes
+```
+
+#### Annotating tree by phylum
+
+```bash
+$ physpe iview -i organism_example_list.txt --range phylum
+Color range by kingdom was complete.
+```
+
+The color range type data are store in iview directory:
+
+```bash
+$ cd iview
+$ cat range_color_by_phylum.txt 
+TREE_COLORS
+SEPARATOR TAB
+DATA
+aca     range   #865142 Bacteria
+ace     range   #865142 Bacteria
+acl     range   #865142 Bacteria
+acn     range   #865142 Bacteria
+aco     range   #865142 Bacteria
+acp     range   #865142 Bacteria
+adg     range   #865142 Bacteria
+adk     range   #865142 Bacteria
+aeh     range   #865142 Bacteria
+aeq     range   #865142 Bacteria
+```
+
+#### Annotating tree by class
+
+```bash
+$ physpe iview -i organism_example_list.txt --range class
+Color range by kingdom was complete.
+```
+
+The color range type data are store in iview directory:
+
+```bash
+$ cd iview
+$ cat range_color_by_kingdom.txt 
+TREE_COLORS
+SEPARATOR TAB
+DATA
+aca     range   #9AB7F3 Acidobacteria
+ace     range   #99D1DB Actinobacteria
+acl     range   #A5E58D Tenericutes
+acn     range   #94F1C1 Alphaproteobacteria
+aco     range   #D67A21 Synergistetes
+acp     range   #DD9284 Deltaproteobacteria
+adg     range   #3E70B8 Firmicutes - Clostridia
+adk     range   #DDC8B7 Betaproteobacteria
+aeh     range   #72E137 Gammaproteobacteria - Others
+aeq     range   #99D1DB Actinobacteria
+```
+
+#### Annotating tree by order
+
+```bash
+$ physpe iview -i organism_example_list.txt --range order
+Color range by kingdom was complete.
+```
+
+The color range type data are store in iview directory:
+
+```bash
+$ cd iview
+$ cat range_color_by_kingdom.txt 
+TREE_COLORS
+SEPARATOR TAB
+DATA
+aca     range   #AA8761 Acidobacterium
+ace     range   #8770BC Acidothermus
+acl     range   #3BD26B Acholeplasma
+acn     range   #D1B487 Anaplasma
+aco     range   #D96D21 Aminobacterium
+acp     range   #AC4E16 Anaeromyxobacter
+adg     range   #287AD8 Ammonifex
+adk     range   #C8184E Alicycliphilus
+aeh     range   #57A569 Alkalilimnicola
+aeq     range   #F1A2B7 Adlercreutzia
+```
+
 
 ## check
 

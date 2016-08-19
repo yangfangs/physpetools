@@ -346,7 +346,7 @@ combine options
 iview
 ^^^^^^^^^^^^^^^^^^^^
 
-Annotating tree by iTol by iview module.
+Annotating tree by iTol use iview module.
 
 
 Use **iview** in command line like this:
