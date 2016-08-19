@@ -829,7 +829,7 @@ Color range by class was complete.
 
 <p>The color range type data are store in iview directory:</p>
 <pre><code class="bash">$ cd iview
-$ cat range_color_by_kingdom.txt 
+$ cat range_color_by_class.txt 
 TREE_COLORS
 SEPARATOR TAB
 DATA
@@ -852,7 +852,7 @@ Color range by order was complete.
 
 <p>The color range type data are store in iview directory:</p>
 <pre><code class="bash">$ cd iview
-$ cat range_color_by_kingdom.txt 
+$ cat range_color_by_order.txt 
 TREE_COLORS
 SEPARATOR TAB
 DATA
@@ -869,7 +869,7 @@ aeq     range   #F1A2B7 Adlercreutzia
 </code></pre>
 
 <h2 id="check">check</h2>
-<p>Use check module  check input organisms match in kegg database or 16s database</p>
+<p>Use check module  check input organisms match in kegg database or 16s database.</p>
 <pre><code class="bash">$ physpe check -i organism_example_list.txt -out check --ehcp
 </code></pre>
 
@@ -895,11 +895,103 @@ aeq     range   #F1A2B7 Adlercreutzia
 <td align="left">A directory contain check result. The directory name is check.</td>
 </tr>
 <tr>
-<td align="left">--echcp</td>
+<td align="left">--ehcp</td>
 <td align="left">check input organisms prepare for extend autobuild tree module.</td>
 </tr>
 </tbody>
-</table></div>
+</table>
+<h3 id="example_4">example</h3>
+<h4 id="check-organism-for-extend-autobuild">check organism for extend autobuild</h4>
+<p>When user use autobuild to reconstruct phylogenetic tree with <code>--ehcp</code> method, you should prepare highly conserved proteins as extend proteins
+for auto build tree. You can determine what proteins to be prepared by the check command. Download example for check <a href="../example/organism_example_list.txt">organism_example_list.txt</a></p>
+<p>Use check command like follow: </p>
+<pre><code class="bash">$ physpe check -i organism_example_list.txt --ehcp
+
+'Ribosomal protein L1' ----------------------------------&gt; p1.fasta
+
+'DNA-directed RNA polymerase subunit alpha' ----------------------------------&gt; p2.fasta
+
+'Leucyl-tRNA synthetase' ----------------------------------&gt; p3.fasta
+
+'Metal-dependent proteases with chaperone activity' ----------------------------------&gt; p4.fasta
+
+'Phenylalanine-tRNA synthethase alpha subunit' ----------------------------------&gt; p5.fasta
+
+'Predicted GTPase probable translation factor' ----------------------------------&gt; p6.fasta
+
+'Ribosomal protein L11' ----------------------------------&gt; p7.fasta
+
+'Ribosomal protein L13' ----------------------------------&gt; p8.fasta
+
+'Ribosomal protein L14' ----------------------------------&gt; p9.fasta
+
+'Ribosomal protein L22' ----------------------------------&gt; p10.fasta
+
+'Ribosomal protein L3' ----------------------------------&gt; p11.fasta
+
+'Ribosomal protein L5' ----------------------------------&gt; p12.fasta
+
+'Ribosomal protein S11' ----------------------------------&gt; p13.fasta
+
+'Ribosomal protein S17' ----------------------------------&gt; p14.fasta
+
+'Ribosomal protein S2' ----------------------------------&gt; p15.fasta
+
+'Ribosomal protein S3' ----------------------------------&gt; p16.fasta
+
+'Ribosomal protein S4' ----------------------------------&gt; p17.fasta
+
+'Ribosomal protein S5' ----------------------------------&gt; p18.fasta
+
+'Ribosomal protein S7' ----------------------------------&gt; p19.fasta
+
+'Ribosomal protein S8' ----------------------------------&gt; p20.fasta
+
+'Ribosomal protein S9' ----------------------------------&gt; p21.fasta
+
+'Seryl-tRNA synthetase' ----------------------------------&gt; p22.fasta
+
+'Arginyl-tRNA synthetase' ----------------------------------&gt; p23.fasta
+
+'DNA-directed RNA polymerase beta subunit' ----------------------------------&gt; p24.fasta
+
+'Ribosomal protein S13' ----------------------------------&gt; p25.fasta
+
+Check extend highly conserved protein is completed.
+
+</code></pre>
+
+<p>This check result write to default directory name is <code>check</code></p>
+<pre><code class="bash">$ cd check
+$ cat physpe_echp_extend.txt 
+'Ribosomal protein L1' ----------------------------------&gt; p1.fasta
+'DNA-directed RNA polymerase subunit alpha' ----------------------------------&gt; p2.fasta
+'Leucyl-tRNA synthetase' ----------------------------------&gt; p3.fasta
+'Metal-dependent proteases with chaperone activity' ----------------------------------&gt; p4.fasta
+'Phenylalanine-tRNA synthethase alpha subunit' ----------------------------------&gt; p5.fasta
+'Predicted GTPase probable translation factor' ----------------------------------&gt; p6.fasta
+'Ribosomal protein L11' ----------------------------------&gt; p7.fasta
+'Ribosomal protein L13' ----------------------------------&gt; p8.fasta
+'Ribosomal protein L14' ----------------------------------&gt; p9.fasta
+'Ribosomal protein L22' ----------------------------------&gt; p10.fasta
+'Ribosomal protein L3' ----------------------------------&gt; p11.fasta
+'Ribosomal protein L5' ----------------------------------&gt; p12.fasta
+'Ribosomal protein S11' ----------------------------------&gt; p13.fasta
+'Ribosomal protein S17' ----------------------------------&gt; p14.fasta
+'Ribosomal protein S2' ----------------------------------&gt; p15.fasta
+'Ribosomal protein S3' ----------------------------------&gt; p16.fasta
+'Ribosomal protein S4' ----------------------------------&gt; p17.fasta
+'Ribosomal protein S5' ----------------------------------&gt; p18.fasta
+'Ribosomal protein S7' ----------------------------------&gt; p19.fasta
+'Ribosomal protein S8' ----------------------------------&gt; p20.fasta
+'Ribosomal protein S9' ----------------------------------&gt; p21.fasta
+'Seryl-tRNA synthetase' ----------------------------------&gt; p22.fasta
+'Arginyl-tRNA synthetase' ----------------------------------&gt; p23.fasta
+'DNA-directed RNA polymerase beta subunit' ----------------------------------&gt; p24.fasta
+'Ribosomal protein S13' ----------------------------------&gt; p25.fasta
+</code></pre>
+
+<p>In <code>physpe_echp_extend.txt</code> file you can </p></div>
             
         </div>
 
