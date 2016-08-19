@@ -596,7 +596,7 @@ aeq     range   #BEBF5A Prokaryotes
 
 ```bash
 $ physpe iview -i organism_example_list.txt --range phylum
-Color range by kingdom was complete.
+Color range by phylum was complete.
 ```
 
 The color range type data are store in iview directory:
@@ -623,7 +623,7 @@ aeq     range   #865142 Bacteria
 
 ```bash
 $ physpe iview -i organism_example_list.txt --range class
-Color range by kingdom was complete.
+Color range by class was complete.
 ```
 
 The color range type data are store in iview directory:
@@ -650,7 +650,7 @@ aeq     range   #99D1DB Actinobacteria
 
 ```bash
 $ physpe iview -i organism_example_list.txt --range order
-Color range by kingdom was complete.
+Color range by order was complete.
 ```
 
 The color range type data are store in iview directory:
