@@ -578,8 +578,8 @@ EAEKLFENLKVLYRAILKARPASAKGTYVRSFYIAPTMGVGIKIDPVAASKEVAEA
 </ul>
 <h4 id="build-phylogenetic-tree-by-16s-rna"><strong>Build phylogenetic tree by 16s RNA</strong></h4>
 <p>Use build command to construct phylogenetic tree by 16s RNA sequence, user should prepare a FASTA format file
-contain each organisms 16s RNA sequence as [example_build_srna][4]. In this example contain ten organism 16s SSU RNA sequence.</p>
-<p>Download [example_build_srna][4] and check the organisms names:</p>
+contain each organisms 16s RNA sequence as <a href="../example/example_combine_tree.tar.gz">example_build_srna</a>. In this example contain ten organism 16s SSU RNA sequence.</p>
+<p>Download <a href="../example/example_combine_tree.tar.gz">example_build_srna</a> and check the organisms names:</p>
 <pre><code class="bash">$ grep '&gt;' example_build_srna.fasta 
 &gt;aca
 &gt;ace
@@ -710,6 +710,36 @@ contain each organisms 16s RNA sequence as [example_build_srna][4]. In this exam
 </tr>
 </tbody>
 </table>
+<h3 id="example_2">example</h3>
+<p>User can use combine command to combine tree from different method method, in our example combine tree from two way reconstruct
+The <code>tree1.tree</code> reconstruct by highly conserved proteins, the <code>tree2.tree</code> reconstruct by 16s SSU RNA data, exapmel data
+<a href="../example/example_combine_tree.tar.gz">example_combine_tree.tar.gz</a></p>
+<p>Download <a href="../example/example_combine_tree.tar.gz">example_combine_tree.tar.gz</a> and unpack:</p>
+<pre><code class="bash">$ tar -zxvf example_combine_tree.tar.gz 
+example_combine_tree/
+example_combine_tree/tree2.tree
+example_combine_tree/tree1.tree
+</code></pre>
+
+<p>Combine tree1.tree and tree2.tree to a tree file:</p>
+<pre><code class="bash">$ conbine tree1.tree tree2.tree &gt; combine.tree
+
+</code></pre>
+
+<p>Combine tree command as like this:</p>
+<pre><code>physpe combine -i combine.tree -o combineTree
+</code></pre>
+
+<p>In the combineTree directory contain two files:</p>
+<pre><code>combine/
+        RAxML_info.T1
+        RAxML_MajorityRuleConsensusTree.T1
+</code></pre>
+
+<ul>
+<li>RAxML_info.T1: The info of RAxML</li>
+<li>RAxML_MajorityRuleConsensusTree.T1: The combine tree by Majority Rule method.</li>
+</ul>
 <h2 id="iview">iview</h2>
 <p>Annotating tree by iTol by iview module.</p>
 <p>Use <strong>iview</strong> in command line like this:</p>
