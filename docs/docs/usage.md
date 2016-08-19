@@ -513,14 +513,13 @@ Combine tree1.tree and tree2.tree to a tree file:
 
 ```bash
 $ conbine tree1.tree tree2.tree > combine.tree
-
 ```
 
 
 
 Combine tree command as like this:
 
-```
+```bash
 physpe combine -i combine.tree -o combineTree
 ```
 
@@ -556,7 +555,7 @@ $ physpe iview -i organism_example_list.txt -range phylum
 |  -h    |  Print help message and exits.                                                                      |
 |  -i    |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
 |  -o    |  A directory contain range text file. The directory name is iview.                                  |
-
+|  -r/--range    |Annotating ranges by kingdom, phylum, class or order.                                        |
 
 ## check
 

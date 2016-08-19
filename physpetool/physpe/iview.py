@@ -21,7 +21,7 @@ Arguments parse
                                view tree by use iTol v3 web applications. default output directory is iview.")
     annotation_args.add_argument('-r', '--range', action='store', dest="colorrange",
                                  choices=taxonomy, default='phylum',
-                                 help="Colored ranges by %s, choice you should choice one." % (taxon))
+                                 help="Colored ranges by %s, you can choice one. The default is phylum" % (taxon))
 
 
 def starting(args):
