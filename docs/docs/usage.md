@@ -630,7 +630,7 @@ The color range type data are store in iview directory:
 
 ```bash
 $ cd iview
-$ cat range_color_by_kingdom.txt 
+$ cat range_color_by_class.txt 
 TREE_COLORS
 SEPARATOR TAB
 DATA
@@ -657,7 +657,7 @@ The color range type data are store in iview directory:
 
 ```bash
 $ cd iview
-$ cat range_color_by_kingdom.txt 
+$ cat range_color_by_order.txt 
 TREE_COLORS
 SEPARATOR TAB
 DATA
