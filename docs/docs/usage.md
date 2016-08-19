@@ -555,7 +555,7 @@ $ physpe iview -i organism_example_list.txt -range phylum
 |  -h    |  Print help message and exits.                                                                      |
 |  -i    |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
 |  -o    |  A directory contain range text file. The directory name is iview.                                  |
-|  -r/--range    |Annotating ranges by kingdom, phylum, class or order.                                        |
+|  -r/--range    |Annotating ranges by kingdom, phylum, class or order. The default is phylum.                 |
 
 ## check
 

@@ -369,6 +369,8 @@ iview options
 -o
     A directory contain range text file. The directory name is iverw.
 
+-r
+    Annotating ranges by kingdom, phylum, class or order. The default is phylum.
 
 check
 ^^^^^^^^^^^^^^^^^^^^
