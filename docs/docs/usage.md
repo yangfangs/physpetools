@@ -494,7 +494,47 @@ $ physpe -i organism_example_list.txt [options]*
 
 ### example
 
+User can use combine command to combine tree from different method method, in our example combine tree from two way reconstruct
+The `tree1.tree` reconstruct by highly conserved proteins, the `tree2.tree` reconstruct by 16s SSU RNA data, exapmel data
+[example_combine_tree.tar.gz][4]
 
+Download [example_combine_tree.tar.gz][4] and unpack:
+
+
+```bash
+$ tar -zxvf example_combine_tree.tar.gz 
+example_combine_tree/
+example_combine_tree/tree2.tree
+example_combine_tree/tree1.tree
+```
+
+Combine tree1.tree and tree2.tree to a tree file:
+
+
+```bash
+$ conbine tree1.tree tree2.tree > combine.tree
+
+```
+
+
+
+Combine tree command as like this:
+
+```
+physpe combine -i combine.tree -o combineTree
+```
+
+
+In the combineTree directory contain two files:
+
+```
+combine/
+        RAxML_info.T1
+        RAxML_MajorityRuleConsensusTree.T1
+```
+
+* RAxML_info.T1: The info of RAxML
+* RAxML_MajorityRuleConsensusTree.T1: The combine tree by Majority Rule method.
 
 
 
@@ -543,4 +583,5 @@ $ physpe check -i organism_example_list.txt -out check --ehcp
 [1]: example/organism_example_list.txt
 [2]: http://www.genome.jp/kegg/catalog/org_list.html
 [3]: example/example_build_hcp.tar.gz
-[3]: example/example_build_srna.fasta    
+[3]: example/example_build_srna.fasta
+[4]: example/example_combine_tree.tar.gz
