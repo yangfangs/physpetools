@@ -795,7 +795,8 @@ $ cat physpe_echp_extend.txt
 'Ribosomal protein S13' ----------------------------------> p25.fasta
 ```
 
-In `physpe_echp_extend.txt` file you can 
+In `physpe_echp_extend.txt` file you can check the highly conserved protein, which you should prepare for extend hcp method to reconstruct phylogenetic tree.
+
 
 
 
