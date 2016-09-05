@@ -39,7 +39,7 @@ Change labels
     for i in input_list:
         for j in tax_list:
             if i == j[0]:
-                fw.write("{0}\t{1}".format(j[0], j[1]))
+                fw.write("{0}\t{1}\n".format(j[0], j[1]))
             else:
                 pass
     fw.close()

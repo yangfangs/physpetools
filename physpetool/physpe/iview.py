@@ -41,4 +41,4 @@ Staring run combine
     if args.colorrange:
         colorRange(args.inputfile, out_put, args.assign)
     elif args.labels:
-        annotatingLabels(args.outputfile, args.outputfile)
+        annotatingLabels(args.inputfile, args.outputfile)
