@@ -83,3 +83,13 @@ def colorRange(input, output, taxon):
     fw.close()
     print("Color range by {0} was complete.".format(taxon))
     print("Color range annotation was save in {0}".format(open_path))
+
+
+
+
+
+
+
+
+
+
