@@ -28,7 +28,7 @@ afu
 
 2.  Reconstruct phylogenetic tree by 16s SSU RNA  
 
-```bash
+```
 $ physpe autobuild -i 191speciesnames.txt -o 191_rna --srna
 Loading organisms names success.....
 
@@ -82,6 +82,86 @@ Now loading data and constructing species phylogenetic tree......
 
 ![191_species_rna](img/191_species_rna.png)
 
+
+
+4. Use iview annotating tree
+
+* Change label names use `--labels`
+
+```
+$ physpe iview -i 191speciesnames.txt --labels
+Change abbreviation names to full names complete
+change labels file was save in iview/labels.txt
+
+$ cd iview
+
+$ cat labels.txt 
+LABELS
+SEPARATOR TAB
+DATA
+neq     Nanoarchaeum equitans
+pai     Pyrobaculum aerophilum
+ape     Aeropyrum pernix
+sto     Sulfolobus tokodaii
+ssoa    Sulfolobus solfataricus SULA
+tvo     Thermoplasma volcanium
+tac     Thermoplasma acidophilum
+afu     Archaeoglobus fulgidus DSM 4304
+hal     Halobacterium sp. NRC-1
+mac     Methanosarcina acetivorans
+mma     Methanosarcina mazei Go1
+pfu     Pyrococcus furiosus DSM 3638
+pho     Pyrococcus horikoshii
+pab     Pyrococcus abyssi
+mth     Methanothermobacter thermautotrophicus
+mka     Methanopyrus kandleri
+mmp     Methanococcus maripaludis S2
+.....
+
+```
+
+* Tree view in iTol
+
+![191_species_rna](img/191_species_rna_full_name.png)
+
+
+
+
+
+* color range by phylum
+
+```
+$ physpe iview -i 191speciesnames.txt -o iview --range -a phylum
+Color range by phylum was complete.
+Color range annotation was save in iview/range_color_by_phylum.txt
+
+$ cd iview
+
+$ cat range_color_by_phylum.txt 
+TREE_COLORS
+SEPARATOR TAB
+DATA
+neq     range   #996433 Archaea
+pai     range   #996433 Archaea
+ape     range   #996433 Archaea
+sto     range   #996433 Archaea
+ssoa    range   #996433 Archaea
+tvo     range   #996433 Archaea
+tac     range   #996433 Archaea
+afu     range   #996433 Archaea
+hal     range   #996433 Archaea
+mac     range   #996433 Archaea
+mma     range   #996433 Archaea
+pfu     range   #996433 Archaea
+pho     range   #996433 Archaea
+pab     range   #996433 Archaea
+mth     range   #996433 Archaea
+mka     range   #996433 Archaea
+mmp     range   #996433 Archaea
+mja     range   #996433 Archaea
+```
+
+* Tree view in iTol
 
 
 
