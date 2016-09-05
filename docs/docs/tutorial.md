@@ -2,13 +2,16 @@
 
 ## Auto bulid Tree of life
 
+
+
 ### Auto build Tree of life by highly conserved protein
 
+None
 
 
 ### Auto build Tree of life by 16s SSU RNA
 
-1. prepare organism names list, 191 organisms names list [download][1]
+1.  prepare organism names list, 191 organisms names list [download][1]  
 
 ```bash
 $ cat 191speciesnames.txt 
@@ -23,7 +26,7 @@ afu
 .....
 ```
 
-2. Reconstruct phylogenetic tree by 16s SSU RNA
+2.  Reconstruct phylogenetic tree by 16s SSU RNA  
 
 ```bash
 $ physpe autobuild -i 191speciesnames.txt -o 191_rna --srna
@@ -75,7 +78,8 @@ Now loading data and constructing species phylogenetic tree......
 ......
 ```
 
-3. Get the tree file
+3.  Get the tree file  
+
 ![191_species_rna](img/191_species_rna.png)
 
 
