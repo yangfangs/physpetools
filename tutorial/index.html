@@ -146,9 +146,7 @@
 <h3 id="auto-build-tree-of-life-by-highly-conserved-protein">Auto build Tree of life by highly conserved protein</h3>
 <p>None</p>
 <h3 id="auto-build-tree-of-life-by-16s-ssu-rna">Auto build Tree of life by 16s SSU RNA</h3>
-<ol>
-<li>prepare organism names list, 191 organisms names list <a href="../example/191speciesnames.txt">download</a>  </li>
-</ol>
+<h4 id="prepare-organism-names-list-191-organisms-names-list-download">Prepare organism names list, 191 organisms names list <a href="../example/191speciesnames.txt">download</a></h4>
 <pre><code class="bash">$ cat 191speciesnames.txt 
 neq
 pai
@@ -161,9 +159,7 @@ afu
 .....
 </code></pre>
 
-<ol>
-<li>Reconstruct phylogenetic tree by 16s SSU RNA  </li>
-</ol>
+<h4 id="reconstruct-phylogenetic-tree-by-16s-ssu-rna">Reconstruct phylogenetic tree by 16s SSU RNA</h4>
 <pre><code>$ physpe autobuild -i 191speciesnames.txt -o 191_rna --srna
 Loading organisms names success.....
 
@@ -213,18 +209,12 @@ Now loading data and constructing species phylogenetic tree......
 ......
 </code></pre>
 
-<ol>
-<li>Get the tree file  </li>
-</ol>
+<h4 id="get-the-tree-file">Get the tree file</h4>
 <p><img alt="191_species_rna" src="../img/191_species_rna.png" /></p>
-<ol>
-<li>
-<p>Use iview annotating tree</p>
-</li>
-<li>
-<p>Change label names use <code>--labels</code></p>
-</li>
-</ol>
+<h4 id="use-iview-annotating-tree">Use iview annotating tree</h4>
+<ul>
+<li>Change label names use <code>--labels</code></li>
+</ul>
 <pre><code>$ physpe iview -i 191speciesnames.txt --labels
 Change abbreviation names to full names complete
 change labels file was save in iview/labels.txt
@@ -259,7 +249,7 @@ mmp     Methanococcus maripaludis S2
 <ul>
 <li>Tree view in iTol</li>
 </ul>
-<p><img alt="191_species_rna" src="../img/191_species_rna_full_name.png" /></p>
+<p><img alt="191_species_rna_full_name" src="../img/191_species_rna_full_name.png" /></p>
 <ul>
 <li>color range by phylum</li>
 </ul>
@@ -295,7 +285,8 @@ mja     range   #996433 Archaea
 
 <ul>
 <li>Tree view in iTol</li>
-</ul></div>
+</ul>
+<p><img alt="191_species_rna_full_color" src="../img/191_species_rna_full_name_color.png" /></p></div>
             
         </div>
 
