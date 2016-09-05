@@ -117,7 +117,6 @@ mth     Methanothermobacter thermautotrophicus
 mka     Methanopyrus kandleri
 mmp     Methanococcus maripaludis S2
 .....
-
 ```
 
 * Tree view in iTol
@@ -159,6 +158,7 @@ mth     range   #996433 Archaea
 mka     range   #996433 Archaea
 mmp     range   #996433 Archaea
 mja     range   #996433 Archaea
+.....
 ```
 
 * Tree view in iTol
@@ -201,8 +201,7 @@ gla     range   #C5D49E Diplomonads
 lma     range   #899DDB Euglenozoa
 tps     range   #7DD2ED Stramenopiles
 cho     range   #99A01A Alveolates
-
-
+.....
 ```
 
 * Tree view in iTol
