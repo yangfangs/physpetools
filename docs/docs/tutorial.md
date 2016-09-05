@@ -166,7 +166,48 @@ mja     range   #996433 Archaea
 ![191_species_rna_full_color](img/191_species_rna_full_name_color.png)
 
 
+* Color range by class
 
+```
+$ physpe iview -i 191speciesnames.txt --range -a class
+Color range by class was complete.
+Color range annotation was save in iview/range_color_by_class.txt
+
+$ cd iview
+
+$ cat range_color_by_class.txt 
+TREE_COLORS
+SEPARATOR TAB
+DATA
+neq     range   #4A959E Nanoarchaeota
+pai     range   #58CD80 Crenarchaeota
+ape     range   #58CD80 Crenarchaeota
+sto     range   #58CD80 Crenarchaeota
+ssoa    range   #58CD80 Crenarchaeota
+tvo     range   #639BB0 Euryarchaeota
+tac     range   #639BB0 Euryarchaeota
+afu     range   #639BB0 Euryarchaeota
+hal     range   #639BB0 Euryarchaeota
+mac     range   #639BB0 Euryarchaeota
+mma     range   #639BB0 Euryarchaeota
+pfu     range   #639BB0 Euryarchaeota
+pho     range   #639BB0 Euryarchaeota
+pab     range   #639BB0 Euryarchaeota
+mth     range   #639BB0 Euryarchaeota
+mka     range   #639BB0 Euryarchaeota
+mmp     range   #639BB0 Euryarchaeota
+mja     range   #639BB0 Euryarchaeota
+gla     range   #C5D49E Diplomonads
+lma     range   #899DDB Euglenozoa
+tps     range   #7DD2ED Stramenopiles
+cho     range   #99A01A Alveolates
+
+
+```
+
+* Tree view in iTol
+
+![191_species_rna_full_color](img/191_species_rna_full_name_color_class.png)
 
 
 
