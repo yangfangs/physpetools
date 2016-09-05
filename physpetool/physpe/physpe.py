@@ -15,10 +15,16 @@ the main module as enter point and contain a main() function to invoke other
 script same as pipeline.
 """
 
-APP_DESC = ("""
-        PHYSPE (%s):
-Reconstruct phylogenetic tree
-""" % (physep_version))
+APP_DESC = (
+    """
+          --------------------------------------------------------------------------------
+                      Physpe (%s) - reconstruct phylogenetic tree
+
+          Citation: null
+
+
+          --------------------------------------------------------------------------------
+          """ % (physep_version))
 
 
 def main():
