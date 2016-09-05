@@ -11,7 +11,7 @@ None
 
 ### Auto build Tree of life by 16s SSU RNA
 
-1.  prepare organism names list, 191 organisms names list [download][1]  
+####  Prepare organism names list, 191 organisms names list [download][1]  
 
 ```bash
 $ cat 191speciesnames.txt 
@@ -26,7 +26,7 @@ afu
 .....
 ```
 
-2.  Reconstruct phylogenetic tree by 16s SSU RNA  
+####  Reconstruct phylogenetic tree by 16s SSU RNA  
 
 ```
 $ physpe autobuild -i 191speciesnames.txt -o 191_rna --srna
@@ -78,13 +78,13 @@ Now loading data and constructing species phylogenetic tree......
 ......
 ```
 
-3.  Get the tree file  
+#### Get the tree file  
 
 ![191_species_rna](img/191_species_rna.png)
 
 
 
-4. Use iview annotating tree
+#### Use iview annotating tree
 
 * Change label names use `--labels`
 
@@ -122,7 +122,7 @@ mmp     Methanococcus maripaludis S2
 
 * Tree view in iTol
 
-![191_species_rna](img/191_species_rna_full_name.png)
+![191_species_rna_full_name](img/191_species_rna_full_name.png)
 
 
 
@@ -162,6 +162,7 @@ mja     range   #996433 Archaea
 ```
 
 * Tree view in iTol
+![191_species_rna_full_color](img/191_species_rna_full_name_color.png)
 
 
 
