@@ -127,7 +127,7 @@ mmp     Methanococcus maripaludis S2
 
 
 
-* color range by phylum
+* Color range by phylum
 
 ```
 $ physpe iview -i 191speciesnames.txt -o iview --range -a phylum
