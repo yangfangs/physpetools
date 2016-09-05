@@ -18,7 +18,7 @@ script same as pipeline.
 APP_DESC = (
     """
           --------------------------------------------------------------------------------
-                      Physpe (%s) - reconstruct phylogenetic tree
+                      Physpe (%s) - Reconstruct Phylogenetic Tree
 
           Citation: null
 

@@ -19,7 +19,7 @@ the main module as enter point and contain a main() function to invoke other
 script same as pipeline.
 """
 
-APP_DESC = "construct"
+APP_DESC = "reconstruct"
 
 raxmlpara_pro = "-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1"
 raxmlpara_dna = "-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1"

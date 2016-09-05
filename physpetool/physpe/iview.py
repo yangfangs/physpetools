@@ -22,10 +22,10 @@ Arguments parse
                                view tree by use iTol v3 web applications. default output directory is iview.")
 
     annotation_args.add_argument('-r', '--range', action='store_true', dest="colorrange", default=False,
-                                 help="Colored ranges by %s, you can choice one. The default is phylum" % (taxon))
+                                 help="Colored ranges by %s, you can choice one. The default is phylum." % (taxon))
 
     annotation_args.add_argument('-a', action='store', dest="assign", choices=taxonomy, default='phylum',
-                                 help="Colored ranges by user, choice form %s" % (taxon))
+                                 help="Colored ranges by user, choice form [%s]." % (taxon))
 
     annotation_args.add_argument('-l', '--labels', action='store_true', dest="labels", default=False,
                                  help="Change labels from abbreviation names to full names.")
