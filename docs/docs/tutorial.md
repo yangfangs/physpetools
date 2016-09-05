@@ -207,7 +207,7 @@ cho     range   #99A01A Alveolates
 
 * Tree view in iTol
 
-![191_species_rna_full_color](img/191_species_rna_full_name_color_class.png)
+![191_species_rna_full_color_class](img/191_species_rna_full_name_color_class.png)
 
 
 
