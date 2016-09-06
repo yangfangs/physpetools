@@ -195,8 +195,10 @@ Now loading data and constructing species phylogenetic tree......
 <h4 id="3get-the-tree-file">3.Get the tree file</h4>
 <p><img alt="191_species_rna" src="../img/191_species_pro.png" /></p>
 <h4 id="4use-iview-annotating-tree">4.Use iview annotating tree</h4>
+<p>Physpe provide iview module to annotating tree by iTol, iTol is a very popular online tool for the display, annotation and management of phylogenetic trees.
+When you use iview module to annotating tree, only drop the output file to your iTol account to display tree.</p>
 <ul>
-<li>Change label names use <code>--labels</code></li>
+<li>Change label names use <code>--labels</code>.</li>
 </ul>
 <pre><code>$ physpe iview -i 191speciesnames.txt --labels
 Change abbreviation names to full names complete
@@ -229,11 +231,11 @@ mmp     Methanococcus maripaludis S2
 </code></pre>
 
 <ul>
-<li>Tree view in iTol</li>
+<li>Drop <code>labels.txt</code> to you iTol account and view the phylogenetic tree.</li>
 </ul>
 <p><img alt="191_species_rna_full_name" src="../img/191_species_pro_full_name.png" /></p>
 <ul>
-<li>Color range by phylum</li>
+<li>Color range by phylum use <code>-a</code> parameter to specified. The default annotation by phylum.</li>
 </ul>
 <pre><code>$ physpe iview -i 191speciesnames.txt -o iview --range -a phylum
 Color range by phylum was complete.
@@ -267,7 +269,7 @@ mja     range   #996433 Archaea
 </code></pre>
 
 <ul>
-<li>Tree view in iTol</li>
+<li>Drop <code>range_color_by_phylum.txt</code> to you iTol account and view the phylogenetic tree.</li>
 </ul>
 <p><img alt="191_species_rna_full_color" src="../img/191_species_pro_full_name_color.png" /></p>
 <h3 id="auto-build-tree-of-life-by-16s-ssu-rna">Auto build Tree of life by 16s SSU RNA</h3>
