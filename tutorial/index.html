@@ -153,7 +153,9 @@ conserved protein and another way is use 16s SSU RNA to reconstruct phylogenetic
 <p><img alt="physpe_concept_hcp" src="../img/physpe_concept_hcp.png" /></p>
 <p>Physpe reconstruct phylogenetic tree by highly conserved protein (hcp) use concatenate highly conserved protein to a supermatrix then reconstruct phylogenetic tree.
 Here we prepare 31 highly conserved protein to auto reconstruct phylogenetic tree. you also can searching what's the <a href="../faq/#Physpe_reconstruct_phylogenetic_tree_database">31 highly protein</a> used.</p>
-<h4 id="1prepare-organism-names-list-191-organisms-names-list-download">1.Prepare organism names list, 191 organisms names list <a href="../example/191speciesnames.txt">download</a></h4>
+<h4 id="1prepare-organisms-names-list">1.Prepare organisms names list</h4>
+<p>Prepare the organisms name are abbreviation name are same with <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG organisms</a> abbreviation. you can get KEGG organisms abbreviation form <a href="http://rest.kegg.jp/list/organism">KEGG API</a>. 
+Here we reconstruct The tree of life use 191 organisms names are <a href="../example/191speciesnames.txt">download</a>. the organisms names list as follow:</p>
 <pre><code class="bash">$ cat 191speciesnames.txt 
 neq
 pai
@@ -166,7 +168,10 @@ afu
 .....
 </code></pre>
 
-<h4 id="2reconstruct-phylogenetic-tree-by-16s-ssu-rna">2.Reconstruct phylogenetic tree by 16s SSU RNA</h4>
+<h4 id="2reconstruct-phylogenetic-tree-by-highly-conserved-protein">2.Reconstruct phylogenetic tree by highly conserved protein</h4>
+<p>When use physpe auto build phylogenetic tree, user can use <code>--hcp</code> arguments to specify use highly conserved protein way to reconstruct phylogenetic tree. The default use 1 thread 
+to reconstruct phylogenetic tree, if you want to use more threads can use <code>-t</code> parameter to specify more threads to reconstruct phylogenetic tree. Here we use the default value 1 thread to 
+reconstruct 191 organisms phylogenetic tree.</p>
 <pre><code>$ physpe autobuild -i 191speciesnames.txt -o 191_pro --hcp
 Loading organisms names success.....
 
@@ -266,7 +271,7 @@ mja     range   #996433 Archaea
 </ul>
 <p><img alt="191_species_rna_full_color" src="../img/191_species_pro_full_name_color.png" /></p>
 <h3 id="auto-build-tree-of-life-by-16s-ssu-rna">Auto build Tree of life by 16s SSU RNA</h3>
-<h4 id="1prepare-organism-names-list-191-organisms-names-list-download_1">1.Prepare organism names list, 191 organisms names list <a href="../example/191speciesnames.txt">download</a></h4>
+<h4 id="1prepare-organism-names-list-191-organisms-names-list-download">1.Prepare organism names list, 191 organisms names list <a href="../example/191speciesnames.txt">download</a></h4>
 <pre><code class="bash">$ cat 191speciesnames.txt 
 neq
 pai
@@ -279,7 +284,7 @@ afu
 .....
 </code></pre>
 
-<h4 id="2reconstruct-phylogenetic-tree-by-16s-ssu-rna_1">2.Reconstruct phylogenetic tree by 16s SSU RNA</h4>
+<h4 id="2reconstruct-phylogenetic-tree-by-16s-ssu-rna">2.Reconstruct phylogenetic tree by 16s SSU RNA</h4>
 <pre><code>$ physpe autobuild -i 191speciesnames.txt -o 191_rna --srna
 Loading organisms names success.....
 
