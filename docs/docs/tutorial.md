@@ -3,14 +3,18 @@
 ## Auto bulid Tree of life
 
 The tree of life always used to describe the relations between organisms are living and extinct.
-Here we reconstruct tree of life tree, which contain 191 organisms. We use two way auto reconstruct phylogenetic tree. one way is use highly
+Here we reconstruct tree of life tree, which contain 191 organisms. We use two way auto reconstruct phylogenetic tree. One way is use highly
 conserved protein and another way is use 16s SSU RNA to reconstruct phylogenetic tree.
 
 
 ### Auto build Tree of life by highly conserved protein
 
+* **Concept**
 
-   
+![physpe_concept_hcp](img/physpe_concept_hcp.png)
+
+Physpe reconstruct phylogenetic tree by highly conserved protein (hcp) use concatenate highly conserved protein to a supermatrix then reconstruct phylogenetic tree.
+Here we prepare 31 highly conserved protein to auto reconstruct phylogenetic tree.
 
 ####  1.Prepare organism names list, 191 organisms names list [download][1]  
 
