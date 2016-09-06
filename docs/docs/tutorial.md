@@ -16,7 +16,10 @@ conserved protein and another way is use 16s SSU RNA to reconstruct phylogenetic
 Physpe reconstruct phylogenetic tree by highly conserved protein (hcp) use concatenate highly conserved protein to a supermatrix then reconstruct phylogenetic tree.
 Here we prepare 31 highly conserved protein to auto reconstruct phylogenetic tree. you also can searching what's the [31 highly protein](faq.md#Physpe_reconstruct_phylogenetic_tree_database) used.
 
-####  1.Prepare organism names list, 191 organisms names list [download][1]  
+####  1.Prepare organisms names list
+
+Prepare the organisms name are abbreviation name are same with [KEGG organisms][2] abbreviation. you can get KEGG organisms abbreviation form [KEGG API][3]. 
+Here we reconstruct The tree of life use 191 organisms names are [download][1]. the organisms names list as follow:
 
 ```bash
 $ cat 191speciesnames.txt 
@@ -31,7 +34,11 @@ afu
 .....
 ```   
 
-####  2.Reconstruct phylogenetic tree by 16s SSU RNA  
+####  2.Reconstruct phylogenetic tree by highly conserved protein 
+
+When use physpe auto build phylogenetic tree, user can use `--hcp` arguments to specify use highly conserved protein way to reconstruct phylogenetic tree. The default use 1 thread 
+to reconstruct phylogenetic tree, if you want to use more threads can use `-t` parameter to specify more threads to reconstruct phylogenetic tree. Here we use the default value 1 thread to 
+reconstruct 191 organisms phylogenetic tree.
 
 ```
 $ physpe autobuild -i 191speciesnames.txt -o 191_pro --hcp
@@ -340,3 +347,5 @@ cho     range   #99A01A Alveolates
 
 
 [1]: example/191speciesnames.txt
+[2]: http://www.genome.jp/kegg/catalog/org_list.html
+[3]: http://rest.kegg.jp/list/organism
