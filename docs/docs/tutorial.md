@@ -6,12 +6,57 @@
 
 ### Auto build Tree of life by highly conserved protein
 
-None
+####  1.Prepare organism names list, 191 organisms names list [download][1]  
+
+```bash
+$ cat 191speciesnames.txt 
+neq
+pai
+ape
+sto
+ssoa
+tvo
+tac
+afu
+.....
+```   
+
+####  2.Reconstruct phylogenetic tree by 16s SSU RNA  
+
+```
+$ physpe autobuild -i 191speciesnames.txt -o 191_pro --hcp
+Loading organisms names success.....
+
+The result are store in:191_pro
+
+Now loading data and constructing species phylogenetic tree......
+2016-09-06 13:01:53,462 Checking organisms INFO: The organism: ges
+2016-09-06 13:01:53,462 Checking organisms WARNING: There organisms can't match in KEGG database so removed and reconstruct phylogenetic tree
+2016-09-06 13:01:53,462 kegg DB INFO: Read organisms names success
+2016-09-06 13:02:15,058 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L1' success and store in p1.fasta file
+2016-09-06 13:02:37,771 kegg DB INFO: Retrieve highly conserved protein 'Leucyl-tRNA synthetase' success and store in p2.fasta file
+2016-09-06 13:03:00,211 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L14' success and store in p3.fasta file
+2016-09-06 13:03:20,662 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L5' success and store in p4.fasta file
+2016-09-06 13:03:40,959 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein S7' success and store in p5.fasta file
+2016-09-06 13:04:01,849 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein S8' success and store in p6.fasta file
+2016-09-06 13:04:24,221 kegg DB INFO: Retrieve highly conserved protein 'Arginyl-tRNA synthetase' success and store in p7.fasta file
+2016-09-06 13:04:24,222 kegg DB INFO: retrieve from Kegg DB 7 highly conserved proteins
+
+```
+
+#### 3.Get the tree file  
+
+![191_species_rna](img/191_species_pro.png)
+
+
+
+
+
 
 
 ### Auto build Tree of life by 16s SSU RNA
 
-####  Prepare organism names list, 191 organisms names list [download][1]  
+####  1.Prepare organism names list, 191 organisms names list [download][1]  
 
 ```bash
 $ cat 191speciesnames.txt 
@@ -26,7 +71,7 @@ afu
 .....
 ```
 
-####  Reconstruct phylogenetic tree by 16s SSU RNA  
+####  2.Reconstruct phylogenetic tree by 16s SSU RNA  
 
 ```
 $ physpe autobuild -i 191speciesnames.txt -o 191_rna --srna
@@ -78,13 +123,13 @@ Now loading data and constructing species phylogenetic tree......
 ......
 ```
 
-#### Get the tree file  
+#### 3.Get the tree file  
 
 ![191_species_rna](img/191_species_rna.png)
 
 
 
-#### Use iview annotating tree
+#### 4.Use iview annotating tree
 
 * Change label names use `--labels`
 
