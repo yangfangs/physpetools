@@ -69,7 +69,11 @@ Now loading data and constructing species phylogenetic tree......
 
 #### 4.Use iview annotating tree
 
-* Change label names use `--labels`
+Physpe provide iview module to annotating tree by iTol, iTol is a very popular online tool for the display, annotation and management of phylogenetic trees.
+When you use iview module to annotating tree, only drop the output file to your iTol account to display tree.
+
+
+* Change label names use `--labels`.
 
 ```
 $ physpe iview -i 191speciesnames.txt --labels
@@ -102,11 +106,11 @@ mmp     Methanococcus maripaludis S2
 .....
 ```
 
-* Tree view in iTol
+* Drop `labels.txt` to you iTol account and view the phylogenetic tree.
 
 ![191_species_rna_full_name](img/191_species_pro_full_name.png)
 
-* Color range by phylum
+* Color range by phylum use `-a` parameter to specified. The default annotation by phylum.
 
 ```
 $ physpe iview -i 191speciesnames.txt -o iview --range -a phylum
@@ -140,7 +144,7 @@ mja     range   #996433 Archaea
 .....
 ```
 
-* Tree view in iTol
+* Drop `range_color_by_phylum.txt` to you iTol account and view the phylogenetic tree.
 
 ![191_species_rna_full_color](img/191_species_pro_full_name_color.png)
 
