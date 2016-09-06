@@ -14,7 +14,7 @@ conserved protein and another way is use 16s SSU RNA to reconstruct phylogenetic
 ![physpe_concept_hcp](img/physpe_concept_hcp.png)
 
 Physpe reconstruct phylogenetic tree by highly conserved protein (hcp) use concatenate highly conserved protein to a supermatrix then reconstruct phylogenetic tree.
-Here we prepare 31 highly conserved protein to auto reconstruct phylogenetic tree.
+Here we prepare 31 highly conserved protein to auto reconstruct phylogenetic tree. you also can searching what's the [31 highly protein](faq.md#Physpe_reconstruct_phylogenetic_tree_database) used.
 
 ####  1.Prepare organism names list, 191 organisms names list [download][1]  
 
