@@ -358,7 +358,125 @@ cho     range   #99A01A Alveolates
 ![191_species_rna_full_color_class](img/191_species_rna_full_name_color_class.png)
 
 
+## Auto build a plant tree
+
+####  1.Prepare organisms names list
+
+Here auto reconstruct 52 plants phylogenetic tree by physpe highly conserved protein way organisms list [download][4]
+
+```
+$ cat 52plantsnames.txt
+aly
+ath
+atr
+bdi
+bpg
+brp
+bvg
+cam
+ccp
+cic
+cit
+cme
+cmo
+.....
+```
+
+####  2.Reconstruct phylogenetic tree by highly conserved protein 
+
+
+
+
+####  3.Get tree file
+
+![52_plants_pro](img/52_plants_pro.png)
+
+
+#### 4.Use iview annotating tree
+
+* Change label names use `--labels`
+
+```
+$ physpe iview -i 52plantsnames.txt --labels
+Change abbreviation names to full names complete
+change labels file was save in iview/labels.txt
+
+$ cd iview
+
+$ cat labels.txt 
+LABELS
+SEPARATOR TAB
+DATA
+aly     Arabidopsis lyrata (lyrate rockcress)
+ath     Arabidopsis thaliana (thale cress)
+atr     Amborella trichopoda
+bdi     Brachypodium distachyon
+bpg     Bathycoccus prasinos
+brp     Brassica rapa (field mustard)
+bvg     Beta vulgaris (sugar beet)
+cam     Cicer arietinum (chickpea)
+ccp     Chondrus crispus (carragheen)
+cic     Citrus clementina (mandarin orange)
+cit     Citrus sinensis (Valencia orange)
+cme     Cyanidioschyzon merolae
+cmo     Cucumis melo (muskmelon)
+crb     Capsella rubella
+cre     Chlamydomonas reinhardtii
+csl     Coccomyxa subellipsoidea
+csv     Cucumis sativus (cucumber)
+cvr     Chlorella variabilis
+
+.....
+```  
+
+* Tree view in iTol
+
+![52_plants_pro_full_name](img/52_plants_pro_full_name.png)
+
+
+* Color range by phylum
+
+```
+$ physpe iview -i 52plantsnames.txt -o iview --range -a phylum
+Color range by phylum was complete.
+Color range annotation was save in iview/range_color_by_phylum.txt
+
+$ cd iview
+
+$ cat range_color_by_phylum.txt 
+TREE_COLORS
+SEPARATOR TAB
+DATA
+aly     range   #DF73CB Plants
+ath     range   #DF73CB Plants
+atr     range   #DF73CB Plants
+bdi     range   #DF73CB Plants
+bpg     range   #DF73CB Plants
+brp     range   #DF73CB Plants
+bvg     range   #DF73CB Plants
+cam     range   #DF73CB Plants
+ccp     range   #DF73CB Plants
+cic     range   #DF73CB Plants
+cit     range   #DF73CB Plants
+cme     range   #DF73CB Plants
+cmo     range   #DF73CB Plants
+crb     range   #DF73CB Plants
+cre     range   #DF73CB Plants
+csl     range   #DF73CB Plants
+csv     range   #DF73CB Plants
+cvr     range   #DF73CB Plants
+egr     range   #DF73CB Plants
+.....
+```
+
+* Tree view in iTol
+
+![52_plants_pro_full_name_color](img/52_plants_pro_full_name_color.png)
+
+
+
 
 [1]: example/191speciesnames.txt
 [2]: http://www.genome.jp/kegg/catalog/org_list.html
 [3]: http://rest.kegg.jp/list/organism
+[4]: example/52plantsnames.txt
