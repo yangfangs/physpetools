@@ -63,21 +63,22 @@ def cocat_path(muscle_alg):
     fw = open(result_path, 'w')
     alg_files = os.listdir(muscle_alg)
     dict = {}
+    dict_abb = {}
     for eachpro in alg_files:
         path = os.path.join(muscle_alg, eachpro)
         each_k, each_v = cocat(path)
+        dict_abb[eachpro] = each_k
         dict[eachpro] = each_v
-    num = len(dict.get(alg_files[0]))
-    for i in range(num):
+    # Get all abb names
+    all_abb = dict_abb.get(alg_files[0])
+    # Concatenate
+    for i in all_abb:
         concat = []
         for j in alg_files:
-            concat.append(dict.get(j)[i])
-        logconcat.debug('> {0} {1}'.format(each_k[i], ''.join(concat)))
-        fw.write(each_k[i] + '\n')
+            index_abb = dict_abb.get(j).index(i)
+            concat.append(dict.get(j)[index_abb])
+        fw.write(i + '\n')
         fw.write(''.join(concat) + '\n')
-    logconcat.info("concatenate gene was completed")
-    return result_path
 
-if __name__ == '__main__':
-    os.chdir("/home/yangfang/physpetools_data/plant/test/")
-    cocat_path('test_pro')
+    logconcat.info("Concatenate highly conserved proteins was completed")
+    return result_path
