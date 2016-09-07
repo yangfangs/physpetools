@@ -111,6 +111,18 @@ def displaydb():
     for abb in countnone:
         print abb[1] + ",",
 
+
+def display_row(abb):
+    conn = sqlite3.connect('../database/proindex.db')
+    conn.text_factory = str
+    c = conn.cursor()
+    sqlupdate = "select * from keggproindex  where NAME={0}".format(abb)
+    c.execute(sqlupdate)
+    result = c.fetchall()
+    print (result)
+    conn.commit()
+    c.close()
+
 if __name__ == '__main__':
     start = time.time()
     displaydb()
@@ -120,9 +132,14 @@ if __name__ == '__main__':
     print "\n"
     print "the execute time is:"
     print(during)
+    display_row('obr')
+
+
+
 
 
 
 # select * from keggproindex where id =148
 # update keggproindex set K02987 = 'obr:102702159' where id =148
 # commit
+
