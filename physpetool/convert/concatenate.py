@@ -44,7 +44,7 @@ def cocat(each_muscle_alg):
 
 def cocat_path(muscle_alg):
     """
-    main function can be invoked do concatenate:
+    Function can be invoked do concatenate:
     :param muscle_alg: a path contain all .fasta files are already alignment by muscle
     :return: the path of .phy file location
 
@@ -77,3 +77,7 @@ def cocat_path(muscle_alg):
         fw.write(''.join(concat) + '\n')
     logconcat.info("concatenate gene was completed")
     return result_path
+
+if __name__ == '__main__':
+    os.chdir("/home/yangfang/physpetools_data/plant/test/")
+    cocat_path('test_pro')
