@@ -136,6 +136,8 @@
         
             <li><a href="#auto-bulid-tree-of-life">Auto bulid Tree of life</a></li>
         
+            <li><a href="#auto-build-a-plant-tree">Auto build a plant tree</a></li>
+        
     
     </ul>
 </div></div>
@@ -461,7 +463,109 @@ cho     range   #99A01A Alveolates
 <ul>
 <li>Tree view in iTol</li>
 </ul>
-<p><img alt="191_species_rna_full_color_class" src="../img/191_species_rna_full_name_color_class.png" /></p></div>
+<p><img alt="191_species_rna_full_color_class" src="../img/191_species_rna_full_name_color_class.png" /></p>
+<h2 id="auto-build-a-plant-tree">Auto build a plant tree</h2>
+<h4 id="1prepare-organisms-names-list_1">1.Prepare organisms names list</h4>
+<p>Here auto reconstruct 52 plants phylogenetic tree by physpe highly conserved protein way organisms list <a href="../example/52plantsnames.txt">download</a></p>
+<pre><code>$ cat 52plantsnames.txt
+aly
+ath
+atr
+bdi
+bpg
+brp
+bvg
+cam
+ccp
+cic
+cit
+cme
+cmo
+.....
+</code></pre>
+
+<h4 id="2reconstruct-phylogenetic-tree-by-highly-conserved-protein_1">2.Reconstruct phylogenetic tree by highly conserved protein</h4>
+<h4 id="3get-tree-file">3.Get tree file</h4>
+<p><img alt="52_plants_pro" src="../img/52_plants_pro.png" /></p>
+<h4 id="4use-iview-annotating-tree_2">4.Use iview annotating tree</h4>
+<ul>
+<li>Change label names use <code>--labels</code></li>
+</ul>
+<pre><code>$ physpe iview -i 52plantsnames.txt --labels
+Change abbreviation names to full names complete
+change labels file was save in iview/labels.txt
+
+$ cd iview
+
+$ cat labels.txt 
+LABELS
+SEPARATOR TAB
+DATA
+aly     Arabidopsis lyrata (lyrate rockcress)
+ath     Arabidopsis thaliana (thale cress)
+atr     Amborella trichopoda
+bdi     Brachypodium distachyon
+bpg     Bathycoccus prasinos
+brp     Brassica rapa (field mustard)
+bvg     Beta vulgaris (sugar beet)
+cam     Cicer arietinum (chickpea)
+ccp     Chondrus crispus (carragheen)
+cic     Citrus clementina (mandarin orange)
+cit     Citrus sinensis (Valencia orange)
+cme     Cyanidioschyzon merolae
+cmo     Cucumis melo (muskmelon)
+crb     Capsella rubella
+cre     Chlamydomonas reinhardtii
+csl     Coccomyxa subellipsoidea
+csv     Cucumis sativus (cucumber)
+cvr     Chlorella variabilis
+
+.....
+</code></pre>
+
+<ul>
+<li>Tree view in iTol</li>
+</ul>
+<p><img alt="52_plants_pro_full_name" src="../img/52_plants_pro_full_name.png" /></p>
+<ul>
+<li>Color range by phylum</li>
+</ul>
+<pre><code>$ physpe iview -i 52plantsnames.txt -o iview --range -a phylum
+Color range by phylum was complete.
+Color range annotation was save in iview/range_color_by_phylum.txt
+
+$ cd iview
+
+$ cat range_color_by_phylum.txt 
+TREE_COLORS
+SEPARATOR TAB
+DATA
+aly     range   #DF73CB Plants
+ath     range   #DF73CB Plants
+atr     range   #DF73CB Plants
+bdi     range   #DF73CB Plants
+bpg     range   #DF73CB Plants
+brp     range   #DF73CB Plants
+bvg     range   #DF73CB Plants
+cam     range   #DF73CB Plants
+ccp     range   #DF73CB Plants
+cic     range   #DF73CB Plants
+cit     range   #DF73CB Plants
+cme     range   #DF73CB Plants
+cmo     range   #DF73CB Plants
+crb     range   #DF73CB Plants
+cre     range   #DF73CB Plants
+csl     range   #DF73CB Plants
+csv     range   #DF73CB Plants
+cvr     range   #DF73CB Plants
+egr     range   #DF73CB Plants
+.....
+</code></pre>
+
+<ul>
+<li>Tree view in iTol</li>
+</ul>
+<p><img alt="52_plants_pro_full_name_color" src="../img/52_plants_pro_full_name_color.png" /></p></div>
             
         </div>
 
