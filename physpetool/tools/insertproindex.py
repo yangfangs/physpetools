@@ -120,3 +120,9 @@ if __name__ == '__main__':
     print "\n"
     print "the execute time is:"
     print(during)
+
+
+
+# select * from keggproindex where id =148
+# update keggproindex set K02987 = 'obr:102702159' where id =148
+# commit
