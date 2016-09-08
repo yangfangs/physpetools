@@ -138,6 +138,8 @@
         
             <li><a href="#auto-build-a-plant-tree">Auto build a plant tree</a></li>
         
+            <li><a href="#extend-auto-build-tree-with-a-new-organism">Extend auto build tree with a new organism</a></li>
+        
     
     </ul>
 </div></div>
@@ -597,7 +599,83 @@ egr     range   #DF73CB Plants
 <ul>
 <li>Tree view in iTol</li>
 </ul>
-<p><img alt="52_plants_pro_full_name_color" src="../img/52_plants_pro_full_name_color.png" /></p></div>
+<p><img alt="52_plants_pro_full_name_color" src="../img/52_plants_pro_full_name_color.png" /></p>
+<h2 id="extend-auto-build-tree-with-a-new-organism">Extend auto build tree with a new organism</h2>
+<p>Some time we want to extend tree with a new organisms, use physpe user can easy do it.</p>
+<h3 id="extend-tree-by-16s-ssu-rrna-method">Extend tree by 16s SSU rRNA method</h3>
+<p>Here we want extend tree of life with a new organism <code>Lokiarchaeum sp. GC14_75 (loki)</code>.</p>
+<h4 id="1prepare-new-organism-16s-rrna-sequence">1.Prepare new organism 16s rRNA sequence</h4>
+<p>When use 16s rRNA way to extend a new organism user need prepare the new organism 16s rRNA sequence, Here we prepare the new organism <code>Lokiarchaeum sp. GC14_75 (loki)</code>
+16s rRNA sequence save with FASTA format. example download [extend_rna_olki.fasta][5]</p>
+<pre><code>$ cat extend_rna_olki.fasta
+&gt;olki
+GAGAUGGGUACUGAGACAACGACCCAGGCCUUACGAGGCGCAGCAGGCGCGAAACCUCCGCAAUACACGAAAGUGUGACG
+GGGUUACCCAAAGUGUUCAAUUAUGAACUGUGGUAGGUGAGUAAUGUUCCCUACUAGAAAGGAGAGGGCAAGGCUGGUGC
+CAGCCGCCGCGGUAAAACCAGCUCUUCAAGUGGUCGGGAUAAUUAUUGGGCUUAAAGUGUCCGUAGCCGGUUUAGUAAGU
+UCCUGGUAAAAUCGGGUAGCUUAACUAUCUGUAUGCUAGGAAUACUGCUAUACUAGAGGACGGGAGAGGUCUGAGGUACU
+ACAGGGGUAGGGGUGAAAUCUUAUAAUCCUUGUAGGACCACCAGUGGCGAAGGCGUCAGACUGGAACGUGCCUGACGGUG
+AGGGACGAAAGCCAGGGGAGCGAACCGGAUUAGAUACCCGGGUAGUCCUGGCCGUAAACGAUGCAUACUAGGUGAUGGCA
+UGGCCAUGAGCCAUGUCAGUGCCGUAGGGAAACCGUUAAGUGUGCCGCCUGGGAAGUACGGUCGCAAGGCUAAAACUUAA
+AGGAAUUGGCGGGGGAGCACCACAAGGGGUGAAGCCUGCGGUUCAAUUGGACUCAACGCCGGGAAACUUACCAGGGGAGA
+CAGCAGAAUGAUGGUCAGGUUGACGACCUUACCUGACAAGCUGAGAGGAGGUGCAUGGCCGUCGCCAGUUCGUGCUGUGA
+GGUAUCCUGUUAAGUCAGGCAACGAACGAGAUCCGCACCUUUAUUUGCCAGCAAGAAGUCACGACUUCGUUGGGAACACU
+AAAGGGACCGCCGUCGAUAAGACGGAGGAAGGAGCGGGCAAAGGCAGGUCAGUAUGCCCCGAAACCCCUGGGCUACACGC
+GGGCUGCAAUGGUAUGAACAAUGGGCUGUAACUCCGAAAGGAGAAACCAAUCCCGAAAUCAUAUCUCAGUGGGAAUUGUC
+GGCUGUAACCCGCCGACAUGAACGUGGAAUCCCUAGUAAUCGUGUGUCAUCAUCGCACGGUGAAUACGUCUCUGCUCCUU
+GCACACACCGCCCGUCGCUCCAUCCGAGUGUGCUAAAAAUGAGGUAUGGUCAGUCUGGUCGUAUCGAAUUUCUAGUAUGC
+GAGGGGGGAGAAGUCGUAACAAGGUAGCCGUAGGGGAACCUGCGGCUGGAUCACCUCCU
+
+</code></pre>
+
+<h4 id="2reconstruct-phylogenetic-tree-by-16s-ssu-rrna-extend-with-a-new-organism">2.Reconstruct phylogenetic tree by 16s SSU rRNA extend with a new organism</h4>
+<p>Reconstruct phylogenetic tree by 16s SSU rRNA method, you should use <code>--esrna</code> to specify the method and use <code>-e</code> parameter specify
+the extend organism 16s rRNA sequence file.</p>
+<pre><code>$ physpe autobuild -i 191speciesnames.txt -o extend_rna -e extend_rna_olki.fasta --esrna -t 6
+Loading organisms names success.....
+
+The result are store in:extend_rna
+
+Now loading data and constructing species phylogenetic tree......
+2016-09-08 14:49:15,423 Checking organisms INFO: The organism: neq
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: ape
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: tac
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: mmp
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: gla
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: tps
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: cho
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: ddi
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: spo
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: aga
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: tru
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: mpu
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: lin
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: ban
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: bce
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: ljo
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: san
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: spg
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: ges
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: lis
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: sco
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: cdi
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: mle
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: wsu
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: rpr
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: bpe
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: bpa
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: ppr
+2016-09-08 14:49:15,425 Checking organisms WARNING: There organisms can't match in SILVA database so removed and reconstruct phylogenetic tree
+2016-09-08 14:49:15,425 16s DB INFO: Read organisms names success
+2016-09-08 14:49:15,499 16s DB INFO: Retrieve organism 'pai' 16s SSU RNA sequences data success
+2016-09-08 14:49:15,515 16s DB INFO: Retrieve organism 'sto' 16s SSU RNA sequences data success
+2016-09-08 14:49:15,532 16s DB INFO: Retrieve organism 'ssoa' 16s SSU RNA sequences data success
+2016-09-08 14:49:15,559 16s DB INFO: Retrieve organism 'tvo' 16s SSU RNA sequences data success
+2016-09-08 14:49:15,577 16s DB INFO: Retrieve organism 'afu' 16s SSU RNA sequences data success
+.....
+</code></pre>
+
+<h4 id="view-tree-by-itol">View tree by iTol</h4>
+<p><img alt="extend_rna" src="../img/extend_rna.png" /></p></div>
             
         </div>
 
