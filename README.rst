@@ -78,7 +78,7 @@ To upgrade to latest version:
 
 2. Download Physpe released version form PypI:
 
-- [Download](https://pypi.python.org/pypi/physpe/) latest released version
+- `Download <https://pypi.python.org/pypi/physpe/>`_ latest released version
 
 - local installation:
 
