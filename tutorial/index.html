@@ -138,7 +138,7 @@
         
             <li><a href="#auto-build-a-plant-tree">Auto build a plant tree</a></li>
         
-            <li><a href="#extend-auto-build-tree-with-a-new-organism">Extend auto build tree with a new organism</a></li>
+            <li><a href="#extend-tree-with-a-new-organism">Extend tree with a new organism</a></li>
         
     
     </ul>
@@ -600,15 +600,19 @@ egr     range   #DF73CB Plants
 <li>Tree view in iTol</li>
 </ul>
 <p><img alt="52_plants_pro_full_name_color" src="../img/52_plants_pro_full_name_color.png" /></p>
-<h2 id="extend-auto-build-tree-with-a-new-organism">Extend auto build tree with a new organism</h2>
+<h2 id="extend-tree-with-a-new-organism">Extend tree with a new organism</h2>
 <p>Some time we want to extend tree with a new organisms, use physpe user can easy do it.</p>
 <h3 id="extend-tree-by-16s-ssu-rrna-method">Extend tree by 16s SSU rRNA method</h3>
+<ul>
+<li><strong>Concept</strong></li>
+</ul>
+<p><img alt="physpe_concept_erna" src="../img/physpe_concept_erna.png" /></p>
 <p>Here we want extend tree of life with a new organism <code>Lokiarchaeum sp. GC14_75 (loki)</code>.</p>
 <h4 id="1prepare-new-organism-16s-rrna-sequence">1.Prepare new organism 16s rRNA sequence</h4>
 <p>When use 16s rRNA way to extend a new organism user need prepare the new organism 16s rRNA sequence, Here we prepare the new organism <code>Lokiarchaeum sp. GC14_75 (loki)</code>
-16s rRNA sequence save with FASTA format. example download <a href="../example/extend_rna_olki.fasta">extend_rna_olki.fasta</a></p>
+16s rRNA sequence save with FASTA format. example download <a href="../example/extend_rna_loki.fasta">extend_rna_olki.fasta</a></p>
 <pre><code>$ cat extend_rna_olki.fasta
-&gt;olki
+&gt;loki
 GAGAUGGGUACUGAGACAACGACCCAGGCCUUACGAGGCGCAGCAGGCGCGAAACCUCCGCAAUACACGAAAGUGUGACG
 GGGUUACCCAAAGUGUUCAAUUAUGAACUGUGGUAGGUGAGUAAUGUUCCCUACUAGAAAGGAGAGGGCAAGGCUGGUGC
 CAGCCGCCGCGGUAAAACCAGCUCUUCAAGUGGUCGGGAUAAUUAUUGGGCUUAAAGUGUCCGUAGCCGGUUUAGUAAGU
@@ -630,7 +634,7 @@ GAGGGGGGAGAAGUCGUAACAAGGUAGCCGUAGGGGAACCUGCGGCUGGAUCACCUCCU
 <h4 id="2reconstruct-phylogenetic-tree-by-16s-ssu-rrna-extend-with-a-new-organism">2.Reconstruct phylogenetic tree by 16s SSU rRNA extend with a new organism</h4>
 <p>Reconstruct phylogenetic tree by 16s SSU rRNA method, you should use <code>--esrna</code> to specify the method and use <code>-e</code> parameter specify
 the extend organism 16s rRNA sequence file.</p>
-<pre><code>$ physpe autobuild -i 191speciesnames.txt -o extend_rna -e extend_rna_olki.fasta --esrna -t 6
+<pre><code>$ physpe autobuild -i 191speciesnames.txt -o extend_rna -e extend_rna_loki.fasta --esrna -t 6
 Loading organisms names success.....
 
 The result are store in:extend_rna
@@ -675,7 +679,78 @@ Now loading data and constructing species phylogenetic tree......
 </code></pre>
 
 <h4 id="3view-tree-by-itol">3.View tree by iTol</h4>
-<p><img alt="extend_rna" src="../img/extend_rna.png" /></p></div>
+<p><img alt="extend_rna" src="../img/extend_rna.png" /></p>
+<h3 id="extend-tree-by-highly-conserved-protein-hcp-method">Extend tree by highly conserved protein (hcp) method</h3>
+<ul>
+<li><strong>Concept</strong></li>
+</ul>
+<p><img alt="physpe_concept_ehcp" src="../img/physpe_concept_ehcp.png" /></p>
+<h4 id="1check-prepare-proteins">1.Check prepare proteins</h4>
+<p>When use highly conserved protein method reconstruct phylogenetic tree with new organism, user should use <code>check</code> method to check what
+highly conserved protein will be prepared.</p>
+<pre><code>$ physpe check -i 191speciesnames.txt --ehcp
+'Ribosomal protein L1' ----------------------------------&gt; p1.fasta
+
+'Leucyl-tRNA synthetase' ----------------------------------&gt; p2.fasta
+
+'Ribosomal protein L14' ----------------------------------&gt; p3.fasta
+
+'Ribosomal protein L5' ----------------------------------&gt; p4.fasta
+
+'Ribosomal protein S7' ----------------------------------&gt; p5.fasta
+
+'Ribosomal protein S8' ----------------------------------&gt; p6.fasta
+
+'Arginyl-tRNA synthetase' ----------------------------------&gt; p7.fasta
+
+Check extend highly conserved protein is completed.
+
+Check result is store in /check/physpe_echp_extend.txt
+......
+</code></pre>
+
+<h4 id="2-prepare-highly-conserved-protein">2. Prepare highly conserved protein</h4>
+<p>After use check we should prepare seven highly conserved protein store this highly conserved protein to p1 ~ p7 FASTA format files.
+The highly protein protein names are know with <code>check</code> command. Here we prepare p1 ~ p7 highly conserved proteins to <code>Lokiarchaeum sp. GC14_75 (loki)</code>.
+Download <a href="../example/highly_conserved_protein_loki.fasta">highly_conserved_protein_loki</a></p>
+<pre><code>$ cd extend_pro_loki
+$ ls
+p1.fasta  p2.fasta  p3.fasta  p4.fasta  p5.fasta  p6.fasta  p7.fasta
+
+$ cat p1.fasta 
+&gt;loki
+MKVDDNLLKQSLNAAIDFSVRKKEGFKDRVRKFDETIDLIINIKDVNLNDPKNRIDKEII
+LTNEIVEEEKLNICVIASGEILLEAKKAGVETLDRDALIKLNNEEKKHKKKFAKKYEFFI
+VEDKMMRDVARYLARFLGPLGKMPKPFPTGYGIISSPGDLRTAVERYKKVIRIQMKKQPI
+IFAKIGKKSMEIDRLFDNMKTVIDFIADQMPHKFNNFKSMYLKSSMGKPIKVTEEFLKSL
+EV
+
+</code></pre>
+
+<h4 id="3reconstruct-phylogenetic-tree-by-highly-conserved-protein-extend-with-a-new-organism">3.Reconstruct phylogenetic tree by highly conserved protein extend with a new organism</h4>
+<pre><code>$ physpe autobuild -i 191speciesnames.txt -o extend_pro_loki -e highly_consrved_protein_loki --ehcp -t 6
+Loading organisms names success.....
+
+The result are store in:extend_pro_loki
+
+Now loading data and constructing species phylogenetic tree......
+2016-09-08 15:49:46,391 Checking organisms INFO: The organism: ges
+2016-09-08 15:49:46,392 Checking organisms WARNING: There organisms can't match in KEGG database so removed and reconstruct phylogenetic tree
+2016-09-08 15:49:46,392 kegg DB INFO: Read organisms names success
+2016-09-08 15:50:20,604 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L1' success and store in p1.fasta file
+2016-09-08 15:50:57,464 kegg DB INFO: Retrieve highly conserved protein 'Leucyl-tRNA synthetase' success and store in p2.fasta file
+2016-09-08 15:51:27,257 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L14' success and store in p3.fasta file
+2016-09-08 15:51:55,441 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L5' success and store in p4.fasta file
+2016-09-08 15:52:28,429 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein S7' success and store in p5.fasta file
+2016-09-08 15:52:59,551 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein S8' success and store in p6.fasta file
+2016-09-08 15:53:31,157 kegg DB INFO: Retrieve highly conserved protein 'Arginyl-tRNA synthetase' success and store in p7.fasta file
+2016-09-08 15:53:31,158 kegg DB INFO: retrieve from Kegg DB 7 highly conserved proteins
+......
+
+</code></pre>
+
+<h4 id="4view-tree-by-itol">4.View tree by iTol</h4>
+<p><img alt="extend_pro" src="../img/extend_pro.png" /></p></div>
             
         </div>
 
