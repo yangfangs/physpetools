@@ -81,7 +81,7 @@ starting run reconstruct tree
     out_put = os.path.join(pwd, args.outdata)
     if args.extenddata:
         if os.path.isfile(args.extenddata):
-            args_exted = args.exteddate
+            args_exted = args.extenddata
         elif os.path.isdir(args.extenddata):
             args_exted = os.path.join(pwd, args.extenddata)
     else:
