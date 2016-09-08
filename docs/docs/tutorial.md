@@ -600,10 +600,14 @@ Now loading data and constructing species phylogenetic tree......
 
 
 
-#### View tree by iTol
+#### 3.View tree by iTol
 
 
 ![extend_rna](img/extend_rna.png)
+
+
+
+
 
 
 
@@ -617,3 +621,4 @@ Now loading data and constructing species phylogenetic tree......
 [2]: http://www.genome.jp/kegg/catalog/org_list.html
 [3]: http://rest.kegg.jp/list/organism
 [4]: example/52plantsnames.txt
+[5]: example/extend_rna_olki.fasta
