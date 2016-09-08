@@ -548,6 +548,62 @@ GAGGGGGGAGAAGUCGUAACAAGGUAGCCGUAGGGGAACCUGCGGCUGGAUCACCUCCU
 
 #### 2.Reconstruct phylogenetic tree by 16s SSU rRNA extend with a new organism
 
+Reconstruct phylogenetic tree by 16s SSU rRNA method, you should use `--esrna` to specify the method and use `-e` parameter specify
+the extend organism 16s rRNA sequence file.
+
+
+
+```
+$ physpe autobuild -i 191speciesnames.txt -o extend_rna -e extend_rna_olki.fasta --esrna -t 6
+Loading organisms names success.....
+
+The result are store in:extend_rna
+
+Now loading data and constructing species phylogenetic tree......
+2016-09-08 14:49:15,423 Checking organisms INFO: The organism: neq
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: ape
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: tac
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: mmp
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: gla
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: tps
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: cho
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: ddi
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: spo
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: aga
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: tru
+2016-09-08 14:49:15,424 Checking organisms INFO: The organism: mpu
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: lin
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: ban
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: bce
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: ljo
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: san
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: spg
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: ges
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: lis
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: sco
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: cdi
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: mle
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: wsu
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: rpr
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: bpe
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: bpa
+2016-09-08 14:49:15,425 Checking organisms INFO: The organism: ppr
+2016-09-08 14:49:15,425 Checking organisms WARNING: There organisms can't match in SILVA database so removed and reconstruct phylogenetic tree
+2016-09-08 14:49:15,425 16s DB INFO: Read organisms names success
+2016-09-08 14:49:15,499 16s DB INFO: Retrieve organism 'pai' 16s SSU RNA sequences data success
+2016-09-08 14:49:15,515 16s DB INFO: Retrieve organism 'sto' 16s SSU RNA sequences data success
+2016-09-08 14:49:15,532 16s DB INFO: Retrieve organism 'ssoa' 16s SSU RNA sequences data success
+2016-09-08 14:49:15,559 16s DB INFO: Retrieve organism 'tvo' 16s SSU RNA sequences data success
+2016-09-08 14:49:15,577 16s DB INFO: Retrieve organism 'afu' 16s SSU RNA sequences data success
+.....
+```
+
+
+
+#### View tree by iTol
+
+
+![extend_rna](img/extend_rna.png)
 
 
 
