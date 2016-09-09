@@ -1,5 +1,4 @@
 import os
-
 from physpetool.view.annotatingtree import colorRange
 from physpetool.view.changelabels import annotatingLabels
 
