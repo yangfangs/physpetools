@@ -1,3 +1,25 @@
+# ########################## Copyrights and License ############################
+#                                                                              #
+# Copyright 2016 Yang Fang <yangfangscu@gmail.com>                             #
+#                                                                              #
+# This file is part of Physpe.                                                 #
+# https://xiaofeiyangyang.github.io/physpetools/                               #
+#                                                                              #
+# Physpe is free software: you can redistribute it and/or modify it under      #
+# the terms of the GNU Lesser General Public License as published by the Free  #
+# Software Foundation, either version 3 of the License, or (at your option)    #
+# any later version.                                                           #
+#                                                                              #
+# Physpe is distributed in the hope that it will be useful, but WITHOUT ANY    #
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS    #
+# FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more #
+# details.                                                                     #
+#                                                                              #
+# You should have received a copy of the GNU Lesser General Public License     #
+# along with Physpe. If not, see <http://www.gnu.org/licenses/>.               #
+#                                                                              #
+# ##############################################################################
+
 import argparse
 import sys
 
@@ -11,8 +33,8 @@ from physpetool.version import version
 
 physep_version = version
 """
-the main module as enter point and contain a main() function to invoke other
-script same as pipeline.
+The main module as enter point and contain a main() function to invoke other
+scripts as pipeline.
 """
 
 APP_DESC = (
@@ -21,7 +43,6 @@ APP_DESC = (
                       Physpe (%s) - Reconstruct Phylogenetic Tree
 
           Citation: null
-
 
           --------------------------------------------------------------------------------
           """ % (physep_version))
@@ -67,9 +88,10 @@ def start(input):
     check.start_args(physpe_check)
 
     if len(input) == 1:
+        print(APP_DESC)
         parser.print_usage()
-        print ('Please use program option for details')
-        print ('Example: \nphyspe autobuild -h')
+        print('Please use program option for details')
+        print('Example: \n$ physpe autobuild -h')
         return
     args = parser.parse_args(input[1:])
     # call subparser
