@@ -1,19 +1,34 @@
+# ########################## Copyrights and License ############################
+#                                                                              #
+# Copyright 2016 Yang Fang <yangfangscu@gmail.com>                             #
+#                                                                              #
+# This file is part of Physpe.                                                 #
+# https://xiaofeiyangyang.github.io/physpetools/                               #
+#                                                                              #
+# Physpe is free software: you can redistribute it and/or modify it under      #
+# the terms of the GNU Lesser General Public License as published by the Free  #
+# Software Foundation, either version 3 of the License, or (at your option)    #
+# any later version.                                                           #
+#                                                                              #
+# Physpe is distributed in the hope that it will be useful, but WITHOUT ANY    #
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS    #
+# FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more #
+# details.                                                                     #
+#                                                                              #
+# You should have received a copy of the GNU Lesser General Public License     #
+# along with Physpe. If not, see <http://www.gnu.org/licenses/>.               #
+#                                                                              #
+# ##############################################################################
+"""
+function to call RAxML construct tree
+"""
+
 import os
 import subprocess
-
 from physpetool.phylotree.log import getLogging
 from physpetool.softwares.path import getlocalpath
 
 logdoraxml = getLogging('RAxML')
-"""
-function to call RAxML construct tree
-
-"""
-
-
-# raxmlHPC-PTHREADS-AVX -f a -T 6 -w /home/yangfang/test_raxml/test3
-# -m PROTGAMMAJTTX -o aoe -p 12345 -x 12345 -#autoMRE
-# -s /home/yangfang/test_raxml/protein_alignment.fasta-gb1.phy -n T1
 
 
 def doraxml(inputfile, outputfile, raxmlpara, thread):
@@ -36,6 +51,7 @@ call RAxML method to construct species tree
     if not os.path.exists(outputfile):
         os.mkdir(outputfile)
     strs = raxmlpath + "/raxmlHPC-PTHREADS-AVX " + "-T " + threadtostr + " " + raxmlpararet
+    # cmd command
     cmd = strs + " -s " + inputfile + " -w " + outputfile
     subprocess.call(cmd, shell=True)
     logdoraxml.info("species phylogenetic constructed by RAxML was completed")

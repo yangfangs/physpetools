@@ -1,8 +1,32 @@
+# ########################## Copyrights and License ############################
+#                                                                              #
+# Copyright 2016 Yang Fang <yangfangscu@gmail.com>                             #
+#                                                                              #
+# This file is part of Physpe.                                                 #
+# https://xiaofeiyangyang.github.io/physpetools/                               #
+#                                                                              #
+# Physpe is free software: you can redistribute it and/or modify it under      #
+# the terms of the GNU Lesser General Public License as published by the Free  #
+# Software Foundation, either version 3 of the License, or (at your option)    #
+# any later version.                                                           #
+#                                                                              #
+# Physpe is distributed in the hope that it will be useful, but WITHOUT ANY    #
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS    #
+# FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more #
+# details.                                                                     #
+#                                                                              #
+# You should have received a copy of the GNU Lesser General Public License     #
+# along with Physpe. If not, see <http://www.gnu.org/licenses/>.               #
+#                                                                              #
+# ##############################################################################
+
+"""
+The module retrieve and down 16s SSU rRNA from SILVA Database
+"""
+
 import ftplib
 import os
-
 import time
-
 from physpetool.phylotree.log import getLogging
 
 logretrieve16srna = getLogging('16s DB')
@@ -20,7 +44,7 @@ retrieve 16s rna form bioinfor.scu.edu.cn
     # for line in spenamelist:
     #     st = line.strip()
     #     spelist.append(st)
-    spelist =spenamelist
+    spelist = spenamelist
     logretrieve16srna.info('Read organisms names success')
     # makdir tmep directory
     timeformat = '%Y%m%d%H%M%S'

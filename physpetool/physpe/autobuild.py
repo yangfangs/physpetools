@@ -1,6 +1,30 @@
-import os
-import subprocess
-import sys
+# ########################## Copyrights and License ############################
+#                                                                              #
+# Copyright 2016 Yang Fang <yangfangscu@gmail.com>                             #
+#                                                                              #
+# This file is part of Physpe.                                                 #
+# https://xiaofeiyangyang.github.io/physpetools/                               #
+#                                                                              #
+# Physpe is free software: you can redistribute it and/or modify it under      #
+# the terms of the GNU Lesser General Public License as published by the Free  #
+# Software Foundation, either version 3 of the License, or (at your option)    #
+# any later version.                                                           #
+#                                                                              #
+# Physpe is distributed in the hope that it will be useful, but WITHOUT ANY    #
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS    #
+# FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more #
+# details.                                                                     #
+#                                                                              #
+# You should have received a copy of the GNU Lesser General Public License     #
+# along with Physpe. If not, see <http://www.gnu.org/licenses/>.               #
+#                                                                              #
+# ##############################################################################
+
+"""
+The main module as enter point and invoke other
+script as pipeline.
+"""
+
 
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.dogblocks import dogblocks
@@ -10,14 +34,11 @@ from physpetool.convert.concatenate import cocat_path
 from physpetool.phylotree.log import getLogging, setlogdir
 from physpetool.phylotree.retrieve16srna import retrieve16srna
 from physpetool.phylotree.retrieveprotein import doretrieve
-import argparse
-
 from physpetool.utils.checkinputfile import checkKeggOrganism, checkSilvaOrganism, checkFile
+import argparse
+import os
 
-"""
-the main module as enter point and contain a main() function to invoke other
-script same as pipeline.
-"""
+
 
 APP_DESC = "reconstruct"
 

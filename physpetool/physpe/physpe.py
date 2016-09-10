@@ -20,8 +20,10 @@
 #                                                                              #
 # ##############################################################################
 
-import argparse
-import sys
+"""
+The main module as enter point and contain a main() function to invoke other
+modules as pipeline.
+"""
 
 from physpetool.physpe import autobuild
 from physpetool.physpe import check
@@ -30,12 +32,11 @@ from physpetool.physpe import build
 from physpetool.physpe import iview
 from physpetool.version import version_infor
 from physpetool.version import version
+import argparse
+import sys
 
+# physpe version
 physep_version = version
-"""
-The main module as enter point and contain a main() function to invoke other
-scripts as pipeline.
-"""
 
 APP_DESC = (
     """
@@ -100,4 +101,4 @@ def start(input):
 
 if __name__ == '__main__':
     main()
-    # start(['physpe','iview','-i','/home/yangfang/physpetools_data/TOF/testspenames.txt', '-r','phylum'])
+    # start([......])
