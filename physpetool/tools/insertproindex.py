@@ -166,7 +166,7 @@ if __name__ == '__main__':
 
 
 
-
+# update id =148
 # select * from keggproindex where id =148
 # update keggproindex set K02987 = 'obr:102702159' where id =148
 # commit
