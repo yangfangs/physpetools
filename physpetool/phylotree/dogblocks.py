@@ -21,8 +21,8 @@
 # ##############################################################################
 
 """
-
 Gblocks module: do gblocks for alignment sequences.
+
 """
 import os
 import subprocess
