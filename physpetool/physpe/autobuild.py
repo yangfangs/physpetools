@@ -24,7 +24,7 @@
 The main module as enter point and invoke other
 script as pipeline.
 """
-
+from physpetool.phylotree.doclustalw import doclustalw_file
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.dogblocks import dogblocks
 from physpetool.phylotree.doraxml import doraxml
@@ -76,10 +76,10 @@ Argument parse
     autobuild_args.add_argument('--esrna', action='store_true', dest='essurna',
                                 default=False,
                                 help="The esrna (extend 16s SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.")
-    advance_args.add_argument('--muscle', action='store', dest='muscle',
-                              default=musclepara, help='Alignment by muscle.')
+    advance_args.add_argument('--muscle', action='store_true', dest='muscle',
+                              default=True, help='Alignment by muscle.')
     advance_args.add_argument('--muscle_p', action='store', dest='muscle_parameter',
-                              help='Set more detail muscle parameter.')
+                              default=musclepara, help='Set more detail muscle parameter.')
     advance_args.add_argument('--clustalw', action='store_true', dest='clustalw',
                               default=False, help='Alignment by clustalw.')
     advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
@@ -114,7 +114,8 @@ starting run reconstruct tree
     # reconstruct phylogenetic tree by highly conserved proteins
     if args.HCP:
         setlogdir(out_put)
-        starting_hcp(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread)
+        starting_hcp(in_put, out_put, args.muscle, args.muslce_parameter,args.clustalw,args.clustalw_parameter,
+                     args.gblocks, args.raxml, args.thread)
     # reconstruct phylogenetic tree by ssu RNA
     elif args.ssurna:
         setlogdir(out_put)
@@ -128,16 +129,19 @@ starting run reconstruct tree
         starting_esrna(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread, args_exted)
 
 
-def starting_hcp(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread):
+def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
+                 args_gblocks, args_raxml, args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
     hcp_input = checkKeggOrganism(in_put)
     out_retrieve = doretrieve(hcp_input, out_put)
-    out_alg = domuscle_file(out_retrieve, out_put, args_muscle)
+    if args_clustalw:
+        out_alg = doclustalw_file(out_retrieve, out_put,args_clustalw_p)
+    elif args_muscle:
+        out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p)
     out_concat = cocat_path(out_alg)
     out_gblock = dogblocks(out_concat, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
     doraxml(out_f2p, out_put, args_raxml, args_thread)
-
 
 def starting_srna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
