@@ -36,8 +36,11 @@ logdoclustalw = getLogging('clutalw2')
 
 
 def doclustalw(indata, outdata, clustalwpara):
-    clustalwpara = "-TYPE=DNA"
-    clustalwparas = clustalwpara.lstrip()
+    type = "-TYPE=DNA"
+    if clustalwpara is None:
+        clustalwparas = type
+    else:
+        clustalwparas = type + " " + clustalwpara.lstrip()
     clu_path = getlocalpath()
     out_path = os.path.dirname(outdata)
     doclu_subdir = str(timeformat('temp/hcp_alignment'))
@@ -45,15 +48,19 @@ def doclustalw(indata, outdata, clustalwpara):
     if not os.path.exists(clustalw_dir):
         os.makedirs(clustalw_dir)
     out_file = "-OUTFILE=" + os.path.join(clustalw_dir, indata)
-    cmd = clu_path + "/clustalw2 " + "-INFILE=" + indata + " -OUTPUT=FASTA -ALIGN " + out_file + " " + clustalwpara
+    cmd = clu_path + "/clustalw2 " + "-INFILE=" + indata + " -OUTPUT=FASTA -ALIGN " + out_file + " " + clustalwparas
     subprocess.call(cmd, shell=True)
     logdoclustalw.info("Multiple sequence alignment  by Clustalw2 was completed.")
     return clustalw_dir
 
 
 def doclustalw_file(indata_files, outdata, clustalwpara):
-    clustalwpara = "-TYPE=PROTEIN"
-    clustalwparas = clustalwpara.lstrip()
+    type = "-TYPE=PROTEIN"
+    if clustalwpara is None:
+        clustalwparas = type
+    else:
+        clustalwparas = type + " " + clustalwpara.lstrip()
+
     clu_path = getlocalpath()
     out_path = os.path.dirname(outdata)
     doclu_subdir = str(timeformat('temp/hcp_alignment'))
@@ -64,7 +71,7 @@ def doclustalw_file(indata_files, outdata, clustalwpara):
     for i in pro_name:
         each_pro = os.path.join(indata_files, i)
         out_file = "-OUTFILE=" + os.path.join(clustalw_dir, i)
-        cmd = clu_path + "/clustalw2 " + "-INFILE=" + each_pro + " -OUTPUT=FASTA -ALIGN " + out_file + " " + clustalwpara
+        cmd = clu_path + "/clustalw2 " + "-INFILE=" + each_pro + " -OUTPUT=FASTA -ALIGN " + out_file + " " + clustalwparas
         subprocess.call(cmd, shell=True)
     logdoclustalw.info("Multiple sequence alignment  by Clustalw2 was completed.")
     return clustalw_dir
@@ -74,4 +81,4 @@ if __name__ == '__main__':
     # doclustalw_file("/home/yangfang/physpetools_data/test_clustalw2/input",
     #                 "/home/yangfang/physpetools_data/test_clustalw2/test", "")
     doclustalw("/home/yangfang/physpetools_data/test_clustalw2/16srandata.fasta",
-               "/home/yangfang/physpetools_data/test_clustalw2/test",'')
+               "/home/yangfang/physpetools_data/test_clustalw2/test", '')

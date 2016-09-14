@@ -44,7 +44,7 @@ raxmlpara_dna = "-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1"
 musclepara = '-maxiters 100'
 gblockspara_pro = '-t=p -e=-gb1'
 gblockspara_dna = '-t=d -e=-gb1'
-clustalwpara = ''
+clustalwpara = None
 
 
 def start_args(input):
@@ -77,13 +77,14 @@ Argument parse
                                 default=False,
                                 help="The esrna (extend 16s SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.")
     advance_args.add_argument('--muscle', action='store_true', dest='muscle',
-                              default=True, help='Alignment by muscle.')
+                              default=True,
+                              help='Multiple sequence alignment by muscle. The default aligned software is Muscle.')
     advance_args.add_argument('--muscle_p', action='store', dest='muscle_parameter',
                               default=musclepara, help='Set more detail muscle parameter.')
     advance_args.add_argument('--clustalw', action='store_true', dest='clustalw',
-                              default=False, help='Alignment by clustalw.')
+                              default=False, help='multiple sequense alignment by clustalw2.')
     advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
-                              help='Set more detail clustalw parameter.')
+                              help='Set more detail clustalw2 parameter.')
     advance_args.add_argument('--gblocks', action='store', dest='gblocks',
                               default=gblockspara_pro, help='Use gblock.')
     advance_args.add_argument('--raxml', action='store', dest='raxml',
@@ -114,7 +115,7 @@ starting run reconstruct tree
     # reconstruct phylogenetic tree by highly conserved proteins
     if args.HCP:
         setlogdir(out_put)
-        starting_hcp(in_put, out_put, args.muscle, args.muslce_parameter,args.clustalw,args.clustalw_parameter,
+        starting_hcp(in_put, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
                      args.gblocks, args.raxml, args.thread)
     # reconstruct phylogenetic tree by ssu RNA
     elif args.ssurna:
@@ -135,13 +136,14 @@ def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, arg
     hcp_input = checkKeggOrganism(in_put)
     out_retrieve = doretrieve(hcp_input, out_put)
     if args_clustalw:
-        out_alg = doclustalw_file(out_retrieve, out_put,args_clustalw_p)
+        out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
     elif args_muscle:
         out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p)
     out_concat = cocat_path(out_alg)
     out_gblock = dogblocks(out_concat, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
     doraxml(out_f2p, out_put, args_raxml, args_thread)
+
 
 def starting_srna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
