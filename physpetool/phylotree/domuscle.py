@@ -95,5 +95,5 @@ call muscle software to do alignment
         each_pro = os.path.join(indata_files, i)
         cmd = mupath + "/muscle -in " + each_pro + " -out " + out_alg + " " + muscleparas
         subprocess.call(cmd, shell=True)
-    logdomuscle.info("Multiple sequence alignment by Muscle was completed")
+    logdomuscle.info("Multiple sequence alignment by Muscle was completed.")
     return muscle_dir
