@@ -25,7 +25,6 @@ The main module as enter point and invoke other
 script as pipeline.
 """
 
-
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.dogblocks import dogblocks
 from physpetool.phylotree.doraxml import doraxml
@@ -38,8 +37,6 @@ from physpetool.utils.checkinputfile import checkKeggOrganism, checkSilvaOrganis
 import argparse
 import os
 
-
-
 APP_DESC = "reconstruct"
 
 raxmlpara_pro = "-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1"
@@ -47,6 +44,7 @@ raxmlpara_dna = "-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1"
 musclepara = '-maxiters 100'
 gblockspara_pro = '-t=p -e=-gb1'
 gblockspara_dna = '-t=d -e=-gb1'
+clustalwpara = ''
 
 
 def start_args(input):
@@ -80,6 +78,12 @@ Argument parse
                                 help="The esrna (extend 16s SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.")
     advance_args.add_argument('--muscle', action='store', dest='muscle',
                               default=musclepara, help='Alignment by muscle.')
+    advance_args.add_argument('--muscle_p', action='store', dest='muscle_parameter',
+                              help='Set more detail muscle parameter.')
+    advance_args.add_argument('--clustalw', action='store_true', dest='clustalw',
+                              default=False, help='Alignment by clustalw.')
+    advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
+                              help='Set more detail clustalw parameter.')
     advance_args.add_argument('--gblocks', action='store', dest='gblocks',
                               default=gblockspara_pro, help='Use gblock.')
     advance_args.add_argument('--raxml', action='store', dest='raxml',
