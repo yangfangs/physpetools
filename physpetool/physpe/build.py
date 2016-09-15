@@ -81,8 +81,10 @@ Staring run build
 
     if args.HCP:
         setlogdir(out_put)
-        build_hcp(args_input, out_put, args.muscle, args.gblocks, args.raxml, args.thread)
+        build_hcp(args_input, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
+                  args.gblocks, args.raxml, args.thread)
     # reconstruct phylogenetic tree by ssu RNA
     elif args.ssurna:
         setlogdir(out_put)
-        build_srna(args_input, out_put, args.muscle, args.gblocks, args.raxml, args.thread)
+        build_srna(args_input, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
+                   args.gblocks, args.raxml, args.thread)

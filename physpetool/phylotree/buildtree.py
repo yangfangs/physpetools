@@ -27,6 +27,7 @@ or 16s SSU rRNA.
 
 from physpetool.convert.concatenate import cocat_path
 from physpetool.convert.fasta2phy import fasta2phy
+from physpetool.phylotree.doclustalw import doclustalw_file, doclustalw
 from physpetool.phylotree.dogblocks import dogblocks
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.doraxml import doraxml
@@ -39,21 +40,31 @@ gblockspara_pro = '-t=p -e=-gb1'
 gblockspara_dna = '-t=d -e=-gb1'
 
 
-
-def build_hcp(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread):
+def build_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
+              args_gblocks, args_raxml, args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
     out_retrieve = in_put
-    out_alg = domuscle_file(out_retrieve, out_put, args_muscle)
+    # set default aligned by muscle if not specify clustalw
+    if args_clustalw:
+        out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
+    elif args_muscle:
+        out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p)
     out_concat = cocat_path(out_alg)
     out_gblock = dogblocks(out_concat, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
     doraxml(out_f2p, out_put, args_raxml, args_thread)
 
 
-def build_srna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread):
+def build_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
+               args_gblocks, args_raxml, args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
     out_retrieve = in_put
-    out_alg = domuscle(out_retrieve, out_put, args_muscle)
+    # set default aligned by muscle if not specify clustalw
+    if args_clustalw:
+        out_alg = doclustalw(out_retrieve, out_put, args_clustalw_p)
+    elif args_muscle:
+        out_alg = domuscle(out_retrieve, out_put, args_muscle_p)
+
     if args_gblocks == gblockspara_pro:
         args_gblocks = gblockspara_dna
     out_gblock = dogblocks(out_alg, args_gblocks)
