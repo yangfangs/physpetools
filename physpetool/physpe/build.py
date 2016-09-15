@@ -37,7 +37,7 @@ raxmlpara_dna = "-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1"
 musclepara = '-maxiters 100'
 gblockspara_pro = '-t=p -e=-gb1'
 gblockspara_dna = '-t=d -e=-gb1'
-
+clustalwpara = None
 
 def start_args(input):
     """
@@ -57,13 +57,19 @@ Arguments parse
                                 default=False, help='Reconstruct phylogenetic tree by highly conserved proteins.')
     build_args.add_argument('--srna', action='store_true', dest='ssurna',
                                 default=False, help='Reconstruct phylogenetic tree by 16s ssu ran.')
-    advance_args.add_argument('--muscle', action='store', dest='muscle',
-                              default=musclepara, help='Alignment by muscle.')
+    advance_args.add_argument('--muscle', action='store_true', dest='muscle',
+                              default=True,
+                              help='Multiple sequence alignment by muscle. The default aligned software is Muscle.')
+    advance_args.add_argument('--muscle_p', action='store', dest='muscle_parameter',
+                              default=musclepara, help='Set more detail muscle parameter.')
+    advance_args.add_argument('--clustalw', action='store_true', dest='clustalw',
+                              default=False, help='multiple sequense alignment by clustalw2.')
+    advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
+                              help='Set more detail clustalw2 parameter.')
     advance_args.add_argument('--gblocks', action='store', dest='gblocks',
                               default=gblockspara_pro, help='Use gblock.')
     advance_args.add_argument('--raxml', action='store', dest='raxml',
                               default=raxmlpara_pro, help='Build by raxml.')
-
 def starting(args):
     """
 Staring run build

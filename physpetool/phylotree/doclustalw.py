@@ -43,7 +43,7 @@ def doclustalw(indata, outdata, clustalwpara):
         clustalwparas = type + " " + clustalwpara.lstrip()
     clu_path = getlocalpath()
     out_path = os.path.dirname(outdata)
-    doclu_subdir = str(timeformat('temp/hcp_alignment'))
+    doclu_subdir = str(timeformat('temp/16srna_alignment'))
     clustalw_dir = os.path.join(out_path, doclu_subdir)
     if not os.path.exists(clustalw_dir):
         os.makedirs(clustalw_dir)
@@ -51,7 +51,8 @@ def doclustalw(indata, outdata, clustalwpara):
     cmd = clu_path + "/clustalw2 " + "-INFILE=" + indata + " -OUTPUT=FASTA -ALIGN " + out_file + " " + clustalwparas
     subprocess.call(cmd, shell=True)
     logdoclustalw.info("Multiple sequence alignment  by Clustalw2 was completed.")
-    return clustalw_dir
+    out_alg = os.path.join(clustalw_dir, indata)
+    return out_alg
 
 
 def doclustalw_file(indata_files, outdata, clustalwpara):
