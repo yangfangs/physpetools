@@ -112,19 +112,22 @@ starting run reconstruct tree
             args_exted = os.path.join(pwd, args.extenddata)
     else:
         pass
-    # reconstruct phylogenetic tree by highly conserved proteins
+    # Reconstruct phylogenetic tree by highly conserved proteins.
     if args.HCP:
         setlogdir(out_put)
         starting_hcp(in_put, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
                      args.gblocks, args.raxml, args.thread)
-    # reconstruct phylogenetic tree by ssu RNA
+    # Reconstruct phylogenetic tree by ssu RNA.
     elif args.ssurna:
         setlogdir(out_put)
         starting_srna(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread)
+
+    # Reconstruct phylogenetic tree by extend highly conserved proteins.
     elif args.EHCP:
         setlogdir(out_put)
         starting_ehcp(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread, args_exted)
 
+    # Reconstruct phylogenetic tree by extend ssu rna method.
     elif args.essurna:
         setlogdir(out_put)
         starting_esrna(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread, args_exted)
@@ -143,6 +146,7 @@ def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, arg
     out_gblock = dogblocks(out_concat, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
     doraxml(out_f2p, out_put, args_raxml, args_thread)
+
 
 
 def starting_srna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread):
