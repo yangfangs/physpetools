@@ -24,7 +24,7 @@
 The main module as enter point and invoke other
 script as pipeline.
 """
-from physpetool.phylotree.doclustalw import doclustalw_file
+from physpetool.phylotree.doclustalw import doclustalw_file, doclustalw
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.dogblocks import dogblocks
 from physpetool.phylotree.doraxml import doraxml
@@ -120,7 +120,8 @@ starting run reconstruct tree
     # Reconstruct phylogenetic tree by ssu RNA.
     elif args.ssurna:
         setlogdir(out_put)
-        starting_srna(in_put, out_put, args.muscle, args.gblocks, args.raxml, args.thread)
+        starting_srna(in_put, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
+                      args.gblocks, args.raxml, args.thread)
 
     # Reconstruct phylogenetic tree by extend highly conserved proteins.
     elif args.EHCP:
@@ -138,22 +139,29 @@ def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, arg
     '''reconstruct phylogenetic tree by hcp method'''
     hcp_input = checkKeggOrganism(in_put)
     out_retrieve = doretrieve(hcp_input, out_put)
+
+    # set default aligned by muscle if not specify clustalw
     if args_clustalw:
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
     elif args_muscle:
         out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p)
+
     out_concat = cocat_path(out_alg)
     out_gblock = dogblocks(out_concat, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
     doraxml(out_f2p, out_put, args_raxml, args_thread)
 
 
-
-def starting_srna(in_put, out_put, args_muscle, args_gblocks, args_raxml, args_thread):
+def starting_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
+                  args_gblocks, args_raxml, args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
     ssu_input = checkSilvaOrganism(in_put)
     out_retrieve = retrieve16srna(ssu_input, out_put)
-    out_alg = domuscle(out_retrieve, out_put, args_muscle)
+    # set default aligned by muscle if not specify clustalw
+    if args_clustalw:
+        out_alg = doclustalw(out_retrieve, out_put, args_clustalw_p)
+    elif args_muscle:
+        out_alg = domuscle(out_retrieve, out_put, args_muscle_p)
     if args_gblocks is gblockspara_pro:
         args_gblocks = gblockspara_dna
         out_gblock = dogblocks(out_alg, args_gblocks)
