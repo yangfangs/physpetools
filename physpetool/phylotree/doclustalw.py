@@ -36,6 +36,7 @@ logdoclustalw = getLogging('clutalw2')
 
 
 def doclustalw(indata, outdata, clustalwpara):
+    logdoclustalw.debug("clustalw input data:{0}".format(indata))
     type = "-TYPE=DNA"
     if clustalwpara is None:
         clustalwparas = type
