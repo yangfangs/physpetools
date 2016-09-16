@@ -25,6 +25,7 @@ The main module as enter point and invoke other
 script as pipeline.
 """
 from physpetool.phylotree.doclustalw import doclustalw_file, doclustalw
+from physpetool.phylotree.dofasttree import doFastTree
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.dogblocks import dogblocks
 from physpetool.phylotree.doraxml import doraxml
@@ -55,40 +56,55 @@ Argument parse
     autobuild_args = input.add_argument_group("AUTOBUILD OPTIONS")
     advance_args = input.add_argument_group("ADVANCE OPTIONS")
     autobuild_args.add_argument('-i', nargs='?', dest='spenames', type=argparse.FileType('r'),
-                                help='	Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.')
+                                help='	Input a txt file contain the a abbreviation species names are same with KEGG \
+                                species abbreviation.')
     autobuild_args.add_argument('-o', action='store', dest="outdata",
                                 default='Outdata',
-                                help="A directory include output data (reconstruct tree files). The default output data name is Outdata.")
+                                help="A directory include output data (reconstruct tree files). The default output data \
+                                name is Outdata.")
     autobuild_args.add_argument('-t', action='store', dest='thread',
                                 type=int, default=1,
-                                help="Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.")
+                                help="Specify the number of processing threads (CPUs) to use for Physpe to reconstruct \
+                                phylogenetic tree. The default is 1.")
     autobuild_args.add_argument('-e', action='store', dest="extenddata",
-                                help="The extended data should be FASTA format to extend phylogenetic tree by --ehcp or --esrna option.")
+                                help="The extended data should be FASTA format to extend phylogenetic tree by \
+                                     --ehcp or --esrna option.")
     autobuild_args.add_argument('--hcp', action='store_true', dest='HCP',
                                 default=False,
-                                help="The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.")
+                                help="The hcp (highly conserved protein) mode is use highly conserved proteins to \
+                                reconstruct phylogenetic tree. The default mode is hcp.")
     autobuild_args.add_argument('--ehcp', action='store_true', dest='EHCP',
                                 default=False,
-                                help="The ehcp (extend highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree.")
+                                help="The ehcp (extend highly conserved protein) mode is use highly conserved proteins \
+                                     and extend highly protein (user provide) to reconstruct phylogenetic tree.")
     autobuild_args.add_argument('--srna', action='store_true', dest='ssurna',
                                 default=False,
-                                help="The srna (16s SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.")
+                                help="The srna (16s SSU RNA) mode is use 16s SSU RNA data to \
+                                reconstruct phylogenetic tree.")
     autobuild_args.add_argument('--esrna', action='store_true', dest='essurna',
                                 default=False,
-                                help="The esrna (extend 16s SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.")
+                                help="The esrna (extend 16s SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA \
+                                (user provide) to reconstruct phylogenetic tree.")
     advance_args.add_argument('--muscle', action='store_true', dest='muscle',
                               default=True,
                               help='Multiple sequence alignment by muscle. The default aligned software is Muscle.')
     advance_args.add_argument('--muscle_p', action='store', dest='muscle_parameter',
-                              default=musclepara, help='Set more detail muscle parameter.')
+                              default=musclepara, help='Set more detail muscle parameters.')
     advance_args.add_argument('--clustalw', action='store_true', dest='clustalw',
                               default=False, help='multiple sequense alignment by clustalw2.')
     advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
-                              help='Set more detail clustalw2 parameter.')
+                              help='Set more detail clustalw2 parameters.')
     advance_args.add_argument('--gblocks', action='store', dest='gblocks',
                               default=gblockspara_pro, help='Use gblock.')
-    advance_args.add_argument('--raxml', action='store', dest='raxml',
-                              default=raxmlpara_pro, help='Build by raxml.')
+    advance_args.add_argument('--raxml', action='store_true', dest='raxml',
+                              default=True,
+                              help='Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.')
+    advance_args.add_argument('--raxml_p', action='store', dest='raxml_parameter',
+                              default=raxmlpara_pro, help='Set more detail RAxML parameters.')
+    advance_args.add_argument('--fasttree', action='store_true', dest='fasttree',
+                              default=False, help='Reconstruct phylogenetic tree by FastTree.')
+    advance_args.add_argument('--fasttree_p', action='store', dest='fasttree_parameter',
+                              default='', help='Set more detail RAxML parameters.')
 
 
 def starting(args):
@@ -116,7 +132,8 @@ starting run reconstruct tree
     if args.HCP:
         setlogdir(out_put)
         starting_hcp(in_put, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
-                     args.gblocks, args.raxml, args.thread)
+                     args.gblocks, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter,
+                     args.thread)
     # Reconstruct phylogenetic tree by ssu RNA.
     elif args.ssurna:
         setlogdir(out_put)
@@ -137,7 +154,7 @@ starting run reconstruct tree
 
 
 def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-                 args_gblocks, args_raxml, args_thread):
+                 args_gblocks, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
     hcp_input = checkKeggOrganism(in_put)
     out_retrieve = doretrieve(hcp_input, out_put)
@@ -151,7 +168,10 @@ def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, arg
     out_concat = cocat_path(out_alg)
     out_gblock = dogblocks(out_concat, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
-    doraxml(out_f2p, out_put, args_raxml, args_thread)
+    if args_fasttree:
+        doFastTree(out_f2p, out_put, args_fasttree_p, args_thread)
+    elif args_raxml:
+        doraxml(out_f2p, out_put, args_raxml_p, args_thread)
 
 
 def starting_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,

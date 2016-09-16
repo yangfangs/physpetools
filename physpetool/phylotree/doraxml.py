@@ -54,4 +54,4 @@ call RAxML method to construct species tree
     # cmd command
     cmd = strs + " -s " + inputfile + " -w " + outputfile
     subprocess.call(cmd, shell=True)
-    logdoraxml.info("species phylogenetic constructed by RAxML was completed")
+    logdoraxml.info("Phylogenetic species tree reconstruct by RAxML was completed")

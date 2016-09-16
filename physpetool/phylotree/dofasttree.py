@@ -22,4 +22,28 @@
 """
 function to call FastTree and FastTree reconstruct tree.
 """
+import os
 
+import subprocess
+
+from physpetool.phylotree.log import getLogging
+from physpetool.softwares.path import getlocalpath
+
+logdofasttree = getLogging('FastTree')
+
+
+def doFastTree(inputfile, outputfile, FastTreepara, thread):
+    FastTreePath = getlocalpath()
+    thread_to_str = str(thread)
+    out_tree_name = os.path.join(outputfile, "FastTree.tree")
+    if not os.path.exists(outputfile):
+        os.mkdir(outputfile)
+    if thread is '1':
+        cmd = FastTreePath + "/FastTree " + FastTreepara + inputfile + " >" + out_tree_name
+        subprocess.call(cmd, shell=True)
+    else:
+        cmd_thread = "export OMP_NUM_THREADS=" + thread_to_str
+        subprocess.call(cmd_thread, shell=True)
+        cmd = FastTreePath + "/FastTreeMP" + FastTreepara + inputfile + ">" + out_tree_name
+        subprocess.call(cmd, shell=True)
+    logdofasttree.info("Phylogenetic species tree reconstruct by RAxML was completed")
