@@ -134,11 +134,13 @@ starting run reconstruct tree
         starting_hcp(in_put, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
                      args.gblocks, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter,
                      args.thread)
+
     # Reconstruct phylogenetic tree by ssu RNA.
     elif args.ssurna:
         setlogdir(out_put)
         starting_srna(in_put, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
-                      args.gblocks, args.raxml, args.thread)
+                      args.gblocks, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter,
+                      args.thread)
 
     # Reconstruct phylogenetic tree by extend highly conserved proteins.
     elif args.EHCP:
@@ -166,6 +168,7 @@ def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, arg
         out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p)
 
     out_concat = cocat_path(out_alg)
+    # gblocks
     out_gblock = dogblocks(out_concat, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
     if args_fasttree:
@@ -175,7 +178,7 @@ def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, arg
 
 
 def starting_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-                  args_gblocks, args_raxml, args_thread):
+                  args_gblocks, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
     ssu_input = checkSilvaOrganism(in_put)
     out_retrieve = retrieve16srna(ssu_input, out_put)
@@ -184,13 +187,18 @@ def starting_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, ar
         out_alg = doclustalw(out_retrieve, out_put, args_clustalw_p)
     elif args_muscle:
         out_alg = domuscle(out_retrieve, out_put, args_muscle_p)
+    # gblocks
     if args_gblocks is gblockspara_pro:
         args_gblocks = gblockspara_dna
         out_gblock = dogblocks(out_alg, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
-    if args_raxml is raxmlpara_pro:
-        args_raxml = raxmlpara_dna
-        doraxml(out_f2p, out_put, args_raxml, args_thread)
+    # reconstruct tree
+    if args_fasttree:
+        doFastTree(out_f2p, out_put, args_fasttree_p, args_thread)
+    elif args_raxml:
+        if args_raxml_p is raxmlpara_pro:
+            args_raxml_p = raxmlpara_dna
+            doraxml(out_f2p, out_put, args_raxml_p, args_thread)
 
 
 def starting_ehcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
