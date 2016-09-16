@@ -39,7 +39,7 @@ def doFastTree(inputfile, outputfile, FastTreepara, thread):
     out_tree_name = os.path.join(outputfile, "FastTree.tree")
     if not os.path.exists(outputfile):
         os.mkdir(outputfile)
-    if thread is '1':
+    if thread_to_str is '1':
         cmd = FastTreePath + "/FastTree " + FastTreepara + input_fasta + " >" + out_tree_name
         print (cmd)
         subprocess.call(cmd, shell=True)
