@@ -46,14 +46,27 @@ def doclustalw(indata, outdata, clustalwpara):
     out_path = os.path.dirname(outdata)
     doclu_subdir = str(timeformat('temp/16srna_alignment'))
     clustalw_dir = os.path.join(out_path, doclu_subdir)
-    if not os.path.exists(clustalw_dir):
-        os.makedirs(clustalw_dir)
-    out_file = "-OUTFILE=" + os.path.join(clustalw_dir, indata)
-    cmd = clu_path + "/clustalw2 " + "-INFILE=" + indata + " -OUTPUT=FASTA -ALIGN " + out_file + " " + clustalwparas
-    subprocess.call(cmd, shell=True)
-    logdoclustalw.info("Multiple sequence alignment  by Clustalw2 was completed.")
-    out_alg = os.path.join(clustalw_dir, indata)
-    return out_alg
+    if os.path.isdir(indata):
+        pro_name = os.listdir(indata)
+        if not os.path.exists(clustalw_dir):
+            os.makedirs(clustalw_dir)
+        out_file = "-OUTFILE=" + os.path.join(clustalw_dir, pro_name[0])
+        infile = os.path.join(indata,pro_name[0])
+        cmd = clu_path + "/clustalw2 " + "-INFILE=" + infile + " -OUTPUT=FASTA -ALIGN " + out_file + " " + clustalwparas
+        subprocess.call(cmd, shell=True)
+        logdoclustalw.info("Multiple sequence alignment  by Clustalw2 was completed.")
+        out_alg = os.path.join(clustalw_dir, pro_name)
+        return out_alg
+    elif os.path.isfile(indata):
+        pro_name = indata
+        if not os.path.exists(clustalw_dir):
+            os.makedirs(clustalw_dir)
+        out_file = "-OUTFILE=" + os.path.join(clustalw_dir, pro_name)
+        cmd = clu_path + "/clustalw2 " + "-INFILE=" + pro_name + " -OUTPUT=FASTA -ALIGN " + out_file + " " + clustalwparas
+        subprocess.call(cmd, shell=True)
+        logdoclustalw.info("Multiple sequence alignment  by Clustalw2 was completed.")
+        out_alg = os.path.join(clustalw_dir, pro_name)
+        return out_alg
 
 
 def doclustalw_file(indata_files, outdata, clustalwpara):
