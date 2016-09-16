@@ -36,6 +36,12 @@ logdoclustalw = getLogging('clutalw2')
 
 
 def doclustalw(indata, outdata, clustalwpara):
+    """
+    Call clustalw software to do align
+    :param indata: a director contain a fasta format file or a fasta format file
+    :param outdata: the out is abs path with a file name
+    :return: outdata path
+    """
     logdoclustalw.debug("clustalw input data:{0}".format(indata))
     type = "-TYPE=DNA"
     if clustalwpara is None:
@@ -72,6 +78,12 @@ def doclustalw(indata, outdata, clustalwpara):
 
 
 def doclustalw_file(indata_files, outdata, clustalwpara):
+    """
+Call clustalw software to do align
+    :param indata_files: a directory contain more than one file
+    :param outdata: out file after alignment
+    :return: path
+    """
     type = "-TYPE=PROTEIN"
     if clustalwpara is None:
         clustalwparas = type

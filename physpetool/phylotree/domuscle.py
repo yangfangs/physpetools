@@ -37,7 +37,7 @@ logdomuscle = getLogging('muscle')
 # muscle -in process_L1.txt -out process_L1.afa -maxiters 100
 def domuscle(indata, outdata, musclepara):
     """
-    call muscle software to do alignment
+    call muscle software to do align
     :param indata: a director contain a fasta format file or a fasta format file
     :param outdata: the out is abs path with a file name
     :return: outdata path
@@ -74,7 +74,7 @@ def domuscle(indata, outdata, musclepara):
 
 def domuscle_file(indata_files, outdata, musclepara):
     """
-call muscle software to do alignment
+call muscle software to do align
     :param indata_files: a directory contain more than one file
     :param outdata: out file after alignment
     :return: path
