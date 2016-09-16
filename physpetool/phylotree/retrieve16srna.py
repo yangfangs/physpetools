@@ -61,7 +61,7 @@ retrieve 16s rna form bioinfor.scu.edu.cn
     # connect.dir()
     for abb in spelist:
         retrievename = abb + '.fasta'
-        downloadfilname = '16srandata' + '.fasta'
+        downloadfilname = '16srnadata' + '.fasta'
         downloadfilnamepath = os.path.join(dirname, downloadfilname)
         fw = open(downloadfilnamepath, 'ab')
         remoteFileName = 'RETR ' + os.path.basename(retrievename)
