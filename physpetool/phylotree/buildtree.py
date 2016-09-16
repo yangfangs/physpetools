@@ -28,6 +28,7 @@ or 16s SSU rRNA.
 from physpetool.convert.concatenate import cocat_path
 from physpetool.convert.fasta2phy import fasta2phy
 from physpetool.phylotree.doclustalw import doclustalw_file, doclustalw
+from physpetool.phylotree.dofasttree import doFastTree
 from physpetool.phylotree.dogblocks import dogblocks
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.doraxml import doraxml
@@ -41,7 +42,7 @@ gblockspara_dna = '-t=d -e=-gb1'
 
 
 def build_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-              args_gblocks, args_raxml, args_thread):
+              args_gblocks, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
     out_retrieve = in_put
     # set default aligned by muscle if not specify clustalw
@@ -52,11 +53,16 @@ def build_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_c
     out_concat = cocat_path(out_alg)
     out_gblock = dogblocks(out_concat, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
-    doraxml(out_f2p, out_put, args_raxml, args_thread)
+    # reconstruct tree
+    if args_fasttree:
+        doFastTree(out_f2p, out_put, args_fasttree_p, args_thread)
+    elif args_raxml:
+        doraxml(out_f2p, out_put, args_raxml_p, args_thread)
+
 
 
 def build_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-               args_gblocks, args_raxml, args_thread):
+               args_gblocks, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
     out_retrieve = in_put
     # set default aligned by muscle if not specify clustalw
@@ -69,6 +75,11 @@ def build_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_
         args_gblocks = gblockspara_dna
     out_gblock = dogblocks(out_alg, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
-    if args_raxml == raxmlpara_pro:
-        args_raxml = raxmlpara_dna
-    doraxml(out_f2p, out_put, args_raxml, args_thread)
+    # reconstruct tree
+    if args_fasttree:
+        args_fasttree_p_add = "-nt " + args_fasttree_p.lstrip()
+        doFastTree(out_f2p, out_put, args_fasttree_p_add, args_thread)
+    elif args_raxml:
+        if args_raxml_p is raxmlpara_pro:
+            args_raxml_p = raxmlpara_dna
+            doraxml(out_f2p, out_put, args_raxml_p, args_thread)
