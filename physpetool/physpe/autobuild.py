@@ -171,6 +171,7 @@ def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, arg
     # gblocks
     out_gblock = dogblocks(out_concat, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
+    # reconstruct tree
     if args_fasttree:
         doFastTree(out_f2p, out_put, args_fasttree_p, args_thread)
     elif args_raxml:
@@ -203,7 +204,7 @@ def starting_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, ar
 
 
 def starting_ehcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-                  args_gblocks, args_raxml, args_thread, args_exteddata):
+                  args_gblocks, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread, args_exteddata):
     '''reconstruct phylogenetic tree by ehcp method'''
     hcp_input = checkKeggOrganism(in_put)
     out_retrieve = doretrieve(hcp_input, out_put)
@@ -224,13 +225,19 @@ def starting_ehcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, ar
         out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p)
 
     out_concat = cocat_path(out_alg)
+    # gblocks
     out_gblock = dogblocks(out_concat, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
-    doraxml(out_f2p, out_put, args_raxml, args_thread)
+    # reconstruct tree
+    if args_fasttree:
+        doFastTree(out_f2p, out_put, args_fasttree_p, args_thread)
+    elif args_raxml:
+        doraxml(out_f2p, out_put, args_raxml_p, args_thread)
 
 
 def starting_esrna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-                   args_gblocks, args_raxml, args_thread, args_extenddata):
+                   args_gblocks, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread,
+                   args_extenddata):
     '''reconstruct phylogenetic tree by ssu rna extend method'''
     extend_check = checkFile(args_extenddata)
     ssu_input = checkSilvaOrganism(in_put)
@@ -248,11 +255,16 @@ def starting_esrna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, a
         out_alg = doclustalw(out_retrieve, out_put, args_clustalw_p)
     elif args_muscle:
         out_alg = domuscle(out_retrieve, out_put, args_muscle_p)
-
+    # gblocks
     if args_gblocks is gblockspara_pro:
         args_gblocks = gblockspara_dna
     out_gblock = dogblocks(out_alg, args_gblocks)
     out_f2p = fasta2phy(out_gblock)
-    if args_raxml is raxmlpara_pro:
-        args_raxml = raxmlpara_dna
-    doraxml(out_f2p, out_put, args_raxml, args_thread)
+    # reconstruct tree
+    if args_fasttree:
+        args_fasttree_p_add = "-nt " + args_fasttree_p.lstrip()
+        doFastTree(out_f2p, out_put, args_fasttree_p_add, args_thread)
+    elif args_raxml:
+        if args_raxml_p is raxmlpara_pro:
+            args_raxml_p = raxmlpara_dna
+            doraxml(out_f2p, out_put, args_raxml_p, args_thread)
