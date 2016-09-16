@@ -55,7 +55,7 @@ def doclustalw(indata, outdata, clustalwpara):
         cmd = clu_path + "/clustalw2 " + "-INFILE=" + infile + " -OUTPUT=FASTA -ALIGN " + out_file + " " + clustalwparas
         subprocess.call(cmd, shell=True)
         logdoclustalw.info("Multiple sequence alignment  by Clustalw2 was completed.")
-        out_alg = os.path.join(clustalw_dir, pro_name)
+        out_alg = os.path.join(clustalw_dir, pro_name[0])
         return out_alg
     elif os.path.isfile(indata):
         pro_name = indata
