@@ -46,6 +46,7 @@ def doclustalw(indata, outdata, clustalwpara):
     out_path = os.path.dirname(outdata)
     doclu_subdir = str(timeformat('temp/16srna_alignment'))
     clustalw_dir = os.path.join(out_path, doclu_subdir)
+    # check indata type is dir or files?
     if os.path.isdir(indata):
         pro_name = os.listdir(indata)
         if not os.path.exists(clustalw_dir):
@@ -57,6 +58,7 @@ def doclustalw(indata, outdata, clustalwpara):
         logdoclustalw.info("Multiple sequence alignment  by Clustalw2 was completed.")
         out_alg = os.path.join(clustalw_dir, pro_name[0])
         return out_alg
+    # indata is a file
     elif os.path.isfile(indata):
         pro_name = indata
         if not os.path.exists(clustalw_dir):
