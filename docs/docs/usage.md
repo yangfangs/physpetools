@@ -198,6 +198,7 @@ $ physpe -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 123
 ```
 
 **--muscle**
+
     Multiple sequence alignment by muscle. The default aligned software is Muscle.
 
 
@@ -213,9 +214,11 @@ The default option:
 
 
 **--clustalw**
+
     Multiple sequense alignment by clustalw2.
 
 **--clustalw_p**
+
     Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw
     please to see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
 
@@ -233,6 +236,7 @@ The default option:
 
 
 **--ranxml**
+
     Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
 
 
@@ -430,6 +434,7 @@ $ physpe -i example_chp  --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n 
 ```
 
 **--muscle**
+
     Multiple sequence alignment by muscle. The default aligned software is Muscle.
 
 
@@ -445,9 +450,11 @@ The default option:
 
 
 **--clustalw**
+
     Multiple sequense alignment by clustalw2.
 
 **--clustalw_p**
+
     Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw
     please to see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
 
@@ -465,6 +472,7 @@ The default option:
 
 
 **--ranxml**
+
     Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
 
 
