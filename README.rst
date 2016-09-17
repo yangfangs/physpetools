@@ -78,7 +78,7 @@ To upgrade to latest version:
 
 2. Download Physpe released version form PypI:
 
-- `Download <https://pypi.python.org/pypi/physpe/>`_ latest released version
+- `Download by PypI <https://pypi.python.org/pypi/physpe/>`_ latest released version
 
 - local installation:
 
@@ -167,14 +167,25 @@ The follow is to use RAxML advance options example:
 
 .. code-block:: console
 
-    $ physpe -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+    $ physpe -i organism_example_list.txt --raxml --raxml_p '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
 --muscle
+    Multiple sequence alignment by muscle. The default aligned software is Muscle.
+
+
+--muscle_p
     Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see
     `MUSCLE Manual <http://www.drive5.com/muscle/manual/options.html>`_.
 
     -maxiter
         maximum number of iterations to run is set 100.
+--clustalw
+    Multiple sequense alignment by clustalw2.
+
+--clustalw_p
+    Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw
+    please to see `Clustalw Help <http://www.clustal.org/download/clustalw_help.txt>`_.
+
 
 --gblocks
     Set Gblocks parameters. The default is ``-t=p -e=-gb1``.
@@ -187,7 +198,11 @@ The follow is to use RAxML advance options example:
     -e
         Eneric file extensionc. physep set default is -gbl1.
 
+
 --raxml
+    Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
+
+--raxml_p
     Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``.
     More options about RAxMl please to see `RAxML Manual <http://sco.h-its.org/exelixis/resource/download/NewManual.pdf>`_.
 
@@ -271,14 +286,25 @@ The follow is to use RAxML advance options example:
 
 .. code-block:: console
 
-    $ physpe -i example_hcp --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1' --hcp
+    $ physpe -i organism_example_list.txt --raxml --raxml_p '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
 --muscle
+    Multiple sequence alignment by muscle. The default aligned software is Muscle.
+
+
+--muscle_p
     Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see
     `MUSCLE Manual <http://www.drive5.com/muscle/manual/options.html>`_.
 
     -maxiter
         maximum number of iterations to run is set 100.
+--clustalw
+    Multiple sequense alignment by clustalw2.
+
+--clustalw_p
+    Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw
+    please to see `Clustalw Help <http://www.clustal.org/download/clustalw_help.txt>`_.
+
 
 --gblocks
     Set Gblocks parameters. The default is ``-t=p -e=-gb1``.
@@ -291,7 +317,11 @@ The follow is to use RAxML advance options example:
     -e
         Eneric file extensionc. physep set default is -gbl1.
 
+
 --raxml
+    Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
+
+--raxml_p
     Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``.
     More options about RAxMl please to see `RAxML Manual <http://sco.h-its.org/exelixis/resource/download/NewManual.pdf>`_.
 

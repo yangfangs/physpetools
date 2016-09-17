@@ -91,9 +91,9 @@ Argument parse
     advance_args.add_argument('--muscle_p', action='store', dest='muscle_parameter',
                               default=musclepara, help='Set more detail muscle parameters.')
     advance_args.add_argument('--clustalw', action='store_true', dest='clustalw',
-                              default=False, help='multiple sequense alignment by clustalw2.')
+                              default=False, help='Multiple sequense alignment by clustalw2.')
     advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
-                              help='Set more detail clustalw2 parameters.')
+                              help='Set more detail clustalw2 parameters. Here use clustalw default parameters.')
     advance_args.add_argument('--gblocks', action='store', dest='gblocks',
                               default=gblockspara_pro, help='Use gblock.')
     advance_args.add_argument('--raxml', action='store_true', dest='raxml',

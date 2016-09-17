@@ -198,6 +198,10 @@ $ physpe -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 123
 ```
 
 **--muscle**
+    Multiple sequence alignment by muscle. The default aligned software is Muscle.
+
+
+**--muscle_p**
 
   Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see [MUSCLE Manual](http://www.drive5.com/muscle/manual/options.html)
 
@@ -206,6 +210,14 @@ The default option:
 |  option   | description                                      |
 |:----------|:-------------------------------------------------|
 |  -maxiter | maximum number of iterations to run is set 100.  |
+
+
+**--clustalw**
+    Multiple sequense alignment by clustalw2.
+
+**--clustalw_p**
+    Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw
+    please to see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
 
 
 **--gblocks**
@@ -220,7 +232,12 @@ The default option:
 |  -e     | Eneric file extensionc. physep set default is -gbl1.        |
 
 
-**--raxml**
+**--ranxml**
+    Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
+
+
+
+**--raxml_p**
 
   Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``. More options about RAxMl please to see [RAxML Manual](http://sco.h-its.org/exelixis/resource/download/NewManual.pdf).
 
@@ -413,8 +430,12 @@ $ physpe -i example_chp  --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n 
 ```
 
 **--muscle**
+    Multiple sequence alignment by muscle. The default aligned software is Muscle.
 
-  Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see[MUSCLE Manual](http://www.drive5.com/muscle/manual/options.html)
+
+**--muscle_p**
+
+  Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see [MUSCLE Manual](http://www.drive5.com/muscle/manual/options.html)
 
 The default option:
 
@@ -423,10 +444,13 @@ The default option:
 |  -maxiter | maximum number of iterations to run is set 100.  |
 
 
-    
+**--clustalw**
+    Multiple sequense alignment by clustalw2.
 
-    
-        
+**--clustalw_p**
+    Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw
+    please to see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
+
 
 **--gblocks**
 
@@ -439,13 +463,13 @@ The default option:
 |  -t     | Choice type of sequence. The physpe default set is protein. |
 |  -e     | Eneric file extensionc. physep set default is -gbl1.        |
 
-   
-        
 
-    
-        
+**--ranxml**
+    Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
 
-**--raxml**
+
+
+**--raxml_p**
 
   Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``. More options about RAxMl please to see [RAxML Manual](http://sco.h-its.org/exelixis/resource/download/NewManual.pdf).
 
