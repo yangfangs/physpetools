@@ -371,7 +371,9 @@ Outdata/
 <pre><code class="bash">$ physpe -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 </code></pre>
 
-<p><strong>--muscle</strong></p>
+<p><strong>--muscle</strong>
+    Multiple sequence alignment by muscle. The default aligned software is Muscle.</p>
+<p><strong>--muscle_p</strong></p>
 <p>Set multiple sequence alignment parameters. The default is <code>-maxiter 100</code>. More options about muslce please to see <a href="http://www.drive5.com/muscle/manual/options.html">MUSCLE Manual</a></p>
 <p>The default option:</p>
 <table>
@@ -388,6 +390,11 @@ Outdata/
 </tr>
 </tbody>
 </table>
+<p><strong>--clustalw</strong>
+    Multiple sequense alignment by clustalw2.</p>
+<p><strong>--clustalw_p</strong>
+    Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw
+    please to see <a href="http://www.clustal.org/download/clustalw_help.txt">Clustalw Help</a>.</p>
 <p><strong>--gblocks</strong></p>
 <p>Set Gblocks parameters. The default is <code>-t=p -e=-gb1</code>. More options about Gblocks please to see <a href="http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html">Gblocks documentation</a>.</p>
 <p>The default option:</p>
@@ -409,7 +416,9 @@ Outdata/
 </tr>
 </tbody>
 </table>
-<p><strong>--raxml</strong></p>
+<p><strong>--ranxml</strong>
+    Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.</p>
+<p><strong>--raxml_p</strong></p>
 <p>Set reconstruct phylogenetic tree arguments with RAxML. The default is <code>-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1</code>. More options about RAxMl please to see <a href="http://sco.h-its.org/exelixis/resource/download/NewManual.pdf">RAxML Manual</a>.</p>
 <p>The default option:</p>
 <table>
@@ -605,8 +614,10 @@ contain each organisms 16s RNA sequence as <a href="../example/example_combine_t
 <pre><code class="bash">$ physpe -i example_chp  --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1' --hcp
 </code></pre>
 
-<p><strong>--muscle</strong></p>
-<p>Set multiple sequence alignment parameters. The default is <code>-maxiter 100</code>. More options about muslce please to see<a href="http://www.drive5.com/muscle/manual/options.html">MUSCLE Manual</a></p>
+<p><strong>--muscle</strong>
+    Multiple sequence alignment by muscle. The default aligned software is Muscle.</p>
+<p><strong>--muscle_p</strong></p>
+<p>Set multiple sequence alignment parameters. The default is <code>-maxiter 100</code>. More options about muslce please to see <a href="http://www.drive5.com/muscle/manual/options.html">MUSCLE Manual</a></p>
 <p>The default option:</p>
 <table>
 <thead>
@@ -622,6 +633,11 @@ contain each organisms 16s RNA sequence as <a href="../example/example_combine_t
 </tr>
 </tbody>
 </table>
+<p><strong>--clustalw</strong>
+    Multiple sequense alignment by clustalw2.</p>
+<p><strong>--clustalw_p</strong>
+    Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw
+    please to see <a href="http://www.clustal.org/download/clustalw_help.txt">Clustalw Help</a>.</p>
 <p><strong>--gblocks</strong></p>
 <p>Set Gblocks parameters. The default is <code>-t=p -e=-gb1</code>. More options about Gblocks please to see <a href="http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html">Gblocks documentation</a>.</p>
 <p>The default option:</p>
@@ -643,7 +659,9 @@ contain each organisms 16s RNA sequence as <a href="../example/example_combine_t
 </tr>
 </tbody>
 </table>
-<p><strong>--raxml</strong></p>
+<p><strong>--ranxml</strong>
+    Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.</p>
+<p><strong>--raxml_p</strong></p>
 <p>Set reconstruct phylogenetic tree arguments with RAxML. The default is <code>-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1</code>. More options about RAxMl please to see <a href="http://sco.h-its.org/exelixis/resource/download/NewManual.pdf">RAxML Manual</a>.</p>
 <p>The default option:</p>
 <table>
