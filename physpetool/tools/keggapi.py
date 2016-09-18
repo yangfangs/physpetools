@@ -24,9 +24,9 @@
 API for KEGG database.
 """
 
-
 import urllib2
 import re
+
 
 # ('Ribosomal protein L1 ', 'K02865')
 def getorganismlist():
