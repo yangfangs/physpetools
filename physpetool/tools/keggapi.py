@@ -36,6 +36,7 @@ def getorganismlist():
 
 
 def getkolist(ko):
+    """Get KO list"""
     listko = []
     url = "http://rest.kegg.jp/link/genes/" + ko
     page = urllib2.urlopen(url)
