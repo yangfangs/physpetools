@@ -26,7 +26,7 @@
 The physpe version and call software in physpe  version and citation.
 
 """
-version = '0.2.2'
+version = '0.2.3'
 
 VERSION_DESC = (
     """
