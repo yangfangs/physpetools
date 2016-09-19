@@ -67,7 +67,7 @@ class operate_db():
         """update table example:update('table_one','K02865','hsa','has:2525525')"""
         sql_update = "UPDATE {0} SET {1}=? WHERE NAME=?".format(table, col_name)
         try:
-            self.cur.execute(sql_update, (name_flag, value))
+            self.cur.execute(sql_update, (value, name_flag))
             self.done()
         except sqlite3.Error, e:
             print (e)
@@ -75,7 +75,7 @@ class operate_db():
 
     def display_row(self, table, abb_name):
         """display the row by abb name"""
-        sql_disply = "SELECT * FROM {0} WHERE NAME={1}".format(table, abb_name)
+        sql_disply = "SELECT * FROM {0} WHERE NAME='{1}'".format(table, abb_name)
         try:
             self.cur.execute(sql_disply)
             result = self.cur.fetchall()

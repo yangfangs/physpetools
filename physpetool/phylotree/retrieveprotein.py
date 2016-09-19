@@ -147,3 +147,8 @@ def hcp_name(index):
             name = line.strip().split(',')
             if name[1] == index:
                 return name[0]
+
+
+if __name__ == '__main__':
+    print getcolname()
+    print getspecies(['neq', 'pai'], ['K02865', 'K03040', 'K01869', ])

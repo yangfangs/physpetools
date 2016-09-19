@@ -144,7 +144,7 @@ def display_row(abb):
     conn = sqlite3.connect('../database/proindex.db')
     conn.text_factory = str
     c = conn.cursor()
-    sqlupdate = "select * from keggproindex  where NAME={0}".format(abb)
+    sqlupdate = "select * from keggproindex  where NAME='{0}'".format(abb)
     c.execute(sqlupdate)
     result = c.fetchall()
     print (result)
@@ -152,15 +152,15 @@ def display_row(abb):
     c.close()
 
 if __name__ == '__main__':
-    start = time.time()
-    displaydb()
-
-    end = time.time()
-    during = end - start
-    print "\n"
-    print "the execute time is:"
-    print(during)
-    display_row('obr')
+    # start = time.time()
+    # displaydb()
+    #
+    # end = time.time()
+    # during = end - start
+    # print "\n"
+    # print "the execute time is:"
+    # print(during)
+    display_row('hsa')
 
 
 
