@@ -43,7 +43,7 @@ def getkolist(ko):
     for line in page:
         html = line.strip().split('\t')
         listko.append(html)
-        # return listko
+    return listko
 
 
 # \nORGANISM    hsa  Homo sapiens (human)\nPATHWAY
