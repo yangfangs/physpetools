@@ -45,7 +45,7 @@ def getspecies(name, colname):
     :return: a list contain protein index can be retrieved and a match ko list (is a ko id list)
     """
     dbpath = getlocaldbpath()
-    db = os.path.join(dbpath, "proindex.db")
+    db = os.path.join(dbpath, "KEGG_DB_1.0.db")
     relist = []
     match_ko_name = []
     conn = sqlite3.connect(db)
@@ -54,7 +54,7 @@ def getspecies(name, colname):
     connect = "' OR NAME = '".join(name)
     for ko in colname:
 
-        query = "SELECT " + ko + " FROM keggproindex WHERE NAME = '" + connect + "'"
+        query = "SELECT " + ko + " FROM proindex WHERE NAME = '" + connect + "'"
         c.execute(query)
         ids = list(c.fetchall())
         idslist = [str(x[0]) for x in ids]
@@ -70,11 +70,11 @@ def getspecies(name, colname):
 def getcolname():
     """get BD colnames"""
     dbpath = getlocaldbpath()
-    db = os.path.join(dbpath, "proindex.db")
+    db = os.path.join(dbpath, "KEGG_DB_1.0.db")
     conn = sqlite3.connect(db)
     conn.text_factory = str
     c = conn.cursor()
-    c.execute("SELECT * FROM keggproindex")
+    c.execute("SELECT * FROM proindex")
     col_name_list = [tuple[0] for tuple in c.description]
     c.close()
     return col_name_list[2:]
