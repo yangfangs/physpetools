@@ -221,6 +221,14 @@ The follow is to use RAxML advance options example:
     -N
         The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.
 
+
+--fasttree
+    Reconstruct phylogenetic tree by FastTree.
+
+--fasttree_p
+    Set more detail RAxML parameters.More options about clustalw
+    please to see `FastTree <http://www.microbesonline.org/fasttree/>`_.
+
 build
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -340,6 +348,13 @@ The follow is to use RAxML advance options example:
     -N
         The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.
 
+
+--fasttree
+    Reconstruct phylogenetic tree by FastTree.
+
+--fasttree_p
+    Set more detail RAxML parameters.More options about clustalw
+    please to see `FastTree <http://www.microbesonline.org/fasttree/>`_.
 
 combine
 ^^^^^^^^^^^^^^^^^^^^
