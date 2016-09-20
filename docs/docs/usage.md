@@ -199,7 +199,7 @@ $ physpe -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 123
 
 **--muscle**
 
-    Multiple sequence alignment by muscle. The default aligned software is Muscle.
+  Multiple sequence alignment by muscle. The default aligned software is Muscle.
 
 
 **--muscle_p**
@@ -219,8 +219,7 @@ The default option:
 
 **--clustalw_p**
 
-    Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw
-    please to see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
+  Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw please to see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
 
 
 **--gblocks**
@@ -260,12 +259,11 @@ The default option:
 
 **--fasttree**
     
-    Reconstruct phylogenetic tree by FastTree.
+  Reconstruct phylogenetic tree by FastTree.
 
 **--fasttree_p**
     
-    Set more detail RAxML parameters.More options about clustalw
-    please to see `FastTree <http://www.microbesonline.org/fasttree/>`_.
+  Set more detail RAxML parameters.More options about clustalw please to see [FastTree](http://www.microbesonline.org/fasttree/).
 
 
 ##  build
@@ -504,12 +502,12 @@ The default option:
 
 **--fasttree**
     
-    Reconstruct phylogenetic tree by FastTree.
+  Reconstruct phylogenetic tree by FastTree.
 
 **--fasttree_p**
     
-    Set more detail RAxML parameters.More options about clustalw
-    please to see `FastTree <http://www.microbesonline.org/fasttree/>`_.
+  Set more detail RAxML parameters.More options about clustalw please to see [FastTree](http://www.microbesonline.org/fasttree/).
+
 
 ## combine
 
