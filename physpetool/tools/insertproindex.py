@@ -25,7 +25,6 @@ Create highly conserved proteins index databse.
 
 """
 
-
 import sqlite3
 from keggapi import getkolist
 import time
@@ -46,7 +45,6 @@ def getdata(database, name):
     konum = c.fetchall()
     c.close()
     return konum
-
 
 
 def insertdata(konum, abbname, value):
@@ -127,6 +125,7 @@ def countcol():
     c.close()
     return countlen, countnone
 
+
 def displaydb():
     """display de database the length, max, min, average et al. of species respectively"""
     countlen, countnone = countcol()
@@ -151,6 +150,7 @@ def display_row(abb):
     conn.commit()
     c.close()
 
+
 if __name__ == '__main__':
     # start = time.time()
     # displaydb()
@@ -170,4 +170,3 @@ if __name__ == '__main__':
 # select * from keggproindex where id =148
 # update keggproindex set K02987 = 'obr:102702159' where id =148
 # commit
-
