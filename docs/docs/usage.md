@@ -459,12 +459,11 @@ The default option:
 
 **--clustalw**
 
-    Multiple sequense alignment by clustalw2.
+  Multiple sequense alignment by clustalw2.
 
 **--clustalw_p**
 
-    Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw
-    please to see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
+  Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw please to see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
 
 
 **--gblocks**
@@ -481,7 +480,7 @@ The default option:
 
 **--ranxml**
 
-    Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
+  Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
 
 
 
