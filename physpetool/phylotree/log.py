@@ -24,12 +24,12 @@
 The log configuration
 """
 
-
 import logging
 import os
 
 
 def setlogdir(logdir):
+    '''set the log directory'''
     ldir = os.path.dirname(logdir)
     writelog = os.path.join(ldir, 'log.log')
     logging.basicConfig(level=logging.DEBUG,
