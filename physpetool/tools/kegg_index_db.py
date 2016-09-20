@@ -98,7 +98,7 @@ def update_prokar():
     euk, prokar = get_abb()
     euk_ko, prokar_ko = get_ko_list()
     len_euk_ko = len(euk_ko)
-    for line in range(19,31):
+    for line in range(len_euk_ko):
         kolist = getkolist(prokar_ko[line])
         for ko in kolist:
             value = ko[1]
