@@ -25,7 +25,6 @@ The KEGG KO index database.
 
 """
 
-
 import sqlite3
 import os
 
@@ -36,13 +35,13 @@ listko = []
 with open('../database/protein_ko.txt') as ko:
     i = 1
     for line in ko:
-        str = line.strip().split(',')
-        str.insert(0, i)
+        strs = line.strip().split(',')
+        strs.insert(0, i)
         i = i + 1
-        listko.append(tuple(str))
+        listko.append(tuple(strs))
 print listko
 conn = sqlite3.connect('../database/koindex.db')
-conn.text_factory =str
+conn.text_factory = str
 c = conn.cursor()
 c.execute('''CREATE TABLE IF NOT EXISTS KOINDEX
         (ID INT PRIMARY KEY NOT NULL,
