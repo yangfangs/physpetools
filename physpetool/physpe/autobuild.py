@@ -38,7 +38,7 @@ from physpetool.utils.checkinputfile import checkKeggOrganism, checkSilvaOrganis
 import argparse
 import os
 
-APP_DESC = "reconstruct"
+APP_DESC = "Reconstruct"
 
 raxmlpara_pro = "-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1"
 raxmlpara_dna = "-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1"
