@@ -83,14 +83,14 @@ def update_euk():
     '''Update eukaryote kegg protein index'''
     euk, prokar = get_abb()
     euk_ko, prokar_ko = get_ko_list()
-    for line in euk_ko:
+    for line in ['K02958',]:
         kolist = getkolist(line)
         for ko in kolist:
             value = ko[1]
             list_abb = value.split(':')[0]
             if list_abb in euk:
-                print ('proindex', line, list_abb, value)
-                ko_db.update('proindex', line, list_abb, value)
+                print ('proindex', 'K02956', list_abb, value)
+                ko_db.update('proindex', 'K02956', list_abb, value)
 
 
 def update_prokar():
@@ -118,7 +118,7 @@ if __name__ == '__main__':
     # # insert abb name
     # insert_name()
     # Update eukaryotes protein index
-    # update_euk()
+    update_euk()
     # Update prokaryotes protein index
-    update_prokar()
+    # update_prokar()
     # display()
