@@ -59,6 +59,7 @@ def domuscle(indata, outdata, musclepara):
         cmd = mupath + "/muscle -in " + each_pro + " -out " + out_alg + " " + muscleparas
         subprocess.call(cmd, shell=True)
         logdomuscle.debug('muscle result path:{0}'.format(out_alg))
+        logdomuscle.info("Multiple sequence alignment by Muscle was completed.")
         return out_alg
     elif os.path.isfile(indata):
         pro_name = indata
@@ -69,6 +70,7 @@ def domuscle(indata, outdata, musclepara):
         cmd = mupath + "/muscle -in " + each_pro + " -out " + out_alg + " " + muscleparas
         subprocess.call(cmd, shell=True)
         logdomuscle.debug('muscle result path:{0}'.format(out_alg))
+        logdomuscle.info("Multiple sequence alignment by Muscle was completed.")
         return out_alg
 
 
