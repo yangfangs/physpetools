@@ -146,13 +146,15 @@ starting run reconstruct tree
     elif args.EHCP:
         setlogdir(out_put)
         starting_ehcp(in_put, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
-                      args.gblocks, args.raxml, args.thread, args_extend)
+                      args.gblocks, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter,
+                      args.thread, args_extend)
 
     # Reconstruct phylogenetic tree by extend ssu rna method.
     elif args.essurna:
         setlogdir(out_put)
         starting_esrna(in_put, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
-                       args.gblocks, args.raxml, args.thread, args_extend)
+                       args.gblocks, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter,
+                       args.thread, args_extend)
 
 
 def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
