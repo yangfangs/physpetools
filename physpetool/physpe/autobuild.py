@@ -244,7 +244,7 @@ def starting_esrna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, a
     extend_check = checkFile(args_extenddata)
     ssu_input = checkSilvaOrganism(in_put)
     out_retrieve = retrieve16srna(ssu_input, out_put)
-    retrieve_srna_path = os.path.join(out_retrieve, '16srnadata.fasta')
+    retrieve_srna_path = os.path.join(out_retrieve, '16srandata.fasta')
 
     fw = open(retrieve_srna_path, 'ab')
     with open(extend_check) as read:

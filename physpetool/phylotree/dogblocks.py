@@ -43,7 +43,7 @@ def dogblocks(indata, gblockpara):
     :return: a file path of gblocks result
     """
     # Deal with outdata name
-    loggblocks.debug('Gblocks indata:{0}'.format(indata))
+    loggblocks.debug('Gblocks indata:{0}'.format(gblockpara))
     gblockparas = gblockpara.lstrip()
     gblockparalist = gblockparas.split(" ")
     regex = '-e='
