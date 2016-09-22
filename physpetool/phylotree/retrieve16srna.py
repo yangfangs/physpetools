@@ -29,7 +29,7 @@ import os
 import time
 from physpetool.phylotree.log import getLogging
 
-logretrieve16srna = getLogging('16s DB')
+logretrieve16srna = getLogging('16S SSU rRNA DB')
 
 
 def retrieve16srna(spenamelist, outpath):

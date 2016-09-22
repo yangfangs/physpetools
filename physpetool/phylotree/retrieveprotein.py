@@ -34,7 +34,7 @@ from physpetool.database.dbpath import getlocaldbpath
 from physpetool.phylotree.log import getLogging
 from physpetool.tools.keggapi import getprotein
 
-logretrieveprotein = getLogging('kegg DB')
+logretrieveprotein = getLogging('KEGG index DB')
 
 
 def getspecies(name, colname):
