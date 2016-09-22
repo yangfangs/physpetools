@@ -120,7 +120,7 @@ def retrieveprotein(proindexlist, outpath, matchlist):
         logretrieveprotein.info(
             "Retrieve highly conserved protein '{0}' success and store in p{1}.fasta file".format(hcp_pro_name, str(p)))
         p += 1
-    logretrieveprotein.info("retrieve from Kegg DB " + str(p - 1) + " highly conserved proteins")
+    logretrieveprotein.info("Retrieve from KEGG datbase " + str(p - 1) + " highly conserved proteins")
     return dirname
 
 

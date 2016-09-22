@@ -64,7 +64,7 @@ Check input organisms list with KEGG database
         mislist = originaList
     if mislist:
         for misabb in mislist:
-            logchecking.info("The organism: {0} can't match in KEGG protein index database".format(misabb))
+            logchecking.info("The species: {0} can't match in KEGG protein index database".format(misabb))
         logchecking.warning(
             "These species can't match in KEGG protein index database so removed and reconstruct phylogenetic tree")
     return inputlist
