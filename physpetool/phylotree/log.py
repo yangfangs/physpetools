@@ -27,9 +27,14 @@ The log configuration
 import logging
 import os
 
+from physpetool.utils.printstyle import print_style
+
 
 def setlogdir(logdir):
     '''set the log directory'''
+    # set log color
+    logging.addLevelName(logging.INFO, print_style('%s', fore='green') % logging.getLevelName(logging.INFO))
+    logging.addLevelName(logging.WARNING, print_style('%s', fore='red') % logging.getLevelName(logging.WARNING))
     ldir = os.path.dirname(logdir)
     writelog = os.path.join(ldir, 'log.log')
     logging.basicConfig(level=logging.DEBUG,
