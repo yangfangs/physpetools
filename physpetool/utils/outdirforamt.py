@@ -2,6 +2,7 @@ import time
 
 
 class timeformat:
+    """The file add time format"""
     subdir = ''
 
     def __init__(self, sub):
