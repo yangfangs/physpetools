@@ -15,16 +15,16 @@ In some filed combine species phylogenetic tree do some prediction are very impo
 protein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree
 is necessary, but the process of constructing the tree species is very tedious.
 
-We developing a command line software **Physpe**, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.
-(the species names must be a abbreviation same with **KEGG database** organisms abbreviation), the **Physpe** auto reconstruct species phylogenetic tree.
+We developing a command line software **PhySpeTree**, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.
+(the species names must be a abbreviation same with **KEGG database** organisms abbreviation), the **PhySpeTree** auto reconstruct species phylogenetic tree.
 
-Physpe workflow
+PhySpeTree workflow
 ----------------------------------------------------------------------------
 
 .. image:: https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/physpe2.png
 
 
-Physpe workflow includes the following steps:
+PhySpeTree workflow includes the following steps:
 
 1. Prepare organisms names to reconstruct phylogenetic tree as `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
 
@@ -34,7 +34,7 @@ Physpe workflow includes the following steps:
 
 4. Do multiple sequence alignment by call Muscle.
 
-5. Concatenate conserved proteins by Physpe.
+5. Concatenate conserved proteins by PhySpeTree.
 
 6. Select conserved blocks by Call Gblosks.
 
@@ -62,31 +62,31 @@ Features
 Install
 -------------------------------------------------------------------------------
 
-1. **Physpe** is released on PyPI, so all you need install:
+1. **PhySpeTree** is released on PyPI, so all you need install:
 
 .. code-block:: console
 
-	$ pip install physpe
+	$ pip install PhySpeTree
 
 To upgrade to latest version:
 
 .. code-block:: console
 
-	$ pip install --upgrade physpe
+	$ pip install --upgrade PhySpeTree
 
 
 
-2. Download Physpe released version form PypI:
+2. Download PhySpeTree released version form PypI:
 
-- `Download by PypI <https://pypi.python.org/pypi/physpe/>`_ latest released version
+- `Download by PypI <https://pypi.python.org/pypi/PhySpeTree/>`_ latest released version
 
 - local installation:
 
 .. code-block:: console
 
-    $pip install physpe-*.tar.gz
+    $pip install PhySpeTree-*.tar.gz
 
-3. You can install **Physpe** by download the latest released version:
+3. You can install **PhySpeTree** by download the latest released version:
 
 - `Download <https://github.com/xiaofeiyangyang/physpetools/releases>`_ latest released version **.tar.gz** file.
 
@@ -96,7 +96,7 @@ To upgrade to latest version:
 
 	$ pip install physpetools-v*.tar.gz
 
-4. Use git command clone **Physpe**:
+4. Use git command clone **PhySpeTree**:
 
 .. code-block:: console
 
@@ -122,7 +122,7 @@ Use **autobuild** in command line like this:
 
 .. code-block:: console
 
-    $ physpe -i organism_example_list.txt [options]*
+    $ PhySpeTree -i organism_example_list.txt [options]*
 
 
 autobuild options
@@ -138,7 +138,7 @@ autobuild options
     A directory include output data (reconstruct tree files). The default output data name is Outdata.
 
 -t
-    Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.
+    Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.
 
 --hcp
 
@@ -160,14 +160,14 @@ autobuild options
 Advance options
 #####################
 
-User enable choice more detail options with Physpe call software, detail advance options input
+User enable choice more detail options with PhySpeTree call software, detail advance options input
 ``must be enclosed in single quotes``.
 
 The follow is to use RAxML advance options example:
 
 .. code-block:: console
 
-    $ physpe -i organism_example_list.txt --raxml --raxml_p '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+    $ PhySpeTree -i organism_example_list.txt --raxml --raxml_p '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
 --muscle
     Multiple sequence alignment by muscle. The default aligned software is Muscle.
@@ -193,7 +193,7 @@ The follow is to use RAxML advance options example:
     `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
     -t
-        Choice type of sequence. The physpe default set is protein.
+        Choice type of sequence. The PhySpeTree default set is protein.
 
     -e
         Eneric file extensionc. physep set default is -gbl1.
@@ -207,19 +207,19 @@ The follow is to use RAxML advance options example:
     More options about RAxMl please to see `RAxML Manual <http://sco.h-its.org/exelixis/resource/download/NewManual.pdf>`_.
 
     -f
-        select algorithm. The physpe default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run.
+        select algorithm. The PhySpeTree default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run.
 
     -m
-        Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The physpe default set is PROTGAMMAJTTX.
+        Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The PhySpeTree default set is PROTGAMMAJTTX.
 
     -p
         Specify a random number seed for the parsimony inferences. The physep default set is 12345.
 
     -x
-        Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe default set is 12345.
+        Specify an integer number (random seed) and turn on rapid bootstrapping. The PhySpeTree default set is 12345.
 
     -N
-        The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.
+        The same with -# specify the number of alternative runs on distinct starting trees. The PhySpeTree default set is 100.
 
 
 --fasttree
@@ -241,7 +241,7 @@ Use **build** in command line to reconstruct phylogenetic tree:
 
 .. code-block:: console
 
-    $ physpe build -i example_hcp -o output --hcp
+    $ PhySpeTree build -i example_hcp -o output --hcp
 
 
 * build phylogenetic tree by 16s ssu rna data
@@ -249,7 +249,7 @@ Use **build** in command line to reconstruct phylogenetic tree:
 
 .. code-block:: console
 
-    $ physpe build -i example_16s_ssurna.fasta -o output --sran
+    $ PhySpeTree build -i example_16s_ssurna.fasta -o output --sran
 
 build options
 #####################
@@ -264,7 +264,7 @@ build options
     A directory include output data (reconstruct tree files). The default output data name is Outdata.
 
 -t
-    Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.
+    Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.
 
 --hcp
 
@@ -287,14 +287,14 @@ build options
 Advance options
 #####################
 
-User enable choice more detail options with Physpe call software, detail advance options input
+User enable choice more detail options with PhySpeTree call software, detail advance options input
 ``must be enclosed in single quotes``.
 
 The follow is to use RAxML advance options example:
 
 .. code-block:: console
 
-    $ physpe -i organism_example_list.txt --raxml --raxml_p '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+    $ PhySpeTree -i organism_example_list.txt --raxml --raxml_p '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
 --muscle
     Multiple sequence alignment by muscle. The default aligned software is Muscle.
@@ -320,7 +320,7 @@ The follow is to use RAxML advance options example:
     `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
     -t
-        Choice type of sequence. The physpe default set is protein.
+        Choice type of sequence. The PhySpeTree default set is protein.
 
     -e
         Eneric file extensionc. physep set default is -gbl1.
@@ -334,19 +334,19 @@ The follow is to use RAxML advance options example:
     More options about RAxMl please to see `RAxML Manual <http://sco.h-its.org/exelixis/resource/download/NewManual.pdf>`_.
 
     -f
-        select algorithm. The physpe default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run.
+        select algorithm. The PhySpeTree default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run.
 
     -m
-        Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The physpe default set is PROTGAMMAJTTX.
+        Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The PhySpeTree default set is PROTGAMMAJTTX.
 
     -p
         Specify a random number seed for the parsimony inferences. The physep default set is 12345.
 
     -x
-        Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe default set is 12345.
+        Specify an integer number (random seed) and turn on rapid bootstrapping. The PhySpeTree default set is 12345.
 
     -N
-        The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.
+        The same with -# specify the number of alternative runs on distinct starting trees. The PhySpeTree default set is 100.
 
 
 --fasttree
@@ -373,7 +373,7 @@ Use **combine** in command line like this:
 
 .. code-block:: console
 
-    $ physpe -i organism_example_list.txt [options]*
+    $ PhySpeTree -i organism_example_list.txt [options]*
 
 
 combine options
@@ -398,7 +398,7 @@ Use **iview** in command line like this:
 
 .. code-block:: console
 
-    $ physpe iview -i organism_example_list.txt -range phylum
+    $ PhySpeTree iview -i organism_example_list.txt -range phylum
 
 
 iview options
@@ -431,7 +431,7 @@ Use check module  check input organisms match in kegg database or 16s database
 
 .. code-block:: console
 
-    $ physpe check -i organism_example_list.txt -out check --ehcp
+    $ PhySpeTree check -i organism_example_list.txt -out check --ehcp
 
 
 
@@ -457,19 +457,19 @@ check options
 Frequently Asked Questions (FAQ)
 --------------------------------------------------------------------------------
 
-Physpe input/output
+PhySpeTree input/output
 ^^^^^^^^^^^^^^^^^^^
 
-**1.What preparation of user should does for Physpe?**
+**1.What preparation of user should does for PhySpeTree?**
 
 User should prepare a list contain organisms names (abbreviation name are same with `KEGG database <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
 one line write one species name only such as `organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
 You can retrieve the abbreviation names of organisms by `KEGG API <http://rest.kegg.jp/list/organism>`_.
 
 
-**2.What's Physpe output data mean?**
+**2.What's PhySpeTree output data mean?**
 
-Physpe output tow data files, the one is contain phylogenetic tree files default names is ``Outdata``, another is a temp file.
+PhySpeTree output tow data files, the one is contain phylogenetic tree files default names is ``Outdata``, another is a temp file.
 
 If you reconstruct phylogenetic tree by HCP (highly conserved protein) model, temp file include three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
   + conserved_protein: Store the \*.fasta format files, which is conserved proteins retrieve by KEGG database.
@@ -479,16 +479,16 @@ If you reconstruct phylogenetic tree by HCP (highly conserved protein) model, te
 If you reconstruct phylogenetic tree by SRNA (16s RNA) model temp file include two directory ``16srnadata`` and ``16srna_alignment``.
   + 16srandata: Stroe  a file name is 16srandata.fata, contain the 16s RNA data retrieve by SILVA database.
   + 16sran_alignment: Store the \*.fasta format is multiple sequence alignment data and the \*.fasta-gb1, \*fasta-gb1.html are select conserved blocks data (use Gblocks software),
-    the \*.phy format file is convert to convert from gblok data by physpe to reconstruct phylogenetic tree.
+    the \*.phy format file is convert to convert from gblok data by PhySpeTree to reconstruct phylogenetic tree.
 
 Users can check the quality of every aspect of data by these temp files.
 
 
-Physpe reconstruct phylogenetic tree database
+PhySpeTree reconstruct phylogenetic tree database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-**1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?**
+**1.what's the highly conserved proteins are PhySpeTree use reconstruct phylogenetic tree?**
 
-Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
+PhySpeTree use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
 
 **cite:**
 
@@ -542,8 +542,8 @@ with sequences haven been truncated. Means that all nucleotides that have not be
 
 
 
-.. |PyPI version| image:: https://img.shields.io/pypi/v/physpe.svg?style=flat-square
-   :target: https://pypi.python.org/pypi/physpe
+.. |PyPI version| image:: https://img.shields.io/pypi/v/PhySpeTree.svg?style=flat-square
+   :target: https://pypi.python.org/pypi/PhySpeTree
 .. |Docs| image:: https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat-square
    :target: https://xiaofeiyangyang.github.io/physpetools/
 .. |License| image:: https://img.shields.io/aur/license/yaourt.svg?maxAge=2592000
