@@ -1,4 +1,4 @@
-# Physpe Tutorial 
+# PhySpeTree Tutorial 
 
 ## Auto bulid Tree of life
 
@@ -13,7 +13,7 @@ conserved protein and another way is use 16s SSU RNA to reconstruct phylogenetic
 
 ![physpe_concept_hcp](img/physpe_concept_hcp.png)
 
-Physpe reconstruct phylogenetic tree by highly conserved protein (hcp) use concatenate highly conserved protein to a supermatrix then reconstruct phylogenetic tree.
+PhySpeTree reconstruct phylogenetic tree by highly conserved protein (hcp) use concatenate highly conserved protein to a supermatrix then reconstruct phylogenetic tree.
 Here we prepare 31 highly conserved protein to auto reconstruct phylogenetic tree. you also can searching what's the [31 highly protein](faq.md#Physpe_reconstruct_phylogenetic_tree_database) used.
 
 ####  1.Prepare organisms names list
@@ -36,12 +36,12 @@ afu
 
 ####  2.Reconstruct phylogenetic tree by highly conserved protein 
 
-When use physpe auto build phylogenetic tree, user can use `--hcp` arguments to specify use highly conserved protein way to reconstruct phylogenetic tree. The default use 1 thread 
+When use PhySpeTree auto build phylogenetic tree, user can use `--hcp` arguments to specify use highly conserved protein way to reconstruct phylogenetic tree. The default use 1 thread 
 to reconstruct phylogenetic tree, if you want to use more threads can use `-t` parameter to specify more threads to reconstruct phylogenetic tree. Here we use the default value 1 thread to 
 reconstruct 191 organisms phylogenetic tree.
 
 ```
-$ physpe autobuild -i 191speciesnames.txt -o 191_pro --hcp
+$ PhySpeTree autobuild -i 191speciesnames.txt -o 191_pro --hcp
 Loading organisms names success.....
 
 The result are store in:191_pro
@@ -69,14 +69,14 @@ Now loading data and constructing species phylogenetic tree......
 
 #### 4.Use iview annotating tree
 
-Physpe provide iview module to annotating tree by iTol, iTol is a very popular online tool for the display, annotation and management of phylogenetic trees.
+PhySpeTree provide iview module to annotating tree by iTol, iTol is a very popular online tool for the display, annotation and management of phylogenetic trees.
 When you use iview module to annotating tree, only drop the output file to your iTol account to display tree.
 
 
 * Change label names use `--labels`.
 
 ```
-$ physpe iview -i 191speciesnames.txt --labels
+$ PhySpeTree iview -i 191speciesnames.txt --labels
 Change abbreviation names to full names complete
 change labels file was save in iview/labels.txt
 
@@ -113,7 +113,7 @@ mmp     Methanococcus maripaludis S2
 * Color range by phylum use `-a` parameter to specified. The default annotation by phylum.
 
 ```
-$ physpe iview -i 191speciesnames.txt -o iview --range -a phylum
+$ PhySpeTree iview -i 191speciesnames.txt -o iview --range -a phylum
 Color range by phylum was complete.
 Color range annotation was save in iview/range_color_by_phylum.txt
 
@@ -155,7 +155,7 @@ mja     range   #996433 Archaea
 
 ![physpe_concept_hcp](img/physpe_concept_rna.png)
 
-Physpe provide auto reconstruct phylogenetic tree by 16s SSU RNA, the concept of this way is use alignment organisms 16s SSU RNA and then reconstruct 
+PhySpeTree provide auto reconstruct phylogenetic tree by 16s SSU RNA, the concept of this way is use alignment organisms 16s SSU RNA and then reconstruct 
 phylogenetic tree.
 
 
@@ -178,7 +178,7 @@ afu
 ####  2.Reconstruct phylogenetic tree by 16s SSU RNA  
 
 ```
-$ physpe autobuild -i 191speciesnames.txt -o 191_rna --srna
+$ PhySpeTree autobuild -i 191speciesnames.txt -o 191_rna --srna
 Loading organisms names success.....
 
 The result are store in:191_rna
@@ -238,7 +238,7 @@ Now loading data and constructing species phylogenetic tree......
 * Change label names use `--labels`
 
 ```
-$ physpe iview -i 191speciesnames.txt --labels
+$ PhySpeTree iview -i 191speciesnames.txt --labels
 Change abbreviation names to full names complete
 change labels file was save in iview/labels.txt
 
@@ -279,7 +279,7 @@ mmp     Methanococcus maripaludis S2
 * Color range by phylum
 
 ```
-$ physpe iview -i 191speciesnames.txt -o iview --range -a phylum
+$ PhySpeTree iview -i 191speciesnames.txt -o iview --range -a phylum
 Color range by phylum was complete.
 Color range annotation was save in iview/range_color_by_phylum.txt
 
@@ -318,7 +318,7 @@ mja     range   #996433 Archaea
 * Color range by class
 
 ```
-$ physpe iview -i 191speciesnames.txt --range -a class
+$ PhySpeTree iview -i 191speciesnames.txt --range -a class
 Color range by class was complete.
 Color range annotation was save in iview/range_color_by_class.txt
 
@@ -362,7 +362,7 @@ cho     range   #99A01A Alveolates
 
 ####  1.Prepare organisms names list
 
-Here auto reconstruct 52 plants phylogenetic tree by physpe highly conserved protein way organisms list [download][4]
+Here auto reconstruct 52 plants phylogenetic tree by PhySpeTree highly conserved protein way organisms list [download][4]
 
 ```
 $ cat 52plantsnames.txt
@@ -385,7 +385,7 @@ cmo
 ####  2.Reconstruct phylogenetic tree by highly conserved protein 
 
 ```
-$ physpe autobuild -i 52plantsnames.txt -o 52plant_pro --srna -t 6
+$ PhySpeTree autobuild -i 52plantsnames.txt -o 52plant_pro --srna -t 6
 Loading organisms names success.....
 
 The result are store in:52plant_pro
@@ -428,7 +428,7 @@ Wed, 07 Sep 2016 18:51:39 kegg DB[line:94] INFO retrieve from Kegg DB 21 highly 
 * Change label names use `--labels`
 
 ```
-$ physpe iview -i 52plantsnames.txt --labels
+$ PhySpeTree iview -i 52plantsnames.txt --labels
 Change abbreviation names to full names complete
 change labels file was save in iview/labels.txt
 
@@ -468,7 +468,7 @@ cvr     Chlorella variabilis
 * Color range by phylum
 
 ```
-$ physpe iview -i 52plantsnames.txt -o iview --range -a phylum
+$ PhySpeTree iview -i 52plantsnames.txt -o iview --range -a phylum
 Color range by phylum was complete.
 Color range annotation was save in iview/range_color_by_phylum.txt
 
@@ -510,7 +510,7 @@ egr     range   #DF73CB Plants
 ## Extend tree with a new organism
 
 
-Some time we want to extend tree with a new organisms, use physpe user can easy do it.
+Some time we want to extend tree with a new organisms, use PhySpeTree user can easy do it.
 
 
 
@@ -560,7 +560,7 @@ the extend organism 16s rRNA sequence file.
 
 
 ```
-$ physpe autobuild -i 191speciesnames.txt -o extend_rna -e extend_rna_loki.fasta --esrna -t 6
+$ PhySpeTree autobuild -i 191speciesnames.txt -o extend_rna -e extend_rna_loki.fasta --esrna -t 6
 Loading organisms names success.....
 
 The result are store in:extend_rna
@@ -624,7 +624,7 @@ When use highly conserved protein method reconstruct phylogenetic tree with new 
 highly conserved protein will be prepared.
 
 ```
-$ physpe check -i 191speciesnames.txt --ehcp
+$ PhySpeTree check -i 191speciesnames.txt --ehcp
 'Ribosomal protein L1' ----------------------------------> p1.fasta
 
 'Leucyl-tRNA synthetase' ----------------------------------> p2.fasta
@@ -671,7 +671,7 @@ EV
 
 
 ```
-$ physpe autobuild -i 191speciesnames.txt -o extend_pro_loki -e highly_consrved_protein_loki --ehcp -t 6
+$ PhySpeTree autobuild -i 191speciesnames.txt -o extend_pro_loki -e highly_consrved_protein_loki --ehcp -t 6
 Loading organisms names success.....
 
 The result are store in:extend_pro_loki

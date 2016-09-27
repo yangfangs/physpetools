@@ -10,7 +10,7 @@ User should prepare a txt file contain the abbreviation names of organisms [orga
 Use **autobuild** in command line like this:
 
 ```bash
-$ physpe -i organism_example_list.txt [options]*
+$ PhySpeTree -i organism_example_list.txt [options]*
 ```
 
 ### Autobuild options
@@ -20,7 +20,7 @@ $ physpe -i organism_example_list.txt [options]*
 |  -h     |  Print help message and exits.                                                                                                       |
 |  -i     |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.                                  |
 |  -o     |  A directory include output data (reconstruct tree files). The default output data name is Outdata.                                  |
-|  -t     |  Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.               |
+|  -t     |  Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.               |
 |  -e     |  The extended data should be FASTA format to extend phylogenetic tree by --ehcp or --esrna option.                                  |
 |  --hcp  |  The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp. |
 |  --ehcp |  The ehcp (extend highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree. |
@@ -51,7 +51,7 @@ aeq
 #### **Auto build phylogenetic tree by highly conserved proteins:**
 
 ```bash
-$ physpe autobuild -i organism_example_list.txt --hcp
+$ PhySpeTree autobuild -i organism_example_list.txt --hcp
 Loading organisms names success.....
 
 The result are store in:Outdata
@@ -99,7 +99,7 @@ Outdata/
 ```
 
 
-* log.log: The log information of physpe.
+* log.log: The log information of PhySpeTree.
 * Outdata: Contain phylogenetic tree output result. 
     
     - RAxML_bestTree.T1: Reconstruct phylogenetic tree by RAxML, it's best ML search tree. 
@@ -108,7 +108,7 @@ Outdata/
     - RAxML_bootstrap.T1: Bootstrap result by RAxML
     - RAxML_info.T1: The info of run RAxMl.
     
-* temp: The temp data by physpe, `it's very important to user to check the key steps`.
+* temp: The temp data by PhySpeTree, `it's very important to user to check the key steps`.
 
     - conserved_protein: Contain highly conserved proteins retrieve form KEGG database.
     - hcp_alignment: Contain highly conserved proteins do multiple sequence alignment by muscle.
@@ -124,7 +124,7 @@ Outdata/
 
 
 ```bash
-$ physpe autobuild -i organism_example_list.txt --srna
+$ PhySpeTree autobuild -i organism_example_list.txt --srna
 Loading organisms names success.....
 
 The result are store in:Outdata
@@ -163,7 +163,7 @@ Outdata/
                                   16srandata.fasta-gb1.phy
 ```
 
-* log.log: The log information of physpe.
+* log.log: The log information of PhySpeTree.
 * Outdata: Contain phylogenetic tree output result. 
     
     - RAxML_bestTree.T1: Reconstruct phylogenetic tree by RAxML, it's best ML search tree. 
@@ -172,7 +172,7 @@ Outdata/
     - RAxML_bootstrap.T1: Bootstrap result by RAxML
     - RAxML_info.T1: The info of run RAxMl.
     
-* temp: The temp data by physpe, `it's very important to user to check the key steps`.
+* temp: The temp data by PhySpeTree, `it's very important to user to check the key steps`.
 
     - 16srnadata: Contain 16s SSU RNA data retrieved form SILVA database.
     
@@ -188,13 +188,13 @@ Outdata/
 
 ### Advance options
 
-User enable choice more detail options with Physpe call software, detail advance options input
+User enable choice more detail options with PhySpeTree call software, detail advance options input
 ``must be enclosed in single quotes``.
 
 The follow is to use RAxML advance options example:
 
 ```bash
-$ physpe -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+$ PhySpeTree -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 ```
 
 **--muscle**
@@ -230,7 +230,7 @@ The default option:
 
 |  option | description                                                 |
 |:--------|:------------------------------------------------------------|
-|  -t     | Choice type of sequence. The physpe default set is protein. |
+|  -t     | Choice type of sequence. The PhySpeTree default set is protein. |
 |  -e     | Eneric file extensionc. physep set default is -gbl1.        |
 
 
@@ -248,11 +248,11 @@ The default option:
 
 |  option | description                                                                                                                          |
 |:--------|:------------------------------------------------------------------------------------------------------------------------------------ |
-|   -f    |  select algorithm. The physpe default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run. |
-|   -m    |  Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The physpe default set is PROTGAMMAJTTX.      |
+|   -f    |  select algorithm. The PhySpeTree default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run. |
+|   -m    |  Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The PhySpeTree default set is PROTGAMMAJTTX.      |
 |   -p    |  Specify a random number seed for the parsimony inferences. The physep default set is 12345.                                         |
-|   -x    |  Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe default set is 12345.                           |
-|   -N    |  The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.                  |
+|   -x    |  Specify an integer number (random seed) and turn on rapid bootstrapping. The PhySpeTree default set is 12345.                           |
+|   -N    |  The same with -# specify the number of alternative runs on distinct starting trees. The PhySpeTree default set is 100.                  |
 
 
 
@@ -276,13 +276,13 @@ Use **build** in command line to reconstruct phylogenetic tree:
 
 
 ```bash
-$ physpe build -i example_hcp -o output --hcp
+$ PhySpeTree build -i example_hcp -o output --hcp
 ```
 * build phylogenetic tree by 16s ssu rna data
 
 
 ```bash
-$ physpe build -i example_16s_ssurna.fasta -o output --sran
+$ PhySpeTree build -i example_16s_ssurna.fasta -o output --sran
 ```
 
 
@@ -294,7 +294,7 @@ $ physpe build -i example_16s_ssurna.fasta -o output --sran
 |  -h     |  Print help message and exits.                                                                                                       |
 |  -i     |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.                                  |
 |  -o     |  A directory include output data (reconstruct tree files). The default output data name is Outdata.                                  |
-|  -t     |  Specify the number of processing threads (CPUs) to use for Physpe to reconstruct phylogenetic tree. The default is 1.               |
+|  -t     |  Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.               |
 |  --hcp  |  The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp. |
 |  --srna |  The 16srna (16 SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.                                              |
 
@@ -387,7 +387,7 @@ EAEKLFENLKVLYRAILKARPASAKGTYVRSFYIAPTMGVGIKIDPVAASKEVAEA
 Reconstruct phylogenetic tree ues example are by follow command:
 
 ```bash
-physpe build -i example_build_hcp -o build_hcp_tree --hcp
+PhySpeTree build -i example_build_hcp -o build_hcp_tree --hcp
 ```
 
 
@@ -424,7 +424,7 @@ $ grep '>' example_build_srna.fasta
 Reconstruct phylogenetic tree ues example are by follow command:
 
 ```bash
-physpe build -i example_build_srna.fasta -o build_srna_tree --srna
+PhySpeTree build -i example_build_srna.fasta -o build_srna_tree --srna
 ```
 
 Few seconds reconstruct phylogenetic tree completed and tree file are store in `build_srn_tree` directory
@@ -432,13 +432,13 @@ Few seconds reconstruct phylogenetic tree completed and tree file are store in `
 
 ### Advance options
 
-User enable choice more detail options with Physpe call software, detail advance options input
+User enable choice more detail options with PhySpeTree call software, detail advance options input
 ``must be enclosed in single quotes``.
 
 The follow is to use RAxML advance options example:
 
 ```bash
-$ physpe -i example_chp  --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1' --hcp
+$ PhySpeTree -i example_chp  --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1' --hcp
 ```
 
 **--muscle**
@@ -474,7 +474,7 @@ The default option:
 
 |  option | description                                                 |
 |:--------|:------------------------------------------------------------|
-|  -t     | Choice type of sequence. The physpe default set is protein. |
+|  -t     | Choice type of sequence. The PhySpeTree default set is protein. |
 |  -e     | Eneric file extensionc. physep set default is -gbl1.        |
 
 
@@ -492,11 +492,11 @@ The default option:
 
 |  option | description                                                                                                                          |
 |:--------|:------------------------------------------------------------------------------------------------------------------------------------ |
-|   -f    |  select algorithm. The physpe default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run. |
-|   -m    |  Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The physpe default set is PROTGAMMAJTTX.      |
+|   -f    |  select algorithm. The PhySpeTree default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run. |
+|   -m    |  Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The PhySpeTree default set is PROTGAMMAJTTX.      |
 |   -p    |  Specify a random number seed for the parsimony inferences. The physep default set is 12345.                                         |
-|   -x    |  Specify an integer number (random seed) and turn on rapid bootstrapping. The physpe default set is 12345.                           |
-|   -N    |  The same with -# specify the number of alternative runs on distinct starting trees. The physpe default set is 100.                  |
+|   -x    |  Specify an integer number (random seed) and turn on rapid bootstrapping. The PhySpeTree default set is 12345.                           |
+|   -N    |  The same with -# specify the number of alternative runs on distinct starting trees. The PhySpeTree default set is 100.                  |
 
 
 **--fasttree**
@@ -525,7 +525,7 @@ Use **combine** in command line like this:
 
 
 ```bash
-$ physpe -i organism_example_list.txt [options]*
+$ PhySpeTree -i organism_example_list.txt [options]*
 ```
 
 ### Combine options
@@ -566,7 +566,7 @@ $ conbine tree1.tree tree2.tree > combine.tree
 Combine tree command as like this:
 
 ```bash
-physpe combine -i combine.tree -o combineTree
+PhySpeTree combine -i combine.tree -o combineTree
 ```
 
 
@@ -593,7 +593,7 @@ annotation and management of phylogenetic trees. More detail with of iTol in [iT
 Use **iview** in command line like this:
 
 ```bash
-$ physpe iview -i organism_example_list.txt -range phylum
+$ PhySpeTree iview -i organism_example_list.txt -range phylum
 ```
 
 ### iview options
@@ -616,7 +616,7 @@ iview Annotating tree by kingdom, phylum, class or order example, download examp
 #### Annotating tree by kingdom
 
 ```bash
-$ physpe iview -i organism_example_list.txt --range kingdom
+$ PhySpeTree iview -i organism_example_list.txt --range kingdom
 Color range by kingdom was complete.
 ```
 
@@ -643,7 +643,7 @@ aeq     range   #BEBF5A Prokaryotes
 #### Annotating tree by phylum
 
 ```bash
-$ physpe iview -i organism_example_list.txt --range phylum
+$ PhySpeTree iview -i organism_example_list.txt --range phylum
 Color range by phylum was complete.
 ```
 
@@ -670,7 +670,7 @@ aeq     range   #865142 Bacteria
 #### Annotating tree by class
 
 ```bash
-$ physpe iview -i organism_example_list.txt --range class
+$ PhySpeTree iview -i organism_example_list.txt --range class
 Color range by class was complete.
 ```
 
@@ -697,7 +697,7 @@ aeq     range   #99D1DB Actinobacteria
 #### Annotating tree by order
 
 ```bash
-$ physpe iview -i organism_example_list.txt --range order
+$ PhySpeTree iview -i organism_example_list.txt --range order
 Color range by order was complete.
 ```
 
@@ -729,7 +729,7 @@ Use check module  check input organisms match in kegg database or 16s database.
 
 
 ```bash
-$ physpe check -i organism_example_list.txt -out check --ehcp
+$ PhySpeTree check -i organism_example_list.txt -out check --ehcp
 ```
 
 
@@ -755,7 +755,7 @@ for auto build tree. You can determine what proteins to be prepared by the check
 Use check command like follow: 
 
 ```bash
-$ physpe check -i organism_example_list.txt --ehcp
+$ PhySpeTree check -i organism_example_list.txt --ehcp
 
 'Ribosomal protein L1' ----------------------------------> p1.fasta
 
