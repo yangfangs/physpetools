@@ -1,25 +1,24 @@
-# coding=utf-8
-# ########################## Copyrights and License ############################
-#                                                                              #
-# Copyright 2016 Yang Fang <yangfangscu@gmail.com>                             #
-#                                                                              #
-# This file is part of Physpe.                                                 #
-# https://xiaofeiyangyang.github.io/physpetools/                               #
-#                                                                              #
-# Physpe is free software: you can redistribute it and/or modify it under      #
-# the terms of the GNU Lesser General Public License as published by the Free  #
-# Software Foundation, either version 3 of the License, or (at your option)    #
-# any later version.                                                           #
-#                                                                              #
-# Physpe is distributed in the hope that it will be useful, but WITHOUT ANY    #
-# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS    #
-# FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more #
-# details.                                                                     #
-#                                                                              #
-# You should have received a copy of the GNU Lesser General Public License     #
-# along with Physpe. If not, see <http://www.gnu.org/licenses/>.               #
-#                                                                              #
-# ##############################################################################
+# ########################## Copyrights and License #############################
+#                                                                               #
+# Copyright 2016 Yang Fang <yangfangscu@gmail.com>                              #
+#                                                                               #
+# This file is part of PhySpeTree.                                              #
+# https://xiaofeiyangyang.github.io/physpetools/                                #
+#                                                                               #
+# PhySpeTree is free software: you can redistribute it and/or modify it under   #
+# the terms of the GNU Lesser General Public License as published by the Free   #
+# Software Foundation, either version 3 of the License, or (at your option)     #
+# any later version.                                                            #
+#                                                                               #
+# PhySpeTree is distributed in the hope that it will be useful, but WITHOUT ANY #
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS     #
+# FOR A PARTICULAR PURPOSE. See the GNU Lesser General Public License for more  #
+# details.                                                                      #
+#                                                                               #
+# You should have received a copy of the GNU Lesser General Public License      #
+# along with PhySpeTree. If not, see <http://www.gnu.org/licenses/>.            #
+#                                                                               #
+# ###############################################################################
 
 
 """
@@ -31,7 +30,7 @@ version = '0.2.4'
 VERSION_DESC = (
     """
           --------------------------------------------------------------------------------
-                      Physpe (%s) - Reconstruct Phylogenetic Tree
+                      PhySpeTree (%s) - Reconstruct Phylogenetic Tree
 
           Citation:  null
 
@@ -48,7 +47,7 @@ def version_infor():
     author_info = 'Author: Yang Fang\n'
     print (VERSION_DESC)
     print (author_info)
-    print ("Physpe call follow software if you use physpe please don't forget cite this:\n ")
+    print ("PhySpeTree call follow software, if you use PhySpetree build tree please don't forget cite this:\n ")
     print ("============================CALL SOFTWARE INFO=============================================")
     print ('muscle version: '), (muscle_info + '\ncite:')
     print (citation['muscle'])
