@@ -35,18 +35,18 @@ from physpetool.version import version
 import argparse
 import sys
 
-# physpe version
-physep_version = version
+# PhySpeTree version
+physeptree_version = version
 
 APP_DESC = (
     """
           --------------------------------------------------------------------------------
-                      Physpe (%s) - Reconstruct Phylogenetic Tree
+                      PhySpeTree (%s) - Reconstruct Phylogenetic Tree
 
           Citation: null
 
           --------------------------------------------------------------------------------
-          """ % (physep_version))
+          """ % (physeptree_version))
 
 
 def main():
