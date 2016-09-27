@@ -134,9 +134,9 @@
     
         <li class="main active"><a href="#frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</a></li>
         
-            <li><a href="#physpe-inputoutput">Physpe input/output</a></li>
+            <li><a href="#physpetree-inputoutput">PhySpeTree input/output</a></li>
         
-            <li><a href="#physpe-reconstruct-phylogenetic-tree-database">Physpe reconstruct phylogenetic tree database</a></li>
+            <li><a href="#physpetree-reconstruct-phylogenetic-tree-database">PhySpeTree reconstruct phylogenetic tree database</a></li>
         
     
     </ul>
@@ -144,13 +144,13 @@
                 <div class="col-md-9" role="main">
 
 <h1 id="frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</h1>
-<h2 id="physpe-inputoutput">Physpe input/output</h2>
-<h3 id="1what-preparation-of-user-should-does-for-physpe">1.What preparation of user should does for Physpe?</h3>
+<h2 id="physpetree-inputoutput">PhySpeTree input/output</h2>
+<h3 id="1what-preparation-of-user-should-does-for-physpetree">1.What preparation of user should does for PhySpeTree?</h3>
 <p>User should prepare a list contain organisms names (abbreviation name are same with <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG database</a>
 one line write one species name only such as <a href="https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt">organism_example_list</a>
 You can retrieve the abbreviation names of organisms by <a href="http://rest.kegg.jp/list/organism">KEGG API</a></p>
-<h3 id="2whats-physpe-output-data-mean">2.What's Physpe output data mean?</h3>
-<p>Physpe output tow data files, the one is contain phylogenetic tree files default names is <code>Outdata</code>, another is a temp file.</p>
+<h3 id="2whats-physpetree-output-data-mean">2.What's PhySpeTree output data mean?</h3>
+<p>PhySpeTree output tow data files, the one is contain phylogenetic tree files default names is <code>Outdata</code>, another is a temp file.</p>
 <p>If you reconstruct phylogenetic tree by HCP (highly conserved protein) model, temp file include three directory <code>conserved_protein</code>, <code>muscle_alignment</code> and <code>concatenate</code></p>
 <ul>
 <li>conserved_protein: Store the *.fasta format files, which is conserved proteins retrieve by KEGG database.</li>
@@ -161,12 +161,12 @@ You can retrieve the abbreviation names of organisms by <a href="http://rest.keg
 <ul>
 <li>16srandata: Stroe  a file name is 16srandata.fata, contain the 16s RNA data retrieve by SILVA database.</li>
 <li>16sran_alignment: Store the <em>.fasta format is multiple sequence alignment data and the </em>.fasta-gb1, <em>fasta-gb1.html are select conserved blocks data (use Gblocks software),
-  the </em>.phy format file is convert to convert from gblok data by physpe to reconstruct phylogenetic tree.</li>
+  the </em>.phy format file is convert to convert from gblok data by PhySpeTree to reconstruct phylogenetic tree.</li>
 </ul>
 <p>Users can check the quality of every aspect of data by these temp files.</p>
-<h2 id="physpe-reconstruct-phylogenetic-tree-database">Physpe reconstruct phylogenetic tree database</h2>
-<h3 id="1whats-the-highly-conserved-proteins-are-physpe-use-reconstruct-phylogenetic-tree">1.what's the highly conserved proteins are physpe use reconstruct phylogenetic tree?</h3>
-<p>Physpe use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.</p>
+<h2 id="physpetree-reconstruct-phylogenetic-tree-database">PhySpeTree reconstruct phylogenetic tree database</h2>
+<h3 id="1whats-the-highly-conserved-proteins-are-physpetree-use-reconstruct-phylogenetic-tree">1.what's the highly conserved proteins are PhySpeTree use reconstruct phylogenetic tree?</h3>
+<p>PhySpeTree use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.</p>
 <p><strong>cite:</strong></p>
 <blockquote>
 <p>Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.</p>

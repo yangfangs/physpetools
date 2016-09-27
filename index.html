@@ -136,11 +136,11 @@
         
             <li><a href="#introduction">Introduction</a></li>
         
-            <li><a href="#physpe-workflow">Physpe workflow</a></li>
+            <li><a href="#physpetree-workflow">PhySpeTree workflow</a></li>
         
             <li><a href="#features">Features</a></li>
         
-            <li><a href="#physpe-module">Physpe module:</a></li>
+            <li><a href="#physpetree-module">PhySpeTree module:</a></li>
         
     
     </ul>
@@ -152,11 +152,11 @@
 <p>In some filed combine species phylogenetic tree do some prediction are very important for instance,
 protein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree
 is necessary, but the process of constructing the tree species is very tedious.</p>
-<p>We developing a command line software <strong>Physpe</strong>, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.
-(the species names must be a abbreviation same with <strong>KEGG database</strong> organisms abbreviation), the <strong>Physpe</strong> auto reconstruct species phylogenetic tree.</p>
-<h2 id="physpe-workflow">Physpe workflow</h2>
+<p>We developing a command line software <strong>PhySpeTree</strong>, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.
+(the species names must be a abbreviation same with <strong>KEGG database</strong> organisms abbreviation), the <strong>PhySpeTree</strong> auto reconstruct species phylogenetic tree.</p>
+<h2 id="physpetree-workflow">PhySpeTree workflow</h2>
 <p><img alt="workflow" src="./img/physpe2.png" /></p>
-<p>Physpe workflow includes the following steps:</p>
+<p>PhySpeTree workflow includes the following steps:</p>
 <ol>
 <li>
 <p>Prepare organisms names to reconstruct phylogenetic tree as <a href="https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt">example</a></p>
@@ -171,7 +171,7 @@ is necessary, but the process of constructing the tree species is very tedious.<
 <p>Do multiple sequence alignment by call Muscle.</p>
 </li>
 <li>
-<p>Concatenate conserved proteins by Physpe.</p>
+<p>Concatenate conserved proteins by PhySpeTree.</p>
 </li>
 <li>
 <p>Select conserved blocks by Call Gblosks.</p>
@@ -204,35 +204,35 @@ is necessary, but the process of constructing the tree species is very tedious.<
 <p>view tree by iTol (easy use iview module to view tree)</p>
 </li>
 </ul>
-<h2 id="physpe-module">Physpe module:</h2>
+<h2 id="physpetree-module">PhySpeTree module:</h2>
 <ul>
 <li><a href="usage/#autobuild">autobuild</a>: Auto reconstruct phylogenetic tree</li>
 </ul>
-<pre><code class="bash">physpe autobuild -i species_name_list.txt -o Output
+<pre><code class="bash">PhySpeTree autobuild -i species_name_list.txt -o Output
 </code></pre>
 
 <ul>
 <li><a href="usage/#build">build</a>: Reconstruct phylogenetic tree</li>
 </ul>
-<pre><code class="bash">physpe build -i species.fasta -o Output
+<pre><code class="bash">PhySpeTree build -i species.fasta -o Output
 </code></pre>
 
 <ul>
 <li><a href="usage/#combine">combine</a>: Combine multiple best phylogenetic tree </li>
 </ul>
-<pre><code class="bash">physpe combine -i multiple_tree.tree -o Output
+<pre><code class="bash">PhySpeTree combine -i multiple_tree.tree -o Output
 </code></pre>
 
 <ul>
 <li><a href="usage/#iview">iview</a>: view phylogenetic tree by iTol</li>
 </ul>
-<pre><code class="bash">physpe iview -i species_name_list.txt -o ivew -range phylum 
+<pre><code class="bash">PhySpeTree iview -i species_name_list.txt -o ivew -range phylum 
 </code></pre>
 
 <ul>
 <li><a href="usage/#check">check</a>:Check organisms for extend phylogenetic tree </li>
 </ul>
-<pre><code>physpe check -i organisms.txt -o checkout --protein
+<pre><code>PhySpeTree check -i organisms.txt -o checkout --protein
 </code></pre></div>
             
         </div>
@@ -280,5 +280,5 @@ is necessary, but the process of constructing the tree species is very tedious.<
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-09-21 12:06:20.888173
+Build Date UTC : 2016-09-27 09:59:08.222027
 -->
