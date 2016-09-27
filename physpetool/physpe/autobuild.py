@@ -64,7 +64,7 @@ Argument parse
                                 name is Outdata.")
     autobuild_args.add_argument('-t', action='store', dest='thread',
                                 type=int, default=1,
-                                help="Specify the number of processing threads (CPUs) to use for Physpe to reconstruct \
+                                help="Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct \
                                 phylogenetic tree. The default is 1.")
     autobuild_args.add_argument('-e', action='store', dest="extenddata",
                                 help="The extended data should be FASTA format to extend phylogenetic tree by \

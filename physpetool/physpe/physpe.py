@@ -92,7 +92,7 @@ def start(input):
         print(APP_DESC)
         parser.print_usage()
         print('Please use program option for details')
-        print('Example: \n$ physpe autobuild -h')
+        print('Example: \n$ PhySpeTree autobuild -h')
         return
     args = parser.parse_args(input[1:])
     # call subparser
