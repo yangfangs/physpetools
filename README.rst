@@ -458,7 +458,7 @@ Frequently Asked Questions (FAQ)
 --------------------------------------------------------------------------------
 
 PhySpeTree input/output
-^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 **1.What preparation of user should does for PhySpeTree?**
 
@@ -485,7 +485,7 @@ Users can check the quality of every aspect of data by these temp files.
 
 
 PhySpeTree reconstruct phylogenetic tree database
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 **1.what's the highly conserved proteins are PhySpeTree use reconstruct phylogenetic tree?**
 
 PhySpeTree use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
