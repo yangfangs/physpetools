@@ -76,7 +76,7 @@ Arguments parse
     advance_args.add_argument('--fasttree', action='store_true', dest='fasttree',
                               default=False, help='Reconstruct phylogenetic tree by FastTree.')
     advance_args.add_argument('--fasttree_p', action='store', dest='fasttree_parameter',
-                              default='', help='Set more detail RAxML parameters.')
+                              default='', help='Set more detail FastTree parameters.')
 
 
 def starting(args):
