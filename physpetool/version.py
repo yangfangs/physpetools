@@ -1,3 +1,4 @@
+# coding=utf-8
 # ########################## Copyrights and License #############################
 #                                                                               #
 # Copyright 2016 Yang Fang <yangfangscu@gmail.com>                              #
