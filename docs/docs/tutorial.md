@@ -34,11 +34,11 @@ afu
 .....
 ```   
 
-####  2.Reconstruct phylogenetic tree by highly conserved protein 
+####  2.Reconstruct phylogenetic tree by highly conserved protein method
 
-When use PhySpeTree auto build phylogenetic tree, user can use `--hcp` arguments to specify use highly conserved protein way to reconstruct phylogenetic tree. The default use 1 thread 
-to reconstruct phylogenetic tree, if you want to use more threads can use `-t` parameter to specify more threads to reconstruct phylogenetic tree. Here we use the default value 1 thread to 
-reconstruct 191 organisms phylogenetic tree.
+When the users use PhySpeTree automatically build phylogenetic tree, the users can use `--hcp` arguments to specify use highly conserved protein way to reconstruct phylogenetic tree. The default use 1 thread 
+to reconstruct phylogenetic tree, if you want to use more threads can use `-t` parameter to set the threads to be used. Here we use the default value 1 thread to 
+reconstruct 191 species phylogenetic tree.
 
 ```
 $ PhySpeTree autobuild -i 191speciesnames.txt -o 191_pro --hcp
@@ -67,13 +67,13 @@ Now loading data and constructing species phylogenetic tree......
 
 
 
-#### 4.Use iview annotating tree
+#### 4.Use iview module annotating tree
 
 PhySpeTree provide iview module to annotating tree by iTol, iTol is a very popular online tool for the display, annotation and management of phylogenetic trees.
-When you use iview module to annotating tree, only drop the output file to your iTol account to display tree.
+When you use iview module to annotating tree, only drop the output the generate files to your iTol account to display tree.
 
 
-* Change label names use `--labels`.
+* Change abbreviated label names to full names use `--labels` arguments.
 
 ```
 $ PhySpeTree iview -i 191speciesnames.txt --labels
