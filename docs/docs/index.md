@@ -40,17 +40,21 @@ PhySpeTree workflow includes the following steps:
 
 ## Features
 
-- Easy to use (one command line auto construct phylogenetic tree).
+- Easy to use (one command line automatically reconstruct phylogenetic tree).
 
-- Multi-selection (selection construct phylogenetic tree by highly conversion protein or 16s RNA).
+- Multi-selection (select reconstruct phylogenetic tree by highly conserved protein method or 16S SSU rRNA method).
 
-- Adjustable parameters (user can choice any enable parameters by own).
+- Adjustable parameters (the users can choice any enable parameters with corresponding invoke software).
 
-- User need provide a species list (reconstruct phylogenetic tree organisms) only.
+- Provide a species list (the abbreviation name of species) only.
 
-- combine best phylogenetic tree (combine multiple tree to a consensus tree)
+- Combine best phylogenetic tree (combine multiple tree to a consensus tree).
 
-- view tree by iTol (easy use iview module to view tree)
+- View tree by iTol (easy use iview module to annotating tree).
+
+- Flexible. (more software to invoke).
+
+- Versatile software (can build species tree or gene tree and also ability extend new species to tree).
 
 
 ## PhySpeTree module:
