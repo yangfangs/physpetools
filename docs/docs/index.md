@@ -4,18 +4,18 @@
 
 ## Introduction
 
-In some filed combine species phylogenetic tree do some prediction are very important for instance,
-protein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree
-is necessary, but the process of constructing the tree species is very tedious.
+In some filed combine phylogenetic species tree do some prediction are very important. for instance,
+protein-protein interactions and gene pathway members predictions. In this predicted reconstructed a exact species tree
+is necessary, but the process of reconstructing the species or gene tree is very tedious.
 
-We developing a command line software **PhySpeTree**, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.
-(the species names must be a abbreviation same with **KEGG database** organisms abbreviation), the **PhySpeTree** auto reconstruct species phylogenetic tree.
+Here we developing a command line software **PhySpeTree**, which only one command line to reconstruct phylogenetic tree. The users only need provide a txt files, witch contain species names only
+(the species names must be abbreviated names are same with **KEGG database** organisms abbreviations). Then automatically reconstruct phylogenetic tree by **PhySpeTree**.
 
 
 ## PhySpeTree workflow
 
 
-![workflow](img/physpe2.png)
+![workflow](img/PhySpeTree_work_follow.png)
 
 
 PhySpeTree workflow includes the following steps:
