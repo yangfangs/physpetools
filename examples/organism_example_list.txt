@@ -8,6 +8,3 @@ adg
 adk
 aeh
 aeq
-
-
-

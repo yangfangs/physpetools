@@ -20,21 +20,21 @@ Here we developing a command line software **PhySpeTree**, which only one comman
 
 PhySpeTree workflow includes the following steps:
 
-1. Prepare organisms names to reconstruct phylogenetic tree as [example](https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt)
+1. Prepare the abbreviation names of species to reconstruct phylogenetic tree, for example: [species abbreviated names][1]
 
-2. Choice the way to reconstruct phylogenetic tree, use 16s RNA or Highly conversion proteins.
+2. Choice the method to reconstruct phylogenetic tree (16s SSU rRNA method or Highly conserved proteins method).
 
-3. Query database and parse retrieve fasta format files.
+3. Query database and parse retrieved 16S rRNA sequences or highly conserved proteins (FASTA format).
 
-4. Do multiple sequence alignment by call Muscle.
+4. Multiple sequence alignment by Muscle or ClustalW.
 
-5. Concatenate conserved proteins by PhySpeTree.
+5. Concatenate highly conserved proteins by PhySpeTree.
 
-6. Select conserved blocks by Call Gblosks.
+6. Select conserved blocks by Gblosks.
 
-7. Reconstructing phylogenetic tree by Call RAxML.
+7. Reconstructing phylogenetic tree by RAxML or FastTree.
 
-8. Output reconstruct phylogenetic tree files.
+8. Output reconstructed phylogenetic tree files.
 
 
 
@@ -86,3 +86,6 @@ PhySpeTree iview -i species_name_list.txt -o ivew -range phylum
 ```
 PhySpeTree check -i organisms.txt -o checkout --protein
 ```
+
+
+[1]: example/organism_example_list.txt
