@@ -132,7 +132,7 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#one-command-line-auto-reconstruct-phylogenetic-tree">One command line auto reconstruct phylogenetic tree</a></li>
+        <li class="main active"><a href="#physpetree-one-command-line-automatically-reconstruct-phylogenetic-tree">PhySpeTree: one command line automatically reconstruct phylogenetic tree</a></li>
         
             <li><a href="#introduction">Introduction</a></li>
         
@@ -147,61 +147,67 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="one-command-line-auto-reconstruct-phylogenetic-tree">One command line auto reconstruct phylogenetic tree</h1>
+<h1 id="physpetree-one-command-line-automatically-reconstruct-phylogenetic-tree">PhySpeTree: one command line automatically reconstruct phylogenetic tree</h1>
 <h2 id="introduction">Introduction</h2>
-<p>In some filed combine species phylogenetic tree do some prediction are very important for instance,
-protein-protein interactions and gene pathway members prediction. In this predicted construct a exact species phylogenetic tree
-is necessary, but the process of constructing the tree species is very tedious.</p>
-<p>We developing a command line software <strong>PhySpeTree</strong>, which only one command line to construct species phylogenetic tree. User need to provide a txt files, witch contain species names only.
-(the species names must be a abbreviation same with <strong>KEGG database</strong> organisms abbreviation), the <strong>PhySpeTree</strong> auto reconstruct species phylogenetic tree.</p>
+<p>In some filed combine phylogenetic species tree do some prediction are very important. for instance,
+protein-protein interactions and gene pathway members predictions. In this predicted reconstructed a exact species tree
+is necessary, but the process of reconstructing the species or gene tree is very tedious.</p>
+<p>Here we developing a command line software <strong>PhySpeTree</strong>, which only one command line to reconstruct phylogenetic tree. The users only need provide a txt files, witch contain species names only
+(the species names must be abbreviated names are same with <strong>KEGG database</strong> organisms abbreviations). Then automatically reconstruct phylogenetic tree by <strong>PhySpeTree</strong>.</p>
 <h2 id="physpetree-workflow">PhySpeTree workflow</h2>
-<p><img alt="workflow" src="./img/physpe2.png" /></p>
+<p><img alt="workflow" src="./img/PhySpeTree_work_follow.png" /></p>
 <p>PhySpeTree workflow includes the following steps:</p>
 <ol>
 <li>
-<p>Prepare organisms names to reconstruct phylogenetic tree as <a href="https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt">example</a></p>
+<p>Prepare the abbreviation names of species to reconstruct phylogenetic tree, for example: <a href="./example/organism_example_list.txt">species abbreviated names</a></p>
 </li>
 <li>
-<p>Choice the way to reconstruct phylogenetic tree, use 16s RNA or Highly conversion proteins.</p>
+<p>Choice the method to reconstruct phylogenetic tree (16s SSU rRNA method or Highly conserved proteins method).</p>
 </li>
 <li>
-<p>Query database and parse retrieve fasta format files.</p>
+<p>Query database and parse retrieved 16S rRNA sequences or highly conserved proteins (FASTA format).</p>
 </li>
 <li>
-<p>Do multiple sequence alignment by call Muscle.</p>
+<p>Multiple sequence alignment by Muscle or ClustalW.</p>
 </li>
 <li>
-<p>Concatenate conserved proteins by PhySpeTree.</p>
+<p>Concatenate highly conserved proteins by PhySpeTree.</p>
 </li>
 <li>
-<p>Select conserved blocks by Call Gblosks.</p>
+<p>Select conserved blocks by Gblosks.</p>
 </li>
 <li>
-<p>Reconstructing phylogenetic tree by Call RAxML.</p>
+<p>Reconstructing phylogenetic tree by RAxML or FastTree.</p>
 </li>
 <li>
-<p>Output reconstruct phylogenetic tree files.</p>
+<p>Output reconstructed phylogenetic tree files.</p>
 </li>
 </ol>
 <h2 id="features">Features</h2>
 <ul>
 <li>
-<p>Easy to use (one command line auto construct phylogenetic tree).</p>
+<p>Easy to use (one command line automatically reconstruct phylogenetic tree).</p>
 </li>
 <li>
-<p>Multi-selection (selection construct phylogenetic tree by highly conversion protein or 16s RNA).</p>
+<p>Multi-selection (select reconstruct phylogenetic tree by highly conserved protein method or 16S SSU rRNA method).</p>
 </li>
 <li>
-<p>Adjustable parameters (user can choice any enable parameters by own).</p>
+<p>Adjustable parameters (the users can choice any enable parameters with corresponding invoke software).</p>
 </li>
 <li>
-<p>User need provide a species list (reconstruct phylogenetic tree organisms) only.</p>
+<p>Provide a species list (the abbreviation name of species) only.</p>
 </li>
 <li>
-<p>combine best phylogenetic tree (combine multiple tree to a consensus tree)</p>
+<p>Combine best phylogenetic tree (combine multiple tree to a consensus tree).</p>
 </li>
 <li>
-<p>view tree by iTol (easy use iview module to view tree)</p>
+<p>View tree by iTol (easy use iview module to annotating tree).</p>
+</li>
+<li>
+<p>Flexible. (more software to invoke).</p>
+</li>
+<li>
+<p>Versatile software (can build species tree or gene tree and also ability extend new species to tree).</p>
 </li>
 </ul>
 <h2 id="physpetree-module">PhySpeTree module:</h2>
@@ -280,5 +286,5 @@ is necessary, but the process of constructing the tree species is very tedious.<
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-09-27 09:59:08.222027
+Build Date UTC : 2016-09-30 08:51:56.104324
 -->
