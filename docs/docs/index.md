@@ -1,5 +1,5 @@
 
-# One command line auto reconstruct phylogenetic tree
+# PhySpeTree: one command line automatically reconstruct phylogenetic tree
 
 
 ## Introduction
