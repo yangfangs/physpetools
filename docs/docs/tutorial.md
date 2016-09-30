@@ -362,7 +362,7 @@ cho     range   #99A01A Alveolates
 
 ####  1.Prepare organisms names list
 
-Here auto reconstruct 52 plants phylogenetic tree by PhySpeTree highly conserved protein way organisms list [download][4]
+Here we automatically reconstruct 52 plants phylogenetic tree by PhySpeTree use highly conserved protein way. The organisms list [download][4]
 
 ```
 $ cat 52plantsnames.txt
@@ -382,7 +382,7 @@ cmo
 .....
 ```
 
-####  2.Reconstruct phylogenetic tree by highly conserved protein 
+####  2.Reconstruct phylogenetic tree by highly conserved protein method
 
 ```
 $ PhySpeTree autobuild -i 52plantsnames.txt -o 52plant_pro --srna -t 6
@@ -460,47 +460,43 @@ cvr     Chlorella variabilis
 .....
 ```  
 
-* Tree view in iTol
+* Tree view by iTol
 
 ![52_plants_pro_full_name](img/52_plants_pro_full_name.png)
 
 
-* Color range by phylum
+* Color range by class
 
 ```
 $ PhySpeTree iview -i 52plantsnames.txt -o iview --range -a phylum
-Color range by phylum was complete.
-Color range annotation was save in iview/range_color_by_phylum.txt
-
+Color range by class was complete.
+Color range annotation was save in iview/range_color_by_class.txt
 $ cd iview
 
-$ cat range_color_by_phylum.txt 
+$ cat range_color_by_class.txt 
 TREE_COLORS
 SEPARATOR TAB
 DATA
-aly     range   #DF73CB Plants
-ath     range   #DF73CB Plants
-atr     range   #DF73CB Plants
-bdi     range   #DF73CB Plants
-bpg     range   #DF73CB Plants
-brp     range   #DF73CB Plants
-bvg     range   #DF73CB Plants
-cam     range   #DF73CB Plants
-ccp     range   #DF73CB Plants
-cic     range   #DF73CB Plants
-cit     range   #DF73CB Plants
-cme     range   #DF73CB Plants
-cmo     range   #DF73CB Plants
-crb     range   #DF73CB Plants
-cre     range   #DF73CB Plants
-csl     range   #DF73CB Plants
-csv     range   #DF73CB Plants
-cvr     range   #DF73CB Plants
-egr     range   #DF73CB Plants
+aly     range   #1C748D Eudicots
+ath     range   #1C748D Eudicots
+atr     range   #C4DE94 Basal Magnoliophyta
+bdi     range   #854B9F Monocots
+bpg     range   #784CE5 Green algae
+brp     range   #1C748D Eudicots
+bvg     range   #1C748D Eudicots
+cam     range   #1C748D Eudicots
+ccp     range   #CEDDB3 Red algae
+cic     range   #1C748D Eudicots
+cit     range   #1C748D Eudicots
+cme     range   #CEDDB3 Red algae
+cmo     range   #1C748D Eudicots
+crb     range   #1C748D Eudicots
+cre     range   #784CE5 Green algae
+csl     range   #784CE5 Green algae
 .....
 ```
 
-* Tree view in iTol
+* Tree view use iview module by iTol
 
 ![52_plants_pro_full_name_color](img/52_plants_pro_full_name_color.png)
 
@@ -522,7 +518,7 @@ Some time we want to extend tree with a new organisms, use PhySpeTree user can e
 
 
 
-Here we want extend tree of life with a new organism `Lokiarchaeum sp. GC14_75 (loki)`.
+Here we extend tree of life with a new organism `Lokiarchaeum sp. GC14_75 (loki)`.
 
 
 #### 1.Prepare new organism 16s rRNA sequence
