@@ -59,7 +59,7 @@ PhySpeTree workflow includes the following steps:
 
 ## PhySpeTree module:
 
-* [autobuild](usage.md#autobuild): Auto reconstruct phylogenetic tree
+* [autobuild](usage.md#autobuild): Automatically reconstruct phylogenetic tree
 
 ```bash
 PhySpeTree autobuild -i species_name_list.txt -o Output
@@ -79,7 +79,7 @@ PhySpeTree combine -i multiple_tree.tree -o Output
 ```
 
 
-* [iview](usage.md#iview): view phylogenetic tree by iTol
+* [iview](usage.md#iview): View and annotating phylogenetic tree by iTol
 
 ```bash
 PhySpeTree iview -i species_name_list.txt -o ivew -range phylum 

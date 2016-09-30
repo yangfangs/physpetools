@@ -1,10 +1,10 @@
 # PhySpeTree Tutorial 
 
-## Auto bulid Tree of life
+## Automatically reconstruct Tree of Life
 
 The tree of life always used to describe the relations between organisms are living and extinct.
-Here we reconstruct tree of life tree, which contain 191 organisms. We use two way auto reconstruct phylogenetic tree. One way is use highly
-conserved protein and another way is use 16s SSU RNA to reconstruct phylogenetic tree.
+Here we reconstruct tree of life, which contain 191 organisms. We use two method automatically reconstruct phylogenetic tree. One way is use highly
+conserved protein method and another way is use 16S SSU rRNA to reconstruct Tree of Life.
 
 
 ### Auto build Tree of life by highly conserved protein
@@ -13,10 +13,10 @@ conserved protein and another way is use 16s SSU RNA to reconstruct phylogenetic
 
 ![physpe_concept_hcp](img/physpe_concept_hcp.png)
 
-PhySpeTree reconstruct phylogenetic tree by highly conserved protein (hcp) use concatenate highly conserved protein to a supermatrix then reconstruct phylogenetic tree.
-Here we prepare 31 highly conserved protein to auto reconstruct phylogenetic tree. you also can searching what's the [31 highly protein](faq.md#Physpe_reconstruct_phylogenetic_tree_database) used.
+In highly conserved protein (hcp) method automatically build phylogenetic tree by concatenate highly conserved protein to a supermatrix then build tree.
+Here we prepare 31 highly conserved proteins to automatically reconstruct phylogenetic tree. you also can searching what's the [31 highly protein](faq.md#Physpe_reconstruct_phylogenetic_tree_database) be used.
 
-####  1.Prepare organisms names list
+####  1.Prepare species names list
 
 Prepare the organisms name are abbreviation name are same with [KEGG organisms][2] abbreviation. you can get KEGG organisms abbreviation form [KEGG API][3]. 
 Here we reconstruct The tree of life use 191 organisms names are [download][1]. the organisms names list as follow:
