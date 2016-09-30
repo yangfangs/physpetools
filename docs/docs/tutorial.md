@@ -149,7 +149,7 @@ mja     range   #996433 Archaea
 ![191_species_rna_full_color](img/191_species_pro_full_name_color.png)
 
 
-### Auto build Tree of life by 16s SSU RNA
+### Auto build Tree of Life by 16s SSU RNA
 
 * **Concept**
 
@@ -160,7 +160,7 @@ phylogenetic tree.
 
 
 
-####  1.Prepare organism names list, 191 organisms names list [download][1]  
+####  1.Prepare organism names list, 191 organisms names list [download][1]
 
 ```bash
 $ cat 191speciesnames.txt 
@@ -175,7 +175,7 @@ afu
 .....
 ```
 
-####  2.Reconstruct phylogenetic tree by 16s SSU RNA  
+####  2.Reconstruct phylogenetic tree by 16s SSU RNA method
 
 ```
 $ PhySpeTree autobuild -i 191speciesnames.txt -o 191_rna --srna
@@ -235,7 +235,7 @@ Now loading data and constructing species phylogenetic tree......
 
 #### 4.Use iview annotating tree
 
-* Change label names use `--labels`
+* Change abbreviated label names to full names use `--labels`
 
 ```
 $ PhySpeTree iview -i 191speciesnames.txt --labels
