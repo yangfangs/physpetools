@@ -172,10 +172,10 @@ afu
 .....
 </code></pre>
 
-<h4 id="2reconstruct-phylogenetic-tree-by-highly-conserved-protein">2.Reconstruct phylogenetic tree by highly conserved protein</h4>
-<p>When use PhySpeTree auto build phylogenetic tree, user can use <code>--hcp</code> arguments to specify use highly conserved protein way to reconstruct phylogenetic tree. The default use 1 thread 
-to reconstruct phylogenetic tree, if you want to use more threads can use <code>-t</code> parameter to specify more threads to reconstruct phylogenetic tree. Here we use the default value 1 thread to 
-reconstruct 191 organisms phylogenetic tree.</p>
+<h4 id="2reconstruct-phylogenetic-tree-by-highly-conserved-protein-method">2.Reconstruct phylogenetic tree by highly conserved protein method</h4>
+<p>When the users use PhySpeTree automatically build phylogenetic tree, the users can use <code>--hcp</code> arguments to specify use highly conserved protein way to reconstruct phylogenetic tree. The default use 1 thread 
+to reconstruct phylogenetic tree, if you want to use more threads can use <code>-t</code> parameter to set the threads to be used. Here we use the default value 1 thread to 
+reconstruct 191 species phylogenetic tree.</p>
 <pre><code>$ PhySpeTree autobuild -i 191speciesnames.txt -o 191_pro --hcp
 Loading organisms names success.....
 
@@ -198,11 +198,11 @@ Now loading data and constructing species phylogenetic tree......
 
 <h4 id="3get-the-tree-file">3.Get the tree file</h4>
 <p><img alt="191_species_rna" src="../img/191_species_pro.png" /></p>
-<h4 id="4use-iview-annotating-tree">4.Use iview annotating tree</h4>
+<h4 id="4use-iview-module-annotating-tree">4.Use iview module annotating tree</h4>
 <p>PhySpeTree provide iview module to annotating tree by iTol, iTol is a very popular online tool for the display, annotation and management of phylogenetic trees.
-When you use iview module to annotating tree, only drop the output file to your iTol account to display tree.</p>
+When you use iview module to annotating tree, only drop the output the generate files to your iTol account to display tree.</p>
 <ul>
-<li>Change label names use <code>--labels</code>.</li>
+<li>Change abbreviated label names to full names use <code>--labels</code> arguments.</li>
 </ul>
 <pre><code>$ PhySpeTree iview -i 191speciesnames.txt --labels
 Change abbreviation names to full names complete
@@ -348,7 +348,7 @@ Now loading data and constructing species phylogenetic tree......
 
 <h4 id="3get-the-tree-file_1">3.Get the tree file</h4>
 <p><img alt="191_species_rna" src="../img/191_species_rna.png" /></p>
-<h4 id="4use-iview-annotating-tree_1">4.Use iview annotating tree</h4>
+<h4 id="4use-iview-annotating-tree">4.Use iview annotating tree</h4>
 <ul>
 <li>Change label names use <code>--labels</code></li>
 </ul>
@@ -486,7 +486,7 @@ cmo
 .....
 </code></pre>
 
-<h4 id="2reconstruct-phylogenetic-tree-by-highly-conserved-protein_1">2.Reconstruct phylogenetic tree by highly conserved protein</h4>
+<h4 id="2reconstruct-phylogenetic-tree-by-highly-conserved-protein">2.Reconstruct phylogenetic tree by highly conserved protein</h4>
 <pre><code>$ PhySpeTree autobuild -i 52plantsnames.txt -o 52plant_pro --srna -t 6
 Loading organisms names success.....
 
@@ -521,7 +521,7 @@ Wed, 07 Sep 2016 18:51:39 kegg DB[line:94] INFO retrieve from Kegg DB 21 highly 
 
 <h4 id="3get-tree-file">3.Get tree file</h4>
 <p><img alt="52_plants_pro" src="../img/52_plants_pro.png" /></p>
-<h4 id="4use-iview-annotating-tree_2">4.Use iview annotating tree</h4>
+<h4 id="4use-iview-annotating-tree_1">4.Use iview annotating tree</h4>
 <ul>
 <li>Change label names use <code>--labels</code></li>
 </ul>
