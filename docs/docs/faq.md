@@ -6,18 +6,18 @@
 
 ### 1.What preparation of user should does for PhySpeTree?
 
-User should prepare a list contain organisms names (abbreviation name are same with [KEGG database](http://www.genome.jp/kegg/catalog/org_list.html)
+The users should prepare a TXT files, which contain species abbreviate names (abbreviation name are same with [KEGG database](http://www.genome.jp/kegg/catalog/org_list.html)
 one line write one species name only such as [organism_example_list](https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt)
 You can retrieve the abbreviation names of organisms by [KEGG API](http://rest.kegg.jp/list/organism)
 
 
 ### 2.What's PhySpeTree output data mean?
 
-PhySpeTree output tow data files, the one is contain phylogenetic tree files default names is ``Outdata``, another is a temp file.
+PhySpeTree output two data files, the one is contain phylogenetic tree files default names is ``Outdata``, another is a temp file.
 
-If you reconstruct phylogenetic tree by HCP (highly conserved protein) model, temp file include three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
+If you reconstruct phylogenetic tree by HCP (highly conserved protein) method, temp file include three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
 
-  * conserved_protein: Store the *.fasta format files, which is conserved proteins retrieve by KEGG database.
+  * conserved_protein: Store the FASTA format files, which are conserved proteins retrieve by KEGG database.
   * muscle_alignment: Store files are multiple sequence alignment by muscle.
   * concatenate: Include concatenate highly conserved protein data (*.fasta format file) and select conserved blocks data (*.fasta-gb1 format file).
 
@@ -27,7 +27,7 @@ If you reconstruct phylogenetic tree by SRNA (16s RNA) model temp file include t
   * 16sran_alignment: Store the *.fasta format is multiple sequence alignment data and the *.fasta-gb1, *fasta-gb1.html are select conserved blocks data (use Gblocks software),
   the *.phy format file is convert to convert from gblok data by PhySpeTree to reconstruct phylogenetic tree.
 
-Users can check the quality of every aspect of data by these temp files.
+The users can check the quality of every aspect of data by these temp files.
 
 
 ## PhySpeTree reconstruct phylogenetic tree database
