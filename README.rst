@@ -21,7 +21,7 @@ Here we developing a command line software **PhySpeTree**, which only one comman
 PhySpeTree workflow
 ----------------------------------------------------------------------------
 
-.. image:: https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/physpe2.png
+.. image:: https://github.com/xiaofeiyangyang/physpetools/blob/master/docs/docs/img/PhySpeTree_work_follow.png
 
 
 PhySpeTree workflow includes the following steps:
