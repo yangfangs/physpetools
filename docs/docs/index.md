@@ -1,15 +1,16 @@
 
-# PhySpeTree: one command line automatically reconstruct phylogenetic tree
+# PhySpeTree: automatically reconstructing phylogenetic species tree
 
 
 ## Introduction
 
-In some filed combine phylogenetic species tree do some prediction are very important. for instance,
-protein-protein interactions and gene pathway members predictions. In this predicted reconstructed a exact species tree
+Combining phylogenetic species tree with some predictions is very important in some filed. For instance,
+protein-protein interactions and the predictions of gene pathway new members. In this predictions the exact species tree to be reconstructed
 is necessary, but the process of reconstructing the species or gene tree is very tedious.
 
-Here we developing a command line software **PhySpeTree**, which only one command line to reconstruct phylogenetic tree. The users only need provide a txt files, witch contain species names only
-(the species names must be abbreviated names are same with **KEGG database** organisms abbreviations). Then automatically reconstruct phylogenetic tree by **PhySpeTree**.
+Here we developed easy-to-use package named **PhySpeTree** that is convenient to reconstruct species trees by one command line.
+The advantage is that users only need to input species names and PhySpeTree automatically downloads
+and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.
 
 
 ## PhySpeTree workflow
