@@ -160,13 +160,13 @@ and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.</p>
 <p>PhySpeTree workflow includes the following steps:</p>
 <ol>
 <li>
-<p>Prepare the abbreviation names of species to reconstruct phylogenetic tree, for example: <a href="./example/organism_example_list.txt">species abbreviated names</a></p>
+<p>Prepare organisms names (abbreviated name) to reconstruct species tree as <code>example &lt;https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt&gt;</code>_.</p>
 </li>
 <li>
-<p>Choice the method to reconstruct phylogenetic tree (16s SSU rRNA method or Highly conserved proteins method).</p>
+<p>Two parallel pipelines to reconstruct species tree, the SSU rRNA (--sran) or Highly conserved proteins (--hcp).</p>
 </li>
 <li>
-<p>Query database and parse retrieved 16S rRNA sequences or highly conserved proteins (FASTA format).</p>
+<p>Querying, parsing and retrieving FASTA format data.</p>
 </li>
 <li>
 <p>Multiple sequence alignment by Muscle or ClustalW.</p>
@@ -178,34 +178,34 @@ and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.</p>
 <p>Select conserved blocks by Gblosks.</p>
 </li>
 <li>
-<p>Reconstructing phylogenetic tree by RAxML or FastTree.</p>
+<p>Reconstructing species tree by RAxML or FastTree.</p>
 </li>
 <li>
-<p>Output reconstructed phylogenetic tree files.</p>
+<p>Output reconstruct phylogenetic tree files.</p>
 </li>
 </ol>
 <h2 id="features">Features</h2>
 <ul>
 <li>
-<p>Easy to use (one command line automatically reconstruct phylogenetic tree).</p>
+<p>Easy to use (one command line automatically reconstruct species tree).</p>
 </li>
 <li>
-<p>Multi-selection (select reconstruct phylogenetic tree by highly conserved protein method or 16S SSU rRNA method).</p>
+<p>Multi-selection (select reconstruct species tree by HCP method or SSU rRNA method).</p>
 </li>
 <li>
 <p>Adjustable parameters (the users can choice any enable parameters with corresponding invoke software).</p>
 </li>
 <li>
-<p>Provide a species list (the abbreviation name of species) only.</p>
+<p>Provide species names (species abbreviated names) as input only.</p>
 </li>
 <li>
 <p>Combine best phylogenetic tree (combine multiple tree to a consensus tree).</p>
 </li>
 <li>
-<p>View tree by iTol (easy use iview module to annotating tree).</p>
+<p>View tree by iTol (easily use iview module to annotate tree).</p>
 </li>
 <li>
-<p>Flexible. (more software to invoke).</p>
+<p>Flexible (more software to be invoked with corresponding enable parameters).</p>
 </li>
 <li>
 <p>Versatile software (can build species tree or gene tree and also ability extend new species to tree).</p>
@@ -287,5 +287,5 @@ and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.</p>
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-10-23 13:37:51.823415
+Build Date UTC : 2016-10-24 04:57:28.771693
 -->

@@ -151,7 +151,7 @@
 
 <h1 id="usage-and-examples">Usage and Examples</h1>
 <h2 id="autobuild">autobuild</h2>
-<p>User should prepare a txt file contain the abbreviation names of organisms <a href="../example/organism_example_list.txt">organism_example_list.txt</a></p>
+<p>Users should prepare a txt file contain the abbreviation names of organisms <a href="../example/organism_example_list.txt">organism_example_list.txt</a></p>
 <p>Use <strong>autobuild</strong> in command line like this:</p>
 <pre><code class="bash">$ PhySpeTree -i organism_example_list.txt [options]*
 </code></pre>
@@ -171,7 +171,7 @@
 </tr>
 <tr>
 <td align="left">-i</td>
-<td align="left">Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.</td>
+<td align="left">Input a txt file contain the a abbreviated species names are same with KEGG species abbreviation.</td>
 </tr>
 <tr>
 <td align="left">-o</td>
@@ -204,7 +204,7 @@
 </tbody>
 </table>
 <h3 id="example">example</h3>
-<p>When use autobuild command to reconstruct phylogenetic tree, user should prepare a organism list with abbreviation names are same with <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG organism list</a></p>
+<p>When use autobuild command to build species tree, users should prepare a organism list with species names (abbreviated names) are same with <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG organism list</a></p>
 <p>List format like follow or download <a href="../example/organism_example_list.txt">organism_example_list.txt</a></p>
 <pre><code class="bash">$ cat organism_example_list.txt
 aca
@@ -219,7 +219,7 @@ aeh
 aeq
 </code></pre>
 
-<h4 id="auto-build-phylogenetic-tree-by-highly-conserved-proteins"><strong>Auto build phylogenetic tree by highly conserved proteins:</strong></h4>
+<h4 id="auto-build-phylogenetic-tree-by-highly-conserved-proteins-method"><strong>Auto build phylogenetic tree by highly conserved proteins method:</strong></h4>
 <pre><code class="bash">$ PhySpeTree autobuild -i organism_example_list.txt --hcp
 Loading organisms names success.....
 
@@ -239,7 +239,7 @@ Now loading data and constructing species phylogenetic tree......
 
 </code></pre>
 
-<p>When auto reconstruct phylogenetic tree by <code>hcp</code> method was completed, you will get file layout like this:</p>
+<p>When auto build phylogenetic tree by <code>hcp</code> method was completed, you will get file layout like this:</p>
 <pre><code>log.log
 Outdata/
         RAxML_bestTree.T1
@@ -278,7 +278,7 @@ Outdata/
 </ul>
 </li>
 <li>
-<p>temp: The temp data by PhySpeTree, <code>it's very important to user to check the key steps</code>.</p>
+<p>temp: The temp data by PhySpeTree, <code>it's very important for users to check the key steps</code>.</p>
 <ul>
 <li>conserved_protein: Contain highly conserved proteins retrieve form KEGG database.</li>
 <li>hcp_alignment: Contain highly conserved proteins do multiple sequence alignment by muscle.</li>
@@ -294,7 +294,7 @@ Outdata/
 </ul>
 </li>
 </ul>
-<h4 id="auto-build-phylogenetic-tree-by-16s-ssu-rna"><strong>Auto build phylogenetic tree by 16s SSU RNA:</strong></h4>
+<h4 id="auto-build-phylogenetic-tree-by-ssu-rrna-method"><strong>Auto build phylogenetic tree by SSU rRNA method:</strong></h4>
 <pre><code class="bash">$ PhySpeTree autobuild -i organism_example_list.txt --srna
 Loading organisms names success.....
 
@@ -312,7 +312,7 @@ Now loading data and constructing species phylogenetic tree......
 
 </code></pre>
 
-<p>When auto reconstruct phylogenetic tree by <code>srna</code> method was completed, you will get file layout like this:</p>
+<p>When auto build phylogenetic tree by <code>srna</code> method was completed, you will get file layout like this:</p>
 <pre><code>log.log
 Outdata/
         RAxML_bestTree.T1
@@ -347,15 +347,15 @@ Outdata/
 <p>temp: The temp data by PhySpeTree, <code>it's very important to user to check the key steps</code>.</p>
 <ul>
 <li>
-<p>16srnadata: Contain 16s SSU RNA data retrieved form SILVA database.</p>
+<p>16srnadata: Contain SSU rRNA data retrieved form SILVA database.</p>
 <ul>
-<li>16srnadata.fasta: FASTA format data contain input organism 16s SSU RNA data.</li>
+<li>16srnadata.fasta: FASTA format data contain input organism SSU rRNA data.</li>
 </ul>
 </li>
 <li>
 <p>16srna_alignment: Contain the concatenate highly conserved proteins result and select conserved blocks data.</p>
 <ul>
-<li>16srandata.fasta: Contain 16s SSU RNA data with multiple sequence alignment already.</li>
+<li>16srandata.fasta: Contain SSU rRNA data with multiple sequence alignment already.</li>
 <li>16srandata.fasta-gb1: Select conserved blocks result (by Gblocks).</li>
 <li>16srandata.fasta-gb1.htm: Select conserved blocks result view by html format.</li>
 <li>16srandata.fasta-gb1.phy: Convert FASTA format to PHYLIP format</li>
@@ -365,7 +365,7 @@ Outdata/
 </li>
 </ul>
 <h3 id="advance-options">Advance options</h3>
-<p>User enable choice more detail options with PhySpeTree call software, detail advance options input
+<p>Users enable choice more detail options with PhySpeTree call software, detail advance options input
 <code>must be enclosed in single quotes</code>.</p>
 <p>The follow is to use RAxML advance options example:</p>
 <pre><code class="bash">$ PhySpeTree -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
@@ -457,7 +457,7 @@ Outdata/
 <p><strong>--fasttree_p</strong></p>
 <p>Set more detail RAxML parameters.More options about clustalw please to see <a href="http://www.microbesonline.org/fasttree/">FastTree</a>.</p>
 <h2 id="build">build</h2>
-<p>User can build tree by own 16s rna data or highly conserved proteins.</p>
+<p>Users can build tree by own SSU rRNA data or highly conserved proteins.</p>
 <p>Use <strong>build</strong> in command line to reconstruct phylogenetic tree:</p>
 <ul>
 <li>build phylogenetic tree by highly conserved proteins</li>
