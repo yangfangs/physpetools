@@ -47,17 +47,21 @@ PhySpeTree workflow includes the following steps:
 
 Features
 --------------------------------------------------------------------------------
-- Easy to use (one command line auto construct phylogenetic tree).
+- Easy to use (one command line automatically reconstruct species tree).
 
-- Multi-selection (selection construct phylogenetic tree by highly conversion protein or 16s RNA).
+- Multi-selection (select reconstruct species tree by HCP method or SSU rRNA method).
 
-- Adjustable parameters (user can choice any enable parameters by own).
+- Adjustable parameters (the users can choice any enable parameters with corresponding invoke software).
 
-- User need provide a species list (reconstruct phylogenetic tree organisms) only.
+- Provide species names (species abbreviated names) as input only.
 
-- combine best phylogenetic tree (combine multiple tree to a consensus tree)
+- Combine best phylogenetic tree (combine multiple tree to a consensus tree).
 
-- view tree by iTol (easy use iview module to view tree)
+- View tree by iTol (easily use iview module to annotate tree).
+
+- Flexible (more software to be invoked with corresponding enable parameters).
+
+- Versatile software (can build species tree or gene tree and also ability extend new species to tree).
 
 
 Install
@@ -87,7 +91,7 @@ To upgrade to latest version:
 
     $pip install PhySpeTree-*.tar.gz
 
-3. You can install **PhySpeTree** by download the latest released version:
+3. You can install PhySpeTree by download the latest released version form github:
 
 - `Download <https://github.com/xiaofeiyangyang/physpetools/releases>`_ latest released version **.tar.gz** file.
 
@@ -97,7 +101,7 @@ To upgrade to latest version:
 
 	$ pip install physpetools-v*.tar.gz
 
-4. Use git command clone **PhySpeTree**:
+4. 4. Use git command clone **PhySpeTree** to install
 
 .. code-block:: console
 
