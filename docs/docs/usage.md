@@ -5,7 +5,7 @@
 
 ## autobuild
 
-Users should prepare a txt file contain the abbreviation names of organisms [organism_example_list.txt][1]
+Users should prepare a TXT file contain species abbreviated names, such as [organism_example_list.txt][1]
 
 Use **autobuild** in command line like this:
 
@@ -30,7 +30,7 @@ $ PhySpeTree -i organism_example_list.txt [options]*
 
 ### example
 
-When use autobuild command to build species tree, users should prepare a organism list with species names (abbreviated names) are same with [KEGG organism list][2]
+When use autobuild command to build species tree, users should prepare a organism list with species names (abbreviated names) are same with [KEGG organism list][2].
 
 List format like follow or download [organism_example_list.txt][1]
 
@@ -70,7 +70,7 @@ Now loading data and constructing species phylogenetic tree......
 
 ```
 
-When auto build phylogenetic tree by `hcp` method was completed, you will get file layout like this:
+When auto build phylogenetic tree by `hcp` method was completed, you will get files layout like this:
 
 ```
 log.log
@@ -142,7 +142,7 @@ Now loading data and constructing species phylogenetic tree......
 ```
 
 
-When auto build phylogenetic tree by `srna` method was completed, you will get file layout like this:
+When auto build phylogenetic tree by `srna` method was completed, you will get files layout like this:
 
 ```
 log.log
@@ -270,7 +270,7 @@ The default option:
 
 Users can build tree by own SSU rRNA data or highly conserved proteins.
 
-Use **build** in command line to reconstruct phylogenetic tree:
+Use **build** module in command line to reconstruct phylogenetic tree:
 
 * build phylogenetic tree by highly conserved proteins
 
@@ -278,6 +278,7 @@ Use **build** in command line to reconstruct phylogenetic tree:
 ```bash
 $ PhySpeTree build -i example_hcp -o output --hcp
 ```
+
 * build phylogenetic tree by SSU rRNA data
 
 
@@ -391,7 +392,7 @@ PhySpeTree build -i example_build_hcp -o build_hcp_tree --hcp
 ```
 
 
-Few seconds reconstruct phylogenetic tree completed and tree file are store in `build_hcp_tree` directory
+Few seconds reconstruct phylogenetic tree completed and tree file are store in `build_hcp_tree` directory.
 
 `NOTE`:
 
@@ -448,7 +449,7 @@ $ PhySpeTree -i example_chp  --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100
 
 **--muscle_p**
 
-  Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see [MUSCLE Manual](http://www.drive5.com/muscle/manual/options.html)
+  Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see [MUSCLE Manual](http://www.drive5.com/muscle/manual/options.html).
 
 The default option:
 
@@ -585,8 +586,8 @@ combine/
 
 ## iview
 
-Annotating tree by iTol use iview module. Users can use iview command to color tree range by kingdom, phylum, class or order.
-the range annotation files can used in [iTol](http://itol.embl.de/), iTol is a very popular online tool for the display, 
+PhySpeTree provide annotating tree by iTol use iview module. Users can use iview command to color tree range by kingdom, phylum, class or order.
+the range annotated files can used in [iTol](http://itol.embl.de/), iTol is a very popular online tool for the display, 
 annotation and management of phylogenetic trees. More detail with of iTol in [iTol help](http://itol.embl.de/help.cgi) 
 
 
