@@ -21,11 +21,11 @@ and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.
 
 PhySpeTree workflow includes the following steps:
 
-1. Prepare the abbreviation names of species to reconstruct phylogenetic tree, for example: [species abbreviated names][1]
+1. Prepare organisms names (abbreviated name) to reconstruct species tree as `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
 
-2. Choice the method to reconstruct phylogenetic tree (16s SSU rRNA method or Highly conserved proteins method).
+2. Two parallel pipelines to reconstruct species tree, the SSU rRNA (--sran) or Highly conserved proteins (--hcp).
 
-3. Query database and parse retrieved 16S rRNA sequences or highly conserved proteins (FASTA format).
+3. Querying, parsing and retrieving FASTA format data.
 
 4. Multiple sequence alignment by Muscle or ClustalW.
 
@@ -33,9 +33,9 @@ PhySpeTree workflow includes the following steps:
 
 6. Select conserved blocks by Gblosks.
 
-7. Reconstructing phylogenetic tree by RAxML or FastTree.
+7. Reconstructing species tree by RAxML or FastTree.
 
-8. Output reconstructed phylogenetic tree files.
+8. Output reconstruct phylogenetic tree files.
 
 
 

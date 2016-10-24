@@ -27,19 +27,19 @@ PhySpeTree workflow
 
 PhySpeTree workflow includes the following steps:
 
-1. Prepare organisms names to reconstruct phylogenetic tree as `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
+1. Prepare organisms names (abbreviated name) to reconstruct species tree as `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
 
-2. Choice the way to reconstruct phylogenetic tree, use 16s RNA or Highly conversion proteins.
+2. Two parallel pipelines to reconstruct species tree, the SSU rRNA (--sran) or Highly conserved proteins (--hcp).
 
-3. Query database and parse retrieve fasta format files.
+3. Querying, parsing and retrieving FASTA format data.
 
-4. Do multiple sequence alignment by call Muscle.
+4. Multiple sequence alignment by Muscle or ClustalW.
 
-5. Concatenate conserved proteins by PhySpeTree.
+5. Concatenate highly conserved proteins by PhySpeTree.
 
-6. Select conserved blocks by Call Gblosks.
+6. Select conserved blocks by Gblosks.
 
-7. Reconstructing phylogenetic tree by Call RAxML.
+7. Reconstructing species tree by RAxML or FastTree.
 
 8. Output reconstruct phylogenetic tree files.
 
