@@ -23,9 +23,9 @@ $ PhySpeTree -i organism_example_list.txt [options]*
 |  -t     |  Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.               |
 |  -e     |  The extended data should be FASTA format to extend phylogenetic tree by --ehcp or --esrna option.                                  |
 |  --hcp  |  The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp. |
-|  --ehcp |  The ehcp (extend highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree. |
-|  --srna |  The srna (16s SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.                                              |
-|  --esrna|  The esrna (extend 16s SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.        |
+|  --ehcp |  The ehcp (extend highly conserved protein) mode is use highly conserved proteins and extend highly protein (users provide) to reconstruct phylogenetic tree. |
+|  --srna |  The srna (SSU rRNA) mode is use SSU rRNA data to reconstruct phylogenetic tree.                                              |
+|  --esrna|  The esrna (extend SSU rRNA) mode is use SSU rRNA data and extend SSU rRNA (users provide) to reconstruct phylogenetic tree.        |
 
 
 ### example
@@ -172,7 +172,7 @@ Outdata/
     - RAxML_bootstrap.T1: Bootstrap result by RAxML
     - RAxML_info.T1: The info of run RAxMl.
     
-* temp: The temp data by PhySpeTree, `it's very important to user to check the key steps`.
+* temp: The temp data by PhySpeTree, `it's very important to users to check the key steps`.
 
     - 16srnadata: Contain SSU rRNA data retrieved form SILVA database.
     
@@ -278,7 +278,7 @@ Use **build** in command line to reconstruct phylogenetic tree:
 ```bash
 $ PhySpeTree build -i example_hcp -o output --hcp
 ```
-* build phylogenetic tree by 16s ssu rna data
+* build phylogenetic tree by SSU rRNA data
 
 
 ```bash
@@ -296,7 +296,7 @@ $ PhySpeTree build -i example_16s_ssurna.fasta -o output --sran
 |  -o     |  A directory include output data (reconstruct tree files). The default output data name is Outdata.                                  |
 |  -t     |  Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.               |
 |  --hcp  |  The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp. |
-|  --srna |  The 16srna (16 SSU RNA) mode is use 16s SSU RNA data to reconstruct phylogenetic tree.                                              |
+|  --srna |  The srna (16 SSU RNA) mode is use SSU rRNA data to reconstruct phylogenetic tree.                                              |
 
 
 ### example
@@ -305,7 +305,7 @@ $ PhySpeTree build -i example_16s_ssurna.fasta -o output --sran
 #### **Build phylogenetic tree by highly conserved proteins**
 
 
-When use build to reconstruct phylogenetic tree you should prepare a directory contain highly conserved proteins such as [example_build_hcp][3]. In this example
+When use build to reconstruct phylogenetic tree, you should prepare a directory contain highly conserved proteins such as [example_build_hcp][3]. In this example
 contain ten highly conserved proteins p1~p10, in each highly conserved proteins contain 10 organism.
 
 Download [example_build_hcp][3] you can use the tar command to unpack:
@@ -395,14 +395,14 @@ Few seconds reconstruct phylogenetic tree completed and tree file are store in `
 
 `NOTE`:
 
-* Prepare how many highly proteins which user decide, we recommend not less than 10 highly conserved proteins.
+* Prepare how many highly proteins which users decide, we recommend not less than 10 highly conserved proteins.
 * Each protein must have the same organisms.
 
 
-#### **Build phylogenetic tree by 16s RNA**
+#### **Build phylogenetic tree by SSU rRNA**
 
-Use build command to construct phylogenetic tree by 16s RNA sequence, user should prepare a FASTA format file
-contain each organisms 16s RNA sequence as [example_build_srna][4]. In this example contain ten organism 16s SSU RNA sequence.
+Use build command to construct phylogenetic tree by SSU rRNA sequence, users should prepare a FASTA format file
+contain each species SSU rRNA sequence as [example_build_srna][4]. In this example contain ten species SSU rRNA sequence.
 
 
 Download [example_build_srna][4] and check the organisms names:
@@ -432,7 +432,7 @@ Few seconds reconstruct phylogenetic tree completed and tree file are store in `
 
 ### Advance options
 
-User enable choice more detail options with PhySpeTree call software, detail advance options input
+Users enable choice more detail options with PhySpeTree call software, detail advance options input
 ``must be enclosed in single quotes``.
 
 The follow is to use RAxML advance options example:
@@ -511,7 +511,7 @@ The default option:
 ## combine
 
 
-User should prepare a combine tree file by Combine command to combine tree files.
+Users should prepare a combine tree file by Combine command to combine tree files.
 
 
 In Linux you can easy combine more tree to a tree file, for example:
@@ -540,8 +540,8 @@ $ PhySpeTree -i organism_example_list.txt [options]*
 
 ### example
 
-User can use combine command to combine tree from different method method, in our example combine tree from two way reconstruct
-The `tree1.tree` reconstruct by highly conserved proteins, the `tree2.tree` reconstruct by 16s SSU RNA data, exapmel data
+Users can use combine command to combine tree from different method method, in our example combine tree from two way reconstruct
+The `tree1.tree` reconstruct by highly conserved proteins, the `tree2.tree` reconstructed by SSU rRNA data, exapmel data
 [example_combine_tree.tar.gz][4]
 
 Download [example_combine_tree.tar.gz][4] and unpack:
@@ -585,7 +585,7 @@ combine/
 
 ## iview
 
-Annotating tree by iTol use iview module. User can use iview command to color tree range by kingdom, phylum, class or order.
+Annotating tree by iTol use iview module. Users can use iview command to color tree range by kingdom, phylum, class or order.
 the range annotation files can used in [iTol](http://itol.embl.de/), iTol is a very popular online tool for the display, 
 annotation and management of phylogenetic trees. More detail with of iTol in [iTol help](http://itol.embl.de/help.cgi) 
 
@@ -603,7 +603,7 @@ $ PhySpeTree iview -i organism_example_list.txt -range phylum
 |  -h    |  Print help message and exits.                                                                      |
 |  -i    |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
 |  -o    |  A directory contain range text file. The directory name is iview.                                  |
-|  -a    |  Colored ranges by user assign, user can choice from kingdom phylum class and order.                                 |
+|  -a    |  Colored ranges by users assign, users can choice from kingdom phylum class and order.                                 |
 | -r/--range   | Annotating ranges by kingdom, phylum, class or order. The default is phylum.                  |
 | -l/--labels  | Change labels from abbreviation names to full names.                                          |
 
@@ -725,7 +725,7 @@ aeq     range   #F1A2B7 Adlercreutzia
 ## check
 
 
-Use check module  check input organisms match in kegg database or 16s database.
+The check module can check input organisms match in KEGG database or SSU rRNA database.
 
 
 ```bash
@@ -748,7 +748,7 @@ $ PhySpeTree check -i organism_example_list.txt -out check --ehcp
 
 #### check organism for extend autobuild
 
-When user use autobuild to reconstruct phylogenetic tree with `--ehcp` method, you should prepare highly conserved proteins as extend proteins
+When users use autobuild to reconstruct phylogenetic tree with `--ehcp` method, you should prepare highly conserved proteins as extend proteins
 for auto build tree. You can determine what proteins to be prepared by the check command. Download example for check [organism_example_list.txt][1]
 
 

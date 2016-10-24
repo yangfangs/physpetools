@@ -151,7 +151,7 @@ autobuild options
 
 --ehcp
 
-    The ehcp (highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree.
+    The ehcp (highly conserved protein) mode is use highly conserved proteins and extend highly protein (users provide) to reconstruct phylogenetic tree.
 
 --srna
 
@@ -159,7 +159,7 @@ autobuild options
 
 --esrna
 
-    The 16srna (16 SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.
+    The 16srna (16 SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (users provide) to reconstruct phylogenetic tree.
 
 
 Advance options
@@ -237,7 +237,7 @@ The follow is to use RAxML advance options example:
 build
 ^^^^^^^^^^^^^^^^^^^^
 
-Users can build tree by own 16s rna data or highly conserved proteins.
+Users can build tree by own SSU rRNA data or highly conserved proteins.
 
 Use **build** in command line to reconstruct phylogenetic tree:
 
@@ -249,7 +249,7 @@ Use **build** in command line to reconstruct phylogenetic tree:
     $ PhySpeTree build -i example_hcp -o output --hcp
 
 
-* build phylogenetic tree by 16s ssu rna data
+* build phylogenetic tree by SSU rRNA data
 
 
 .. code-block:: console
@@ -277,7 +277,7 @@ build options
 
 --ehcp
 
-    The ehcp (highly conserved protein) mode is use highly conserved proteins and extend highly protein (user provide) to reconstruct phylogenetic tree.
+    The ehcp (highly conserved protein) mode is use highly conserved proteins and extend highly protein (users provide) to reconstruct phylogenetic tree.
 
 --srna
 
@@ -285,14 +285,14 @@ build options
 
 --esrna
 
-    The 16srna (16 SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (user provide) to reconstruct phylogenetic tree.
+    The 16srna (16 SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (users provide) to reconstruct phylogenetic tree.
 
 
 
 Advance options
 #####################
 
-User enable choice more detail options with PhySpeTree call software, detail advance options input
+Users enable choice more detail options with PhySpeTree call software, detail advance options input
 ``must be enclosed in single quotes``.
 
 The follow is to use RAxML advance options example:
@@ -423,7 +423,7 @@ iview options
     Annotating ranges by kingdom, phylum, class or order. The default is phylum.
 
 -a
-    Colored ranges by user assign, user can choice from kingdom phylum class and order.
+    Colored ranges by users assign, users can choice from kingdom phylum class and order.
 
 -l
     Change labels from abbreviation names to full names.
@@ -540,7 +540,7 @@ Ribosomal protein S13                                  K02953              K0295
 
 
 
-**2.How the 16s RAN database to created?**
+**2.How the SSU rRAN database to created?**
 
 The SSU rRAN database was created by `SILVA <https://www.arb-silva.de/>`_ rRNA database project (version: SILVA SSU 123.1 release)
 with sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence.
