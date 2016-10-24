@@ -147,10 +147,10 @@
 
 <h1 id="physpetree-tutorial">PhySpeTree Tutorial</h1>
 <h2 id="automatically-reconstruct-tree-of-life">Automatically reconstruct Tree of Life</h2>
-<p>The tree of life always used to describe the relations between organisms are living and extinct.
-Here we reconstruct tree of life, which contain 191 organisms. We use two method automatically reconstruct phylogenetic tree. One way is use highly
-conserved protein method and another way is use 16S SSU rRNA to reconstruct Tree of Life.</p>
-<h3 id="auto-build-tree-of-life-by-highly-conserved-protein">Auto build Tree of life by highly conserved protein</h3>
+<p>The Tree of Life always used to describe the relations between organisms are living and extinct.
+Here we reconstruct tree of life, which contain 190 organisms. We use two method automatically reconstruct phylogenetic tree. One way is use highly
+conserved protein method and another is use SSU rRNA method to reconstruct Tree of Life.</p>
+<h3 id="auto-build-tree-of-life-by-highly-conserved-protein-method">Auto build Tree of life by highly conserved protein method</h3>
 <ul>
 <li><strong>Concept</strong></li>
 </ul>
@@ -158,8 +158,8 @@ conserved protein method and another way is use 16S SSU rRNA to reconstruct Tree
 <p>In highly conserved protein (hcp) method automatically build phylogenetic tree by concatenate highly conserved protein to a supermatrix then build tree.
 Here we prepare 31 highly conserved proteins to automatically reconstruct phylogenetic tree. you also can searching what's the <a href="../faq/#Physpe_reconstruct_phylogenetic_tree_database">31 highly protein</a> be used.</p>
 <h4 id="1prepare-species-names-list">1.Prepare species names list</h4>
-<p>Prepare the organisms name are abbreviation name are same with <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG organisms</a> abbreviation. you can get KEGG organisms abbreviation form <a href="http://rest.kegg.jp/list/organism">KEGG API</a>. 
-Here we reconstruct The tree of life use 191 organisms names are <a href="../example/191speciesnames.txt">download</a>. the organisms names list as follow:</p>
+<p>Preparing the organisms names (abbreviated names) are same with <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG organisms</a> abbreviation. you can get KEGG organisms abbreviation form <a href="http://rest.kegg.jp/list/organism">KEGG API</a>. 
+Here we reconstructed tree of life use 191 organisms names are <a href="../example/191speciesnames.txt">download</a>. the organisms names list as follow:</p>
 <pre><code class="bash">$ cat 191speciesnames.txt 
 neq
 pai
@@ -173,9 +173,9 @@ afu
 </code></pre>
 
 <h4 id="2reconstruct-phylogenetic-tree-by-highly-conserved-protein-method">2.Reconstruct phylogenetic tree by highly conserved protein method</h4>
-<p>When the users use PhySpeTree automatically build phylogenetic tree, the users can use <code>--hcp</code> arguments to specify use highly conserved protein way to reconstruct phylogenetic tree. The default use 1 thread 
-to reconstruct phylogenetic tree, if you want to use more threads can use <code>-t</code> parameter to set the threads to be used. Here we use the default value 1 thread to 
-reconstruct 191 species phylogenetic tree.</p>
+<p>When users use PhySpeTree automatically build phylogenetic tree, the users can use <code>--hcp</code> arguments to specify use highly conserved protein method to build tree. The default use 1 thread 
+to reconstruct phylogenetic tree. If you want to use more threads can use <code>-t</code> parameter to set the threads to be used. Here we used the default value 1 thread to 
+build 191 species phylogenetic tree.</p>
 <pre><code>$ PhySpeTree autobuild -i 191speciesnames.txt -o 191_pro --hcp
 Loading organisms names success.....
 
@@ -468,7 +468,7 @@ cho     range   #99A01A Alveolates
 <p><img alt="191_species_rna_full_color_class" src="../img/191_species_rna_full_name_color_class.png" /></p>
 <h2 id="auto-build-a-plant-tree">Auto build a plant tree</h2>
 <h4 id="1prepare-organisms-names-list">1.Prepare organisms names list</h4>
-<p>Here we automatically reconstruct 52 plants phylogenetic tree by PhySpeTree use highly conserved protein way. The organisms list <a href="../example/52plantsnames.txt">download</a></p>
+<p>Here we automatically reconstructed 52 plants phylogenetic tree by PhySpeTree use highly conserved protein method. The species list <a href="../example/52plantsnames.txt">download</a>.</p>
 <pre><code>$ cat 52plantsnames.txt
 aly
 ath
@@ -604,8 +604,8 @@ csl     range   #784CE5 Green algae
 </ul>
 <p><img alt="physpe_concept_erna" src="../img/physpe_concept_erna.png" /></p>
 <p>Here we extend tree of life with a new organism <code>Lokiarchaeum sp. GC14_75 (loki)</code>.</p>
-<h4 id="1prepare-new-organism-16s-rrna-sequence">1.Prepare new organism 16s rRNA sequence</h4>
-<p>When use 16s rRNA way to extend a new organism user need prepare the new organism 16s rRNA sequence, Here we prepare the new organism <code>Lokiarchaeum sp. GC14_75 (loki)</code>
+<h4 id="1prepare-new-organism-ssu-rrna-sequence">1.Prepare new organism SSU rRNA sequence</h4>
+<p>When use SSU rRNA method to extend a new organism user need prepare the new organism SSU rRNA sequence, Here we prepared the new organism <code>Lokiarchaeum sp. GC14_75 (loki)</code>
 16s rRNA sequence save with FASTA format. example download <a href="../example/extend_rna_loki.fasta">extend_rna_olki.fasta</a></p>
 <pre><code>$ cat extend_rna_olki.fasta
 &gt;loki
@@ -627,9 +627,9 @@ GAGGGGGGAGAAGUCGUAACAAGGUAGCCGUAGGGGAACCUGCGGCUGGAUCACCUCCU
 
 </code></pre>
 
-<h4 id="2reconstruct-phylogenetic-tree-by-16s-ssu-rrna-extend-with-a-new-organism">2.Reconstruct phylogenetic tree by 16s SSU rRNA extend with a new organism</h4>
-<p>Reconstruct phylogenetic tree by 16s SSU rRNA method, you should use <code>--esrna</code> to specify the method and use <code>-e</code> parameter specify
-the extend organism 16s rRNA sequence file.</p>
+<h4 id="2reconstruct-phylogenetic-tree-by-ssu-rrna-extend-with-a-new-organism">2.Reconstruct phylogenetic tree by SSU rRNA extend with a new organism</h4>
+<p>Reconstruct phylogenetic tree by SSU rRNA method, you should use <code>--esrna</code> to specify the method and use <code>-e</code> parameter specify
+the extend organism SSU rRNA sequence file.</p>
 <pre><code>$ PhySpeTree autobuild -i 191speciesnames.txt -o extend_rna -e extend_rna_loki.fasta --esrna -t 6
 Loading organisms names success.....
 
@@ -705,8 +705,8 @@ Check result is store in /check/physpe_echp_extend.txt
 ......
 </code></pre>
 
-<h4 id="2-prepare-highly-conserved-protein">2. Prepare highly conserved protein</h4>
-<p>After use check we should prepare seven highly conserved protein store this highly conserved protein to p1 ~ p7 FASTA format files.
+<h4 id="2-prepare-highly-conserved-proteins">2. Prepare highly conserved proteins</h4>
+<p>After use check command, we should prepare seven highly conserved protein store this highly conserved protein to p1 ~ p7 FASTA format files.
 The highly protein protein names are know with <code>check</code> command. Here we prepare p1 ~ p7 highly conserved proteins to <code>Lokiarchaeum sp. GC14_75 (loki)</code>.
 Download <a href="../example/highly_conserved_protein_loki.fasta">highly_conserved_protein_loki</a></p>
 <pre><code>$ cd extend_pro_loki
@@ -723,7 +723,7 @@ EV
 
 </code></pre>
 
-<h4 id="3reconstruct-phylogenetic-tree-by-highly-conserved-protein-extend-with-a-new-organism">3.Reconstruct phylogenetic tree by highly conserved protein extend with a new organism</h4>
+<h4 id="3reconstruct-phylogenetic-tree-by-highly-conserved-protein-method-extend-with-a-new-organism">3.Reconstruct phylogenetic tree by highly conserved protein method extend with a new organism</h4>
 <pre><code>$ PhySpeTree autobuild -i 191speciesnames.txt -o extend_pro_loki -e highly_consrved_protein_loki --ehcp -t 6
 Loading organisms names success.....
 
