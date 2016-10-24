@@ -21,7 +21,7 @@ and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.
 
 PhySpeTree workflow includes the following steps:
 
-1. Prepare organisms names (abbreviated name) to reconstruct species tree as `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
+1. Prepare organisms names (abbreviated name) to reconstruct species tree as [species abbreviated names][1]
 
 2. Two parallel pipelines to reconstruct species tree, the SSU rRNA (--sran) or Highly conserved proteins (--hcp).
 
