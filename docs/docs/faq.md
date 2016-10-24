@@ -6,9 +6,9 @@
 
 ### 1.What preparation of user should does for PhySpeTree?
 
-The users should prepare a TXT files, which contain species abbreviate names (abbreviation name are same with [KEGG database](http://www.genome.jp/kegg/catalog/org_list.html)
-one line write one species name only such as [organism_example_list](https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt)
-You can retrieve the abbreviation names of organisms by [KEGG API](http://rest.kegg.jp/list/organism)
+The users should prepare a TXT files, which contain species abbreviate names (abbreviated names are same with [KEGG database](http://www.genome.jp/kegg/catalog/org_list.html).
+one line write one species name only such as [organism_example_list](https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt).
+You can retrieve the Abbreviation of species names by [KEGG API](http://rest.kegg.jp/list/organism)
 
 
 ### 2.What's PhySpeTree output data mean?

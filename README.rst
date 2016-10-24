@@ -121,7 +121,7 @@ Usage
 autobuild
 ^^^^^^^^^^^^^^^^^^^^
 
-User should prepare a txt file contain the abbreviation names of organisms `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
+Users should prepare a txt file contain the species names (abbreviated names) `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
 
 Use **autobuild** in command line like this:
 
@@ -137,7 +137,7 @@ autobuild options
     Print help message and exits.
 
 -i
-    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
+    Input a txt file contain the a abbreviated species names are same with KEGG species abbreviation.
 
 -o
     A directory include output data (reconstruct tree files). The default output data name is Outdata.
@@ -165,7 +165,7 @@ autobuild options
 Advance options
 #####################
 
-User enable choice more detail options with PhySpeTree call software, detail advance options input
+Users enable choice more detail options with PhySpeTree call software, detail advance options input
 ``must be enclosed in single quotes``.
 
 The follow is to use RAxML advance options example:
@@ -237,7 +237,7 @@ The follow is to use RAxML advance options example:
 build
 ^^^^^^^^^^^^^^^^^^^^
 
-User can build tree by own 16s rna data or highly conserved proteins.
+Users can build tree by own 16s rna data or highly conserved proteins.
 
 Use **build** in command line to reconstruct phylogenetic tree:
 
@@ -364,7 +364,7 @@ The follow is to use RAxML advance options example:
 combine
 ^^^^^^^^^^^^^^^^^^^^
 
-User should prepare a combine tree file by Combine command to combine tree files.
+Users should prepare a combine tree file by Combine command to combine tree files.
 
 
 In Linux you can easy combine more tree to a tree file, for example:
@@ -465,11 +465,11 @@ Frequently Asked Questions (FAQ)
 PhySpeTree input/output
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-**1.What preparation of user should does for PhySpeTree?**
+**1.What preparation of users should does for PhySpeTree?**
 
-User should prepare a list contain organisms names (abbreviation name are same with `KEGG database <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
+The users should prepare a TXT files, which contain species abbreviate names (abbreviated names are same with `KEGG database <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
 one line write one species name only such as `organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
-You can retrieve the abbreviation names of organisms by `KEGG API <http://rest.kegg.jp/list/organism>`_.
+You can retrieve the Abbreviation of species names by `KEGG API <http://rest.kegg.jp/list/organism>`_.
 
 
 **2.What's PhySpeTree output data mean?**
@@ -542,7 +542,7 @@ Ribosomal protein S13                                  K02953              K0295
 
 **2.How the 16s RAN database to created?**
 
-The 16s RAN database was created by `SILVA <https://www.arb-silva.de/>`_ rRNA database project (version: SILVA SSU 123.1 release)
+The SSU rRAN database was created by `SILVA <https://www.arb-silva.de/>`_ rRNA database project (version: SILVA SSU 123.1 release)
 with sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence.
 
 

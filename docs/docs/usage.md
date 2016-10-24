@@ -5,7 +5,7 @@
 
 ## autobuild
 
-User should prepare a txt file contain the abbreviation names of organisms [organism_example_list.txt][1]
+Users should prepare a txt file contain the abbreviation names of organisms [organism_example_list.txt][1]
 
 Use **autobuild** in command line like this:
 
@@ -18,7 +18,7 @@ $ PhySpeTree -i organism_example_list.txt [options]*
 | option |  Description                                                                                                                          |
 |:------- |:-------------------------------------------------------------------------------------------------------------------------------------|
 |  -h     |  Print help message and exits.                                                                                                       |
-|  -i     |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.                                  |
+|  -i     |  Input a txt file contain the a abbreviated species names are same with KEGG species abbreviation.                                  |
 |  -o     |  A directory include output data (reconstruct tree files). The default output data name is Outdata.                                  |
 |  -t     |  Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.               |
 |  -e     |  The extended data should be FASTA format to extend phylogenetic tree by --ehcp or --esrna option.                                  |
@@ -30,7 +30,7 @@ $ PhySpeTree -i organism_example_list.txt [options]*
 
 ### example
 
-When use autobuild command to reconstruct phylogenetic tree, user should prepare a organism list with abbreviation names are same with [KEGG organism list][2]
+When use autobuild command to build species tree, users should prepare a organism list with species names (abbreviated names) are same with [KEGG organism list][2]
 
 List format like follow or download [organism_example_list.txt][1]
 
@@ -48,7 +48,7 @@ aeh
 aeq
 ```
 
-#### **Auto build phylogenetic tree by highly conserved proteins:**
+#### **Auto build phylogenetic tree by highly conserved proteins method:**
 
 ```bash
 $ PhySpeTree autobuild -i organism_example_list.txt --hcp
@@ -70,7 +70,7 @@ Now loading data and constructing species phylogenetic tree......
 
 ```
 
-When auto reconstruct phylogenetic tree by `hcp` method was completed, you will get file layout like this:
+When auto build phylogenetic tree by `hcp` method was completed, you will get file layout like this:
 
 ```
 log.log
@@ -108,7 +108,7 @@ Outdata/
     - RAxML_bootstrap.T1: Bootstrap result by RAxML
     - RAxML_info.T1: The info of run RAxMl.
     
-* temp: The temp data by PhySpeTree, `it's very important to user to check the key steps`.
+* temp: The temp data by PhySpeTree, `it's very important for users to check the key steps`.
 
     - conserved_protein: Contain highly conserved proteins retrieve form KEGG database.
     - hcp_alignment: Contain highly conserved proteins do multiple sequence alignment by muscle.
@@ -120,7 +120,7 @@ Outdata/
         + concatenate.fasta-gb1.phy: Convert FASTA format to PHYLIP format
 
 
-####  **Auto build phylogenetic tree by 16s SSU RNA:**
+####  **Auto build phylogenetic tree by SSU rRNA method:**
 
 
 ```bash
@@ -142,7 +142,7 @@ Now loading data and constructing species phylogenetic tree......
 ```
 
 
-When auto reconstruct phylogenetic tree by `srna` method was completed, you will get file layout like this:
+When auto build phylogenetic tree by `srna` method was completed, you will get file layout like this:
 
 ```
 log.log
@@ -174,13 +174,13 @@ Outdata/
     
 * temp: The temp data by PhySpeTree, `it's very important to user to check the key steps`.
 
-    - 16srnadata: Contain 16s SSU RNA data retrieved form SILVA database.
+    - 16srnadata: Contain SSU rRNA data retrieved form SILVA database.
     
-        + 16srnadata.fasta: FASTA format data contain input organism 16s SSU RNA data.
+        + 16srnadata.fasta: FASTA format data contain input organism SSU rRNA data.
          
     - 16srna_alignment: Contain the concatenate highly conserved proteins result and select conserved blocks data.
     
-        + 16srandata.fasta: Contain 16s SSU RNA data with multiple sequence alignment already.
+        + 16srandata.fasta: Contain SSU rRNA data with multiple sequence alignment already.
         + 16srandata.fasta-gb1: Select conserved blocks result (by Gblocks).
         + 16srandata.fasta-gb1.htm: Select conserved blocks result view by html format.
         + 16srandata.fasta-gb1.phy: Convert FASTA format to PHYLIP format
@@ -188,7 +188,7 @@ Outdata/
 
 ### Advance options
 
-User enable choice more detail options with PhySpeTree call software, detail advance options input
+Users enable choice more detail options with PhySpeTree call software, detail advance options input
 ``must be enclosed in single quotes``.
 
 The follow is to use RAxML advance options example:
@@ -268,7 +268,7 @@ The default option:
 
 ##  build
 
-User can build tree by own 16s rna data or highly conserved proteins.
+Users can build tree by own SSU rRNA data or highly conserved proteins.
 
 Use **build** in command line to reconstruct phylogenetic tree:
 
