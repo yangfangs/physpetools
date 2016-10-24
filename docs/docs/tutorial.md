@@ -2,12 +2,12 @@
 
 ## Automatically reconstruct Tree of Life
 
-The tree of life always used to describe the relations between organisms are living and extinct.
-Here we reconstruct tree of life, which contain 191 organisms. We use two method automatically reconstruct phylogenetic tree. One way is use highly
-conserved protein method and another way is use 16S SSU rRNA to reconstruct Tree of Life.
+The Tree of Life always used to describe the relations between organisms are living and extinct.
+Here we reconstruct tree of life, which contain 190 organisms. We use two method automatically reconstruct phylogenetic tree. One way is use highly
+conserved protein method and another is use SSU rRNA method to reconstruct Tree of Life.
 
 
-### Auto build Tree of life by highly conserved protein
+### Auto build Tree of life by highly conserved protein method
 
 * **Concept**
 
@@ -18,8 +18,8 @@ Here we prepare 31 highly conserved proteins to automatically reconstruct phylog
 
 ####  1.Prepare species names list
 
-Prepare the organisms name are abbreviation name are same with [KEGG organisms][2] abbreviation. you can get KEGG organisms abbreviation form [KEGG API][3]. 
-Here we reconstruct The tree of life use 191 organisms names are [download][1]. the organisms names list as follow:
+Preparing the organisms names (abbreviated names) are same with [KEGG organisms][2] abbreviation. you can get KEGG organisms abbreviation form [KEGG API][3]. 
+Here we reconstructed tree of life use 191 organisms names are [download][1]. the organisms names list as follow:
 
 ```bash
 $ cat 191speciesnames.txt 
@@ -36,9 +36,9 @@ afu
 
 ####  2.Reconstruct phylogenetic tree by highly conserved protein method
 
-When the users use PhySpeTree automatically build phylogenetic tree, the users can use `--hcp` arguments to specify use highly conserved protein way to reconstruct phylogenetic tree. The default use 1 thread 
-to reconstruct phylogenetic tree, if you want to use more threads can use `-t` parameter to set the threads to be used. Here we use the default value 1 thread to 
-reconstruct 191 species phylogenetic tree.
+When users use PhySpeTree automatically build phylogenetic tree, the users can use `--hcp` arguments to specify use highly conserved protein method to build tree. The default use 1 thread 
+to reconstruct phylogenetic tree. If you want to use more threads can use `-t` parameter to set the threads to be used. Here we used the default value 1 thread to 
+build 191 species phylogenetic tree.
 
 ```
 $ PhySpeTree autobuild -i 191speciesnames.txt -o 191_pro --hcp
@@ -362,7 +362,7 @@ cho     range   #99A01A Alveolates
 
 ####  1.Prepare organisms names list
 
-Here we automatically reconstruct 52 plants phylogenetic tree by PhySpeTree use highly conserved protein way. The organisms list [download][4]
+Here we automatically reconstructed 52 plants phylogenetic tree by PhySpeTree use highly conserved protein method. The species list [download][4].
 
 ```
 $ cat 52plantsnames.txt
@@ -521,9 +521,9 @@ Some time we want to extend tree with a new organisms, use PhySpeTree user can e
 Here we extend tree of life with a new organism `Lokiarchaeum sp. GC14_75 (loki)`.
 
 
-#### 1.Prepare new organism 16s rRNA sequence
+#### 1.Prepare new organism SSU rRNA sequence
 
-When use 16s rRNA way to extend a new organism user need prepare the new organism 16s rRNA sequence, Here we prepare the new organism `Lokiarchaeum sp. GC14_75 (loki)`
+When use SSU rRNA method to extend a new organism user need prepare the new organism SSU rRNA sequence, Here we prepared the new organism `Lokiarchaeum sp. GC14_75 (loki)`
 16s rRNA sequence save with FASTA format. example download [extend_rna_olki.fasta][5]
 
 
@@ -548,10 +548,10 @@ GAGGGGGGAGAAGUCGUAACAAGGUAGCCGUAGGGGAACCUGCGGCUGGAUCACCUCCU
 
 ```
 
-#### 2.Reconstruct phylogenetic tree by 16s SSU rRNA extend with a new organism
+#### 2.Reconstruct phylogenetic tree by SSU rRNA extend with a new organism
 
-Reconstruct phylogenetic tree by 16s SSU rRNA method, you should use `--esrna` to specify the method and use `-e` parameter specify
-the extend organism 16s rRNA sequence file.
+Reconstruct phylogenetic tree by SSU rRNA method, you should use `--esrna` to specify the method and use `-e` parameter specify
+the extend organism SSU rRNA sequence file.
 
 
 
@@ -642,9 +642,9 @@ Check result is store in /check/physpe_echp_extend.txt
 ```
 
 
-#### 2. Prepare highly conserved protein
+#### 2. Prepare highly conserved proteins
 
-After use check we should prepare seven highly conserved protein store this highly conserved protein to p1 ~ p7 FASTA format files.
+After use check command, we should prepare seven highly conserved protein store this highly conserved protein to p1 ~ p7 FASTA format files.
 The highly protein protein names are know with `check` command. Here we prepare p1 ~ p7 highly conserved proteins to `Lokiarchaeum sp. GC14_75 (loki)`.
 Download [highly_conserved_protein_loki][6]
 
@@ -663,7 +663,7 @@ EV
 
 ```
 
-#### 3.Reconstruct phylogenetic tree by highly conserved protein extend with a new organism
+#### 3.Reconstruct phylogenetic tree by highly conserved protein method extend with a new organism
 
 
 ```
