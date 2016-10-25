@@ -30,12 +30,13 @@ version = '0.2.4'
 
 VERSION_DESC = (
     """
-          --------------------------------------------------------------------------------
-                      PhySpeTree (%s) - Reconstruct Phylogenetic Tree
+          -------------------------------------------------------------------------------------
+                      PhySpeTree (%s) - Reconstruct Phylogenetic species Tree
 
-          Citation:  null
+          Citation:
+                  PhySpeTree: automatically reconstructing phylogenetic species tree (submitted)
 
-          --------------------------------------------------------------------------------
+          --------------------------------------------------------------------------------------
           """ % (version))
 
 

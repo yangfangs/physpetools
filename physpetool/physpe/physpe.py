@@ -40,12 +40,13 @@ physeptree_version = version
 
 APP_DESC = (
     """
-          --------------------------------------------------------------------------------
-                      PhySpeTree (%s) - Reconstruct Phylogenetic Tree
+          -------------------------------------------------------------------------------------
+                      PhySpeTree (%s) - Reconstruct Phylogenetic species Tree
 
-          Citation: null
+          Citation:
+                  PhySpeTree: automatically reconstructing phylogenetic species tree (submitted)
 
-          --------------------------------------------------------------------------------
+          --------------------------------------------------------------------------------------
           """ % (physeptree_version))
 
 
@@ -63,6 +64,7 @@ def start(input):
     parser = argparse.ArgumentParser(description=APP_DESC,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     subparser = parser.add_subparsers(title="RCONSTRUCT PHYLOGENETIC TREE")
+
     # autobuild
     physpe_autobuid = subparser.add_parser("autobuild", help="Auto reconstruct phylogenetic tree")
     physpe_autobuid.set_defaults(func=autobuild.starting)
