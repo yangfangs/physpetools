@@ -1,0 +1,10 @@
+#!/home/yangfang/physpetools/env/bin/python
+# EASY-INSTALL-ENTRY-SCRIPT: 'PhySpeTree==0.2.4','console_scripts','PhySpeTree'
+__requires__ = 'PhySpeTree==0.2.4'
+import sys
+from pkg_resources import load_entry_point
+
+if __name__ == '__main__':
+    sys.exit(
+        load_entry_point('PhySpeTree==0.2.4', 'console_scripts', 'PhySpeTree')()
+    )
