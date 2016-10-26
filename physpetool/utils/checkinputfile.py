@@ -99,9 +99,9 @@ Check input organisms list with SILVA database
         mislist = originaList
     if mislist:
         for misabb in mislist:
-            logchecking.info("The organism: {0} can't match in 16S SSU rRNA database".format(misabb))
+            logchecking.info("The organism: {0} can't match in SSU rRNA database".format(misabb))
         logchecking.warning(
-            "These species can't match in 16S SSU rRNA database so removing and reconstructing phylogenetic tree")
+            "These species can't match in SSU rRNA database so removing and reconstructing phylogenetic tree")
 
     return inputlist
 
