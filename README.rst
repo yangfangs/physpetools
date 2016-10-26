@@ -454,9 +454,14 @@ check options
 -o
     A directory contain check result. The directory name is check.
 
---echcp
+--hcp
+    Check organisms whether supported by KEGG database.
 
+--echcp
     check input organisms prepare for extend autobuild tree module.
+
+--sran
+    Check organisms whether supported by SILVA database.
 
 
 Frequently Asked Questions (FAQ)

@@ -42,7 +42,7 @@ Arguments parse
                                  help="Input organisms names file, which use to reconstructed \
                               phylogenetic tree.")
     annotation_args.add_argument('-o', action='store', dest="outputfile",
-                                 default='check', help="A directory name contain check result. The default is \
+                                 default='check', help="A directory name contain check result. The default \
                                 name is check")
     annotation_args.add_argument('--hcp', action='store_true', dest="checkhcp",
                                  default=False, help="Check organisms whether supported by KEGG database.")

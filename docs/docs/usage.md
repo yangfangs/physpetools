@@ -742,7 +742,9 @@ $ PhySpeTree check -i organism_example_list.txt -out check --ehcp
 |  -h    |  Print help message and exits.                                                                      |
 |  -i    |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
 |  -o    |  A directory contain check result. The directory name is check.                                     |
-| --ehcp|  check input organisms prepare for extend autobuild tree module.                                    |
+| --hcp  |  Check organisms whether supported by KEGG database.                                                |
+| --ehcp |  Check input organisms prepare for extend autobuild tree module.                                    |
+| --srna |  Check organisms whether supported by SILVA database.                                               |
 
 ### example
 
