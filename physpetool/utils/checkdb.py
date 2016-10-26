@@ -98,7 +98,7 @@ def check_srna(input, output):
     """
     if not os.path.exists(output):
         os.makedirs(output)
-    fw_name = "PhySpeTree_hcp_checked.txt"
+    fw_name = "PhySpeTree_srna_checked.txt"
     open_path = os.path.join(output, fw_name)
     fw = open(open_path, 'wb')
 

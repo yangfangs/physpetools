@@ -26,7 +26,7 @@ The arguments parse module for check module.
 """
 
 import os
-from physpetool.utils.checkdb import check_ehcp
+from physpetool.utils.checkdb import check_ehcp, check_hcp, check_srna
 
 APP_DESC = ""
 
@@ -44,9 +44,13 @@ Arguments parse
     annotation_args.add_argument('-o', action='store', dest="outputfile",
                                  default='check', help="It's a directory name contain check result. The default is \
                                 name is check")
-
+    annotation_args.add_argument('--hcp', action='store_true', dest="checkhcp",
+                                 default=False, help="Check organisms whether supported by KEGG database.")
     annotation_args.add_argument('--ehcp', action='store_true', dest="checkehcp",
-                                 default=False, help="Check organisms for extend highly conserved proteins.")
+                                 default=False, help="Check the organisms highly conserved proteins, which users should \
+                                prepared for extend highly conserved protein method.")
+    annotation_args.add_argument('--srna', action='store_true', dest="checksrna",
+                                 default=False, help="Check organisms whether supported by SILVA database.")
 
 
 def starting(args):
@@ -59,3 +63,7 @@ Staring run combine
     out_put = os.path.join(pwd, args.outputfile)
     if args.checkehcp:
         check_ehcp(args.inputfile, out_put)
+    if args.checkhcp:
+        check_hcp(args.outputfile, out_put)
+    if args.checksran:
+        check_srna(args.outputfile, out_put)
