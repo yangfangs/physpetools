@@ -26,7 +26,8 @@ The module for check highly conserved proteins will be prepared.
 """
 
 from physpetool.phylotree.retrieveprotein import getcolname, getspecies, hcp_name
-from physpetool.utils.checkinputfile import checkFile, readIputFile, checkKeggOrganism, checkSilvaOrganism
+from physpetool.utils.checkinputfile import checkFile, readIputFile, checkKeggOrganism, checkSilvaOrganism, \
+    check_organism
 import os
 
 
@@ -74,9 +75,8 @@ def check_hcp(input, output):
 
     input_path = checkFile(input)
     input_list = readIputFile(input_path)
-    input_checked = checkKeggOrganism(input_list)
 
-    no_match = list(set(input_list).difference(set(input_checked)))
+    in_match, no_match = check_organism(input_list,"organism_kegg_to_tax.txt")
 
     if no_match.__len__() == 0:
         fw.write("All species are match in KEGG DATABASE")
@@ -104,9 +104,8 @@ def check_srna(input, output):
 
     input_path = checkFile(input)
     input_list = readIputFile(input_path)
-    input_checked = checkSilvaOrganism(input_list)
 
-    no_match = list(set(input_list).difference(set(input_checked)))
+    in_match, no_match = check_organism(input_list, "kegg_to_silva_id.txt")
 
     if no_match.__len__() == 0:
         fw.write("All species are match in SILVA DATABASE")
