@@ -76,7 +76,7 @@ def check_hcp(input, output):
     input_path = checkFile(input)
     input_list = readIputFile(input_path)
 
-    in_match, no_match = check_organism(input_list,"organism_kegg_to_tax.txt")
+    in_match, no_match = check_organism(input_list, "organism_kegg_to_tax.txt")
 
     if no_match.__len__() == 0:
         fw.write("All species are match in KEGG DATABASE")

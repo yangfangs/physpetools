@@ -71,7 +71,7 @@ Check input organisms list with KEGG database
         for misabb in mislist:
             logchecking.info("The species: {0} can't match in KEGG protein index database".format(misabb))
         logchecking.warning(
-            "These species can't match in KEGG protein index database so removed and reconstruct phylogenetic tree")
+            "These species can't match in KEGG protein index database so removed and reconstruct phylogenetic tree.")
     return inputlist
 
 
@@ -86,7 +86,7 @@ Check input organisms list with SILVA database
         for misabb in mislist:
             logchecking.info("The organism: {0} can't match in SSU rRNA database".format(misabb))
         logchecking.warning(
-            "These species can't match in SSU rRNA database so removing and reconstructing phylogenetic tree")
+            "These species can't match in SSU rRNA database so removing and reconstructing phylogenetic tree.")
 
     return inputlist
 
