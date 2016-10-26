@@ -81,13 +81,13 @@ def check_hcp(input, output):
     in_match, no_match = check_organism(input_list, "organism_kegg_to_tax.txt")
 
     if no_match.__len__() == 0:
-        print(print_style('INFO: ', fore='green') + "All species are match in KEGG DATABASE")
+        print(print_style('INFO: ', fore='green') + "All species are match in KEGG DATABASE.")
         fw.write("All species are match in KEGG DATABASE")
     else:
-        print(print_style('WARNING: ', fore='red') + "The following species are not supported by KEGG DATABASE:\n")
+        print(print_style('WARNING: ', fore='red') + "The following species are not supported by KEGG DATABASE:")
         fw.write("The following species are not supported by KEGG DATABASE:\n")
         for line in no_match:
-            print(line + "\n")
+            print(line)
             fw.write(line + "\n")
 
     print("Checked  whether the input species names in KEGG DATABASE completed.\n")
@@ -116,10 +116,10 @@ def check_srna(input, output):
         print(print_style('INFO: ', fore='green') + "All species are match in SILVA DATABASE")
         fw.write("All species are match in SILVA DATABASE")
     else:
-        print(print_style('WARNING: ', fore='red') + "The following species are not supported by SILVA DATABASE:\n")
+        print(print_style('WARNING: ', fore='red') + "The following species are not supported by SILVA DATABASE:")
         fw.write("The following species are not supported by SILVA DATABASE:\n")
         for line in no_match:
-            print(line + "\n")
+            print(line)
             fw.write(line + "\n")
 
     print("Checked  whether the input species names in SILVA DATABASE completed.\n")
