@@ -26,7 +26,7 @@ The module for check highly conserved proteins will be prepared.
 """
 
 from physpetool.phylotree.retrieveprotein import getcolname, getspecies, hcp_name
-from physpetool.utils.checkinputfile import checkFile, readIputFile, checkKeggOrganism
+from physpetool.utils.checkinputfile import checkFile, readIputFile, checkKeggOrganism, checkSilvaOrganism
 import os
 
 
@@ -79,12 +79,42 @@ def check_hcp(input, output):
     no_match = list(set(input_list).difference(set(input_checked)))
 
     if no_match.__len__() == 0:
-        fw.write("All species are match in HCP DATABASE")
+        fw.write("All species are match in KEGG DATABASE")
     else:
-        fw.write("The follow species are not support in HCP DATABASE:\n")
+        fw.write("The following species are not supported by KEGG DATABASE:\n")
         for line in no_match:
             fw.write(line + "\n")
 
-    print("Checked  whether the input species names in HCP DATABASE completed.\n")
+    print("Checked  whether the input species names in KEGG DATABASE completed.\n")
+    print("Checked result is store in {0}".format(open_path))
+    fw.close()
+
+
+def check_srna(input, output):
+    """
+    Check whether the input species in the SSU rRNA database
+    :param input: the species names
+    :param output: the directory contains check result
+    """
+    if not os.path.exists(output):
+        os.makedirs(output)
+    fw_name = "PhySpeTree_hcp_checked.txt"
+    open_path = os.path.join(output, fw_name)
+    fw = open(open_path, 'wb')
+
+    input_path = checkFile(input)
+    input_list = readIputFile(input_path)
+    input_checked = checkSilvaOrganism(input_list)
+
+    no_match = list(set(input_list).difference(set(input_checked)))
+
+    if no_match.__len__() == 0:
+        fw.write("All species are match in SILVA DATABASE")
+    else:
+        fw.write("The following species are not supported by SILVA DATABASE:\n")
+        for line in no_match:
+            fw.write(line + "\n")
+
+    print("Checked  whether the input species names in SILVA DATABASE completed.\n")
     print("Checked result is store in {0}".format(open_path))
     fw.close()
