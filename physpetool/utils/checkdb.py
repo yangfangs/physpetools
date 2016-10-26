@@ -58,7 +58,7 @@ def check_ehcp(input, output):
         print(massage)
         fw.write(massage)
         p += 1
-    print("Checked extend highly conserved proteins is completed.\n")
+    print("Checked extend highly conserved proteins is completed.")
     print("Checked result was store in {0}".format(open_path))
     fw.close()
 
