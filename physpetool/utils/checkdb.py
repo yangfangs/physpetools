@@ -90,7 +90,7 @@ def check_hcp(input, output):
             print(line)
             fw.write(line + "\n")
 
-    print("Checked  whether the input species names in KEGG DATABASE completed.\n")
+    print("Checked  whether the input species names in KEGG DATABASE completed.")
     print("Checked result is store in {0}".format(open_path))
     fw.close()
 
@@ -122,6 +122,6 @@ def check_srna(input, output):
             print(line)
             fw.write(line + "\n")
 
-    print("Checked  whether the input species names in SILVA DATABASE completed.\n")
+    print("Checked  whether the input species names in SILVA DATABASE completed.")
     print("Checked result is store in {0}".format(open_path))
     fw.close()
