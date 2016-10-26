@@ -39,10 +39,11 @@ Arguments parse
 
     annotation_args = input.add_argument_group("CHECK OPTIONS")
     annotation_args.add_argument('-i', action='store', dest="inputfile",
-                                 help="Input organisms names file, which used reconstructed \
+                                 help="Input organisms names file, which use to reconstructed \
                               phylogenetic tree.")
     annotation_args.add_argument('-o', action='store', dest="outputfile",
-                                 default='check', help="It's a directory name contain check result.")
+                                 default='check', help="It's a directory name contain check result. The default is \
+                                name is check")
 
     annotation_args.add_argument('--ehcp', action='store_true', dest="checkehcp",
                                  default=False, help="Check organisms for extend highly conserved proteins.")
