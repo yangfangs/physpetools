@@ -64,6 +64,6 @@ Staring run combine
     if args.checkehcp:
         check_ehcp(args.inputfile, out_put)
     if args.checkhcp:
-        check_hcp(args.outputfile, out_put)
+        check_hcp(args.inputfile, out_put)
     if args.checksrna:
-        check_srna(args.outputfile, out_put)
+        check_srna(args.inputfile, out_put)
