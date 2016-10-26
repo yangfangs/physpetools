@@ -35,6 +35,12 @@ logchecking = getLogging('Checking organisms')
 
 
 def check_organism(input, db_list):
+    """
+    check input organism
+    :param input: a list contain species name
+    :param db_list: a list file contain organism in corresponding database
+    :return: inputlist: match in database mislist: can't match in database
+    """
     originaList = []
     for line in input:
         st = line.strip()
