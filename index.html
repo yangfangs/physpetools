@@ -149,12 +149,14 @@
 
 <h1 id="physpetree-automatically-reconstructing-phylogenetic-species-tree">PhySpeTree: automatically reconstructing phylogenetic species tree</h1>
 <h2 id="introduction">Introduction</h2>
-<p>Combining phylogenetic species tree with some predictions is very important in some filed. For instance,
-protein-protein interactions and the predictions of gene pathway new members. In this predictions the exact species tree to be reconstructed
-is necessary, but the process of reconstructing the species or gene tree is very tedious.</p>
-<p>Here we developed easy-to-use package named <strong>PhySpeTree</strong> that is convenient to reconstruct species trees by one command line.
-The advantage is that users only need to input species names and PhySpeTree automatically downloads
-and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.</p>
+<p>Understanding phylogenetic relationships between different species is crucial for evolutionary studies.
+Reconstructing the phylogenetic species tree, a branching diagram, is particularly useful in inferring evolutionary relationships.
+For example, the tree-of-life provides a remarkable view of organizing principles of the biological world.
+So, the exact species tree to be reconstructed is necessary, but the process of reconstructing the species or gene tree is very tedious.</p>
+<p>Here, we developed an easy-to-use package named PhySpeTree that is convenient to reconstruct species trees by one command line.
+Two independent pipelines were included by using the most adopted small subunit ribosomal RNA (SSU rRNA) and
+concatenated highly conserved proteins (HCP), respectively. A distinct advantage is that users only need to input
+species names and PhySpeTree automatically downloads and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.</p>
 <h2 id="physpetree-workflow">PhySpeTree workflow</h2>
 <p><img alt="workflow" src="./img/PhySpeTree_work_follow.png" /></p>
 <p>PhySpeTree workflow includes the following steps:</p>
@@ -163,7 +165,7 @@ and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.</p>
 <p>Prepare organisms names (abbreviated name) to reconstruct species tree as <a href="./example/organism_example_list.txt">species abbreviated names</a></p>
 </li>
 <li>
-<p>Two parallel pipelines to reconstruct species tree, the SSU rRNA (--sran) or Highly conserved proteins (--hcp).</p>
+<p>Two parallel pipelines to reconstruct species tree (SSU rRNA (--sran) or highly conserved proteins (--hcp)).</p>
 </li>
 <li>
 <p>Querying, parsing and retrieving FASTA format data.</p>
@@ -178,10 +180,10 @@ and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.</p>
 <p>Select conserved blocks by Gblosks.</p>
 </li>
 <li>
-<p>Reconstructing species tree by RAxML or FastTree.</p>
+<p>Reconstruct species tree by RAxML or FastTree.</p>
 </li>
 <li>
-<p>Output reconstruct phylogenetic tree files.</p>
+<p>Output the reconstruct phylogenetic tree files.</p>
 </li>
 </ol>
 <h2 id="features">Features</h2>
@@ -287,5 +289,5 @@ and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.</p>
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-10-26 12:12:31.696592
+Build Date UTC : 2016-10-27 08:09:42.374896
 -->
