@@ -69,7 +69,7 @@ Features
 Install
 -------------------------------------------------------------------------------
 
-1. **PhySpeTree** is released on PyPI, so all you need install:
+1. PhySpeTree is released on PyPI, so all you need install:
 
 .. code-block:: console
 
@@ -85,7 +85,7 @@ To upgrade to latest version:
 
 2. Download PhySpeTree released version form PypI:
 
-- `Download by PypI <https://pypi.python.org/pypi/PhySpeTree/>`_ latest released version
+- `Download <https://pypi.python.org/pypi/PhySpeTree/>`_ by PypI latest released version
 
 - local installation:
 
@@ -93,7 +93,7 @@ To upgrade to latest version:
 
     $pip install PhySpeTree-*.tar.gz
 
-3. You can install PhySpeTree by download the latest released version form github:
+3. You can install PhySpeTree by downloading the latest released version form github:
 
 - `Download <https://github.com/xiaofeiyangyang/physpetools/releases>`_ latest released version **.tar.gz** file.
 
@@ -103,7 +103,7 @@ To upgrade to latest version:
 
 	$ pip install physpetools-v*.tar.gz
 
-4. 4. Use git command clone **PhySpeTree** to install
+4. Use git command clone PhySpeTree to install
 
 .. code-block:: console
 
@@ -123,7 +123,7 @@ Usage
 autobuild
 ^^^^^^^^^^^^^^^^^^^^
 
-Users should prepare a txt file contain the species names (abbreviated names) `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
+Users should prepare a TXT file contain the species names (abbreviated names) `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
 
 Use **autobuild** in command line like this:
 
@@ -139,10 +139,10 @@ autobuild options
     Print help message and exits.
 
 -i
-    Input a txt file contain the a abbreviated species names are same with KEGG species abbreviation.
+    Input a TXT file contain the abbreviated species names are same with KEGG species abbreviation.
 
 -o
-    A directory include output data (reconstruct tree files). The default output data name is Outdata.
+    A directory include output data (tree files). The default output data name is Outdata.
 
 -t
     Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.

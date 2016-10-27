@@ -5,7 +5,7 @@
 
 ## autobuild
 
-Users should prepare a TXT file contain species abbreviated names, such as [organism_example_list.txt][1]
+Users should prepare a TXT file contain the species names (abbreviated names), such as [organism_example_list.txt][1]
 
 Use **autobuild** in command line like this:
 
@@ -18,8 +18,8 @@ $ PhySpeTree -i organism_example_list.txt [options]*
 | option |  Description                                                                                                                          |
 |:------- |:-------------------------------------------------------------------------------------------------------------------------------------|
 |  -h     |  Print help message and exits.                                                                                                       |
-|  -i     |  Input a txt file contain the a abbreviated species names are same with KEGG species abbreviation.                                  |
-|  -o     |  A directory include output data (reconstruct tree files). The default output data name is Outdata.                                  |
+|  -i     |  Input a TXT file contain the abbreviated species names are same with KEGG species abbreviation.                                  |
+|  -o     |  A directory include output data (tree files). The default output data name is Outdata.                                  |
 |  -t     |  Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.               |
 |  -e     |  The extended data should be FASTA format to extend phylogenetic tree by --ehcp or --esrna option.                                  |
 |  --hcp  |  The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp. |
