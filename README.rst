@@ -266,29 +266,23 @@ build options
     Print help message and exits.
 
 -i
-    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
+    Input a TXT file contain the species names (abbreviated names) are same with KEGG species abbreviation.
 
 -o
-    A directory include output data (reconstruct tree files). The default output data name is Outdata.
+    A directory include output data (tree files). The default output data name is Outdata.
 
 -t
-    Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.
+    Specify the number of processing threads (CPUs) to reconstruct phylogenetic tree. The default is 1.
 
 --hcp
 
-    The hcp (highly conserved protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.
-
---ehcp
-
-    The ehcp (highly conserved protein) mode is use highly conserved proteins and extend highly protein (users provide) to reconstruct phylogenetic tree.
+    Specify the hcp (highly conserved protein) method to reconstruct phylogenetic tree. The default method is hcp.
 
 --srna
 
-    The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree.
+    The srna (SSU rRNA) method is use SSU rRNA data to reconstruct phylogenetic tree.
 
---esrna
 
-    The 16srna (16 SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (users provide) to reconstruct phylogenetic tree.
 
 
 
@@ -298,32 +292,33 @@ Advance options
 Users enable choice more detail options with PhySpeTree call software, detail advance options input
 ``must be enclosed in single quotes``.
 
-The follow is to use RAxML advance options example:
+The following is an example of using RAxML advanced options:
 
 .. code-block:: console
 
     $ PhySpeTree -i organism_example_list.txt --raxml --raxml_p '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
 --muscle
-    Multiple sequence alignment by muscle. The default aligned software is Muscle.
+    Multiple sequence alignment by muscle. The default multiple sequence alignment software is Muscle.
 
 
 --muscle_p
-    Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see
+    Set Muscle advance parameters. The default is ``-maxiter 100``. More options about Muscle please to see
     `MUSCLE Manual <http://www.drive5.com/muscle/manual/options.html>`_.
 
     -maxiter
         maximum number of iterations to run is set 100.
+
 --clustalw
-    Multiple sequense alignment by clustalw2.
+    Multiple sequence alignment by clustalw2.
 
 --clustalw_p
-    Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw
+    Set clustalw2 advance parameters. Here use clustalw default parameters. More options about clustalw
     please to see `Clustalw Help <http://www.clustal.org/download/clustalw_help.txt>`_.
 
 
 --gblocks
-    Set Gblocks parameters. The default is ``-t=p -e=-gb1``.
+    Set Gblocks advance parameters. The default is ``-t=p -e=-gb1``.
     More options about Gblocks please to see
     `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
@@ -331,7 +326,7 @@ The follow is to use RAxML advance options example:
         Choice type of sequence. The PhySpeTree default set is protein.
 
     -e
-        Eneric file extensionc. physep set default is -gbl1.
+        Eneric file extensionc. PhySpeTree set default is -gbl1.
 
 
 --raxml
@@ -361,20 +356,20 @@ The follow is to use RAxML advance options example:
     Reconstruct phylogenetic tree by FastTree.
 
 --fasttree_p
-    Set more detail RAxML parameters.More options about clustalw
+    Set FastTree advance parameters. More options about clustalw
     please to see `FastTree <http://www.microbesonline.org/fasttree/>`_.
 
 combine
 ^^^^^^^^^^^^^^^^^^^^
 
-Users should prepare a combine tree file by Combine command to combine tree files.
+The **combine** module for the consensus tree construction.
 
 
 In Linux you can easy combine more tree to a tree file, for example:
 
 .. code-block:: console
 
-    $ cat tree1.tree tree2.tree > combieTree.tree
+    $ cat tree1.tree tree2.tree > combineTree.tree
 
 
 Use **combine** in command line like this:
@@ -391,15 +386,15 @@ combine options
     Print help message and exits.
 
 -i
-    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
+    Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation.
 
 -o
-    A directory contain combine tree file. The default output data name is combinetree.
+    A directory contain combined tree file. The default output data name is combineTree.
 
 iview
 ^^^^^^^^^^^^^^^^^^^^
 
-Annotating tree by iTol use iview module.
+Users can Annotating tree by `iview` module by iTol.
 
 
 Use **iview** in command line like this:
@@ -417,24 +412,24 @@ iview options
     Print help message and exits.
 
 -i
-    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
+    Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation.
 
 -o
-    A directory contain range text file. The directory name is iverw.
+    A directory contain the generate configure files. The directory name is iverw.
 
 -r
     Annotating ranges by kingdom, phylum, class or order. The default is phylum.
 
 -a
-    Colored ranges by users assign, users can choice from kingdom phylum class and order.
+    Colored ranges by users assign, users can choice from <kingdom>, <phylum>, <class> and <order>.
 
 -l
-    Change labels from abbreviation names to full names.
+    Change species labels from abbreviated names to full names.
 
 check
 ^^^^^^^^^^^^^^^^^^^^
 
-Use check module  check input organisms match in kegg database or 16s database
+The `check` module design for check input organisms whether match in KEGG database or SILVA database.
 
 
 .. code-block:: console
@@ -452,18 +447,18 @@ check options
     Print help message and exits.
 
 -i
-    Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.
+    Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation.
 
 -o
-    A directory contain check result. The directory name is check.
+    A directory contain check result. The default directory name is check.
 
 --hcp
     Check organisms whether supported by KEGG database.
 
---echcp
+--ehcp
     check input organisms prepare for extend autobuild tree module.
 
---sran
+--srna
     Check organisms whether supported by SILVA database.
 
 
@@ -475,31 +470,33 @@ PhySpeTree input/output
 
 **1.What preparation of users should does for PhySpeTree?**
 
-The users should prepare a TXT files, which contain species abbreviate names (abbreviated names are same with `KEGG database <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
-one line write one species name only such as `organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
+The users should prepare a TXT file, which contain species name (abbreviated names are same with `KEGG database <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
+one line write one species name only. For example, `organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
 You can retrieve the Abbreviation of species names by `KEGG API <http://rest.kegg.jp/list/organism>`_.
 
 
 **2.What's PhySpeTree output data mean?**
 
-PhySpeTree output tow data files, the one is contain phylogenetic tree files default names is ``Outdata``, another is a temp file.
+PhySpeTree output two data files, the one is a result file default names is `Outdata`, another is a `temp` file.
 
-If you reconstruct phylogenetic tree by HCP (highly conserved protein) model, temp file include three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
-  + conserved_protein: Store the \*.fasta format files, which is conserved proteins retrieve by KEGG database.
-  + muscle_alignment: Store files are multiple sequence alignment by muscle.
-  + concatenate: Include concatenate highly conserved protein data (\*.fasta format file) and select conserved blocks data (\*.fasta-gb1 format file).
+If you reconstruct phylogenetic tree by `--hcp` (highly conserved protein) method, the temp file sinclude three directory: ``conserved_protein``, ``muscle_alignment`` and ``concatenate``.
+  + conserved_protein: Store the FASTA format files, which was highly conserved proteins retrieved from KEGG database.
+  + alignment: Store the sequence files has been aligned.
+  + concatenate: Include concatenated highly conserved proteins data (FASTA format) and selected conserved blocks data (\*.fasta-gb1 format file).
 
-If you reconstruct phylogenetic tree by SRNA (16s RNA) model temp file include two directory ``16srnadata`` and ``16srna_alignment``.
-  + 16srandata: Stroe  a file name is 16srandata.fata, contain the 16s RNA data retrieve by SILVA database.
-  + 16sran_alignment: Store the \*.fasta format is multiple sequence alignment data and the \*.fasta-gb1, \*fasta-gb1.html are select conserved blocks data (use Gblocks software),
-    the \*.phy format file is convert to convert from gblok data by PhySpeTree to reconstruct phylogenetic tree.
+If you reconstruct phylogenetic tree by `--srna` (SSU rRNA) method, the temp files include two directory: ``rna_sequence`` and ``rna_alignment``.
+  + rna_sequence: Store a file named rna_sequence.fasta, contain the SSU rRNA sequence retrieved from SILVA database.
+  + ran_alignment: Store in the \*.fasta file is the sequence files has been aligned and the \*.fasta-gb1, \*fasta-gb1.html are select conserved blocks data (use Gblocks software),
+    the \*.phy format file is converted from select conserved blocks data by PhySpeTree.
 
-Users can check the quality of every aspect of data by these temp files.
+``NOTE:``
+
+*Users can check the quality of every aspect of data by the corresponding temp files.*
 
 
 PhySpeTree reconstruct phylogenetic tree database
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-**1.what's the highly conserved proteins are PhySpeTree use reconstruct phylogenetic tree?**
+**what's the highly conserved proteins be used to reconstruct phylogenetic tree?**
 
 PhySpeTree use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
 
@@ -507,7 +504,7 @@ PhySpeTree use 31 highly conserved proteins to reconstruct phylogenetic tree. Th
 
  Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.
 
-31 highly conserved proteins and correspond KEGG database KO number as follow table:
+The 31 highly conserved proteins and corresponding KEGG database KO number as follow table:
 
 
 ====================================================   ==============      ===============
@@ -548,10 +545,10 @@ Ribosomal protein S13                                  K02953              K0295
 
 
 
-**2.How the SSU rRAN database to created?**
+**2.How the SSU rRAN database was created?**
 
-The SSU rRAN database was created by `SILVA <https://www.arb-silva.de/>`_ rRNA database project (version: SILVA SSU 123.1 release)
-with sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence.
+The SSU rRAN database was created by `SILVA <https://www.arb-silva.de/>`_ SSU rRNA database project (version: SILVA SSU 123.1 release).
+In this data the sequences haven been truncated, which means that all nucleotides that have not been aligned were removed from the sequence.
 
 
 

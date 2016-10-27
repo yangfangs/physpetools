@@ -6,33 +6,35 @@
 
 ### 1.What preparation of user should does for PhySpeTree?
 
-The users should prepare a TXT files, which contain species abbreviate names (abbreviated names are same with [KEGG database](http://www.genome.jp/kegg/catalog/org_list.html).
-one line write one species name only such as [organism_example_list](https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt).
+The users should prepare a TXT file, which contain species name (abbreviated names are same with [KEGG database](http://www.genome.jp/kegg/catalog/org_list.html).
+one line write one species name only. For example,[organism_example_list](https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt).
 You can retrieve the Abbreviation of species names by [KEGG API](http://rest.kegg.jp/list/organism)
 
 
 ### 2.What's PhySpeTree output data mean?
 
-PhySpeTree output two data files, the one is contain phylogenetic tree files default names is ``Outdata``, another is a temp file.
+PhySpeTree output two data files, the one is a result file default names is `Outdata`, another is a `temp` file.
 
-If you reconstruct phylogenetic tree by HCP (highly conserved protein) method, temp file include three directory ``conserved_protein``, ``muscle_alignment`` and ``concatenate``
+If you reconstruct phylogenetic tree by `--hcp` (highly conserved protein) method, the temp files include three directory: `conserved_protein`, `alignment` and `concatenate`.
 
-  * conserved_protein: Store the FASTA format files, which are conserved proteins retrieve by KEGG database.
-  * muscle_alignment: Store files are multiple sequence alignment by muscle.
-  * concatenate: Include concatenate highly conserved protein data (*.fasta format file) and select conserved blocks data (*.fasta-gb1 format file).
+  * conserved_protein: Store the FASTA format files, which was highly conserved proteins retrieved by KEGG database.
+  * alignment: Store the sequence files has been aligned.
+  * concatenate: Include concatenated highly conserved proteins data (FASTA format) and selected conserved blocks data (\*.fasta-gb1 format file).
 
-If you reconstruct phylogenetic tree by SRNA (16s RNA) model temp file include two directory ``16srnadata`` and ``16srna_alignment``.
+If you reconstruct phylogenetic tree by `--srna` (SSU rRNA) method, the temp files include two directory: `rna_sequence` and `rna_alignment`.
 
-  * 16srandata: Stroe  a file name is 16srandata.fata, contain the 16s RNA data retrieve by SILVA database.
-  * 16sran_alignment: Store the *.fasta format is multiple sequence alignment data and the *.fasta-gb1, *fasta-gb1.html are select conserved blocks data (use Gblocks software),
-  the *.phy format file is convert to convert from gblok data by PhySpeTree to reconstruct phylogenetic tree.
+  * rna_sequence: Store a file named rna_sequence.fasta, contain the SSU rRNA sequence retrieved from SILVA database.
+  * 16sran_alignment: Store in the *.fasta file is the sequence files has been aligned and the *.fasta-gb1, *fasta-gb1.html are select conserved blocks data (use Gblocks software),
+  the *.phy format file is converted from has been select conserved blocks data by PhySpeTree.
 
-The users can check the quality of every aspect of data by these temp files.
+`NOTE`:
+
+* Users can check the quality of every aspect of data by the corresponding temp files.
 
 
 ## PhySpeTree reconstruct phylogenetic tree database
 
-### 1.what's the highly conserved proteins are PhySpeTree use reconstruct phylogenetic tree?
+### 1.what's the highly conserved proteins be used to reconstruct phylogenetic tree?
 
 PhySpeTree use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
 
@@ -40,7 +42,7 @@ PhySpeTree use 31 highly conserved proteins to reconstruct phylogenetic tree. Th
 
 > Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.
 
-31 highly conserved proteins and correspond KEGG database KO number as follow table:
+The 31 highly conserved proteins and corresponding KEGG database KO number as follow table:
 
 
 
@@ -81,8 +83,8 @@ Ribosomal protein S13                               |   K02953           |   K02
 
 
 
-### 2.How the 16s RAN database to created?
+### 2.How the SSU rRAN database was created?
 
-The 16s RAN database was created by [SILVA](<https://www.arb-silva.de/>) rRNA database project (version: SILVA SSU 123.1 release)
-with sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence.
+The SSU rRAN database was created by [SILVA](<https://www.arb-silva.de/>) SSU rRNA database project (version: SILVA SSU 123.1 release).
+In this data the sequences haven been truncated, which means that all nucleotides that have not been aligned were removed from the sequence.
 

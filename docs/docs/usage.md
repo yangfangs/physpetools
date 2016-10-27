@@ -290,14 +290,15 @@ $ PhySpeTree build -i example_16s_ssurna.fasta -o output --sran
 
 ### build options
 
-| option |  Description                                                                                                                          |
-|:------- |:-------------------------------------------------------------------------------------------------------------------------------------|
-|  -h     |  Print help message and exits.                                                                                                       |
-|  -i     |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.                                  |
-|  -o     |  A directory include output data (reconstruct tree files). The default output data name is Outdata.                                  |
-|  -t     |  Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.               |
-|  --hcp  |  The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp. |
-|  --srna |  The srna (16 SSU RNA) mode is use SSU rRNA data to reconstruct phylogenetic tree.                                              |
+| option |  Description                                                                                                                            |
+|:------- |:---------------------------------------------------------------------------------------------------------------------------------------|
+|  -h     |  Print help message and exits.                                                                                                         |
+|  -i     |  Input a TXT file contain the species names (abbreviated names) are same with KEGG species abbreviation.                               |
+|  -o     |  A directory include output data (tree files). The default output data name is Outdata.                                                |
+|  -t     |  Specify the number of processing threads (CPUs) to reconstruct phylogenetic tree. The default is 1.                                   |
+|  -e     |  The extended data should be FASTA format to extend phylogenetic tree by --ehcp or --esrna option.                                     |
+|  --hcp  |  Specify the hcp (highly conserved protein) method to reconstruct phylogenetic tree. The default method is hcp.                        |
+|  --srna |  The srna (SSU rRNA) method is use SSU rRNA data to reconstruct phylogenetic tree.                                                     |
 
 
 ### example
@@ -436,20 +437,20 @@ Few seconds reconstruct phylogenetic tree completed and tree file are store in `
 Users enable choice more detail options with PhySpeTree call software, detail advance options input
 ``must be enclosed in single quotes``.
 
-The follow is to use RAxML advance options example:
+The following is an example of using RAxML advanced options:
 
 ```bash
-$ PhySpeTree -i example_chp  --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1' --hcp
+$ PhySpeTree -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 ```
 
 **--muscle**
 
-    Multiple sequence alignment by muscle. The default aligned software is Muscle.
+  Multiple sequence alignment by muscle. The default multiple sequence alignment software is Muscle.
 
 
 **--muscle_p**
 
-  Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see [MUSCLE Manual](http://www.drive5.com/muscle/manual/options.html).
+  Set Muscle advance parameters. The default is ``-maxiter 100``. More options about muslce please to see [MUSCLE Manual](http://www.drive5.com/muscle/manual/options.html)
 
 The default option:
 
@@ -460,28 +461,28 @@ The default option:
 
 **--clustalw**
 
-  Multiple sequense alignment by clustalw2.
+    Multiple sequence alignment by clustalw2.
 
 **--clustalw_p**
 
-  Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw please to see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
+  Set clustalw2 advance parameters. Here use clustalw default parameters. More options about clustalw please to see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
 
 
 **--gblocks**
 
-  Set Gblocks parameters. The default is ``-t=p -e=-gb1``. More options about Gblocks please to see [Gblocks documentation](http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html).
+  Set Gblocks advance parameters. The default is ``-t=p -e=-gb1``. More options about Gblocks please to see [Gblocks documentation](http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html).
 
 The default option:
 
 |  option | description                                                 |
 |:--------|:------------------------------------------------------------|
 |  -t     | Choice type of sequence. The PhySpeTree default set is protein. |
-|  -e     | Eneric file extensionc. physep set default is -gbl1.        |
+|  -e     | Eneric file extensionc. PhySpeTree set default is -gbl1.        |
 
 
 **--ranxml**
 
-  Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
+    Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
 
 
 
@@ -491,11 +492,11 @@ The default option:
 
 The default option:
 
-|  option | description                                                                                                                          |
-|:--------|:------------------------------------------------------------------------------------------------------------------------------------ |
+|  option | description                                                                                                                              |
+|:--------|:---------------------------------------------------------------------------------------------------------------------------------------- |
 |   -f    |  select algorithm. The PhySpeTree default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run. |
 |   -m    |  Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The PhySpeTree default set is PROTGAMMAJTTX.      |
-|   -p    |  Specify a random number seed for the parsimony inferences. The physep default set is 12345.                                         |
+|   -p    |  Specify a random number seed for the parsimony inferences. The physep default set is 12345.                                             |
 |   -x    |  Specify an integer number (random seed) and turn on rapid bootstrapping. The PhySpeTree default set is 12345.                           |
 |   -N    |  The same with -# specify the number of alternative runs on distinct starting trees. The PhySpeTree default set is 100.                  |
 
@@ -506,19 +507,19 @@ The default option:
 
 **--fasttree_p**
     
-  Set more detail RAxML parameters.More options about clustalw please to see [FastTree](http://www.microbesonline.org/fasttree/).
+  Set more FastTree advance parameters. More options about clustalw please to see [FastTree](http://www.microbesonline.org/fasttree/).
 
 
 ## combine
 
 
-Users should prepare a combine tree file by Combine command to combine tree files.
+The **combine** module for the consensus tree construction.
 
 
 In Linux you can easy combine more tree to a tree file, for example:
 
 ```bash
-$ cat tree1.tree tree2.tree > combieTree.tree
+$ cat tree1.tree tree2.tree > combineTree.tree
 
 ```
 
@@ -533,10 +534,10 @@ $ PhySpeTree -i organism_example_list.txt [options]*
 
 
 | option  | Description  |
-|---|---|
+|---|---------------------------------|
 |  -h |  Print help message and exits. |
-|  -i |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
-|  -o |  A directory contain combine tree file. The default output data name is combinetree. |
+|  -i |  Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation. |
+|  -o |  A directory contain combine tree file. The default output data name is combineTree. |
 
 
 ### example
@@ -602,11 +603,11 @@ $ PhySpeTree iview -i organism_example_list.txt -range phylum
 | option | Description                                                                                         |
 |:-------|:----------------------------------------------------------------------------------------------------|
 |  -h    |  Print help message and exits.                                                                      |
-|  -i    |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
+|  -i    |  Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation.|
 |  -o    |  A directory contain range text file. The directory name is iview.                                  |
-|  -a    |  Colored ranges by users assign, users can choice from kingdom phylum class and order.                                 |
+|  -a    |  Colored ranges by users assign, users can choice from <kingdom>, <phylum>, <class> and <order>.    |
 | -r/--range   | Annotating ranges by kingdom, phylum, class or order. The default is phylum.                  |
-| -l/--labels  | Change labels from abbreviation names to full names.                                          |
+| -l/--labels  | Change species labels from abbreviated names to full names.                                          |
 
 
 ### example
@@ -740,7 +741,7 @@ $ PhySpeTree check -i organism_example_list.txt -out check --ehcp
 | option | Description                                                                                         |
 |:-------|:----------------------------------------------------------------------------------------------------|
 |  -h    |  Print help message and exits.                                                                      |
-|  -i    |  Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation. |
+|  -i    |  Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation.|
 |  -o    |  A directory contain check result. The directory name is check.                                     |
 | --hcp  |  Check organisms whether supported by KEGG database.                                                |
 | --ehcp |  Check input organisms prepare for extend autobuild tree module.                                    |
