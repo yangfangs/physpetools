@@ -103,7 +103,7 @@ To upgrade to latest version:
 
     $ pip install physpetools-v*.tar.gz
 
-4. Use git command clone PhySpeTree to install
+4. Use the git command clone PhySpeTree to install it:
 
 .. code-block:: console
 

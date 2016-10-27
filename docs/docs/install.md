@@ -25,7 +25,7 @@ pip install PhySpeTree-*.tar.gz
 ```
 
 
-## 3. You can install PhySpeTree by download the latest released version form github:
+## 3. You can install PhySpeTree by downloading the latest released version form github:
 
 * [Download](https://github.com/xiaofeiyangyang/physpetools/releases) latest released version **.tar.gz** file.
 
@@ -37,7 +37,7 @@ $ pip install physpetools-v*.tar.gz
 ```
 
 
-## 4. Use git command clone **PhySpeTree** to install
+## 4. Use the git command clone PhySpeTree to install it:
 
 ```bash
 $ git clone git@github.com:xiaofeiyangyang/physpetools.git
