@@ -11,15 +11,15 @@ PhySpeTree: automatically reconstructing phylogenetic species tree
 
 Introduction
 ------------------------------------------------------------------------------
-Understanding phylogenetic relationships between different species is crucial for evolutionary studies.
-Reconstructing the phylogenetic species tree, a branching diagram, is particularly useful in inferring evolutionary relationships.
-For example, the tree-of-life provides a remarkable view of organizing principles of the biological world.
-So, the exact species tree to be reconstructed is necessary, but the process of reconstructing the species or gene tree is very tedious.
+Understanding phylogenetic relationships between different species is crucial for evolutionary studies. Reconstructing the
+phylogenetic species tree, a branching diagram, is particularly useful in inferring evolutionary relationships. For example,
+the tree-of-life provides a remarkable view of organizing principles of the biological world. So, the exact species tree to
+be reconstructed is necessary, but the process of reconstructing the species or gene tree is very tedious.
 
 Here, we developed an easy-to-use package named PhySpeTree that is convenient to reconstruct species trees by one command line.
-Two independent pipelines were included by using the most adopted small subunit ribosomal RNA (SSU rRNA) and
-concatenated highly conserved proteins (HCP), respectively. A distinct advantage is that users only need to input
-species names and PhySpeTree automatically downloads and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.
+Two independent pipelines were included by using the most adopted small subunit ribosomal RNA (SSU rRNA) and concatenated highly
+conserved proteins (HCP), respectively. A distinct advantage is that users only need to input species names and PhySpeTree
+automatically downloads and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.
 
 PhySpeTree workflow
 ------------------------------------------------------------------------------
