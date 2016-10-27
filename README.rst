@@ -79,7 +79,7 @@ To upgrade to latest version:
 
 .. code-block:: console
 
-	$ pip install --upgrade PhySpeTree
+    $ pip install --upgrade PhySpeTree
 
 
 
@@ -91,7 +91,7 @@ To upgrade to latest version:
 
 .. code-block:: console
 
-    $pip install PhySpeTree-*.tar.gz
+    $ pip install PhySpeTree-*.tar.gz
 
 3. You can install PhySpeTree by downloading the latest released version form github:
 
@@ -101,21 +101,21 @@ To upgrade to latest version:
 
 .. code-block:: console
 
-	$ pip install physpetools-v*.tar.gz
+    $ pip install physpetools-v*.tar.gz
 
 4. Use git command clone PhySpeTree to install
 
 .. code-block:: console
 
-	$ git clone git@github.com:xiaofeiyangyang/physpetools.git
+    $ git clone git@github.com:xiaofeiyangyang/physpetools.git
 
 .. code-block:: console
 
-	$ cd physpetools
+    $ cd physpetools
 
 .. code-block:: console
 
-	$ python setup.py install
+    $ python setup.py install
 
 Usage
 -------------------------------------------------------------------------------
