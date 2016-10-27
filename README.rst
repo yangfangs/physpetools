@@ -139,29 +139,29 @@ autobuild options
     Print help message and exits.
 
 -i
-    Input a TXT file contain the abbreviated species names are same with KEGG species abbreviation.
+    Input a TXT file contain the species names (abbreviated names) are same with KEGG species abbreviation.
 
 -o
     A directory include output data (tree files). The default output data name is Outdata.
 
 -t
-    Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.
+    Specify the number of processing threads (CPUs) to reconstruct phylogenetic tree. The default is 1.
 
 --hcp
 
-    The hcp (highly conserved protein) mode is use conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.
+    Specify the hcp (highly conserved protein) method to reconstruct phylogenetic tree. The default method is hcp.
 
 --ehcp
 
-    The ehcp (highly conserved protein) mode is use highly conserved proteins and extend highly protein (users provide) to reconstruct phylogenetic tree.
+    The ehcp mode is use highly conserved proteins with extend highly conserved protein (users provide) to reconstruct phylogenetic tree.
 
 --srna
 
-    The 16srna (16 ssu RNA) mode is use 16s RNA data to reconstruct phylogenetic tree.
+    The srna (SSU rRNA) method is use SSU rRNA data to reconstruct phylogenetic tree.
 
 --esrna
 
-    The 16srna (16 SSU RNA) mode is use 16s SSU RNA data and extend 16s SSU RNA (users provide) to reconstruct phylogenetic tree.
+    The esrna mode is use SSU RNA sequence with extend SSU RNA sequence (users provide) to reconstruct phylogenetic tree.
 
 
 Advance options
@@ -170,32 +170,33 @@ Advance options
 Users enable choice more detail options with PhySpeTree call software, detail advance options input
 ``must be enclosed in single quotes``.
 
-The follow is to use RAxML advance options example:
+The following is an example of using RAxML advanced options:
 
 .. code-block:: console
 
     $ PhySpeTree -i organism_example_list.txt --raxml --raxml_p '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
 --muscle
-    Multiple sequence alignment by muscle. The default aligned software is Muscle.
+    Multiple sequence alignment by muscle. The default multiple sequence alignment software is Muscle.
 
 
 --muscle_p
-    Set multiple sequence alignment parameters. The default is ``-maxiter 100``. More options about muslce please to see
+    Set Muscle advance parameters. The default is ``-maxiter 100``. More options about Muscle please to see
     `MUSCLE Manual <http://www.drive5.com/muscle/manual/options.html>`_.
 
     -maxiter
         maximum number of iterations to run is set 100.
+
 --clustalw
-    Multiple sequense alignment by clustalw2.
+    Multiple sequence alignment by clustalw2.
 
 --clustalw_p
-    Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw
+    Set clustalw2 advance parameters. Here use clustalw default parameters. More options about clustalw
     please to see `Clustalw Help <http://www.clustal.org/download/clustalw_help.txt>`_.
 
 
 --gblocks
-    Set Gblocks parameters. The default is ``-t=p -e=-gb1``.
+    Set Gblocks advance parameters. The default is ``-t=p -e=-gb1``.
     More options about Gblocks please to see
     `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
@@ -203,7 +204,7 @@ The follow is to use RAxML advance options example:
         Choice type of sequence. The PhySpeTree default set is protein.
 
     -e
-        Eneric file extensionc. physep set default is -gbl1.
+        Eneric file extensionc. PhySpeTree set default is -gbl1.
 
 
 --raxml
@@ -233,17 +234,17 @@ The follow is to use RAxML advance options example:
     Reconstruct phylogenetic tree by FastTree.
 
 --fasttree_p
-    Set more detail RAxML parameters.More options about clustalw
+    Set FastTree advance parameters. More options about clustalw
     please to see `FastTree <http://www.microbesonline.org/fasttree/>`_.
 
 build
 ^^^^^^^^^^^^^^^^^^^^
 
-Users can build tree by own SSU rRNA data or highly conserved proteins.
+Users can reconstruct phylogenetic tree use `build` module by manually prepared files. such as, SSU rRNA sequence or highly conserved proteins.
 
 Use **build** in command line to reconstruct phylogenetic tree:
 
-* build phylogenetic tree by highly conserved proteins
+* build phylogenetic tree by highly conserved proteins method:
 
 
 .. code-block:: console
@@ -251,7 +252,7 @@ Use **build** in command line to reconstruct phylogenetic tree:
     $ PhySpeTree build -i example_hcp -o output --hcp
 
 
-* build phylogenetic tree by SSU rRNA data
+* build phylogenetic tree by SSU rRNA sequence method:
 
 
 .. code-block:: console
