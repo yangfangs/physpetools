@@ -146,32 +146,35 @@
 <h1 id="frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</h1>
 <h2 id="physpetree-inputoutput">PhySpeTree input/output</h2>
 <h3 id="1what-preparation-of-user-should-does-for-physpetree">1.What preparation of user should does for PhySpeTree?</h3>
-<p>The users should prepare a TXT files, which contain species abbreviate names (abbreviated names are same with <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG database</a>.
-one line write one species name only such as <a href="https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt">organism_example_list</a>.
+<p>The users should prepare a TXT file, which contain species name (abbreviated names are same with <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG database</a>.
+one line write one species name only. For example,<a href="https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt">organism_example_list</a>.
 You can retrieve the Abbreviation of species names by <a href="http://rest.kegg.jp/list/organism">KEGG API</a></p>
 <h3 id="2whats-physpetree-output-data-mean">2.What's PhySpeTree output data mean?</h3>
-<p>PhySpeTree output two data files, the one is contain phylogenetic tree files default names is <code>Outdata</code>, another is a temp file.</p>
-<p>If you reconstruct phylogenetic tree by HCP (highly conserved protein) method, temp file include three directory <code>conserved_protein</code>, <code>muscle_alignment</code> and <code>concatenate</code></p>
+<p>PhySpeTree output two data files, the one is a result file default names is <code>Outdata</code>, another is a <code>temp</code> file.</p>
+<p>If you reconstruct phylogenetic tree by <code>--hcp</code> (highly conserved protein) method, the temp files include three directory: <code>conserved_protein</code>, <code>alignment</code> and <code>concatenate</code>.</p>
 <ul>
-<li>conserved_protein: Store the FASTA format files, which are conserved proteins retrieve by KEGG database.</li>
-<li>muscle_alignment: Store files are multiple sequence alignment by muscle.</li>
-<li>concatenate: Include concatenate highly conserved protein data (<em>.fasta format file) and select conserved blocks data (</em>.fasta-gb1 format file).</li>
+<li>conserved_protein: Store the FASTA format files, which was highly conserved proteins retrieved by KEGG database.</li>
+<li>alignment: Store the sequence files has been aligned.</li>
+<li>concatenate: Include concatenated highly conserved proteins data (FASTA format) and selected conserved blocks data (*.fasta-gb1 format file).</li>
 </ul>
-<p>If you reconstruct phylogenetic tree by SRNA (16s RNA) model temp file include two directory <code>16srnadata</code> and <code>16srna_alignment</code>.</p>
+<p>If you reconstruct phylogenetic tree by <code>--srna</code> (SSU rRNA) method, the temp files include two directory: <code>rna_sequence</code> and <code>rna_alignment</code>.</p>
 <ul>
-<li>16srandata: Stroe  a file name is 16srandata.fata, contain the 16s RNA data retrieve by SILVA database.</li>
-<li>16sran_alignment: Store the <em>.fasta format is multiple sequence alignment data and the </em>.fasta-gb1, <em>fasta-gb1.html are select conserved blocks data (use Gblocks software),
-  the </em>.phy format file is convert to convert from gblok data by PhySpeTree to reconstruct phylogenetic tree.</li>
+<li>rna_sequence: Store a file named rna_sequence.fasta, contain the SSU rRNA sequence retrieved from SILVA database.</li>
+<li>16sran_alignment: Store in the <em>.fasta file is the sequence files has been aligned and the </em>.fasta-gb1, <em>fasta-gb1.html are select conserved blocks data (use Gblocks software),
+  the </em>.phy format file is converted from has been select conserved blocks data by PhySpeTree.</li>
 </ul>
-<p>The users can check the quality of every aspect of data by these temp files.</p>
+<p><code>NOTE</code>:</p>
+<ul>
+<li>Users can check the quality of every aspect of data by the corresponding temp files.</li>
+</ul>
 <h2 id="physpetree-reconstruct-phylogenetic-tree-database">PhySpeTree reconstruct phylogenetic tree database</h2>
-<h3 id="1whats-the-highly-conserved-proteins-are-physpetree-use-reconstruct-phylogenetic-tree">1.what's the highly conserved proteins are PhySpeTree use reconstruct phylogenetic tree?</h3>
+<h3 id="1whats-the-highly-conserved-proteins-be-used-to-reconstruct-phylogenetic-tree">1.what's the highly conserved proteins be used to reconstruct phylogenetic tree?</h3>
 <p>PhySpeTree use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.</p>
 <p><strong>cite:</strong></p>
 <blockquote>
 <p>Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.</p>
 </blockquote>
-<p>31 highly conserved proteins and correspond KEGG database KO number as follow table:</p>
+<p>The 31 highly conserved proteins and corresponding KEGG database KO number as follow table:</p>
 <table>
 <thead>
 <tr>
@@ -338,9 +341,9 @@ You can retrieve the Abbreviation of species names by <a href="http://rest.kegg.
 </tr>
 </tbody>
 </table>
-<h3 id="2how-the-16s-ran-database-to-created">2.How the 16s RAN database to created?</h3>
-<p>The 16s RAN database was created by <a href="https://www.arb-silva.de/">SILVA</a> rRNA database project (version: SILVA SSU 123.1 release)
-with sequences haven been truncated. Means that all nucleotides that have not been aligned were removed from the sequence.</p></div>
+<h3 id="2how-the-ssu-rran-database-was-created">2.How the SSU rRAN database was created?</h3>
+<p>The SSU rRAN database was created by <a href="https://www.arb-silva.de/">SILVA</a> SSU rRNA database project (version: SILVA SSU 123.1 release).
+In this data the sequences haven been truncated, which means that all nucleotides that have not been aligned were removed from the sequence.</p></div>
             
         </div>
 

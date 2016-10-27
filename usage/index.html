@@ -486,23 +486,27 @@ Outdata/
 </tr>
 <tr>
 <td align="left">-i</td>
-<td align="left">Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.</td>
+<td align="left">Input a TXT file contain the species names (abbreviated names) are same with KEGG species abbreviation.</td>
 </tr>
 <tr>
 <td align="left">-o</td>
-<td align="left">A directory include output data (reconstruct tree files). The default output data name is Outdata.</td>
+<td align="left">A directory include output data (tree files). The default output data name is Outdata.</td>
 </tr>
 <tr>
 <td align="left">-t</td>
-<td align="left">Specify the number of processing threads (CPUs) to use for PhySpeTree to reconstruct phylogenetic tree. The default is 1.</td>
+<td align="left">Specify the number of processing threads (CPUs) to reconstruct phylogenetic tree. The default is 1.</td>
+</tr>
+<tr>
+<td align="left">-e</td>
+<td align="left">The extended data should be FASTA format to extend phylogenetic tree by --ehcp or --esrna option.</td>
 </tr>
 <tr>
 <td align="left">--hcp</td>
-<td align="left">The hcp (highly conserved protein) mode is use highly conserved proteins to reconstruct phylogenetic tree. The default mode is hcp.</td>
+<td align="left">Specify the hcp (highly conserved protein) method to reconstruct phylogenetic tree. The default method is hcp.</td>
 </tr>
 <tr>
 <td align="left">--srna</td>
-<td align="left">The srna (16 SSU RNA) mode is use SSU rRNA data to reconstruct phylogenetic tree.</td>
+<td align="left">The srna (SSU rRNA) method is use SSU rRNA data to reconstruct phylogenetic tree.</td>
 </tr>
 </tbody>
 </table>
@@ -615,15 +619,14 @@ contain each species SSU rRNA sequence as <a href="../example/example_combine_tr
 <h3 id="advance-options_1">Advance options</h3>
 <p>Users enable choice more detail options with PhySpeTree call software, detail advance options input
 <code>must be enclosed in single quotes</code>.</p>
-<p>The follow is to use RAxML advance options example:</p>
-<pre><code class="bash">$ PhySpeTree -i example_chp  --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1' --hcp
+<p>The following is an example of using RAxML advanced options:</p>
+<pre><code class="bash">$ PhySpeTree -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 </code></pre>
 
 <p><strong>--muscle</strong></p>
-<pre><code>Multiple sequence alignment by muscle. The default aligned software is Muscle.
-</code></pre>
+<p>Multiple sequence alignment by muscle. The default multiple sequence alignment software is Muscle.</p>
 <p><strong>--muscle_p</strong></p>
-<p>Set multiple sequence alignment parameters. The default is <code>-maxiter 100</code>. More options about muslce please to see <a href="http://www.drive5.com/muscle/manual/options.html">MUSCLE Manual</a>.</p>
+<p>Set Muscle advance parameters. The default is <code>-maxiter 100</code>. More options about muslce please to see <a href="http://www.drive5.com/muscle/manual/options.html">MUSCLE Manual</a></p>
 <p>The default option:</p>
 <table>
 <thead>
@@ -640,11 +643,12 @@ contain each species SSU rRNA sequence as <a href="../example/example_combine_tr
 </tbody>
 </table>
 <p><strong>--clustalw</strong></p>
-<p>Multiple sequense alignment by clustalw2.</p>
+<pre><code>Multiple sequence alignment by clustalw2.
+</code></pre>
 <p><strong>--clustalw_p</strong></p>
-<p>Set more detail clustalw2 parameters. Here use clustalw default parameters. More options about clustalw please to see <a href="http://www.clustal.org/download/clustalw_help.txt">Clustalw Help</a>.</p>
+<p>Set clustalw2 advance parameters. Here use clustalw default parameters. More options about clustalw please to see <a href="http://www.clustal.org/download/clustalw_help.txt">Clustalw Help</a>.</p>
 <p><strong>--gblocks</strong></p>
-<p>Set Gblocks parameters. The default is <code>-t=p -e=-gb1</code>. More options about Gblocks please to see <a href="http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html">Gblocks documentation</a>.</p>
+<p>Set Gblocks advance parameters. The default is <code>-t=p -e=-gb1</code>. More options about Gblocks please to see <a href="http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html">Gblocks documentation</a>.</p>
 <p>The default option:</p>
 <table>
 <thead>
@@ -660,12 +664,13 @@ contain each species SSU rRNA sequence as <a href="../example/example_combine_tr
 </tr>
 <tr>
 <td align="left">-e</td>
-<td align="left">Eneric file extensionc. physep set default is -gbl1.</td>
+<td align="left">Eneric file extensionc. PhySpeTree set default is -gbl1.</td>
 </tr>
 </tbody>
 </table>
 <p><strong>--ranxml</strong></p>
-<p>Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.</p>
+<pre><code>Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
+</code></pre>
 <p><strong>--raxml_p</strong></p>
 <p>Set reconstruct phylogenetic tree arguments with RAxML. The default is <code>-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1</code>. More options about RAxMl please to see <a href="http://sco.h-its.org/exelixis/resource/download/NewManual.pdf">RAxML Manual</a>.</p>
 <p>The default option:</p>
@@ -702,11 +707,11 @@ contain each species SSU rRNA sequence as <a href="../example/example_combine_tr
 <p><strong>--fasttree</strong></p>
 <p>Reconstruct phylogenetic tree by FastTree.</p>
 <p><strong>--fasttree_p</strong></p>
-<p>Set more detail RAxML parameters.More options about clustalw please to see <a href="http://www.microbesonline.org/fasttree/">FastTree</a>.</p>
+<p>Set more FastTree advance parameters. More options about clustalw please to see <a href="http://www.microbesonline.org/fasttree/">FastTree</a>.</p>
 <h2 id="combine">combine</h2>
-<p>Users should prepare a combine tree file by Combine command to combine tree files.</p>
+<p>The <strong>combine</strong> module for the consensus tree construction.</p>
 <p>In Linux you can easy combine more tree to a tree file, for example:</p>
-<pre><code class="bash">$ cat tree1.tree tree2.tree &gt; combieTree.tree
+<pre><code class="bash">$ cat tree1.tree tree2.tree &gt; combineTree.tree
 
 </code></pre>
 
@@ -729,11 +734,11 @@ contain each species SSU rRNA sequence as <a href="../example/example_combine_tr
 </tr>
 <tr>
 <td>-i</td>
-<td>Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.</td>
+<td>Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation.</td>
 </tr>
 <tr>
 <td>-o</td>
-<td>A directory contain combine tree file. The default output data name is combinetree.</td>
+<td>A directory contain combine tree file. The default output data name is combineTree.</td>
 </tr>
 </tbody>
 </table>
@@ -789,7 +794,7 @@ annotation and management of phylogenetic trees. More detail with of iTol in <a 
 </tr>
 <tr>
 <td align="left">-i</td>
-<td align="left">Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.</td>
+<td align="left">Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation.</td>
 </tr>
 <tr>
 <td align="left">-o</td>
@@ -797,7 +802,7 @@ annotation and management of phylogenetic trees. More detail with of iTol in <a 
 </tr>
 <tr>
 <td align="left">-a</td>
-<td align="left">Colored ranges by users assign, users can choice from kingdom phylum class and order.</td>
+<td align="left">Colored ranges by users assign, users can choice from <kingdom>, <phylum>, <class> and <order>.</td>
 </tr>
 <tr>
 <td align="left">-r/--range</td>
@@ -805,7 +810,7 @@ annotation and management of phylogenetic trees. More detail with of iTol in <a 
 </tr>
 <tr>
 <td align="left">-l/--labels</td>
-<td align="left">Change labels from abbreviation names to full names.</td>
+<td align="left">Change species labels from abbreviated names to full names.</td>
 </tr>
 </tbody>
 </table>
@@ -923,7 +928,7 @@ aeq     range   #F1A2B7 Adlercreutzia
 </tr>
 <tr>
 <td align="left">-i</td>
-<td align="left">Input a txt file contain the a abbreviation species names are same with KEGG species abbreviation.</td>
+<td align="left">Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation.</td>
 </tr>
 <tr>
 <td align="left">-o</td>
