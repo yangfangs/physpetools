@@ -66,7 +66,7 @@ Arguments parse
                               default=False, help='multiple sequense alignment by clustalw2.')
     advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
                               help='Set more detail clustalw2 parameter.')
-    advance_args.add_argument('--gblocks', action='store', dest='gblocks',
+    advance_args.add_argument('--gblocks', action='store', dest='gblocks_parameter',
                               default=gblockspara_pro, help='Use gblock.')
     advance_args.add_argument('--raxml', action='store_true', dest='raxml',
                               default=True,
@@ -97,9 +97,9 @@ Staring run build
     if args.HCP:
         setlogdir(out_put)
         build_hcp(args_input, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
-                  args.gblocks, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter, args.thread)
+                  args.gblocks_parameter, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter, args.thread)
     # reconstruct phylogenetic tree by ssu RNA
     elif args.ssurna:
         setlogdir(out_put)
         build_srna(args_input, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
-                   args.gblocks, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter, args.thread)
+                   args.gblocks_parameter, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter, args.thread)
