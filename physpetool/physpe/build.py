@@ -75,7 +75,7 @@ Arguments parse
                               default=False, help="Multiple sequence alignment by clustalw2.")
     advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
                               help='Set clustalw2 advance parameters. Here use clustalw default parameters.')
-    advance_args.add_argument('--gblocks', action='store', dest='gblocks',
+    advance_args.add_argument('--gblocks', action='store', dest='gblocks_parameter',
                               default=gblockspara_pro, help="Set Gblocks advance parameters.")
     advance_args.add_argument('--raxml', action='store_true', dest='raxml', default=True,
                               help="Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.")
