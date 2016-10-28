@@ -21,7 +21,7 @@
 # ###############################################################################
 
 """
-The module retrieve and down 16s SSU rRNA from SILVA Database
+The module retrieve and download SSU rRNA sequence from SILVA Database
 """
 
 import ftplib

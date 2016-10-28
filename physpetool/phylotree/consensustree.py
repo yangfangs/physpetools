@@ -29,8 +29,6 @@ import subprocess
 from physpetool.softwares.path import getlocalpath
 
 
-
-
 def docontree(input, output, rule):
     """
 Combine tree
