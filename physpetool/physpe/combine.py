@@ -43,7 +43,7 @@ Arguments parse
                               default='combinetree', help='A directory contain combined tree file. \
                               The default is combineTree.')
     combine_args.add_argument('--mr', action='store_true', dest="mr",
-                              default=True, help='Compute majority rule consensus tree.')
+                              default=True, help='Compute majority rule consensus tree. default.')
     combine_args.add_argument('--mre', action='store_true', dest="mre",
                               default=False, help='Compute extended majority rule consensus tree.')
     combine_args.add_argument('--strict', action='store_true', dest="strict",
