@@ -32,7 +32,7 @@ from physpetool.phylotree.doraxml import doraxml
 from physpetool.convert.fasta2phy import fasta2phy
 from physpetool.convert.concatenate import cocat_path
 from physpetool.phylotree.log import getLogging, setlogdir
-from physpetool.phylotree.retrieve16srna import retrieve16srna
+from physpetool.phylotree.retrievessurna import retrieve16srna
 from physpetool.phylotree.retrieveprotein import doretrieve
 from physpetool.utils.checkinputfile import checkKeggOrganism, checkSilvaOrganism, checkFile
 import argparse
