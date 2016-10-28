@@ -527,7 +527,7 @@ Use **combine** in command line like this:
 
 
 ```bash
-$ PhySpeTree -i organism_example_list.txt [options]*
+$ PhySpeTree combine -i combineTree.tree [options]*
 ```
 
 ### Combine options
@@ -536,7 +536,7 @@ $ PhySpeTree -i organism_example_list.txt [options]*
 | option  | Description  |
 |---|---------------------------------|
 |  -h |  Print help message and exits. |
-|  -i |  Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation. |
+|  -i |  Input a tree file (PHYLIP format), which contain multiple tree. |
 |  -o |  A directory contain combine tree file. The default output data name is combineTree. |
 
 
