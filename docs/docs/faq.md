@@ -24,12 +24,12 @@ If you reconstruct phylogenetic tree by `--hcp` (highly conserved protein) metho
 If you reconstruct phylogenetic tree by `--srna` (SSU rRNA) method, the temp files include two directory: `rna_sequence` and `rna_alignment`.
 
   * rna_sequence: Store a file named rna_sequence.fasta, contain the SSU rRNA sequence retrieved from SILVA database.
-  * rna_alignment: Store in the *.fasta file is the sequence files has been aligned and the *.fasta-gb1, *fasta-gb1.html are select conserved blocks data (use Gblocks software),
-  the *.phy format file is converted from has been select conserved blocks data by PhySpeTree.
+  * rna_alignment: Store in the \*.fasta file is the sequence files has been aligned and the \*.fasta-gb1, \*fasta-gb1.html are select conserved blocks data (use Gblocks software),
+  the \*.phy format file is converted from has been select conserved blocks data by PhySpeTree.
 
 `NOTE`:
 
-* Users can check the quality of every aspect of data by the corresponding temp files.
+* *Users can check the quality of every aspect of data by the corresponding temp files.*
 
 
 ## PhySpeTree reconstruct phylogenetic tree database
