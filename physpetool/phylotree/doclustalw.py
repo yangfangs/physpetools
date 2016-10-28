@@ -102,7 +102,7 @@ Call clustalw software to do align
         out_file = "-OUTFILE=" + os.path.join(clustalw_dir, i)
         cmd = clu_path + "/clustalw2 " + "-INFILE=" + each_pro + " -OUTPUT=FASTA -ALIGN " + out_file + " " + clustalwparas
         subprocess.call(cmd, shell=True)
-    logdoclustalw.info("Multiple sequence alignment  by Clustalw2 was completed.")
+    logdoclustalw.info("Multiple sequence alignment by Clustalw2 was completed.")
     return clustalw_dir
 
 

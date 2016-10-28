@@ -86,7 +86,7 @@ call muscle software to do align
     out_path = os.path.dirname(outdata)
     timeformat = '%Y%m%d%H%M%S'
     timeinfo = str(time.strftime(timeformat))
-    subdir = 'temp/hcp_alignment' + timeinfo
+    subdir = 'temp/alignment' + timeinfo
     muscle_dir = os.path.join(out_path, subdir)
     # muscle_dir = os.path.join(indata_files, 'muscle_alignment')
     pro_name = os.listdir(indata_files)

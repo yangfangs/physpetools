@@ -21,7 +21,7 @@
 # ###############################################################################
 
 """
-Gblocks module: do gblocks for alignment sequences.
+Gblocks module: do gblocks before aligned sequences.
 
 """
 import os
@@ -43,7 +43,6 @@ def dogblocks(indata, gblockpara):
     :return: a file path of gblocks result
     """
     # Deal with outdata name
-    loggblocks.debug('Gblocks indata:{0}'.format(gblockpara))
     gblockparas = gblockpara.lstrip()
     gblockparalist = gblockparas.split(" ")
     regex = '-e='
@@ -61,6 +60,6 @@ def dogblocks(indata, gblockpara):
 
     cmd = gblockpath + "/Gblocks " + indata + " " + gblockparas
     subprocess.call(cmd, shell=True)
-    loggblocks.info('Gblocks was completed')
+    loggblocks.info('Select conserved blocks by Gblocks was completed')
     loggblocks.debug('Gblocks path:{0}'.format(gblock_data))
     return gblock_data

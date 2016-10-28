@@ -48,7 +48,7 @@ def doFastTree(inputfile, outputfile, FastTreepara, thread):
         os.environ["OMP_NUM_THREADS"] = thread_to_str
         cmd = FastTreePath + "/FastTreeMP " + FastTreepara + input_fasta + " >" + out_tree_name
         subprocess.call(cmd, shell=True)
-    logdofasttree.info("Phylogenetic species tree reconstruct by FastTree was completed")
+    logdofasttree.info("Phylogenetic species tree reconstructed by FastTree was completed")
 
 
 if __name__ == '__main__':

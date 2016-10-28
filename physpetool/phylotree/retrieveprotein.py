@@ -34,7 +34,7 @@ from physpetool.database.dbpath import getlocaldbpath
 from physpetool.phylotree.log import getLogging
 from physpetool.tools.keggapi import getprotein
 
-logretrieveprotein = getLogging('KEGG index DB')
+logretrieveprotein = getLogging('KEGG INDEX DB')
 
 
 def getspecies(name, colname):
@@ -118,9 +118,9 @@ def retrieveprotein(proindexlist, outpath, matchlist):
                     f.write(i)
         f.close()
         logretrieveprotein.info(
-            "Retrieve highly conserved protein '{0}' success and store in p{1}.fasta file".format(hcp_pro_name, str(p)))
+            "Retrieve and download of highly conserved protein '{0}' was successful store in p{1}.fasta file".format(hcp_pro_name, str(p)))
         p += 1
-    logretrieveprotein.info("Retrieve from KEGG datbase " + str(p - 1) + " highly conserved proteins")
+    logretrieveprotein.info("Retrieve from KEGG database " + str(p - 1) + " highly conserved proteins")
     return dirname
 
 
