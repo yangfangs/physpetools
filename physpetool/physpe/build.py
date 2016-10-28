@@ -66,7 +66,7 @@ Arguments parse
                               default=False, help='multiple sequense alignment by clustalw2.')
     advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
                               help='Set more detail clustalw2 parameter.')
-    advance_args.add_argument('--gblocks', nargs='?', action='store', dest='gblocks',
+    advance_args.add_argument('--gblocks', nargs='.*?', action='store', dest='gblocks',
                               default=gblockspara_pro, help='Use gblock.')
     advance_args.add_argument('--raxml', action='store_true', dest='raxml',
                               default=True,
