@@ -43,8 +43,8 @@ def dogblocks(indata, gblockpara):
     :return: a file path of gblocks result
     """
     # Deal with outdata name
-    # gblockparas = gblockpara.lstrip()
-    gblockparalist = gblockpara.split(" ")
+    gblockparas = gblockpara.lstrip()
+    gblockparalist = gblockparas.split(" ")
     regex = '-e='
     for i in range(0, len(gblockparalist)):
         if re.search(regex, gblockparalist[i]):
