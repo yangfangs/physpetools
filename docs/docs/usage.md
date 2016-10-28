@@ -435,7 +435,7 @@ Few seconds reconstruct phylogenetic tree completed and tree file are store in `
 ### Advance options
 
 Users enable choice more detail options with PhySpeTree call software, detail advance options input
-``must be enclosed in single quotes``.
+`must be enclosed in single quotes and Start with a space`.
 
 The following is an example of using RAxML advanced options:
 
