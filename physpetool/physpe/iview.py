@@ -49,10 +49,10 @@ Arguments parse
                                The directory name is iview")
 
     annotation_args.add_argument('-r', '--range', action='store_true', dest="colorrange", default=False,
-                                 help="Annotating ranges by kingdom, phylum, class or order. The default is phylum." % (taxon))
+                                 help="Annotating ranges by %s. The default is phylum." % (taxon))
 
     annotation_args.add_argument('-a', action='store', dest="assign", choices=taxonomy, default='phylum',
-                                 help="Colored ranges by user, choice form [%s]." % (taxon))
+                                 help="Colored ranges by user choice form [%s]." % (taxon))
 
     annotation_args.add_argument('-l', '--labels', action='store_true', dest="labels", default=False,
                                  help="Change species labels from abbreviated names to full names.")
