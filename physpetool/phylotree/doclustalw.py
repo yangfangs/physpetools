@@ -50,7 +50,7 @@ def doclustalw(indata, outdata, clustalwpara):
         clustalwparas = type + " " + clustalwpara.lstrip()
     clu_path = getlocalpath()
     out_path = os.path.dirname(outdata)
-    doclu_subdir = str(timeformat('temp/16srna_alignment'))
+    doclu_subdir = str(timeformat('temp/rna_sequence'))
     clustalw_dir = os.path.join(out_path, doclu_subdir)
     # check indata type is dir or files?
     if os.path.isdir(indata):

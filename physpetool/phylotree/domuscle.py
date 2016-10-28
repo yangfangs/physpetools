@@ -47,7 +47,7 @@ def domuscle(indata, outdata, musclepara):
     out_path = os.path.dirname(outdata)
     timeformat = '%Y%m%d%H%M%S'
     timeinfo = str(time.strftime(timeformat))
-    subdir = 'temp/16srna_alignment' + timeinfo
+    subdir = 'temp/rna_sequence' + timeinfo
     muscle_dir = os.path.join(out_path, subdir)
     # check indata type
     if os.path.isdir(indata):
