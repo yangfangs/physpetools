@@ -421,7 +421,7 @@ iview options
     Annotating ranges by kingdom, phylum, class or order. The default is phylum.
 
 -a
-    Colored ranges by users assign, users can choice from <kingdom>, <phylum>, <class> and <order>.
+    Colored ranges by users assign, users can choice from [kingdom, phylum, class and order].
 
 -l
     Change species labels from abbreviated names to full names.
