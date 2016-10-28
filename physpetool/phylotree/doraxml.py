@@ -38,6 +38,7 @@ call RAxML method to construct species tree
     :param outputfile: a file contain RAxML result
     """
     raxmlparas = raxmlpara.lstrip()
+
     raxmlparalist = raxmlparas.split(" ")
     tpara = '-T'
     if tpara in raxmlparalist:
