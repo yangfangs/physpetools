@@ -85,7 +85,7 @@ To upgrade to latest version:
 
 2. Download PhySpeTree released version form PypI:
 
-- `Download <https://pypi.python.org/pypi/PhySpeTree/>`_ by PypI latest released version
+- `Download PhySpeTree <https://pypi.python.org/pypi/PhySpeTree/>`_ by PypI latest released version
 
 - local installation:
 
