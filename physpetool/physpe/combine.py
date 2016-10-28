@@ -38,9 +38,10 @@ Arguments parse
     """
     combine_args = input.add_argument_group("COMBINE OPTIONS")
     combine_args.add_argument('-i', action='store', dest="inputfile",
-                              help='input files name')
+                              help='iInput a tree file (PHYLIP format), which contain multiple tree.')
     combine_args.add_argument('-o', action='store', dest="outputfile",
-                              default='combinetree', help='output files name')
+                              default='combinetree', help='A directory contain combined tree file. \
+                              The default is combineTree.')
     combine_args.add_argument('--mr', action='store_true', dest="mr",
                               default=True, help='Compute majority rule consensus tree')
     combine_args.add_argument('--mre', action='store_true', dest="mre",
