@@ -70,5 +70,5 @@ retrieve 16s rna form bioinfor.scu.edu.cn
         fw.close()
         log_retrieve.info("Retrieve and download of organism '{0}' SSU rRNA sequence was successful".format(abb))
     connect.quit()
-    log_retrieve.debug(dirname)
+
     return dirname
