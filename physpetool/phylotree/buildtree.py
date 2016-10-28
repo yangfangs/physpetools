@@ -36,9 +36,10 @@ from physpetool.phylotree.doraxml import doraxml
 # default arguments
 raxmlpara_pro = "-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1"
 raxmlpara_dna = "-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1"
-musclepara = '-maxiters 100'
-gblockspara_pro = '-t=p -e=-gb1'
-gblockspara_dna = '-t=d -e=-gb1'
+musclepara = "-maxiters 100"
+gblockspara_pro = "-t=p -e=-gb1"
+gblockspara_dna = "-t=d -e=-gb1"
+clustalwpara = None
 
 
 def build_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
