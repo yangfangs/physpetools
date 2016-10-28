@@ -41,7 +41,12 @@ Arguments parse
                               help='input files name')
     combine_args.add_argument('-o', action='store', dest="outputfile",
                               default='combinetree', help='output files name')
-
+    combine_args.add_argument('--mr', action='store_true', dest="mr",
+                              default=True, help='Compute majority rule consensus tree')
+    combine_args.add_argument('--mre', action='store_true', dest="mre",
+                              default=False, help='Compute extended majority rule consensus tree')
+    combine_args.add_argument('--strict', action='store_true', dest="strict",
+                              default=False, help='Compute strict consensus tree')
 
 def starting(args):
     """
@@ -51,4 +56,14 @@ Staring run combine
     pwd = os.getcwd()
 
     out_put = os.path.join(pwd, args.outputfile)
-    docontree(args.inputfile, out_put)
+
+    # get the consensus tree method
+    if args.mre:
+        rule = "MRE"
+    elif args.strict:
+        rule = "STRICT"
+    elif args.mr:
+        rule = "MR"
+
+    # merge tree
+    docontree(args.inputfile, out_put, rule)

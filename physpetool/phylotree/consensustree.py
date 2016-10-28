@@ -31,17 +31,18 @@ from physpetool.softwares.path import getlocalpath
 
 
 
-def docontree(input, output):
+def docontree(input, output, rule):
     """
 Combine tree
     :param input: input files
     :param output: output directory
     """
-    #get raxml path
+    # get raxml path
     raxmlpath = getlocalpath()
-    #run
+    # run
 
+    # prepare a dir store result
     if not os.path.exists(output):
         os.mkdir(output)
-    consensuseCmd = raxmlpath + "/raxmlHPC-PTHREADS-AVX " + " -J MR -m GTRCAT -z " + input + " -w " + output + " -n T1"
+    consensuseCmd = raxmlpath + "/raxmlHPC-PTHREADS-AVX " + " -J " + rule + " -m GTRCAT -z " + input + " -w " + output + " -n T1"
     subprocess.call(consensuseCmd, shell=True)
