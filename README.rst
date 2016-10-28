@@ -391,6 +391,16 @@ combine options
 -o
     A directory contain combined tree file. The default output data name is combineTree.
 
+--mr
+    Compute majority rule consensus tree.
+
+--mre
+    Compute extended majority rule consensus tree.
+
+--strict
+    Compute strict consensus tree.
+
+
 iview
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -415,7 +425,7 @@ iview options
     Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation.
 
 -o
-    A directory contain the generate configure files. The directory name is iverw.
+    A directory contain the generate configure files. The directory name is iview.
 
 -r
     Annotating ranges by kingdom, phylum, class or order. The default is phylum.

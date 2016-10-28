@@ -39,16 +39,15 @@ Arguments parse
 
     annotation_args = input.add_argument_group("CHECK OPTIONS")
     annotation_args.add_argument('-i', action='store', dest="inputfile",
-                                 help="Input organisms names file, which use to reconstructed \
-                              phylogenetic tree.")
+                                 help="Input a TXT file contain species names (abbreviated names) are same \
+                                 with KEGG species abbreviation.")
     annotation_args.add_argument('-o', action='store', dest="outputfile",
-                                 default='check', help="A directory name contain check result. The default \
+                                 default='check', help="A directory contain check result. The default directory \
                                 name is check")
     annotation_args.add_argument('--hcp', action='store_true', dest="checkhcp",
                                  default=False, help="Check organisms whether supported by KEGG database.")
     annotation_args.add_argument('--ehcp', action='store_true', dest="checkehcp",
-                                 default=False, help="Check the organisms highly conserved proteins, which users should \
-                                prepared for extend highly conserved protein method.")
+                                 default=False, help="check input organisms prepare for extend autobuild tree module.")
     annotation_args.add_argument('--srna', action='store_true', dest="checksrna",
                                  default=False, help="Check organisms whether supported by SILVA database.")
 

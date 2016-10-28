@@ -41,20 +41,21 @@ Arguments parse
     taxon = ', '.join(taxonomy)
     annotation_args = input.add_argument_group("ANNOTATION OPTIONS")
     annotation_args.add_argument('-i', action='store', dest="inputfile",
-                                 help="Input organisms names file, which used reconstructed \
-                              phylogenetic tree.")
+                                 help="Input a TXT file contain species names (abbreviated names) are same \
+                                with KEGG species abbreviation.")
+
     annotation_args.add_argument('-o', action='store', dest="outputfile",
-                                 default='iview', help="It's a directory name contain iview convert files to \
-                               view tree by use iTol v3 web applications. default output directory is iview.")
+                                 default='iview', help="A directory contain the generate configure files. \
+                               The directory name is iview")
 
     annotation_args.add_argument('-r', '--range', action='store_true', dest="colorrange", default=False,
-                                 help="Colored ranges by %s, you can choice one. The default is phylum." % (taxon))
+                                 help="Annotating ranges by kingdom, phylum, class or order. The default is phylum." % (taxon))
 
     annotation_args.add_argument('-a', action='store', dest="assign", choices=taxonomy, default='phylum',
                                  help="Colored ranges by user, choice form [%s]." % (taxon))
 
     annotation_args.add_argument('-l', '--labels', action='store_true', dest="labels", default=False,
-                                 help="Change labels from abbreviation names to full names.")
+                                 help="Change species labels from abbreviated names to full names.")
 
 
 def starting(args):

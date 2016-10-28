@@ -50,33 +50,41 @@ Arguments parse
                             help="Input file FASTA format for '--sran' method or a directory contain conserved\
                                 proteins for '--hcp' method.")
     build_args.add_argument('-o', action='store', dest="outdata",
-                            default='Outdata', help='Out file name be string type.')
+                            default='Outdata',
+                            help="A directory include output data (tree files). The default name is \
+                                Outdata.")
     build_args.add_argument('-t', action='store', dest='thread',
-                            type=int, default=1, help='Set the thread.')
+                            type=int, default=1,
+                            help="Specify the number of processing threads (CPUs) to reconstruct \
+                                phylogenetic tree. The default is 1.")
     build_args.add_argument('--hcp', action='store_true', dest='HCP',
-                            default=False, help='Reconstruct phylogenetic tree by highly conserved proteins.')
+                            default=False,
+                            help="Specify the hcp (highly conserved protein) method to reconstruct \
+                                phylogenetic tree. The default method is hcp.")
     build_args.add_argument('--srna', action='store_true', dest='ssurna',
-                            default=False, help='Reconstruct phylogenetic tree by 16s ssu ran.')
+                            default=False,
+                            help="The srna (SSU rRNA) method is use SSU rRNA data to reconstruct \
+                               phylogenetic tree.")
     advance_args.add_argument('--muscle', action='store_true', dest='muscle',
                               default=True,
-                              help='Multiple sequence alignment by muscle. The default aligned software is Muscle.')
+                              help="Multiple sequence alignment by muscle. The default multiple sequence \
+                                   alignment software is Muscle.")
     advance_args.add_argument('--muscle_p', action='store', dest='muscle_parameter',
-                              default=musclepara, help='Set more detail muscle parameter.')
+                              default=musclepara, help="Set Muscle advance parameters. The default is -maxiter 100.")
     advance_args.add_argument('--clustalw', action='store_true', dest='clustalw',
-                              default=False, help='multiple sequense alignment by clustalw2.')
+                              default=False, help="Multiple sequence alignment by clustalw2.")
     advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
-                              help='Set more detail clustalw2 parameter.')
-    advance_args.add_argument('--gblocks', action='store', dest='gblocks_parameter',
-                              default=gblockspara_pro, help='Use gblock.')
-    advance_args.add_argument('--raxml', action='store_true', dest='raxml',
-                              default=True,
-                              help='Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.')
+                              help='Set clustalw2 advance parameters. Here use clustalw default parameters.')
+    advance_args.add_argument('--gblocks', action='store', dest='gblocks',
+                              default=gblockspara_pro, help="Set Gblocks advance parameters.")
+    advance_args.add_argument('--raxml', action='store_true', dest='raxml', default=True,
+                              help="Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.")
     advance_args.add_argument('--raxml_p', action='store', dest='raxml_parameter',
-                              default=raxmlpara_pro, help='Set more detail RAxML parameters.')
+                              default=raxmlpara_pro, help='Set RAxML advance parameters. ')
     advance_args.add_argument('--fasttree', action='store_true', dest='fasttree',
                               default=False, help='Reconstruct phylogenetic tree by FastTree.')
     advance_args.add_argument('--fasttree_p', action='store', dest='fasttree_parameter',
-                              default='', help='Set more detail FastTree parameters.')
+                              default='', help='Set FastTree advance parameters. ')
 
 
 def starting(args):

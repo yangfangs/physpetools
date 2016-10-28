@@ -538,7 +538,9 @@ $ PhySpeTree combine -i combineTree.tree [options]*
 |  -h |  Print help message and exits. |
 |  -i |  Input a tree file (PHYLIP format), which contain multiple tree. |
 |  -o |  A directory contain combine tree file. The default output data name is combineTree. |
-
+|  --mr |  Compute majority rule consensus tree.  |
+|  --mre |  Compute extended majority rule consensus tree.  |
+| --strict |  Compute strict consensus tree.  |
 
 ### example
 
