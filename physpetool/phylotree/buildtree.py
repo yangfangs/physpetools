@@ -61,7 +61,6 @@ def build_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_c
         doraxml(out_f2p, out_put, args_raxml_p, args_thread)
 
 
-
 def build_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
                args_gblocks, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
@@ -83,6 +82,7 @@ def build_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_
     elif args_raxml:
         print ("start args_ranxml")
         if args_raxml_p is raxmlpara_pro:
+            print ('start decide')
             args_raxml_p = raxmlpara_dna
             print ("start doraxml")
             doraxml(out_f2p, out_put, args_raxml_p, args_thread)
