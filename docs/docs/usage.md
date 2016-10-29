@@ -330,7 +330,7 @@ Downloading [example_build_hcp][3] and then you can use the tar command to unpac
 
 ```bash
 
-wget "https://xiaofeiyangyang.github.io/physpetools/example/example_build_hcp.tar.gz"
+$ wget "https://xiaofeiyangyang.github.io/physpetools/example/example_build_hcp.tar.gz"
 
 --2016-10-29 20:40:41--  https://xiaofeiyangyang.github.io/physpetools/example/example_build_hcp.tar.gz
 Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
@@ -418,30 +418,42 @@ EAEKLFENLKVLYRAILKARPASAKGTYVRSFYIAPTMGVGIKIDPVAASKEVAEA
 ```
 
  
-Reconstruct phylogenetic tree ues example are by follow command:
+Reconstruct phylogenetic tree by follow command:
 
 ```bash
 PhySpeTree build -i example_build_hcp -o build_hcp_tree --hcp
 ```
 
 
-Few seconds reconstruct phylogenetic tree completed and tree file are store in `build_hcp_tree` directory.
+Few seconds reconstruct phylogenetic tree completed and tree file were stored in `build_hcp_tree` directory.
 
 `NOTE`:
 
 * Prepare how many highly proteins which users decide, we recommend not less than 10 highly conserved proteins.
-* Each protein must have the same organisms.
+* Each proteins files must have the same organisms sequence.
 
 
 #### **Build phylogenetic tree by SSU rRNA**
 
-Use build command to construct phylogenetic tree by SSU rRNA sequence, users should prepare a FASTA format file
+Use `build` command to construct phylogenetic tree by SSU rRNA sequence, users should prepare a FASTA format file
 contain each species SSU rRNA sequence as [example_build_srna][4]. In this example contain ten species SSU rRNA sequence.
 
 
 Download [example_build_srna][4] and check the organisms names:
 
-```bash
+```
+$ wget "https://xiaofeiyangyang.github.io/physpetools/example/example_build_srna.fasta"
+--2016-10-29 20:56:31--  https://xiaofeiyangyang.github.io/physpetools/example/example_build_srna.fasta
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 14982 (15K) [application/octet-stream]
+Saving to: ‘example_build_srna.fasta’
+
+example_build_srna.fasta     100%[==============================================>]  14.63K  --.-KB/s    in 0.005s  
+
+2016-10-29 20:56:33 (3.14 MB/s) - ‘example_build_srna.fasta’ saved [14982/14982]
+
 $ grep '>' example_build_srna.fasta 
 >aca
 >ace
@@ -455,7 +467,7 @@ $ grep '>' example_build_srna.fasta
 >aeq
 ```
 
-Reconstruct phylogenetic tree ues example are by follow command:
+Reconstruct phylogenetic tree  by follow command:
 
 ```bash
 PhySpeTree build -i example_build_srna.fasta -o build_srna_tree --srna
