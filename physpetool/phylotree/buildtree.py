@@ -81,7 +81,7 @@ def build_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_
         doFastTree(out_f2p, out_put, args_fasttree_p_add, args_thread)
     elif args_raxml:
         print ("start args_ranxml")
-        if args_raxml_p is raxmlpara_pro:
+        if args_raxml_p == raxmlpara_pro:
             print ('start decide')
             args_raxml_p = raxmlpara_dna
             print ("start doraxml")
