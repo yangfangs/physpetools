@@ -30,11 +30,24 @@ $ PhySpeTree -i organism_example_list.txt [options]*
 
 ### example
 
-When use autobuild command to build species tree, users should prepare a organism list with species names (abbreviated names) are same with [KEGG organism list][2].
+When use `autobuild` command to build species tree, users should prepare a organism list with species names (abbreviated names) are same with [KEGG organism list][2].
 
-List format like follow or download [organism_example_list.txt][1]
+The format of the list is as follows or download [organism_example_list.txt][1].
 
 ```bash
+$ wget "https://xiaofeiyangyang.github.io/physpetools/example/organism_example_list.txt"
+
+--2016-10-29 19:41:53--  https://xiaofeiyangyang.github.io/physpetools/example/organism_example_list.txt
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.24.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.24.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 39 [text/plain]
+Saving to: ‘organism_example_list.txt’
+
+organism_example_list.txt     100%[==============================================>]      39  --.-KB/s    in 0s      
+
+2016-10-29 19:41:54 (19.0 MB/s) - ‘organism_example_list.txt’ saved [39/39]
+
 $ cat organism_example_list.txt
 aca
 ace
@@ -56,21 +69,21 @@ Loading organisms names success.....
 
 The result are store in:Outdata
 
-now loading data and constructing species phylogenetic tree......
-Now loading data and constructing species phylogenetic tree......
-2016-08-18 15:32:06,770 kegg DB INFO: Read organisms names successful
-2016-08-18 15:32:08,380 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L1' success and store in p1.fasta file
-2016-08-18 15:32:09,702 kegg DB INFO: Retrieve highly conserved protein 'DNA-directed RNA polymerase subunit alpha' success and store in p2.fasta file
-2016-08-18 15:32:11,352 kegg DB INFO: Retrieve highly conserved protein 'Leucyl-tRNA synthetase' success and store in p3.fasta file
-2016-08-18 15:32:12,786 kegg DB INFO: Retrieve highly conserved protein 'Metal-dependent proteases with chaperone activity' success and store in p4.fasta file
-2016-08-18 15:32:14,318 kegg DB INFO: Retrieve highly conserved protein 'Phenylalanine-tRNA synthethase alpha subunit' success and store in p5.fasta file
-2016-08-18 15:32:15,854 kegg DB INFO: Retrieve highly conserved protein 'Predicted GTPase probable translation factor' success and store in p6.fasta file
-2016-08-18 15:32:17,049 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L11' success and store in p7.fasta file
-2016-08-18 15:32:18,316 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L13' success and store in p8.fasta file
-
+Now loading data and constructing phylogenetic tree......
+2016-10-29 19:44:11,660 KEGG INDEX DB INFO: Read organisms names success
+2016-10-29 19:44:17,296 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L1' was successful store in p1.fasta file
+2016-10-29 19:44:17,919 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'DNA-directed RNA polymerase subunit alpha' was successful store in p2.fasta file
+2016-10-29 19:44:18,369 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Leucyl-tRNA synthetase' was successful store in p3.fasta file
+2016-10-29 19:44:18,943 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Metal-dependent proteases with chaperone activity' was successful store in p4.fasta file
+2016-10-29 19:44:19,660 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Phenylalanine-tRNA synthethase alpha subunit' was successful store in p5.fasta file
+2016-10-29 19:44:20,114 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Predicted GTPase probable translation factor' was successful store in p6.fasta file
+2016-10-29 19:44:20,505 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L11' was successful store in p7.fasta file
+2016-10-29 19:44:20,917 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L13' was successful store in p8.fasta file
+2016-10-29 19:44:21,333 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L14' was successful store in p9.fasta file
+......
 ```
 
-When auto build phylogenetic tree by `hcp` method was completed, you will get files layout like this:
+When building a phylogenetic tree using the HCP method, you will get files layout like this:
 
 ```
 log.log
@@ -81,17 +94,17 @@ Outdata/
         RAxML_bootstrap.T1
         RAxML_info.T1
    temp/
-        conserved_protein20160817210902/
+        conserved_protein20161029194411/
                                        　p1.fasta
                                        　p2.fasta
                                        　p3.fasta
                                        　......
-        hcp_alignment20160817210936/
+        alignment20161029194429/
                                     p1.fasta
                                     p2.fasta
                                     p2.fasta
                                     ......
-        concatenate20160817210938/
+        concatenate20161029194432/
                                   concatenate.fasta
                                   concatenate.fasta-gb1
                                   concatenate.fasta-gb1.htm
@@ -100,24 +113,24 @@ Outdata/
 
 
 * log.log: The log information of PhySpeTree.
-* Outdata: Contain phylogenetic tree output result. 
+* Outdata: Contain PhySpeTree output result (Tree Files). 
     
     - RAxML_bestTree.T1: Reconstruct phylogenetic tree by RAxML, it's best ML search tree. 
     - RAxML_bipartitions.T1: Bipartition tree by RAxML.
-    - RAxML_bipartitionsBranchLabels.T1: Bipartition tree by constructed by RAxML with branch length lables.
+    - RAxML_bipartitionsBranchLabels.T1: Bipartition tree by RAxML constructed with branch length labels.
     - RAxML_bootstrap.T1: Bootstrap result by RAxML
     - RAxML_info.T1: The info of run RAxMl.
     
 * temp: The temp data by PhySpeTree, `it's very important for users to check the key steps`.
 
-    - conserved_protein: Contain highly conserved proteins retrieve form KEGG database.
-    - hcp_alignment: Contain highly conserved proteins do multiple sequence alignment by muscle.
+    - conserved_protein: Contain highly conserved proteins retrieved and downloaded form KEGG database.
+    - alignment: Contain highly conserved proteins with multiple sequence alignment by muscle.
     - concatenate: Contain the concatenate highly conserved proteins result and select conserved blocks data.
     
-        + concatenate.fasta: Concatenate highly conserved proteins result.
-        + concatenate.fasta-gb1: Select conserved blocks result (by Gblocks).
-        + concatenate.fasta-gb1.htm: Select conserved blocks result view by html format.
-        + concatenate.fasta-gb1.phy: Convert FASTA format to PHYLIP format
+        + concatenate.fasta: Concatenated highly conserved proteins data.
+        + concatenate.fasta-gb1: Selected conserved blocks data (by Gblocks).
+        + concatenate.fasta-gb1.htm: Selected conserved blocks result view by html format.
+        + concatenate.fasta-gb1.phy: Convert FASTA format to PHYLIP format.
 
 
 ####  **Auto build phylogenetic tree by SSU rRNA method:**
@@ -129,20 +142,23 @@ Loading organisms names success.....
 
 The result are store in:Outdata
 
-Now loading data and constructing species phylogenetic tree......
-2016-08-18 15:29:31,528 16s DB INFO: Read organisms names success
-2016-08-18 15:29:38,166 16s DB INFO: Retrieve organism 'aca' 16s SSU RNA sequences data success
-2016-08-18 15:29:40,236 16s DB INFO: Retrieve organism 'ace' 16s SSU RNA sequences data success
-2016-08-18 15:29:42,356 16s DB INFO: Retrieve organism 'acl' 16s SSU RNA sequences data success
-2016-08-18 15:29:44,615 16s DB INFO: Retrieve organism 'acn' 16s SSU RNA sequences data success
-2016-08-18 15:29:46,868 16s DB INFO: Retrieve organism 'aco' 16s SSU RNA sequences data success
-2016-08-18 15:29:49,119 16s DB INFO: Retrieve organism 'acp' 16s SSU RNA sequences data success
-2016-08-18 15:29:51,392 16s DB INFO: Retrieve organism 'adg' 16s SSU RNA sequences data success
+Now loading data and constructing phylogenetic tree......
+2016-10-29 19:56:26,244 SSU rRNA DB INFO: Read organisms names success
+2016-10-29 19:56:26,296 SSU rRNA DB INFO: Retrieve and download of organism 'aca' SSU rRNA sequence was successful
+2016-10-29 19:56:26,321 SSU rRNA DB INFO: Retrieve and download of organism 'ace' SSU rRNA sequence was successful
+2016-10-29 19:56:26,337 SSU rRNA DB INFO: Retrieve and download of organism 'acl' SSU rRNA sequence was successful
+2016-10-29 19:56:26,367 SSU rRNA DB INFO: Retrieve and download of organism 'acn' SSU rRNA sequence was successful
+2016-10-29 19:56:26,389 SSU rRNA DB INFO: Retrieve and download of organism 'aco' SSU rRNA sequence was successful
+2016-10-29 19:56:26,416 SSU rRNA DB INFO: Retrieve and download of organism 'acp' SSU rRNA sequence was successful
+2016-10-29 19:56:26,441 SSU rRNA DB INFO: Retrieve and download of organism 'adg' SSU rRNA sequence was successful
+2016-10-29 19:56:26,464 SSU rRNA DB INFO: Retrieve and download of organism 'adk' SSU rRNA sequence was successful
+2016-10-29 19:56:26,487 SSU rRNA DB INFO: Retrieve and download of organism 'aeh' SSU rRNA sequence was successful
+2016-10-29 19:56:26,507 SSU rRNA DB INFO: Retrieve and download of organism 'aeq' SSU rRNA sequence was successful
 
 ```
 
 
-When auto build phylogenetic tree by `srna` method was completed, you will get files layout like this:
+When building a phylogenetic tree using the SSU rRNA method, you will get files layout like this:
 
 ```
 log.log
