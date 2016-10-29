@@ -129,7 +129,7 @@ Outdata/
     
         + concatenate.fasta: Concatenated highly conserved proteins data.
         + concatenate.fasta-gb1: Selected conserved blocks data (by Gblocks).
-        + concatenate.fasta-gb1.htm: Selected conserved blocks result view by html format.
+        + concatenate.fasta-gb1.htm: Selected conserved blocks result and display by html format.
         + concatenate.fasta-gb1.phy: Convert FASTA format to PHYLIP format.
 
 
@@ -143,17 +143,17 @@ Loading organisms names success.....
 The result are store in:Outdata
 
 Now loading data and constructing phylogenetic tree......
-2016-10-29 19:56:26,244 SSU rRNA DB INFO: Read organisms names success
-2016-10-29 19:56:26,296 SSU rRNA DB INFO: Retrieve and download of organism 'aca' SSU rRNA sequence was successful
-2016-10-29 19:56:26,321 SSU rRNA DB INFO: Retrieve and download of organism 'ace' SSU rRNA sequence was successful
-2016-10-29 19:56:26,337 SSU rRNA DB INFO: Retrieve and download of organism 'acl' SSU rRNA sequence was successful
-2016-10-29 19:56:26,367 SSU rRNA DB INFO: Retrieve and download of organism 'acn' SSU rRNA sequence was successful
-2016-10-29 19:56:26,389 SSU rRNA DB INFO: Retrieve and download of organism 'aco' SSU rRNA sequence was successful
-2016-10-29 19:56:26,416 SSU rRNA DB INFO: Retrieve and download of organism 'acp' SSU rRNA sequence was successful
-2016-10-29 19:56:26,441 SSU rRNA DB INFO: Retrieve and download of organism 'adg' SSU rRNA sequence was successful
-2016-10-29 19:56:26,464 SSU rRNA DB INFO: Retrieve and download of organism 'adk' SSU rRNA sequence was successful
-2016-10-29 19:56:26,487 SSU rRNA DB INFO: Retrieve and download of organism 'aeh' SSU rRNA sequence was successful
-2016-10-29 19:56:26,507 SSU rRNA DB INFO: Retrieve and download of organism 'aeq' SSU rRNA sequence was successful
+2016-10-29 20:12:49,353 SSU rRNA DB INFO: Read organisms names success
+2016-10-29 20:12:54,582 SSU rRNA DB INFO: Retrieve and download of organism 'aca' SSU rRNA sequence was successful
+2016-10-29 20:12:56,831 SSU rRNA DB INFO: Retrieve and download of organism 'ace' SSU rRNA sequence was successful
+2016-10-29 20:12:59,182 SSU rRNA DB INFO: Retrieve and download of organism 'acl' SSU rRNA sequence was successful
+2016-10-29 20:13:01,545 SSU rRNA DB INFO: Retrieve and download of organism 'acn' SSU rRNA sequence was successful
+2016-10-29 20:13:04,096 SSU rRNA DB INFO: Retrieve and download of organism 'aco' SSU rRNA sequence was successful
+2016-10-29 20:13:06,972 SSU rRNA DB INFO: Retrieve and download of organism 'acp' SSU rRNA sequence was successful
+2016-10-29 20:13:09,943 SSU rRNA DB INFO: Retrieve and download of organism 'adg' SSU rRNA sequence was successful
+2016-10-29 20:13:12,707 SSU rRNA DB INFO: Retrieve and download of organism 'adk' SSU rRNA sequence was successful
+2016-10-29 20:13:16,015 SSU rRNA DB INFO: Retrieve and download of organism 'aeh' SSU rRNA sequence was successful
+2016-10-29 20:13:18,969 SSU rRNA DB INFO: Retrieve and download of organism 'aeq' SSU rRNA sequence was successful
 
 ```
 
@@ -169,48 +169,48 @@ Outdata/
         RAxML_bootstrap.T1
         RAxML_info.T1
    temp/
-        16srnadata20160818145209/
-                                 16srandata.fasta
+        rna_sequence20161029201249/
+                                 rna_sequence.fasta
 
-        16srna_alignment20160818145236/
-                                  16srandata.fasta
-                                  16srandata.fasta-gb1
-                                  16srandata.fasta-gb1.htm
-                                  16srandata.fasta-gb1.phy
+        rna_alignment20161029201319/
+                                  rna_sequence.fasta
+                                  rna_sequence.fasta-gb1
+                                  rna_sequence.fasta-gb1.htm
+                                  rna_sequence.fasta-gb1.phy
 ```
 
 * log.log: The log information of PhySpeTree.
-* Outdata: Contain phylogenetic tree output result. 
+* Outdata: Contain PhySpeTree output result (Tree Files). 
     
     - RAxML_bestTree.T1: Reconstruct phylogenetic tree by RAxML, it's best ML search tree. 
     - RAxML_bipartitions.T1: Bipartition tree by RAxML.
-    - RAxML_bipartitionsBranchLabels.T1: Bipartition tree by constructed by RAxML with branch length lables.
+    - RAxML_bipartitionsBranchLabels.T1: Bipartition tree by RAxML constructed with branch length labels.
     - RAxML_bootstrap.T1: Bootstrap result by RAxML
     - RAxML_info.T1: The info of run RAxMl.
     
 * temp: The temp data by PhySpeTree, `it's very important to users to check the key steps`.
 
-    - 16srnadata: Contain SSU rRNA data retrieved form SILVA database.
+    - rna_sequence: Contain SSU rRNA data retrieved and downloaded form SILVA database.
     
-        + 16srnadata.fasta: FASTA format data contain input organism SSU rRNA data.
+        + rna_sequence.fasta: A FASTA format file, which contain input organism SSU rRNA sequence.
          
-    - 16srna_alignment: Contain the concatenate highly conserved proteins result and select conserved blocks data.
+    - rna_alignment: Contain the concatenated highly conserved proteins result and selected conserved blocks data.
     
-        + 16srandata.fasta: Contain SSU rRNA data with multiple sequence alignment already.
-        + 16srandata.fasta-gb1: Select conserved blocks result (by Gblocks).
-        + 16srandata.fasta-gb1.htm: Select conserved blocks result view by html format.
-        + 16srandata.fasta-gb1.phy: Convert FASTA format to PHYLIP format
+        + rna_sequence.fasta: Contain SSU rRNA data with multiple sequence alignment already.
+        + rna_sequence.fasta-gb1: Selected conserved blocks result (by Gblocks).
+        + rna_sequence.fasta-gb1.htm: Selected conserved blocks result and display html format.
+        + rna_sequence.fasta-gb1.phy: Convert FASTA format to PHYLIP format.
 
 
 ### Advance options
 
 Users enable choice more detail options with PhySpeTree call software, detail advance options input
-``must be enclosed in single quotes``.
+``must be enclosed in single quotes and start with space``.
 
 The following is an example of using RAxML advanced options:
 
 ```bash
-$ PhySpeTree -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+$ PhySpeTree -i organism_example_list.txt --raxml ' -f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 ```
 
 **--muscle**
@@ -220,7 +220,7 @@ $ PhySpeTree -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x
 
 **--muscle_p**
 
-  Set Muscle advance parameters. The default is ``-maxiter 100``. More options about muslce please to see [MUSCLE Manual](http://www.drive5.com/muscle/manual/options.html)
+  Set Muscle advance parameters. The default is ``-maxiter 100``. More options about Muscle please to see [MUSCLE Manual](http://www.drive5.com/muscle/manual/options.html)
 
 The default option:
 
@@ -235,7 +235,7 @@ The default option:
 
 **--clustalw_p**
 
-  Set clustalw2 advance parameters. Here use clustalw default parameters. More options about clustalw please to see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
+  Set clustalw2 advance parameters. Here use clustalw2 default parameters. More options about clustalw2 please to see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
 
 
 **--gblocks**
@@ -258,7 +258,7 @@ The default option:
 
 **--raxml_p**
 
-  Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``. More options about RAxMl please to see [RAxML Manual](http://sco.h-its.org/exelixis/resource/download/NewManual.pdf).
+  Set reconstruct phylogenetic tree arguments with RAxML. The default is `` -f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``. More options about RAxMl please to see [RAxML Manual](http://sco.h-its.org/exelixis/resource/download/NewManual.pdf).
 
 The default option:
 
@@ -279,7 +279,7 @@ The default option:
 
 **--fasttree_p**
     
-  Set more FastTree advance parameters. More options about clustalw please to see [FastTree](http://www.microbesonline.org/fasttree/).
+  Set more FastTree advance parameters. More options about clustalw2 please to see [FastTree](http://www.microbesonline.org/fasttree/).
 
 
 ## build
@@ -324,12 +324,28 @@ $ PhySpeTree build -i example_16s_ssurna.fasta -o output --sran
 
 
 When use build to reconstruct phylogenetic tree, you should prepare a directory contain highly conserved proteins such as [example_build_hcp][3]. In this example
-contain ten highly conserved proteins p1~p10, in each highly conserved proteins contain 10 organism.
+contain ten highly conserved proteins p1~p10, in each highly conserved proteins contain 10 organisms.
 
-Download [example_build_hcp][3] you can use the tar command to unpack:
+Downloading [example_build_hcp][3] and then you can use the tar command to unpack in command line:
 
 ```bash
-$ tar -zxvf example_build_hcp.tar.gz                                                          
+
+wget "https://xiaofeiyangyang.github.io/physpetools/example/example_build_hcp.tar.gz"
+
+--2016-10-29 20:40:41--  https://xiaofeiyangyang.github.io/physpetools/example/example_build_hcp.tar.gz
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 17419 (17K) [application/octet-stream]
+Saving to: ‘example_build_hcp.tar.gz’
+
+example_build_hcp.tar.gz     100%[==============================================>]  17.01K  --.-KB/s    in 0.009s  
+
+2016-10-29 20:40:42 (1.92 MB/s) - ‘example_build_hcp.tar.gz’ saved [17419/17419]
+
+
+$ tar -zxvf example_build_hcp.tar.gz
+
 example_build_hcp/                                                                                                   
 example_build_hcp/p1.fasta
 example_build_hcp/p2.fasta
@@ -562,9 +578,9 @@ $ PhySpeTree combine -i combineTree.tree [options]*
 
 Users can use combine command to combine tree from different method method, in our example combine tree from two way reconstruct
 The `tree1.tree` reconstruct by highly conserved proteins, the `tree2.tree` reconstructed by SSU rRNA data, exapmel data
-[example_combine_tree.tar.gz][4]
+[example_combine_tree.tar.gz][5]
 
-Download [example_combine_tree.tar.gz][4] and unpack:
+Download [example_combine_tree.tar.gz][5] and unpack:
 
 
 ```bash
@@ -876,5 +892,5 @@ In `physpe_echp_extend.txt` file you can check the highly conserved protein, whi
 [1]: example/organism_example_list.txt
 [2]: http://www.genome.jp/kegg/catalog/org_list.html
 [3]: example/example_build_hcp.tar.gz
-[3]: example/example_build_srna.fasta
-[4]: example/example_combine_tree.tar.gz
+[4]: example/example_build_srna.fasta
+[5]: example/example_combine_tree.tar.gz
