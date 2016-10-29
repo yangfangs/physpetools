@@ -532,7 +532,7 @@ Outdata/
 contain ten highly conserved proteins p1~p10, in each highly conserved proteins contain 10 organisms.</p>
 <p>Downloading <a href="../example/example_build_hcp.tar.gz">example_build_hcp</a> and then you can use the tar command to unpack in command line:</p>
 <pre><code class="bash">
-wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/example_build_hcp.tar.gz&quot;
+$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/example_build_hcp.tar.gz&quot;
 
 --2016-10-29 20:40:41--  https://xiaofeiyangyang.github.io/physpetools/example/example_build_hcp.tar.gz
 Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
@@ -616,21 +616,33 @@ MKSVGRLGKILGPRGLMPSAKAGTVTFDVADAIKEIKAGRVEFRVDKTAIIHNMVGKKSF
 EAEKLFENLKVLYRAILKARPASAKGTYVRSFYIAPTMGVGIKIDPVAASKEVAEA
 </code></pre>
 
-<p>Reconstruct phylogenetic tree ues example are by follow command:</p>
+<p>Reconstruct phylogenetic tree by follow command:</p>
 <pre><code class="bash">PhySpeTree build -i example_build_hcp -o build_hcp_tree --hcp
 </code></pre>
 
-<p>Few seconds reconstruct phylogenetic tree completed and tree file are store in <code>build_hcp_tree</code> directory.</p>
+<p>Few seconds reconstruct phylogenetic tree completed and tree file were stored in <code>build_hcp_tree</code> directory.</p>
 <p><code>NOTE</code>:</p>
 <ul>
 <li>Prepare how many highly proteins which users decide, we recommend not less than 10 highly conserved proteins.</li>
-<li>Each protein must have the same organisms.</li>
+<li>Each proteins files must have the same organisms sequence.</li>
 </ul>
 <h4 id="build-phylogenetic-tree-by-ssu-rrna"><strong>Build phylogenetic tree by SSU rRNA</strong></h4>
-<p>Use build command to construct phylogenetic tree by SSU rRNA sequence, users should prepare a FASTA format file
+<p>Use <code>build</code> command to construct phylogenetic tree by SSU rRNA sequence, users should prepare a FASTA format file
 contain each species SSU rRNA sequence as <a href="../example/example_build_srna.fasta">example_build_srna</a>. In this example contain ten species SSU rRNA sequence.</p>
 <p>Download <a href="../example/example_build_srna.fasta">example_build_srna</a> and check the organisms names:</p>
-<pre><code class="bash">$ grep '&gt;' example_build_srna.fasta 
+<pre><code>$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/example_build_srna.fasta&quot;
+--2016-10-29 20:56:31--  https://xiaofeiyangyang.github.io/physpetools/example/example_build_srna.fasta
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 14982 (15K) [application/octet-stream]
+Saving to: ‘example_build_srna.fasta’
+
+example_build_srna.fasta     100%[==============================================&gt;]  14.63K  --.-KB/s    in 0.005s  
+
+2016-10-29 20:56:33 (3.14 MB/s) - ‘example_build_srna.fasta’ saved [14982/14982]
+
+$ grep '&gt;' example_build_srna.fasta 
 &gt;aca
 &gt;ace
 &gt;acl
@@ -643,7 +655,7 @@ contain each species SSU rRNA sequence as <a href="../example/example_build_srna
 &gt;aeq
 </code></pre>
 
-<p>Reconstruct phylogenetic tree ues example are by follow command:</p>
+<p>Reconstruct phylogenetic tree  by follow command:</p>
 <pre><code class="bash">PhySpeTree build -i example_build_srna.fasta -o build_srna_tree --srna
 </code></pre>
 
