@@ -473,7 +473,7 @@ Reconstruct phylogenetic tree  by follow command:
 PhySpeTree build -i example_build_srna.fasta -o build_srna_tree --srna
 ```
 
-Few seconds reconstruct phylogenetic tree completed and tree file are store in `build_srn_tree` directory
+Few seconds reconstruct phylogenetic tree completed and tree files were stored in `build_srn_tree` directory
 
 
 ### Advance options
