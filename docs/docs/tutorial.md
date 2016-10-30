@@ -749,23 +749,22 @@ EV
 
 
 ```
-$ PhySpeTree autobuild -i 191speciesnames.txt -o extend_pro_loki -e highly_consrved_protein_loki --ehcp -t 6
+$ PhySpeTree autobuild -i 191speciesnames.txt -o extend_pro_loki -e highly_conserved_protein_loki --ehcp -t 6
 Loading organisms names success.....
 
 The result are store in:extend_pro_loki
 
-Now loading data and constructing species phylogenetic tree......
-2016-09-08 15:49:46,391 Checking organisms INFO: The organism: ges
-2016-09-08 15:49:46,392 Checking organisms WARNING: There organisms can't match in KEGG database so removed and reconstruct phylogenetic tree
-2016-09-08 15:49:46,392 kegg DB INFO: Read organisms names success
-2016-09-08 15:50:20,604 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L1' success and store in p1.fasta file
-2016-09-08 15:50:57,464 kegg DB INFO: Retrieve highly conserved protein 'Leucyl-tRNA synthetase' success and store in p2.fasta file
-2016-09-08 15:51:27,257 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L14' success and store in p3.fasta file
-2016-09-08 15:51:55,441 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L5' success and store in p4.fasta file
-2016-09-08 15:52:28,429 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein S7' success and store in p5.fasta file
-2016-09-08 15:52:59,551 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein S8' success and store in p6.fasta file
-2016-09-08 15:53:31,157 kegg DB INFO: Retrieve highly conserved protein 'Arginyl-tRNA synthetase' success and store in p7.fasta file
-2016-09-08 15:53:31,158 kegg DB INFO: retrieve from Kegg DB 7 highly conserved proteins
+Now loading data and constructing phylogenetic tree......
+2016-10-30 18:19:53,951 Checking organisms INFO: The species: ges can't match in KEGG protein index database
+2016-10-30 18:19:53,951 Checking organisms WARNING: These species can't match in KEGG protein index database so removed and reconstruct phylogenetic tree.
+2016-10-30 18:19:53,951 KEGG INDEX DB INFO: Read organisms names success
+2016-10-30 18:20:18,870 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L1' was successful store in p1.fasta file
+2016-10-30 18:20:46,573 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Leucyl-tRNA synthetase' was successful store in p2.fasta file
+2016-10-30 18:21:11,401 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L14' was successful store in p3.fasta file
+2016-10-30 18:21:36,078 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L5' was successful store in p4.fasta file
+2016-10-30 18:22:00,454 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein S7' was successful store in p5.fasta file
+2016-10-30 18:22:27,895 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Arginyl-tRNA synthetase' was successful store in p6.fasta file
+2016-10-30 18:22:27,895 KEGG INDEX DB INFO: Retrieve from KEGG database 6 highly conserved proteins
 ......
 
 ```
