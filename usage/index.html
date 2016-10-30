@@ -850,7 +850,7 @@ Users can use iview command to color tree range by kingdom, phylum, class or ord
 the range annotated files can used in <a href="http://itol.embl.de/">iTol</a>, iTol is a very popular online tool for the display, 
 annotation and management of phylogenetic trees. More detail with of iTol in <a href="http://itol.embl.de/help.cgi">iTol help</a> </p>
 <p>Use <strong>iview</strong> in command line like this:</p>
-<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt -range phylum
+<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range
 </code></pre>
 
 <h3 id="iview-options">iview options</h3>
@@ -934,7 +934,7 @@ aeq     range   #BEBF5A Prokaryotes
 </code></pre>
 
 <h4 id="annotating-tree-by-phylum">Annotating tree by phylum</h4>
-<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range phylum
+<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range -a phylum
 Color range by phylum was complete.
 </code></pre>
 
@@ -980,7 +980,7 @@ aeq     range   #99D1DB Actinobacteria
 </code></pre>
 
 <h4 id="annotating-tree-by-order">Annotating tree by order</h4>
-<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range order
+<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range -a order
 Color range by order was complete.
 </code></pre>
 
