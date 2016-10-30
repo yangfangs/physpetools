@@ -1043,7 +1043,7 @@ aeq     range   #F1A2B7 Adlercreutzia
 </tbody>
 </table>
 <h3 id="example_4">example</h3>
-<h4 id="check-organism-for-extend-autobuild">check organism for extend autobuild</h4>
+<h4 id="check-organism-for-extend-autobuild">Check organism for extend autobuild</h4>
 <p>When users use <code>autobuild</code> to reconstruct phylogenetic tree with <code>--ehcp</code> method, you should prepare highly conserved proteins as extend proteins
 for auto build tree. You can determine what proteins to be prepared by the check command. Download example for check <a href="../example/organism_example_list.txt">organism_example_list.txt</a></p>
 <ul>
@@ -1150,7 +1150,103 @@ $ cat physpe_echp_extend.txt
 'Ribosomal protein S13' ----------------------------------&gt; p25.fasta
 </code></pre>
 
-<p>In <code>physpe_echp_extend.txt</code> file you can check the highly conserved protein, which you should prepare for extend hcp method to reconstruct phylogenetic tree.</p></div>
+<p>In <code>physpe_echp_extend.txt</code> file you can check the highly conserved protein, which you should prepare for extend hcp method to reconstruct phylogenetic tree.</p>
+<h4 id="check-input-organism-whether-supported-by-physpetree">Check input organism whether supported by PhySpeTree</h4>
+<ul>
+<li>
+<p>Users enable use <code>--hcp</code> parameter to check input species whether supported by KEGG database. <a href="../example/191speciesnames.txt">example download</a> </p>
+</li>
+<li>
+<p>Download the example file:</p>
+</li>
+</ul>
+<pre><code class="bash">$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt&quot;
+
+--2016-10-30 14:48:21--  https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 773 [text/plain]
+Saving to: ‘191speciesnames.txt’
+
+191speciesnames.txt          100%[==============================================&gt;]     773  --.-KB/s    in 0s      
+
+2016-10-30 14:48:22 (322 MB/s) - ‘191speciesnames.txt’ saved [773/773]
+</code></pre>
+
+<ul>
+<li>Check input species whether supported by KEGG database. Here example only one species named 'ges' not supported by PhySpeTree.</li>
+</ul>
+<pre><code class="bash">
+$ PhySpeTree check -i 191speciesnames.txt --hcp
+WARNING: The following species are not supported by KEGG DATABASE:
+ges
+Checked  whether the input species names in KEGG DATABASE completed.
+</code></pre>
+
+<ul>
+<li>
+<p>Users enable use <code>--srna</code> parameter to Check input species whether supported by SILVA database. <a href="../example/191speciesnames.txt">example download</a></p>
+</li>
+<li>
+<p>Download the example file:</p>
+</li>
+</ul>
+<pre><code class="bash">$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt&quot;
+
+--2016-10-30 14:48:21--  https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 773 [text/plain]
+Saving to: ‘191speciesnames.txt’
+
+191speciesnames.txt          100%[==============================================&gt;]     773  --.-KB/s    in 0s      
+
+2016-10-30 14:48:22 (322 MB/s) - ‘191speciesnames.txt’ saved [773/773]
+</code></pre>
+
+<ul>
+<li>Check input species whether supported by SILVA database. Here example had 28 species not supported by PhySpeTree.</li>
+</ul>
+<pre><code class="bash">
+(progect) [yangfang@localhost test_check] $ PhySpeTree check -i 191speciesnames.txt --srna
+WARNING: The following species are not supported by SILVA DATABASE:
+neq
+ape
+tac
+mmp
+gla
+tps
+cho
+ddi
+spo
+aga
+tru
+mpu
+lin
+ban
+bce
+ljo
+san
+spg
+ges
+lis
+sco
+cdi
+mle
+wsu
+rpr
+bpe
+bpa
+ppr
+Checked  whether the input species names in SILVA DATABASE completed.
+</code></pre>
+
+<p><code>NOTE:</code></p>
+<ul>
+<li>*For organisms not in the pre-built species list, PhySpeTree provides extend module (--echp or --esrn) for users to insert manually prepared files. *</li>
+</ul></div>
             
         </div>
 
