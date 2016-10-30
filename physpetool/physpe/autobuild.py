@@ -147,14 +147,14 @@ starting run reconstruct tree
         setlogdir(out_put)
         starting_ehcp(in_put, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
                       args.gblocks, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter,
-                      args.thread, args_extend)
+                      args.thread, args.extenddata)
 
     # Reconstruct phylogenetic tree by extend ssu rna method.
     elif args.essurna:
         setlogdir(out_put)
         starting_esrna(in_put, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
                        args.gblocks, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter,
-                       args.thread, args_extend)
+                       args.thread, args.extenddata)
 
 
 def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
@@ -206,14 +206,14 @@ def starting_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, ar
 
 
 def starting_ehcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-                  args_gblocks, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread, args_exteddata):
+                  args_gblocks, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread, args_extenddata):
     '''reconstruct phylogenetic tree by ehcp method'''
     hcp_input = checkKeggOrganism(in_put)
     out_retrieve = doretrieve(hcp_input, out_put)
     retrieve_pro = os.listdir(out_retrieve)
     for reline in retrieve_pro:
         fw_name = os.path.join(out_retrieve, reline)
-        fr_name = os.path.join(args_exteddata, reline)
+        fr_name = os.path.join(args_extenddata, reline)
         fw = open(fw_name, 'ab')
         with open(fr_name) as fr:
             for line in fr:
