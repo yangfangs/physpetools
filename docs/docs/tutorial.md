@@ -704,17 +704,37 @@ Download [highly_conserved_protein_loki][6]
 * Download example files：
 
 ```bash
+$ wget "https://xiaofeiyangyang.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz"
 
+--2016-10-30 16:36:48--  https://xiaofeiyangyang.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1810 (1.8K) [application/octet-stream]
+Saving to: ‘highly_conserved_protein_loki.tar.gz’
 
+highly_conserved_protein_lok 100%[==============================================>]   1.77K  --.-KB/s    in 0s      
+
+2016-10-30 16:36:50 (623 MB/s) - ‘highly_conserved_protein_loki.tar.gz’ saved [1810/1810]
 
 ```
 
 
 
 ```bash
+$ tar -zxvf highly_conserved_protein_loki.tar.gz
+
+highly_conserved_protein_loki/
+highly_conserved_protein_loki/p1.fasta
+highly_conserved_protein_loki/p2.fasta
+highly_conserved_protein_loki/p3.fasta
+highly_conserved_protein_loki/p4.fasta
+highly_conserved_protein_loki/p5.fasta
+highly_conserved_protein_loki/p6.fasta
+
 $ cd extend_pro_loki
 $ ls
-p1.fasta  p2.fasta  p3.fasta  p4.fasta  p5.fasta  p6.fasta  p7.fasta
+p1.fasta  p2.fasta  p3.fasta  p4.fasta  p5.fasta  p6.fast
 
 $ cat p1.fasta 
 >loki
@@ -723,10 +743,9 @@ LTNEIVEEEKLNICVIASGEILLEAKKAGVETLDRDALIKLNNEEKKHKKKFAKKYEFFI
 VEDKMMRDVARYLARFLGPLGKMPKPFPTGYGIISSPGDLRTAVERYKKVIRIQMKKQPI
 IFAKIGKKSMEIDRLFDNMKTVIDFIADQMPHKFNNFKSMYLKSSMGKPIKVTEEFLKSL
 EV
-
 ```
 
-#### 3.Reconstruct phylogenetic tree by highly conserved protein method extend with a new organism
+#### 3.Insert a new organism to tree-of-life by HCP method
 
 
 ```
