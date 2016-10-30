@@ -201,10 +201,10 @@ The following is an example of using RAxML advanced options:
     `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
     -t
-        Choice type of sequence. The PhySpeTree default set is protein.
+        Choice type of sequence. PhySpeTree default set is protein.
 
     -e
-        Eneric file extensionc. PhySpeTree set default is -gbl1.
+        Generic File Extension. PhySpeTree set default is -gbl1.
 
 
 --raxml
@@ -234,7 +234,7 @@ The following is an example of using RAxML advanced options:
     Reconstruct phylogenetic tree by FastTree.
 
 --fasttree_p
-    Set FastTree advance parameters. More options about clustalw
+    Set FastTree advance parameters. More options about FastTree
     please to see `FastTree <http://www.microbesonline.org/fasttree/>`_.
 
 build
@@ -290,13 +290,13 @@ Advance options
 #####################
 
 Users enable choice more detail options with PhySpeTree call software, detail advance options input
-``must be enclosed in single quotes and Start with a space``.
+``must be enclosed in single quotes and start with space``.
 
 The following is an example of using RAxML advanced options:
 
 .. code-block:: console
 
-    $ PhySpeTree -i organism_example_list.txt --raxml --raxml_p '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+    $ PhySpeTree -i organism_example_list.txt --raxml --raxml_p ' -f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
 --muscle
     Multiple sequence alignment by muscle. The default multiple sequence alignment software is Muscle.
@@ -313,7 +313,7 @@ The following is an example of using RAxML advanced options:
     Multiple sequence alignment by clustalw2.
 
 --clustalw_p
-    Set clustalw2 advance parameters. Here use clustalw default parameters. More options about clustalw
+    Set clustalw2 advance parameters. Here use clustalw2 default parameters. More options about clustalw2
     please to see `Clustalw Help <http://www.clustal.org/download/clustalw_help.txt>`_.
 
 
@@ -323,10 +323,10 @@ The following is an example of using RAxML advanced options:
     `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
     -t
-        Choice type of sequence. The PhySpeTree default set is protein.
+        Choice type of sequence. PhySpeTree default set is protein.
 
     -e
-        Eneric file extensionc. PhySpeTree set default is -gbl1.
+        Generic File Extension. PhySpeTree set default is -gbl1.
 
 
 --raxml
@@ -356,7 +356,7 @@ The following is an example of using RAxML advanced options:
     Reconstruct phylogenetic tree by FastTree.
 
 --fasttree_p
-    Set FastTree advance parameters. More options about clustalw
+    Set FastTree advance parameters. More options about FastTree
     please to see `FastTree <http://www.microbesonline.org/fasttree/>`_.
 
 combine
@@ -411,7 +411,7 @@ Use **iview** in command line like this:
 
 .. code-block:: console
 
-    $ PhySpeTree iview -i organism_example_list.txt -range phylum
+    $ PhySpeTree iview -i organism_example_list.txt --range
 
 
 iview options
