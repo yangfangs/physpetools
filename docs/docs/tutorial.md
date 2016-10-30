@@ -604,46 +604,55 @@ the extend organism SSU rRNA sequence file.
 
 ```
 $ PhySpeTree autobuild -i 191speciesnames.txt -o extend_rna -e extend_rna_loki.fasta --esrna -t 6
+
 Loading organisms names success.....
 
 The result are store in:extend_rna
 
-Now loading data and constructing species phylogenetic tree......
-2016-09-08 14:49:15,423 Checking organisms INFO: The organism: neq
-2016-09-08 14:49:15,424 Checking organisms INFO: The organism: ape
-2016-09-08 14:49:15,424 Checking organisms INFO: The organism: tac
-2016-09-08 14:49:15,424 Checking organisms INFO: The organism: mmp
-2016-09-08 14:49:15,424 Checking organisms INFO: The organism: gla
-2016-09-08 14:49:15,424 Checking organisms INFO: The organism: tps
-2016-09-08 14:49:15,424 Checking organisms INFO: The organism: cho
-2016-09-08 14:49:15,424 Checking organisms INFO: The organism: ddi
-2016-09-08 14:49:15,424 Checking organisms INFO: The organism: spo
-2016-09-08 14:49:15,424 Checking organisms INFO: The organism: aga
-2016-09-08 14:49:15,424 Checking organisms INFO: The organism: tru
-2016-09-08 14:49:15,424 Checking organisms INFO: The organism: mpu
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: lin
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: ban
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: bce
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: ljo
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: san
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: spg
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: ges
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: lis
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: sco
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: cdi
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: mle
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: wsu
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: rpr
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: bpe
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: bpa
-2016-09-08 14:49:15,425 Checking organisms INFO: The organism: ppr
-2016-09-08 14:49:15,425 Checking organisms WARNING: There organisms can't match in SILVA database so removed and reconstruct phylogenetic tree
-2016-09-08 14:49:15,425 16s DB INFO: Read organisms names success
-2016-09-08 14:49:15,499 16s DB INFO: Retrieve organism 'pai' 16s SSU RNA sequences data success
-2016-09-08 14:49:15,515 16s DB INFO: Retrieve organism 'sto' 16s SSU RNA sequences data success
-2016-09-08 14:49:15,532 16s DB INFO: Retrieve organism 'ssoa' 16s SSU RNA sequences data success
-2016-09-08 14:49:15,559 16s DB INFO: Retrieve organism 'tvo' 16s SSU RNA sequences data success
-2016-09-08 14:49:15,577 16s DB INFO: Retrieve organism 'afu' 16s SSU RNA sequences data success
+Now loading data and constructing phylogenetic tree......
+2016-10-30 16:10:01,551 Checking organisms INFO: The organism: neq can't match in SSU rRNA database
+2016-10-30 16:10:01,551 Checking organisms INFO: The organism: ape can't match in SSU rRNA database
+2016-10-30 16:10:01,551 Checking organisms INFO: The organism: tac can't match in SSU rRNA database
+2016-10-30 16:10:01,551 Checking organisms INFO: The organism: mmp can't match in SSU rRNA database
+2016-10-30 16:10:01,551 Checking organisms INFO: The organism: gla can't match in SSU rRNA database
+2016-10-30 16:10:01,551 Checking organisms INFO: The organism: tps can't match in SSU rRNA database
+2016-10-30 16:10:01,551 Checking organisms INFO: The organism: cho can't match in SSU rRNA database
+2016-10-30 16:10:01,551 Checking organisms INFO: The organism: ddi can't match in SSU rRNA database
+2016-10-30 16:10:01,551 Checking organisms INFO: The organism: spo can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: aga can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: tru can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: mpu can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: lin can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: ban can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: bce can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: ljo can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: san can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: spg can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: ges can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: lis can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: sco can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: cdi can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: mle can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: wsu can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: rpr can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: bpe can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: bpa can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms INFO: The organism: ppr can't match in SSU rRNA database
+2016-10-30 16:10:01,552 Checking organisms WARNING: These species can't match in SSU rRNA database so removing and reconstructing phylogenetic tree.
+2016-10-30 16:10:01,552 SSU rRNA DB INFO: Read organisms names success
+2016-10-30 16:10:02,263 SSU rRNA DB INFO: Retrieve and download of organism 'pai' SSU rRNA sequence was successful
+2016-10-30 16:10:02,468 SSU rRNA DB INFO: Retrieve and download of organism 'sto' SSU rRNA sequence was successful
+2016-10-30 16:10:02,672 SSU rRNA DB INFO: Retrieve and download of organism 'ssoa' SSU rRNA sequence was successful
+2016-10-30 16:10:02,878 SSU rRNA DB INFO: Retrieve and download of organism 'tvo' SSU rRNA sequence was successful
+2016-10-30 16:10:04,408 SSU rRNA DB INFO: Retrieve and download of organism 'afu' SSU rRNA sequence was successful
+2016-10-30 16:10:04,615 SSU rRNA DB INFO: Retrieve and download of organism 'hal' SSU rRNA sequence was successful
+2016-10-30 16:10:05,085 SSU rRNA DB INFO: Retrieve and download of organism 'mac' SSU rRNA sequence was successful
+2016-10-30 16:10:05,638 SSU rRNA DB INFO: Retrieve and download of organism 'mma' SSU rRNA sequence was successful
+2016-10-30 16:10:05,841 SSU rRNA DB INFO: Retrieve and download of organism 'pfu' SSU rRNA sequence was successful
+2016-10-30 16:10:06,086 SSU rRNA DB INFO: Retrieve and download of organism 'pho' SSU rRNA sequence was successful
+2016-10-30 16:10:06,590 SSU rRNA DB INFO: Retrieve and download of organism 'pab' SSU rRNA sequence was successful
+2016-10-30 16:10:07,100 SSU rRNA DB INFO: Retrieve and download of organism 'mth' SSU rRNA sequence was successful
+2016-10-30 16:10:07,303 SSU rRNA DB INFO: Retrieve and download of organism 'mka' SSU rRNA sequence was successful
 .....
 ```
 
