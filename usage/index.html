@@ -428,7 +428,7 @@ Outdata/
 </tr>
 <tr>
 <td align="left">-e</td>
-<td align="left">Eneric file extensionc. PhySpeTree set default is -gbl1.</td>
+<td align="left">Generic File Extension. PhySpeTree set default is -gbl1.</td>
 </tr>
 </tbody>
 </table>
@@ -471,7 +471,7 @@ Outdata/
 <p><strong>--fasttree</strong></p>
 <p>Reconstruct phylogenetic tree by FastTree.</p>
 <p><strong>--fasttree_p</strong></p>
-<p>Set more FastTree advance parameters. More options about clustalw2 please to see <a href="http://www.microbesonline.org/fasttree/">FastTree</a>.</p>
+<p>Set more FastTree advance parameters. More options about FastTree please to see <a href="http://www.microbesonline.org/fasttree/">FastTree</a>.</p>
 <h2 id="build">build</h2>
 <p>Users can reconstruct phylogenetic tree use <code>build</code> module by manually prepared files. such as, SSU rRNA sequence or highly conserved proteins.</p>
 <p>Use <strong>build</strong> module in command line to reconstruct phylogenetic tree:</p>
@@ -631,6 +631,7 @@ EAEKLFENLKVLYRAILKARPASAKGTYVRSFYIAPTMGVGIKIDPVAASKEVAEA
 contain each species SSU rRNA sequence as <a href="../example/example_build_srna.fasta">example_build_srna</a>. In this example contain ten species SSU rRNA sequence.</p>
 <p>Download <a href="../example/example_build_srna.fasta">example_build_srna</a> and check the organisms names:</p>
 <pre><code>$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/example_build_srna.fasta&quot;
+
 --2016-10-29 20:56:31--  https://xiaofeiyangyang.github.io/physpetools/example/example_build_srna.fasta
 Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
 Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
@@ -656,21 +657,21 @@ $ grep '&gt;' example_build_srna.fasta
 </code></pre>
 
 <p>Reconstruct phylogenetic tree  by follow command:</p>
-<pre><code class="bash">PhySpeTree build -i example_build_srna.fasta -o build_srna_tree --srna
+<pre><code class="bash">PhySpeTree build -i example_build_srna.fasta -o build_srna_tree --srna --fasttree
 </code></pre>
 
 <p>Few seconds reconstruct phylogenetic tree completed and tree files were stored in <code>build_srn_tree</code> directory</p>
 <h3 id="advance-options_1">Advance options</h3>
 <p>Users enable choice more detail options with PhySpeTree call software, detail advance options input
-<code>must be enclosed in single quotes and Start with a space</code>.</p>
+<code>must be enclosed in single quotes and start with space</code>.</p>
 <p>The following is an example of using RAxML advanced options:</p>
-<pre><code class="bash">$ PhySpeTree -i organism_example_list.txt --raxml '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+<pre><code class="bash">$ PhySpeTree -i organism_example_list.txt --raxml ' -f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 </code></pre>
 
 <p><strong>--muscle</strong></p>
 <p>Multiple sequence alignment by muscle. The default multiple sequence alignment software is Muscle.</p>
 <p><strong>--muscle_p</strong></p>
-<p>Set Muscle advance parameters. The default is <code>-maxiter 100</code>. More options about muslce please to see <a href="http://www.drive5.com/muscle/manual/options.html">MUSCLE Manual</a></p>
+<p>Set Muscle advance parameters. The default is <code>-maxiter 100</code>. More options about Muscle please to see <a href="http://www.drive5.com/muscle/manual/options.html">MUSCLE Manual</a></p>
 <p>The default option:</p>
 <table>
 <thead>
@@ -690,7 +691,7 @@ $ grep '&gt;' example_build_srna.fasta
 <pre><code>Multiple sequence alignment by clustalw2.
 </code></pre>
 <p><strong>--clustalw_p</strong></p>
-<p>Set clustalw2 advance parameters. Here use clustalw default parameters. More options about clustalw please to see <a href="http://www.clustal.org/download/clustalw_help.txt">Clustalw Help</a>.</p>
+<p>Set clustalw2 advance parameters. Here use clustalw2 default parameters. More options about clustalw2 please to see <a href="http://www.clustal.org/download/clustalw_help.txt">Clustalw Help</a>.</p>
 <p><strong>--gblocks</strong></p>
 <p>Set Gblocks advance parameters. The default is <code>-t=p -e=-gb1</code>. More options about Gblocks please to see <a href="http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html">Gblocks documentation</a>.</p>
 <p>The default option:</p>
@@ -704,11 +705,11 @@ $ grep '&gt;' example_build_srna.fasta
 <tbody>
 <tr>
 <td align="left">-t</td>
-<td align="left">Choice type of sequence. The PhySpeTree default set is protein.</td>
+<td align="left">Choice type of sequence. PhySpeTree default set is protein.</td>
 </tr>
 <tr>
 <td align="left">-e</td>
-<td align="left">Eneric file extensionc. PhySpeTree set default is -gbl1.</td>
+<td align="left">Generic File Extension. PhySpeTree set default is -gbl1.</td>
 </tr>
 </tbody>
 </table>
@@ -751,7 +752,7 @@ $ grep '&gt;' example_build_srna.fasta
 <p><strong>--fasttree</strong></p>
 <p>Reconstruct phylogenetic tree by FastTree.</p>
 <p><strong>--fasttree_p</strong></p>
-<p>Set more FastTree advance parameters. More options about clustalw please to see <a href="http://www.microbesonline.org/fasttree/">FastTree</a>.</p>
+<p>Set more FastTree advance parameters. More options about FastTree please to see <a href="http://www.microbesonline.org/fasttree/">FastTree</a>.</p>
 <h2 id="combine">combine</h2>
 <p>The <strong>combine</strong> module for the consensus tree construction.</p>
 <p>In Linux you can easy combine more tree to a tree file, for example:</p>
@@ -799,18 +800,34 @@ $ grep '&gt;' example_build_srna.fasta
 </tbody>
 </table>
 <h3 id="example_2">example</h3>
-<p>Users can use combine command to combine tree from different method method, in our example combine tree from two way reconstruct
-The <code>tree1.tree</code> reconstruct by highly conserved proteins, the <code>tree2.tree</code> reconstructed by SSU rRNA data, exapmel data
+<p>Users can use combine command to combine trees from different method building trees. In our example, trees reconstruct by two method.
+The <code>tree1.tree</code> reconstructed by highly conserved protein method and the <code>tree2.tree</code> reconstructed by SSU rRNA method, example data
 <a href="../example/example_combine_tree.tar.gz">example_combine_tree.tar.gz</a></p>
 <p>Download <a href="../example/example_combine_tree.tar.gz">example_combine_tree.tar.gz</a> and unpack:</p>
-<pre><code class="bash">$ tar -zxvf example_combine_tree.tar.gz 
+<pre><code class="bash">
+$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/example_combine_tree.tar.gz&quot;
+
+--2016-10-30 13:32:06--  https://xiaofeiyangyang.github.io/physpetools/example/example_combine_tree.tar.gz
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 661 [application/octet-stream]
+Saving to: ‘example_combine_tree.tar.gz’
+
+example_combine_tree.tar.gz  100%[==============================================&gt;]     661  --.-KB/s    in 0s      
+
+2016-10-30 13:32:07 (380 MB/s) - ‘example_combine_tree.tar.gz’ saved [661/661] 
+
+
+$ tar -zxvf example_combine_tree.tar.gz 
 example_combine_tree/
 example_combine_tree/tree2.tree
 example_combine_tree/tree1.tree
 </code></pre>
 
 <p>Combine tree1.tree and tree2.tree to a tree file:</p>
-<pre><code class="bash">$ conbine tree1.tree tree2.tree &gt; combine.tree
+<pre><code class="bash">$ cd example_combine_tree/
+$ cat tree1.tree tree2.tree &gt; combine.tree
 </code></pre>
 
 <p>Combine tree command as like this:</p>
@@ -828,7 +845,8 @@ example_combine_tree/tree1.tree
 <li>RAxML_MajorityRuleConsensusTree.T1: The combine tree by Majority Rule method.</li>
 </ul>
 <h2 id="iview">iview</h2>
-<p>PhySpeTree provide annotating tree by iTol use iview module. Users can use iview command to color tree range by kingdom, phylum, class or order.
+<p>PhySpeTree provides the <code>iview</code> module to annotate taxonomic information of output trees and to generate configure files linked to iTOL. 
+Users can use iview command to color tree range by kingdom, phylum, class or order.
 the range annotated files can used in <a href="http://itol.embl.de/">iTol</a>, iTol is a very popular online tool for the display, 
 annotation and management of phylogenetic trees. More detail with of iTol in <a href="http://itol.embl.de/help.cgi">iTol help</a> </p>
 <p>Use <strong>iview</strong> in command line like this:</p>
@@ -873,7 +891,27 @@ annotation and management of phylogenetic trees. More detail with of iTol in <a 
 <h3 id="example_3">example</h3>
 <p>iview Annotating tree by kingdom, phylum, class or order example, download example <a href="../example/organism_example_list.txt">organism_example_list.txt</a></p>
 <h4 id="annotating-tree-by-kingdom">Annotating tree by kingdom</h4>
-<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range kingdom
+<ul>
+<li>download the example file:</li>
+</ul>
+<pre><code class="bash">$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/organism_example_list.txt&quot;
+
+--2016-10-30 13:40:48--  https://xiaofeiyangyang.github.io/physpetools/example/organism_example_list.txt
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 39 [text/plain]
+Saving to: ‘organism_example_list.txt’
+
+organism_example_list.txt    100%[==============================================&gt;]      39  --.-KB/s    in 0s      
+
+2016-10-30 13:40:50 (21.5 MB/s) - ‘organism_example_list.txt’ saved [39/39]
+</code></pre>
+
+<ul>
+<li>Annotating tree by kingdom by generate configure files.</li>
+</ul>
+<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range -a kingdom
 Color range by kingdom was complete.
 </code></pre>
 
@@ -900,7 +938,7 @@ aeq     range   #BEBF5A Prokaryotes
 Color range by phylum was complete.
 </code></pre>
 
-<p>The color range type data are store in iview directory:</p>
+<p>The color range type data were stored in iview directory:</p>
 <pre><code class="bash">$ cd iview
 $ cat range_color_by_phylum.txt 
 TREE_COLORS
@@ -919,11 +957,11 @@ aeq     range   #865142 Bacteria
 </code></pre>
 
 <h4 id="annotating-tree-by-class">Annotating tree by class</h4>
-<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range class
+<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range -a class
 Color range by class was complete.
 </code></pre>
 
-<p>The color range type data are store in iview directory:</p>
+<p>The color range type data were stored in iview directory:</p>
 <pre><code class="bash">$ cd iview
 $ cat range_color_by_class.txt 
 TREE_COLORS
@@ -966,7 +1004,7 @@ aeq     range   #F1A2B7 Adlercreutzia
 
 <h2 id="check">check</h2>
 <p>The check module can check input organisms match in KEGG database or SSU rRNA database.</p>
-<pre><code class="bash">$ PhySpeTree check -i organism_example_list.txt -out check --ehcp
+<pre><code class="bash">$ PhySpeTree check -i organism_example_list.txt --ehcp
 </code></pre>
 
 <h3 id="check-options">check options</h3>
@@ -1006,8 +1044,25 @@ aeq     range   #F1A2B7 Adlercreutzia
 </table>
 <h3 id="example_4">example</h3>
 <h4 id="check-organism-for-extend-autobuild">check organism for extend autobuild</h4>
-<p>When users use autobuild to reconstruct phylogenetic tree with <code>--ehcp</code> method, you should prepare highly conserved proteins as extend proteins
+<p>When users use <code>autobuild</code> to reconstruct phylogenetic tree with <code>--ehcp</code> method, you should prepare highly conserved proteins as extend proteins
 for auto build tree. You can determine what proteins to be prepared by the check command. Download example for check <a href="../example/organism_example_list.txt">organism_example_list.txt</a></p>
+<ul>
+<li>download the example file:</li>
+</ul>
+<pre><code class="bash">$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/organism_example_list.txt&quot;
+
+--2016-10-30 13:40:48--  https://xiaofeiyangyang.github.io/physpetools/example/organism_example_list.txt
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 39 [text/plain]
+Saving to: ‘organism_example_list.txt’
+
+organism_example_list.txt    100%[==============================================&gt;]      39  --.-KB/s    in 0s      
+
+2016-10-30 13:40:50 (21.5 MB/s) - ‘organism_example_list.txt’ saved [39/39]
+</code></pre>
+
 <p>Use check command like follow: </p>
 <pre><code class="bash">$ PhySpeTree check -i organism_example_list.txt --ehcp
 
