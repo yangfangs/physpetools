@@ -687,24 +687,31 @@ $ PhySpeTree check -i 191speciesnames.txt --ehcp
 
 'Ribosomal protein S7' ----------------------------------> p5.fasta
 
-'Ribosomal protein S8' ----------------------------------> p6.fasta
+'Arginyl-tRNA synthetase' ----------------------------------> p6.fasta
 
-'Arginyl-tRNA synthetase' ----------------------------------> p7.fasta
-
-Check extend highly conserved protein is completed.
-
-Check result is store in /check/physpe_echp_extend.txt
+Checked extend highly conserved proteins is completed.
+Checked result was store in check/PhySpeTree_echp_extend.txt
 ......
 ```
 
 
 #### 2. Prepare highly conserved proteins
 
-After use check command, we should prepare seven highly conserved protein store this highly conserved protein to p1 ~ p7 FASTA format files.
-The highly protein protein names are know with `check` command. Here we prepare p1 ~ p7 highly conserved proteins to `Lokiarchaeum sp. GC14_75 (loki)`.
+After use check command, we should prepare six highly conserved protein and store this highly conserved protein to p1 ~ p6 FASTA format files.
+The highly protein protein names are know with `check` command. Here we prepared *Lokiarchaeum sp. GC14_75 (loki)* highly conserved proteins stored in p1 ~ p6 files.
 Download [highly_conserved_protein_loki][6]
 
+* Download example files：
+
+```bash
+
+
+
 ```
+
+
+
+```bash
 $ cd extend_pro_loki
 $ ls
 p1.fasta  p2.fasta  p3.fasta  p4.fasta  p5.fasta  p6.fasta  p7.fasta
@@ -761,4 +768,4 @@ Now loading data and constructing species phylogenetic tree......
 [3]: http://rest.kegg.jp/list/organism
 [4]: example/52plantsnames.txt
 [5]: example/extend_rna_loki.fasta
-[6]: example/highly_conserved_protein_loki.fasta
+[6]: example/highly_conserved_protein_loki.tar.gz
