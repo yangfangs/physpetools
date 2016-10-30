@@ -659,7 +659,7 @@ annotation and management of phylogenetic trees. More detail with of iTol in [iT
 Use **iview** in command line like this:
 
 ```bash
-$ PhySpeTree iview -i organism_example_list.txt -range phylum
+$ PhySpeTree iview -i organism_example_list.txt --range
 ```
 
 ### iview options
@@ -729,7 +729,7 @@ aeq     range   #BEBF5A Prokaryotes
 #### Annotating tree by phylum
 
 ```bash
-$ PhySpeTree iview -i organism_example_list.txt --range phylum
+$ PhySpeTree iview -i organism_example_list.txt --range -a phylum
 Color range by phylum was complete.
 ```
 
@@ -783,7 +783,7 @@ aeq     range   #99D1DB Actinobacteria
 #### Annotating tree by order
 
 ```bash
-$ PhySpeTree iview -i organism_example_list.txt --range order
+$ PhySpeTree iview -i organism_example_list.txt --range -a order
 Color range by order was complete.
 ```
 
