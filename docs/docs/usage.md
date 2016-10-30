@@ -834,7 +834,7 @@ $ PhySpeTree check -i organism_example_list.txt --ehcp
 ### example
 
 
-#### check organism for extend autobuild
+#### Check organism for extend autobuild
 
 When users use `autobuild` to reconstruct phylogenetic tree with `--ehcp` method, you should prepare highly conserved proteins as extend proteins
 for auto build tree. You can determine what proteins to be prepared by the check command. Download example for check [organism_example_list.txt][1]
@@ -950,8 +950,96 @@ $ cat physpe_echp_extend.txt
 
 In `physpe_echp_extend.txt` file you can check the highly conserved protein, which you should prepare for extend hcp method to reconstruct phylogenetic tree.
 
+#### Check input organism whether supported by PhySpeTree
 
+* Users enable use `--hcp` parameter to check input species whether supported by KEGG database. [example download][6] 
 
+* Download the example file:
+
+```bash
+$ wget "https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt"
+
+--2016-10-30 14:48:21--  https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 773 [text/plain]
+Saving to: ‘191speciesnames.txt’
+
+191speciesnames.txt          100%[==============================================>]     773  --.-KB/s    in 0s      
+
+2016-10-30 14:48:22 (322 MB/s) - ‘191speciesnames.txt’ saved [773/773]
+```
+
+* Check input species whether supported by KEGG database. Here example only one species named 'ges' not supported by PhySpeTree.
+
+```bash
+
+$ PhySpeTree check -i 191speciesnames.txt --hcp
+WARNING: The following species are not supported by KEGG DATABASE:
+ges
+Checked  whether the input species names in KEGG DATABASE completed.
+```
+
+* Users enable use `--srna` parameter to Check input species whether supported by SILVA database. [example download][6]
+ 
+* Download the example file:
+
+```bash
+$ wget "https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt"
+
+--2016-10-30 14:48:21--  https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 773 [text/plain]
+Saving to: ‘191speciesnames.txt’
+
+191speciesnames.txt          100%[==============================================>]     773  --.-KB/s    in 0s      
+
+2016-10-30 14:48:22 (322 MB/s) - ‘191speciesnames.txt’ saved [773/773]
+```
+
+* Check input species whether supported by SILVA database. Here example had 28 species not supported by PhySpeTree.
+
+```bash
+
+(progect) [yangfang@localhost test_check] $ PhySpeTree check -i 191speciesnames.txt --srna
+WARNING: The following species are not supported by SILVA DATABASE:
+neq
+ape
+tac
+mmp
+gla
+tps
+cho
+ddi
+spo
+aga
+tru
+mpu
+lin
+ban
+bce
+ljo
+san
+spg
+ges
+lis
+sco
+cdi
+mle
+wsu
+rpr
+bpe
+bpa
+ppr
+Checked  whether the input species names in SILVA DATABASE completed.
+```
+
+`NOTE:`
+
+* *For organisms not in the pre-built species list, PhySpeTree provides extend module (--echp or --esrn) for users to insert manually prepared files. *
 
 
 
@@ -961,3 +1049,4 @@ In `physpe_echp_extend.txt` file you can check the highly conserved protein, whi
 [3]: example/example_build_hcp.tar.gz
 [4]: example/example_build_srna.fasta
 [5]: example/example_combine_tree.tar.gz
+[6]: example/191speciesnames.txt
