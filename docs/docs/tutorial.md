@@ -2,26 +2,37 @@
 
 ## Automatically reconstruct Tree of Life
 
-The Tree of Life always used to describe the relations between organisms are living and extinct.
-Here we reconstruct tree of life, which contain 190 organisms. We use two method automatically reconstruct phylogenetic tree. One way is use highly
-conserved protein method and another is use SSU rRNA method to reconstruct Tree of Life.
+The tree-of-life always used to describe the relations between organisms are living and extinct.
+Here we reconstruct tree of life by two method (HCP and SSU rRNA method) which contain 191 organisms.
 
 
-### Auto build Tree of life by highly conserved protein method
+### Auto build tree-of-life by highly conserved protein (HCP) method
 
 * **Concept**
 
 ![physpe_concept_hcp](img/physpe_concept_hcp.png)
 
-In highly conserved protein (hcp) method automatically build phylogenetic tree by concatenate highly conserved protein to a supermatrix then build tree.
-Here we prepare 31 highly conserved proteins to automatically reconstruct phylogenetic tree. you also can searching what's the [31 highly protein](faq.md#Physpe_reconstruct_phylogenetic_tree_database) be used.
+The main concept of the HCP method is concatenate highly conserved protein to a supermatrix and then build tree.
+Here we prepared 31 highly conserved proteins to build tree. You can also check which [31 highly protein](faq.md#Physpe_reconstruct_phylogenetic_tree_database) were used.
 
 ####  1.Prepare species names list
 
 Preparing the organisms names (abbreviated names) are same with [KEGG organisms][2] abbreviation. you can get KEGG organisms abbreviation form [KEGG API][3]. 
-Here we reconstructed tree of life use 191 organisms names are [download][1]. the organisms names list as follow:
+Here we reconstructed tree-of-life use 191 organisms names are [download][1]. the organisms names list as follow:
 
 ```bash
+
+$ wget "https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt"
+
+--2016-10-30 15:26:06--  https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 773 [text/plain]
+Saving to: ‘191speciesnames.txt’
+
+191speciesnames.txt          100%[==============================================>]     773  --.-KB/s    in 0s      
+
 $ cat 191speciesnames.txt 
 neq
 pai
@@ -36,29 +47,28 @@ afu
 
 ####  2.Reconstruct phylogenetic tree by highly conserved protein method
 
-When users use PhySpeTree automatically build phylogenetic tree, the users can use `--hcp` arguments to specify use highly conserved protein method to build tree. The default use 1 thread 
-to reconstruct phylogenetic tree. If you want to use more threads can use `-t` parameter to set the threads to be used. Here we used the default value 1 thread to 
-build 191 species phylogenetic tree.
+When users use PhySpeTree build tree, should use `--hcp` arguments to specify use highly conserved protein method to build tree. The default use 1 thread 
+to build tree. The `-t` parameter to set the number of threads to use. Here we used the default value 1 thread to build 191 species phylogenetic tree.
 
 ```
 $ PhySpeTree autobuild -i 191speciesnames.txt -o 191_pro --hcp
+
 Loading organisms names success.....
 
 The result are store in:191_pro
 
-Now loading data and constructing species phylogenetic tree......
-2016-09-06 13:01:53,462 Checking organisms INFO: The organism: ges
-2016-09-06 13:01:53,462 Checking organisms WARNING: There organisms can't match in KEGG database so removed and reconstruct phylogenetic tree
-2016-09-06 13:01:53,462 kegg DB INFO: Read organisms names success
-2016-09-06 13:02:15,058 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L1' success and store in p1.fasta file
-2016-09-06 13:02:37,771 kegg DB INFO: Retrieve highly conserved protein 'Leucyl-tRNA synthetase' success and store in p2.fasta file
-2016-09-06 13:03:00,211 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L14' success and store in p3.fasta file
-2016-09-06 13:03:20,662 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein L5' success and store in p4.fasta file
-2016-09-06 13:03:40,959 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein S7' success and store in p5.fasta file
-2016-09-06 13:04:01,849 kegg DB INFO: Retrieve highly conserved protein 'Ribosomal protein S8' success and store in p6.fasta file
-2016-09-06 13:04:24,221 kegg DB INFO: Retrieve highly conserved protein 'Arginyl-tRNA synthetase' success and store in p7.fasta file
-2016-09-06 13:04:24,222 kegg DB INFO: retrieve from Kegg DB 7 highly conserved proteins
-
+Now loading data and constructing phylogenetic tree......
+2016-10-30 15:32:07,894 Checking organisms INFO: The species: ges can't match in KEGG protein index database
+2016-10-30 15:32:07,894 Checking organisms WARNING: These species can't match in KEGG protein index database so removed and reconstruct phylogenetic tree.
+2016-10-30 15:32:07,894 KEGG INDEX DB INFO: Read organisms names success
+2016-10-30 15:32:34,213 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L1' was successful store in p1.fasta file
+2016-10-30 15:33:00,679 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Leucyl-tRNA synthetase' was successful store in p2.fasta file
+2016-10-30 15:33:25,052 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L14' was successful store in p3.fasta file
+2016-10-30 15:33:49,649 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L5' was successful store in p4.fasta file
+2016-10-30 15:34:14,510 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein S7' was successful store in p5.fasta file
+2016-10-30 15:34:41,123 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Arginyl-tRNA synthetase' was successful store in p6.fasta file
+2016-10-30 15:34:41,123 KEGG INDEX DB INFO: Retrieve from KEGG database 6 highly conserved proteins
+......
 ```
 
 #### 3.Get the tree file  
@@ -69,8 +79,8 @@ Now loading data and constructing species phylogenetic tree......
 
 #### 4.Use iview module annotating tree
 
-PhySpeTree provide iview module to annotating tree by iTol, iTol is a very popular online tool for the display, annotation and management of phylogenetic trees.
-When you use iview module to annotating tree, only drop the output the generate files to your iTol account to display tree.
+PhySpeTree provided iview module to annotating tree by iTol, iTol is a very popular online tool for the display, annotation and management of phylogenetic trees.
+When you use iview module to annotating tree, only drop the output the generate files to your iTol account and display tree.
 
 
 * Change abbreviated label names to full names use `--labels` arguments.
@@ -149,13 +159,13 @@ mja     range   #996433 Archaea
 ![191_species_rna_full_color](img/191_species_pro_full_name_color.png)
 
 
-### Auto build Tree of Life by 16s SSU RNA
+### Auto build tree-of-life by SSU rRNA
 
 * **Concept**
 
 ![physpe_concept_hcp](img/physpe_concept_rna.png)
 
-PhySpeTree provide auto reconstruct phylogenetic tree by 16s SSU RNA, the concept of this way is use alignment organisms 16s SSU RNA and then reconstruct 
+PhySpeTree provided auto reconstruct phylogenetic tree by SSU rRNA method, the concept of this method was aligned organisms SSU rRNA sequence and then reconstruct 
 phylogenetic tree.
 
 
@@ -163,6 +173,16 @@ phylogenetic tree.
 ####  1.Prepare organism names list, 191 organisms names list [download][1]
 
 ```bash
+
+$ wget "https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt"
+
+--2016-10-30 15:26:06--  https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 773 [text/plain]
+Saving to: ‘191speciesnames.txt’
+
 $ cat 191speciesnames.txt 
 neq
 pai
@@ -175,7 +195,7 @@ afu
 .....
 ```
 
-####  2.Reconstruct phylogenetic tree by 16s SSU RNA method
+####  2.Reconstruct phylogenetic tree by SSU rRNA method
 
 ```
 $ PhySpeTree autobuild -i 191speciesnames.txt -o 191_rna --srna
@@ -183,47 +203,44 @@ Loading organisms names success.....
 
 The result are store in:191_rna
 
-Now loading data and constructing species phylogenetic tree......
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: neq
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: ape
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: tac
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: mmp
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: gla
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: tps
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: cho
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: ddi
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: spo
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: aga
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: tru
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: mpu
-2016-09-05 19:48:03,824 Checking organisms INFO: The organism: lin
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: ban
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: bce
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: ljo
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: san
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: spg
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: ges
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: lis
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: sco
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: cdi
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: mle
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: wsu
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: rpr
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: bpe
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: bpa
-2016-09-05 19:48:03,825 Checking organisms INFO: The organism: ppr
-2016-09-05 19:48:03,825 Checking organisms WARNING: There organisms can't match in SILVA database so removed and reconstruct phylogenetic tree
-2016-09-05 19:48:03,825 16s DB INFO: Read organisms names success
-2016-09-05 19:48:14,354 16s DB INFO: Retrieve organism 'pai' 16s SSU RNA sequences data success
-2016-09-05 19:48:17,703 16s DB INFO: Retrieve organism 'sto' 16s SSU RNA sequences data success
-2016-09-05 19:48:20,674 16s DB INFO: Retrieve organism 'ssoa' 16s SSU RNA sequences data success
-2016-09-05 19:48:23,031 16s DB INFO: Retrieve organism 'tvo' 16s SSU RNA sequences data success
-2016-09-05 19:48:26,510 16s DB INFO: Retrieve organism 'afu' 16s SSU RNA sequences data success
-2016-09-05 19:48:28,766 16s DB INFO: Retrieve organism 'hal' 16s SSU RNA sequences data success
-2016-09-05 19:48:31,148 16s DB INFO: Retrieve organism 'mac' 16s SSU RNA sequences data success
-2016-09-05 19:48:33,579 16s DB INFO: Retrieve organism 'mma' 16s SSU RNA sequences data success
-2016-09-05 19:48:35,856 16s DB INFO: Retrieve organism 'pfu' 16s SSU RNA sequences data success
-2016-09-05 19:48:38,194 16s DB INFO: Retrieve organism 'pho' 16s SSU RNA sequences data success
+Now loading data and constructing phylogenetic tree......
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: neq can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: ape can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: tac can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: mmp can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: gla can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: tps can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: cho can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: ddi can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: spo can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: aga can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: tru can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: mpu can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: lin can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: ban can't match in SSU rRNA database
+2016-10-30 15:40:17,107 Checking organisms INFO: The organism: bce can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: ljo can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: san can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: spg can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: ges can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: lis can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: sco can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: cdi can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: mle can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: wsu can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: rpr can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: bpe can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: bpa can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms INFO: The organism: ppr can't match in SSU rRNA database
+2016-10-30 15:40:17,108 Checking organisms WARNING: These species can't match in SSU rRNA database so removing and reconstructing phylogenetic tree.
+2016-10-30 15:40:17,108 SSU rRNA DB INFO: Read organisms names success
+2016-10-30 15:40:24,505 SSU rRNA DB INFO: Retrieve and download of organism 'pai' SSU rRNA sequence was successful
+2016-10-30 15:40:26,960 SSU rRNA DB INFO: Retrieve and download of organism 'sto' SSU rRNA sequence was successful
+2016-10-30 15:40:29,313 SSU rRNA DB INFO: Retrieve and download of organism 'ssoa' SSU rRNA sequence was successful
+2016-10-30 15:40:32,387 SSU rRNA DB INFO: Retrieve and download of organism 'tvo' SSU rRNA sequence was successful
+2016-10-30 15:40:35,158 SSU rRNA DB INFO: Retrieve and download of organism 'afu' SSU rRNA sequence was successful
+2016-10-30 15:40:37,507 SSU rRNA DB INFO: Retrieve and download of organism 'hal' SSU rRNA sequence was successful
+2016-10-30 15:40:41,282 SSU rRNA DB INFO: Retrieve and download of organism 'mac' SSU rRNA sequence was successful
 ......
 ```
 
@@ -271,8 +288,6 @@ mmp     Methanococcus maripaludis S2
 * Tree view in iTol
 
 ![191_species_rna_full_name](img/191_species_rna_full_name.png)
-
-
 
 
 
@@ -364,7 +379,21 @@ cho     range   #99A01A Alveolates
 
 Here we automatically reconstructed 52 plants phylogenetic tree by PhySpeTree use highly conserved protein method. The species list [download][4].
 
-```
+```bash
+
+$ wget "https://xiaofeiyangyang.github.io/physpetools/example/52plantsnames.txt"
+
+--2016-10-30 15:44:25--  https://xiaofeiyangyang.github.io/physpetools/example/52plantsnames.txt
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 211 [text/plain]
+Saving to: ‘52plantsnames.txt’
+
+52plantsnames.txt            100%[==============================================>]     211  --.-KB/s    in 0s      
+
+2016-10-30 15:44:27 (120 MB/s) - ‘52plantsnames.txt’ saved [211/211]
+
 $ cat 52plantsnames.txt
 aly
 ath
@@ -385,35 +414,33 @@ cmo
 ####  2.Reconstruct phylogenetic tree by highly conserved protein method
 
 ```
-$ PhySpeTree autobuild -i 52plantsnames.txt -o 52plant_pro --srna -t 6
+$ PhySpeTree autobuild -i 52plantsnames.txt -o 52plant_pro --hcp -t 6
+
 Loading organisms names success.....
 
 The result are store in:52plant_pro
 
-Now loading data and constructing species phylogenetic tree......
-Wed, 07 Sep 2016 18:48:35 kegg DB[line:105] INFO Read organisms names success
-Wed, 07 Sep 2016 18:48:44 kegg DB[line:92] INFO Retrieve highly conserved protein 'Leucyl-tRNA synthetase' success and store in p1.fasta file
-Wed, 07 Sep 2016 18:48:53 kegg DB[line:92] INFO Retrieve highly conserved protein 'Metal-dependent proteases with chaperone activity' success and store in p2.fasta file
-Wed, 07 Sep 2016 18:49:01 kegg DB[line:92] INFO Retrieve highly conserved protein 'Phenylalanine-tRNA synthethase alpha subunit' success and store in p3.fasta file
-Wed, 07 Sep 2016 18:49:10 kegg DB[line:92] INFO Retrieve highly conserved protein 'Preprotein translocase subunit SecY' success and store in p4.fasta file
-Wed, 07 Sep 2016 18:49:17 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein L11' success and store in p5.fasta file
-Wed, 07 Sep 2016 18:49:25 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein L13' success and store in p6.fasta file
-Wed, 07 Sep 2016 18:49:32 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein L15' success and store in p7.fasta file
-Wed, 07 Sep 2016 18:49:40 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein L16/L10E' success and store in p8.fasta file
-Wed, 07 Sep 2016 18:49:48 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein L18' success and store in p9.fasta file
-Wed, 07 Sep 2016 18:50:01 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein L22' success and store in p10.fasta file
-Wed, 07 Sep 2016 18:50:08 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein L3' success and store in p11.fasta file
-Wed, 07 Sep 2016 18:50:16 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein L5' success and store in p12.fasta file
-Wed, 07 Sep 2016 18:50:24 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein L6P/L9E' success and store in p13.fasta file
-Wed, 07 Sep 2016 18:50:31 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein S11' success and store in p14.fasta file
-Wed, 07 Sep 2016 18:50:40 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein S17' success and store in p15.fasta file
-Wed, 07 Sep 2016 18:50:48 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein S2' success and store in p16.fasta file
-Wed, 07 Sep 2016 18:50:56 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein S4' success and store in p17.fasta file
-Wed, 07 Sep 2016 18:51:04 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein S5' success and store in p18.fasta file
-Wed, 07 Sep 2016 18:51:11 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein S8' success and store in p19.fasta file
-Wed, 07 Sep 2016 18:51:25 kegg DB[line:92] INFO Retrieve highly conserved protein 'Seryl-tRNA synthetase' success and store in p20.fasta file
-Wed, 07 Sep 2016 18:51:39 kegg DB[line:92] INFO Retrieve highly conserved protein 'Ribosomal protein S13' success and store in p21.fasta file
-Wed, 07 Sep 2016 18:51:39 kegg DB[line:94] INFO retrieve from Kegg DB 21 highly conserved proteins
+Now loading data and constructing phylogenetic tree......
+2016-10-30 15:48:23,420 KEGG INDEX DB INFO: Read organisms names success
+2016-10-30 15:48:36,020 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Leucyl-tRNA synthetase' was successful store in p1.fasta file
+2016-10-30 15:48:42,369 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Metal-dependent proteases with chaperone activity' was successful store in p2.fasta file
+2016-10-30 15:48:46,774 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Phenylalanine-tRNA synthethase alpha subunit' was successful store in p3.fasta file
+2016-10-30 15:48:50,559 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Preprotein translocase subunit SecY' was successful store in p4.fasta file
+2016-10-30 15:48:54,153 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L15' was successful store in p5.fasta file
+2016-10-30 15:48:57,631 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L16/L10E' was successful store in p6.fasta file
+2016-10-30 15:49:01,311 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L18' was successful store in p7.fasta file
+2016-10-30 15:49:09,038 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L22' was successful store in p8.fasta file
+2016-10-30 15:49:18,417 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L3' was successful store in p9.fasta file
+2016-10-30 15:49:24,771 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L5' was successful store in p10.fasta file
+2016-10-30 15:49:31,840 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L6P/L9E' was successful store in p11.fasta file
+2016-10-30 15:49:36,652 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein S11' was successful store in p12.fasta file
+2016-10-30 15:49:41,464 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein S15P/S13E' was successful store in p13.fasta file
+2016-10-30 15:49:46,272 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein S17' was successful store in p14.fasta file
+2016-10-30 15:49:51,186 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein S2' was successful store in p15.fasta file
+2016-10-30 15:50:04,278 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein S8' was successful store in p16.fasta file
+2016-10-30 15:50:13,914 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Seryl-tRNA synthetase' was successful store in p17.fasta file
+2016-10-30 15:50:19,753 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein S13' was successful store in p18.fasta file
+2016-10-30 15:50:19,753 KEGG INDEX DB INFO: Retrieve from KEGG database 18 highly conserved proteins
 ......
 ```
 
@@ -510,7 +537,7 @@ Some time we want to extend tree with a new organisms, use PhySpeTree user can e
 
 
 
-### Extend tree by 16s SSU rRNA method
+### Extend tree by SSU rRNA method
 
 * **Concept**
 
@@ -518,14 +545,34 @@ Some time we want to extend tree with a new organisms, use PhySpeTree user can e
 
 
 
-Here we extend tree of life with a new organism `Lokiarchaeum sp. GC14_75 (loki)`.
+Here we inserted new organism *Lokiarchaeum sp. GC14_75 (loki)* to tree-of-life.
 
 
 #### 1.Prepare new organism SSU rRNA sequence
 
-When use SSU rRNA method to extend a new organism user need prepare the new organism SSU rRNA sequence, Here we prepared the new organism `Lokiarchaeum sp. GC14_75 (loki)`
-16s rRNA sequence save with FASTA format. example download [extend_rna_olki.fasta][5]
+When using SSU rRNA method to insert a new organism, the user needs prepare the new organism SSU rRNA sequence. Here we prepared the new organism *Lokiarchaeum sp. GC14_75 (loki)*
+SSU rRNA sequence save with FASTA format. example download [extend_rna_olki.fasta][5]
 
+* Download the example file:
+
+```bash
+
+$ wget "https://xiaofeiyangyang.github.io/physpetools/example/extend_rna_loki.fasta"
+
+--2016-10-30 15:54:38--  https://xiaofeiyangyang.github.io/physpetools/example/extend_rna_loki.fasta
+Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.24.133
+Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.24.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1200 (1.2K) [application/octet-stream]
+Saving to: ‘extend_rna_loki.fasta’
+
+extend_rna_loki.fasta        100%[==============================================>]   1.17K  --.-KB/s    in 0s      
+
+2016-10-30 15:54:39 (553 MB/s) - ‘extend_rna_loki.fasta’ saved [1200/1200]
+
+```
+
+* check the download example file:
 
 ```
 $ cat extend_rna_olki.fasta
@@ -548,9 +595,9 @@ GAGGGGGGAGAAGUCGUAACAAGGUAGCCGUAGGGGAACCUGCGGCUGGAUCACCUCCU
 
 ```
 
-#### 2.Reconstruct phylogenetic tree by SSU rRNA extend with a new organism
+#### 2.Insert a new organism to tree-of-life by SSU rRNA method
 
-Reconstruct phylogenetic tree by SSU rRNA method, you should use `--esrna` to specify the method and use `-e` parameter specify
+Reconstruct phylogenetic tree by extend SSU rRNA method, you should use `--esrna` to specify the method and use `-e` parameter specify
 the extend organism SSU rRNA sequence file.
 
 
@@ -608,7 +655,7 @@ Now loading data and constructing species phylogenetic tree......
 ![extend_rna](img/extend_rna.png)
 
 
-### Extend tree by highly conserved protein (hcp) method
+### Extend tree by highly conserved protein (HCP) method
 
 * **Concept**
 
@@ -616,7 +663,7 @@ Now loading data and constructing species phylogenetic tree......
 
 #### 1.Check prepare proteins
 
-When use highly conserved protein method reconstruct phylogenetic tree with new organism, user should use `check` method to check what
+When using SSU rRNA method to insert a new organism, the user should use `check` method to check what
 highly conserved protein will be prepared.
 
 ```
