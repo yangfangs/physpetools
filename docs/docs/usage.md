@@ -1039,7 +1039,7 @@ Checked  whether the input species names in SILVA DATABASE completed.
 
 `NOTE:`
 
-* *For organisms not in the pre-built species list, PhySpeTree provides extend module (--echp or --esrn) for users to insert manually prepared files. *
+* *For organisms not in the pre-built species list, PhySpeTree provides extend module (--echp or --esrna) for users to insert manually prepared files.*
 
 
 
