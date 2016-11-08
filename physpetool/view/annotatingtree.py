@@ -110,3 +110,33 @@ def colorRange(input, output, taxon):
     fw.close()
     print("Color range by {0} was complete.".format(taxon))
     print("Color range annotation was save in {0}".format(open_path))
+
+def colorLabel(input, output, taxon):
+    """
+    Main function to color label
+    :param input: input file names
+    :param output: output directory path
+    :param taxon: choice annotation by ['kingdom', 'phylum', 'class', 'order']
+    :return: no
+    """
+    if not os.path.exists(output):
+        os.makedirs(output)
+    # writ file name
+    fw_name = "labels_color_by_" + taxon + ".txt"
+    open_path = os.path.join(output, fw_name)
+    fw = open(open_path, 'wb')
+    # write annotation range head
+    fw.write('TREE_COLORS\nSEPARATOR TAB\nDATA\n')
+    # check and get input list
+    inputfile = checkFile(input)
+    input_list = readIputFile(inputfile)
+    # get match list and annotation dict to annotation
+    match_list, anno_dict = matchInput(input_list, taxon)
+    # write to annotation to file
+    for line in match_list:
+        color = anno_dict[line[1]]
+        write_data = "{0}\tlabel\t{1}\n".format(line[0], color)
+        fw.write(write_data)
+    fw.close()
+    print("Color labels by {0} was complete.".format(taxon))
+    print("Color labels annotation was save in {0}".format(open_path))

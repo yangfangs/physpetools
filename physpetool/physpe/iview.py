@@ -26,7 +26,7 @@ The arguments parse module for iview module.
 """
 
 import os
-from physpetool.view.annotatingtree import colorRange
+from physpetool.view.annotatingtree import colorRange, colorLabel
 from physpetool.view.changelabels import annotatingLabels
 
 APP_DESC = ""
@@ -49,7 +49,10 @@ Arguments parse
                                The directory name is iview")
 
     annotation_args.add_argument('-r', '--range', action='store_true', dest="colorrange", default=False,
-                                 help="Annotating ranges by %s. The default is phylum." % (taxon))
+                                 help="Annotating labels with ranges by %s. The default is phylum." % (taxon))
+
+    annotation_args.add_argument('-c', '--color', action='store_true', dest="colorlabel", default=False,
+                                 help="Annotating labels without ranges by %s. The default is phylum." % (taxon))
 
     annotation_args.add_argument('-a', action='store', dest="assign", choices=taxonomy, default='phylum',
                                  help="Colored ranges by user choice form [%s]." % (taxon))
@@ -69,3 +72,5 @@ Staring run combine
         colorRange(args.inputfile, out_put, args.assign)
     elif args.labels:
         annotatingLabels(args.inputfile, args.outputfile)
+    elif args.colorlabel:
+        colorLabel(args.inputfile, out_put, args.assign)
