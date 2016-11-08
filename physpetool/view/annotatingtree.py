@@ -24,13 +24,42 @@
 Module for annotating tree.
 """
 
-
 from physpetool.database.dbpath import getlocaldbpath
 from physpetool.utils.checkinputfile import checkFile, readIputFile
 from physpetool.utils.colorconvert import random_color
 import os
 
 dbpath = getlocaldbpath()
+
+cite_range = u"""#==============================Color labels with ranges================================#
+#                                                                                      #
+# 1.This is a generated file by PhySpeTree.                                            #
+#                                                                                      #
+# 2.Users drop this file to iTOL account display the annotations.                      #
+#                                                                                      #
+# 3.iTOL V3: http://itol.embl.de/                                                      #
+#                                                                                      #
+# 4.Please cite:                                                                       #
+#              Letunic, I., & Bork, P. (2016). Interactive tree of life (iTOL) v3:     #
+#              an online tool for the display and annotation of phylogenetic and       #
+#              other trees.Nucleic acids research, gkw290.                             #
+#                                                                                      #
+#======================================================================================#"""
+
+cite_label = u"""#==============================Color labels without ranges=============================#
+#                                                                                      #
+# 1.This is a generated file by PhySpeTree.                                            #
+#                                                                                      #
+# 2.Users drop this file to iTOL account display the annotations.                      #
+#                                                                                      #
+# 3.iTOL V3: http://itol.embl.de/                                                      #
+#                                                                                      #
+# 4.Please cite:                                                                       #
+#              Letunic, I., & Bork, P. (2016). Interactive tree of life (iTOL) v3:     #
+#              an online tool for the display and annotation of phylogenetic and       #
+#              other trees.Nucleic acids research, gkw290.                             #
+#                                                                                      #
+#======================================================================================#"""
 
 
 def readTaxDb():
@@ -89,6 +118,7 @@ def colorRange(input, output, taxon):
     :param taxon: choice annotation by ['kingdom', 'phylum', 'class', 'order']
     :return: no
     """
+
     if not os.path.exists(output):
         os.makedirs(output)
     # writ file name
@@ -96,6 +126,8 @@ def colorRange(input, output, taxon):
     open_path = os.path.join(output, fw_name)
     fw = open(open_path, 'wb')
     # write annotation range head
+    fw.write(cite_range)
+    fw.write('\n')
     fw.write('TREE_COLORS\nSEPARATOR TAB\nDATA\n')
     # check and get input list
     inputfile = checkFile(input)
@@ -111,6 +143,7 @@ def colorRange(input, output, taxon):
     print("Color range by {0} was complete.".format(taxon))
     print("Color range annotation was save in {0}".format(open_path))
 
+
 def colorLabel(input, output, taxon):
     """
     Main function to color label
@@ -119,6 +152,7 @@ def colorLabel(input, output, taxon):
     :param taxon: choice annotation by ['kingdom', 'phylum', 'class', 'order']
     :return: no
     """
+
     if not os.path.exists(output):
         os.makedirs(output)
     # writ file name
@@ -126,6 +160,8 @@ def colorLabel(input, output, taxon):
     open_path = os.path.join(output, fw_name)
     fw = open(open_path, 'wb')
     # write annotation range head
+    fw.write(cite_label)
+    fw.write('\n')
     fw.write('TREE_COLORS\nSEPARATOR TAB\nDATA\n')
     # check and get input list
     inputfile = checkFile(input)

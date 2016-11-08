@@ -28,10 +28,22 @@ from physpetool.database.dbpath import getlocaldbpath
 from physpetool.utils.checkinputfile import checkFile, readIputFile
 import os
 
-
-
 dbpath = getlocaldbpath()
 
+cite = u"""#=====================================LABELS===========================================#
+#                                                                                      #
+# 1.This is a generated file by PhySpeTree.                                            #
+#                                                                                      #
+# 2.Users drop this file to iTOL account display the annotations.                      #
+#                                                                                      #
+# 3.iTOL V3: http://itol.embl.de/                                                      #
+#                                                                                      #
+# 4.Please cite:                                                                       #
+#              Letunic, I., & Bork, P. (2016). Interactive tree of life (iTOL) v3:     #
+#              an online tool for the display and annotation of phylogenetic and       #
+#              other trees.Nucleic acids research, gkw290.                             #
+#                                                                                      #
+#======================================================================================#"""
 
 def taxlist():
     """
@@ -54,11 +66,14 @@ Change labels
     :param output: output directory path
     :return: None
     """
+
     if not os.path.exists(output):
         os.makedirs(output)
     fw_name = "labels.txt"
     open_path = os.path.join(output, fw_name)
     fw = open(open_path, 'wb')
+    fw.write(cite)
+    fw.write('\n')
     fw.write('LABELS\nSEPARATOR TAB\nDATA\n')
     inputfile = checkFile(input)
     input_list = readIputFile(inputfile)
