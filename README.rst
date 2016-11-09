@@ -24,7 +24,7 @@ automatically downloads and analyzes sequences of SSU rRNA or HCP from about 4,0
 PhySpeTree workflow
 ------------------------------------------------------------------------------
 
-.. image:: https://github.com/xiaofeiyangyang/physpetools/blob/master/docs/docs/img/PhySpeTree_work_follow.png
+.. image:: https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/docs/docs/img/PhySpeTree_work_follow.png
 
 
 PhySpeTree workflow includes the following steps:
