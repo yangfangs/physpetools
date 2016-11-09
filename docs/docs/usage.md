@@ -670,7 +670,8 @@ $ PhySpeTree iview -i organism_example_list.txt --range
 |  -i    |  Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation.|
 |  -o    |  A directory contain range text file. The directory name is iview.                                  |
 |  -a    |  Colored ranges by users assign, users can choice from \[kingdom, phylum, class and order\].        |
-| -r/--range   | Annotating ranges by kingdom, phylum, class or order. The default is phylum.                  |
+| -r/--range   | Annotating labels with ranges by kingdom, phylum, class or order. The default is phylum.      |
+| -c/--color   |    Annotating labels without ranges by kingdom, phylum, class or order. The default is phylum.|
 | -l/--labels  | Change species labels from abbreviated names to full names.                                   |
 
 

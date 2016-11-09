@@ -428,7 +428,10 @@ iview options
     A directory contain the generate configure files. The directory name is iview.
 
 -r
-    Annotating ranges by kingdom, phylum, class or order. The default is phylum.
+    Annotating labels with ranges by kingdom, phylum, class or order. The default is phylum.
+
+-c
+    Annotating labels without ranges by kingdom, phylum, class or order. The default is phylum.
 
 -a
     Colored ranges by users assign, users can choice from [kingdom, phylum, class and order].
