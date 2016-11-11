@@ -1,50 +1,29 @@
-# Frequently Asked Questions (FAQ)
+### 1. What is the input of PhySpeTree?
 
+Users only need to prepare a TXT file containing [KEGG](http://www.genome.jp/kegg/catalog/org_list.html) abbreviated species names. For example, [organism_example_list](https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt).
 
-## PhySpeTree input/output
+### 2. How to explain PhySpeTree outputs?
 
+PhySpeTree returns two folders, `Outdata` contains the output species tree and `temp` includes temporary data. Files in `temp` can be used to check the quality of outputs in each step. If HCP method (`--hcp`) is selected, the `temp` folder includes:
 
-### 1.What preparation of user should does for PhySpeTree?
+  * `conserved_protein`: highly conserved proteins retrieved from the KEGG database.
+  * `alignment`: aligned sequences.
+  * `concatenate`: concatenated sequences and conserved blocks.
 
-The users should prepare a TXT file, which contain species name (abbreviated names are same with [KEGG database](http://www.genome.jp/kegg/catalog/org_list.html).
-one line write one species name only. For example,[organism_example_list](https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt).
-You can retrieve the Abbreviation of species names by [KEGG API](http://rest.kegg.jp/list/organism)
+If SSU rRNA method (`--srna`) is selected, the `temp` folder includes:
 
+  * `rna_sequence`: SSU rRNA sequences retrieved from the SILVA database.
+  * `rna_alignment`: aligned sequences and conserved blocks.
 
-### 2.What's PhySpeTree output data mean?
+### 3. What classes of HCP are selected?
 
-PhySpeTree output two data files, the one is a result file default names is `Outdata`, another is a `temp` file.
-
-If you reconstruct phylogenetic tree by `--hcp` (highly conserved protein) method, the temp files include three directory: `conserved_protein`, `alignment` and `concatenate`.
-
-  * conserved_protein: Store the FASTA format files, which was highly conserved proteins retrieved by KEGG database.
-  * alignment: Store the sequence files has been aligned.
-  * concatenate: Include concatenated highly conserved proteins data (FASTA format) and selected conserved blocks data (\*.fasta-gb1 format file).
-
-If you reconstruct phylogenetic tree by `--srna` (SSU rRNA) method, the temp files include two directory: `rna_sequence` and `rna_alignment`.
-
-  * rna_sequence: Store a file named rna_sequence.fasta, contain the SSU rRNA sequence retrieved from SILVA database.
-  * rna_alignment: Store in the \*.fasta file is the sequence files has been aligned and the \*.fasta-gb1, \*fasta-gb1.html are select conserved blocks data (use Gblocks software),
-  the \*.phy format file is converted from has been select conserved blocks data by PhySpeTree.
-
-`NOTE`:
-
-* *Users can check the quality of every aspect of data by the corresponding temp files.*
-
-
-## PhySpeTree reconstruct phylogenetic tree database
-
-### 1.what's the highly conserved proteins be used to reconstruct phylogenetic tree?
-
-PhySpeTree use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
+PhySpeTree uses 31 HCP without horizontal transferred genes according to Ciccarelli *et al.*.
 
 **cite:**
 
-> Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.
+> Ciccarelli FD, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.
 
-The 31 highly conserved proteins and corresponding KEGG database KO number as follow table:
-
-
+The 31 HCP and corresponding KEGG KO number are shown in the following table:
 
 Protein Names                                       |  Eukaryotes KO     |Prokaryotes KO
 --------------------------------------------------- | ------------------ | ---------------
@@ -81,10 +60,7 @@ DNA-directed RNA polymerase beta subunit            |   K03043           |   K03
 Ribosomal protein S13                               |   K02953           |   K02952
 
 
+### 4. How are SSU rRAN created?
 
-
-### 2.How the SSU rRAN database was created?
-
-The SSU rRAN database was created by [SILVA](<https://www.arb-silva.de/>) SSU rRNA database project (version: SILVA SSU 123.1 release).
-In this data the sequences haven been truncated, which means that all nucleotides that have not been aligned were removed from the sequence.
+The SSU rRAN sequences are created from the [SILVA](<https://www.arb-silva.de/>) database (123.1 release). Sequences haven been truncated, which means unaligned nucleotides are removed.
 

@@ -1,27 +1,22 @@
 # PhySpeTree Tutorial 
 
-## Automatically reconstruct Tree of Life
+## Automatically reconstruct the tree-of-life
 
-The tree-of-life always used to describe the relations between organisms are living and extinct.
-Here we reconstruct tree of life by two method (HCP and SSU rRNA method) which contain 191 organisms.
+Here we show how to use PhySpeTree to reconstruct tree-of-life (191 organisms) by two methods (HCP and SSU rRNA).
 
+### Reconstruct the tree-of-life by the HCP method
 
-### Auto build tree-of-life by highly conserved protein (HCP) method
-
-* **Concept**
+**Concept**
 
 ![physpe_concept_hcp](img/physpe_concept_hcp.png)
 
-The main concept of the HCP method is concatenate highly conserved protein to a supermatrix and then build tree.
-Here we prepared 31 highly conserved proteins to build tree. You can also check which [31 highly protein](faq.md#Physpe_reconstruct_phylogenetic_tree_database) were used.
+The main concept of the HCP method is to concatenate highly conserved proteins into a supermatrix and then build species tree. Here we prepared [31 classes of HCP](faq.md#Physpe_reconstruct_phylogenetic_tree_database) to build the tree.
 
-####  1.Prepare species names list
+####  1. Prepare input species
 
-Preparing the organisms names (abbreviated names) are same with [KEGG organisms][2] abbreviation. you can get KEGG organisms abbreviation form [KEGG API][3]. 
-Here we reconstructed tree-of-life use 191 organisms names are [download][1]. the organisms names list as follow:
+Download 191 [KEGG][2] abbreviated species names:
 
 ```bash
-
 $ wget "https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt"
 
 --2016-10-30 15:26:06--  https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt
@@ -43,12 +38,11 @@ tvo
 tac
 afu
 .....
-```   
+```
 
-####  2.Reconstruct phylogenetic tree by highly conserved protein method
+####  2. Reconstruct the species tree
 
-When users use PhySpeTree build tree, should use `--hcp` arguments to specify use highly conserved protein method to build tree. The default use 1 thread 
-to build tree. The `-t` parameter to set the number of threads to use. Here we used the default value 1 thread to build 191 species phylogenetic tree.
+Use `--hcp` option to specify the HCP method.
 
 ```
 $ PhySpeTree autobuild -i 191speciesnames.txt -o 191_pro --hcp
@@ -71,19 +65,15 @@ Now loading data and constructing phylogenetic tree......
 ......
 ```
 
-#### 3.Get the tree file  
+#### 3. Get the output tree
 
 ![191_species_rna](img/191_species_pro.png)
 
+#### 4. Annotate and view the tree
 
+PhySpeTree provides the `iview` module to annotate trees with taxonomic information. The output configure files can be directly used in iTOL, which is a very popular online tool for the display, annotation, and management of phylogenetic trees.
 
-#### 4.Use iview module annotating tree
-
-PhySpeTree provided iview module to annotating tree by iTol, iTol is a very popular online tool for the display, annotation and management of phylogenetic trees.
-When you use iview module to annotating tree, only drop the output the generate files to your iTol account and display tree.
-
-
-* Change abbreviated label names to full names use `--labels` arguments.
+Use the `--labels` option to change abbreviated species names to full names:
 
 ```
 $ PhySpeTree iview -i 191speciesnames.txt --labels
@@ -116,11 +106,9 @@ mmp     Methanococcus maripaludis S2
 .....
 ```
 
-* Drop `labels.txt` to you iTol account and view the phylogenetic tree.
-
 ![191_species_rna_full_name](img/191_species_pro_full_name.png)
 
-* Color range by phylum use `-a` parameter to specified. The default annotation by phylum.
+* Use the `-a` option to color branch ranges by phylum (default):
 
 ```
 $ PhySpeTree iview -i 191speciesnames.txt -o iview --range -a phylum
@@ -154,23 +142,17 @@ mja     range   #996433 Archaea
 .....
 ```
 
-* Drop `range_color_by_phylum.txt` to you iTol account and view the phylogenetic tree.
-
 ![191_species_rna_full_color](img/191_species_pro_full_name_color.png)
 
+### Reconstruct the tree-of-life by the SSU rRNA method
 
-### Auto build tree-of-life by SSU rRNA
-
-* **Concept**
+**Concept**
 
 ![physpe_concept_hcp](img/physpe_concept_rna.png)
 
-PhySpeTree provided auto reconstruct phylogenetic tree by SSU rRNA method, the concept of this method was aligned organisms SSU rRNA sequence and then reconstruct 
-phylogenetic tree.
+PhySpeTree provides `--srna` option to reconstruct species trees by the SSU rRNA method. The concept of this method is to align SSU rRNA sequences and then reconstruct the specie tree.
 
-
-
-####  1.Prepare organism names list, 191 organisms names list [download][1]
+####  1. Prepare input species
 
 ```bash
 
@@ -195,7 +177,7 @@ afu
 .....
 ```
 
-####  2.Reconstruct phylogenetic tree by SSU rRNA method
+####  2. Reconstruct the species tree
 
 ```
 $ PhySpeTree autobuild -i 191speciesnames.txt -o 191_rna --srna
@@ -244,15 +226,13 @@ Now loading data and constructing phylogenetic tree......
 ......
 ```
 
-#### 3.Get the tree file  
+#### 3. Get the output tree
 
 ![191_species_rna](img/191_species_rna.png)
 
+#### 4. Annotate and view the tree
 
-
-#### 4.Use iview annotating tree
-
-* Change abbreviated label names to full names use `--labels`
+Use the `--labels` option to change abbreviated species names to full names:
 
 ```
 $ PhySpeTree iview -i 191speciesnames.txt --labels
@@ -285,13 +265,9 @@ mmp     Methanococcus maripaludis S2
 .....
 ```
 
-* Tree view in iTol
-
 ![191_species_rna_full_name](img/191_species_rna_full_name.png)
 
-
-
-* Color range by phylum
+Color branch ranges by phylum:
 
 ```
 $ PhySpeTree iview -i 191speciesnames.txt -o iview --range -a phylum
@@ -325,12 +301,9 @@ mja     range   #996433 Archaea
 .....
 ```
 
-* Tree view in iTol
-
 ![191_species_rna_full_color](img/191_species_rna_full_name_color.png)
 
-
-* Color range by class
+Color branch ranges by class:
 
 ```
 $ PhySpeTree iview -i 191speciesnames.txt --range -a class
@@ -368,16 +341,13 @@ cho     range   #99A01A Alveolates
 .....
 ```
 
-* Tree view in iTol
-
 ![191_species_rna_full_color_class](img/191_species_rna_full_name_color_class.png)
 
+## Automatically reconstruct *Plantae* species tree
 
-## Auto build a plant tree
+Here we use PhySpeTree to automatically reconstructed 52 plants species tree by the HCP method. 
 
-####  1.Prepare organisms names list
-
-Here we automatically reconstructed 52 plants phylogenetic tree by PhySpeTree use highly conserved protein method. The species list [download][4].
+####  1. Prepare input species
 
 ```bash
 
@@ -411,7 +381,7 @@ cmo
 .....
 ```
 
-####  2.Reconstruct phylogenetic tree by highly conserved protein method
+####  2. Reconstruct the *Plantae* species tree
 
 ```
 $ PhySpeTree autobuild -i 52plantsnames.txt -o 52plant_pro --hcp -t 6
@@ -444,15 +414,14 @@ Now loading data and constructing phylogenetic tree......
 ......
 ```
 
-
-####  3.Get tree file
+####  3. Get the output tree
 
 ![52_plants_pro](img/52_plants_pro.png)
 
 
-#### 4.Use iview annotating tree
+#### 4. Annotate and view the tree
 
-* Change label names use `--labels`
+Use the `--labels` option to change abbreviated species names to full names:
 
 ```
 $ PhySpeTree iview -i 52plantsnames.txt --labels
@@ -483,16 +452,12 @@ cre     Chlamydomonas reinhardtii
 csl     Coccomyxa subellipsoidea
 csv     Cucumis sativus (cucumber)
 cvr     Chlorella variabilis
-
 .....
-```  
-
-* Tree view by iTol
+```
 
 ![52_plants_pro_full_name](img/52_plants_pro_full_name.png)
 
-
-* Color range by class
+Color branch ranges by class:
 
 ```
 $ PhySpeTree iview -i 52plantsnames.txt -o iview --range -a phylum
@@ -523,40 +488,25 @@ csl     range   #784CE5 Green algae
 .....
 ```
 
-* Tree view use iview module by iTol
-
 ![52_plants_pro_full_name_color](img/52_plants_pro_full_name_color.png)
 
+## Extend species tree with new organisms
 
+Here we show how to use PhySpeTree to expand insert a a pre-built species tree with new organisms. We insert the newly identified organism *Lokiarchaeum sp. GC14_75* (loki) to the tree-of-life.
 
+### Extend species tree by the SSU rRNA method
 
-## Extend tree with a new organism
-
-
-Some time we want to extend tree with a new organisms, use PhySpeTree user can easy do it.
-
-
-
-### Extend tree by SSU rRNA method
-
-* **Concept**
+**Concept**
 
 ![physpe_concept_erna](img/physpe_concept_erna.png)
 
+#### 1. Manually prepare the SSU rRNA sequence
 
+We prepare the SSU rRNA sequence of loki and save it in a FASTA format file, for example [extend_rna_olki.fasta][5].
 
-Here we inserted new organism *Lokiarchaeum sp. GC14_75 (loki)* to tree-of-life.
-
-
-#### 1.Prepare new organism SSU rRNA sequence
-
-When using SSU rRNA method to insert a new organism, the user needs prepare the new organism SSU rRNA sequence. Here we prepared the new organism *Lokiarchaeum sp. GC14_75 (loki)*
-SSU rRNA sequence save with FASTA format. example download [extend_rna_olki.fasta][5]
-
-* Download the example file:
+Download the example file:
 
 ```bash
-
 $ wget "https://xiaofeiyangyang.github.io/physpetools/example/extend_rna_loki.fasta"
 
 --2016-10-30 15:54:38--  https://xiaofeiyangyang.github.io/physpetools/example/extend_rna_loki.fasta
@@ -569,10 +519,9 @@ Saving to: ‘extend_rna_loki.fasta’
 extend_rna_loki.fasta        100%[==============================================>]   1.17K  --.-KB/s    in 0s      
 
 2016-10-30 15:54:39 (553 MB/s) - ‘extend_rna_loki.fasta’ saved [1200/1200]
-
 ```
 
-* check the download example file:
+check:
 
 ```
 $ cat extend_rna_olki.fasta
@@ -592,15 +541,11 @@ GGGCUGCAAUGGUAUGAACAAUGGGCUGUAACUCCGAAAGGAGAAACCAAUCCCGAAAUCAUAUCUCAGUGGGAAUUGUC
 GGCUGUAACCCGCCGACAUGAACGUGGAAUCCCUAGUAAUCGUGUGUCAUCAUCGCACGGUGAAUACGUCUCUGCUCCUU
 GCACACACCGCCCGUCGCUCCAUCCGAGUGUGCUAAAAAUGAGGUAUGGUCAGUCUGGUCGUAUCGAAUUUCUAGUAUGC
 GAGGGGGGAGAAGUCGUAACAAGGUAGCCGUAGGGGAACCUGCGGCUGGAUCACCUCCU
-
 ```
 
-#### 2.Insert a new organism to tree-of-life by SSU rRNA method
+#### 2. Insert loki to the tree-of-life
 
-Reconstruct phylogenetic tree by extend SSU rRNA method, you should use `--esrna` to specify the method and use `-e` parameter specify
-the extend organism SSU rRNA sequence file.
-
-
+Update the tree-of-life by combining the `--esrna` and `-e` options.
 
 ```
 $ PhySpeTree autobuild -i 191speciesnames.txt -o extend_rna -e extend_rna_loki.fasta --esrna -t 6
@@ -655,25 +600,19 @@ Now loading data and constructing phylogenetic tree......
 2016-10-30 16:10:07,303 SSU rRNA DB INFO: Retrieve and download of organism 'mka' SSU rRNA sequence was successful
 .....
 ```
-
-
-
-#### 3.View tree by iTol
-
+#### 3. Annotate and view the tree
 
 ![extend_rna](img/extend_rna.png)
 
-
-### Extend tree by highly conserved protein (HCP) method
+### Extend species tree by the HCP method
 
 * **Concept**
 
 ![physpe_concept_ehcp](img/physpe_concept_ehcp.png)
 
-#### 1.Check prepare proteins
+#### 1. Identify classes of HCP
 
-When using SSU rRNA method to insert a new organism, the user should use `check` method to check what
-highly conserved protein will be prepared.
+Use the `check` module to identify what classes of HCP should be prepapred.
 
 ```
 $ PhySpeTree check -i 191speciesnames.txt --ehcp
@@ -694,14 +633,11 @@ Checked result was store in check/PhySpeTree_echp_extend.txt
 ......
 ```
 
+#### 2. Manually prepare HCP sequences
 
-#### 2. Prepare highly conserved proteins
+According to `check` results, we prepare 6 classes of HCP and store the sequences (p1 ~ p6) into FASTA format files, for example [highly_conserved_protein_loki][6]
 
-After use check command, we should prepare six highly conserved protein and store this highly conserved protein to p1 ~ p6 FASTA format files.
-The highly protein protein names are know with `check` command. Here we prepared *Lokiarchaeum sp. GC14_75 (loki)* highly conserved proteins stored in p1 ~ p6 files.
-Download [highly_conserved_protein_loki][6]
-
-* Download example files：
+Download the example file:
 
 ```bash
 $ wget "https://xiaofeiyangyang.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz"
@@ -716,10 +652,7 @@ Saving to: ‘highly_conserved_protein_loki.tar.gz’
 highly_conserved_protein_lok 100%[==============================================>]   1.77K  --.-KB/s    in 0s      
 
 2016-10-30 16:36:50 (623 MB/s) - ‘highly_conserved_protein_loki.tar.gz’ saved [1810/1810]
-
 ```
-
-
 
 ```bash
 $ tar -zxvf highly_conserved_protein_loki.tar.gz
@@ -745,8 +678,7 @@ IFAKIGKKSMEIDRLFDNMKTVIDFIADQMPHKFNNFKSMYLKSSMGKPIKVTEEFLKSL
 EV
 ```
 
-#### 3.Insert a new organism to tree-of-life by HCP method
-
+#### 3. Insert loki to the tree-of-life
 
 ```
 $ PhySpeTree autobuild -i 191speciesnames.txt -o extend_pro_loki -e highly_conserved_protein_loki --ehcp -t 6
@@ -766,19 +698,11 @@ Now loading data and constructing phylogenetic tree......
 2016-10-30 18:22:27,895 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Arginyl-tRNA synthetase' was successful store in p6.fasta file
 2016-10-30 18:22:27,895 KEGG INDEX DB INFO: Retrieve from KEGG database 6 highly conserved proteins
 ......
-
 ```
 
-
-
-#### 4.View tree by iTol
-
+#### 4. Annotate and view the tree
 
 ![extend_pro](img/extend_pro.png)
-
-
-
-
 
 
 [1]: example/191speciesnames.txt

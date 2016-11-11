@@ -1,53 +1,32 @@
-# Install
+# Install PhySpeTree in your favorite ways
 
-
-## 1. PhySpeTree is released on PyPI, so all you need install:
+## 1. PyPI
 
 ```bash
 $ pip install PhySpeTree
 ```
 
-To upgrade to latest version:
+or [download](https://pypi.python.org/pypi/PhySpeTree/) and install:
 
+```bash
+$ pip install PhySpeTree-*.tar.gz
+```
+
+To upgrade to the latest version:
 
 ```bash
 $ pip install --upgrade PhySpeTree
 ```
 
-## 2. Download PhySpeTree released version form PypI:
-
-* [Download](https://pypi.python.org/pypi/PhySpeTree/) latest released version
-
-* local installation:
-
-```bash
-pip install PhySpeTree-*.tar.gz
-```
-
-
-## 3. You can install PhySpeTree by downloading the latest released version form github:
-
-* [Download](https://github.com/xiaofeiyangyang/physpetools/releases) latest released version **.tar.gz** file.
-
-* Local installation:
-
-```bash
-$ pip install physpetools-v*.tar.gz
-
-```
-
-
-## 4. Use the git command clone PhySpeTree to install it:
+## 2. GitHub
 
 ```bash
 $ git clone git@github.com:xiaofeiyangyang/physpetools.git
-```
-
-```bash
 $ cd physpetools
-
+$ python setup.py install
 ```
+or [download](https://github.com/xiaofeiyangyang/physpetools/releases) and install .
 
 ```bash
-$ python setup.py install
+$ pip install physpetools-*.tar.gz
 ```
