@@ -280,7 +280,7 @@ $ PhySpeTree build -i example_16s_ssurna.fasta -o output --srna
 
 **Build species trees by manually prepared HCP**
 
-The HCP sequences belonging to the same class are prepared in one FASTA format file, and all FASTA format files are stored in the same folder. For example, the folder [example_build_hcp][3] contains 10 classes of HCP (p1~p10) corresponding to 10 different organisms. There is no limit number of HCP sequences, we recommend no more than 10 to reduce the computational time.
+The HCP sequences belonging to the same class are prepared in one FASTA format file, and all FASTA format files are stored in the same folder. For example, the folder [example_build_hcp][3] contains 10 classes of HCP (p1~p10) corresponding to 10 different organisms. There is no limit number of HCP sequences. We recommend no less than 10 highly conserved proteins to ensure the accuracy of the reconstructed phylogenetic tree.
 
 Download and decompress the example input file:
 
