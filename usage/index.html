@@ -366,8 +366,8 @@ Outdata/
 </ul>
 <h3 id="advanced-options">Advanced options</h3>
 <p>Advanced options of internal software called in PhySpeTree can be set. These options are <code>enclosed in single quotes and start with a space</code>.</p>
-<p>Here is an example of setting RAxML advanced options by <code>--raxml</code>:</p>
-<pre><code class="bash">$ PhySpeTree -i organism_example_list.txt --raxml ' -f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+<p>Here is an example of setting RAxML advanced options by <code>--raxml_p</code>:</p>
+<pre><code class="bash">$ PhySpeTree -i organism_example_list.txt --raxml --raxml_p ' -f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 </code></pre>
 
 <p><strong>--muscle</strong></p>
@@ -506,10 +506,6 @@ $ PhySpeTree build -i example_16s_ssurna.fasta -o output --srna
 <td align="left">Number of processing threads (CPUs). The default is 1.</td>
 </tr>
 <tr>
-<td align="left">-e</td>
-<td align="left">FASTA format files to extend the tree with the --ehcp or --esrna option.</td>
-</tr>
-<tr>
 <td align="left">--hcp</td>
 <td align="left">HCP method (default).</td>
 </tr>
@@ -521,7 +517,7 @@ $ PhySpeTree build -i example_16s_ssurna.fasta -o output --srna
 </table>
 <h3 id="example_1">example</h3>
 <p><strong>Build species trees by manually prepared HCP</strong></p>
-<p>The HCP sequences belonging to the same class are prepared in one FASTA format file, and all FASTA format files are stored in the same folder. For example, the folder <a href="../example/example_build_hcp.tar.gz">example_build_hcp</a> contains 10 classes of HCP (p1~p10) corresponding to 10 different organisms. There is no limit number of HCP sequences, we recommend no more than 10 to reduce the computational time.</p>
+<p>The HCP sequences belonging to the same class are prepared in one FASTA format file, and all FASTA format files are stored in the same folder. For example, the folder <a href="../example/example_build_hcp.tar.gz">example_build_hcp</a> contains 10 classes of HCP (p1~p10) corresponding to 10 different organisms. There is no limit number of HCP sequences. We recommend no less than 10 highly conserved proteins to ensure the accuracy of the reconstructed phylogenetic tree.</p>
 <p>Download and decompress the example input file:</p>
 <pre><code class="bash">
 $ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/example_build_hcp.tar.gz&quot;
@@ -673,7 +669,7 @@ $ grep '&gt;' example_build_srna.fasta
 </tr>
 <tr>
 <td>-o</td>
-<td>The default is "combineTree".</td>
+<td>Output directory. The default is "combineTree".</td>
 </tr>
 <tr>
 <td>--mr</td>
@@ -764,7 +760,11 @@ $ cat tree1.tree tree2.tree &gt; combine.tree
 </tr>
 <tr>
 <td align="left">-r/--range</td>
-<td align="left">Annotating ranges by kingdom, phylum, class or order. The default is phylum.</td>
+<td align="left">Annotating labels with ranges by kingdom, phylum, class or order. The default is phylum.</td>
+</tr>
+<tr>
+<td align="left">-c/--color</td>
+<td align="left">Annotating labels without ranges by kingdom, phylum, class or order. The default is phylum.</td>
 </tr>
 <tr>
 <td align="left">-l/--labels</td>
