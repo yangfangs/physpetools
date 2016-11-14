@@ -132,49 +132,43 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</a></li>
+        <li class="main active"><a href="#1-what-is-the-input-of-physpetree">1. What is the input of PhySpeTree?</a></li>
         
-            <li><a href="#physpetree-inputoutput">PhySpeTree input/output</a></li>
+    
+        <li class="main "><a href="#2-how-to-explain-physpetree-outputs">2. How to explain PhySpeTree outputs?</a></li>
         
-            <li><a href="#physpetree-reconstruct-phylogenetic-tree-database">PhySpeTree reconstruct phylogenetic tree database</a></li>
+    
+        <li class="main "><a href="#3-what-classes-of-hcp-are-selected">3. What classes of HCP are selected?</a></li>
+        
+    
+        <li class="main "><a href="#4-how-are-ssu-rran-created">4. How are SSU rRAN created?</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="frequently-asked-questions-faq">Frequently Asked Questions (FAQ)</h1>
-<h2 id="physpetree-inputoutput">PhySpeTree input/output</h2>
-<h3 id="1what-preparation-of-user-should-does-for-physpetree">1.What preparation of user should does for PhySpeTree?</h3>
-<p>The users should prepare a TXT file, which contain species name (abbreviated names are same with <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG database</a>.
-one line write one species name only. For example,<a href="https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt">organism_example_list</a>.
-You can retrieve the Abbreviation of species names by <a href="http://rest.kegg.jp/list/organism">KEGG API</a></p>
-<h3 id="2whats-physpetree-output-data-mean">2.What's PhySpeTree output data mean?</h3>
-<p>PhySpeTree output two data files, the one is a result file default names is <code>Outdata</code>, another is a <code>temp</code> file.</p>
-<p>If you reconstruct phylogenetic tree by <code>--hcp</code> (highly conserved protein) method, the temp files include three directory: <code>conserved_protein</code>, <code>alignment</code> and <code>concatenate</code>.</p>
+<h3 id="1-what-is-the-input-of-physpetree">1. What is the input of PhySpeTree?</h3>
+<p>Users only need to prepare a TXT file containing <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG</a> abbreviated species names. For example, <a href="https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt">organism_example_list</a>.</p>
+<h3 id="2-how-to-explain-physpetree-outputs">2. How to explain PhySpeTree outputs?</h3>
+<p>PhySpeTree returns two folders, <code>Outdata</code> contains the output species tree and <code>temp</code> includes temporary data. Files in <code>temp</code> can be used to check the quality of outputs in each step. If HCP method (<code>--hcp</code>) is selected, the <code>temp</code> folder includes:</p>
 <ul>
-<li>conserved_protein: Store the FASTA format files, which was highly conserved proteins retrieved by KEGG database.</li>
-<li>alignment: Store the sequence files has been aligned.</li>
-<li>concatenate: Include concatenated highly conserved proteins data (FASTA format) and selected conserved blocks data (*.fasta-gb1 format file).</li>
+<li><code>conserved_protein</code>: highly conserved proteins retrieved from the KEGG database.</li>
+<li><code>alignment</code>: aligned sequences.</li>
+<li><code>concatenate</code>: concatenated sequences and conserved blocks.</li>
 </ul>
-<p>If you reconstruct phylogenetic tree by <code>--srna</code> (SSU rRNA) method, the temp files include two directory: <code>rna_sequence</code> and <code>rna_alignment</code>.</p>
+<p>If SSU rRNA method (<code>--srna</code>) is selected, the <code>temp</code> folder includes:</p>
 <ul>
-<li>rna_sequence: Store a file named rna_sequence.fasta, contain the SSU rRNA sequence retrieved from SILVA database.</li>
-<li>rna_alignment: Store in the *.fasta file is the sequence files has been aligned and the *.fasta-gb1, *fasta-gb1.html are select conserved blocks data (use Gblocks software),
-  the *.phy format file is converted from has been select conserved blocks data by PhySpeTree.</li>
+<li><code>rna_sequence</code>: SSU rRNA sequences retrieved from the SILVA database.</li>
+<li><code>rna_alignment</code>: aligned sequences and conserved blocks.</li>
 </ul>
-<p><code>NOTE</code>:</p>
-<ul>
-<li><em>Users can check the quality of every aspect of data by the corresponding temp files.</em></li>
-</ul>
-<h2 id="physpetree-reconstruct-phylogenetic-tree-database">PhySpeTree reconstruct phylogenetic tree database</h2>
-<h3 id="1whats-the-highly-conserved-proteins-be-used-to-reconstruct-phylogenetic-tree">1.what's the highly conserved proteins be used to reconstruct phylogenetic tree?</h3>
-<p>PhySpeTree use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.</p>
+<h3 id="3-what-classes-of-hcp-are-selected">3. What classes of HCP are selected?</h3>
+<p>PhySpeTree uses 31 HCP without horizontal transferred genes according to Ciccarelli <em>et al.</em>.</p>
 <p><strong>cite:</strong></p>
 <blockquote>
-<p>Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.</p>
+<p>Ciccarelli FD, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.</p>
 </blockquote>
-<p>The 31 highly conserved proteins and corresponding KEGG database KO number as follow table:</p>
+<p>The 31 HCP and corresponding KEGG KO number are shown in the following table:</p>
 <table>
 <thead>
 <tr>
@@ -341,9 +335,8 @@ You can retrieve the Abbreviation of species names by <a href="http://rest.kegg.
 </tr>
 </tbody>
 </table>
-<h3 id="2how-the-ssu-rran-database-was-created">2.How the SSU rRAN database was created?</h3>
-<p>The SSU rRAN database was created by <a href="https://www.arb-silva.de/">SILVA</a> SSU rRNA database project (version: SILVA SSU 123.1 release).
-In this data the sequences haven been truncated, which means that all nucleotides that have not been aligned were removed from the sequence.</p></div>
+<h3 id="4-how-are-ssu-rran-created">4. How are SSU rRAN created?</h3>
+<p>The SSU rRAN sequences are created from the <a href="https://www.arb-silva.de/">SILVA</a> database (123.1 release). Sequences haven been truncated, which means unaligned nucleotides are removed.</p></div>
             
         </div>
 
