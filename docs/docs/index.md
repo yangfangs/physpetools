@@ -26,19 +26,17 @@ PhySpeTree workflow includes the following steps:
 
 1. Prepare [abbreviated species names][1].
 
-2. Choose the method to reconstruct species trees (SSU rRNA (--sran) or HCP (--hcp)).
+2. Choose the method to reconstruct species trees (SSU rRNA (--srna) or HCP (--hcp)).
 
 3. Query, parse, and retrieve sequences in the FASTA format.
 
-4. Multiple sequence alignment.
+4. Multiple sequence alignment and concatenate HCP.
 
-5. Concatenate HCP.
+5. Select conserved blocks.
 
-6. Select conserved blocks.
+6. Reconstruct species trees.
 
-7. Reconstruct species trees.
-
-8. Output trees.
+7. Output trees.
 
 
 ## Features

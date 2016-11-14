@@ -29,51 +29,53 @@ PhySpeTree workflow
 
 PhySpeTree workflow includes the following steps:
 
-1. Prepare organisms names (abbreviated name) to reconstruct species tree as `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
+1. Prepare `abbreviated species names <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
 
-2. Two parallel pipelines to reconstruct species tree (SSU rRNA (--sran) or highly conserved proteins (--hcp)).
+2. Choose the method to reconstruct species trees (SSU rRNA (--srna) or HCP (--hcp)).
 
-3. Querying, parsing and retrieving FASTA format data.
+3. Query, parse, and retrieve sequences in the FASTA format.
 
-4. Multiple sequence alignment by Muscle or ClustalW.
+4. Multiple sequence alignment and concatenate HCP.
 
-5. Concatenate highly conserved proteins by PhySpeTree.
+5. Select conserved blocks.
 
-6. Select conserved blocks by Gblosks.
+6. Reconstruct species trees.
 
-7. Reconstruct species tree by RAxML or FastTree.
-
-8. Output the reconstruct phylogenetic tree files.
+7. Output trees.
 
 
 
 Features
 --------------------------------------------------------------------------------
-- Easy to use (one command line automatically reconstruct species tree).
+- Inputs only include species names.
 
-- Multi-selection (select reconstruct species tree by HCP method or SSU rRNA method).
+- One command line to build trees.
 
-- Adjustable parameters (the users can choice any enable parameters with corresponding invoke software).
+- HCP and SSU rRNA methods.
 
-- Provide species names (species abbreviated names) as input only.
+- Combine trees.
 
-- Combine best phylogenetic tree (combine multiple tree to a consensus tree).
+- View trees with iTOL.
 
-- View tree by iTol (easily use iview module to annotate tree).
-
-- Flexible (more software to be invoked with corresponding enable parameters).
-
-- Versatile software (can build species tree or gene tree and also ability extend new species to tree).
+- Versatile software with adjustable parameters.
 
 
 Install
 -------------------------------------------------------------------------------
 
-1. PhySpeTree is released on PyPI, so all you need install:
+1. PyPI
 
 .. code-block:: console
 
 	$ pip install PhySpeTree
+
+
+or `download PhySpeTree <https://pypi.python.org/pypi/PhySpeTree/>`_ and install:
+
+.. code-block:: console
+
+    $ pip install PhySpeTree-*.tar.gz
+
 
 To upgrade to latest version:
 
@@ -81,41 +83,21 @@ To upgrade to latest version:
 
     $ pip install --upgrade PhySpeTree
 
-
-
-2. Download PhySpeTree released version form PypI:
-
-- `Download PhySpeTree <https://pypi.python.org/pypi/PhySpeTree/>`_ by PypI latest released version
-
-- local installation:
-
-.. code-block:: console
-
-    $ pip install PhySpeTree-*.tar.gz
-
-3. You can install PhySpeTree by downloading the latest released version form github:
-
-- `Download <https://github.com/xiaofeiyangyang/physpetools/releases>`_ latest released version **.tar.gz** file.
-
-- Local installation:
-
-.. code-block:: console
-
-    $ pip install physpetools-v*.tar.gz
-
-4. Use the git command clone PhySpeTree to install it:
+2. GitHub
 
 .. code-block:: console
 
     $ git clone git@github.com:xiaofeiyangyang/physpetools.git
-
-.. code-block:: console
-
     $ cd physpetools
+    $ python setup.py install
+
+or `download <https://github.com/xiaofeiyangyang/physpetools/releases>`_ and install:
 
 .. code-block:: console
 
-    $ python setup.py install
+    $ pip install physpetools-*.tar.gz
+
+
 
 Usage
 -------------------------------------------------------------------------------
@@ -123,7 +105,7 @@ Usage
 autobuild
 ^^^^^^^^^^^^^^^^^^^^
 
-Users should prepare a TXT file contain the species names (abbreviated names) `example <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
+The input of `autobuild` module is a TXT file containing abbreviated species names, for example `organism example list <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
 
 Use **autobuild** in command line like this:
 
@@ -139,49 +121,51 @@ autobuild options
     Print help message and exits.
 
 -i
-    Input a TXT file contain the species names (abbreviated names) are same with KEGG species abbreviation.
+    Input a TXT file containing abbreviated species names.
 
 -o
-    A directory include output data (tree files). The default output data name is Outdata.
+    A directory to store outputs. The default is "Outdata".
 
 -t
-    Specify the number of processing threads (CPUs) to reconstruct phylogenetic tree. The default is 1.
+    Number of processing threads (CPUs). The default is 1.
+
+-e
+    FASTA format files to extend the tree with the --ehcp or --esrna option.
 
 --hcp
 
-    Specify the hcp (highly conserved protein) method to reconstruct phylogenetic tree. The default method is hcp.
+    HCP (highly conserved protein) method (default).
 
 --ehcp
 
-    The ehcp mode is use highly conserved proteins with extend highly conserved protein (users provide) to reconstruct phylogenetic tree.
+    HCP method with extended HCP sequences.
 
 --srna
 
-    The srna (SSU rRNA) method is use SSU rRNA data to reconstruct phylogenetic tree.
+    SSU method.
 
 --esrna
 
-    The esrna mode is use SSU RNA sequence with extend SSU RNA sequence (users provide) to reconstruct phylogenetic tree.
+    SSU rRNA method with extended SSU rRNA sequences.
 
 
 Advance options
 #####################
 
-Users enable choice more detail options with PhySpeTree call software, detail advance options input
-``must be enclosed in single quotes and Start with a space``.
+Advanced options of internal software called in PhySpeTree can be set. These options are ``enclosed in single quotes and start with a space``.
 
-The following is an example of using RAxML advanced options:
+Here is an example of setting RAxML advanced options by `--raxml_p`:
 
 .. code-block:: console
 
     $ PhySpeTree -i organism_example_list.txt --raxml --raxml_p '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
 --muscle
-    Multiple sequence alignment by muscle. The default multiple sequence alignment software is Muscle.
+    Multiple sequence alignment by MUSCLE (default).
 
 
 --muscle_p
-    Set Muscle advance parameters. The default is ``-maxiter 100``. More options about Muscle please to see
+    Set Muscle advance parameters. The default is ``-maxiter 100``, please see
     `MUSCLE Manual <http://www.drive5.com/muscle/manual/options.html>`_.
 
     -maxiter
@@ -191,28 +175,27 @@ The following is an example of using RAxML advanced options:
     Multiple sequence alignment by clustalw2.
 
 --clustalw_p
-    Set clustalw2 advance parameters. Here use clustalw default parameters. More options about clustalw
-    please to see `Clustalw Help <http://www.clustal.org/download/clustalw_help.txt>`_.
+    Set clustalw2 advance parameters. Here use clustalw default parameters,
+    please see `Clustalw Help <http://www.clustal.org/download/clustalw_help.txt>`_.
 
 
 --gblocks
-    Set Gblocks advance parameters. The default is ``-t=p -e=-gb1``.
-    More options about Gblocks please to see
-    `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
+    Set Gblocks advance parameters,
+    please see `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
     -t
-        Choice type of sequence. PhySpeTree default set is protein.
+        Choice type of sequence(default).
 
     -e
-        Generic File Extension. PhySpeTree set default is -gbl1.
+        Generic File Extension. PhySpeTree set default is "-gbl1".
 
 
 --raxml
-    Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
+    Reconstruct phylogenetic tree by RAxML (default).
 
 --raxml_p
-    Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``.
-    More options about RAxMl please to see `RAxML Manual <http://sco.h-its.org/exelixis/resource/download/NewManual.pdf>`_.
+    Set RAxML advanced parameters. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``,
+    please see `RAxML Manual <http://sco.h-its.org/exelixis/resource/download/NewManual.pdf>`_.
 
     -f
         select algorithm. The PhySpeTree default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run.
@@ -234,17 +217,17 @@ The following is an example of using RAxML advanced options:
     Reconstruct phylogenetic tree by FastTree.
 
 --fasttree_p
-    Set FastTree advance parameters. More options about FastTree
-    please to see `FastTree <http://www.microbesonline.org/fasttree/>`_.
+    Set FastTree advance parameters,
+    please see `FastTree <http://www.microbesonline.org/fasttree/>`_.
 
 build
 ^^^^^^^^^^^^^^^^^^^^
 
-Users can reconstruct phylogenetic tree use `build` module by manually prepared files. such as, SSU rRNA sequence or highly conserved proteins.
+The `build` module is used to reconstruct species trees with manually prepared sequences. Advanced options are the same as `autobuild` module.
 
 Use **build** in command line to reconstruct phylogenetic tree:
 
-* build phylogenetic tree by highly conserved proteins method:
+* build phylogenetic tree by HCP method:
 
 
 .. code-block:: console
@@ -252,7 +235,7 @@ Use **build** in command line to reconstruct phylogenetic tree:
     $ PhySpeTree build -i example_hcp -o output --hcp
 
 
-* build phylogenetic tree by SSU rRNA sequence method:
+* build phylogenetic tree by SSU rRNA method:
 
 
 .. code-block:: console
@@ -266,113 +249,33 @@ build options
     Print help message and exits.
 
 -i
-    Input a TXT file contain the species names (abbreviated names) are same with KEGG species abbreviation.
+    Input a TXT file containing abbreviated species names.
 
 -o
-    A directory include output data (tree files). The default output data name is Outdata.
+    A directory to store outputs. The default is "Outdata".
 
 -t
-    Specify the number of processing threads (CPUs) to reconstruct phylogenetic tree. The default is 1.
+    Number of processing threads (CPUs). The default is 1.
 
 --hcp
 
-    Specify the hcp (highly conserved protein) method to reconstruct phylogenetic tree. The default method is hcp.
+    HCP method (default).
 
 --srna
 
-    The srna (SSU rRNA) method is use SSU rRNA data to reconstruct phylogenetic tree.
-
-
-
-
-
-Advance options
-#####################
-
-Users enable choice more detail options with PhySpeTree call software, detail advance options input
-``must be enclosed in single quotes and start with space``.
-
-The following is an example of using RAxML advanced options:
-
-.. code-block:: console
-
-    $ PhySpeTree -i organism_example_list.txt --raxml --raxml_p ' -f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
-
---muscle
-    Multiple sequence alignment by muscle. The default multiple sequence alignment software is Muscle.
-
-
---muscle_p
-    Set Muscle advance parameters. The default is ``-maxiter 100``. More options about Muscle please to see
-    `MUSCLE Manual <http://www.drive5.com/muscle/manual/options.html>`_.
-
-    -maxiter
-        maximum number of iterations to run is set 100.
-
---clustalw
-    Multiple sequence alignment by clustalw2.
-
---clustalw_p
-    Set clustalw2 advance parameters. Here use clustalw2 default parameters. More options about clustalw2
-    please to see `Clustalw Help <http://www.clustal.org/download/clustalw_help.txt>`_.
-
-
---gblocks
-    Set Gblocks advance parameters. The default is ``-t=p -e=-gb1``.
-    More options about Gblocks please to see
-    `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
-
-    -t
-        Choice type of sequence. PhySpeTree default set is protein.
-
-    -e
-        Generic File Extension. PhySpeTree set default is -gbl1.
-
-
---raxml
-    Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.
-
---raxml_p
-    Set reconstruct phylogenetic tree arguments with RAxML. The default is ``-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1``.
-    More options about RAxMl please to see `RAxML Manual <http://sco.h-its.org/exelixis/resource/download/NewManual.pdf>`_.
-
-    -f
-        select algorithm. The PhySpeTree default set is ``a``, rapid Bootstrap analysis and search for best­scoring ML tree in one program run.
-
-    -m
-        Model of Binary (Morphological), Nucleotide, Multi­State, or Amino Acid Substitution. The PhySpeTree default set is PROTGAMMAJTTX.
-
-    -p
-        Specify a random number seed for the parsimony inferences. The physep default set is 12345.
-
-    -x
-        Specify an integer number (random seed) and turn on rapid bootstrapping. The PhySpeTree default set is 12345.
-
-    -N
-        The same with -# specify the number of alternative runs on distinct starting trees. The PhySpeTree default set is 100.
-
-
---fasttree
-    Reconstruct phylogenetic tree by FastTree.
-
---fasttree_p
-    Set FastTree advance parameters. More options about FastTree
-    please to see `FastTree <http://www.microbesonline.org/fasttree/>`_.
+    SSU rRNA method.
 
 combine
 ^^^^^^^^^^^^^^^^^^^^
 
-The **combine** module for the consensus tree construction.
-
-
-In Linux you can easy combine more tree to a tree file, for example:
+The **combine** module is used to combine trees generated from different methods. It contains two steps, at first merge different tree files into the same file. You can use `cat` bash command in the Linux system, for example:
 
 .. code-block:: console
 
     $ cat tree1.tree tree2.tree > combineTree.tree
 
 
-Use **combine** in command line like this:
+Then, use **combine**
 
 .. code-block:: console
 
@@ -386,25 +289,25 @@ combine options
     Print help message and exits.
 
 -i
-    Input a tree file (PHYLIP format), which contain multiple tree.
+    Input PHYLIP format file containing multiple trees.
 
 -o
-    A directory contain combined tree file. The default output data name is combineTree.
+    Output directory. The default is "combineTree".
 
 --mr
-    Compute majority rule consensus tree.
+    Majority rule trees..
 
 --mre
-    Compute extended majority rule consensus tree.
+    Extended majority rule trees.
 
 --strict
-    Compute strict consensus tree.
+    Strict consensus trees.
 
 
 iview
 ^^^^^^^^^^^^^^^^^^^^
 
-Users can Annotating tree by `iview` module by iTol.
+PhySpeTree provides the `iview` module to annotate taxonomic information (kingdom, phylum, class, or order) of output trees and to generate configure files linked to `iTol <http://itol.embl.de/)>`_.
 
 
 Use **iview** in command line like this:
@@ -422,10 +325,10 @@ iview options
     Print help message and exits.
 
 -i
-    Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation.
+    Input a TXT file containing abbreviated species names.
 
 -o
-    A directory contain the generate configure files. The directory name is iview.
+    A directory to store outputs. The default is "iview".
 
 -r
     Annotating labels with ranges by kingdom, phylum, class or order. The default is phylum.
@@ -442,7 +345,7 @@ iview options
 check
 ^^^^^^^^^^^^^^^^^^^^
 
-The `check` module design for check input organisms whether match in KEGG database or SILVA database.
+The `check` module is used to check whether input organisms are in pre-built databases.
 
 
 .. code-block:: console
@@ -460,64 +363,51 @@ check options
     Print help message and exits.
 
 -i
-    Input a TXT file contain species names (abbreviated names) are same with KEGG species abbreviation.
+    Input a TXT file containing abbreviated species names.
 
 -o
-    A directory contain check result. The default directory name is check.
+    A directory to store outputs. The default is "check".
 
 --hcp
-    Check organisms whether supported by KEGG database.
+   Check whether organisms are supported in the KEGG database.
 
 --ehcp
-    check input organisms prepare for extend autobuild tree module.
+    Check input organisms prepare for extend autobuild tree module.
 
 --srna
-    Check organisms whether supported by SILVA database.
+    Check whether organisms are supported in the SILVA database.
 
 
 Frequently Asked Questions (FAQ)
 --------------------------------------------------------------------------------
 
-PhySpeTree input/output
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+**1.What is the input of PhySpeTree?**
 
-**1.What preparation of users should does for PhySpeTree?**
+Users only need to prepare a TXT file containing `KEGG <http://www.genome.jp/kegg/catalog/org_list.html>`_ abbreviated species names. For example, `organism example list <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
 
-The users should prepare a TXT file, which contain species name (abbreviated names are same with `KEGG database <http://www.genome.jp/kegg/catalog/org_list.html>`_.),
-one line write one species name only. For example, `organism_example_list <https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt>`_.
-You can retrieve the Abbreviation of species names by `KEGG API <http://rest.kegg.jp/list/organism>`_.
+**2.How to explain PhySpeTree outputs?**
 
+PhySpeTree returns two folders, `Outdata` contains the output species tree and `temp` includes temporary data. Files in `temp` can be used to check the quality of outputs in each step. If HCP method (`--hcp`) is selected, the `temp` folder includes:
 
-**2.What's PhySpeTree output data mean?**
+  * `conserved_protein`: highly conserved proteins retrieved from the KEGG database.
+  * `alignment`: aligned sequences.
+  * `concatenate`: concatenated sequences and conserved blocks.
 
-PhySpeTree output two data files, the one is a result file default names is `Outdata`, another is a `temp` file.
+If SSU rRNA method (`--srna`) is selected, the `temp` folder includes:
 
-If you reconstruct phylogenetic tree by `--hcp` (highly conserved protein) method, the temp file sinclude three directory: ``conserved_protein``, ``muscle_alignment`` and ``concatenate``.
-  + conserved_protein: Store the FASTA format files, which was highly conserved proteins retrieved from KEGG database.
-  + alignment: Store the sequence files has been aligned.
-  + concatenate: Include concatenated highly conserved proteins data (FASTA format) and selected conserved blocks data (\*.fasta-gb1 format file).
-
-If you reconstruct phylogenetic tree by `--srna` (SSU rRNA) method, the temp files include two directory: ``rna_sequence`` and ``rna_alignment``.
-  + rna_sequence: Store a file named rna_sequence.fasta, contain the SSU rRNA sequence retrieved from SILVA database.
-  + ran_alignment: Store in the \*.fasta file is the sequence files has been aligned and the \*.fasta-gb1, \*fasta-gb1.html are select conserved blocks data (use Gblocks software),
-    the \*.phy format file is converted from select conserved blocks data by PhySpeTree.
-
-``NOTE:``
-
-*Users can check the quality of every aspect of data by the corresponding temp files.*
+  * `rna_sequence`: SSU rRNA sequences retrieved from the SILVA database.
+  * `rna_alignment`: aligned sequences and conserved blocks.
 
 
-PhySpeTree reconstruct phylogenetic tree database
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-**what's the highly conserved proteins be used to reconstruct phylogenetic tree?**
+**What classes of HCP are selected?**
 
-PhySpeTree use 31 highly conserved proteins to reconstruct phylogenetic tree. This highly conserved proteins exclusion Horizontal Gene Transfers (HGTs) already.
+PhySpeTree uses 31 HCP without horizontal transferred genes according to Ciccarelli *et al.*.
 
 **cite:**
 
  Ciccarelli F D, Doerks T, Von Mering C, et al. Toward automatic reconstruction of a highly resolved tree of life[J]. science, 2006, 311(5765): 1283-1287.
 
-The 31 highly conserved proteins and corresponding KEGG database KO number as follow table:
+The 31 HCP and corresponding KEGG KO number are shown in the following table:
 
 
 ====================================================   ==============      ===============
@@ -558,10 +448,9 @@ Ribosomal protein S13                                  K02953              K0295
 
 
 
-**2.How the SSU rRAN database was created?**
+**2.4.How are SSU rRAN created?**
 
-The SSU rRAN database was created by `SILVA <https://www.arb-silva.de/>`_ SSU rRNA database project (version: SILVA SSU 123.1 release).
-In this data the sequences haven been truncated, which means that all nucleotides that have not been aligned were removed from the sequence.
+The SSU rRAN sequences are created from the `SILVA <https://www.arb-silva.de/>`_ database (123.1 release). Sequences haven been truncated, which means unaligned nucleotides are removed.
 
 
 

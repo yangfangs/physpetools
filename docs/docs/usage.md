@@ -186,10 +186,10 @@ Outdata/
 
 Advanced options of internal software called in PhySpeTree can be set. These options are ``enclosed in single quotes and start with a space``.
 
-Here is an example of setting RAxML advanced options by `--raxml`:
+Here is an example of setting RAxML advanced options by `--raxml_p`:
 
 ```bash
-$ PhySpeTree -i organism_example_list.txt --raxml ' -f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+$ PhySpeTree -i organism_example_list.txt --raxml --raxml_p ' -f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 ```
 
 **--muscle**
@@ -271,7 +271,6 @@ $ PhySpeTree build -i example_16s_ssurna.fasta -o output --srna
 |  -i     |  Input a TXT file containing abbreviated species names.                               |
 |  -o     |  A directory to store outputs. The default is "Outdata".                                                   |
 |  -t     |  Number of processing threads (CPUs). The default is 1.                                                                                                                                      |
-|  -e     |  FASTA format files to extend the tree with the --ehcp or --esrna option.                                     |
 |  --hcp  |  HCP method (default).                                                                                |
 |  --srna |  SSU rRNA method.                                                                                      |
 
@@ -440,7 +439,7 @@ $ PhySpeTree combine -i combineTree.tree [options]*
 |---|---------------------------------|
 |  -h |  Print help message and exits. |
 |  -i |  Input PHYLIP format file containing multiple trees.                                                                                  |
-|  -o |  The default is "combineTree".                                                                                                                   |
+|  -o |  Output directory. The default is "combineTree".                                                                                                                   |
 |  --mr |  Majority rule trees.                   |
 |  --mre |  Extended majority rule trees.                   |
 | --strict |  Strict consensus trees.         |
@@ -512,7 +511,8 @@ $ PhySpeTree iview -i organism_example_list.txt --range
 |  -i    |  Input a TXT file containing abbreviated species names.  |
 |  -o    |  A directory to store outputs. The default is "iview".                                            |
 |  -a    |  Colored ranges \[kingdom, phylum, class or order\].           |
-| -r/--range   | Annotating ranges by kingdom, phylum, class or order. The default is phylum.                  |
+| -r/--range   | Annotating labels with ranges by kingdom, phylum, class or order. The default is phylum.                  |
+|-c/--color|Annotating labels without ranges by kingdom, phylum, class or order. The default is phylum.|
 | -l/--labels  | Change species labels from abbreviated names to full names.                                   |
 
 
