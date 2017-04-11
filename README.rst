@@ -3,9 +3,9 @@ PhySpeTree: automatically reconstructing phylogenetic species tree
 
 |PyPI version| |Docs| |License|
 
-**PhySpeTree is implemented in Python 2.7, designed for Linux systems.**
+**PhySpeTree is implemented in Python 2.7, designed for Linux system.**
 
-**Documents**: `PhySpeTree documentation <https://xiaofeiyangyang.github.io/physpetools>`_.
+**Documents**: `PhySpeTree documentation <https://yangfangs.github.io/physpetools>`_.
 
 .. contents:: :local:
 
@@ -25,12 +25,12 @@ automatically downloads and analyzes sequences of SSU rRNA or HCP from about 4,0
 PhySpeTree workflow
 ------------------------------------------------------------------------------
 
-.. image:: https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/docs/docs/img/PhySpeTree_work_follow.png
+.. image:: https://raw.githubusercontent.com/yangfangs/physpetools/master/docs/docs/img/PhySpeTree_work_follow.png
 
 
 PhySpeTree workflow includes the following steps:
 
-1. Prepare `abbreviated species names <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
+1. Prepare `abbreviated species names <https://raw.githubusercontent.com/yangfangs/physpetools/master/examples/organism_example_list.txt>`_.
 
 2. Choose the method to reconstruct species trees (SSU rRNA (--srna) or HCP (--hcp)).
 
@@ -88,11 +88,11 @@ To upgrade to latest version:
 
 .. code-block:: console
 
-    $ git clone git@github.com:xiaofeiyangyang/physpetools.git
+    $ git clone git@github.com:yangfangs/physpetools.git
     $ cd physpetools
     $ python setup.py install
 
-or `download <https://github.com/xiaofeiyangyang/physpetools/releases>`_ and install:
+or `download <https://github.com/yangfangs/physpetools/releases>`_ and install:
 
 .. code-block:: console
 
@@ -106,7 +106,7 @@ Usage
 autobuild
 ^^^^^^^^^^^^^^^^^^^^
 
-The input of `autobuild` module is a TXT file containing abbreviated species names, for example `organism example list <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
+The input of `autobuild` module is a TXT file containing abbreviated species names, for example `organism example list <https://raw.githubusercontent.com/yangfangs/physpetools/master/examples/organism_example_list.txt>`_.
 
 Use **autobuild** in command line like this:
 
@@ -384,7 +384,7 @@ Frequently Asked Questions (FAQ)
 
 **1.What is the input of PhySpeTree?**
 
-Users only need to prepare a TXT file containing `KEGG <http://www.genome.jp/kegg/catalog/org_list.html>`_ abbreviated species names. For example, `organism example list <https://raw.githubusercontent.com/xiaofeiyangyang/physpetools/master/examples/organism_example_list.txt>`_.
+Users only need to prepare a TXT file containing `KEGG <http://www.genome.jp/kegg/catalog/org_list.html>`_ abbreviated species names. For example, `organism example list <https://raw.githubusercontent.com/yangfangs/physpetools/master/examples/organism_example_list.txt>`_.
 
 **2.How to explain PhySpeTree outputs?**
 
@@ -458,6 +458,6 @@ The SSU rRAN sequences are created from the `SILVA <https://www.arb-silva.de/>`_
 .. |PyPI version| image:: https://img.shields.io/pypi/v/PhySpeTree.svg?style=flat-square
    :target: https://pypi.python.org/pypi/PhySpeTree
 .. |Docs| image:: https://img.shields.io/badge/docs-latest-brightgreen.svg?style=flat-square
-   :target: https://xiaofeiyangyang.github.io/physpetools/
+   :target: https://yangfangs.github.io/physpetools/
 .. |License| image:: https://img.shields.io/aur/license/yaourt.svg?maxAge=2592000
-   :target: https://github.com/xiaofeiyangyang/physpetools/blob/master/LICENSE.txt
+   :target: https://github.com/yangfangs/physpetools/blob/master/LICENSE.txt
