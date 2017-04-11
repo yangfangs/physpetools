@@ -154,11 +154,11 @@
 <p>The main concept of the HCP method is to concatenate highly conserved proteins into a supermatrix and then build species tree. Here we prepared <a href="../faq/#Physpe_reconstruct_phylogenetic_tree_database">31 classes of HCP</a> to build the tree.</p>
 <h4 id="1-prepare-input-species">1. Prepare input species</h4>
 <p>Download 191 <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG</a> abbreviated species names:</p>
-<pre><code class="bash">$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt&quot;
+<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/191speciesnames.txt&quot;
 
---2016-10-30 15:26:06--  https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+--2016-10-30 15:26:06--  https://yangfangs.github.io/physpetools/example/191speciesnames.txt
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 773 [text/plain]
 Saving to: ‘191speciesnames.txt’
@@ -276,11 +276,11 @@ mja     range   #996433 Archaea
 <p>PhySpeTree provides <code>--srna</code> option to reconstruct species trees by the SSU rRNA method. The concept of this method is to align SSU rRNA sequences and then reconstruct the specie tree.</p>
 <h4 id="1-prepare-input-species_1">1. Prepare input species</h4>
 <pre><code class="bash">
-$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt&quot;
+$ wget &quot;https://yangfangs.github.io/physpetools/example/191speciesnames.txt&quot;
 
---2016-10-30 15:26:06--  https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+--2016-10-30 15:26:06--  https://yangfangs.github.io/physpetools/example/191speciesnames.txt
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 773 [text/plain]
 Saving to: ‘191speciesnames.txt’
@@ -453,11 +453,11 @@ cho     range   #99A01A Alveolates
 <p>Here we use PhySpeTree to automatically reconstructed 52 plants species tree by the HCP method. </p>
 <h4 id="1-prepare-input-species_2">1. Prepare input species</h4>
 <pre><code class="bash">
-$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/52plantsnames.txt&quot;
+$ wget &quot;https://yangfangs.github.io/physpetools/example/52plantsnames.txt&quot;
 
---2016-10-30 15:44:25--  https://xiaofeiyangyang.github.io/physpetools/example/52plantsnames.txt
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+--2016-10-30 15:44:25--  https://yangfangs.github.io/physpetools/example/52plantsnames.txt
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 211 [text/plain]
 Saving to: ‘52plantsnames.txt’
@@ -588,11 +588,11 @@ csl     range   #784CE5 Green algae
 <h4 id="1-manually-prepare-the-ssu-rrna-sequence">1. Manually prepare the SSU rRNA sequence</h4>
 <p>We prepare the SSU rRNA sequence of loki and save it in a FASTA format file, for example <a href="../example/extend_rna_loki.fasta">extend_rna_olki.fasta</a>.</p>
 <p>Download the example file:</p>
-<pre><code class="bash">$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/extend_rna_loki.fasta&quot;
+<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/extend_rna_loki.fasta&quot;
 
---2016-10-30 15:54:38--  https://xiaofeiyangyang.github.io/physpetools/example/extend_rna_loki.fasta
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.24.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.24.133|:443... connected.
+--2016-10-30 15:54:38--  https://yangfangs.github.io/physpetools/example/extend_rna_loki.fasta
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.24.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.24.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 1200 (1.2K) [application/octet-stream]
 Saving to: ‘extend_rna_loki.fasta’
@@ -707,11 +707,11 @@ Checked result was store in check/PhySpeTree_echp_extend.txt
 <h4 id="2-manually-prepare-hcp-sequences">2. Manually prepare HCP sequences</h4>
 <p>According to <code>check</code> results, we prepare 6 classes of HCP and store the sequences (p1 ~ p6) into FASTA format files, for example <a href="../example/highly_conserved_protein_loki.tar.gz">highly_conserved_protein_loki</a></p>
 <p>Download the example file:</p>
-<pre><code class="bash">$ wget &quot;https://xiaofeiyangyang.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz&quot;
+<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz&quot;
 
---2016-10-30 16:36:48--  https://xiaofeiyangyang.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+--2016-10-30 16:36:48--  https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 1810 (1.8K) [application/octet-stream]
 Saving to: ‘highly_conserved_protein_loki.tar.gz’
