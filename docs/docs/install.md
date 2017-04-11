@@ -21,11 +21,11 @@ $ pip install --upgrade PhySpeTree
 ## 2. GitHub
 
 ```bash
-$ git clone git@github.com:xiaofeiyangyang/physpetools.git
+$ git clone git@github.com:yangfangs/physpetools.git
 $ cd physpetools
 $ python setup.py install
 ```
-or [download](https://github.com/xiaofeiyangyang/physpetools/releases) and install:
+or [download](https://github.com/yangfangs/physpetools/releases) and install:
 
 ```bash
 $ pip install physpetools-*.tar.gz

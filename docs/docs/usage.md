@@ -28,11 +28,11 @@ $ PhySpeTree -i organism_example_list.txt [options]*
 Download the example input file:
 
 ```bash
-$ wget "https://xiaofeiyangyang.github.io/physpetools/example/organism_example_list.txt"
+$ wget "https://yangfangs.github.io/physpetools/example/organism_example_list.txt"
 
---2016-10-29 19:41:53--  https://xiaofeiyangyang.github.io/physpetools/example/organism_example_list.txt
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.24.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.24.133|:443... connected.
+--2016-10-29 19:41:53--  https://yangfangs.github.io/physpetools/example/organism_example_list.txt
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.24.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.24.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 39 [text/plain]
 Saving to: ‘organism_example_list.txt’
@@ -285,11 +285,11 @@ Download and decompress the example input file:
 
 ```bash
 
-$ wget "https://xiaofeiyangyang.github.io/physpetools/example/example_build_hcp.tar.gz"
+$ wget "https://yangfangs.github.io/physpetools/example/example_build_hcp.tar.gz"
 
---2016-10-29 20:40:41--  https://xiaofeiyangyang.github.io/physpetools/example/example_build_hcp.tar.gz
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+--2016-10-29 20:40:41--  https://yangfangs.github.io/physpetools/example/example_build_hcp.tar.gz
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 17419 (17K) [application/octet-stream]
 Saving to: ‘example_build_hcp.tar.gz’
@@ -386,11 +386,11 @@ All SSU rRNA sequences are prepared in one FASTA format file, for example [examp
 Download and decompress the example input file:
 
 ```
-$ wget "https://xiaofeiyangyang.github.io/physpetools/example/example_build_srna.fasta"
+$ wget "https://yangfangs.github.io/physpetools/example/example_build_srna.fasta"
 
---2016-10-29 20:56:31--  https://xiaofeiyangyang.github.io/physpetools/example/example_build_srna.fasta
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+--2016-10-29 20:56:31--  https://yangfangs.github.io/physpetools/example/example_build_srna.fasta
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 14982 (15K) [application/octet-stream]
 Saving to: ‘example_build_srna.fasta’
@@ -452,11 +452,11 @@ Download and decompress the example input file:
 
 ```bash
 
-$ wget "https://xiaofeiyangyang.github.io/physpetools/example/example_combine_tree.tar.gz"
+$ wget "https://yangfangs.github.io/physpetools/example/example_combine_tree.tar.gz"
 
---2016-10-30 13:32:06--  https://xiaofeiyangyang.github.io/physpetools/example/example_combine_tree.tar.gz
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+--2016-10-30 13:32:06--  https://yangfangs.github.io/physpetools/example/example_combine_tree.tar.gz
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 661 [application/octet-stream]
 Saving to: ‘example_combine_tree.tar.gz’
@@ -521,11 +521,11 @@ $ PhySpeTree iview -i organism_example_list.txt --range
 Download the example file:
 
 ```bash
-$ wget "https://xiaofeiyangyang.github.io/physpetools/example/organism_example_list.txt"
+$ wget "https://yangfangs.github.io/physpetools/example/organism_example_list.txt"
 
---2016-10-30 13:40:48--  https://xiaofeiyangyang.github.io/physpetools/example/organism_example_list.txt
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+--2016-10-30 13:40:48--  https://yangfangs.github.io/physpetools/example/organism_example_list.txt
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 39 [text/plain]
 Saving to: ‘organism_example_list.txt’
@@ -671,11 +671,11 @@ Determine proteins to be prepared in the `autobuild` module with the `--ehcp` op
 Download the example file:
 
 ```bash
-$ wget "https://xiaofeiyangyang.github.io/physpetools/example/organism_example_list.txt"
+$ wget "https://yangfangs.github.io/physpetools/example/organism_example_list.txt"
 
---2016-10-30 13:40:48--  https://xiaofeiyangyang.github.io/physpetools/example/organism_example_list.txt
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+--2016-10-30 13:40:48--  https://yangfangs.github.io/physpetools/example/organism_example_list.txt
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 39 [text/plain]
 Saving to: ‘organism_example_list.txt’
@@ -783,11 +783,11 @@ Check whether input species are supported by the KEGG database when using the `-
 Download the example file:
 
 ```bash
-$ wget "https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt"
+$ wget "https://yangfangs.github.io/physpetools/example/191speciesnames.txt"
 
---2016-10-30 14:48:21--  https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+--2016-10-30 14:48:21--  https://yangfangs.github.io/physpetools/example/191speciesnames.txt
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 773 [text/plain]
 Saving to: ‘191speciesnames.txt’
@@ -811,11 +811,11 @@ Check whether input species are supported by SILVA database when using the `--sr
 Download the example file:
 
 ```bash
-$ wget "https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt"
+$ wget "https://yangfangs.github.io/physpetools/example/191speciesnames.txt"
 
---2016-10-30 14:48:21--  https://xiaofeiyangyang.github.io/physpetools/example/191speciesnames.txt
-Resolving xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)... 151.101.48.133
-Connecting to xiaofeiyangyang.github.io (xiaofeiyangyang.github.io)|151.101.48.133|:443... connected.
+--2016-10-30 14:48:21--  https://yangfangs.github.io/physpetools/example/191speciesnames.txt
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 773 [text/plain]
 Saving to: ‘191speciesnames.txt’
