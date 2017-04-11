@@ -19,5 +19,5 @@ setup(
     author="Yang Fang",
     author_email="yangfangscu@gmail.com",
     package_data={'': ['*.rst'], 'physpetool': ['database/*.db', 'softwares/*', 'database/*.txt']},
-    url="https://github.com/xiaofeiyangyang/physpetools",
+    url="https://github.com/yangfangs/physpetools",
 )

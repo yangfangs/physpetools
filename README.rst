@@ -159,7 +159,7 @@ Here is an example of setting RAxML advanced options by `--raxml_p`:
 
 .. code-block:: console
 
-    $ PhySpeTree -i organism_example_list.txt --raxml --raxml_p '-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+    $ PhySpeTree autobuild -i organism_example_list.txt -o test --srna --raxml --raxml_p ' -f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 
 --muscle
     Multiple sequence alignment by MUSCLE (default).
