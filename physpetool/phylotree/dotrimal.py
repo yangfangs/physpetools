@@ -20,46 +20,32 @@
 #                                                                               #
 # ###############################################################################
 
-"""
-Gblocks module: do gblocks before aligned sequences.
-
-"""
 import os
 import subprocess
 import re
 from physpetool.phylotree.log import getLogging
 from physpetool.softwares.path import getlocalpath
 
-loggblocks = getLogging('Gblocks')
+loggtrimal = getLogging('trimal')
 
+# trimal -in concatenate.fasta -out output2 -gt 1 -phylip3.2
 
-# Gblocks protein_alignment.fasta -t=p -e=-gb1 -b4=5 -d=y
-
-def dogblocks(indata, gblockpara):
+def dotrimal(indata, trimalpara):
     """
-    do gblocks after muslce and concatenate
-    :param indata: a fasta file input after gblock
-    :param gblockpara: the gblocks para
-    :return: a file path of gblocks result
+    do trimal after muslce and concatenate
+    :param indata: a fasta file input to do trimal
+    :param outdata: append name after
+    :return: a file path of trimal result
     """
     # Deal with outdata name
-    gblockparas = gblockpara.lstrip()
-    gblockparalist = gblockparas.split(" ")
-    regex = '-e='
-    for i in range(0, len(gblockparalist)):
-        if re.search(regex, gblockparalist[i]):
-            index = i
-            break
-    outnamepara = gblockparalist[index]
-    outdata = outnamepara.split('=')[1]
-    gblockpath = getlocalpath()
-    alg_name = os.path.basename(indata)
+    trimalparas = trimalpara.lstrip()
+    trimalpath = getlocalpath()
     out_path = os.path.dirname(indata)
-    gblock_name = alg_name + outdata
-    gblock_data = os.path.join(out_path, gblock_name)
+    trimal_name = "trimal.phy"
+    trimal_data = os.path.join(out_path, trimal_name)
 
-    cmd = gblockpath + "/Gblocks " + indata + " " + gblockparas
+    cmd = trimalpath + "/trimal " + " -in " + indata + " -out " + trimal_name + trimalparas +" -phylip3.2"
     subprocess.call(cmd, shell=True)
-    loggblocks.info('Select conserved blocks by Gblocks was completed')
-    loggblocks.debug('Gblocks path:{0}'.format(gblock_data))
-    return gblock_data
+    loggtrimal.info('Select conserved blocks by trimal was completed')
+    loggtrimal.debug('trimal path:{0}'.format(trimal_data))
+    return trimal_data

@@ -31,6 +31,7 @@ from physpetool.phylotree.dogblocks import dogblocks
 from physpetool.phylotree.doraxml import doraxml
 from physpetool.convert.fasta2phy import fasta2phy
 from physpetool.convert.concatenate import cocat_path
+from physpetool.phylotree.dotrimal import dotrimal
 from physpetool.phylotree.log import getLogging, setlogdir
 from physpetool.phylotree.retrievessurna import retrieve16srna
 from physpetool.phylotree.retrieveprotein import doretrieve
@@ -46,6 +47,7 @@ musclepara = '-maxiters 100'
 gblockspara_pro = '-t=p -e=-gb1'
 gblockspara_dna = '-t=d -e=-gb1'
 clustalwpara = None
+trimalpara = "-gt 1"
 
 
 def start_args(input):
@@ -96,7 +98,13 @@ Argument parse
     advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
                               help='Set clustalw2 advance parameters. Here use clustalw default parameters.')
     advance_args.add_argument('--gblocks', action='store', dest='gblocks',
+                              default=True, help="Trim by Gblocks.")
+    advance_args.add_argument('--gblocks_p', action='store', dest='gblocks_parameter',
                               default=gblockspara_pro, help="Set Gblocks advance parameters.")
+    advance_args.add_argument('--trimal', action='store', dest='trimal',
+                              default=False, help="Trim by trimal.")
+    advance_args.add_argument('--trimal_p', action='store', dest='trimal_parameter',
+                              default=trimalpara, help="Set trimal advance parameters.")
     advance_args.add_argument('--raxml', action='store_true', dest='raxml', default=True,
                               help="Reconstruct phylogenetic tree by RAxML. The default build tree software is RAxML.")
     advance_args.add_argument('--raxml_p', action='store', dest='raxml_parameter',
@@ -132,7 +140,7 @@ starting run reconstruct tree
     if args.HCP:
         setlogdir(out_put)
         starting_hcp(in_put, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
-                     args.gblocks, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter,
+                     args.gblocks, args.gblocks_parameter, args.trimal, args.trimal_parameter, args.raxml, args.raxml_parameter, args.fasttree, args.fasttree_parameter,
                      args.thread)
 
     # Reconstruct phylogenetic tree by ssu RNA.
@@ -158,7 +166,7 @@ starting run reconstruct tree
 
 
 def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-                 args_gblocks, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread):
+                 args_gblocks, args_gblocks_p, args_trimal,args_trimal_p, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
     hcp_input = checkKeggOrganism(in_put)
     out_retrieve = doretrieve(hcp_input, out_put)
@@ -170,9 +178,14 @@ def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, arg
         out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p)
 
     out_concat = cocat_path(out_alg)
-    # gblocks
-    out_gblock = dogblocks(out_concat, args_gblocks)
-    out_f2p = fasta2phy(out_gblock)
+
+    # set default trim by gblocks if not specify trimal
+    if args_gblocks:
+        out_gblock = dogblocks(out_concat, args_gblocks_p)
+        out_f2p = fasta2phy(out_gblock)
+    elif args_trimal:
+        out_f2p = dotrimal(out_concat, args_trimal)
+
     # reconstruct tree
     if args_fasttree:
         doFastTree(out_f2p, out_put, args_fasttree_p, args_thread)
