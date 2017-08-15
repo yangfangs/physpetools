@@ -180,11 +180,12 @@ def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, arg
     out_concat = cocat_path(out_alg)
 
     # set default trim by gblocks if not specify trimal
-    if args_gblocks:
+    if args_trimal:
+        out_f2p = dotrimal(out_concat, args_trimal_p)
+    elif args_gblocks:
         out_gblock = dogblocks(out_concat, args_gblocks_p)
         out_f2p = fasta2phy(out_gblock)
-    elif args_trimal:
-        out_f2p = dotrimal(out_concat, args_trimal_p)
+
 
     # reconstruct tree
     if args_fasttree:
@@ -283,3 +284,4 @@ def starting_esrna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, a
         if args_raxml_p is raxmlpara_pro:
             args_raxml_p = raxmlpara_dna
             doraxml(out_f2p, out_put, args_raxml_p, args_thread)
+
