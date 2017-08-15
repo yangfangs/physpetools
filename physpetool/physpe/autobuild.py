@@ -26,7 +26,7 @@ script as pipeline.
 """
 from physpetool.phylotree.doclustalw import doclustalw_file, doclustalw
 from physpetool.phylotree.dofasttree import doFastTree
-from physpetool.phylotree.domafft import domufft, domufft_file
+from physpetool.phylotree.domafft import domafft, domafft_file
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.dogblocks import dogblocks
 from physpetool.phylotree.doraxml import doraxml
@@ -197,7 +197,7 @@ def starting_hcp(in_put, out_put,
     if args_clustalw:
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
     elif args_mafft:
-        out_alg = domufft_file(out_retrieve, out_put, args_mafft_p)
+        out_alg = domafft_file(out_retrieve, out_put, args_mafft_p)
     elif args_muscle:
         out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p)
 

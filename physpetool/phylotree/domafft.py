@@ -21,7 +21,7 @@
 # ###############################################################################
 
 """
-Module to call mufft to do alignment
+Module to call mafft to do alignment
 """
 
 import subprocess
@@ -31,71 +31,71 @@ import time
 from physpetool.phylotree.log import getLogging
 from physpetool.softwares.path import getlocalpath
 
-logdomufft = getLogging('mufft')
+logmafft = getLogging('mafft')
 
 
 # mafft --auto p1.fasta > output
-def domufft(indata, outdata, mufftpara):
+def domafft(indata, outdata, mafftparas):
     """
-    call mufft software to do align
+    call mafft software to do align
     :param indata: a director contain a fasta format file or a fasta format file
     :param outdata: the out is abs path with a file name
     :return: outdata path
     """
-    mufftparas = mufftpara.lstrip()
-    mupath = getlocalpath()
+    mafftparas = mafftparas.lstrip()
+    mapath = getlocalpath()
     out_path = os.path.dirname(outdata)
     timeformat = '%Y%m%d%H%M%S'
     timeinfo = str(time.strftime(timeformat))
     subdir = 'temp/rna_alignment' + timeinfo
-    mufft_dir = os.path.join(out_path, subdir)
+    mafft_dir = os.path.join(out_path, subdir)
     # check indata type
     if os.path.isdir(indata):
         pro_name = os.listdir(indata)
-        if not os.path.exists(mufft_dir):
-            os.makedirs(mufft_dir)
-        out_alg = os.path.join(mufft_dir, pro_name[0])
+        if not os.path.exists(mafft_dir):
+            os.makedirs(mafft_dir)
+        out_alg = os.path.join(mafft_dir, pro_name[0])
         each_pro = os.path.join(indata, pro_name[0])
-        cmd = mupath + "/mufft " + mufftparas + " " + each_pro + " > " + out_alg
+        cmd = mapath + "/mafft " + mafftparas + " " + each_pro + " > " + out_alg
         subprocess.call(cmd, shell=True)
-        logdomufft.debug('mufft result path:{0}'.format(out_alg))
-        logdomufft.info("Multiple sequence alignment by mufft was completed.")
+        logmafft.debug('mafft result path:{0}'.format(out_alg))
+        logmafft.info("Multiple sequence alignment by mafft was completed.")
         return out_alg
     elif os.path.isfile(indata):
         pro_name = indata
-        if not os.path.exists(mufft_dir):
-            os.makedirs(mufft_dir)
-        out_alg = os.path.join(mufft_dir, pro_name)
+        if not os.path.exists(mafft_dir):
+            os.makedirs(mafft_dir)
+        out_alg = os.path.join(mafft_dir, pro_name)
         each_pro = pro_name
-        cmd = mupath + "/mufft " + mufftparas + " " + each_pro + " > " + out_alg
+        cmd = mapath + "/mafft " + mafftparas + " " + each_pro + " > " + out_alg
         subprocess.call(cmd, shell=True)
-        logdomufft.debug('mufft result path:{0}'.format(out_alg))
-        logdomufft.info("Multiple sequence alignment by mufft was completed.")
+        logmafft.debug('mafft result path:{0}'.format(out_alg))
+        logmafft.info("Multiple sequence alignment by mafft was completed.")
         return out_alg
 
 
-def domufft_file(indata_files, outdata, mufftpara):
+def domafft_file(indata_files, outdata, mafftparas):
     """
-call mufft software to do align
+call mafft software to do align
     :param indata_files: a directory contain more than one file
     :param outdata: out file after alignment
     :return: path
     """
-    mufftparas = mufftpara.lstrip()
-    mupath = getlocalpath()
+    mafftparas = mafftparas.lstrip()
+    mapath = getlocalpath()
     out_path = os.path.dirname(outdata)
     timeformat = '%Y%m%d%H%M%S'
     timeinfo = str(time.strftime(timeformat))
     subdir = 'temp/alignment' + timeinfo
-    mufft_dir = os.path.join(out_path, subdir)
-    # mufft_dir = os.path.join(indata_files, 'muscle_alignment')
+    mafft_dir = os.path.join(out_path, subdir)
+    # mafft_dir = os.path.join(indata_files, 'muscle_alignment')
     pro_name = os.listdir(indata_files)
-    if not os.path.exists(mufft_dir):
-        os.makedirs(mufft_dir)
+    if not os.path.exists(mafft_dir):
+        os.makedirs(mafft_dir)
     for i in pro_name:
-        out_alg = os.path.join(mufft_dir, i.split('.')[0])
+        out_alg = os.path.join(mafft_dir, i.split('.')[0])
         each_pro = os.path.join(indata_files, i)
-        cmd = mupath + "/mufft " + mufftparas + " " + each_pro + " > " + out_alg
+        cmd = mapath + "/mafft " + mafftparas + " " + each_pro + " > " + out_alg
         subprocess.call(cmd, shell=True)
-    logdomufft.info("Multiple sequence alignment by mufft was completed.")
-    return mufft_dir
+    logmafft.info("Multiple sequence alignment by mafft was completed.")
+    return mafft_dir
