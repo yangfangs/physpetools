@@ -196,10 +196,10 @@ def starting_hcp(in_put, out_put,
     # set default aligned by muscle if not specify clustalw
     if args_clustalw:
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
-    elif args_muscle:
-        out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p)
     elif args_mafft:
         out_alg = domufft(out_retrieve, out_put, args_mafft_p)
+    elif args_muscle:
+        out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p)
 
     out_concat = cocat_path(out_alg)
 
