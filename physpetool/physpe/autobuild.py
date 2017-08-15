@@ -26,6 +26,7 @@ script as pipeline.
 """
 from physpetool.phylotree.doclustalw import doclustalw_file, doclustalw
 from physpetool.phylotree.dofasttree import doFastTree
+from physpetool.phylotree.domafft import domufft
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.dogblocks import dogblocks
 from physpetool.phylotree.doraxml import doraxml
@@ -48,6 +49,7 @@ gblockspara_pro = '-t=p -e=-gb1'
 gblockspara_dna = '-t=d -e=-gb1'
 clustalwpara = None
 trimalpara = "-gt 1"
+mafft_parameter = "--auto"
 
 
 def start_args(input):
@@ -97,6 +99,10 @@ Argument parse
                               default=False, help="Multiple sequence alignment by clustalw2.")
     advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
                               help='Set clustalw2 advance parameters. Here use clustalw default parameters.')
+    advance_args.add_argument('--mafft', action='store_true', dest='mafft',
+                              default=False, help="Multiple sequence alignment by mafft.")
+    advance_args.add_argument('--mafft_p', action='store', dest='mafft_parameter',
+                              help='Set clustalw2 advance parameters. Here use mafft default parameters.')
     advance_args.add_argument('--gblocks', action='store_true', dest='gblocks',
                               default=True, help="Trim by Gblocks.")
     advance_args.add_argument('--gblocks_p', action='store', dest='gblocks_parameter',
@@ -139,9 +145,14 @@ starting run reconstruct tree
     # Reconstruct phylogenetic tree by highly conserved proteins.
     if args.HCP:
         setlogdir(out_put)
-        starting_hcp(in_put, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
-                     args.gblocks, args.gblocks_parameter, args.trimal, args.trimal_parameter, args.raxml,
-                     args.raxml_parameter, args.fasttree, args.fasttree_parameter,
+        starting_hcp(in_put, out_put,
+                     args.muscle, args.muscle_parameter,
+                     args.clustalw, args.clustalw_parameter,
+                     args.mafft, args.mafft_parameter,
+                     args.gblocks, args.gblocks_parameter,
+                     args.trimal, args.trimal_parameter,
+                     args.raxml, args.raxml_parameter,
+                     args.fasttree, args.fasttree_parameter,
                      args.thread)
 
     # Reconstruct phylogenetic tree by ssu RNA.
@@ -169,9 +180,15 @@ starting run reconstruct tree
                        args.thread, args.extenddata)
 
 
-def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-                 args_gblocks, args_gblocks_p, args_trimal, args_trimal_p, args_raxml, args_raxml_p, args_fasttree,
-                 args_fasttree_p, args_thread):
+def starting_hcp(in_put, out_put,
+                 args_muscle, args_muscle_p,
+                 args_clustalw, args_clustalw_p,
+                 args_mafft, args_mafft_p,
+                 args_gblocks, args_gblocks_p,
+                 args_trimal, args_trimal_p,
+                 args_raxml, args_raxml_p,
+                 args_fasttree, args_fasttree_p,
+                 args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
     hcp_input = checkKeggOrganism(in_put)
     out_retrieve = doretrieve(hcp_input, out_put)
@@ -181,6 +198,8 @@ def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, arg
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
     elif args_muscle:
         out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p)
+    elif args_mafft:
+        out_alg = domufft(out_retrieve, out_put, args_mafft_p)
 
     out_concat = cocat_path(out_alg)
 
