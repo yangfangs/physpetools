@@ -49,7 +49,7 @@ gblockspara_pro = '-t=p -e=-gb1'
 gblockspara_dna = '-t=d -e=-gb1'
 clustalwpara = None
 trimalpara = "-gt 1"
-mafft_parameter = "--auto"
+mafftpara = "--auto"
 
 
 def start_args(input):
@@ -102,7 +102,7 @@ Argument parse
     advance_args.add_argument('--mafft', action='store_true', dest='mafft',
                               default=False, help="Multiple sequence alignment by mafft.")
     advance_args.add_argument('--mafft_p', action='store', dest='mafft_parameter',
-                              help='Set clustalw2 advance parameters. Here use mafft default parameters.')
+                              default=mafftpara, help='Set clustalw2 advance parameters. Here use mafft default parameters.')
     advance_args.add_argument('--gblocks', action='store_true', dest='gblocks',
                               default=True, help="Trim by Gblocks.")
     advance_args.add_argument('--gblocks_p', action='store', dest='gblocks_parameter',
