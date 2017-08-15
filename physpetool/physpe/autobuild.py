@@ -97,11 +97,11 @@ Argument parse
                               default=False, help="Multiple sequence alignment by clustalw2.")
     advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
                               help='Set clustalw2 advance parameters. Here use clustalw default parameters.')
-    advance_args.add_argument('--gblocks', action='store', dest='gblocks',
+    advance_args.add_argument('--gblocks', action='store_true', dest='gblocks',
                               default=True, help="Trim by Gblocks.")
     advance_args.add_argument('--gblocks_p', action='store', dest='gblocks_parameter',
                               default=gblockspara_pro, help="Set Gblocks advance parameters.")
-    advance_args.add_argument('--trimal', action='store', dest='trimal',
+    advance_args.add_argument('--trimal', action='store_true', dest='trimal',
                               default=False, help="Trim by trimal.")
     advance_args.add_argument('--trimal_p', action='store', dest='trimal_parameter',
                               default=trimalpara, help="Set trimal advance parameters.")
@@ -166,7 +166,7 @@ starting run reconstruct tree
 
 
 def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-                 args_gblocks, args_gblocks_p, args_trimal,args_trimal_p, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread):
+                 args_gblocks, args_gblocks_p, args_trimal, args_trimal_p, args_raxml, args_raxml_p, args_fasttree, args_fasttree_p, args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
     hcp_input = checkKeggOrganism(in_put)
     out_retrieve = doretrieve(hcp_input, out_put)
@@ -184,7 +184,7 @@ def starting_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, arg
         out_gblock = dogblocks(out_concat, args_gblocks_p)
         out_f2p = fasta2phy(out_gblock)
     elif args_trimal:
-        out_f2p = dotrimal(out_concat, args_trimal)
+        out_f2p = dotrimal(out_concat, args_trimal_p)
 
     # reconstruct tree
     if args_fasttree:
