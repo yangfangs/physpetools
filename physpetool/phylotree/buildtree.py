@@ -30,6 +30,7 @@ from physpetool.convert.fasta2phy import fasta2phy
 from physpetool.phylotree.doclustalw import doclustalw_file, doclustalw
 from physpetool.phylotree.dofasttree import doFastTree
 from physpetool.phylotree.dogblocks import dogblocks
+from physpetool.phylotree.domafft import domafft_file, domafft
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.doraxml import doraxml
 
@@ -43,18 +44,28 @@ gblockspara_pro = "-t=p -e=-gb1"
 gblockspara_dna = "-t=d -e=-gb1"
 clustalwpara = None
 trimalpara = "-gt 1"
+mafftpara = "--auto"
 
 
-def build_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-              args_gblocks, args_gblocks_p, args_trimal, args_trimal_p, args_raxml, args_raxml_p, args_fasttree,
-              args_fasttree_p, args_thread):
+def build_hcp(in_put, out_put,
+              args_muscle, args_muscle_p,
+              args_clustalw, args_clustalw_p,
+              args_mafft, args_mafft_p,
+              args_gblocks, args_gblocks_p,
+              args_trimal, args_trimal_p,
+              args_raxml, args_raxml_p,
+              args_fasttree, args_fasttree_p,
+              args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
     out_retrieve = in_put
-    # set default aligned by muscle if not specify clustalw
+    # set default aligned by muscle if not specify clustalw or mafft
     if args_clustalw:
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
+    elif args_mafft:
+        out_alg = domafft_file(out_retrieve, out_put, args_mafft_p)
     elif args_muscle:
         out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p)
+
     out_concat = cocat_path(out_alg)
 
     # set default trim by gblocks if not specify trimal
@@ -71,14 +82,22 @@ def build_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_c
         doraxml(out_f2p, out_put, args_raxml_p, args_thread)
 
 
-def build_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-               args_gblocks, args_gblocks_p, args_trimal, args_trimal_p, args_raxml, args_raxml_p, args_fasttree,
-               args_fasttree_p, args_thread):
+def build_srna(in_put, out_put,
+               args_muscle, args_muscle_p,
+               args_clustalw, args_clustalw_p,
+               args_mafft, args_mafft_p,
+               args_gblocks, args_gblocks_p,
+               args_trimal, args_trimal_p,
+               args_raxml, args_raxml_p,
+               args_fasttree, args_fasttree_p,
+               args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
     out_retrieve = in_put
-    # set default aligned by muscle if not specify clustalw
+    # set default aligned by muscle if not specify clustalw or mafft
     if args_clustalw:
         out_alg = doclustalw(out_retrieve, out_put, args_clustalw_p)
+    elif args_mafft:
+        out_alg = domafft(out_retrieve, out_put, args_mafft_p)
     elif args_muscle:
         out_alg = domuscle(out_retrieve, out_put, args_muscle_p)
 

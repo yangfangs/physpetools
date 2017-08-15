@@ -245,7 +245,7 @@ def starting_srna(in_put, out_put,
     '''reconstruct phylogenetic tree by ssu rna method'''
     ssu_input = checkSilvaOrganism(in_put)
     out_retrieve = retrieve16srna(ssu_input, out_put)
-    # set default aligned by muscle if not specify clustalw
+    # set default aligned by muscle if not specify clustalw or mafft
     if args_clustalw:
         out_alg = doclustalw(out_retrieve, out_put, args_clustalw_p)
     elif args_mafft:
@@ -294,7 +294,7 @@ def starting_ehcp(in_put, out_put,
                 fw.write(line)
         fw.close()
 
-    # set default aligned by muscle if not specify clustalw
+    # set default aligned by muscle if not specify clustalw or mafft
     if args_clustalw:
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
     elif args_mafft:

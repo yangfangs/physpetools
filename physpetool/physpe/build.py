@@ -38,6 +38,8 @@ gblockspara_pro = "-t=p -e=-gb1"
 gblockspara_dna = "-t=d -e=-gb1"
 clustalwpara = None
 trimalpara = "-gt 1"
+mafftpara = "--auto"
+
 
 def start_args(input):
     """
@@ -75,6 +77,11 @@ Arguments parse
                               default=False, help="Multiple sequence alignment by clustalw2.")
     advance_args.add_argument('--clustalw_p', action='store', dest='clustalw_parameter',
                               help='Set clustalw2 advance parameters. Here use clustalw default parameters.')
+    advance_args.add_argument('--mafft', action='store_true', dest='mafft',
+                              default=False, help="Multiple sequence alignment by mafft.")
+    advance_args.add_argument('--mafft_p', action='store', dest='mafft_parameter',
+                              default=mafftpara,
+                              help='Set clustalw2 advance parameters. Here use mafft default parameters.')
     advance_args.add_argument('--gblocks', action='store_true', dest='gblocks',
                               default=True, help="Trim by Gblocks.")
     advance_args.add_argument('--gblocks_p', action='store', dest='gblocks_parameter',
@@ -110,14 +117,24 @@ Staring run build
 
     if args.HCP:
         setlogdir(out_put)
-        build_hcp(args_input, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
-                  args.gblocks, args.gblocks_parameter, args.trimal, args.trimal_parameter, args.raxml,
-                  args.raxml_parameter, args.fasttree, args.fasttree_parameter,
+        build_hcp(args_input, out_put,
+                  args.muscle, args.muscle_parameter,
+                  args.clustalw, args.clustalw_parameter,
+                  args.mafft, args.mafft_parameter,
+                  args.gblocks, args.gblocks_parameter,
+                  args.trimal, args.trimal_parameter,
+                  args.raxml, args.raxml_parameter,
+                  args.fasttree, args.fasttree_parameter,
                   args.thread)
     # reconstruct phylogenetic tree by ssu RNA
     elif args.ssurna:
         setlogdir(out_put)
-        build_srna(args_input, out_put, args.muscle, args.muscle_parameter, args.clustalw, args.clustalw_parameter,
-                   args.gblocks, args.gblocks_parameter, args.trimal, args.trimal_parameter, args.raxml,
-                   args.raxml_parameter, args.fasttree, args.fasttree_parameter,
+        build_srna(args_input, out_put,
+                   args.muscle, args.muscle_parameter,
+                   args.clustalw, args.clustalw_parameter,
+                   args.mafft, args.mafft_parameter,
+                   args.gblocks, args.gblocks_parameter,
+                   args.trimal, args.trimal_parameter,
+                   args.raxml, args.raxml_parameter,
+                   args.fasttree, args.fasttree_parameter,
                    args.thread)
