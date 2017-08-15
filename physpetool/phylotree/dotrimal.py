@@ -44,7 +44,7 @@ def dotrimal(indata, trimalpara):
     trimal_name = "trimal.phy"
     trimal_data = os.path.join(out_path, trimal_name)
 
-    cmd = trimalpath + "/trimal " + " -in " + indata + " -out " + trimal_name + "" + trimalparas +" -phylip3.2"
+    cmd = trimalpath + "/trimal " + " -in " + indata + " -out " + trimal_name + " " + trimalparas +" -phylip3.2"
     subprocess.call(cmd, shell=True)
     loggtrimal.info('Select conserved blocks by trimal was completed')
     loggtrimal.debug('trimal path:{0}'.format(trimal_data))
