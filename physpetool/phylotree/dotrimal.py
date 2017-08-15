@@ -28,6 +28,7 @@ from physpetool.softwares.path import getlocalpath
 
 loggtrimal = getLogging('trimal')
 
+
 # trimal -in concatenate.fasta -out output2 -gt 1 -phylip3.2
 
 def dotrimal(indata, trimalpara):
@@ -44,8 +45,14 @@ def dotrimal(indata, trimalpara):
     trimal_name = "trimal.phy"
     trimal_data = os.path.join(out_path, trimal_name)
 
-    cmd = trimalpath + "/trimal " + " -in " + indata + " -out " + trimal_data + " " + trimalparas +" -phylip"
+    cmd = trimalpath + "/trimal " + " -in " + indata + " -out " + trimal_data + " " + trimalparas + " -phylip"
+
     subprocess.call(cmd, shell=True)
+    # support fasttree software
+    trimal_data2 = trimal_data.replace('.phy', '')
+    cmd2 = trimalpath + "/trimal " + " -in " + indata + " -out " + trimal_data2 + " " + trimalparas + " -fasta"
+    subprocess.call(cmd2, shell=True)
+
     loggtrimal.info('Select conserved blocks by trimal was completed')
     loggtrimal.debug('trimal path:{0}'.format(trimal_data))
     return trimal_data
