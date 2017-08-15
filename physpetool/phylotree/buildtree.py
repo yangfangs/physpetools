@@ -44,9 +44,10 @@ gblockspara_dna = "-t=d -e=-gb1"
 clustalwpara = None
 trimalpara = "-gt 1"
 
+
 def build_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-                 args_gblocks, args_gblocks_p, args_trimal, args_trimal_p, args_raxml, args_raxml_p, args_fasttree,
-                 args_fasttree_p, args_thread):
+              args_gblocks, args_gblocks_p, args_trimal, args_trimal_p, args_raxml, args_raxml_p, args_fasttree,
+              args_fasttree_p, args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
     out_retrieve = in_put
     # set default aligned by muscle if not specify clustalw
@@ -71,8 +72,8 @@ def build_hcp(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_c
 
 
 def build_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_clustalw_p,
-                  args_gblocks, args_gblocks_p, args_trimal, args_trimal_p, args_raxml, args_raxml_p, args_fasttree,
-                  args_fasttree_p, args_thread):
+               args_gblocks, args_gblocks_p, args_trimal, args_trimal_p, args_raxml, args_raxml_p, args_fasttree,
+               args_fasttree_p, args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
     out_retrieve = in_put
     # set default aligned by muscle if not specify clustalw
@@ -85,7 +86,7 @@ def build_srna(in_put, out_put, args_muscle, args_muscle_p, args_clustalw, args_
     if args_trimal:
         out_f2p = dotrimal(out_alg, args_trimal_p)
     elif args_gblocks:
-        if args_gblocks_p is gblockspara_pro:
+        if args_gblocks_p == gblockspara_pro:
             args_gblocks_p = gblockspara_dna
             out_gblock = dogblocks(out_alg, args_gblocks_p)
         out_f2p = fasta2phy(out_gblock)
