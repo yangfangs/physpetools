@@ -75,16 +75,7 @@ citation = {
     'muscle': u"""Edgar R C. MUSCLE: multiple sequence alignment with high accuracy and
     high throughput[J]. Nucleic acids research, 2004, 32(5): 1792-1797.
     """,
-: u"""Capella-Gutiérrez S, Silla-Martínez J M, Gabaldón T. trimAl: a tool for
-     automated alignment trimming in large-scale phylogenetic analyses[J]. Bioinformatics,
-      2009, 25(15): 1972-1973.""",
-    'mafft': u"""Katoh K, Standley D M. MAFFT multiple sequence alignment software version 7:
-     improvements in performance and usability[J]. Molecular biology and evolution, 2013, 30(4):
-      772-780."""
-}
 
-if __name__ == '__main__':
-    version_infor()
     'clustalw2': u"""Larkin M A, Blackshields G, Brown N P, et al. Clustal W and Clustal X
     version 2.0[J]. bioinformatics, 2007, 23(21): 2947-2948.
     """,
