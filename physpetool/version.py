@@ -32,7 +32,8 @@ VERSION_DESC = (
     """
           -------------------------------------------------------------------------------------
                       PhySpeTree (%s) - Reconstruct Phylogenetic species Tree
-
+          PhySpeTree document: https://yangfangs.github.io/physpetools/       
+        
           Citation:
                   PhySpeTree: automatically reconstructing phylogenetic species tree (submitted)
 
@@ -43,6 +44,8 @@ VERSION_DESC = (
 def version_infor():
     muscle_info = 'v3.8.31'
     clustalw2_info = '2.1'
+    mafft_info = 'v7.310'
+    trimal_info = '1.2rev59'
     gblocks_info = '0.91b'
     raxml_info = 'v8.2.3'
     fasttree_info = '2.1.9'
@@ -55,12 +58,16 @@ def version_infor():
     print (citation['muscle'])
     print ('clustalw2 versin: '), (clustalw2_info + '\ncite:')
     print (citation['clustalw2'])
+    print ('mafft versin: '), (mafft_info + '\ncite:')
+    print (citation['mafft'])
     print ('RAxML version: '), (raxml_info + '\ncite:')
     print (citation['RAxML'])
     print ('FastTree version: '), (fasttree_info + '\ncite:')
     print (citation['FastTree'])
     print ('Gblocks version: '), (gblocks_info + '\ncite:')
     print (citation['Gblocks'])
+    print ('trimal versin: '), (trimal_info + '\ncite:')
+    print (citation['trimal'])
     print ("===========================CALL SOFTWARE INFO==============================================")
 
 
@@ -68,7 +75,16 @@ citation = {
     'muscle': u"""Edgar R C. MUSCLE: multiple sequence alignment with high accuracy and
     high throughput[J]. Nucleic acids research, 2004, 32(5): 1792-1797.
     """,
+: u"""Capella-Gutiérrez S, Silla-Martínez J M, Gabaldón T. trimAl: a tool for
+     automated alignment trimming in large-scale phylogenetic analyses[J]. Bioinformatics,
+      2009, 25(15): 1972-1973.""",
+    'mafft': u"""Katoh K, Standley D M. MAFFT multiple sequence alignment software version 7:
+     improvements in performance and usability[J]. Molecular biology and evolution, 2013, 30(4):
+      772-780."""
+}
 
+if __name__ == '__main__':
+    version_infor()
     'clustalw2': u"""Larkin M A, Blackshields G, Brown N P, et al. Clustal W and Clustal X
     version 2.0[J]. bioinformatics, 2007, 23(21): 2947-2948.
     """,
@@ -82,7 +98,13 @@ citation = {
     'Gblocks': u"""Talavera G, Castresana J. Improvement of phylogenies after removing
     divergent and ambiguously aligned blocks from protein sequence alignments[J].
     Systematic biology, 2007, 56(4): 564-577.
-    """
+    """,
+    'trimal': u"""Capella-Gutiérrez S, Silla-Martínez J M, Gabaldón T. trimAl: a tool for
+     automated alignment trimming in large-scale phylogenetic analyses[J]. Bioinformatics,
+      2009, 25(15): 1972-1973.""",
+    'mafft': u"""Katoh K, Standley D M. MAFFT multiple sequence alignment software version 7:
+     improvements in performance and usability[J]. Molecular biology and evolution, 2013, 30(4):
+      772-780."""
 }
 
 if __name__ == '__main__':
