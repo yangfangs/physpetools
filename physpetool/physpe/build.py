@@ -81,7 +81,7 @@ Arguments parse
                               default=False, help="Multiple sequence alignment by mafft.")
     advance_args.add_argument('--mafft_p', action='store', dest='mafft_parameter',
                               default=mafftpara,
-                              help='Set clustalw2 advance parameters. Here use mafft default parameters.')
+                              help='Set mafft advance parameters. Here use mafft default parameters.')
     advance_args.add_argument('--gblocks', action='store_true', dest='gblocks',
                               default=True, help="Trim by Gblocks.")
     advance_args.add_argument('--gblocks_p', action='store', dest='gblocks_parameter',
