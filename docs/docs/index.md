@@ -59,14 +59,14 @@ PhySpeTree workflow includes the following steps:
 * [autobuild](usage.md#autobuild): automatically reconstruct phylogenetic tree
 
 ```bash
-PhySpeTree autobuild -i species_name_list.txt -o Output
+PhySpeTree autobuild -i species_name_list.txt --hcp
 ```
 
 
 * [build](usage.md#build): reconstruct phylogenetic tree with manually prepared sequences
 
 ```bash
-PhySpeTree build -i species.fasta -o Output
+PhySpeTree build -i species.fasta -o --hcp
 ```
 
 * [combine](usage.md#combine): combine multiple trees
