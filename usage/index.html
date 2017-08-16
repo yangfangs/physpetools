@@ -401,7 +401,19 @@ Outdata/
 <blockquote>
 <p>Set ClustalW2 advanced parameters, please see <a href="http://www.clustal.org/download/clustalw_help.txt">Clustalw Help</a>.</p>
 </blockquote>
+<p><strong>--mafft</strong></p>
+<blockquote>
+<p>Multiple sequence alignment by mafft.</p>
+</blockquote>
+<p><strong>--mafft_p</strong></p>
+<blockquote>
+<p>Set mafft advance parameters. Here use mafft default parameters, please see <a href="http://mafft.cbrc.jp/alignment/software/algorithms/algorithms.html">mafft algorithms</a></p>
+</blockquote>
 <p><strong>--gblocks</strong></p>
+<blockquote>
+<p>Trim by Gblocks.(default)</p>
+</blockquote>
+<p><strong>--gblocks_p</strong></p>
 <blockquote>
 <p>Set Gblocks advanced parameters, please see <a href="http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html">Gblocks documentation</a>.</p>
 </blockquote>
@@ -424,6 +436,14 @@ Outdata/
 </tr>
 </tbody>
 </table>
+<p><strong>--trimal</strong></p>
+<blockquote>
+<p>Trim by trimal.</p>
+</blockquote>
+<p><strong>--trimal_p</strong></p>
+<blockquote>
+<p>Set trimal advance parameters, please see<a href="http://trimal.cgenomics.org/use_of_the_command_line_trimal_v1.2">trimal command line</a></p>
+</blockquote>
 <p><strong>--ranxml</strong></p>
 <blockquote>
 <p>Reconstruct species tree by RAxML (default).</p>
@@ -718,7 +738,8 @@ $ cat tree1.tree tree2.tree &gt; combine.tree
 <pre><code class="bash">PhySpeTree combine -i combine.tree -o combineTree
 </code></pre>
 
-<p>Outputs:</p>
+<p>Outputs:
+update PhySpeTree work follow fig</p>
 <pre><code>combine/
         RAxML_info.T1
         RAxML_MajorityRuleConsensusTree.T1
