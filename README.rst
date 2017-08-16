@@ -179,8 +179,17 @@ Here is an example of setting RAxML advanced options by `--raxml_p`:
     Set clustalw2 advance parameters. Here use clustalw default parameters,
     please see `Clustalw Help <http://www.clustal.org/download/clustalw_help.txt>`_.
 
+--mafft
+    Multiple sequence alignment by mafft.
+
+--mafft_p
+    Set mafft advance parameters. Here use mafft default parameters,
+    please see `mafft algorithms <http://mafft.cbrc.jp/alignment/software/algorithms/algorithms.html>`_.
 
 --gblocks
+    Trim by Gblocks.(default)
+
+--gblocks_p
     Set Gblocks advance parameters,
     please see `Gblocks documentation <http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html>`_.
 
@@ -190,6 +199,11 @@ Here is an example of setting RAxML advanced options by `--raxml_p`:
     -e
         Generic File Extension. PhySpeTree set default is "-gbl1".
 
+--trimal
+    Trim by trimal.
+
+--trimal_p
+    Set trimal advance parameters, please see `trimal command line <http://trimal.cgenomics.org/use_of_the_command_line_trimal_v1.2>`_.
 
 --raxml
     Reconstruct phylogenetic tree by RAxML (default).

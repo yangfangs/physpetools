@@ -214,7 +214,20 @@ The default option:
 
 > Set ClustalW2 advanced parameters, please see [Clustalw Help](http://www.clustal.org/download/clustalw_help.txt).
 
+**--mafft**
+
+>Multiple sequence alignment by mafft.
+
+**--mafft_p**
+
+>Set mafft advance parameters. Here use mafft default parameters, please see [mafft algorithms](http://mafft.cbrc.jp/alignment/software/algorithms/algorithms.html)
+
+
 **--gblocks**
+
+>Trim by Gblocks.(default)
+
+**--gblocks_p**
 
 > Set Gblocks advanced parameters, please see [Gblocks documentation](http://molevol.cmima.csic.es/castresana/Gblocks/Gblocks_documentation.html).
 
@@ -224,6 +237,14 @@ The default option:
 |:--------|:------------------------------------------------------------|
 |  -t     | Choice type of sequence (default).                                        |
 |  -e     | Generic file extension. The default in PhySpeTree is "-gbl1".     |
+
+**--trimal**
+
+> Trim by trimal.
+
+**--trimal_p**
+
+> Set trimal advance parameters, please see[trimal command line](http://trimal.cgenomics.org/use_of_the_command_line_trimal_v1.2)
 
 **--ranxml**
 
@@ -485,7 +506,7 @@ PhySpeTree combine -i combine.tree -o combineTree
 ```
 
 Outputs:
-
+update PhySpeTree work follow fig
 ```
 combine/
         RAxML_info.T1
