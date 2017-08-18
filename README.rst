@@ -30,20 +30,11 @@ PhySpeTree workflow
 
 PhySpeTree workflow includes the following steps:
 
-1. Prepare `abbreviated species names <https://raw.githubusercontent.com/yangfangs/physpetools/master/examples/organism_example_list.txt>`_.
+- ① Automatic tree reconstruction.
 
-2. Choose the method to reconstruct species trees (SSU rRNA (--srna) or HCP (--hcp)).
+- ② Processing user-defined fasta files for unannotated organisms.
 
-3. Query, parse, and retrieve sequences in the FASTA format.
-
-4. Multiple sequence alignment and concatenate HCP.
-
-5. Select conserved blocks.
-
-6. Reconstruct species trees.
-
-7. Output trees.
-
+- ③ Reconstructing species trees with unannotated organisms.
 
 
 Features

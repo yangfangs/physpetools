@@ -23,22 +23,11 @@ automatically downloads and analyzes sequences of SSU rRNA or HCP from about 4,0
 ![workflow](img/PhySpeTree_work_follow.png)
 
 
-PhySpeTree workflow includes the following steps:
+- ① Automatic tree reconstruction.
 
-1. Prepare [abbreviated species names][1].
+- ② Processing user-defined fasta files for unannotated organisms.
 
-2. Choose the method to reconstruct species trees (SSU rRNA (--srna) or HCP (--hcp)).
-
-3. Query, parse, and retrieve sequences in the FASTA format.
-
-4. Multiple sequence alignment and concatenate HCP.
-
-5. Select conserved blocks.
-
-6. Reconstruct species trees.
-
-7. Output trees.
-
+- ③ Reconstructing species trees with unannotated organisms.
 
 ## Features
 
