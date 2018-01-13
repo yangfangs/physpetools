@@ -151,4 +151,4 @@ def hcp_name(index):
 
 if __name__ == '__main__':
     print getcolname()
-    print getspecies(['neq', 'pai'], ['K02865', 'K03040', 'K01869', ])
+    print getspecies(['zma'], ['K02925'])

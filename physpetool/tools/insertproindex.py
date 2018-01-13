@@ -55,10 +55,10 @@ def insertdata(konum, abbname, value):
     :param abbname: the species abbreviation by kegg
     :param value: protein id by keegg
     """
-    conn = sqlite3.connect('../database/proindex.db')
+    conn = sqlite3.connect('../database/KEGG_DB_1.0.db')
     conn.text_factory = str
     c = conn.cursor()
-    sqlupdate = "UPDATE keggproindex SET {0}=? WHERE NAME=?".format(konum)
+    sqlupdate = "UPDATE proindex SET {0}=? WHERE NAME=?".format(konum)
     c.execute(sqlupdate, (value, abbname))
     conn.commit()
     c.close()
