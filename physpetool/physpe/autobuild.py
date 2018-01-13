@@ -74,7 +74,7 @@ Argument parse
                                 help="The extended data should be FASTA format to extend phylogenetic tree by \
                                      --ehcp or --esrna option.")
     autobuild_args.add_argument('--hcp', action='store_true', dest='HCP',
-                                default=False,
+                                default=True,
                                 help="Specify the hcp (highly conserved protein) method to reconstruct \
                                 phylogenetic tree. The default method is hcp.")
     autobuild_args.add_argument('--ehcp', action='store_true', dest='EHCP',
@@ -143,21 +143,10 @@ starting run reconstruct tree
             args_extend = os.path.join(pwd, args.extenddata)
     else:
         pass
-    # Reconstruct phylogenetic tree by highly conserved proteins.
-    if args.HCP:
-        setlogdir(out_put)
-        starting_hcp(in_put, out_put,
-                     args.muscle, args.muscle_parameter,
-                     args.clustalw, args.clustalw_parameter,
-                     args.mafft, args.mafft_parameter,
-                     args.gblocks, args.gblocks_parameter,
-                     args.trimal, args.trimal_parameter,
-                     args.raxml, args.raxml_parameter,
-                     args.fasttree, args.fasttree_parameter,
-                     args.thread)
+
 
     # Reconstruct phylogenetic tree by ssu RNA.
-    elif args.ssurna:
+    if args.ssurna:
         setlogdir(out_put)
         starting_srna(in_put, out_put,
                       args.muscle, args.muscle_parameter,
@@ -194,7 +183,18 @@ starting run reconstruct tree
                        args.raxml, args.raxml_parameter,
                        args.fasttree, args.fasttree_parameter,
                        args.thread, args.extenddata)
-
+    # Reconstruct phylogenetic tree by highly conserved proteins.
+    elif args.HCP:
+        setlogdir(out_put)
+        starting_hcp(in_put, out_put,
+                 args.muscle, args.muscle_parameter,
+                 args.clustalw, args.clustalw_parameter,
+                 args.mafft, args.mafft_parameter,
+                 args.gblocks, args.gblocks_parameter,
+                 args.trimal, args.trimal_parameter,
+                 args.raxml, args.raxml_parameter,
+                 args.fasttree, args.fasttree_parameter,
+                 args.thread)
 
 def starting_hcp(in_put, out_put,
                  args_muscle, args_muscle_p,
