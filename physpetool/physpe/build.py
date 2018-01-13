@@ -60,7 +60,7 @@ Arguments parse
                             help="Specify the number of processing threads (CPUs) to reconstruct \
                                 phylogenetic tree. The default is 1.")
     build_args.add_argument('--hcp', action='store_true', dest='HCP',
-                            default=False,
+                            default=True,
                             help="Specify the hcp (highly conserved protein) method to reconstruct \
                                 phylogenetic tree. The default method is hcp.")
     build_args.add_argument('--srna', action='store_true', dest='ssurna',
@@ -115,19 +115,9 @@ Staring run build
         elif os.path.isdir(args.input):
             args_input = os.path.join(pwd, args.input)
 
-    if args.HCP:
-        setlogdir(out_put)
-        build_hcp(args_input, out_put,
-                  args.muscle, args.muscle_parameter,
-                  args.clustalw, args.clustalw_parameter,
-                  args.mafft, args.mafft_parameter,
-                  args.gblocks, args.gblocks_parameter,
-                  args.trimal, args.trimal_parameter,
-                  args.raxml, args.raxml_parameter,
-                  args.fasttree, args.fasttree_parameter,
-                  args.thread)
+
     # reconstruct phylogenetic tree by ssu RNA
-    elif args.ssurna:
+    if args.ssurna:
         setlogdir(out_put)
         build_srna(args_input, out_put,
                    args.muscle, args.muscle_parameter,
@@ -138,3 +128,14 @@ Staring run build
                    args.raxml, args.raxml_parameter,
                    args.fasttree, args.fasttree_parameter,
                    args.thread)
+    elif args.HCP:
+        setlogdir(out_put)
+        build_hcp(args_input, out_put,
+                  args.muscle, args.muscle_parameter,
+                  args.clustalw, args.clustalw_parameter,
+                  args.mafft, args.mafft_parameter,
+                  args.gblocks, args.gblocks_parameter,
+                  args.trimal, args.trimal_parameter,
+                  args.raxml, args.raxml_parameter,
+                  args.fasttree, args.fasttree_parameter,
+                  args.thread)
