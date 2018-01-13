@@ -5,7 +5,7 @@
 The input of `autobuild` module is a TXT file containing [KEGG][2] abbreviated species names, for example [organism_example_list][1].
 
 ```bash
-$ PhySpeTree -i organism_example_list.txt [options]*
+$ PhySpeTree -i autobuild organism_example_list.txt [options]*
 ```
 
 ### options
