@@ -160,13 +160,13 @@ if __name__ == '__main__':
     # print "\n"
     # print "the execute time is:"
     # print(during)
-    display_row('hsa')
+
+    insertdata(konum='K02925', abbname='zma', value='zma:101027258')
+    display_row('zma')
 
 
 
-
-
-# update id =148
-# select * from keggproindex where id =148
-# update keggproindex set K02987 = 'obr:102702159' where id =148
+# update id =151
+# select * from keggproindex where id =151
+# update keggproindex set K02925 = 'zma:101027258' where id =151
 # commit
