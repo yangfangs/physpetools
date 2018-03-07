@@ -493,11 +493,11 @@ Outdata/
 </blockquote>
 <h2 id="build">build</h2>
 <p>The <code>build</code> module is used to reconstruct species trees with manually prepared sequences. Advanced options are the same as <code>autobuild</code> module.</p>
-<pre><code class="bash"># HCP method
-$ PhySpeTree build -i example_hcp -o output --hcp
+<pre><code class="bash"># multiple method
+$ PhySpeTree build -i example_hcp -o output --multiple
 
-# SSU rRNA method
-$ PhySpeTree build -i example_16s_ssurna.fasta -o output --srna
+# single method
+$ PhySpeTree build -i example_16s_ssurna.fasta -o output --single
 </code></pre>
 
 <h3 id="build-options">build options</h3>
@@ -625,7 +625,7 @@ EAEKLFENLKVLYRAILKARPASAKGTYVRSFYIAPTMGVGIKIDPVAASKEVAEA
 </code></pre>
 
 <p>Reconstruct species tree and store outputs in the <code>build_hcp_tree</code> folder:</p>
-<pre><code class="bash">PhySpeTree build -i example_build_hcp -o build_hcp_tree --hcp
+<pre><code class="bash">PhySpeTree build -i example_build_hcp -o build_hcp_tree --multiple
 </code></pre>
 
 <p><strong>Build species trees by manually prepared SSU rRNA</strong></p>
@@ -658,7 +658,7 @@ $ grep '&gt;' example_build_srna.fasta
 </code></pre>
 
 <p>Reconstruct species tree and store outputs in the <code>build_srna_tree</code> folder:</p>
-<pre><code class="bash">PhySpeTree build -i example_build_srna.fasta -o build_srna_tree --srna --fasttree
+<pre><code class="bash">PhySpeTree build -i example_build_srna.fasta -o build_srna_tree --single --fasttree
 </code></pre>
 
 <h2 id="combine">combine</h2>
