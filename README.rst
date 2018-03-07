@@ -233,12 +233,12 @@ The `build` module is used to reconstruct species trees with manually prepared s
 
 Use **build** in command line to reconstruct phylogenetic tree:
 
-* build phylogenetic tree by HCP method:
+* build phylogenetic tree by multiple method:
 
 
 .. code-block:: console
 
-    $ PhySpeTree build -i example_hcp -o output --hcp
+    $ PhySpeTree build -i example_hcp -o output --multiple
 
 
 * build phylogenetic tree by SSU rRNA method:
@@ -246,7 +246,7 @@ Use **build** in command line to reconstruct phylogenetic tree:
 
 .. code-block:: console
 
-    $ PhySpeTree build -i example_16s_ssurna.fasta -o output --sran
+    $ PhySpeTree build -i example_16s_ssurna.fasta -o output --single
 
 build options
 #####################

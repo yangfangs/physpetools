@@ -277,11 +277,11 @@ The default option:
 The `build` module is used to reconstruct species trees with manually prepared sequences. Advanced options are the same as `autobuild` module.
 
 ```bash
-# HCP method
-$ PhySpeTree build -i example_hcp -o output --hcp
+# multiple method
+$ PhySpeTree build -i example_hcp -o output --multiple
 
-# SSU rRNA method
-$ PhySpeTree build -i example_16s_ssurna.fasta -o output --srna
+# single method
+$ PhySpeTree build -i example_16s_ssurna.fasta -o output --single
 ```
 
 ### build options
@@ -397,7 +397,7 @@ EAEKLFENLKVLYRAILKARPASAKGTYVRSFYIAPTMGVGIKIDPVAASKEVAEA
 Reconstruct species tree and store outputs in the `build_hcp_tree` folder:
 
 ```bash
-PhySpeTree build -i example_build_hcp -o build_hcp_tree --hcp
+PhySpeTree build -i example_build_hcp -o build_hcp_tree --multiple
 ```
 
 **Build species trees by manually prepared SSU rRNA**
@@ -436,7 +436,7 @@ $ grep '>' example_build_srna.fasta
 Reconstruct species tree and store outputs in the `build_srna_tree` folder:
 
 ```bash
-PhySpeTree build -i example_build_srna.fasta -o build_srna_tree --srna --fasttree
+PhySpeTree build -i example_build_srna.fasta -o build_srna_tree --single --fasttree
 ```
 
 ## combine

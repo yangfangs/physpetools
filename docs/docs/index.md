@@ -55,7 +55,7 @@ PhySpeTree autobuild -i species_name_list.txt --hcp
 * [build](usage.md#build): reconstruct phylogenetic tree with manually prepared sequences
 
 ```bash
-PhySpeTree build -i species.fasta -o --hcp
+PhySpeTree build -i species.fasta -o --multiple
 ```
 
 * [combine](usage.md#combine): combine multiple trees
