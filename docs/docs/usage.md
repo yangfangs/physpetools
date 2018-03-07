@@ -292,8 +292,8 @@ $ PhySpeTree build -i example_16s_ssurna.fasta -o output --srna
 |  -i     |  Input a TXT file containing abbreviated species names.                               |
 |  -o     |  A directory to store outputs. The default is "Outdata".                                                   |
 |  -t     |  Number of processing threads (CPUs). The default is 1.                                                                                                                                      |
-|  --hcp  |  HCP method (default).                                                                                |
-|  --srna |  SSU rRNA method.                                                                                      |
+|  --multiple  |  Specify concatenate highly conserved protein method to reconstruct phylogenetic tree.                                                                                |
+|  --single |  Use SSU rRNA data to reconstruct phylogenetic tree.                                                                                     |
 
 
 ### example

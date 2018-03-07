@@ -263,13 +263,13 @@ build options
 -t
     Number of processing threads (CPUs). The default is 1.
 
---hcp
+--multiple
 
-    HCP method (default).
+    Specify concatenate highly conserved protein method to reconstruct phylogenetic tree. The default method.
 
---srna
+--single
 
-    SSU rRNA method.
+    Use SSU rRNA data to reconstruct phylogenetic tree.
 
 combine
 ^^^^^^^^^^^^^^^^^^^^
