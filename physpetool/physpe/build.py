@@ -59,13 +59,13 @@ Arguments parse
                             type=int, default=1,
                             help="Specify the number of processing threads (CPUs) to reconstruct \
                                 phylogenetic tree. The default is 1.")
-    build_args.add_argument('--hcp', action='store_true', dest='HCP',
+    build_args.add_argument('--multiple', action='store_true', dest='HCP',
                             default=True,
-                            help="Specify the hcp (highly conserved protein) method to reconstruct \
-                                phylogenetic tree. The default method is hcp.")
-    build_args.add_argument('--srna', action='store_true', dest='ssurna',
+                            help="Specify concatenate highly conserved protein method to reconstruct \
+                                phylogenetic tree. The default method.")
+    build_args.add_argument('--single', action='store_true', dest='ssurna',
                             default=False,
-                            help="The srna (SSU rRNA) method is use SSU rRNA data to reconstruct \
+                            help="Use SSU rRNA data to reconstruct \
                                phylogenetic tree.")
     advance_args.add_argument('--muscle', action='store_true', dest='muscle',
                               default=True,
