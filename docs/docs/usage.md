@@ -23,7 +23,7 @@ $ PhySpeTree -i autobuild organism_example_list.txt [options]*
 |  --esrna|  SSU rRNA method with extended SSU rRNA sequences.                                                                                                           |
 
 
-### example
+### Example
 
 Download the example input file:
 
@@ -296,7 +296,7 @@ $ PhySpeTree build -i example_16s_ssurna.fasta -o output --single
 |  --single |  Use SSU rRNA data to reconstruct phylogenetic tree.                                                                                     |
 
 
-### example
+### Example
 
 **Build species trees by manually prepared HCP**
 
@@ -465,7 +465,7 @@ $ PhySpeTree combine -i combineTree.tree [options]*
 |  --mre |  Extended majority rule trees.                   |
 | --strict |  Strict consensus trees.         |
 
-### example
+### Example
 
 [example_combine_tree.tar.gz][5] contains `tree1.tree` and `tree2.tree` reconstructed by the HCP and SSU rRNA method, respectively.
 
@@ -537,7 +537,7 @@ $ PhySpeTree iview -i organism_example_list.txt --range
 | -l/--labels  | Change species labels from abbreviated names to full names.                                   |
 
 
-### example
+### Example
 
 Download the example file:
 
@@ -683,7 +683,7 @@ $ PhySpeTree check -i organism_example_list.txt --ehcp
 | --ehcp |  Check input organisms prepare for extend autobuild tree module.                                    |
 | --srna |  Check whether organisms are supported in the SILVA database.                                       |
 
-### example
+### Example
 
 **Check extended organisms in `autobuild`**
 
