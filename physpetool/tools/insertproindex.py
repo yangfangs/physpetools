@@ -161,7 +161,7 @@ if __name__ == '__main__':
     # print "the execute time is:"
     # print(during)
 
-    insertdata(konum='K02925', abbname='zma', value='zma:101027258')
+    insertdata(konum='K02877', abbname='cit', value='cit:102623164')
     display_row('zma')
 
 
