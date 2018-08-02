@@ -55,7 +55,7 @@ retrieve 16s rna form bioinfor.scu.edu.cn
     if not os.path.exists(dirname):
         os.makedirs(dirname)
     # connect database
-    connect = ftplib.FTP("bioinfor.scu.edu.cn")
+    connect = ftplib.FTP("173.255.208.244")
     connect.login('anonymous')
     connect.cwd('/pub/database16s')
     # connect.dir()
