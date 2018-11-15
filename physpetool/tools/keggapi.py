@@ -81,6 +81,7 @@ def parsegetpro(propage):
         seq = re.findall(seqcomp, line)
 
 
+
 def getprotein(proid):
     # http://rest.kegg.jp/get/hsa:10458+ece:Z5100+pon:100172290
     url = "http://rest.kegg.jp/get/" + proid + "/aaseq"
