@@ -28,7 +28,7 @@ The KEGG KO index database.
 import sqlite3
 import os
 
-print os.getcwd()
+print (os.getcwd())
 # name,eukaryotes,prokaryotes
 listko = []
 
@@ -39,7 +39,7 @@ with open('../database/protein_ko.txt') as ko:
         strs.insert(0, i)
         i = i + 1
         listko.append(tuple(strs))
-print listko
+print (listko)
 conn = sqlite3.connect('../database/koindex.db')
 conn.text_factory = str
 c = conn.cursor()

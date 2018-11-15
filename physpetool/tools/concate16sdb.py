@@ -29,14 +29,14 @@ Connect 16s SSU rRNA database.
 import ftplib
 import os
 
-connect = ftplib.FTP("bioinfor.scu.edu.cn")
+connect = ftplib.FTP("173.255.208.244")
 connect.login('anonymous')
-connect.cwd('/pub')
+connect.cwd('/pub/database16s/')
 connect.dir()
-os.chdir('/home/yangfang/physpetools/testdata')
-downloadfilname = "fwefwef.txt"
+os.chdir('/home/yangfang/')
+downloadfilname = "aaa.fasta"
 f = open(downloadfilname, 'wb')
-ftpfilename = "test.txt"
+ftpfilename = "aaa.fasta"
 remoteFileName = 'RETR ' + os.path.basename(ftpfilename)
 connect.retrbinary(remoteFileName, f.write, 1024)
 f.close()

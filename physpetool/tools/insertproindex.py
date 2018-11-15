@@ -26,8 +26,9 @@ Create highly conserved proteins index databse.
 """
 
 import sqlite3
-from keggapi import getkolist
 import time
+
+from physpetool.tools.keggapi import getkolist
 
 
 def getdata(database, name):
@@ -94,7 +95,7 @@ def inserteuk():
     kodata = getdata('../database/koindex.db', 'EUKARYOTES,PROKARYOTES')
     for line in kodata:
         ko = line[0]
-        print ko
+        print (ko)
         kolinkinserteuk(ko)
 
 
@@ -102,7 +103,7 @@ def insertprokar():
     """insert prokaryotes data form kegg"""
     kodata = getdata('../database/koindex.db', 'EUKARYOTES,PROKARYOTES')
     for line in kodata:
-        print line[1]
+        print (line[1])
         kolinkinsertprokar(line)
 
 
@@ -129,14 +130,14 @@ def countcol():
 def displaydb():
     """display de database the length, max, min, average et al. of species respectively"""
     countlen, countnone = countcol()
-    print "Total organism in database:", len(countlen)
-    print "Max of get protein number is:", max(countlen)
-    print "Min of get protein number is:", min(countlen)
-    print "Average of get protein number is:", sum(countlen) / len(countlen)
-    print "Number of can't get any protein:", len(countnone)
-    print "Nhe species are can't get any protein names is:"
+    print ("Total organism in database:", len(countlen))
+    print ("Max of get protein number is:", max(countlen))
+    print ("Min of get protein number is:", min(countlen))
+    print ("Average of get protein number is:", sum(countlen) / len(countlen))
+    print ("Number of can't get any protein:", len(countnone))
+    print ("Nhe species are can't get any protein names is:")
     for abb in countnone:
-        print abb[1] + ",",
+        print (abb[1] + ",")
 
 
 def display_row(abb):

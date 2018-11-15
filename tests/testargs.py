@@ -22,8 +22,8 @@ print (__DESCRIPTION__)
 def version_info():
     VERSION_INFO = 'V0.0.8'
     AUTHOR_INFO = 'Author: Yang Fang'
-    print VERSION_INFO
-    print AUTHOR_INFO
+    print (VERSION_INFO)
+    print (AUTHOR_INFO)
 
 
 raxmlpara = "xxxxx"
@@ -60,20 +60,20 @@ parser_b.add_argument('-in', nargs='?', action="store", dest='testbin',
                       default=sys.stdin, help='sub -indata')
 
 args = parser.parse_args()
-print parser.parse_args()
+print (parser.parse_args())
 if args.version:
     version_info()
     sys.exit(0)
 
 if args.testbout:
-    print 'yes  have muscle parameter'
+    print ('yes  have muscle parameter')
 
 if args.raxml:
-    print args.raxml
+    print (args.raxml)
 if args.raxml is raxmlpara:
-    print 'defult ffff'
+    print ('defult ffff')
 
 # test pwd
 pwd = os.getcwd()
 outpath = os.path.join(pwd, args.outdatafile)
-print outpath
+print (outpath)

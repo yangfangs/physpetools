@@ -110,6 +110,7 @@ def retrieveprotein(proindexlist, outpath, matchlist):
             query = "+".join(id)
             protein = getprotein(query)
             protein = protein.readlines()
+            protein = [x.decode('utf-8') for x in protein]
             for i in protein:
                 if i.startswith(">"):
                     abbname = i.split(":")[0] + "\n"
@@ -150,5 +151,5 @@ def hcp_name(index):
 
 
 if __name__ == '__main__':
-    print getcolname()
-    print getspecies(['zma'], ['K02925'])
+    print (getcolname())
+    print (getspecies(['zma'], ['K02925']))

@@ -31,7 +31,7 @@ conn = sqlite3.connect('../database/koindex.db')
 conn.text_factory = str
 c = conn.cursor()
 for row in c.execute('SELECT NAME,EUKARYOTES FROM KOINDEX'):
-    print row
+    print (row)
 
 listko = []
 with open('../database/protein_ko.txt') as ko:

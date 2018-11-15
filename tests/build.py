@@ -15,6 +15,6 @@ def populate_args(annotate_args_p):
 
 def run(args):
     lenth = len(args)
-    print  lenth
+    print  (lenth)
 
     print ('hello')

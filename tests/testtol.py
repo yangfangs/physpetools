@@ -6,7 +6,7 @@ fw = open('ncbi_kegg_tol.txt', 'a')
 with open('tol_tree.txt') as tol:
     for line in tol:
         strs = line.strip().split('\t')
-        print strs[1].strip()
+        print (strs[1].strip())
         for abb in open('organism_convert_to_tax.txt'):
             abbs = abb.strip().split('\t')
             if strs[1].strip() == abbs[1].strip():

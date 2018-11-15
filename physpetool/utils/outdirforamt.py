@@ -39,8 +39,3 @@ class timeformat:
         subdir = self.subdir + timeinfo
         return subdir
 
-
-if __name__ == '__main__':
-    doclu_subdir = timeformat('temp/hcp_alignment')
-    print(doclu_subdir)
-    print type(str(doclu_subdir))

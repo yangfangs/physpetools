@@ -38,14 +38,14 @@ class operate_db():
     def create(self, table, colname_list):
         """create a table with col name"""
         text = ' TEXT, '.join(colname_list)
-        print text
+        print (text)
         createlist = ["create table if not exists %s" % table, "(id integer primary key autoincrement, NAME TEXT, ",
                       text, " TEXT)"]
         createsql = ''.join(createlist)
         try:
             self.cur.execute(createsql)
             self.done()
-        except sqlite3.Error, e:
+        except sqlite3.Error as e:
             print(e)
             self.conn.rollback()
 
@@ -59,7 +59,7 @@ class operate_db():
             sql_insert = "INSERT INTO %s (NAME) VALUES (?)" % table
             self.cur.executemany(sql_insert, insert_name)
             self.done()
-        except sqlite3.Error, e:
+        except sqlite3.Error as e:
             print(e)
             self.conn.rollback()
 
@@ -69,7 +69,7 @@ class operate_db():
         try:
             self.cur.execute(sql_update, (value, name_flag))
             self.done()
-        except sqlite3.Error, e:
+        except sqlite3.Error as e:
             print (e)
             self.conn.rollback()
 
@@ -81,7 +81,7 @@ class operate_db():
             result = self.cur.fetchall()
             self.done()
             print (result)
-        except sqlite3.Error, e:
+        except sqlite3.Error as e:
             print (e)
             self.conn.rollback()
 
@@ -93,7 +93,7 @@ class operate_db():
             col_data = self.cur.fetchall
             self.done()
             return col_data
-        except sqlite3.Error, e:
+        except sqlite3.Error as e:
             print (e)
             self.conn.rollback()
 
@@ -102,8 +102,8 @@ class operate_db():
         try:
             self.cur.execute("DROP TABLE IF EXISTS %s" % table)
             self.done()
-        except sqlite3.Error, e:
-            print e
+        except sqlite3.Error as e:
+            print (e)
             self.conn.rollback()
 
     def done(self):

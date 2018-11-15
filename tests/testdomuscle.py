@@ -15,4 +15,4 @@ musclepara = '-maxiters 100'
 input = "/home/yangfang/physpetools/temp/16srnadata20160725152715"
 output = "/home/yangfang/physpetools/testdata/test16srandata"
 out_alg = domuscle(input, output,musclepara)
-print out_alg
+print (out_alg)

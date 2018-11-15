@@ -59,7 +59,7 @@ convert ncbi id to silva accession
                 sid = silvaid.strip().split('\t')
                 sid1 =sid[1].strip()
                 if nid1 == sid1:
-                    print nid1
+                    print (nid1)
                     fw.write(nid[0] + '\t' + nid[1] + '\t' + sid[0] + '\n')
                     break
                 else:

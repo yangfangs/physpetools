@@ -23,14 +23,24 @@
 """
 API for KEGG database.
 """
+import sys
 
-import urllib2
+python_version = sys.version_info[0]
+
+try:
+    from urllib import request
+except ImportError:
+    import urllib2
+
 import re
 
 
 # ('Ribosomal protein L1 ', 'K02865')
 def getorganismlist():
-    page = urllib2.urlopen('http://rest.kegg.jp/list/organism')
+    if (python_version == 3):
+        page = request.urlopen('http://rest.kegg.jp/list/organism')
+    else:
+        page = urllib2.urlopen('http://rest.kegg.jp/list/organism')
     html = page.read()
     return html
 
@@ -39,10 +49,19 @@ def getkolist(ko):
     """Get KO list"""
     listko = []
     url = "http://rest.kegg.jp/link/genes/" + ko
-    page = urllib2.urlopen(url)
-    for line in page:
-        html = line.strip().split('\t')
-        listko.append(html)
+    if (python_version == 3):
+        page = request.urlopen(url).read()
+        page = page.decode('utf-8')
+        page = page.split('\n')
+        for line in page:
+            html = line.strip().split('\t')
+            listko.append(html)
+        else:
+            url = "http://rest.kegg.jp/link/genes/" + ko
+            page = urllib2.urlopen(url)
+            for line in page:
+                html = line.strip().split('\t')
+                listko.append(html)
     return listko
 
 
@@ -65,5 +84,8 @@ def parsegetpro(propage):
 def getprotein(proid):
     # http://rest.kegg.jp/get/hsa:10458+ece:Z5100+pon:100172290
     url = "http://rest.kegg.jp/get/" + proid + "/aaseq"
-    page = urllib2.urlopen(url)
+    if (python_version == 3):
+        page = request.urlopen(url)
+    else:
+        page = urllib2.urlopen(url)
     return page

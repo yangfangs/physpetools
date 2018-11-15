@@ -11,7 +11,7 @@ def populate_args(annotate_args_p):
     annotate_args_p.add_argument("--feature", dest="feature", nargs="+", action='append', default=[],
                                help="")
 def run(args):
-    print args.ncbi
+    print (args.ncbi)
 
 
 
