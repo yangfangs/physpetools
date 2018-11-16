@@ -25,12 +25,12 @@ API for KEGG database.
 """
 import sys
 
-python_version = sys.version_info[0]
-
 try:
     from urllib import request
+    python_version = sys.version_info[0]
 except ImportError:
     import urllib2
+    python_version = sys.version_info[0]
 
 import re
 
@@ -53,11 +53,11 @@ def getkolist(ko):
         page = request.urlopen(url).read()
         page = page.decode('utf-8')
         page = page.split('\n')
+        page.remove('')
         for line in page:
             html = line.strip().split('\t')
             listko.append(html)
         else:
-            url = "http://rest.kegg.jp/link/genes/" + ko
             page = urllib2.urlopen(url)
             for line in page:
                 html = line.strip().split('\t')

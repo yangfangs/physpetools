@@ -44,7 +44,7 @@ def read_fasta_parse(fp):
     if seq_name: yield (seq_name, ''.join(seq_pro))
 
 
-os.chdir('/home/yangfang/physpetools_data/16sRNA')
+os.chdir('/home/yangfang/PhySpeTree/updateSILVA/')
 seq_name = []
 seq_pro = []
 
@@ -76,11 +76,11 @@ def read_ncbi_id(idfilepath):
     with open(idfilepath) as readid:
         for line in readid:
             lin = line.strip().split('\t')
-            ncbi_acc.append([lin[0], lin[2]])
+            ncbi_acc.append([lin[1], lin[0]])
     return ncbi_acc
 
 
-parsefastafile('SILVA_123.1_SSURef_Nr99_tax_silva_trunc.fasta','ncbi_to_silva_id.txt','ftpfiles')
+parsefastafile('SILVA_132_SSURef_Nr99_tax_silva_trunc.fasta','tax_slv_ssu_132.acc_taxid.txt','ftpfiles')
 
 
 # parsefastafile('silva_test.fasta', 'ncbi_test2.txt', 'testreslult2')

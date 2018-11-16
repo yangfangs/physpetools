@@ -41,11 +41,8 @@ def check_organism(input, db_list):
     :param db_list: a list file contain organism in corresponding database
     :return: inputlist: match in database mislist: can't match in database
     """
-    originaList = []
-    for line in input:
-        st = line.strip()
-        originaList.append(st)
-    originaList = removeEmptyStr(originaList)
+    originaList = input
+
     inputlist = []
     mislist = []
     spelist = os.path.join(dbpath, db_list)
@@ -65,6 +62,60 @@ def check_organism(input, db_list):
         mislist = originaList
     return inputlist, mislist
 
+def trans_abb_2_tax_for_surna(input):
+    """
+transform kegg abb name to ncbi taxonomy id for SURNA method
+    :param input: input file contains kegg abb names
+    :return:  the list contains taxonomy id
+    """
+    originaList = []
+    inputlist = []
+    dic_trans_list = {}
+    for line in input:
+        st = line.strip()
+        originaList.append(st)
+    originaList = removeEmptyStr(originaList)
+
+    spelist = os.path.join(dbpath, "support_hcp_organism.txt")
+
+    if not originaList[0].isnumeric():
+        with open(spelist) as f:
+            for line in f:
+                tem = line.strip().split('\t')
+                dic_trans_list[tem[0]] = tem[1]
+        for abb in originaList:
+            inputlist.append(dic_trans_list[abb])
+    else:
+        inputlist = originaList
+    return inputlist
+
+
+def trans_tax_to_abb_for_hcp(input):
+    """
+transform ncbi taxonomy id to kegg abb name for HCP method
+    :param input: input file contains ncbi taxonomy id
+    :return: the list contains abb names
+    """
+    originaList = []
+    inputlist = []
+    dic_trans_list = {}
+    for line in input:
+        st = line.strip()
+        originaList.append(st)
+    originaList = removeEmptyStr(originaList)
+    spelist = os.path.join(dbpath, "support_hcp_organism.txt")
+
+    if originaList[0].isnumeric():
+        with open(spelist) as f:
+            for line in f:
+                tem = line.strip().split('\t')
+                dic_trans_list[tem[1]] = tem[0]
+        for tax in originaList:
+            inputlist.append(dic_trans_list[tax])
+    else:
+        inputlist = originaList
+
+    return inputlist
 
 def checkKeggOrganism(input):
     """
@@ -72,7 +123,8 @@ Check input organisms list with KEGG database
     :param input: a open file list
     :return: a list contain organisms can be use construct phy tree
     """
-    inputlist, mislist = check_organism(input, "organism_kegg_to_tax.txt")
+    input_trans = trans_tax_to_abb_for_hcp(input)
+    inputlist, mislist = check_organism(input_trans, "support_hcp_organism.txt")
     if mislist:
         for misabb in mislist:
             logchecking.info("The species: {0} can't match in KEGG protein index database".format(misabb))
@@ -87,7 +139,8 @@ Check input organisms list with SILVA database
     :param input: a open file list
     :return: a list contain organisms can be use construct phy tree
     """
-    inputlist, mislist = check_organism(input, "kegg_to_silva_id.txt")
+    input_trans = trans_abb_2_tax_for_surna(input)
+    inputlist, mislist = check_organism(input_trans, "support_srna_organism.txt")
     if mislist:
         for misabb in mislist:
             logchecking.info("The organism: {0} can't match in SSU rRNA database".format(misabb))

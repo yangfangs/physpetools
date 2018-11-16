@@ -127,7 +127,7 @@ def starting(args):
 starting run reconstruct tree
     :param args: arguments
     """
-    print ("Loading organisms names success.....\n")
+    print ("Loading organism's names success.....\n")
     print ("The result are store in:{0}\n".format(args.outdata))
     print ("Now loading data and constructing phylogenetic tree......")
 
