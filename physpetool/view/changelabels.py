@@ -59,6 +59,15 @@ def taxlist():
     return organism_list
 
 
+def taxlistid():
+    orgpath = os.path.join(dbpath, "id_to_latin_name.txt")
+    organism_list = []
+    with open(orgpath) as f:
+        for org in f:
+            each_org = org.strip().split('\t')
+            organism_list.append([each_org[0], each_org[1]])
+    return organism_list
+
 def annotatingLabels(input, output):
     """
 Change labels
@@ -77,7 +86,11 @@ Change labels
     fw.write('LABELS\nSEPARATOR TAB\nDATA\n')
     inputfile = checkFile(input)
     input_list = readIputFile(inputfile)
-    tax_list = taxlist()
+
+    if input_list[0].isnumerice():
+        tax_list = taxlistid()
+    else:
+        tax_list = taxlist()
     for i in input_list:
         for j in tax_list:
             if i == j[0]:

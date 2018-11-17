@@ -22,3 +22,16 @@ f_w = open('/home/yangfang/PhySpeTree/updateSILVA/support_srna_organism.txt','a'
 for i in all_pre_file:
     f_w.write("{0}\n".format(i.strip().split('.')[0]))
 f_w.close()
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~deal with NCBI tax to latin name~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+f_write = open('/home/yangfang/PhySpeTree/updateSILVA/id_to_latin_name.txt','a')
+
+with open('/home/yangfang/PhySpeTree/updateSILVA/tax_report.txt') as f:
+    for line in f:
+        tem = line.strip().split('\t')
+        if tem[0] == '1' or tem[0] == '2':
+            f_write.write("{0}\t{1}\n".format(tem[2],tem[6]))
+        else:
+            f_write.write("{0}\tNA\n".format(tem[2]))
+f_write.close()
