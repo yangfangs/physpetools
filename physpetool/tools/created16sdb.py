@@ -73,14 +73,17 @@ def parsefastafile(parsefilepath, idfilepath, wdir):
 
 def read_ncbi_id(idfilepath):
     ncbi_acc = []
+    ncbi_tem = []
     with open(idfilepath) as readid:
         for line in readid:
             lin = line.strip().split('\t')
-            ncbi_acc.append([lin[1], lin[0]])
+            if lin[1] not in ncbi_tem:
+                ncbi_tem.append(lin[1].strip())
+                ncbi_acc.append([lin[1].strip(), lin[0]])
     return ncbi_acc
 
 
-parsefastafile('SILVA_132_SSURef_Nr99_tax_silva_trunc.fasta','tax_slv_ssu_132.acc_taxid.txt','ftpfiles')
+parsefastafile('SILVA_132_SSURef_Nr99_tax_silva_trunc.fasta','map_silva_to_ncbi.txt','ftpfiles')
 
 
 # parsefastafile('silva_test.fasta', 'ncbi_test2.txt', 'testreslult2')

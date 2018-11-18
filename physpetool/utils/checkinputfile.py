@@ -30,6 +30,8 @@ from physpetool.database.dbpath import getlocaldbpath
 from physpetool.phylotree.log import getLogging
 import os
 
+from physpetool.utils.checkIsNum import is_number
+
 dbpath = getlocaldbpath()
 logchecking = getLogging('Checking organisms')
 
@@ -66,28 +68,30 @@ def trans_abb_2_tax_for_surna(input):
     """
 transform kegg abb name to ncbi taxonomy id for SURNA method
     :param input: input file contains kegg abb names
-    :return:  the list contains taxonomy id
+    :return:  the list contains taxonomy ids
     """
     originaList = []
     inputlist = []
     dic_trans_list = {}
+    recovery_dic = {}
     for line in input:
         st = line.strip()
         originaList.append(st)
     originaList = removeEmptyStr(originaList)
 
-    spelist = os.path.join(dbpath, "support_hcp_organism.txt")
+    spelist = os.path.join(dbpath, "support_srna_organism.txt")
 
-    if not originaList[0].isnumeric():
+    if not is_number(originaList[0]):
         with open(spelist) as f:
             for line in f:
                 tem = line.strip().split('\t')
                 dic_trans_list[tem[0]] = tem[1]
         for abb in originaList:
             inputlist.append(dic_trans_list[abb])
+            recovery_dic[dic_trans_list[abb]] = abb
     else:
         inputlist = originaList
-    return inputlist
+    return inputlist, recovery_dic
 
 
 def trans_tax_to_abb_for_hcp(input):
@@ -99,23 +103,25 @@ transform ncbi taxonomy id to kegg abb name for HCP method
     originaList = []
     inputlist = []
     dic_trans_list = {}
+    recovery_dic = {}
     for line in input:
         st = line.strip()
         originaList.append(st)
     originaList = removeEmptyStr(originaList)
     spelist = os.path.join(dbpath, "support_hcp_organism.txt")
 
-    if originaList[0].isnumeric():
+    if is_number(originaList[0]):
         with open(spelist) as f:
             for line in f:
                 tem = line.strip().split('\t')
                 dic_trans_list[tem[1]] = tem[0]
         for tax in originaList:
             inputlist.append(dic_trans_list[tax])
+            recovery_dic[dic_trans_list[tax]] = tax
     else:
         inputlist = originaList
 
-    return inputlist
+    return inputlist, recovery_dic
 
 def checkKeggOrganism(input):
     """
@@ -123,14 +129,14 @@ Check input organisms list with KEGG database
     :param input: a open file list
     :return: a list contain organisms can be use construct phy tree
     """
-    input_trans = trans_tax_to_abb_for_hcp(input)
+    input_trans, recovery_dic = trans_tax_to_abb_for_hcp(input)
     inputlist, mislist = check_organism(input_trans, "support_hcp_organism.txt")
     if mislist:
         for misabb in mislist:
             logchecking.info("The species: {0} can't match in KEGG protein index database".format(misabb))
         logchecking.warning(
             "These species can't match in KEGG protein index database so removed and reconstruct phylogenetic tree.")
-    return inputlist
+    return inputlist, recovery_dic
 
 
 def checkSilvaOrganism(input):
@@ -190,3 +196,17 @@ def readIputFile(inputfile):
 
     org_name_check = removeEmptyStr(org_name)
     return org_name_check
+
+def recovery(file_path,re_dic):
+    all_pre_file = list(filter(lambda f: not f.startswith('.'), os.listdir(file_path)))
+    for i in all_pre_file:
+        file_data = ''
+        abs_file = os.path.join(file_path,i)
+        with open(abs_file,"r",encoding="utf-8") as f:
+            for line in f:
+                if line.startswith('>'):
+                    name = line.strip()[1:]
+                    line = line.replace(name, re_dic[name])
+                file_data += line
+        with open(abs_file,"w",encoding="utf-8") as f2:
+            f2.write(file_data)

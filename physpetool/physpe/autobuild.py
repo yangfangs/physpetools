@@ -36,7 +36,7 @@ from physpetool.phylotree.dotrimal import dotrimal
 from physpetool.phylotree.log import getLogging, setlogdir
 from physpetool.phylotree.retrievessurna import retrieve16srna
 from physpetool.phylotree.retrieveprotein import doretrieve
-from physpetool.utils.checkinputfile import checkKeggOrganism, checkSilvaOrganism, checkFile
+from physpetool.utils.checkinputfile import checkKeggOrganism, checkSilvaOrganism, checkFile, recovery
 import argparse
 import os
 
@@ -206,9 +206,10 @@ def starting_hcp(in_put, out_put,
                  args_fasttree, args_fasttree_p,
                  args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
-    hcp_input = checkKeggOrganism(in_put)
+    hcp_input, recovery_dic = checkKeggOrganism(in_put)
     out_retrieve = doretrieve(hcp_input, out_put)
-
+    if not recovery_dic == {}:
+        recovery(out_retrieve,recovery_dic)
     # set default aligned by muscle if not specify clustalw
     if args_clustalw:
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
@@ -243,8 +244,11 @@ def starting_srna(in_put, out_put,
                   args_fasttree, args_fasttree_p,
                   args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
-    ssu_input = checkSilvaOrganism(in_put)
+    ssu_input,recovery_dic = checkSilvaOrganism(in_put)
     out_retrieve = retrieve16srna(ssu_input, out_put)
+    if not recovery_dic == {}:
+        recovery(out_retrieve,recovery_dic)
+
     # set default aligned by muscle if not specify clustalw or mafft
     if args_clustalw:
         out_alg = doclustalw(out_retrieve, out_put, args_clustalw_p)
@@ -282,8 +286,10 @@ def starting_ehcp(in_put, out_put,
                   args_fasttree, args_fasttree_p,
                   args_thread, args_extenddata):
     '''reconstruct phylogenetic tree by ehcp method'''
-    hcp_input = checkKeggOrganism(in_put)
+    hcp_input, recovery_dic = checkKeggOrganism(in_put)
     out_retrieve = doretrieve(hcp_input, out_put)
+    if not recovery_dic == {}:
+        recovery(out_retrieve,recovery_dic)
     retrieve_pro = os.listdir(out_retrieve)
     for reline in retrieve_pro:
         fw_name = os.path.join(out_retrieve, reline)
@@ -328,8 +334,10 @@ def starting_esrna(in_put, out_put,
                    args_thread, args_extenddata):
     '''reconstruct phylogenetic tree by ssu rna extend method'''
     extend_check = checkFile(args_extenddata)
-    ssu_input = checkSilvaOrganism(in_put)
+    ssu_input,recovery_dic = checkSilvaOrganism(in_put)
     out_retrieve = retrieve16srna(ssu_input, out_put)
+    if not recovery_dic == {}:
+        recovery(out_retrieve,recovery_dic)
     retrieve_srna_path = os.path.join(out_retrieve, 'rna_sequence.fasta')
 
     fw = open(retrieve_srna_path, 'ab')

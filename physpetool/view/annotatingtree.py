@@ -124,7 +124,7 @@ def colorRange(input, output, taxon):
     # writ file name
     fw_name = "range_color_by_" + taxon + ".txt"
     open_path = os.path.join(output, fw_name)
-    fw = open(open_path, 'wb')
+    fw = open(open_path, 'w')
     # write annotation range head
     fw.write(cite_range)
     fw.write('\n')
@@ -158,7 +158,7 @@ def colorLabel(input, output, taxon):
     # writ file name
     fw_name = "labels_color_by_" + taxon + ".txt"
     open_path = os.path.join(output, fw_name)
-    fw = open(open_path, 'wb')
+    fw = open(open_path, 'w')
     # write annotation range head
     fw.write(cite_label)
     fw.write('\n')

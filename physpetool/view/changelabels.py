@@ -25,6 +25,7 @@ Change labels from abbreviation names to full names.
 """
 
 from physpetool.database.dbpath import getlocaldbpath
+from physpetool.utils.checkIsNum import is_number
 from physpetool.utils.checkinputfile import checkFile, readIputFile
 import os
 
@@ -80,14 +81,14 @@ Change labels
         os.makedirs(output)
     fw_name = "labels.txt"
     open_path = os.path.join(output, fw_name)
-    fw = open(open_path, 'wb')
+    fw = open(open_path, 'w')
     fw.write(cite)
     fw.write('\n')
     fw.write('LABELS\nSEPARATOR TAB\nDATA\n')
     inputfile = checkFile(input)
     input_list = readIputFile(inputfile)
 
-    if input_list[0].isnumerice():
+    if is_number(input_list[0]):
         tax_list = taxlistid()
     else:
         tax_list = taxlist()
@@ -95,8 +96,6 @@ Change labels
         for j in tax_list:
             if i == j[0]:
                 fw.write("{0}\t{1}\n".format(j[0], j[1]))
-            else:
-                pass
     fw.close()
     print("Change abbreviation names to full names complete")
     print("change labels file was save in {0}".format(open_path))

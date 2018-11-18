@@ -32,11 +32,10 @@ import os
 connect = ftplib.FTP("173.255.208.244")
 connect.login('anonymous')
 connect.cwd('/pub/database16s/')
-connect.dir()
 os.chdir('/home/yangfang/')
-downloadfilname = "aaa.fasta"
+downloadfilname = "999421.fasta"
 f = open(downloadfilname, 'wb')
-ftpfilename = "aaa.fasta"
+ftpfilename = "999421.fasta"
 remoteFileName = 'RETR ' + os.path.basename(ftpfilename)
 connect.retrbinary(remoteFileName, f.write, 1024)
 f.close()

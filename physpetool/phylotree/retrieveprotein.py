@@ -35,7 +35,7 @@ from physpetool.phylotree.log import getLogging
 from physpetool.tools.keggapi import getprotein
 
 logretrieveprotein = getLogging('KEGG INDEX DB')
-
+KEGGDB = "KEGG_DB_2.0.db"
 
 def getspecies(name, colname):
     """
@@ -45,7 +45,7 @@ def getspecies(name, colname):
     :return: a list contain protein index can be retrieved and a match ko list (is a ko id list)
     """
     dbpath = getlocaldbpath()
-    db = os.path.join(dbpath, "KEGG_DB_1.0.db")
+    db = os.path.join(dbpath, KEGGDB)
     relist = []
     match_ko_name = []
     conn = sqlite3.connect(db)
@@ -70,7 +70,7 @@ def getspecies(name, colname):
 def getcolname():
     """get BD colnames"""
     dbpath = getlocaldbpath()
-    db = os.path.join(dbpath, "KEGG_DB_1.0.db")
+    db = os.path.join(dbpath, KEGGDB)
     conn = sqlite3.connect(db)
     conn.text_factory = str
     c = conn.cursor()

@@ -68,9 +68,14 @@ Staring run combine
     """
     pwd = os.getcwd()
     out_put = os.path.join(pwd, args.outputfile)
+
+    if os.path.isfile(args.inputfile):
+        args_input = args.inputfile
+    else:
+        args_input = os.path.join(pwd, args.inputfile)
     if args.colorrange:
-        colorRange(args.inputfile, out_put, args.assign)
+        colorRange(args_input, out_put, args.assign)
     elif args.labels:
-        annotatingLabels(args.inputfile, args.outputfile)
+        annotatingLabels(args_input, args.outputfile)
     elif args.colorlabel:
-        colorLabel(args.inputfile, out_put, args.assign)
+        colorLabel(args_input, out_put, args.assign)
