@@ -25,6 +25,7 @@ Module for annotating tree.
 """
 
 from physpetool.database.dbpath import getlocaldbpath
+from physpetool.utils.checkIsNum import is_number
 from physpetool.utils.checkinputfile import checkFile, readIputFile
 from physpetool.utils.colorconvert import random_color
 import os
@@ -76,6 +77,16 @@ def readTaxDb():
     return organism_list
 
 
+def readTaxDb_id():
+    orgpath = os.path.join(dbpath, "silva.txt")
+    organism_list = []
+    with open(orgpath) as f:
+        for org in f:
+            each_org = org.strip().split('\t')
+            organism_list.append([each_org[0], each_org[-1]])
+    return organism_list
+
+
 def matchInput(input_organism, taxon):
     """
     Match input file with DB
@@ -83,7 +94,10 @@ def matchInput(input_organism, taxon):
     :param taxon:
     :return: a match list and annotation dict use annotation
     """
-    organism_list = readTaxDb()
+    if is_number(input_organism[0]):
+        organism_list = readTaxDb_id()
+    else:
+        organism_list = readTaxDb()
     # choice range
     taxon_dict = {'kingdom': 0, 'phylum': 1, 'class': 2, 'order': 3}
     id = taxon_dict.get(taxon)

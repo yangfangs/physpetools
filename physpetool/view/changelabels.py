@@ -61,7 +61,7 @@ def taxlist():
 
 
 def taxlistid():
-    orgpath = os.path.join(dbpath, "id_to_latin_name.txt")
+    orgpath = os.path.join(dbpath, "silva.txt")
     organism_list = []
     with open(orgpath) as f:
         for org in f:

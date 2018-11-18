@@ -79,7 +79,7 @@ transform kegg abb name to ncbi taxonomy id for SURNA method
         originaList.append(st)
     originaList = removeEmptyStr(originaList)
 
-    spelist = os.path.join(dbpath, "support_srna_organism.txt")
+    spelist = os.path.join(dbpath, "support_hcp_organism.txt")
 
     if not is_number(originaList[0]):
         with open(spelist) as f:
@@ -145,7 +145,7 @@ Check input organisms list with SILVA database
     :param input: a open file list
     :return: a list contain organisms can be use construct phy tree
     """
-    input_trans = trans_abb_2_tax_for_surna(input)
+    input_trans,recovery_dic = trans_abb_2_tax_for_surna(input)
     inputlist, mislist = check_organism(input_trans, "support_srna_organism.txt")
     if mislist:
         for misabb in mislist:
@@ -153,7 +153,7 @@ Check input organisms list with SILVA database
         logchecking.warning(
             "These species can't match in SSU rRNA database so removing and reconstructing phylogenetic tree.")
 
-    return inputlist
+    return inputlist, recovery_dic
 
 
 def removeEmptyStr(all):
@@ -202,11 +202,11 @@ def recovery(file_path,re_dic):
     for i in all_pre_file:
         file_data = ''
         abs_file = os.path.join(file_path,i)
-        with open(abs_file,"r",encoding="utf-8") as f:
+        with open(abs_file,"r") as f:
             for line in f:
                 if line.startswith('>'):
                     name = line.strip()[1:]
                     line = line.replace(name, re_dic[name])
                 file_data += line
-        with open(abs_file,"w",encoding="utf-8") as f2:
+        with open(abs_file,"w") as f2:
             f2.write(file_data)
