@@ -106,7 +106,17 @@
                 <div class="col-md-9" role="main">
 
 <h3 id="1-what-is-the-input-of-physpetree">1. What is the input of PhySpeTree?</h3>
-<p>Users only need to prepare a TXT file containing <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG</a> abbreviated species names. For example, <a href="https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt">organism_example_list</a>.</p>
+<ul>
+<li>
+<p>Users only need to prepare a TXT file containing <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG</a> abbreviated species names.
+For example, <a href="https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt">organism_example_list</a>.</p>
+</li>
+<li>
+<p>Now, PhySpeTree not only supported the user input three- or four-letter organism codes (KEGG database organism codes)
+but also the NCBI taxonomy id (for example human taxonomy id is 9606).
+You can search taxonomy id form <a href="https://www.ncbi.nlm.nih.gov/taxonomy">NCBI taxonomy database</a>.</p>
+</li>
+</ul>
 <h3 id="2-how-to-explain-physpetree-outputs">2. How to explain PhySpeTree outputs?</h3>
 <p>PhySpeTree returns two folders, <code>Outdata</code> contains the output species tree and <code>temp</code> includes temporary data. Files in <code>temp</code> can be used to check the quality of outputs in each step. If HCP method (<code>--hcp</code>) is selected, the <code>temp</code> folder includes:</p>
 <ul>
@@ -293,7 +303,7 @@
 </tbody>
 </table>
 <h3 id="4-how-are-ssu-rran-created">4. How are SSU rRAN created?</h3>
-<p>The SSU rRAN sequences are created from the <a href="https://www.arb-silva.de/">SILVA</a> database (123.1 release). Sequences haven been truncated, which means unaligned nucleotides are removed.</p></div>
+<p>The SSU rRAN sequences are created from the <a href="https://www.arb-silva.de/">SILVA</a> database (Release 132, Released: 13.12.2017). Sequences haven been truncated, which means unaligned nucleotides are removed.</p></div>
         </div>
 
         <footer class="col-md-12">
