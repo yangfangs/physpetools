@@ -727,7 +727,7 @@ Status: Downloaded newer image for yangfangs/physpetree:v0.3.4
 REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
 yangfangs/physpetree   v0.3.4              ebcdaff79f7c        41 hours ago        683MB
 ```
-### 3. run PhySpeTree image
+### 4. run PhySpeTree image
 
 * You need to run docker with an interactive bash and mount it in a local directory with a working directory in docker (PhySpeTree_work_dir).
 
@@ -735,7 +735,7 @@ yangfangs/physpetree   v0.3.4              ebcdaff79f7c        41 hours ago     
 [yangfang@localhost ~]$ docker run -it -v /home/yangfang/work_dir/:/PhySpeTree_work_dir yangfangs/physpetree:v0.3.4 bash
 root@2d68776ac9ad:/PhySpeTree_work_dir#
 ```
-### 3. Run PhySpeTree in Docker
+### 5. Run PhySpeTree in Docker
 
 * Download test file
 

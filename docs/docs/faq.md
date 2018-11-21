@@ -1,6 +1,11 @@
 ### 1. What is the input of PhySpeTree?
 
-Users only need to prepare a TXT file containing [KEGG](http://www.genome.jp/kegg/catalog/org_list.html) abbreviated species names. For example, [organism_example_list](https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt).
+* Users only need to prepare a TXT file containing [KEGG](http://www.genome.jp/kegg/catalog/org_list.html) abbreviated species names.
+For example, [organism_example_list](https://gitlab.com/xiaoxiaoyang/physpetools/raw/master/examples/organism_example_list.txt).
+
+* Now, PhySpeTree not only supported the user input three- or four-letter organism codes (KEGG database organism codes)
+but also the NCBI taxonomy id (for example human taxonomy id is 9606).
+You can search taxonomy id form [NCBI taxonomy database](https://www.ncbi.nlm.nih.gov/taxonomy).
 
 ### 2. How to explain PhySpeTree outputs?
 
@@ -62,5 +67,5 @@ Ribosomal protein S13                               |   K02953           |   K02
 
 ### 4. How are SSU rRAN created?
 
-The SSU rRAN sequences are created from the [SILVA](<https://www.arb-silva.de/>) database (123.1 release). Sequences haven been truncated, which means unaligned nucleotides are removed.
+The SSU rRAN sequences are created from the [SILVA](<https://www.arb-silva.de/>) database (Release 132, Released: 13.12.2017). Sequences haven been truncated, which means unaligned nucleotides are removed.
 
