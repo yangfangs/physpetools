@@ -704,6 +704,83 @@ Now loading data and constructing phylogenetic tree......
 
 ![extend_pro](img/extend_pro.png)
 
+## Run PhySpeTree in other operating systems
+
+### 1. Install the Docker in your operating system
+
+* If you want to use PhySpeTree on other platforms, above all need to install docker on the appropriate platform.
+* For Windows OS, you can [install Docker for Windows](https://docs.docker.com/docker-for-windows/install/).
+* For Mac OS, you can [install Docker for Mac](https://docs.docker.com/docker-for-mac/install/).
+
+### 2. Pull the PhySpeTree image
+
+```bash
+$ docker pull yangfangs/physpetree:v0.3.4
+[yangfang@localhost ~]$ docker pull yangfangs/physpetree:v0.3.4
+v0.3.4: Pulling from yangfangs/physpetree
+Digest: sha256:2fef685db22bd18ae0595884bfd6ba7409b15fbb6b7c579e1817ac007cc46cfe
+Status: Downloaded newer image for yangfangs/physpetree:v0.3.4
+```
+### 3. check PhySpeTree image
+```bash
+[yangfang@localhost ~]$ docker images
+REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
+yangfangs/physpetree   v0.3.4              ebcdaff79f7c        41 hours ago        683MB
+```
+### 3. run PhySpeTree image
+
+* You need to run docker with an interactive bash and mount it in a local directory with a working directory in docker (PhySpeTree_work_dir).
+
+```bash
+[yangfang@localhost ~]$ docker run -it -v /home/yangfang/work_dir/:/PhySpeTree_work_dir yangfangs/physpetree:v0.3.4 bash
+root@2d68776ac9ad:/PhySpeTree_work_dir#
+```
+### 3. Run PhySpeTree in Docker
+
+* Download test file
+
+```bash
+root@2d68776ac9ad:/PhySpeTree_work_dir# wget "https://yangfangs.github.io/physpetools/example/organism_example_list.txt"
+--2018-11-21 02:28:28--  https://yangfangs.github.io/physpetools/example/organism_example_list.txt
+Resolving yangfangs.github.io (yangfangs.github.io)... 185.199.108.153, 185.199.109.153, 185.199.111.153, ...
+Connecting to yangfangs.github.io (yangfangs.github.io)|185.199.108.153|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 39 [text/plain]
+Saving to: 'organism_example_list.txt'
+
+organism_example_list.txt    100%[==============================================>]      39  --.-KB/s    in 0s
+
+2018-11-21 02:28:30 (2.00 MB/s) - 'organism_example_list.txt' saved [39/39]
+
+```
+* run PhySpeTree
+
+```bash
+root@2d68776ac9ad:/PhySpeTree_work_dir# PhySpeTree autobuild -i organism_example_list.txt --hcp
+Loading organism's names success.....
+
+The result are store in:Outdata
+
+Now loading data and constructing phylogenetic tree......
+2018-11-21 02:30:29,336 KEGG INDEX DB INFO: Read organisms names success
+2018-11-21 02:30:30,652 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L1' was successful store in p1.fasta file
+2018-11-21 02:30:31,440 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'DNA-directed RNA polymerase subunit alpha' was successful store in p2.fasta file
+2018-11-21 02:30:32,260 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Leucyl-tRNA synthetase' was successful store in p3.fasta file
+2018-11-21 02:30:33,078 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Metal-dependent proteases with chaperone activity' was successful store in p4.fasta file
+2018-11-21 02:30:33,896 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Phenylalanine-tRNA synthethase alpha subunit' was successful store in p5.fasta file
+2018-11-21 02:30:35,739 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Predicted GTPase probable translation factor' was successful store in p6.fasta file
+2018-11-21 02:30:36,222 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L11' was successful store in p7.fasta file
+2018-11-21 02:30:36,866 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L13
+.....
+```
+
+* All output result are in local directory, named ```work_dir``
+```
+[yangfang@localhost ~]$ cd work_dir/
+[yangfang@localhost work_dir]$ ls
+log.log  organism_example_list.txt  Outdata  temp
+```
+
 
 [1]: example/191speciesnames.txt
 [2]: http://www.genome.jp/kegg/catalog/org_list.html

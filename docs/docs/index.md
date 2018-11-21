@@ -1,7 +1,7 @@
 
 # PhySpeTree: automatically reconstructing phylogenetic species tree
 
-**PhySpeTree is implemented in Python 2.7, designed for Linux systems.**
+**PhySpeTree is implemented in Python language, designed for Linux systems.**
 
 ## Introduction
 
