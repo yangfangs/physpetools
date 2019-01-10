@@ -48,7 +48,7 @@ by [docker][https://www.docker.com/] technology.
 * When Docker are running in your operating system, you can use Docker command to pull the PhySpeTree latest version image as follow:
 
 ```bash
-$ docker pull yangfangs/physpetree:v0.3.4
+$ docker pull yangfangs/physpetree:v0.3.5
 ```
 
 
