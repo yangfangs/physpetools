@@ -44,7 +44,7 @@ VERSION_DESC = (
 def version_infor():
     muscle_info = 'v3.8.31'
     clustalw2_info = '2.1'
-    mafft_info = 'v7.310'
+    mafft_info = 'v7.407'
     trimal_info = '1.2rev59'
     gblocks_info = '0.91b'
     raxml_info = 'v8.2.3'
