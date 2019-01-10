@@ -98,6 +98,10 @@ Arguments parse
                               default=False, help='Reconstruct phylogenetic tree by FastTree.')
     advance_args.add_argument('--fasttree_p', action='store', dest='fasttree_parameter',
                               default='', help='Set FastTree advance parameters. ')
+    advance_args.add_argument('--iqtree', action='store_true', dest='iqtree',
+                              default=False, help='Reconstruct phylogenetic tree by iqtree.')
+    advance_args.add_argument('--iqtree_p', action='store', dest='iqtree_parameter',
+                              default='', help='Set iqtree advance parameters. ')
 
 
 def starting(args):
@@ -127,6 +131,7 @@ Staring run build
                    args.trimal, args.trimal_parameter,
                    args.raxml, args.raxml_parameter,
                    args.fasttree, args.fasttree_parameter,
+                   args.iqtree, args.iqtree_parameter,
                    args.thread)
     elif args.HCP:
         setlogdir(out_put)
@@ -138,4 +143,5 @@ Staring run build
                   args.trimal, args.trimal_parameter,
                   args.raxml, args.raxml_parameter,
                   args.fasttree, args.fasttree_parameter,
+                  args.iqtree, args.iqtree_parameter,
                   args.thread)

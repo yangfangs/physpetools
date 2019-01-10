@@ -30,6 +30,7 @@ from physpetool.convert.fasta2phy import fasta2phy
 from physpetool.phylotree.doclustalw import doclustalw_file, doclustalw
 from physpetool.phylotree.dofasttree import doFastTree
 from physpetool.phylotree.dogblocks import dogblocks
+from physpetool.phylotree.doiqtree import doiqtree
 from physpetool.phylotree.domafft import domafft_file, domafft
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.doraxml import doraxml
@@ -55,6 +56,7 @@ def build_hcp(in_put, out_put,
               args_trimal, args_trimal_p,
               args_raxml, args_raxml_p,
               args_fasttree, args_fasttree_p,
+              args_iqtree,args_iqtree_p,
               args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
     out_retrieve = in_put
@@ -78,6 +80,8 @@ def build_hcp(in_put, out_put,
     # reconstruct tree
     if args_fasttree:
         doFastTree(out_f2p, out_put, args_fasttree_p, args_thread)
+    elif args_iqtree:
+        doiqtree(out_f2p, out_put, args_iqtree_p, args_thread)
     elif args_raxml:
         doraxml(out_f2p, out_put, args_raxml_p, args_thread)
 
@@ -90,6 +94,7 @@ def build_srna(in_put, out_put,
                args_trimal, args_trimal_p,
                args_raxml, args_raxml_p,
                args_fasttree, args_fasttree_p,
+               args_iqtree,args_iqtree_p,
                args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
     out_retrieve = in_put
@@ -113,6 +118,8 @@ def build_srna(in_put, out_put,
     if args_fasttree:
         args_fasttree_p_add = "-nt " + args_fasttree_p.lstrip()
         doFastTree(out_f2p, out_put, args_fasttree_p_add, args_thread)
+    elif args_iqtree:
+        doiqtree(out_f2p, out_put, args_iqtree_p, args_thread)
     elif args_raxml:
         if args_raxml_p == raxmlpara_pro:
             args_raxml_p = raxmlpara_dna

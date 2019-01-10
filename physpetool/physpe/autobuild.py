@@ -26,6 +26,7 @@ script as pipeline.
 """
 from physpetool.phylotree.doclustalw import doclustalw_file, doclustalw
 from physpetool.phylotree.dofasttree import doFastTree
+from physpetool.phylotree.doiqtree import doiqtree
 from physpetool.phylotree.domafft import domafft, domafft_file
 from physpetool.phylotree.domuscle import domuscle_file, domuscle
 from physpetool.phylotree.dogblocks import dogblocks
@@ -120,6 +121,10 @@ Argument parse
                               default=False, help='Reconstruct phylogenetic tree by FastTree.')
     advance_args.add_argument('--fasttree_p', action='store', dest='fasttree_parameter',
                               default='', help='Set FastTree advance parameters. ')
+    advance_args.add_argument('--iqtree', action='store_true', dest='iqtree',
+                              default=False, help='Reconstruct phylogenetic tree by iqtree.')
+    advance_args.add_argument('--iqtree_p', action='store', dest='iqtree_parameter',
+                              default='', help='Set iqtree advance parameters. ')
 
 
 def starting(args):
@@ -156,6 +161,7 @@ starting run reconstruct tree
                       args.trimal, args.trimal_parameter,
                       args.raxml, args.raxml_parameter,
                       args.fasttree, args.fasttree_parameter,
+                      args.iqtree, args.iqtree_parameter,
                       args.thread)
 
     # Reconstruct phylogenetic tree by extend highly conserved proteins.
@@ -169,6 +175,7 @@ starting run reconstruct tree
                       args.trimal, args.trimal_parameter,
                       args.raxml, args.raxml_parameter,
                       args.fasttree, args.fasttree_parameter,
+                      args.iqtree, args.iqtree_parameter,
                       args.thread, args.extenddata)
 
     # Reconstruct phylogenetic tree by extend ssu rna method.
@@ -182,6 +189,7 @@ starting run reconstruct tree
                        args.trimal, args.trimal_parameter,
                        args.raxml, args.raxml_parameter,
                        args.fasttree, args.fasttree_parameter,
+                       args.iqtree, args.iqtree_parameter,
                        args.thread, args.extenddata)
     # Reconstruct phylogenetic tree by highly conserved proteins.
     elif args.HCP:
@@ -194,6 +202,7 @@ starting run reconstruct tree
                  args.trimal, args.trimal_parameter,
                  args.raxml, args.raxml_parameter,
                  args.fasttree, args.fasttree_parameter,
+                 args.iqtree, args.iqtree_parameter,
                  args.thread)
 
 def starting_hcp(in_put, out_put,
@@ -204,6 +213,7 @@ def starting_hcp(in_put, out_put,
                  args_trimal, args_trimal_p,
                  args_raxml, args_raxml_p,
                  args_fasttree, args_fasttree_p,
+                 args_iqtree,args_iqtree_p,
                  args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
     hcp_input, recovery_dic = checkKeggOrganism(in_put)
@@ -230,6 +240,8 @@ def starting_hcp(in_put, out_put,
     # reconstruct tree
     if args_fasttree:
         doFastTree(out_f2p, out_put, args_fasttree_p, args_thread)
+    elif args_iqtree:
+        doiqtree(out_f2p, out_put, args_iqtree_p, args_thread)
     elif args_raxml:
         doraxml(out_f2p, out_put, args_raxml_p, args_thread)
 
@@ -242,6 +254,7 @@ def starting_srna(in_put, out_put,
                   args_trimal, args_trimal_p,
                   args_raxml, args_raxml_p,
                   args_fasttree, args_fasttree_p,
+                  args_iqtree,args_iqtree_p,
                   args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
     ssu_input,recovery_dic = checkSilvaOrganism(in_put)
@@ -270,6 +283,8 @@ def starting_srna(in_put, out_put,
     if args_fasttree:
         args_fasttree_p_add = "-nt " + args_fasttree_p.lstrip()
         doFastTree(out_f2p, out_put, args_fasttree_p_add, args_thread)
+    elif args_iqtree:
+        doiqtree(out_f2p, out_put, args_iqtree_p, args_thread)
     elif args_raxml:
         if args_raxml_p is raxmlpara_pro:
             args_raxml_p = raxmlpara_dna
@@ -284,6 +299,7 @@ def starting_ehcp(in_put, out_put,
                   args_trimal, args_trimal_p,
                   args_raxml, args_raxml_p,
                   args_fasttree, args_fasttree_p,
+                  args_iqtree,args_iqtree_p,
                   args_thread, args_extenddata):
     '''reconstruct phylogenetic tree by ehcp method'''
     hcp_input, recovery_dic = checkKeggOrganism(in_put)
@@ -319,6 +335,8 @@ def starting_ehcp(in_put, out_put,
     # reconstruct tree
     if args_fasttree:
         doFastTree(out_f2p, out_put, args_fasttree_p, args_thread)
+    elif args_iqtree:
+        doiqtree(out_f2p, out_put, args_iqtree_p, args_thread)
     elif args_raxml:
         doraxml(out_f2p, out_put, args_raxml_p, args_thread)
 
@@ -331,6 +349,7 @@ def starting_esrna(in_put, out_put,
                    args_trimal, args_trimal_p,
                    args_raxml, args_raxml_p,
                    args_fasttree, args_fasttree_p,
+                   args_iqtree,args_iqtree_p,
                    args_thread, args_extenddata):
     '''reconstruct phylogenetic tree by ssu rna extend method'''
     extend_check = checkFile(args_extenddata)
@@ -366,6 +385,8 @@ def starting_esrna(in_put, out_put,
     if args_fasttree:
         args_fasttree_p_add = "-nt " + args_fasttree_p.lstrip()
         doFastTree(out_f2p, out_put, args_fasttree_p_add, args_thread)
+    elif args_iqtree:
+        doiqtree(out_f2p, out_put, args_iqtree_p, args_thread)
     elif args_raxml:
         if args_raxml_p is raxmlpara_pro:
             args_raxml_p = raxmlpara_dna

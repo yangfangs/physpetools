@@ -272,6 +272,15 @@ The default option:
     
 > Set FastTree advanced parameters, please see [FastTree Helps](http://www.microbesonline.org/fasttree/).
 
+
+**--iqtree**
+
+> Reconstruct species tree by iqtree.
+
+**--iqtree_p**
+
+> Set iqtree advanced parameters, please see [IQ-TREE](http://www.microbesonline.org/fasttree/).
+
 ## build
 
 The `build` module is used to reconstruct species trees with manually prepared sequences. Advanced options are the same as `autobuild` module.

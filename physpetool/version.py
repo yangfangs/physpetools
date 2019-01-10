@@ -26,7 +26,7 @@
 The physpe version and call software in physpe  version and citation.
 
 """
-version = '0.3.4'
+version = '0.3.5'
 
 VERSION_DESC = (
     """
@@ -49,6 +49,7 @@ def version_infor():
     gblocks_info = '0.91b'
     raxml_info = 'v8.2.3'
     fasttree_info = '2.1.9'
+    iqtree_info = '1.6.9'
     author_info = 'Author: Yang Fang\n'
     print (VERSION_DESC)
     print (author_info)
@@ -64,6 +65,8 @@ def version_infor():
     print (citation['RAxML'])
     print ('FastTree version: '), (fasttree_info + '\ncite:')
     print (citation['FastTree'])
+    print ('iqtree version: '), (iqtree_info + '\ncite:')
+    print (citation['iqtree'])
     print ('Gblocks version: '), (gblocks_info + '\ncite:')
     print (citation['Gblocks'])
     print ('trimal versin: '), (trimal_info + '\ncite:')
@@ -95,7 +98,10 @@ citation = {
       2009, 25(15): 1972-1973.""",
     'mafft': u"""Katoh K, Standley D M. MAFFT multiple sequence alignment software version 7:
      improvements in performance and usability[J]. Molecular biology and evolution, 2013, 30(4):
-      772-780."""
+      772-780.""",
+     'iqtree': u"""Nguyen L T, Schmidt H A, von Haeseler A, et al. IQ-TREE: a fast and effective 
+     stochastic algorithm for estimating maximum-likelihood phylogenies[J]. Molecular biology and 
+     evolution, 2014, 32(1): 268-274."""
 }
 
 if __name__ == '__main__':

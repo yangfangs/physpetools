@@ -3,7 +3,7 @@ PhySpeTree: automatically reconstructing phylogenetic species tree
 
 |PyPI version| |Docs| |License|
 
-**PhySpeTree is implemented in Python 2.7, designed for Linux system.**
+**PhySpeTree is implemented in Python language (supports Python2.7+ and Python3+), designed for Linux systems.**
 
 **Documents**: `PhySpeTree documentation <https://yangfangs.github.io/physpetools>`_.
 
@@ -225,6 +225,13 @@ Here is an example of setting RAxML advanced options by `--raxml_p`:
 --fasttree_p
     Set FastTree advance parameters,
     please see `FastTree <http://www.microbesonline.org/fasttree/>`_.
+
+--iqtree
+    Reconstruct phylogenetic tree by iqtree.
+
+--iqtree_p
+    Set iqtree advance parameters,
+    please see `IQ-TREE <http://www.iqtree.org/doc/>`_.
 
 build
 ^^^^^^^^^^^^^^^^^^^^
