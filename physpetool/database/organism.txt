@@ -12,7 +12,10 @@ T04641	rbb	Rhinopithecus bieti (black snub-nosed monkey)	Eukaryotes;Animals;Vert
 T03264	cjc	Callithrix jacchus (white-tufted-ear marmoset)	Eukaryotes;Animals;Vertebrates;Mammals
 T04350	sbq	Saimiri boliviensis boliviensis (Bolivian squirrel monkey)	Eukaryotes;Animals;Vertebrates;Mammals
 T01002	mmu	Mus musculus (mouse)	Eukaryotes;Animals;Vertebrates;Mammals
+T05910	mcal	Mus caroli (Ryukyu mouse)	Eukaryotes;Animals;Vertebrates;Mammals
+T05929	mpah	Mus pahari (shrew mouse)	Eukaryotes;Animals;Vertebrates;Mammals
 T01003	rno	Rattus norvegicus (rat)	Eukaryotes;Animals;Vertebrates;Mammals
+T05884	mun	Meriones unguiculatus (Mongolian gerbil)	Eukaryotes;Animals;Vertebrates;Mammals
 T02813	cge	Cricetulus griseus (Chinese hamster)	Eukaryotes;Animals;Vertebrates;Mammals
 T03372	ngi	Nannospalax galili (Upper Galilee mountains blind mole rat)	Eukaryotes;Animals;Vertebrates;Mammals
 T02812	hgl	Heterocephalus glaber (naked mole rat)	Eukaryotes;Animals;Vertebrates;Mammals
@@ -20,15 +23,19 @@ T04791	ccan	Castor canadensis (American beaver)	Eukaryotes;Animals;Vertebrates;M
 T03373	ocu	Oryctolagus cuniculus (rabbit)	Eukaryotes;Animals;Vertebrates;Mammals
 T02978	tup	Tupaia chinensis (Chinese tree shrew)	Eukaryotes;Animals;Vertebrates;Mammals
 T01007	cfa	Canis familiaris (dog)	Eukaryotes;Animals;Vertebrates;Mammals
+T05911	vvp	Vulpes vulpes (red fox)	Eukaryotes;Animals;Vertebrates;Mammals
 T01329	aml	Ailuropoda melanoleuca (giant panda)	Eukaryotes;Animals;Vertebrates;Mammals
 T03271	umr	Ursus maritimus (polar bear)	Eukaryotes;Animals;Vertebrates;Mammals
+T05909	uah	Ursus arctos horribilis	Eukaryotes;Animals;Vertebrates;Mammals
 T05148	oro	Odobenus rosmarus divergens (Pacific walrus)	Eukaryotes;Animals;Vertebrates;Mammals
+T05871	elk	Enhydra lutris kenyoni (northern sea otter)	Eukaryotes;Animals;Vertebrates;Mammals
 T02385	fca	Felis catus (domestic cat)	Eukaryotes;Animals;Vertebrates;Mammals
 T02988	ptg	Panthera tigris altaica (Amur tiger)	Eukaryotes;Animals;Vertebrates;Mammals
 T04657	aju	Acinonyx jubatus (cheetah)	Eukaryotes;Animals;Vertebrates;Mammals
 T01008	bta	Bos taurus (cow)	Eukaryotes;Animals;Vertebrates;Mammals
 T02919	bom	Bos mutus (wild yak)	Eukaryotes;Animals;Vertebrates;Mammals
 T04792	biu	Bos indicus (zebu cattle)	Eukaryotes;Animals;Vertebrates;Mammals
+T05912	bbub	Bubalus bubalis (water buffalo)	Eukaryotes;Animals;Vertebrates;Mammals
 T02909	phd	Pantholops hodgsonii (chiru)	Eukaryotes;Animals;Vertebrates;Mammals
 T02910	chx	Capra hircus (goat)	Eukaryotes;Animals;Vertebrates;Mammals
 T03117	oas	Ovis aries (sheep)	Eukaryotes;Animals;Vertebrates;Mammals
@@ -38,18 +45,22 @@ T04642	cdk	Camelus dromedarius (Arabian camel)	Eukaryotes;Animals;Vertebrates;Ma
 T03086	bacu	Balaenoptera acutorostrata scammoni (minke whale)	Eukaryotes;Animals;Vertebrates;Mammals
 T03090	lve	Lipotes vexillifer (Yangtze River dolphin)	Eukaryotes;Animals;Vertebrates;Mammals
 T05247	oor	Orcinus orca (killer whale)	Eukaryotes;Animals;Vertebrates;Mammals
+T05885	dle	Delphinapterus leucas (beluga whale)	Eukaryotes;Animals;Vertebrates;Mammals
 T01058	ecb	Equus caballus (horse)	Eukaryotes;Animals;Vertebrates;Mammals
 T04644	epz	Equus przewalskii (Przewalski's horse)	Eukaryotes;Animals;Vertebrates;Mammals
 T04645	eai	Equus asinus (ass)	Eukaryotes;Animals;Vertebrates;Mammals
 T02920	myb	Myotis brandtii (Brandt's bat)	Eukaryotes;Animals;Vertebrates;Mammals
 T02992	myd	Myotis davidii	Eukaryotes;Animals;Vertebrates;Mammals
+T05883	mna	Miniopterus natalensis	Eukaryotes;Animals;Vertebrates;Mammals
 T04661	hai	Hipposideros armiger (great roundleaf bat)	Eukaryotes;Animals;Vertebrates;Mammals
 T04863	rss	Rhinolophus sinicus (Chinese rufous horseshoe bat)	Eukaryotes;Animals;Vertebrates;Mammals
+T05907	dro	Desmodus rotundus (common vampire bat)	Eukaryotes;Animals;Vertebrates;Mammals
 T02993	pale	Pteropus alecto (black flying fox)	Eukaryotes;Animals;Vertebrates;Mammals
 T04351	lav	Loxodonta africana (African savanna elephant)	Eukaryotes;Animals;Vertebrates;Mammals
 T05135	tmu	Trichechus manatus latirostris (Florida manatee)	Eukaryotes;Animals;Vertebrates;Mammals
 T01031	mdo	Monodelphis domestica (opossum)	Eukaryotes;Animals;Vertebrates;Mammals
 T02286	shr	Sarcophilus harrisii (Tasmanian devil)	Eukaryotes;Animals;Vertebrates;Mammals
+T05867	pcw	Phascolarctos cinereus (koala)	Eukaryotes;Animals;Vertebrates;Mammals
 T01045	oaa	Ornithorhynchus anatinus (platypus)	Eukaryotes;Animals;Vertebrates;Mammals
 T01006	gga	Gallus gallus (chicken)	Eukaryotes;Animals;Vertebrates;Birds
 T01523	mgp	Meleagris gallopavo (turkey)	Eukaryotes;Animals;Vertebrates;Birds
@@ -57,16 +68,21 @@ T04297	cjo	Coturnix japonica (Japanese quail)	Eukaryotes;Animals;Vertebrates;Bir
 T02816	apla	Anas platyrhynchos (mallard)	Eukaryotes;Animals;Vertebrates;Birds
 T04896	acyg	Anser cygnoides domesticus (swan goose)	Eukaryotes;Animals;Vertebrates;Birds
 T01082	tgu	Taeniopygia guttata (zebra finch)	Eukaryotes;Animals;Vertebrates;Birds
+T05897	lsr	Lonchura striata domestica (Bengalese finch)	Eukaryotes;Animals;Vertebrates;Birds
+T05755	scan	Serinus canaria (common canary)	Eukaryotes;Animals;Vertebrates;Birds
 T03755	gfr	Geospiza fortis (medium ground-finch)	Eukaryotes;Animals;Vertebrates;Birds
 T02815	fab	Ficedula albicollis (collared flycatcher)	Eukaryotes;Animals;Vertebrates;Birds
 T02921	phi	Pseudopodoces humilis (Tibetan ground-tit)	Eukaryotes;Animals;Vertebrates;Birds
 T04864	pmaj	Parus major (Great Tit)	Eukaryotes;Animals;Vertebrates;Birds
 T05602	ccae	Cyanistes caeruleus (blue tit)	Eukaryotes;Animals;Vertebrates;Birds
 T03546	ccw	Corvus cornix (hooded crow)	Eukaryotes;Animals;Vertebrates;Birds
+T05887	etl	Empidonax traillii (willow flycatcher)	Eukaryotes;Animals;Vertebrates;Birds
 T02856	fpg	Falco peregrinus (peregrine falcon)	Eukaryotes;Animals;Vertebrates;Birds
 T02911	fch	Falco cherrug (Saker falcon)	Eukaryotes;Animals;Vertebrates;Birds
 T02912	clv	Columba livia (rock pigeon)	Eukaryotes;Animals;Vertebrates;Birds
 T05152	egz	Egretta garzetta (little egret)	Eukaryotes;Animals;Vertebrates;Birds
+T05756	nni	Nipponia nippon (crested ibis)	Eukaryotes;Animals;Vertebrates;Birds
+T05777	acun	Athene cunicularia (burrowing owl)	Eukaryotes;Animals;Vertebrates;Birds
 T04298	aam	Apteryx australis mantelli (brown kiwi)	Eukaryotes;Animals;Vertebrates;Birds
 T02922	asn	Alligator sinensis (Chinese alligator)	Eukaryotes;Animals;Vertebrates;Reptiles
 T03087	amj	Alligator mississippiensis (American alligator)	Eukaryotes;Animals;Vertebrates;Reptiles
@@ -76,6 +92,7 @@ T04662	cpic	Chrysemys picta (western painted turtle)	Eukaryotes;Animals;Vertebra
 T01608	acs	Anolis carolinensis (green anole)	Eukaryotes;Animals;Vertebrates;Reptiles
 T05000	pvt	Pogona vitticeps (central bearded dragon)	Eukaryotes;Animals;Vertebrates;Reptiles
 T03091	pbi	Python bivittatus (Burmese python)	Eukaryotes;Animals;Vertebrates;Reptiles
+T05763	pmur	Protobothrops mucrosquamatus (Taiwan habu)	Eukaryotes;Animals;Vertebrates;Reptiles
 T04299	gja	Gekko japonicus	Eukaryotes;Animals;Vertebrates;Reptiles
 T01010	xla	Xenopus laevis (African clawed frog)	Eukaryotes;Animals;Vertebrates;Amphibians
 T01011	xtr	Xenopus tropicalis (western clawed frog)	Eukaryotes;Animals;Vertebrates;Amphibians
@@ -86,7 +103,9 @@ T04917	sanh	Sinocyclocheilus anshuiensis	Eukaryotes;Animals;Vertebrates;Fishes
 T04918	sgh	Sinocyclocheilus grahami	Eukaryotes;Animals;Vertebrates;Fishes
 T05134	ccar	Cyprinus carpio (common carp)	Eukaryotes;Animals;Vertebrates;Fishes
 T04658	ipu	Ictalurus punctatus (channel catfish)	Eukaryotes;Animals;Vertebrates;Fishes
+T05759	phyp	Pangasianodon hypophthalmus (striped catfish)	Eukaryotes;Animals;Vertebrates;Fishes
 T05042	amex	Astyanax mexicanus (Mexican tetra)	Eukaryotes;Animals;Vertebrates;Fishes
+T05787	eee	Electrophorus electricus (electric eel)	Eukaryotes;Animals;Vertebrates;Fishes
 T02386	tru	Takifugu rubripes (torafugu)	Eukaryotes;Animals;Vertebrates;Fishes
 T04346	tng	Tetraodon nigroviridis (spotted green pufferfish)	Eukaryotes;Animals;Vertebrates;Fishes
 T04659	lco	Larimichthys crocea (large yellow croaker)	Eukaryotes;Animals;Vertebrates;Fishes
@@ -94,6 +113,7 @@ T04920	ncc	Notothenia coriiceps (black rockcod)	Eukaryotes;Animals;Vertebrates;F
 T02814	mze	Maylandia zebra (zebra mbuna)	Eukaryotes;Animals;Vertebrates;Fishes
 T02443	ola	Oryzias latipes (Japanese medaka)	Eukaryotes;Animals;Vertebrates;Fishes
 T02923	xma	Xiphophorus maculatus (southern platyfish)	Eukaryotes;Animals;Vertebrates;Fishes
+T05908	xco	Xiphophorus couchianus (Monterrey platyfish)	Eukaryotes;Animals;Vertebrates;Fishes
 T05149	pret	Poecilia reticulata (guppy)	Eukaryotes;Animals;Vertebrates;Fishes
 T05163	nfu	Nothobranchius furzeri (turquoise killifish)	Eukaryotes;Animals;Vertebrates;Fishes
 T05608	kmr	Kryptolebias marmoratus (mangrove rivulus)	Eukaryotes;Animals;Vertebrates;Fishes
@@ -105,8 +125,10 @@ T05002	bpec	Boleophthalmus pectinirostris (great blue-spotted mudskipper)	Eukary
 T05607	malb	Monopterus albus (swamp eel)	Eukaryotes;Animals;Vertebrates;Fishes
 T04363	sasa	Salmo salar (Atlantic salmon)	Eukaryotes;Animals;Vertebrates;Fishes
 T05605	otw	Oncorhynchus tshawytscha (Chinook salmon)	Eukaryotes;Animals;Vertebrates;Fishes
+T05762	salp	Salvelinus alpinus (Arctic char)	Eukaryotes;Animals;Vertebrates;Fishes
 T04894	els	Esox lucius (northern pike)	Eukaryotes;Animals;Vertebrates;Fishes
 T04919	sfm	Scleropages formosus (Asian bonytongue)	Eukaryotes;Animals;Vertebrates;Fishes
+T05788	pki	Paramormyrops kingsleyae	Eukaryotes;Animals;Vertebrates;Fishes
 T02913	lcm	Latimeria chalumnae (coelacanth)	Eukaryotes;Animals;Vertebrates;Fishes
 T03088	cmk	Callorhinchus milii (elephant shark)	Eukaryotes;Animals;Vertebrates;Cartilaginous fishes
 T01074	bfo	Branchiostoma floridae (Florida lancelet)	Eukaryotes;Animals;Lancelets
@@ -125,6 +147,9 @@ T01067	dwi	Drosophila willistoni	Eukaryotes;Animals;Arthropods;Insects
 T01068	dya	Drosophila yakuba	Eukaryotes;Animals;Arthropods;Insects
 T01061	dgr	Drosophila grimshawi	Eukaryotes;Animals;Arthropods;Insects
 T01062	dmo	Drosophila mojavensis	Eukaryotes;Animals;Arthropods;Insects
+T05886	daz	Drosophila arizonae	Eukaryotes;Animals;Arthropods;Insects
+T05898	dnv	Drosophila navojoa	Eukaryotes;Animals;Arthropods;Insects
+T05888	dhe	Drosophila hydei	Eukaryotes;Animals;Arthropods;Insects
 T01066	dvi	Drosophila virilis	Eukaryotes;Animals;Arthropods;Insects
 T03448	mde	Musca domestica (house fly)	Eukaryotes;Animals;Arthropods;Insects
 T01036	aga	Anopheles gambiae (mosquito)	Eukaryotes;Animals;Arthropods;Insects
@@ -134,6 +159,7 @@ T01057	ame	Apis mellifera (honey bee)	Eukaryotes;Animals;Arthropods;Insects
 T04362	bim	Bombus impatiens (common eastern bumble bee)	Eukaryotes;Animals;Arthropods;Insects
 T04364	bter	Bombus terrestris (buff-tailed bumblebee)	Eukaryotes;Animals;Arthropods;Insects
 T03916	soc	Solenopsis invicta (red fire ant)	Eukaryotes;Animals;Arthropods;Insects
+T05760	mpha	Monomorium pharaonis (pharaoh ant)	Eukaryotes;Animals;Arthropods;Insects
 T03917	aec	Acromyrmex echinatior (Panamanian leafcutter ant)	Eukaryotes;Animals;Arthropods;Insects
 T04923	acep	Atta cephalotes (leaf cutting ant)	Eukaryotes;Animals;Arthropods;Insects
 T04903	pbar	Pogonomyrmex barbatus (red harvester ant)	Eukaryotes;Animals;Arthropods;Insects
@@ -142,6 +168,7 @@ T05610	dqu	Dinoponera quadriceps	Eukaryotes;Animals;Arthropods;Insects
 T03919	cfo	Camponotus floridanus (Florida carpenter ant)	Eukaryotes;Animals;Arthropods;Insects
 T04898	lhu	Linepithema humile (Argentine ant)	Eukaryotes;Animals;Arthropods;Insects
 T05003	pgc	Pseudomyrmex gracilis	Eukaryotes;Animals;Arthropods;Insects
+T05778	obo	Ooceraea biroi (clonal raider ant)	Eukaryotes;Animals;Arthropods;Insects
 T05611	pcf	Polistes canadensis	Eukaryotes;Animals;Arthropods;Insects
 T01081	nvi	Nasonia vitripennis (jewel wasp)	Eukaryotes;Animals;Arthropods;Insects
 T05600	mdl	Microplitis demolitor	Eukaryotes;Animals;Arthropods;Insects
@@ -149,13 +176,16 @@ T01046	tca	Tribolium castaneum (red flour beetle)	Eukaryotes;Animals;Arthropods;
 T04899	dpa	Dendroctonus ponderosae (mountain pine beetle)	Eukaryotes;Animals;Arthropods;Insects
 T04922	nvl	Nicrophorus vespilloides	Eukaryotes;Animals;Arthropods;Insects
 T02817	bmor	Bombyx mori (domestic silkworm)	Eukaryotes;Animals;Arthropods;Insects
+T05882	bman	Bombyx mandarina (wild silkworm)	Eukaryotes;Animals;Arthropods;Insects
 T04344	dpl	Danaus plexippus (monarch butterfly)	Eukaryotes;Animals;Arthropods;Insects
 T05138	pmac	Papilio machaon (common yellow swallowtail)	Eukaryotes;Animals;Arthropods;Insects
 T05162	prap	Pieris rapae (cabbage white)	Eukaryotes;Animals;Arthropods;Insects
 T05609	haw	Helicoverpa armigera (cotton bollworm)	Eukaryotes;Animals;Arthropods;Insects
+T05757	tnl	Trichoplusia ni (cabbage looper)	Eukaryotes;Animals;Arthropods;Insects
 T03915	pxy	Plutella xylostella (diamondback moth)	Eukaryotes;Animals;Arthropods;Insects
 T01076	api	Acyrthosiphon pisum (pea aphid)	Eukaryotes;Animals;Arthropods;Insects
 T04900	dnx	Diuraphis noxia (Russian wheat aphid)	Eukaryotes;Animals;Arthropods;Insects
+T05869	ags	Aphis gossypii (cotton aphid)	Eukaryotes;Animals;Arthropods;Insects
 T05603	clec	Cimex lectularius (bed bug)	Eukaryotes;Animals;Arthropods;Insects
 T01223	phu	Pediculus humanus corporis (human body louse)	Eukaryotes;Animals;Arthropods;Insects
 T05136	zne	Zootermopsis nevadensis	Eukaryotes;Animals;Arthropods;Insects
@@ -163,14 +193,16 @@ T05043	fcd	Folsomia candida	Eukaryotes;Animals;Arthropods;Insects
 T04347	dpx	Daphnia pulex (common water flea)	Eukaryotes;Animals;Arthropods;Crustaceans
 T01131	isc	Ixodes scapularis (black-legged tick)	Eukaryotes;Animals;Arthropods;Mites and ticks
 T04901	tut	Tetranychus urticae (two-spotted spider mite)	Eukaryotes;Animals;Arthropods;Mites and ticks
+T05775	dpte	Dermatophagoides pteronyssinus (European house dust mite)	Eukaryotes;Animals;Arthropods;Mites and ticks
 T00019	cel	Caenorhabditis elegans (nematode)	Eukaryotes;Animals;Nematodes
 T01054	cbr	Caenorhabditis briggsae	Eukaryotes;Animals;Nematodes
-T04867	nai	Necator americanus	Eukaryotes;Animals;Nematodes
 T01050	bmy	Brugia malayi (filaria)	Eukaryotes;Animals;Nematodes
 T02664	loa	Loa loa (eye worm)	Eukaryotes;Animals;Nematodes
+T04867	nai	Necator americanus	Eukaryotes;Animals;Nematodes
 T01609	tsp	Trichinella spiralis	Eukaryotes;Animals;Nematodes
 T03272	hro	Helobdella robusta	Eukaryotes;Animals;Annelids
 T03273	lgi	Lottia gigantea (owl limpet)	Eukaryotes;Animals;Mollusks
+T05881	pcan	Pomacea canaliculata (golden apple snail)	Eukaryotes;Animals;Mollusks
 T03920	crg	Crassostrea gigas (Pacific oyster)	Eukaryotes;Animals;Mollusks
 T05079	myi	Mizuhopecten yessoensis (Yesso scallop)	Eukaryotes;Animals;Mollusks
 T04127	obi	Octopus bimaculoides	Eukaryotes;Animals;Mollusks
@@ -182,6 +214,8 @@ T05553	egl	Echinococcus granulosus	Eukaryotes;Animals;Flatworms
 T01037	nve	Nematostella vectensis (sea anemone)	Eukaryotes;Animals;Cnidarians
 T05080	epa	Exaiptasia pallida	Eukaryotes;Animals;Cnidarians
 T04352	adf	Acropora digitifera (stony coral)	Eukaryotes;Animals;Cnidarians
+T05773	pdam	Pocillopora damicornis (lace coral)	Eukaryotes;Animals;Cnidarians
+T05774	spis	Stylophora pistillata	Eukaryotes;Animals;Cnidarians
 T01080	hmg	Hydra vulgaris	Eukaryotes;Animals;Cnidarians
 T01069	tad	Trichoplax adhaerens	Eukaryotes;Animals;Placozoans
 T02284	aqu	Amphimedon queenslandica (sponge)	Eukaryotes;Animals;Poriferans
@@ -200,6 +234,7 @@ T02982	cic	Citrus clementina (mandarin orange)	Eukaryotes;Plants;Eudicots;Rue fa
 T02994	tcc	Theobroma cacao (cacao)	Eukaryotes;Plants;Eudicots;Mallow family
 T04129	gra	Gossypium raimondii	Eukaryotes;Plants;Eudicots;Mallow family
 T04793	ghi	Gossypium hirsutum (upland cotton)	Eukaryotes;Plants;Eudicots;Mallow family
+T05776	gab	Gossypium arboreum	Eukaryotes;Plants;Eudicots;Mallow family
 T05242	dzi	Durio zibethinus (durian)	Eukaryotes;Plants;Eudicots;Mallow family
 T03547	egr	Eucalyptus grandis (rose gum)	Eukaryotes;Plants;Eudicots;Myrtle family
 T01710	gmx	Glycine max (soybean)	Eukaryotes;Plants;Eudicots;Pea family
@@ -229,8 +264,11 @@ T05351	cpep	Cucurbita pepo subsp. pepo (vegetable marrow)	Eukaryotes;Plants;Eudi
 T01087	rcu	Ricinus communis (castor bean)	Eukaryotes;Plants;Eudicots;Spurge family
 T03922	jcu	Jatropha curcas	Eukaryotes;Plants;Eudicots;Spurge family
 T05150	hbr	Hevea brasiliensis (rubber tree)	Eukaryotes;Plants;Eudicots;Spurge family
+T05761	mesc	Manihot esculenta (cassava)	Eukaryotes;Plants;Eudicots;Spurge family
 T01077	pop	Populus trichocarpa (black cottonwood)	Eukaryotes;Plants;Eudicots;Willow family
+T05872	peu	Populus euphratica (Euphrates poplar)	Eukaryotes;Plants;Eudicots;Willow family
 T05245	jre	Juglans regia (English walnut)	Eukaryotes;Plants;Eudicots;Walnut family
+T05868	qsu	Quercus suber (cork oak)	Eukaryotes;Plants;Eudicots;Beech family
 T01084	vvi	Vitis vinifera (wine grape)	Eukaryotes;Plants;Eudicots;Grape family
 T02665	sly	Solanum lycopersicum (tomato)	Eukaryotes;Plants;Eudicots;Nightshade family
 T04130	spen	Solanum pennellii	Eukaryotes;Plants;Eudicots;Nightshade family
@@ -239,6 +277,7 @@ T04646	cann	Capsicum annuum	Eukaryotes;Plants;Eudicots;Nightshade family
 T04643	nta	Nicotiana tabacum (common tobacco)	Eukaryotes;Plants;Eudicots;Nightshade family
 T05026	nsy	Nicotiana sylvestris	Eukaryotes;Plants;Eudicots;Nightshade family
 T05025	nto	Nicotiana tomentosiformis	Eukaryotes;Plants;Eudicots;Nightshade family
+T05870	nau	Nicotiana attenuata	Eukaryotes;Plants;Eudicots;Nightshade family
 T04663	ini	Ipomoea nil (Japanese morning glory)	Eukaryotes;Plants;Eudicots;Morning-glory family
 T04135	sind	Sesamum indicum (sesame)	Eukaryotes;Plants;Eudicots;Sesame family
 T05244	oeu	Olea europaea var. sylvestris (wild olive)	Eukaryotes;Plants;Eudicots;Olive family
@@ -248,7 +287,9 @@ T05604	ccav	Cynara cardunculus var. scolymus (artichoke)	Eukaryotes;Plants;Eudic
 T05350	dcr	Daucus carota (carrot)	Eukaryotes;Plants;Eudicots;Parsley family
 T03548	bvg	Beta vulgaris (sugar beet)	Eukaryotes;Plants;Eudicots;Amaranth family
 T05137	soe	Spinacia oleracea (spinach)	Eukaryotes;Plants;Eudicots;Amaranth family
+T05764	cqi	Chenopodium quinoa (quinoa)	Eukaryotes;Plants;Eudicots;Amaranth family
 T04131	nnu	Nelumbo nucifera (sacred lotus)	Eukaryotes;Plants;Eudicots;Lotus family
+T05758	psom	Papaver somniferum (opium poppy)	Eukaryotes;Plants;Eudicots;Poppy family
 T01015	osa	Oryza sativa japonica (Japanese rice) (RefSeq)	Eukaryotes;Plants;Monocots;Grass family
 T02163	dosa	Oryza sativa japonica (Japanese rice) (RAPDB)	Eukaryotes;Plants;Monocots;Grass family
 T02995	obr	Oryza brachyantha (malo sina)	Eukaryotes;Plants;Monocots;Grass family
@@ -260,7 +301,7 @@ T02818	sita	Setaria italica (foxtail millet)	Eukaryotes;Plants;Monocots;Grass fa
 T03274	pda	Phoenix dactylifera (date palm)	Eukaryotes;Plants;Monocots;Palm family
 T03921	egu	Elaeis guineensis (African oil palm)	Eukaryotes;Plants;Monocots;Palm family
 T03447	mus	Musa acuminata (wild Malaysian banana)	Eukaryotes;Plants;Monocots;Banana family
-T05027	dct	Dendrobium officinale	Eukaryotes;Plants;Monocots;Orchid family
+T05027	dct	Dendrobium catenatum	Eukaryotes;Plants;Monocots;Orchid family
 T05601	peq	Phalaenopsis equestris	Eukaryotes;Plants;Monocots;Orchid family
 T05243	aof	Asparagus officinalis (garden asparagus)	Eukaryotes;Plants;Monocots;Asparagus family
 T02990	atr	Amborella trichopoda	Eukaryotes;Plants;Basal Magnoliophyta;Amborella family
@@ -316,9 +357,9 @@ T03451	nte	Neurospora tetrasperma	Eukaryotes;Fungi;Ascomycetes;Sordariomycetes
 T01610	smp	Sordaria macrospora	Eukaryotes;Fungi;Ascomycetes;Sordariomycetes
 T01048	pan	Podospora anserina	Eukaryotes;Fungi;Ascomycetes;Sordariomycetes
 T02228	ttt	Thielavia terrestris	Eukaryotes;Fungi;Ascomycetes;Sordariomycetes
-T02231	mtm	Thermothelomyces thermophila	Eukaryotes;Fungi;Ascomycetes;Sordariomycetes
+T02231	mtm	Thermothelomyces thermophilus	Eukaryotes;Fungi;Ascomycetes;Sordariomycetes
 T03100	cthr	Chaetomium thermophilum	Eukaryotes;Fungi;Ascomycetes;Sordariomycetes
-T01027	mgr	Magnaporthe oryzae	Eukaryotes;Fungi;Ascomycetes;Sordariomycetes
+T01027	mgr	Pyricularia oryzae 70-15	Eukaryotes;Fungi;Ascomycetes;Sordariomycetes
 T03102	tmn	Phaeoacremonium minimum	Eukaryotes;Fungi;Ascomycetes;Sordariomycetes
 T05555	ssck	Sporothrix schenckii	Eukaryotes;Fungi;Ascomycetes;Sordariomycetes
 T01038	fgr	Fusarium graminearum	Eukaryotes;Fungi;Ascomycetes;Sordariomycetes
@@ -434,7 +475,7 @@ T00210	cho	Cryptosporidium hominis	Eukaryotes;Protists;Alveolates;Apicomplexans
 T01093	tgo	Toxoplasma gondii	Eukaryotes;Protists;Alveolates;Apicomplexans
 T01020	tet	Tetrahymena thermophila	Eukaryotes;Protists;Alveolates;Ciliates
 T01055	ptm	Paramecium tetraurelia	Eukaryotes;Protists;Alveolates;Ciliates
-T04349	smin	Symbiodinium minutum	Eukaryotes;Protists;Alveolates;Dinoflagellates
+T04349	smin	Breviolum minutum	Eukaryotes;Protists;Alveolates;Dinoflagellates
 T01075	pti	Phaeodactylum tricornutum	Eukaryotes;Protists;Stramenopiles;Diatoms
 T04784	fcy	Fragilariopsis cylindrus	Eukaryotes;Protists;Stramenopiles;Diatoms
 T01078	tps	Thalassiosira pseudonana	Eukaryotes;Protists;Stramenopiles;Diatoms
@@ -593,7 +634,6 @@ T00507	ent	Enterobacter sp. 638	Prokaryotes;Bacteria;Gammaproteobacteria - Enter
 T01231	enc	Enterobacter cloacae subsp. cloacae ATCC 13047	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T02315	eno	Enterobacter cloacae subsp. cloacae ENHKU01	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T02615	eclo	Enterobacter cloacae subsp. cloacae NCTC 9394	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
-T01652	eec	Enterobacter cloacae EcWSU1	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T02159	enl	Enterobacter cloacae subsp. dissolvens SDM	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T03429	eclg	Enterobacter cloacae GGT036	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T03471	ecle	Enterobacter cloacae ECNIH2	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
@@ -606,13 +646,14 @@ T04593	ehm	Enterobacter hormaechei CAV1176	Prokaryotes;Bacteria;Gammaproteobacte
 T04821	exf	Enterobacter hormaechei subsp. xiangfangensis	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T03350	ecla	Enterobacter hormaechei subsp. hoffmannii ECNIH3	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T03378	eclc	Enterobacter hormaechei subsp. hoffmannii ECR091	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
-T01604	eas	Enterobacter asburiae LF7a	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T03084	eau	Enterobacter asburiae L1	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T04686	ekb	Enterobacter kobei	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
-T04719	elg	Enterobacter ludwigii	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
+T01652	eec	Enterobacter ludwigii EcWSU1	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
+T04719	elg	Enterobacter ludwigii EN-119	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T05545	ecan	Enterobacter cancerogenus	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T05556	ern	Enterobacter roggenkampii	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T04878	ecls	Enterobacter cloacae complex sp. 35734	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
+T01604	eas	Enterobacter soli	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T02700	enr	Enterobacter sp. R4-368	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T04118	enx	Enterobacter sp. E20	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
 T04405	enf	Enterobacter sp. FY-07	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Enterobacter
@@ -630,7 +671,7 @@ T00999	ctu	Cronobacter turicensis	Prokaryotes;Bacteria;Gammaproteobacteria - Ent
 T00566	kpn	Klebsiella pneumoniae subsp. pneumoniae MGH 78578 (serotype K52)	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
 T00910	kpu	Klebsiella pneumoniae subsp. pneumoniae NTUH-K2044 (serotype K1)	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
 T01733	kpm	Klebsiella pneumoniae subsp. pneumoniae HS11286	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
-T02213	kpp	Klebsiella pneumoniae subsp. pneumoniae 1084	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
+T02213	kpp	Klebsiella pneumoniae subsp. pneumoniae 1084 (serotype K1)	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
 T03369	kph	Klebsiella pneumoniae subsp. pneumoniae KPNIH24	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
 T03370	kpz	Klebsiella pneumoniae subsp. pneumoniae KPNIH27	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
 T03465	kpv	Klebsiella pneumoniae subsp. pneumoniae KPNIH29	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
@@ -667,6 +708,8 @@ T04389	kqu	Klebsiella quasipneumoniae	Prokaryotes;Bacteria;Gammaproteobacteria -
 T01529	eae	Klebsiella aerogenes KCTC 2190	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
 T02447	ear	Klebsiella aerogenes EA1509E	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
 T05116	kqv	Klebsiella quasivariicola	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
+T05751	kll	Klebsiella sp. LTGPAF-6F	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
+T05915	klw	Klebsiella sp. WCHKl090001	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Klebsiella
 T00592	cko	Citrobacter koseri	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Citrobacter
 T01145	cro	Citrobacter rodentium	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Citrobacter
 T03077	cfd	Citrobacter freundii	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Citrobacter
@@ -679,6 +722,7 @@ T04313	cif	Citrobacter sp. FDAARGOS_156	Prokaryotes;Bacteria;Gammaproteobacteria
 T05012	cfar	Citrobacter farmeri	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Citrobacter
 T05324	cir	Citrobacter sp. CFNIH10	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Citrobacter
 T05520	cie	Citrobacter sp. CRE-46	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Citrobacter
+T05874	cpar	Citrobacter pasteurii	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Citrobacter
 T05060	gqu	Gibbsiella quercinecans	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Gibbsiella
 T00138	bfl	Candidatus Blochmannia floridanus (Camponotus floridanus)	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Blochmannia
 T00272	bpn	Candidatus Blochmannia pennsylvanicus (Camponotus pennsylvanicus)	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Blochmannia
@@ -700,8 +744,9 @@ T03629	ron	Raoultella ornithinolytica S12	Prokaryotes;Bacteria;Gammaproteobacter
 T05298	rpln	Raoultella planticola	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Raoultella
 T05540	rao	Raoultella sp. X13	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Raoultella
 T03298	cnt	Cedecea neteri SSMD04	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Cedecea
-T03328	cem	Cedecea neteri	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Cedecea
-T03337	cen	Cedecea neteri	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Cedecea
+T03328	cem	Cedecea neteri M006	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Cedecea
+T03337	cen	Cedecea neteri ND14a	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Cedecea
+T05810	clap	Cedecea lapagei	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Cedecea
 T03300	pge	Pluralibacter gergoviae	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Pluralibacter
 T01342	esc	Enterobacter lignolyticus SCF1	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Pluralibacter
 T04198	kle	Enterobacter lignolyticus G5	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Pluralibacter
@@ -709,6 +754,7 @@ T03601	ksa	Kosakonia sacchari	Prokaryotes;Bacteria;Gammaproteobacteria - Enterob
 T04433	kor	Kosakonia oryzae	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Kosakonia
 T04579	krd	Kosakonia radicincitans	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Kosakonia
 T04691	kco	Kosakonia cowanii	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Kosakonia
+T05734	kot	Kosakonia sp. CCTCC M2018092	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Kosakonia
 T04930	kgo	Kluyvera georgiana	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Kluyvera
 T04149	icp	Candidatus Ishikawaella capsulata	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Ishikawaella
 T04232	lax	Leclercia adecarboxylata	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Leclercia
@@ -726,8 +772,12 @@ T04484	hed	Candidatus Hoaglandella endobia	Prokaryotes;Bacteria;Gammaproteobacte
 T04502	ged	Candidatus Gullanella endobia	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Gullanella
 T04510	cmik	Candidatus Mikella endobia	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Mikella
 T05580	ppet	Candidatus Purcelliella pentastirinorum	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Purcelliella
+T05735	mety	Metakosakonia sp. MRY16-398	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Metakosakonia
+T05790	ahn	Atlantibacter hermannii	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Atlantibacter
+T05975	izh	Izhakiella sp. KSNA2	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Izhakiella
 T02431	ebf	Enterobacteriaceae bacterium FGI 57	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Unclassified Enterobacteria
 T05417	ebc	Enterobacteriaceae bacterium ENNIH2	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Unclassified Enterobacteria
+T05725	ebu	Enterobacteriaceae bacterium S05	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Unclassified Enterobacteria
 T03051	psts	Plautia stali symbiont	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Unclassified Enterobacteria
 T00063	ype	Yersinia pestis CO92 (biovar Orientalis)	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Yersinia
 T00092	ypk	Yersinia pestis KIM10+ (biovar Mediaevalis)	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Yersinia
@@ -773,6 +823,7 @@ T03611	yru	Yersinia ruckeri YRB	Prokaryotes;Bacteria;Gammaproteobacteria - Enter
 T03887	yrb	Yersinia ruckeri Big Creek 74 (serotype O2)	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Yersinia
 T03994	yak	Yersinia aleksiciae	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Yersinia
 T05402	yma	Yersinia massiliensis	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Yersinia
+T05961	yhi	Yersinia hibernica	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Yersinia
 T00595	spe	Serratia proteamaculans	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Serratia
 T01503	srr	Serratia plymuthica AS9	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Serratia
 T02710	srl	Serratia plymuthica 4Rx13	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Serratia
@@ -792,7 +843,9 @@ T04030	sfw	Serratia fonticola DSM 4576	Prokaryotes;Bacteria;Gammaproteobacteria 
 T04716	sfg	Serratia fonticola GS2	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Serratia
 T04417	srz	Serratia rubidaea	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Serratia
 T05290	sera	Serratia sp. ATCC 39006	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Serratia
+T05968	serq	Serratia sp. ATCC 39006	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Serratia
 T05477	serm	Serratia sp. MYb239	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Serratia
+T05941	squ	Serratia quinivorans	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Serratia
 T02987	sfo	Chania multitudinisentens	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Chania
 T01422	rah	Rahnella sp. Y9602	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Rahnella
 T01770	raq	Rahnella aquatilis CIP 78.65 = ATCC 33071	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Rahnella
@@ -823,6 +876,7 @@ T03347	ced	Dickeya solani ND14b	Prokaryotes;Bacteria;Gammaproteobacteria - Enter
 T05141	ddq	Dickeya dianthicola	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Dickeya
 T05277	dfn	Dickeya fangzhongdai	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Dickeya
 T05061	bgj	Brenneria goodwinii	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Brenneria
+T05976	brb	Brenneria rubrifaciens	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Brenneria
 T05623	lbq	Lonsdalea britannica	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Lonsdalea
 T00711	eta	Erwinia tasmaniensis	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Erwinia
 T01000	epy	Erwinia pyrifoliae Ep1/96	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Erwinia
@@ -880,6 +934,7 @@ T00753	pmr	Proteus mirabilis HI4320	Prokaryotes;Bacteria;Gammaproteobacteria - E
 T02789	pmib	Proteus mirabilis BB2000	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Proteus
 T04093	pvl	Proteus mirabilis CYPV1	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Proteus
 T05486	pvg	Proteus vulgaris	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Proteus
+T05854	phau	Proteus hauseri	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Proteus
 T01186	xbo	Xenorhabdus bovienii SS-2004	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Xenorhabdus
 T03845	xbv	Xenorhabdus bovienii CS03	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Xenorhabdus
 T01274	xne	Xenorhabdus nematophila ATCC 19061	Prokaryotes;Bacteria;Gammaproteobacteria - Enterobacteria;Xenorhabdus
@@ -929,6 +984,7 @@ T03721	hic	Haemophilus influenzae C486	Prokaryotes;Bacteria;Gammaproteobacteria 
 T03722	hix	Haemophilus influenzae 723	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Haemophilus
 T01605	hpr	Haemophilus parainfluenzae	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Haemophilus
 T00135	hdu	Haemophilus ducreyi	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Haemophilus
+T05707	hay	Haemophilus sp. oral taxon 036	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Haemophilus
 T00825	hap	Glaesserella parasuis SH0165	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Glaesserella
 T02697	hpaz	Glaesserella parasuis ZJ0906	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Glaesserella
 T03301	hpas	Glaesserella parasuis SH03	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Glaesserella
@@ -965,6 +1021,7 @@ T02262	asi	Actinobacillus suis H91-0380	Prokaryotes;Bacteria;Gammaproteobacteria
 T03246	ass	Actinobacillus suis ATCC 33415	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Actinobacillus
 T03501	aeu	Actinobacillus equuli	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Actinobacillus
 T05443	apor	Actinobacillus porcitonsillarum	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Actinobacillus
+T05940	aio	Actinobacillus indolicus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Actinobacillus
 T00929	aap	Aggregatibacter aphrophilus NJ8700	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Aggregatibacter
 T04521	aaz	Aggregatibacter aphrophilus W10433	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Aggregatibacter
 T00993	aat	Aggregatibacter actinomycetemcomitans D11S-1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Aggregatibacter
@@ -978,6 +1035,8 @@ T02504	bto	Bibersteinia trehalosi USDA-ARS-USMARC-192	Prokaryotes;Bacteria;Gamma
 T03017	btre	Bibersteinia trehalosi USDA-ARS-USMARC-188	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Bibersteinia
 T03018	btrh	Bibersteinia trehalosi USDA-ARS-USMARC-189	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Bibersteinia
 T03019	btra	Bibersteinia trehalosi USDA-ARS-USMARC-190	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Bibersteinia
+T05728	apag	Avibacterium paragallinarum	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Avibacterium
+T05800	rpne	Rodentibacter pneumotropicus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Rodentibacter
 T00033	xfa	Xylella fastidiosa 9a5c	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Xylella
 T00113	xft	Xylella fastidiosa Temecula1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Xylella
 T00677	xfm	Xylella fastidiosa M12	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Xylella
@@ -1044,11 +1103,13 @@ T05495	lmb	Lysobacter maris	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Ly
 T05586	lyt	Lysobacter sp. TY2-98	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Lysobacter
 T05077	lum	Luteimonas sp. 100111	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Luteimonas
 T05527	lue	Luteimonas sp. 83-4	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Luteimonas
+T05957	lus	Luteimonas sp. S-1072	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Luteimonas
 T01773	fau	Frateuria aurantia	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Frateuria
 T02495	rhd	Rhodanobacter denitrificans	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Rhodanobacter
 T03074	dji	Dyella jiangningensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Dyella
 T03215	dja	Dyella japonica	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Dyella
 T04308	dtx	Dyella thiooxydans	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Dyella
+T05846	dye	Dyella sp. M7H15-1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Dyella
 T04377	dko	Dokdonella koreensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Dokdonella
 T04563	lrz	Luteibacter rhizovicinus DSM 16549	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Luteibacter
 T05483	xba	Ahniella affigens	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Ahniella
@@ -1101,6 +1162,7 @@ T04933	vga	Vibrio gazogenes	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Vi
 T04936	vsh	Vibrio mediterranei	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Vibrio
 T05259	vqi	Vibrio qinghaiensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Vibrio
 T05424	vta	Vibrio tapetis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Vibrio
+T05841	vaf	Vibrio alfacsensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Vibrio
 T00236	vfi	Aliivibrio fischeri ES114	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Aliivibrio
 T00754	vfm	Aliivibrio fischeri MJ11	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Aliivibrio
 T00782	vsa	Aliivibrio salmonicida	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Aliivibrio
@@ -1110,6 +1172,8 @@ T03698	pgb	Photobacterium gaetbulicola	Prokaryotes;Bacteria;Gammaproteobacteria 
 T04927	pds	Photobacterium damselae subsp. damselae	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Photobacterium
 T04260	gho	Grimontia hollisae	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Grimontia
 T05093	pmai	Paraphotobacterium marinum	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Paraphotobacterium
+T05946	saly	Salinivibrio sp. YCSC6	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Salinivibrio
+T05956	sks	Salinivibrio kushneri	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Salinivibrio
 T00035	pae	Pseudomonas aeruginosa PAO1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudomonas
 T03097	paev	Pseudomonas aeruginosa PAO1-VE13	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudomonas
 T03170	paei	Pseudomonas aeruginosa PAO1-VE2	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudomonas
@@ -1218,6 +1282,9 @@ T04830	panr	Pseudomonas antarctica	Prokaryotes;Bacteria;Gammaproteobacteria - Ot
 T05074	ppsl	Pseudomonas psychrotolerans	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudomonas
 T05373	pset	Pseudomonas sp. TCU-HL1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudomonas
 T05412	psil	Pseudomonas silesiensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudomonas
+T05821	pym	Pseudomonas yamanorum	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudomonas
+T05857	pade	Candidatus Pseudomonas adelgestsugas (Adelges tsugae)	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudomonas
+T05921	psed	Pseudomonas sp. R2A2	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudomonas
 T00885	avn	Azotobacter vinelandii DJ	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Azotobacter
 T02633	avl	Azotobacter vinelandii CA	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Azotobacter
 T02634	avd	Azotobacter vinelandii CA6	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Azotobacter
@@ -1260,7 +1327,7 @@ T04196	ano	Acinetobacter nosocomialis	Prokaryotes;Bacteria;Gammaproteobacteria -
 T05220	alc	Acinetobacter lactucae	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Acinetobacter
 T05452	acal	Acinetobacter calcoaceticus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Acinetobacter
 T01263	acd	Acinetobacter oleivorans	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Acinetobacter
-T00185	aci	Acinetobacter sp. ADP1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Acinetobacter
+T00185	aci	Acinetobacter baylyi	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Acinetobacter
 T04075	att	Acinetobacter sp. TTH0-4	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Acinetobacter
 T04103	aei	Acinetobacter equi	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Acinetobacter
 T04178	ajo	Acinetobacter johnsonii	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Acinetobacter
@@ -1274,6 +1341,7 @@ T04787	asj	Acinetobacter schindleri	Prokaryotes;Bacteria;Gammaproteobacteria - O
 T05342	aid	Acinetobacter indicus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Acinetobacter
 T05474	adv	Acinetobacter defluvii	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Acinetobacter
 T05620	arj	Acinetobacter radioresistens	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Acinetobacter
+T05823	awu	Acinetobacter wuhouensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Acinetobacter
 T01224	mct	Moraxella catarrhalis BBH18	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Moraxella
 T03217	mcs	Moraxella catarrhalis 25240	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Moraxella
 T03381	mcat	Moraxella catarrhalis 25239	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Moraxella
@@ -1313,6 +1381,7 @@ T05197	sbj	Shewanella bicestrii	Prokaryotes;Bacteria;Gammaproteobacteria - Other
 T05400	smav	Shewanella marisflavi	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Shewanella
 T05404	shew	Shewanella sp. WE21	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Shewanella
 T05622	salg	Shewanella algae	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Shewanella
+T05875	slj	Shewanella livingstonensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Shewanella
 T00218	ilo	Idiomarina loihiensis L2TR	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Idiomarina
 T02681	ili	Idiomarina loihiensis GSL 199	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Idiomarina
 T04931	ipi	Idiomarina piscisalsi	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Idiomarina
@@ -1324,6 +1393,8 @@ T04511	coz	Colwellia sp. PAMC 20917	Prokaryotes;Bacteria;Gammaproteobacteria - O
 T04816	colw	Colwellia sp. PAMC 21821	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Colwellia
 T05422	cola	Colwellia sp. Arc7-D	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Colwellia
 T05628	cber	Colwellia beringensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Colwellia
+T05852	lsd	Litorilituus sediminis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Litorilituus
+T05926	tht	Thalassotalea sp. HSM 43	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thalassotalea
 T00282	pha	Pseudoalteromonas haloplanktis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudoalteromonas
 T00372	pat	Pseudoalteromonas atlantica	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudoalteromonas
 T01374	psm	Pseudoalteromonas sp. SM9913	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudoalteromonas
@@ -1343,6 +1414,7 @@ T05187	ptu	Pseudoalteromonas tunicata	Prokaryotes;Bacteria;Gammaproteobacteria -
 T05271	png	Pseudoalteromonas nigrifaciens	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudoalteromonas
 T05282	ptd	Pseudoalteromonas tetraodonis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudoalteromonas
 T05464	psen	Pseudoalteromonas sp. NC201	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudoalteromonas
+T05890	pdj	Pseudoalteromonas donghaensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudoalteromonas
 T00454	maq	Marinobacter hydrocarbonoclasticus VT8	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Marinobacter
 T02083	mhc	Marinobacter hydrocarbonoclasticus ATCC 49840	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Marinobacter
 T01922	mad	Marinobacter adhaerens	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Marinobacter
@@ -1375,6 +1447,7 @@ T04545	asq	Alteromonas stellipolaris LMG 21861	Prokaryotes;Bacteria;Gammaproteob
 T04403	aaw	Alteromonas addita	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Alteromonas
 T05653	alr	Alteromonas sp. RKMC-009	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Alteromonas
 T05687	ale	Alteromonas sp. Mac1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Alteromonas
+T05899	alz	Alteromonas sp. Mac2	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Alteromonas
 T01483	gag	Glaciecola sp. 4H-3-7+YE-5	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Glaciecola
 T01632	gni	Glaciecola nitratireducens	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Glaciecola
 T02535	gps	Paraglaciecola psychrophila	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Paraglaciecola
@@ -1408,6 +1481,7 @@ T00787	cbg	Coxiella burnetii CbuG_Q212	Prokaryotes;Bacteria;Gammaproteobacteria 
 T00788	cbc	Coxiella burnetii CbuK_Q154	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Coxiella
 T03533	cea	Coxiella endosymbiont of Amblyomma americanum	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Coxiella
 T03998	cey	Coxiella mudrowiae	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Coxiella
+T05765	rvi	Candidatus Rickettsiella viridis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Rickettsiella
 T00199	lpn	Legionella pneumophila subsp. pneumophila Philadelphia 1 (serogroup 1)	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Legionella
 T02174	lph	Legionella pneumophila subsp. pneumophila HL06041035 (serogroup 1)	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Legionella
 T02175	lpo	Legionella pneumophila subsp. pneumophila Lorraine (serogroup 1)	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Legionella
@@ -1426,12 +1500,14 @@ T05016	lcd	Legionella clemsonensis	Prokaryotes;Bacteria;Gammaproteobacteria - Ot
 T05191	les	Legionella endosymbiont of Polyplax serrata	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Legionella
 T05293	lsh	Legionella sainthelensi	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Legionella
 T05543	llg	Legionella lansingensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Legionella
+T05938	lib	Legionella israelensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Legionella
 T03810	tmc	Tatlockia micdadei	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Tatlockia
 T00205	mca	Methylococcus capsulatus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Methylococcus
 T01511	mmt	Methylomonas methanica	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Methylomonas
 T04191	mdn	Methylomonas denitrificans	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Methylomonas
 T04396	mdh	Methylomonas sp. DH-1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Methylomonas
 T05118	mko	Methylomonas koyamae	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Methylomonas
+T05879	metl	Methylomonas sp. LW13	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Methylomonas
 T01649	mah	Methylomicrobium alcaliphilum	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Methylomicrobium
 T04929	mpsy	Methylovulum psychrotolerans	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Methylovulum
 T05638	mmai	Methylocaldum marinum	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Methylocaldum
@@ -1477,8 +1553,10 @@ T05204	frm	Francisella sp. MA067296	Prokaryotes;Bacteria;Gammaproteobacteria - O
 T05636	frc	Francisella sp. CA97-1460	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Francisella
 T03527	fgu	Allofrancisella guangzhouensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Allofrancisella
 T00296	tcx	Hydrogenovibrio crunogenus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Hydrogenovibrio
+T05808	htr	Hydrogenovibrio thermophilus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Hydrogenovibrio
 T01517	tcy	Thiomicrospira cyclica	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thiomicrospira
 T03589	tao	Thiomicrospira aerophila	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thiomicrospira
+T05796	thio	Thiomicrospira sp. S5	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thiomicrospira
 T02055	mej	Methylophaga nitratireducenticrescens	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Methylophaga
 T02056	mec	Methylophaga frappieri	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Methylophaga
 T02265	cyq	Cycloclasticus sp. P1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Cycloclasticus
@@ -1490,6 +1568,7 @@ T04090	blep	Beggiatoa leptomitiformis	Prokaryotes;Bacteria;Gammaproteobacteria -
 T00281	noc	Nitrosococcus oceani	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Nitrosococcus
 T01198	nhl	Nitrosococcus halophilus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Nitrosococcus
 T01266	nwa	Nitrosococcus watsonii	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Nitrosococcus
+T05933	nwr	Nitrosococcus wardiae	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Nitrosococcus
 T01168	alv	Allochromatium vinosum	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Allochromatium
 T02138	tvi	Thiocystis violascens	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thiocystis
 T02397	tmb	Thioflavicoccus mobilis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thioflavicoccus
@@ -1497,6 +1576,7 @@ T03650	mpur	Marichromatium purpuratum	Prokaryotes;Bacteria;Gammaproteobacteria -
 T04171	tee	Candidatus Tenderia electrophaga	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Tenderia
 T05173	ntt	Candidatus Nitrosoglobus terrae	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Nitrosoglobus
 T05211	tsy	Candidatus Thiodictyon syntrophicum	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thiodictyon
+T05923	rhh	Rheinheimera sp. D18	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Rheinheimera
 T00391	aeh	Alkalilimnicola ehrlichii	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Alkalilimnicola
 T00462	hha	Halorhodospira halophila	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Halorhodospira
 T03059	hhc	Halorhodospira halochloris	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Halorhodospira
@@ -1514,7 +1594,9 @@ T04441	haz	Halothiobacillus sp. LS2	Prokaryotes;Bacteria;Gammaproteobacteria - O
 T04011	wma	Wenzhouxiangella marina	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Wenzhouxiangella
 T04427	woc	Woeseia oceani	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Woeseia
 T04938	gai	Granulosicoccus antarcticus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Granulosicoccus
+T05229	ttc	Thiohalobacter thiocyanaticus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thiohalobacter
 T00307	hch	Hahella chejuensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Hahella
+T05793	hahe	Hahella sp. KA22	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Hahella
 T00347	csa	Chromohalobacter salexigens	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Chromohalobacter
 T01311	hel	Halomonas elongata	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Halomonas
 T03198	hcs	Halomonas campaniensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Halomonas
@@ -1528,6 +1610,8 @@ T05117	hhh	Halomonas hydrothermalis	Prokaryotes;Bacteria;Gammaproteobacteria - O
 T05125	hbe	Halomonas beimenensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Halomonas
 T05375	hag	Halomonas sp. GFAJ-1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Halomonas
 T05423	haf	Halomonas sp. SF2003	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Halomonas
+T05720	halk	Halomonas alkaliphila	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Halomonas
+T05892	hvn	Halomonas venusta	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Halomonas
 T02206	ple	Candidatus Portiera aleyrodidarum BT-B	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Portiera
 T02267	ply	Candidatus Portiera aleyrodidarum BT-B-HRs	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Portiera
 T02306	plr	Candidatus Portiera aleyrodidarum BT-QVLC	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Portiera
@@ -1591,12 +1675,14 @@ T05190	acav	Aeromonas caviae	Prokaryotes;Bacteria;Gammaproteobacteria - Others;A
 T05327	aem	Aeromonas sp. CU5	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Aeromonas
 T05427	aea	Aeromonas sp. ASNIH3	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Aeromonas
 T05453	arv	Aeromonas rivipollensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Aeromonas
+T05873	aes	Aeromonas sp. ASNIH5	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Aeromonas
 T00904	tau	Tolumonas auensis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Tolumonas
 T01667	oce	Oceanimonas sp. GK1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Oceanimonas
 T04855	ocm	Oceanisphaera avium	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Oceanisphaera
 T04856	opf	Oceanisphaera profunda	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Oceanisphaera
 T05100	zdf	Zobellella denitrificans	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Zobellella
 T00517	dno	Dichelobacter nodosus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Dichelobacter
+T05791	chj	Cardiobacterium hominis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Cardiobacterium
 T03066	gap	Gilliamella apicola	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Gilliamella
 T03525	fpp	Frischella perrara	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Frischella
 T04296	sdf	Steroidobacter denitrificans	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Steroidobacter
@@ -1608,10 +1694,10 @@ T05469	acii	Acidiferrobacter sp. SPIII_3	Prokaryotes;Bacteria;Gammaproteobacteri
 T05476	saln	Salinisphaera sp. LB1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Salinisphaera
 T03600	tbn	Thiolapillus brandeum	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thiolapillus
 T03943	seds	Sedimenticola thiotaurini	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Sedimenticola
-T04071	tsn	Candidatus Thioglobus singularis	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thioglobus
+T04071	tsn	Candidatus Thioglobus singularis PS1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thioglobus
+T05818	thin	Candidatus Thioglobus sp. NP1	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thioglobus
 T04079	tho	Candidatus Thioglobus autotrophicus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thioglobus
 T04158	pspi	Pseudohongiella spirulinae	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Pseudohongiella
-T05229	ttc	Thiohalobacter thiocyanaticus	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Thiohalobacter
 T00438	rma	Candidatus Ruthia magnifica (Calyptogena magnifica)	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Ruthia
 T00530	vok	Candidatus Vesicomyosocius okutanii (Calyptogena okutanii)	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Unclassified Gammaproteobacteria
 T04606	ebh	Endosymbiont of Bathymodiolus septemdierum	Prokaryotes;Bacteria;Gammaproteobacteria - Others;Unclassified Gammaproteobacteria
@@ -1642,6 +1728,8 @@ T03569	nel	Neisseria elongata	Prokaryotes;Bacteria;Betaproteobacteria;Neisseria
 T04355	nwe	Neisseria weaveri	Prokaryotes;Bacteria;Betaproteobacteria;Neisseria
 T04958	nsi	Neisseria sicca	Prokaryotes;Bacteria;Betaproteobacteria;Neisseria
 T05436	nmj	Neisseria mucosa	Prokaryotes;Bacteria;Betaproteobacteria;Neisseria
+T05718	nei	Neisseria sp. 10023	Prokaryotes;Bacteria;Betaproteobacteria;Neisseria
+T05913	nek	Neisseria sp. KEM232	Prokaryotes;Bacteria;Betaproteobacteria;Neisseria
 T03063	salv	Snodgrassella alvi	Prokaryotes;Bacteria;Betaproteobacteria;Snodgrassella
 T04151	kki	Kingella kingae	Prokaryotes;Bacteria;Betaproteobacteria;Kingella
 T04960	vff	Vitreoscilla filiformis	Prokaryotes;Bacteria;Betaproteobacteria;Vitreoscilla
@@ -1654,11 +1742,14 @@ T04565	cvc	Chromobacterium vaccinii	Prokaryotes;Bacteria;Betaproteobacteria;Chro
 T05234	chro	Chromobacterium sp. ATCC 53434	Prokaryotes;Bacteria;Betaproteobacteria;Chromobacterium
 T05549	chri	Chromobacterium sp. IIBBL 112-1	Prokaryotes;Bacteria;Betaproteobacteria;Chromobacterium
 T05688	crz	Chromobacterium rhizoryzae	Prokaryotes;Bacteria;Betaproteobacteria;Chromobacterium
+T05744	chrb	Chromobacterium sp. IIBBL 274-1	Prokaryotes;Bacteria;Betaproteobacteria;Chromobacterium
+T05767	iod	Iodobacter sp. H11R3	Prokaryotes;Bacteria;Betaproteobacteria;Iodobacter
 T00884	lhk	Laribacter hongkongensis	Prokaryotes;Bacteria;Betaproteobacteria;Laribacter
 T01619	pse	Pseudogulbenkiania sp. NH8B	Prokaryotes;Bacteria;Betaproteobacteria;Pseudogulbenkiania
 T04552	jeu	Jeongeupia sp. USM3	Prokaryotes;Bacteria;Betaproteobacteria;Jeongeupia
 T04696	aql	Aquaspirillum sp. LM1	Prokaryotes;Bacteria;Betaproteobacteria;Aquaspirillum
 T05698	amah	Aquitalea magnusonii	Prokaryotes;Bacteria;Betaproteobacteria;Aquitalea
+T05865	aqs	Aquitalea sp. USM4	Prokaryotes;Bacteria;Betaproteobacteria;Aquitalea
 T00071	rso	Ralstonia solanacearum GMI1000	Prokaryotes;Bacteria;Betaproteobacteria;Ralstonia
 T01272	rsc	Ralstonia solanacearum CFBP2957	Prokaryotes;Bacteria;Betaproteobacteria;Ralstonia
 T01273	rsl	Ralstonia solanacearum PSI07	Prokaryotes;Bacteria;Betaproteobacteria;Ralstonia
@@ -1682,6 +1773,7 @@ T04050	cgd	Cupriavidus gilardii	Prokaryotes;Bacteria;Betaproteobacteria;Cupriavi
 T04762	ccup	Cupriavidus sp. USMAHM13	Prokaryotes;Bacteria;Betaproteobacteria;Cupriavidus
 T04978	cup	Cupriavidus sp. USMAA1020	Prokaryotes;Bacteria;Betaproteobacteria;Cupriavidus
 T05072	cuu	Cupriavidus sp. USMAA2-4	Prokaryotes;Bacteria;Betaproteobacteria;Cupriavidus
+T05738	cpau	Cupriavidus pauculus	Prokaryotes;Bacteria;Betaproteobacteria;Cupriavidus
 T00204	bma	Burkholderia mallei ATCC 23344	Prokaryotes;Bacteria;Betaproteobacteria;Burkholderia
 T00457	bmv	Burkholderia mallei SAVP1	Prokaryotes;Bacteria;Betaproteobacteria;Burkholderia
 T00471	bml	Burkholderia mallei NCTC 10229	Prokaryotes;Bacteria;Betaproteobacteria;Burkholderia
@@ -1770,10 +1862,10 @@ T04139	bpla	Burkholderia plantarii ATCC 43733	Prokaryotes;Bacteria;Betaproteobac
 T04266	bud	Burkholderia sp. Bp5365	Prokaryotes;Bacteria;Betaproteobacteria;Burkholderia
 T05111	buz	Burkholderia sp. OLGA172	Prokaryotes;Bacteria;Betaproteobacteria;Burkholderia
 T05481	bum	Burkholderia sp. PAMC 26561	Prokaryotes;Bacteria;Betaproteobacteria;Burkholderia
+T05699	bui	Burkholderia sp. PAMC 28687	Prokaryotes;Bacteria;Betaproteobacteria;Burkholderia
 T00340	bxe	Paraburkholderia xenovorans LB400	Prokaryotes;Bacteria;Betaproteobacteria;Paraburkholderia
 T03290	bxb	Paraburkholderia xenovorans LB400	Prokaryotes;Bacteria;Betaproteobacteria;Paraburkholderia
 T00704	bph	Paraburkholderia phymatum	Prokaryotes;Bacteria;Betaproteobacteria;Paraburkholderia
-T01355	brh	Paraburkholderia rhizoxinica	Prokaryotes;Bacteria;Betaproteobacteria;Paraburkholderia
 T02300	bpx	Paraburkholderia phenoliruptrix	Prokaryotes;Bacteria;Betaproteobacteria;Paraburkholderia
 T00765	bpy	Paraburkholderia phytofirmans	Prokaryotes;Bacteria;Betaproteobacteria;Paraburkholderia
 T03799	bfn	Paraburkholderia fungorum	Prokaryotes;Bacteria;Betaproteobacteria;Paraburkholderia
@@ -1784,10 +1876,13 @@ T05169	parb	Paraburkholderia aromaticivorans	Prokaryotes;Bacteria;Betaproteobact
 T05305	phs	Paraburkholderia hospita	Prokaryotes;Bacteria;Betaproteobacteria;Paraburkholderia
 T05318	pter	Paraburkholderia terrae	Prokaryotes;Bacteria;Betaproteobacteria;Paraburkholderia
 T05548	pgp	Paraburkholderia graminis	Prokaryotes;Bacteria;Betaproteobacteria;Paraburkholderia
+T05740	pcj	Paraburkholderia caledonica	Prokaryotes;Bacteria;Betaproteobacteria;Paraburkholderia
+T05812	pts	Paraburkholderia terricola	Prokaryotes;Bacteria;Betaproteobacteria;Paraburkholderia
+T01355	brh	Paraburkholderia rhizoxinica	Prokaryotes;Bacteria;Betaproteobacteria;Mycetohabitans
 T00502	pnu	Polynucleobacter asymbioticus	Prokaryotes;Bacteria;Betaproteobacteria;Polynucleobacter
 T00683	pne	Polynucleobacter necessarius	Prokaryotes;Bacteria;Betaproteobacteria;Polynucleobacter
 T04207	pdq	Polynucleobacter duraquae	Prokaryotes;Bacteria;Betaproteobacteria;Polynucleobacter
-T05507	poh	Polynucleobacter sp. MWH-Creno-4B4	Prokaryotes;Bacteria;Betaproteobacteria;Polynucleobacter
+T05507	poh	Polynucleobacter paneuropaeus	Prokaryotes;Bacteria;Betaproteobacteria;Polynucleobacter
 T02936	ppk	Pandoraea pnomenusa 3kgm	Prokaryotes;Bacteria;Betaproteobacteria;Pandoraea
 T03067	ppno	Pandoraea pnomenusa RB38	Prokaryotes;Bacteria;Betaproteobacteria;Pandoraea
 T03411	ppnm	Pandoraea pnomenusa DSM 16536	Prokaryotes;Bacteria;Betaproteobacteria;Pandoraea
@@ -1802,6 +1897,8 @@ T03972	pfg	Pandoraea faecigallinarum	Prokaryotes;Bacteria;Betaproteobacteria;Pan
 T04226	pnr	Pandoraea norimbergensis	Prokaryotes;Bacteria;Betaproteobacteria;Pandoraea
 T05492	plg	Paucimonas lemoignei	Prokaryotes;Bacteria;Betaproteobacteria;Paucimonas
 T05560	hyf	Hydromonas sp. F02	Prokaryotes;Bacteria;Betaproteobacteria;Hydromonas
+T05799	lmir	Lautropia mirabilis	Prokaryotes;Bacteria;Betaproteobacteria;Lautropia
+T05801	mcys	Mycoavidus cysteinexigens	Prokaryotes;Bacteria;Betaproteobacteria;Mycoavidus
 T00139	bpe	Bordetella pertussis Tohama I	Prokaryotes;Bacteria;Betaproteobacteria;Bordetella
 T01846	bpc	Bordetella pertussis CS	Prokaryotes;Bacteria;Betaproteobacteria;Bordetella
 T02296	bper	Bordetella pertussis 18323	Prokaryotes;Bacteria;Betaproteobacteria;Bordetella
@@ -1825,6 +1922,7 @@ T04945	bpdz	Bordetella pseudohinzii	Prokaryotes;Bacteria;Betaproteobacteria;Bord
 T04979	boh	Bordetella sp. H567	Prokaryotes;Bacteria;Betaproteobacteria;Bordetella
 T05441	bgm	Bordetella genomosp. 13	Prokaryotes;Bacteria;Betaproteobacteria;Bordetella
 T05532	boz	Bordetella sp. HZ20	Prokaryotes;Bacteria;Betaproteobacteria;Bordetella
+T05850	boj	Bordetella sp. J329	Prokaryotes;Bacteria;Betaproteobacteria;Bordetella
 T01341	axy	Achromobacter xylosoxidans A8	Prokaryotes;Bacteria;Betaproteobacteria;Achromobacter
 T02785	axo	Achromobacter xylosoxidans NH44784-1996	Prokaryotes;Bacteria;Betaproteobacteria;Achromobacter
 T02964	axn	Achromobacter xylosoxidans NBRC 15126 = ATCC 27061	Prokaryotes;Bacteria;Betaproteobacteria;Achromobacter
@@ -1833,12 +1931,14 @@ T04244	adt	Achromobacter denitrificans	Prokaryotes;Bacteria;Betaproteobacteria;A
 T04671	ais	Achromobacter insolitus	Prokaryotes;Bacteria;Betaproteobacteria;Achromobacter
 T05274	asw	Achromobacter spanius	Prokaryotes;Bacteria;Betaproteobacteria;Achromobacter
 T05288	achr	Achromobacter sp. AONIH1	Prokaryotes;Bacteria;Betaproteobacteria;Achromobacter
+T05703	achb	Achromobacter sp. B7	Prokaryotes;Bacteria;Betaproteobacteria;Achromobacter
 T01390	teq	Taylorella equigenitalis MCE9	Prokaryotes;Bacteria;Betaproteobacteria;Taylorella
 T02186	tea	Taylorella equigenitalis ATCC 35865	Prokaryotes;Bacteria;Betaproteobacteria;Taylorella
 T02604	teg	Taylorella equigenitalis 14/56	Prokaryotes;Bacteria;Betaproteobacteria;Taylorella
 T01634	tas	Taylorella asinigenitalis MCE3	Prokaryotes;Bacteria;Betaproteobacteria;Taylorella
 T02603	tat	Taylorella asinigenitalis 14/45	Prokaryotes;Bacteria;Betaproteobacteria;Taylorella
 T01486	put	Pusillimonas sp. T7-7	Prokaryotes;Bacteria;Betaproteobacteria;Pusillimonas
+T05795	pus	Pusillimonas sp. ye3	Prokaryotes;Bacteria;Betaproteobacteria;Pusillimonas
 T02117	aka	Advenella kashmirensis	Prokaryotes;Bacteria;Betaproteobacteria;Advenella
 T03016	amim	Advenella mimigardefordensis	Prokaryotes;Bacteria;Betaproteobacteria;Advenella
 T03058	cdn	Castellaniella defragrans	Prokaryotes;Bacteria;Betaproteobacteria;Castellaniella
@@ -1849,6 +1949,8 @@ T05678	aaqu	Alcaligenes aquatilis	Prokaryotes;Bacteria;Betaproteobacteria;Alcali
 T04704	phn	Paenalcaligenes hominis	Prokaryotes;Bacteria;Betaproteobacteria;Paenalcaligenes
 T05133	odi	Orrella dioscoreae	Prokaryotes;Bacteria;Betaproteobacteria;Orrella
 T05343	our	Oligella urethralis	Prokaryotes;Bacteria;Betaproteobacteria;Oligella
+T05719	pig	Pigmentiphaga sp. H8	Prokaryotes;Bacteria;Betaproteobacteria;Pigmentiphaga
+T05924	kgy	Kerstersia gyiorum	Prokaryotes;Bacteria;Betaproteobacteria;Kerstersia
 T00334	rfr	Rhodoferax ferrireducens	Prokaryotes;Bacteria;Betaproteobacteria;Rhodoferax
 T04623	rsb	Rhodoferax saidenbachensis	Prokaryotes;Bacteria;Betaproteobacteria;Rhodoferax
 T04655	rac	Rhodoferax antarcticus	Prokaryotes;Bacteria;Betaproteobacteria;Rhodoferax
@@ -1893,13 +1995,15 @@ T04121	lih	Limnohabitans sp. 63ED37-2	Prokaryotes;Bacteria;Betaproteobacteria;Li
 T04455	hyr	Hydrogenophaga sp. RAC07	Prokaryotes;Bacteria;Betaproteobacteria;Hydrogenophaga
 T04491	hyb	Hydrogenophaga sp. PBC	Prokaryotes;Bacteria;Betaproteobacteria;Hydrogenophaga
 T04505	hyl	Hydrogenophaga sp. LPB0072	Prokaryotes;Bacteria;Betaproteobacteria;Hydrogenophaga
+T05960	hyc	Hydrogenophaga sp. PAMC20947	Prokaryotes;Bacteria;Betaproteobacteria;Hydrogenophaga
 T04937	dpy	Diaphorobacter polyhydroxybutyrativorans	Prokaryotes;Bacteria;Betaproteobacteria;Diaphorobacter
 T05361	simp	Simplicispira suum	Prokaryotes;Bacteria;Betaproteobacteria;Simplicispira
 T05362	melm	Melaminivora sp. SC2-7	Prokaryotes;Bacteria;Betaproteobacteria;Melaminivora
 T05358	mela	Melaminivora sp. SC2-9	Prokaryotes;Bacteria;Betaproteobacteria;Melaminivora
-T03614	cbaa	Comamonadaceae bacterium A1	Prokaryotes;Bacteria;Betaproteobacteria;Unclassified Comamonadaceae
-T03627	cbab	Comamonadaceae bacterium B1	Prokaryotes;Bacteria;Betaproteobacteria;Unclassified Comamonadaceae
+T03614	cbaa	Serpentinomonas raichei	Prokaryotes;Bacteria;Betaproteobacteria;Serpentinomonas
+T03627	cbab	Serpentinomonas mccroryi	Prokaryotes;Bacteria;Betaproteobacteria;Serpentinomonas
 T00470	mpt	Methylibium petroleiphilum	Prokaryotes;Bacteria;Betaproteobacteria;Methylibium
+T05827	metp	Methylibium sp. Pch-M	Prokaryotes;Bacteria;Betaproteobacteria;Methylibium
 T00490	har	Herminiimonas arsenicoxydans	Prokaryotes;Bacteria;Betaproteobacteria;Herminiimonas
 T00561	mms	Janthinobacterium sp. Marseille	Prokaryotes;Bacteria;Betaproteobacteria;Janthinobacterium
 T03157	jag	Janthinobacterium agaricidamnosum	Prokaryotes;Bacteria;Betaproteobacteria;Janthinobacterium
@@ -1907,11 +2011,13 @@ T04271	jab	Janthinobacterium sp. B9-8	Prokaryotes;Bacteria;Betaproteobacteria;Ja
 T04539	jaz	Janthinobacterium sp. 1_2014MBL_MicDiv	Prokaryotes;Bacteria;Betaproteobacteria;Janthinobacterium
 T04756	jal	Janthinobacterium sp. LM6	Prokaryotes;Bacteria;Betaproteobacteria;Janthinobacterium
 T05119	jsv	Janthinobacterium svalbardensis	Prokaryotes;Bacteria;Betaproteobacteria;Janthinobacterium
+T05896	jaj	Janthinobacterium sp. 17J80-10	Prokaryotes;Bacteria;Betaproteobacteria;Janthinobacterium
 T01268	hse	Herbaspirillum seropedicae SmR1	Prokaryotes;Bacteria;Betaproteobacteria;Herbaspirillum
 T04519	hsz	Herbaspirillum seropedicae Z67	Prokaryotes;Bacteria;Betaproteobacteria;Herbaspirillum
 T04039	hht	Herbaspirillum hiltneri	Prokaryotes;Bacteria;Betaproteobacteria;Herbaspirillum
 T04238	hrb	Herbaspirillum rubrisubalbicans	Prokaryotes;Bacteria;Betaproteobacteria;Herbaspirillum
 T05024	hee	Herbaspirillum sp. meg3	Prokaryotes;Bacteria;Betaproteobacteria;Herbaspirillum
+T05937	hhf	Herbaspirillum huttiense	Prokaryotes;Bacteria;Betaproteobacteria;Herbaspirillum
 T01304	zin	Candidatus Zinderia insecticola	Prokaryotes;Bacteria;Betaproteobacteria;Zinderia
 T01583	cfu	Collimonas fungivorans	Prokaryotes;Bacteria;Betaproteobacteria;Collimonas
 T03512	care	Collimonas arenae	Prokaryotes;Bacteria;Betaproteobacteria;Collimonas
@@ -1922,8 +2028,10 @@ T05157	mass	Massilia violaceinigra	Prokaryotes;Bacteria;Betaproteobacteria;Massi
 T05378	masz	Massilia armeniaca	Prokaryotes;Bacteria;Betaproteobacteria;Massilia
 T05448	mtim	Massilia oculi	Prokaryotes;Bacteria;Betaproteobacteria;Massilia
 T05528	masy	Massilia sp. YMA4	Prokaryotes;Bacteria;Betaproteobacteria;Massilia
+T05903	mali	Massilia albidiflava	Prokaryotes;Bacteria;Betaproteobacteria;Massilia
 T04835	ofo	Oxalobacter formigenes	Prokaryotes;Bacteria;Betaproteobacteria;Oxalobacter
-T05697	sutt	Sutterella sp. 6FBBBH3	Prokaryotes;Bacteria;Betaproteobacteria;Sutterella
+T05754	upv	Undibacterium parvum	Prokaryotes;Bacteria;Betaproteobacteria;Undibacterium
+T05697	sutt	Sutterella megalosphaeroides	Prokaryotes;Bacteria;Betaproteobacteria;Sutterella
 T00681	lch	Leptothrix cholodnii	Prokaryotes;Bacteria;Betaproteobacteria;Leptothrix
 T01227	tin	Thiomonas intermedia	Prokaryotes;Bacteria;Betaproteobacteria;Thiomonas
 T02347	thi	Thiomonas arsenitoxydans	Prokaryotes;Bacteria;Betaproteobacteria;Thiomonas
@@ -2142,10 +2250,15 @@ T05046	ccun	Campylobacter cuniculorum	Prokaryotes;Bacteria;Epsilonproteobacteria
 T05075	clx	Campylobacter lanienae	Prokaryotes;Bacteria;Epsilonproteobacteria;Campylobacter
 T05533	cavi	Campylobacter avium	Prokaryotes;Bacteria;Epsilonproteobacteria;Campylobacter
 T05589	chw	Campylobacter hepaticus	Prokaryotes;Bacteria;Epsilonproteobacteria;Campylobacter
+T05727	camz	Campylobacter sp. RM12175	Prokaryotes;Bacteria;Epsilonproteobacteria;Campylobacter
+T05900	camy	Campylobacter sp. RM6137	Prokaryotes;Bacteria;Epsilonproteobacteria;Campylobacter
 T00600	abu	Arcobacter butzleri RM4018	Prokaryotes;Bacteria;Epsilonproteobacteria;Arcobacter
 T01823	abt	Arcobacter butzleri ED-1	Prokaryotes;Bacteria;Epsilonproteobacteria;Arcobacter
 T02755	abl	Arcobacter butzleri 7h1h	Prokaryotes;Bacteria;Epsilonproteobacteria;Arcobacter
 T01235	ant	Arcobacter nitrofigilis	Prokaryotes;Bacteria;Epsilonproteobacteria;Arcobacter
+T05743	ask	Arcobacter skirrowii	Prokaryotes;Bacteria;Epsilonproteobacteria;Arcobacter
+T05822	ahs	Arcobacter halophilus	Prokaryotes;Bacteria;Epsilonproteobacteria;Arcobacter
+T05895	amyt	Arcobacter mytili	Prokaryotes;Bacteria;Epsilonproteobacteria;Arcobacter
 T01834	arc	Arcobacter sp. L	Prokaryotes;Bacteria;Epsilonproteobacteria;Unclassified Arcobacter
 T04722	alp	Arcobacter sp. LPB0137	Prokaryotes;Bacteria;Epsilonproteobacteria;Unclassified Arcobacter
 T01126	sdl	Sulfurospirillum deleyianum	Prokaryotes;Bacteria;Epsilonproteobacteria;Sulfurospirillum
@@ -2154,6 +2267,7 @@ T03049	smul	Sulfurospirillum multivorans	Prokaryotes;Bacteria;Epsilonproteobacte
 T04475	shal	Sulfurospirillum halorespirans	Prokaryotes;Bacteria;Epsilonproteobacteria;Sulfurospirillum
 T04910	suls	Sulfurospirillum sp. SL2-1	Prokaryotes;Bacteria;Epsilonproteobacteria;Sulfurospirillum
 T05109	sulj	Sulfurospirillum sp. JPD-1	Prokaryotes;Bacteria;Epsilonproteobacteria;Sulfurospirillum
+T05789	hyo	Hydrogenimonas sp. MAG	Prokaryotes;Bacteria;Epsilonproteobacteria;Hydrogenimonas
 T01405	nsa	Nitratifractor salsuginis	Prokaryotes;Bacteria;Epsilonproteobacteria;Nitratifractor
 T00565	nis	Nitratiruptor sp. SB155-2	Prokaryotes;Bacteria;Epsilonproteobacteria;Nitratiruptor
 T00572	sun	Sulfurovum sp. NBC37-1	Prokaryotes;Bacteria;Epsilonproteobacteria;Sulfurovum
@@ -2193,6 +2307,7 @@ T04293	dfi	Desulfovibrio fairfieldensis	Prokaryotes;Bacteria;Deltaproteobacteria
 T04638	dpg	Desulfovibrio piger	Prokaryotes;Bacteria;Deltaproteobacteria;Desulfovibrio
 T05183	def	Desulfovibrio sp. G11	Prokaryotes;Bacteria;Deltaproteobacteria;Desulfovibrio
 T05578	dtr	Candidatus Desulfovibrio trichonymphae	Prokaryotes;Bacteria;Deltaproteobacteria;Desulfovibrio
+T05829	dfl	Desulfovibrio ferrophilus	Prokaryotes;Bacteria;Deltaproteobacteria;Desulfovibrio
 T01382	das	Pseudodesulfovibrio aespoeensis	Prokaryotes;Bacteria;Deltaproteobacteria;Pseudodesulfovibrio
 T02481	dpi	Pseudodesulfovibrio piezophilus	Prokaryotes;Bacteria;Deltaproteobacteria;Pseudodesulfovibrio
 T04404	dej	Pseudodesulfovibrio indicus	Prokaryotes;Bacteria;Deltaproteobacteria;Pseudodesulfovibrio
@@ -2238,19 +2353,21 @@ T00346	sat	Syntrophus aciditrophicus	Prokaryotes;Bacteria;Deltaproteobacteria;Sy
 T01454	dao	Desulfobacca acetoxidans	Prokaryotes;Bacteria;Deltaproteobacteria;Desulfobacca
 T02147	dti	Desulfomonile tiedjei	Prokaryotes;Bacteria;Deltaproteobacteria;Desulfomonile
 T00418	sfu	Syntrophobacter fumaroxidans	Prokaryotes;Bacteria;Deltaproteobacteria;Syntrophobacter
+T05964	dax	Desulfoglaeba alkanexedens	Prokaryotes;Bacteria;Deltaproteobacteria;Desulfoglaeba
 T01284	dbr	Desulfarculus baarsii	Prokaryotes;Bacteria;Deltaproteobacteria;Desulfarculus
 T01456	hmr	Hippea maritima	Prokaryotes;Bacteria;Deltaproteobacteria;Hippea
 T03007	dav	Desulfurella acetivorans	Prokaryotes;Bacteria;Deltaproteobacteria;Desulfurella
-T02948	dpb	Candidatus Babela massiliensis	Prokaryotes;Bacteria;Deltaproteobacteria;Babela
 T05497	bsed	Bradymonas sediminis	Prokaryotes;Bacteria;Deltaproteobacteria;Bradymonas
 T00159	bba	Bdellovibrio bacteriovorus HD100	Prokaryotes;Bacteria;Deltaproteobacteria;Bdellovibrio
 T02356	bbat	Bdellovibrio bacteriovorus Tiberius	Prokaryotes;Bacteria;Deltaproteobacteria;Bdellovibrio
 T03036	bbw	Bdellovibrio bacteriovorus W	Prokaryotes;Bacteria;Deltaproteobacteria;Bdellovibrio
 T03079	bbac	Bdellovibrio bacteriovorus 109J	Prokaryotes;Bacteria;Deltaproteobacteria;Bdellovibrio
 T02492	bex	Bdellovibrio exovorus	Prokaryotes;Bacteria;Deltaproteobacteria;Bdellovibrio
+T05880	bdq	Bdellovibrio sp. qaytius	Prokaryotes;Bacteria;Deltaproteobacteria;Bdellovibrio
 T01659	bmx	Halobacteriovorax marinus	Prokaryotes;Bacteria;Deltaproteobacteria;Halobacteriovorax
 T05649	hax	Halobacteriovorax sp. BALOs_7	Prokaryotes;Bacteria;Deltaproteobacteria;Halobacteriovorax
 T05263	bsto	Bacteriovorax stolpii	Prokaryotes;Bacteria;Deltaproteobacteria;Bacteriovorax
+T05949	sbf	Silvanigrellales bacterium RF1110005	Prokaryotes;Bacteria;Deltaproteobacteria;Unclassified Silvanigrellales
 T00018	rpr	Rickettsia prowazekii Madrid E	Prokaryotes;Bacteria;Alphaproteobacteria;Rickettsia
 T01788	rpo	Rickettsia prowazekii BuV67-CWPP	Prokaryotes;Bacteria;Alphaproteobacteria;Rickettsia
 T01789	rpw	Rickettsia prowazekii Chernikova	Prokaryotes;Bacteria;Alphaproteobacteria;Rickettsia
@@ -2309,6 +2426,8 @@ T00719	wpi	Wolbachia wPip (Culex quinquefasciatus)	Prokaryotes;Bacteria;Alphapro
 T00234	wbm	Wolbachia wBm (Brugia malayi)	Prokaryotes;Bacteria;Alphaproteobacteria;Wolbachia
 T02212	woo	Wolbachia wOo (Onchocerca ochengi)	Prokaryotes;Bacteria;Alphaproteobacteria;Wolbachia
 T03628	wcl	Wolbachia wCle (Cimex lectularius)	Prokaryotes;Bacteria;Alphaproteobacteria;Wolbachia
+T05726	weo	Wolbachia wFol (Folsomia candida)	Prokaryotes;Bacteria;Alphaproteobacteria;Wolbachia
+T05842	wpp	Wolbachia pipientis	Prokaryotes;Bacteria;Alphaproteobacteria;Wolbachia
 T00216	ama	Anaplasma marginale St. Maries	Prokaryotes;Bacteria;Alphaproteobacteria;Anaplasma
 T00855	amf	Anaplasma marginale Florida	Prokaryotes;Bacteria;Alphaproteobacteria;Anaplasma
 T02898	amw	Anaplasma marginale Dawn	Prokaryotes;Bacteria;Alphaproteobacteria;Anaplasma
@@ -2339,6 +2458,7 @@ T03076	nhm	Neorickettsia helminthoeca	Prokaryotes;Bacteria;Alphaproteobacteria;N
 T01561	mmn	Candidatus Midichloria mitochondrii	Prokaryotes;Bacteria;Alphaproteobacteria;Midichloria
 T05415	fso	Candidatus Fokinia solitaria	Prokaryotes;Bacteria;Alphaproteobacteria;Fokinia
 T03234	rbt	Rickettsiales bacterium Ac37b	Prokaryotes;Bacteria;Alphaproteobacteria;Unclassified Rickettsiales
+T05750	ren	Rickettsiales endosymbiont of Stachyamoeba lipophora	Prokaryotes;Bacteria;Alphaproteobacteria;Unclassified Rickettsiales
 T03232	paca	Candidatus Paracaedibacter acanthamoebae	Prokaryotes;Bacteria;Alphaproteobacteria;Paracaedibacter
 T03240	caq	Candidatus Paracaedimonas acanthamoebae	Prokaryotes;Bacteria;Alphaproteobacteria;Paracaedimonas
 T04833	naf	Candidatus Nucleicultrix amoebiphila	Prokaryotes;Bacteria;Alphaproteobacteria;Nucleicultrix
@@ -2351,11 +2471,14 @@ T02417	mam	Mesorhizobium australicum	Prokaryotes;Bacteria;Alphaproteobacteria;Me
 T04446	mamo	Mesorhizobium amorphae	Prokaryotes;Bacteria;Alphaproteobacteria;Mesorhizobium
 T04603	meso	Mesorhizobium sp. B7	Prokaryotes;Bacteria;Alphaproteobacteria;Mesorhizobium
 T04915	mesw	Mesorhizobium sp. WSM1497	Prokaryotes;Bacteria;Alphaproteobacteria;Mesorhizobium
+T05904	mesm	Mesorhizobium sp. M9A.F.Ca.ET.002.03.1.2	Prokaryotes;Bacteria;Alphaproteobacteria;Mesorhizobium
+T05918	mesp	Mesorhizobium sp. Pch-S	Prokaryotes;Bacteria;Alphaproteobacteria;Mesorhizobium
 T00374	mes	Chelativorans sp. BNC1	Prokaryotes;Bacteria;Alphaproteobacteria;Chelativorans
 T03926	hoe	Hoeflea sp. IMCC20628	Prokaryotes;Bacteria;Alphaproteobacteria;Hoeflea
 T04343	aak	Aminobacter aminovorans	Prokaryotes;Bacteria;Alphaproteobacteria;Aminobacter
 T05420	amih	Aminobacter sp. MSH1	Prokaryotes;Bacteria;Alphaproteobacteria;Aminobacter
 T05167	pht	Phyllobacterium zundukense	Prokaryotes;Bacteria;Alphaproteobacteria;Phyllobacterium
+T05862	rpod	Roseitalea porphyridii	Prokaryotes;Bacteria;Alphaproteobacteria;Roseitalea
 T00580	pla	Parvibaculum lavamentivorans	Prokaryotes;Bacteria;Alphaproteobacteria;Parvibaculum
 T05596	rbs	Rhodobiaceae bacterium SMS8	Prokaryotes;Bacteria;Alphaproteobacteria;Unclassified Rhodobiaceae
 T00058	sme	Sinorhizobium meliloti 1021	Prokaryotes;Bacteria;Alphaproteobacteria;Sinorhizobium
@@ -2384,6 +2507,7 @@ T00851	avi	Agrobacterium vitis	Prokaryotes;Bacteria;Alphaproteobacteria;Agrobact
 T01432	agr	Agrobacterium sp. H13-3	Prokaryotes;Bacteria;Alphaproteobacteria;Agrobacterium
 T04501	agc	Agrobacterium sp. RAC06	Prokaryotes;Bacteria;Alphaproteobacteria;Agrobacterium
 T04767	aro	Agrobacterium rhizogenes	Prokaryotes;Bacteria;Alphaproteobacteria;Agrobacterium
+T05906	agt	Agrobacterium sp. 33MFTa1.1	Prokaryotes;Bacteria;Alphaproteobacteria;Agrobacterium
 T00317	ret	Rhizobium etli CFN 42	Prokaryotes;Bacteria;Alphaproteobacteria;Rhizobium
 T00720	rec	Rhizobium etli CIAT 652	Prokaryotes;Bacteria;Alphaproteobacteria;Rhizobium
 T02778	rel	Rhizobium etli bv. mimosae Mim1	Prokaryotes;Bacteria;Alphaproteobacteria;Rhizobium
@@ -2405,6 +2529,7 @@ T04809	rhx	Rhizobium sp. N731	Prokaryotes;Bacteria;Alphaproteobacteria;Rhizobium
 T05451	rhv	Rhizobium sp. S41	Prokaryotes;Bacteria;Alphaproteobacteria;Rhizobium
 T05501	rhk	Rhizobium sp. Kim5	Prokaryotes;Bacteria;Alphaproteobacteria;Rhizobium
 T05681	rez	Rhizobium esperanzae	Prokaryotes;Bacteria;Alphaproteobacteria;Rhizobium
+T05891	rjg	Rhizobium jaguaris	Prokaryotes;Bacteria;Alphaproteobacteria;Rhizobium
 T03208	ngl	Neorhizobium galegae bv. officinalis bv. officinalis HAMBI 1141	Prokaryotes;Bacteria;Alphaproteobacteria;Neorhizobium
 T03244	ngg	Neorhizobium galegae bv. orientalis HAMBI 540	Prokaryotes;Bacteria;Alphaproteobacteria;Neorhizobium
 T05626	neo	Neorhizobium sp. SOG26	Prokaryotes;Bacteria;Alphaproteobacteria;Neorhizobium
@@ -2477,6 +2602,8 @@ T04485	bic	Bradyrhizobium icense	Prokaryotes;Bacteria;Alphaproteobacteria;Bradyr
 T04956	bro	Bradyrhizobium sp. ORS 285	Prokaryotes;Bacteria;Alphaproteobacteria;Bradyrhizobium
 T05325	brk	Bradyrhizobium sp. SK17	Prokaryotes;Bacteria;Alphaproteobacteria;Bradyrhizobium
 T05524	bot	Bradyrhizobium ottawaense	Prokaryotes;Bacteria;Alphaproteobacteria;Bradyrhizobium
+T05700	brq	Bradyrhizobium sp. 2 39S1MB	Prokaryotes;Bacteria;Alphaproteobacteria;Bradyrhizobium
+T05902	bgq	Bradyrhizobium guangdongense	Prokaryotes;Bacteria;Alphaproteobacteria;Bradyrhizobium
 T00153	rpa	Rhodopseudomonas palustris CGA009	Prokaryotes;Bacteria;Alphaproteobacteria;Rhodopseudomonas
 T00321	rpb	Rhodopseudomonas palustris HaA2	Prokaryotes;Bacteria;Alphaproteobacteria;Rhodopseudomonas
 T00336	rpc	Rhodopseudomonas palustris BisB18	Prokaryotes;Bacteria;Alphaproteobacteria;Rhodopseudomonas
@@ -2492,6 +2619,7 @@ T01967	oco	Oligotropha carboxidovorans OM4	Prokaryotes;Bacteria;Alphaproteobacte
 T04264	bop	Bosea sp. PAMC 26642	Prokaryotes;Bacteria;Alphaproteobacteria;Bosea
 T04462	bos	Bosea sp. RAC05	Prokaryotes;Bacteria;Alphaproteobacteria;Bosea
 T04483	bvv	Bosea vaviloviae	Prokaryotes;Bacteria;Alphaproteobacteria;Bosea
+T05753	boi	Bosea sp. Tri-49	Prokaryotes;Bacteria;Alphaproteobacteria;Bosea
 T05320	vgo	Variibacter gotjawalensis	Prokaryotes;Bacteria;Alphaproteobacteria;Variibacter
 T00180	bhe	Bartonella henselae Houston-1	Prokaryotes;Bacteria;Alphaproteobacteria;Bartonella
 T03068	bhn	Bartonella henselae BM1374163	Prokaryotes;Bacteria;Alphaproteobacteria;Bartonella
@@ -2531,11 +2659,15 @@ T04311	maqu	Methylobacterium aquaticum	Prokaryotes;Bacteria;Alphaproteobacteria;
 T04968	mphy	Methylobacterium phyllosphaerae	Prokaryotes;Bacteria;Alphaproteobacteria;Methylobacterium
 T05184	mee	Methylobacterium currus	Prokaryotes;Bacteria;Alphaproteobacteria;Methylobacterium
 T05461	metd	Methylobacterium sp. DM1	Prokaryotes;Bacteria;Alphaproteobacteria;Methylobacterium
-T05508	metx	Methylobacterium sp. XJLM	Prokaryotes;Bacteria;Alphaproteobacteria;Methylobacterium
+T05508	metx	Methylobacterium sp. XJLW	Prokaryotes;Bacteria;Alphaproteobacteria;Methylobacterium
+T05724	mets	Methylobacterium sp. 17SD2-17	Prokaryotes;Bacteria;Alphaproteobacteria;Methylobacterium
+T05919	meti	Methylobacterium sp. 17Sr1-43	Prokaryotes;Bacteria;Alphaproteobacteria;Methylobacterium
 T05139	moc	Microvirga ossetica	Prokaryotes;Bacteria;Alphaproteobacteria;Microvirga
 T05470	miv	Microvirga sp. 17 mud 1-3	Prokaryotes;Bacteria;Alphaproteobacteria;Microvirga
 T00688	bid	Beijerinckia indica	Prokaryotes;Bacteria;Alphaproteobacteria;Beijerinckia
 T00802	msl	Methylocella silvestris	Prokaryotes;Bacteria;Alphaproteobacteria;Methylocella
+T05970	mtun	Methylocella tundrae	Prokaryotes;Bacteria;Alphaproteobacteria;Methylocella
+T05824	mlg	Methylovirgula ligni	Prokaryotes;Bacteria;Alphaproteobacteria;Methylovirgula
 T04040	chel	Chelatococcus sp. CO-6	Prokaryotes;Bacteria;Alphaproteobacteria;Chelatococcus
 T04583	cdq	Chelatococcus daeguensis	Prokaryotes;Bacteria;Alphaproteobacteria;Chelatococcus
 T01265	hdn	Hyphomicrobium denitrificans ATCC 51888	Prokaryotes;Bacteria;Alphaproteobacteria;Hyphomicrobium
@@ -2549,11 +2681,14 @@ T03857	fiy	Candidatus Filomicrobium marinum Y	Prokaryotes;Bacteria;Alphaproteoba
 T04003	deq	Devosia sp. H5989	Prokaryotes;Bacteria;Alphaproteobacteria;Devosia
 T05346	dei	Devosia sp. I507	Prokaryotes;Bacteria;Alphaproteobacteria;Devosia
 T04109	bvr	Blastochloris viridis	Prokaryotes;Bacteria;Alphaproteobacteria;Blastochloris
+T05837	blag	Blastochloris sp. GI	Prokaryotes;Bacteria;Alphaproteobacteria;Blastochloris
 T04290	rhz	Rhodoplanes sp. Z2-YC6860	Prokaryotes;Bacteria;Alphaproteobacteria;Rhodoplanes
 T05588	mmyr	Maritalea myrionectae	Prokaryotes;Bacteria;Alphaproteobacteria;Maritalea
 T02324	msc	Methylocystis sp. SC2	Prokaryotes;Bacteria;Alphaproteobacteria;Methylocystis
 T04837	mbry	Methylocystis bryophila	Prokaryotes;Bacteria;Alphaproteobacteria;Methylocystis
+T05721	mros	Methylocystis rosea	Prokaryotes;Bacteria;Alphaproteobacteria;Methylocystis
 T05155	mtw	Methylosinus trichosporium	Prokaryotes;Bacteria;Alphaproteobacteria;Methylosinus
+T05766	pleo	Pleomorphomonas sp. SM30	Prokaryotes;Bacteria;Alphaproteobacteria;Pleomorphomonas
 T03801	mey	Martelella endophytica	Prokaryotes;Bacteria;Alphaproteobacteria;Martelella
 T04332	maad	Martelella sp. AD-3	Prokaryotes;Bacteria;Alphaproteobacteria;Martelella
 T04757	mmed	Martelella mediterranea	Prokaryotes;Bacteria;Alphaproteobacteria;Martelella
@@ -2574,6 +2709,8 @@ T00651	cak	Caulobacter sp. K31	Prokaryotes;Bacteria;Alphaproteobacteria;Caulobac
 T01221	cse	Caulobacter segnis	Prokaryotes;Bacteria;Alphaproteobacteria;Caulobacter
 T04110	chq	Caulobacter henricii	Prokaryotes;Bacteria;Alphaproteobacteria;Caulobacter
 T05166	cmb	Caulobacter mirabilis	Prokaryotes;Bacteria;Alphaproteobacteria;Caulobacter
+T05702	cfh	Caulobacter flavus	Prokaryotes;Bacteria;Alphaproteobacteria;Caulobacter
+T05901	cauf	Caulobacter sp. FWC26	Prokaryotes;Bacteria;Alphaproteobacteria;Caulobacter
 T00750	pzu	Phenylobacterium zucineum	Prokaryotes;Bacteria;Alphaproteobacteria;Phenylobacterium
 T05485	phb	Phenylobacterium sp. HYN0004	Prokaryotes;Bacteria;Alphaproteobacteria;Phenylobacterium
 T01291	bsb	Brevundimonas subvibrioides	Prokaryotes;Bacteria;Alphaproteobacteria;Brevundimonas
@@ -2582,6 +2719,7 @@ T04375	bne	Brevundimonas naejangsanensis	Prokaryotes;Bacteria;Alphaproteobacteri
 T04395	brg	Brevundimonas sp. GW460-12-10-14-LB2	Prokaryotes;Bacteria;Alphaproteobacteria;Brevundimonas
 T04750	brl	Brevundimonas sp. LM2	Prokaryotes;Bacteria;Alphaproteobacteria;Brevundimonas
 T04934	bvc	Brevundimonas vesicularis	Prokaryotes;Bacteria;Alphaproteobacteria;Brevundimonas
+T05851	bdm	Brevundimonas diminuta	Prokaryotes;Bacteria;Alphaproteobacteria;Brevundimonas
 T01378	aex	Asticcacaulis excentricus	Prokaryotes;Bacteria;Alphaproteobacteria;Asticcacaulis
 T04422	cbot	Caulobacteraceae bacterium OTSz_A_272	Prokaryotes;Bacteria;Alphaproteobacteria;Unclassified Caulobacteraceae
 T00215	sil	Ruegeria pomeroyi	Prokaryotes;Bacteria;Alphaproteobacteria;Ruegeria
@@ -2608,6 +2746,7 @@ T05237	paro	Paracoccus sp. BM15	Prokaryotes;Bacteria;Alphaproteobacteria;Paracoc
 T05276	paru	Paracoccus sp. CBA4604	Prokaryotes;Bacteria;Alphaproteobacteria;Paracoccus
 T05468	pamn	Paracoccus aminovorans	Prokaryotes;Bacteria;Alphaproteobacteria;Paracoccus
 T05551	pmut	Paracoccus mutanolyticus	Prokaryotes;Bacteria;Alphaproteobacteria;Paracoccus
+T05723	pars	Paracoccus sp. SC2-6	Prokaryotes;Bacteria;Alphaproteobacteria;Paracoccus
 T00612	dsh	Dinoroseobacter shibae	Prokaryotes;Bacteria;Alphaproteobacteria;Dinoroseobacter
 T01338	kvu	Ketogulonicigenium vulgare Y25	Prokaryotes;Bacteria;Alphaproteobacteria;Ketogulonicigenium
 T01909	kvl	Ketogulonicigenium vulgare WSH-001	Prokaryotes;Bacteria;Alphaproteobacteria;Ketogulonicigenium
@@ -2623,6 +2762,7 @@ T02538	oat	Octadecabacter antarcticus	Prokaryotes;Bacteria;Alphaproteobacteria;O
 T02539	oar	Octadecabacter arcticus	Prokaryotes;Bacteria;Alphaproteobacteria;Octadecabacter
 T04001	otm	Octadecabacter temperatus	Prokaryotes;Bacteria;Alphaproteobacteria;Octadecabacter
 T02961	lmd	Leisingera methylohalidivorans	Prokaryotes;Bacteria;Alphaproteobacteria;Leisingera
+T05817	lej	Leisingera sp. NJS204	Prokaryotes;Bacteria;Alphaproteobacteria;Leisingera
 T03060	red	Roseibacterium elongatum	Prokaryotes;Bacteria;Alphaproteobacteria;Roseibacterium
 T03229	ptp	Planktomarina temperata	Prokaryotes;Bacteria;Alphaproteobacteria;Planktomarina
 T03575	cid	Celeribacter indicus	Prokaryotes;Bacteria;Alphaproteobacteria;Celeribacter
@@ -2646,6 +2786,8 @@ T04555	suam	Sulfitobacter sp. AM1-D1	Prokaryotes;Bacteria;Alphaproteobacteria;Su
 T04974	spse	Sulfitobacter pseudonitzschiae	Prokaryotes;Bacteria;Alphaproteobacteria;Sulfitobacter
 T05563	sulz	Sulfitobacter sp. SK012	Prokaryotes;Bacteria;Alphaproteobacteria;Sulfitobacter
 T05585	suli	Sulfitobacter sp. JL08	Prokaryotes;Bacteria;Alphaproteobacteria;Sulfitobacter
+T05714	suld	Sulfitobacter sp. D7	Prokaryotes;Bacteria;Alphaproteobacteria;Sulfitobacter
+T05893	sdo	Sulfitobacter donghicola	Prokaryotes;Bacteria;Alphaproteobacteria;Sulfitobacter
 T04589	don	Donghicola sp. JLT3646	Prokaryotes;Bacteria;Alphaproteobacteria;Donghicola
 T04656	tpro	Salipiger profundus	Prokaryotes;Bacteria;Alphaproteobacteria;Salipiger
 T04652	tom	Tateyamaria omphalii	Prokaryotes;Bacteria;Alphaproteobacteria;Tateyamaria
@@ -2658,11 +2800,19 @@ T04983	aht	Antarctobacter heliothermus	Prokaryotes;Bacteria;Alphaproteobacteria;
 T05218	rbg	Rhodobaca barguzinensis	Prokaryotes;Bacteria;Alphaproteobacteria;Rhodobaca
 T05219	sagu	Sagittula sp. P11	Prokaryotes;Bacteria;Alphaproteobacteria;Sagittula
 T05357	thas	Thalassococcus sp. SH-1	Prokaryotes;Bacteria;Alphaproteobacteria;Thalassococcus
+T05844	thaa	Thalassococcus sp. S3	Prokaryotes;Bacteria;Alphaproteobacteria;Thalassococcus
 T05407	geh	Gemmobacter sp. HYN0069	Prokaryotes;Bacteria;Alphaproteobacteria;Gemmobacter
+T05742	taw	Tabrizicola sp. K13M18	Prokaryotes;Bacteria;Alphaproteobacteria;Tabrizicola
+T05779	salo	Silicimonas algicola	Prokaryotes;Bacteria;Alphaproteobacteria;Silicimonas
+T05780	sedi	Sedimentitalea sp. W43	Prokaryotes;Bacteria;Alphaproteobacteria;Sedimentitalea
+T05861	hml	Haematobacter massiliensis	Prokaryotes;Bacteria;Alphaproteobacteria;Haematobacter
+T05925	boo	Boseongicola sp. CCM32	Prokaryotes;Bacteria;Alphaproteobacteria;Boseongicola
+T05954	pseb	Pseudorhodobacter sp. S12M18	Prokaryotes;Bacteria;Alphaproteobacteria;Pseudorhodobacter
 T05514	rbz	Rhodobacteraceae bacterium G7	Prokaryotes;Bacteria;Alphaproteobacteria;Unclassified Rhodobacteraceae
 T00394	mmr	Maricaulis maris	Prokaryotes;Bacteria;Alphaproteobacteria;Maricaulis
 T00397	hne	Hyphomonas neptunium	Prokaryotes;Bacteria;Alphaproteobacteria;Hyphomonas
 T00945	hba	Hirschia baltica	Prokaryotes;Bacteria;Alphaproteobacteria;Hirschia
+T05786	gak	Glycocaulis alkaliphilus	Prokaryotes;Bacteria;Alphaproteobacteria;Glycocaulis
 T04338	hbc	Hyphomonadaceae bacterium UKL13-1	Prokaryotes;Bacteria;Alphaproteobacteria;Hyphomonadaceae
 T00221	zmo	Zymomonas mobilis subsp. mobilis ZM4	Prokaryotes;Bacteria;Alphaproteobacteria;Zymomonas
 T01110	zmn	Zymomonas mobilis subsp. mobilis NCIMB 11163	Prokaryotes;Bacteria;Alphaproteobacteria;Zymomonas
@@ -2678,6 +2828,7 @@ T03399	npn	Novosphingobium pentaromativorans	Prokaryotes;Bacteria;Alphaproteobac
 T04490	nre	Novosphingobium resinovorum	Prokaryotes;Bacteria;Alphaproteobacteria;Novosphingobium
 T05550	nov	Novosphingobium sp. P6W	Prokaryotes;Bacteria;Alphaproteobacteria;Novosphingobium
 T05635	not	Novosphingobium sp. THN1	Prokaryotes;Bacteria;Alphaproteobacteria;Novosphingobium
+T05741	ntd	Novosphingobium tardaugens	Prokaryotes;Bacteria;Alphaproteobacteria;Novosphingobium
 T00361	sal	Sphingopyxis alaskensis	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingopyxis
 T03542	sphk	Sphingopyxis fribergensis	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingopyxis
 T04069	sphp	Sphingopyxis sp. 113P3	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingopyxis
@@ -2705,6 +2856,7 @@ T04967	sphj	Sphingomonas sp. JJ-A5	Prokaryotes;Bacteria;Alphaproteobacteria;Sphi
 T04987	spkc	Sphingomonas sp. KC8	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingomonas
 T05307	sphc	Sphingomonas sp. Cra20	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingomonas
 T05685	sphf	Sphingomonas sp. FARSPH	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingomonas
+T05706	spha	Sphingomonas sp. YZ-8	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingomonas
 T01201	sjp	Sphingobium japonicum	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingobium
 T01522	sch	Sphingobium chlorophenolicum	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingobium
 T01622	ssy	Sphingobium sp. SYK-6	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingobium
@@ -2718,6 +2870,7 @@ T04965	spht	Sphingobium sp. TKS	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingo
 T05146	shyd	Sphingobium hydrophobicum	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingobium
 T05170	sya	Sphingobium yanoikuyae	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingobium
 T05301	sclo	Sphingobium cloacae	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingobium
+T05858	spyg	Sphingobium sp. YG1	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingobium
 T04089	cij	Citromicrobium sp. JL477	Prokaryotes;Bacteria;Alphaproteobacteria;Citromicrobium
 T04317	sphg	Sphingorhabdus sp. M41	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingorhabdus
 T04949	sfla	Sphingorhabdus flavimaris	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingorhabdus
@@ -2725,6 +2878,8 @@ T05308	sphy	Sphingorhabdus sp. YGSMI21	Prokaryotes;Bacteria;Alphaproteobacteria;
 T04450	blas	Blastomonas sp. RAC04	Prokaryotes;Bacteria;Alphaproteobacteria;Blastomonas
 T05612	bfw	Blastomonas fulva	Prokaryotes;Bacteria;Alphaproteobacteria;Blastomonas
 T05084	rdi	Rhizorhabdus dicambivorans	Prokaryotes;Bacteria;Alphaproteobacteria;Rhizorhabdus
+T05811	smic	Sphingosinicella microcystinivorans	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingosinicella
+T05826	sphs	Sphingosinicella sp. BN140058	Prokaryotes;Bacteria;Alphaproteobacteria;Sphingosinicella
 T00315	eli	Erythrobacter litoralis HTCC2594	Prokaryotes;Bacteria;Alphaproteobacteria;Erythrobacter
 T04740	elq	Erythrobacter litoralis DSM 8509	Prokaryotes;Bacteria;Alphaproteobacteria;Erythrobacter
 T03997	ery	Erythrobacter sp. s21-N3	Prokaryotes;Bacteria;Alphaproteobacteria;Erythrobacter
@@ -2742,7 +2897,7 @@ T03964	cna	Croceicoccus naphthovorans	Prokaryotes;Bacteria;Alphaproteobacteria;C
 T04890	cman	Croceicoccus marinus	Prokaryotes;Bacteria;Alphaproteobacteria;Croceicoccus
 T04416	pns	Porphyrobacter neustonensis	Prokaryotes;Bacteria;Alphaproteobacteria;Porphyrobacter
 T04468	porl	Porphyrobacter sp. LM 6	Prokaryotes;Bacteria;Alphaproteobacteria;Porphyrobacter
-T05364	phz	Porphyrobacter HT-58-2	Prokaryotes;Bacteria;Alphaproteobacteria;Porphyrobacter
+T05364	phz	Porphyrobacter sp. HT-58-2	Prokaryotes;Bacteria;Alphaproteobacteria;Porphyrobacter
 T00230	gox	Gluconobacter oxydans 621H	Prokaryotes;Bacteria;Alphaproteobacteria;Gluconobacter
 T02348	goh	Gluconobacter oxydans H24	Prokaryotes;Bacteria;Alphaproteobacteria;Gluconobacter
 T03563	goy	Gluconobacter oxydans DSM 3504	Prokaryotes;Bacteria;Alphaproteobacteria;Gluconobacter
@@ -2801,6 +2956,7 @@ T04091	ati	Azospirillum thiophilum	Prokaryotes;Bacteria;Alphaproteobacteria;Azos
 T04409	ahu	Azospirillum humicireducens	Prokaryotes;Bacteria;Alphaproteobacteria;Azospirillum
 T05449	azt	Azospirillum sp. TSH58	Prokaryotes;Bacteria;Alphaproteobacteria;Azospirillum
 T05500	azm	Azospirillum sp. M2T2B2	Prokaryotes;Bacteria;Alphaproteobacteria;Azospirillum
+T05917	azz	Azospirillum sp. CFH 70021	Prokaryotes;Bacteria;Alphaproteobacteria;Azospirillum
 T02128	tmo	Tistrella mobilis	Prokaryotes;Bacteria;Alphaproteobacteria;Tistrella
 T02365	thal	Candidatus Endolissoclinum faulkneri L2	Prokaryotes;Bacteria;Alphaproteobacteria;Endolissoclinum
 T04221	efk	Candidatus Endolissoclinum faulkneri L5	Prokaryotes;Bacteria;Alphaproteobacteria;Endolissoclinum
@@ -2821,12 +2977,15 @@ T01630	mai	Micavibrio aeruginosavorus ARL-13	Prokaryotes;Bacteria;Alphaproteobac
 T02517	man	Micavibrio aeruginosavorus EPB	Prokaryotes;Bacteria;Alphaproteobacteria;Micavibrio
 T01458	pgv	Polymorphum gilvum	Prokaryotes;Bacteria;Alphaproteobacteria;Polymorphum
 T05356	phr	Phreatobacter sp. S-12	Prokaryotes;Bacteria;Alphaproteobacteria;Phreatobacter
+T05955	pstg	Phreatobacter stygius	Prokaryotes;Bacteria;Alphaproteobacteria;Phreatobacter
 T01207	apb	Candidatus Puniceispirillum marinum	Prokaryotes;Bacteria;Alphaproteobacteria;Puniceispirillum
+T05798	abaw	Alphaproteobacteria bacterium WS11	Prokaryotes;Bacteria;Alphaproteobacteria;Unclassified Alphaproteobacteria
 T00758	afe	Acidithiobacillus ferrooxidans ATCC 53993	Prokaryotes;Bacteria;Other proteobacteria;Acidithiobacillus
 T00810	afr	Acidithiobacillus ferrooxidans ATCC 23270	Prokaryotes;Bacteria;Other proteobacteria;Acidithiobacillus
 T01581	acu	Acidithiobacillus caldus SM-1	Prokaryotes;Bacteria;Other proteobacteria;Acidithiobacillus
 T03561	acz	Acidithiobacillus caldus ATCC 51756	Prokaryotes;Bacteria;Other proteobacteria;Acidithiobacillus
 T01595	afi	Acidithiobacillus ferrivorans	Prokaryotes;Bacteria;Other proteobacteria;Acidithiobacillus
+T05847	afj	Acidithiobacillus ferridurans	Prokaryotes;Bacteria;Other proteobacteria;Acidithiobacillus
 T05212	maes	Mariprofundus aestuarium	Prokaryotes;Bacteria;Other proteobacteria;Mariprofundus
 T05213	mfn	Mariprofundus ferrinatatus	Prokaryotes;Bacteria;Other proteobacteria;Mariprofundus
 T05630	htl	Hydrogenophilus thermoluteolus	Prokaryotes;Bacteria;Other proteobacteria;Hydrogenophilus
@@ -2918,6 +3077,7 @@ T03798	bmyo	Bacillus mycoides ATCC 6462	Prokaryotes;Bacteria;Firmicutes - Bacill
 T02901	bty	Bacillus toyonensis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Bacillus
 T03239	bmyc	Bacillus pseudomycoides 219298	Prokaryotes;Bacteria;Firmicutes - Bacilli;Bacillus
 T03597	bby	Bacillus bombysepticus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Bacillus
+T05831	bwd	Bacillus wiedmannii	Prokaryotes;Bacteria;Firmicutes - Bacilli;Bacillus
 T00228	bcl	Bacillus clausii	Prokaryotes;Bacteria;Firmicutes - Bacilli;Bacillus
 T00599	bpu	Bacillus pumilus SAFR-032	Prokaryotes;Bacteria;Firmicutes - Bacilli;Bacillus
 T03175	bpum	Bacillus pumilus MTCC B6033	Prokaryotes;Bacteria;Firmicutes - Bacilli;Bacillus
@@ -2962,6 +3122,7 @@ T05207	bacs	Bacillus sp. SDLI1	Prokaryotes;Bacteria;Firmicutes - Bacilli;Bacillu
 T05340	bmur	Bacillus muralis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Bacillus
 T05386	bsaf	Bacillus safensis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Bacillus
 T05513	bit	Bacillus intestinalis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Bacillus
+T05922	bacq	Bacillus sp. Y1	Prokaryotes;Bacteria;Firmicutes - Bacilli;Bacillus
 T00093	oih	Oceanobacillus iheyensis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Oceanobacillus
 T05570	ocn	Oceanobacillus sp. 160	Prokaryotes;Bacteria;Firmicutes - Bacilli;Oceanobacillus
 T00217	gka	Geobacillus kaustophilus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Geobacillus
@@ -2998,6 +3159,7 @@ T05347	lyb	Lysinibacillus sp. B2A1	Prokaryotes;Bacteria;Firmicutes - Bacilli;Lys
 T05455	lyz	Lysinibacillus sp. 2017	Prokaryotes;Bacteria;Firmicutes - Bacilli;Lysinibacillus
 T02031	hhd	Halobacillus halophilus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Halobacillus
 T04799	hmn	Halobacillus mangrovi	Prokaryotes;Bacteria;Firmicutes - Bacilli;Halobacillus
+T05828	hli	Halobacillus litoralis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Halobacillus
 T03216	tap	Terribacillus goriensis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Terribacillus
 T03219	vir	Virgibacillus sp. SK37	Prokaryotes;Bacteria;Firmicutes - Bacilli;Virgibacillus
 T04548	vhl	Virgibacillus halodenitrificans	Prokaryotes;Bacteria;Firmicutes - Bacilli;Virgibacillus
@@ -3010,17 +3172,18 @@ T04282	fpn	Fictibacillus phosphorivorans	Prokaryotes;Bacteria;Firmicutes - Bacil
 T04452	far	Fictibacillus arsenicus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Fictibacillus
 T04359	sje	Salimicrobium jeotgali	Prokaryotes;Bacteria;Firmicutes - Bacilli;Salimicrobium
 T04993	apak	Aeribacillus pallidus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Aeribacillus
+T05792	stea	Sporolactobacillus terrae	Prokaryotes;Bacteria;Firmicutes - Bacilli;Sporolactobacillus
 T01243	bse	Bacillus selenitireducens	Prokaryotes;Bacteria;Firmicutes - Bacilli;Unclassified Sporolactobacillaceae
 T00051	sau	Staphylococcus aureus subsp. aureus N315 (MRSA/VSSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00052	sav	Staphylococcus aureus subsp. aureus Mu50 (MRSA/VISA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00588	saw	Staphylococcus aureus subsp. aureus Mu3 (MRSA/hetero-VISA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00556	sah	Staphylococcus aureus subsp. aureus JH1 (MRSA/VSSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
-T00522	saj	Staphylococcus aureus subsp. aureus JH9 (MRSA/VRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
+T00522	saj	Staphylococcus aureus subsp. aureus JH9 (MRSA/VISA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00086	sam	Staphylococcus aureus subsp. aureus MW2 (CA-MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00183	sas	Staphylococcus aureus subsp. aureus MSSA476 (MSSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00182	sar	Staphylococcus aureus subsp. aureus MRSA252 (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00225	sac	Staphylococcus aureus subsp. aureus COL (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
-T00629	sax	Staphylococcus aureus subsp. aureus USA300_TCH1516 (CA-MSSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
+T00629	sax	Staphylococcus aureus subsp. aureus USA300_TCH1516 (CA-MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00323	saa	Staphylococcus aureus subsp. aureus USA300_FPR3757 (CA-MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00324	sao	Staphylococcus aureus subsp. aureus NCTC8325	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00557	sae	Staphylococcus aureus subsp. aureus Newman	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
@@ -3034,11 +3197,11 @@ T01887	suc	Staphylococcus aureus subsp. aureus ECT-R 2	Prokaryotes;Bacteria;Firm
 T01888	sut	Staphylococcus aureus subsp. aureus T0131 (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T01889	suq	Staphylococcus aureus subsp. aureus TCH60	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T01950	suz	Staphylococcus aureus subsp. aureus 11819-97 (CA-MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
-T02043	sud	Staphylococcus aureus subsp. aureus 71193	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
-T02059	sux	Staphylococcus aureus subsp. aureus HO 5096 0412	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
+T02043	sud	Staphylococcus aureus subsp. aureus 71193 (MSSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
+T02059	sux	Staphylococcus aureus subsp. aureus HO 5096 0412 (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T02060	suw	Staphylococcus aureus subsp. aureus TW20 (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T02071	sug	Staphylococcus aureus subsp. aureus ST398 (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
-T02085	suf	Staphylococcus aureus subsp. aureus LGA251	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
+T02085	suf	Staphylococcus aureus subsp. aureus LGA251 (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T02810	saua	Staphylococcus aureus subsp. aureus 55/2053	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T02825	saue	Staphylococcus aureus subsp. aureus 6850 (MSSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T02826	saun	Staphylococcus aureus subsp. aureus CN1 (CA-MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
@@ -3056,17 +3219,17 @@ T03149	saux	Staphylococcus aureus subsp. aureus ST228/18341 (MRSA)	Prokaryotes;B
 T03150	sauy	Staphylococcus aureus subsp. aureus ST228/18583 (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T03492	sauf	Staphylococcus aureus subsp. aureus FDAARGOS_5	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00303	sab	Staphylococcus aureus RF122	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
-T02070	suy	Staphylococcus aureus 04-02981	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
-T02339	saub	Staphylococcus aureus 08BA02176	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
-T02618	saum	Staphylococcus aureus M1	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
-T02702	sauc	Staphylococcus aureus CA-347	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
-T02717	saur	Staphylococcus aureus Bmb9393	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
-T03115	saui	Staphylococcus aureus USA300-ISMMS1	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
+T02070	suy	Staphylococcus aureus 04-02981 (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
+T02339	saub	Staphylococcus aureus 08BA02176 (LA-MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
+T02618	saum	Staphylococcus aureus M1 (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
+T02702	sauc	Staphylococcus aureus CA-347 (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
+T02717	saur	Staphylococcus aureus Bmb9393 (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
+T03115	saui	Staphylococcus aureus USA300-ISMMS1 (MRSA)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T03491	saud	Staphylococcus aureus 502A	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T04800	sams	Staphylococcus aureus MS4	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T01767	suh	Staphylococcus argenteus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00110	sep	Staphylococcus epidermidis ATCC 12228	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
-T00229	ser	Staphylococcus epidermidis RP62A	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
+T00229	ser	Staphylococcus epidermidis RP62A (MRSE)	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T03289	sepp	Staphylococcus epidermidis PM221	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T03343	seps	Staphylococcus epidermidis SEI	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
 T00250	sha	Staphylococcus haemolyticus JCSC1435	Prokaryotes;Bacteria;Firmicutes - Bacilli;Staphylococcus
@@ -3160,6 +3323,7 @@ T05584	geq	Gemella sp. ND 6198	Prokaryotes;Bacteria;Firmicutes - Bacilli;Gemella
 T00879	bbe	Brevibacillus brevis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Brevibacillus
 T03762	blr	Brevibacillus laterosporus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Brevibacillus
 T04939	bfm	Brevibacillus formosus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Brevibacillus
+T05855	bagr	Brevibacillus agri	Prokaryotes;Bacteria;Firmicutes - Bacilli;Brevibacillus
 T00977	pjd	Paenibacillus sp. JDR-2	Prokaryotes;Bacteria;Firmicutes - Bacilli;Paenibacillus
 T01100	gym	Paenibacillus sp. Y412MC10	Prokaryotes;Bacteria;Firmicutes - Bacilli;Paenibacillus
 T01319	ppy	Paenibacillus polymyxa E681	Prokaryotes;Bacteria;Firmicutes - Bacilli;Paenibacillus
@@ -3202,10 +3366,13 @@ T05196	pcx	Paenibacillus crassostreae	Prokaryotes;Bacteria;Firmicutes - Bacilli;
 T05249	pkb	Paenibacillus kribbensis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Paenibacillus
 T05348	paih	Paenibacillus sp. IHB B 3084	Prokaryotes;Bacteria;Firmicutes - Bacilli;Paenibacillus
 T05385	pvo	Paenibacillus vortex	Prokaryotes;Bacteria;Firmicutes - Bacilli;Paenibacillus
+T05701	plw	Paenibacillus lautus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Paenibacillus
+T05914	plen	Paenibacillus lentus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Paenibacillus
 T02394	tco	Thermobacillus composti	Prokaryotes;Bacteria;Firmicutes - Bacilli;Thermobacillus
 T04247	anx	Aneurinibacillus sp. XH2	Prokaryotes;Bacteria;Firmicutes - Bacilli;Aneurinibacillus
 T05174	asoc	Aneurinibacillus soli	Prokaryotes;Bacteria;Firmicutes - Bacilli;Aneurinibacillus
 T05696	coh	Cohnella sp. 18JY8-7	Prokaryotes;Bacteria;Firmicutes - Bacilli;Cohnella
+T05979	cohn	Cohnella sp. HS21	Prokaryotes;Bacteria;Firmicutes - Bacilli;Cohnella
 T00985	aac	Alicyclobacillus acidocaldarius subsp. acidocaldarius DSM 446	Prokaryotes;Bacteria;Firmicutes - Bacilli;Alicyclobacillus
 T01821	aad	Alicyclobacillus acidocaldarius subsp. acidocaldarius Tc-4-1	Prokaryotes;Bacteria;Firmicutes - Bacilli;Alicyclobacillus
 T01220	bts	Kyrpidia tusciae	Prokaryotes;Bacteria;Firmicutes - Bacilli;Kyrpidia
@@ -3228,6 +3395,7 @@ T04955	pfae	Planococcus faecalis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Plano
 T05387	plx	Planococcus sp. MB-3u-03	Prokaryotes;Bacteria;Firmicutes - Bacilli;Planococcus
 T03570	jeo	Jeotgalibacillus malaysiensis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Jeotgalibacillus
 T04250	kur	Kurthia sp. 11kri321	Prokaryotes;Bacteria;Firmicutes - Bacilli;Kurthia
+T05934	kzo	Kurthia zopfii	Prokaryotes;Bacteria;Firmicutes - Bacilli;Kurthia
 T04327	spsy	Sporosarcina psychrophila	Prokaryotes;Bacteria;Firmicutes - Bacilli;Sporosarcina
 T04790	spor	Sporosarcina sp. P33	Prokaryotes;Bacteria;Firmicutes - Bacilli;Sporosarcina
 T04826	spop	Sporosarcina sp. P37	Prokaryotes;Bacteria;Firmicutes - Bacilli;Sporosarcina
@@ -3235,8 +3403,10 @@ T04877	sure	Sporosarcina ureae	Prokaryotes;Bacteria;Firmicutes - Bacilli;Sporosa
 T05572	spos	Sporosarcina sp. PTS2304	Prokaryotes;Bacteria;Firmicutes - Bacilli;Sporosarcina
 T04369	rst	Rummeliibacillus stabekisii	Prokaryotes;Bacteria;Firmicutes - Bacilli;Rummeliibacillus
 T05647	paek	Paenisporosarcina sp. K2R23-3	Prokaryotes;Bacteria;Firmicutes - Bacilli;Paenisporosarcina
+T05927	panc	Paenisporosarcina antarctica	Prokaryotes;Bacteria;Firmicutes - Bacilli;Paenisporosarcina
 T04694	ntr	Novibacillus thermophilus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Novibacillus
-T05304	lfb	Laceyella sp. FBKL4.010	Prokaryotes;Bacteria;Firmicutes - Bacilli;Laceyella
+T05304	lfb	Laceyella sacchari	Prokaryotes;Bacteria;Firmicutes - Bacilli;Laceyella
+T05864	tvu	Thermoactinomyces vulgaris	Prokaryotes;Bacteria;Firmicutes - Bacilli;Thermoactinomyces
 T00045	lla	Lactococcus lactis subsp. lactis Il1403	Prokaryotes;Bacteria;Firmicutes - Bacilli;Lactococcus
 T01141	llk	Lactococcus lactis subsp. lactis KF147	Prokaryotes;Bacteria;Firmicutes - Bacilli;Lactococcus
 T01964	llt	Lactococcus lactis subsp. lactis CV56	Prokaryotes;Bacteria;Firmicutes - Bacilli;Lactococcus
@@ -3398,6 +3568,7 @@ T05054	spat	Streptococcus pantholopis	Prokaryotes;Bacteria;Firmicutes - Bacilli;
 T05522	stra	Streptococcus sp. A12	Prokaryotes;Bacteria;Firmicutes - Bacilli;Streptococcus
 T05541	strn	Streptococcus sp. NPS 308	Prokaryotes;Bacteria;Firmicutes - Bacilli;Streptococcus
 T05567	ssob	Streptococcus sobrinus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Streptococcus
+T05916	srq	Streptococcus ruminantium	Prokaryotes;Bacteria;Firmicutes - Bacilli;Streptococcus
 T00115	lpl	Lactobacillus plantarum WCFS1	Prokaryotes;Bacteria;Firmicutes - Bacilli;Lactobacillus
 T00946	lpj	Lactobacillus plantarum JDM1	Prokaryotes;Bacteria;Firmicutes - Bacilli;Lactobacillus
 T02458	lpt	Lactobacillus plantarum ZJ316	Prokaryotes;Bacteria;Firmicutes - Bacilli;Lactobacillus
@@ -3491,6 +3662,7 @@ T05341	lcy	Lactobacillus coryniformis	Prokaryotes;Bacteria;Firmicutes - Bacilli;
 T05349	laca	Lactobacillus acidipiscis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Lactobacillus
 T05413	lalw	Lactobacillus allii	Prokaryotes;Bacteria;Firmicutes - Bacilli;Lactobacillus
 T05458	lali	Lactobacillus alimentarius	Prokaryotes;Bacteria;Firmicutes - Bacilli;Lactobacillus
+T05840	lpw	Lactobacillus paragasseri	Prokaryotes;Bacteria;Firmicutes - Bacilli;Lactobacillus
 T00409	ppe	Pediococcus pentosaceus ATCC 25745	Prokaryotes;Bacteria;Firmicutes - Bacilli;Pediococcus
 T02906	ppen	Pediococcus pentosaceus SL4	Prokaryotes;Bacteria;Firmicutes - Bacilli;Pediococcus
 T01713	pce	Pediococcus claussenii	Prokaryotes;Bacteria;Firmicutes - Bacilli;Pediococcus
@@ -3508,7 +3680,7 @@ T02585	ene	Enterococcus faecalis 7L76	Prokaryotes;Bacteria;Firmicutes - Bacilli;
 T01772	efc	Enterococcus faecium Aus0004	Prokaryotes;Bacteria;Firmicutes - Bacilli;Enterococcus
 T02788	efau	Enterococcus faecium Aus0085	Prokaryotes;Bacteria;Firmicutes - Bacilli;Enterococcus
 T02120	efu	Enterococcus faecium DO	Prokaryotes;Bacteria;Firmicutes - Bacilli;Enterococcus
-T02454	efm	Enterococcus faecium NRRL B-2354	Prokaryotes;Bacteria;Firmicutes - Bacilli;Enterococcus
+T02454	efm	Enterococcus faecium ATCC 8459 = NRRL B-2354	Prokaryotes;Bacteria;Firmicutes - Bacilli;Enterococcus
 T03257	eft	Enterococcus faecium T110	Prokaryotes;Bacteria;Firmicutes - Bacilli;Enterococcus
 T02160	ehr	Enterococcus hirae	Prokaryotes;Bacteria;Firmicutes - Bacilli;Enterococcus
 T02623	ecas	Enterococcus casseliflavus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Enterococcus
@@ -3521,9 +3693,15 @@ T05664	egv	Enterococcus gilvus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Enteroc
 T01492	mps	Melissococcus plutonius ATCC 35311	Prokaryotes;Bacteria;Firmicutes - Bacilli;Melissococcus
 T01763	mpx	Melissococcus plutonius DAT561	Prokaryotes;Bacteria;Firmicutes - Bacilli;Melissococcus
 T01640	thl	Tetragenococcus halophilus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Tetragenococcus
+T05711	too	Tetragenococcus osmophilus	Prokaryotes;Bacteria;Firmicutes - Bacilli;Tetragenococcus
+T05710	tkr	Tetragenococcus koreensis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Tetragenococcus
 T04578	vte	Vagococcus teuberi	Prokaryotes;Bacteria;Firmicutes - Bacilli;Vagococcus
 T04715	vpi	Vagococcus penaei	Prokaryotes;Bacteria;Firmicutes - Bacilli;Vagococcus
+T05932	vac	Vagococcus sp. CF-49	Prokaryotes;Bacteria;Firmicutes - Bacilli;Vagococcus
+T05965	vao	Vagococcus sp. MN-17	Prokaryotes;Bacteria;Firmicutes - Bacilli;Vagococcus
 T00408	ooe	Oenococcus oeni	Prokaryotes;Bacteria;Firmicutes - Bacilli;Oenococcus
+T05781	oen	Oenococcus sp. UCMA 16435	Prokaryotes;Bacteria;Firmicutes - Bacilli;Oenococcus
+T05833	osi	Oenococcus sicerae	Prokaryotes;Bacteria;Firmicutes - Bacilli;Oenococcus
 T00411	lme	Leuconostoc mesenteroides subsp. mesenteroides ATCC 8293	Prokaryotes;Bacteria;Firmicutes - Bacilli;Leuconostoc
 T01768	lmm	Leuconostoc mesenteroides subsp. mesenteroides J18	Prokaryotes;Bacteria;Firmicutes - Bacilli;Leuconostoc
 T02997	lmk	Leuconostoc mesenteroides KFRI-MG	Prokaryotes;Bacteria;Firmicutes - Bacilli;Leuconostoc
@@ -3543,6 +3721,7 @@ T03295	wci	Weissella ceti WS105	Prokaryotes;Bacteria;Firmicutes - Bacilli;Weisse
 T04106	wcb	Weissella cibaria	Prokaryotes;Bacteria;Firmicutes - Bacilli;Weissella
 T04632	wjo	Weissella jogaejeotgali	Prokaryotes;Bacteria;Firmicutes - Bacilli;Weissella
 T05120	wpa	Weissella paramesenteroides	Prokaryotes;Bacteria;Firmicutes - Bacilli;Weissella
+T05951	wcf	Weissella confusa	Prokaryotes;Bacteria;Firmicutes - Bacilli;Weissella
 T01447	aur	Aerococcus urinae ACS-120-V-Col10a	Prokaryotes;Bacteria;Firmicutes - Bacilli;Aerococcus
 T04528	aun	Aerococcus urinae CCUG36881	Prokaryotes;Bacteria;Firmicutes - Bacilli;Aerococcus
 T04249	aui	Aerococcus urinaeequi	Prokaryotes;Bacteria;Firmicutes - Bacilli;Aerococcus
@@ -3559,6 +3738,7 @@ T05644	cdj	Carnobacterium divergens	Prokaryotes;Bacteria;Firmicutes - Bacilli;Ca
 T04573	marr	Marinilactibacillus sp. 15R	Prokaryotes;Bacteria;Firmicutes - Bacilli;Marinilactibacillus
 T04689	jep	Jeotgalibaca sp. PTS2502	Prokaryotes;Bacteria;Firmicutes - Bacilli;Jeotgalibaca
 T04733	jda	Jeotgalibaca dankookensis	Prokaryotes;Bacteria;Firmicutes - Bacilli;Jeotgalibaca
+T05782	jeh	Jeotgalibaca sp. H21T32	Prokaryotes;Bacteria;Firmicutes - Bacilli;Jeotgalibaca
 T00056	cac	Clostridium acetobutylicum ATCC 824	Prokaryotes;Bacteria;Firmicutes - Clostridia;Clostridium
 T01548	cae	Clostridium acetobutylicum DSM 1731	Prokaryotes;Bacteria;Firmicutes - Clostridia;Clostridium
 T01864	cay	Clostridium acetobutylicum EA 2018	Prokaryotes;Bacteria;Firmicutes - Clostridia;Clostridium
@@ -3618,6 +3798,7 @@ T01857	asm	Candidatus Arthromitus sp. SFB-mouse-Yit	Prokaryotes;Bacteria;Firmicu
 T03243	aso	Candidatus Arthromitus sp. SFB-mouse-NL	Prokaryotes;Bacteria;Firmicutes - Clostridia;Arthromitus
 T01624	asb	Candidatus Arthromitus sp. SFB-rat-Yit	Prokaryotes;Bacteria;Firmicutes - Clostridia;Arthromitus
 T04493	gfe	Geosporobacter ferrireducens	Prokaryotes;Bacteria;Firmicutes - Clostridia;Geosporobacter
+T05971	hhw	Hathewaya histolytica	Prokaryotes;Bacteria;Firmicutes - Clostridia;Hathewaya
 T01181	clo	Mageeibacillus indolicus	Prokaryotes;Bacteria;Firmicutes - Clostridia;Mageeibacillus
 T05345	fsa	Fastidiosipila sanguinis	Prokaryotes;Bacteria;Firmicutes - Clostridia;Fastidiosipila
 T00474	cth	Hungateiclostridium thermocellum ATCC 27405	Prokaryotes;Bacteria;Firmicutes - Clostridia;Hungateiclostridium
@@ -3641,6 +3822,7 @@ T02601	rum	Ruminococcus sp. SR1/5	Prokaryotes;Bacteria;Firmicutes - Clostridia;R
 T03158	rus	Ruminococcus bicirculans	Prokaryotes;Bacteria;Firmicutes - Clostridia;Ruminococcus
 T02591	fpr	Faecalibacterium prausnitzii L2-6	Prokaryotes;Bacteria;Firmicutes - Clostridia;Faecalibacterium
 T02592	fpa	Faecalibacterium prausnitzii SL3/3	Prokaryotes;Bacteria;Firmicutes - Clostridia;Faecalibacterium
+T05807	capr	Caproiciproducens sp. NJN-50	Prokaryotes;Bacteria;Firmicutes - Clostridia;Caproiciproducens
 T01292	bpb	Butyrivibrio proteoclasticus	Prokaryotes;Bacteria;Firmicutes - Clostridia;Butyrivibrio
 T02581	bfi	Butyrivibrio fibrisolvens	Prokaryotes;Bacteria;Firmicutes - Clostridia;Butyrivibrio
 T04542	bhu	Butyrivibrio hungatei	Prokaryotes;Bacteria;Firmicutes - Clostridia;Butyrivibrio
@@ -3655,18 +3837,22 @@ T04458	byl	Blautia sp. YL58	Prokaryotes;Bacteria;Firmicutes - Clostridia;Blautia
 T02606	rto	Ruminococcus torques	Prokaryotes;Bacteria;Firmicutes - Clostridia;Blautia
 T05095	bhan	Blautia hansenii	Prokaryotes;Bacteria;Firmicutes - Clostridia;Blautia
 T05518	blau	Blautia sp. N6H1-15	Prokaryotes;Bacteria;Firmicutes - Clostridia;Blautia
+T05894	bpro	Blautia producta	Prokaryotes;Bacteria;Firmicutes - Clostridia;Blautia
 T00619	cpy	Lachnoclostridium phytofermentans	Prokaryotes;Bacteria;Firmicutes - Clostridia;Lachnoclostridium
 T04430	lacy	Lachnoclostridium sp. YL32	Prokaryotes;Bacteria;Firmicutes - Clostridia;Lachnoclostridium
 T01288	csh	Clostridium saccharolyticum WM1	Prokaryotes;Bacteria;Firmicutes - Clostridia;Lachnoclostridium
 T02614	cso	Clostridium cf. saccharolyticum K10	Prokaryotes;Bacteria;Firmicutes - Clostridia;Lachnoclostridium
 T05466	cbol	Clostridium bolteae	Prokaryotes;Bacteria;Firmicutes - Clostridia;Lachnoclostridium
 T02612	bprl	Anaerostipes hadrus	Prokaryotes;Bacteria;Firmicutes - Clostridia;Anaerostipes
+T05962	arf	Anaerostipes rhamnosivorans	Prokaryotes;Bacteria;Firmicutes - Clostridia;Anaerostipes
 T04072	hsd	Herbinix luporum	Prokaryotes;Bacteria;Firmicutes - Clostridia;Herbinix
 T04574	cpro	Anaerotignum propionicum	Prokaryotes;Bacteria;Firmicutes - Clostridia;Anaerotignum
 T05639	lua	Lachnoanaerobaculum umeaense	Prokaryotes;Bacteria;Firmicutes - Clostridia;Lachnoanaerobaculum
+T05310	ehl	Anaerobutyricum hallii	Prokaryotes;Bacteria;Firmicutes - Clostridia;Anaerobutyricum
 T00909	ere	Eubacterium rectale ATCC 33656	Prokaryotes;Bacteria;Firmicutes - Clostridia;Unclassified Lachnospiraceae
 T02587	ert	Eubacterium rectale DSM 17629	Prokaryotes;Bacteria;Firmicutes - Clostridia;Unclassified Lachnospiraceae
 T02588	era	Eubacterium rectale M104/1	Prokaryotes;Bacteria;Firmicutes - Clostridia;Unclassified Lachnospiraceae
+T05749	lbw	Lachnospiraceae bacterium oral taxon 500	Prokaryotes;Bacteria;Firmicutes - Clostridia;Unclassified Lachnospiraceae
 T00487	cdf	Clostridioides difficile 630	Prokaryotes;Bacteria;Firmicutes - Clostridia;Clostridioides
 T03885	pdc	Clostridioides difficile 630	Prokaryotes;Bacteria;Firmicutes - Clostridia;Clostridioides
 T00997	cdc	Clostridioides difficile CD196	Prokaryotes;Bacteria;Firmicutes - Clostridia;Clostridioides
@@ -3705,19 +3891,21 @@ T02996	drs	Dehalobacter restrictus	Prokaryotes;Bacteria;Firmicutes - Clostridia;
 T00653	hmo	Heliobacterium modesticaldum	Prokaryotes;Bacteria;Firmicutes - Clostridia;Heliobacterium
 T00908	eel	Eubacterium eligens	Prokaryotes;Bacteria;Firmicutes - Clostridia;Eubacterium
 T01336	elm	Eubacterium limosum	Prokaryotes;Bacteria;Firmicutes - Clostridia;Eubacterium
-T05310	ehl	Eubacterium hallii	Prokaryotes;Bacteria;Firmicutes - Clostridia;Eubacterium
 T01732	awo	Acetobacterium woodii	Prokaryotes;Bacteria;Firmicutes - Clostridia;Acetobacterium
 T01636	ova	Oscillibacter valericigenes	Prokaryotes;Bacteria;Firmicutes - Clostridia;Oscillibacter
 T01388	tmr	Thermaerobacter marianensis	Prokaryotes;Bacteria;Firmicutes - Clostridia;Thermaerobacter
+T05930	thef	Thermaerobacter sp. FW80	Prokaryotes;Bacteria;Firmicutes - Clostridia;Thermaerobacter
 T01576	say	Sulfobacillus acidophilus TPY	Prokaryotes;Bacteria;Firmicutes - Clostridia;Sulfobacillus
 T01746	sap	Sulfobacillus acidophilus DSM 10332	Prokaryotes;Bacteria;Firmicutes - Clostridia;Sulfobacillus
 T05389	cthm	Carboxydocella thermautotrophica	Prokaryotes;Bacteria;Firmicutes - Clostridia;Carboxydocella
 T05665	cmiu	Christensenella minuta	Prokaryotes;Bacteria;Firmicutes - Clostridia;Christensenella
 T04182	ibu	Intestinimonas butyriciproducens	Prokaryotes;Bacteria;Firmicutes - Clostridia;Intestinimonas
 T05355	mdv	Mogibacterium diversum	Prokaryotes;Bacteria;Firmicutes - Clostridia;Mogibacterium
+T05806	amij	Aminipila sp. JN-39	Prokaryotes;Bacteria;Firmicutes - Clostridia;Aminipila
 T04038	euu	Eubacterium sulci	Prokaryotes;Bacteria;Firmicutes - Clostridia;Unclassified Clostridiales
 T02610	bprm	Butyrate-producing bacterium SM4/1	Prokaryotes;Bacteria;Firmicutes - Clostridia;Unclassified Clostridiales
 T02611	bprs	Butyrate-producing bacterium SS3/4	Prokaryotes;Bacteria;Firmicutes - Clostridia;Unclassified Clostridiales
+T05737	cbar	Clostridiales bacterium 70B-A	Prokaryotes;Bacteria;Firmicutes - Clostridia;Unclassified Clostridiales
 T00081	tte	Caldanaerobacter subterraneus subsp. tengcongensis	Prokaryotes;Bacteria;Firmicutes - Clostridia;Caldanaerobacter
 T00648	tex	Thermoanaerobacter sp. X514	Prokaryotes;Bacteria;Firmicutes - Clostridia;Thermoanaerobacter
 T01317	thx	Thermoanaerobacter sp. X513	Prokaryotes;Bacteria;Firmicutes - Clostridia;Thermoanaerobacter
@@ -3741,6 +3929,7 @@ T01347	cow	Caldicellulosiruptor owensensis	Prokaryotes;Bacteria;Firmicutes - Clo
 T01356	cki	Caldicellulosiruptor kristjanssonii	Prokaryotes;Bacteria;Firmicutes - Clostridia;Caldicellulosiruptor
 T01357	ckn	Caldicellulosiruptor kronotskyensis	Prokaryotes;Bacteria;Firmicutes - Clostridia;Caldicellulosiruptor
 T01600	clc	Caldicellulosiruptor lactoaceticus	Prokaryotes;Bacteria;Firmicutes - Clostridia;Caldicellulosiruptor
+T05905	ccha	Caldicellulosiruptor changbaiensis	Prokaryotes;Bacteria;Firmicutes - Clostridia;Caldicellulosiruptor
 T01289	toc	Thermosediminibacter oceani	Prokaryotes;Bacteria;Firmicutes - Clostridia;Thermosediminibacter
 T01299	ttm	Thermoanaerobacterium thermosaccharolyticum DSM 571	Prokaryotes;Bacteria;Firmicutes - Clostridia;Thermoanaerobacterium
 T02407	tto	Thermoanaerobacterium thermosaccharolyticum M0795	Prokaryotes;Bacteria;Firmicutes - Clostridia;Thermoanaerobacterium
@@ -3753,16 +3942,21 @@ T00761	nth	Natranaerobius thermophilus	Prokaryotes;Bacteria;Firmicutes - Clostri
 T00838	hor	Halothermothrix orenii	Prokaryotes;Bacteria;Firmicutes - Clostridia;Halothermothrix
 T01349	has	Halanaerobium hydrogeniformans	Prokaryotes;Bacteria;Firmicutes - Clostridia;Halanaerobium
 T01941	hpk	Halanaerobium praevalens	Prokaryotes;Bacteria;Firmicutes - Clostridia;Halanaerobium
+T05769	hals	Halocella sp. SP3-1	Prokaryotes;Bacteria;Firmicutes - Clostridia;Halocella
 T01290	aar	Acetohalobium arabaticum	Prokaryotes;Bacteria;Firmicutes - Clostridia;Acetohalobium
 T02401	hhl	Halobacteroides halobius	Prokaryotes;Bacteria;Firmicutes - Clostridia;Halobacteroides
+T05768	aft	Anoxybacter fermentans	Prokaryotes;Bacteria;Firmicutes - Clostridia;Anoxybacter
 T00661	fma	Finegoldia magna	Prokaryotes;Bacteria;Firmicutes - Others;Finegoldia
 T00964	apr	Anaerococcus prevotii	Prokaryotes;Bacteria;Firmicutes - Others;Anaerococcus
 T03515	pmic	Parvimonas micra	Prokaryotes;Bacteria;Firmicutes - Others;Parvimonas
 T03807	ped	Peptoniphilus sp. ING2-D1G	Prokaryotes;Bacteria;Firmicutes - Others;Peptoniphilus
+T05838	phar	Peptoniphilus harei	Prokaryotes;Bacteria;Firmicutes - Others;Peptoniphilus
 T02255	cad	Gottschalkia acidurici	Prokaryotes;Bacteria;Firmicutes - Others;Gottschalkia
+T05805	spoa	Sporanaerobacter sp. NJN-17	Prokaryotes;Bacteria;Firmicutes - Others;Sporanaerobacter
 T01130	vpr	Veillonella parvula	Prokaryotes;Bacteria;Firmicutes - Others;Veillonella
 T04798	vat	Veillonella atypica	Prokaryotes;Bacteria;Firmicutes - Others;Veillonella
 T05216	vrm	Veillonella rodentium	Prokaryotes;Bacteria;Firmicutes - Others;Veillonella
+T05848	vdn	Veillonella dispar	Prokaryotes;Bacteria;Firmicutes - Others;Veillonella
 T01633	med	Megasphaera elsdenii	Prokaryotes;Bacteria;Firmicutes - Others;Megasphaera
 T05536	mhw	Megasphaera hexanoica	Prokaryotes;Bacteria;Firmicutes - Others;Megasphaera
 T05599	meg	Megasphaera sp. AJH120	Prokaryotes;Bacteria;Firmicutes - Others;Megasphaera
@@ -3775,15 +3969,19 @@ T04818	selt	Selenomonas sp. oral taxon 920	Prokaryotes;Bacteria;Firmicutes - Oth
 T02593	mhg	Megamonas hypermegale	Prokaryotes;Bacteria;Firmicutes - Others;Megamonas
 T03211	puf	Pelosinus sp. UFO1	Prokaryotes;Bacteria;Firmicutes - Others;Pelosinus
 T03813	pft	Pelosinus fermentans	Prokaryotes;Bacteria;Firmicutes - Others;Pelosinus
+T05819	mana	Methylomusa anaerophila	Prokaryotes;Bacteria;Firmicutes - Others;Methylomusa
 T01151	afn	Acidaminococcus fermentans	Prokaryotes;Bacteria;Firmicutes - Others;Acidaminococcus
 T01639	ain	Acidaminococcus intestini	Prokaryotes;Bacteria;Firmicutes - Others;Acidaminococcus
+T05784	pfac	Phascolarctobacterium faecium	Prokaryotes;Bacteria;Firmicutes - Others;Phascolarctobacterium
 T01525	erh	Erysipelothrix rhusiopathiae Fujisawa	Prokaryotes;Bacteria;Firmicutes - Others;Erysipelothrix
 T02688	ers	Erysipelothrix rhusiopathiae SY1027	Prokaryotes;Bacteria;Firmicutes - Others;Erysipelothrix
 T04263	erl	Erysipelothrix larvae	Prokaryotes;Bacteria;Firmicutes - Others;Erysipelothrix
+T05733	eri	Erysipelothrix sp. 15TAL0474	Prokaryotes;Bacteria;Firmicutes - Others;Erysipelothrix
 T02586	euc	Faecalitalea cylindroides	Prokaryotes;Bacteria;Firmicutes - Others;Faecalitalea
 T04254	tur	Turicibacter sp. H121	Prokaryotes;Bacteria;Firmicutes - Others;Turicibacter
 T04268	fro	Faecalibaculum rodentium	Prokaryotes;Bacteria;Firmicutes - Others;Faecalibaculum
 T04439	erb	Erysipelotrichaceae bacterium I46	Prokaryotes;Bacteria;Firmicutes - Others;Unclassified Erysipelotrichaceae
+T05736	ebm	Erysipelotrichaceae bacterium SG0102	Prokaryotes;Bacteria;Firmicutes - Others;Unclassified Erysipelotrichaceae
 T04150	lpil	Limnochorda pilosa	Prokaryotes;Bacteria;Firmicutes - Others;Limnochorda
 T00773	cpo	Coprothermobacter proteolyticus	Prokaryotes;Bacteria;Coprothermobacterota;Coprothermobacter
 T00002	mge	Mycoplasma genitalium G37	Prokaryotes;Bacteria;Tenericutes;Mycoplasma
@@ -3895,6 +4093,7 @@ T00659	acl	Acholeplasma laidlawii	Prokaryotes;Bacteria;Tenericutes;Acholeplasma
 T03095	abra	Acholeplasma brassicae	Prokaryotes;Bacteria;Tenericutes;Acholeplasma
 T03096	apal	Acholeplasma palmae	Prokaryotes;Bacteria;Tenericutes;Acholeplasma
 T03695	aoc	Acholeplasma oculi	Prokaryotes;Bacteria;Tenericutes;Acholeplasma
+T05950	aaxa	Acholeplasma axanthum	Prokaryotes;Bacteria;Tenericutes;Acholeplasma
 T00187	mfl	Mesoplasma florum L1	Prokaryotes;Bacteria;Tenericutes;Mesoplasma
 T02878	mfw	Mesoplasma florum W37	Prokaryotes;Bacteria;Tenericutes;Mesoplasma
 T05062	mchc	Mesoplasma chauliocola	Prokaryotes;Bacteria;Tenericutes;Mesoplasma
@@ -3927,6 +4126,7 @@ T04628	sck	Spiroplasma citri	Prokaryotes;Bacteria;Tenericutes;Spiroplasma
 T05283	sfz	Spiroplasma floricola	Prokaryotes;Bacteria;Tenericutes;Spiroplasma
 T05302	scou	Spiroplasma corruscae	Prokaryotes;Bacteria;Tenericutes;Spiroplasma
 T05330	scla	Spiroplasma clarkii	Prokaryotes;Bacteria;Tenericutes;Spiroplasma
+T05859	sprn	Spiroplasma sp. NBRC 100390	Prokaryotes;Bacteria;Tenericutes;Spiroplasma
 T03291	mbj	Candidatus Izimaplasma sp. HR1	Prokaryotes;Bacteria;Tenericutes;Izimaplasma
 T05457	tbm	Tenericutes bacterium MO-XQ	Prokaryotes;Bacteria;Tenericutes;Unclassified Tenericutes
 T05490	tbz	Tenericutes bacterium MZ-XQ	Prokaryotes;Bacteria;Tenericutes;Unclassified Tenericutes
@@ -3999,11 +4199,12 @@ T03960	mye	Mycobacterium sp. EPa45	Prokaryotes;Bacteria;Actinobacteria;Mycobacte
 T04111	mhad	Mycobacterium haemophilum	Prokaryotes;Bacteria;Actinobacteria;Mycobacterium
 T05013	myn	Mycobacterium sp. NRRL B-3805	Prokaryotes;Bacteria;Actinobacteria;Mycobacterium
 T05102	mdx	Mycobacterium dioxanotrophicus	Prokaryotes;Bacteria;Actinobacteria;Mycobacterium
-T00434	msm	Mycobacterium smegmatis MC2 155	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
+T05717	mshg	Mycobacterium shigaense	Prokaryotes;Bacteria;Actinobacteria;Mycobacterium
+T00434	msm	Mycolicibacterium smegmatis MC2 155	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
 T02191	msg	Mycolicibacterium smegmatis MC2 155	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
-T03433	msb	Mycobacterium smegmatis MC2 155	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
+T03433	msb	Mycolicibacterium smegmatis MC2 155	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
 T03409	msn	Mycolicibacterium smegmatis INHR1	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
-T03432	msh	Mycobacterium smegmatis INHR2	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
+T03432	msh	Mycolicibacterium smegmatis INHR2	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
 T00449	mva	Mycolicibacterium vanbaalenii	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
 T00498	mgi	Mycolicibacterium gilvum PYR-GCK	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
 T01376	msp	Mycolicibacterium gilvum Spyr1	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
@@ -4014,8 +4215,9 @@ T04105	mft	Mycolicibacterium fortuitum	Prokaryotes;Bacteria;Actinobacteria;Mycol
 T04305	mphl	Mycolicibacterium phlei	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
 T04356	mvq	Mycolicibacterium vaccae	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
 T05032	mll	Mycolicibacterium litorale	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
-T01685	mrh	Mycobacterium rhodesiae	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
+T01685	mrh	Mycolicibacterium rhodesiae	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
 T05542	mthn	Mycolicibacterium thermoresistibile	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
+T05715	mhas	Mycolicibacterium hassiacum	Prokaryotes;Bacteria;Actinobacteria;Mycolicibacterium
 T00657	mab	Mycobacteroides abscessus ATCC 19977	Prokaryotes;Bacteria;Actinobacteria;Mycobacteroides
 T02177	mmv	Mycobacteroides abscessus subsp. massiliense GO 06	Prokaryotes;Bacteria;Actinobacteria;Mycobacteroides
 T02682	mabb	Mycobacteroides abscessus subsp. bolletii 50594	Prokaryotes;Bacteria;Actinobacteria;Mycobacteroides
@@ -4122,13 +4324,14 @@ T05112	caqu	Corynebacterium aquilae	Prokaryotes;Bacteria;Actinobacteria;Coryneba
 T05122	csph	Corynebacterium sphenisci	Prokaryotes;Bacteria;Actinobacteria;Corynebacterium
 T05164	camg	Corynebacterium ammoniagenes	Prokaryotes;Bacteria;Actinobacteria;Corynebacterium
 T05574	cmin	Corynebacterium minutissimum	Prokaryotes;Bacteria;Actinobacteria;Corynebacterium
+T05936	cpeg	Corynebacterium pelargi	Prokaryotes;Bacteria;Actinobacteria;Corynebacterium
 T04445	bfv	Brevibacterium flavum ZL-1	Prokaryotes;Bacteria;Actinobacteria;Corynebacterium
 T00207	nfa	Nocardia farcinica IFM 10152	Prokaryotes;Bacteria;Actinobacteria;Nocardia
 T04524	nfr	Nocardia farcinica NCTC11134	Prokaryotes;Bacteria;Actinobacteria;Nocardia
 T01756	ncy	Nocardia cyriacigeorgica	Prokaryotes;Bacteria;Actinobacteria;Nocardia
 T02270	nbr	Nocardia brasiliensis	Prokaryotes;Bacteria;Actinobacteria;Nocardia
 T03032	nno	Nocardia nova	Prokaryotes;Bacteria;Actinobacteria;Nocardia
-T04582	nsl	Nocardia soli	Prokaryotes;Bacteria;Actinobacteria;Nocardia
+T04582	nsl	Nocardia sp. Y48	Prokaryotes;Bacteria;Actinobacteria;Nocardia
 T04599	nsr	Nocardia seriolae	Prokaryotes;Bacteria;Actinobacteria;Nocardia
 T05168	ntp	Nocardia terpenica	Prokaryotes;Bacteria;Actinobacteria;Nocardia
 T00382	rha	Rhodococcus jostii	Prokaryotes;Bacteria;Actinobacteria;Rhodococcus
@@ -4150,6 +4353,7 @@ T05315	rqi	Rhodococcus qingshengii	Prokaryotes;Bacteria;Actinobacteria;Rhodococc
 T05434	rhq	Rhodococcus sp. p52	Prokaryotes;Bacteria;Actinobacteria;Rhodococcus
 T05462	rhod	Rhodococcus sp. 008	Prokaryotes;Bacteria;Actinobacteria;Rhodococcus
 T05521	rrt	Rhodococcus rhodochrous	Prokaryotes;Bacteria;Actinobacteria;Rhodococcus
+T05830	rby	Rhodococcus biphenylivorans	Prokaryotes;Bacteria;Actinobacteria;Rhodococcus
 T01102	gbr	Gordonia bronchialis	Prokaryotes;Bacteria;Actinobacteria;Gordonia
 T01719	gpo	Gordonia polyisoprenivorans	Prokaryotes;Bacteria;Actinobacteria;Gordonia
 T02216	gor	Gordonia sp. KTR9	Prokaryotes;Bacteria;Actinobacteria;Gordonia
@@ -4158,6 +4362,8 @@ T04440	gta	Gordonia terrae	Prokaryotes;Bacteria;Actinobacteria;Gordonia
 T05256	goc	Gordonia sp. YC-JH1	Prokaryotes;Bacteria;Actinobacteria;Gordonia
 T05370	git	Gordonia iterans	Prokaryotes;Bacteria;Actinobacteria;Gordonia
 T05629	gru	Gordonia rubripertincta	Prokaryotes;Bacteria;Actinobacteria;Gordonia
+T05722	gom	Gordonia sp. MMS17-SY073	Prokaryotes;Bacteria;Actinobacteria;Gordonia
+T05876	gav	Gordonia alkanivorans	Prokaryotes;Bacteria;Actinobacteria;Gordonia
 T01228	tpr	Tsukamurella paurometabola	Prokaryotes;Bacteria;Actinobacteria;Tsukamurella
 T05267	tsm	Tsukamurella tyrosinosolvens	Prokaryotes;Bacteria;Actinobacteria;Tsukamurella
 T01238	srt	Segniliparus rotundus	Prokaryotes;Bacteria;Actinobacteria;Segniliparus
@@ -4230,6 +4436,7 @@ T05230	salj	Streptomyces albireticuli	Prokaryotes;Bacteria;Actinobacteria;Strept
 T05314	slx	Streptomyces lavendulae	Prokaryotes;Bacteria;Actinobacteria;Streptomyces
 T05374	stro	Streptomyces sp. MOE7	Prokaryotes;Bacteria;Actinobacteria;Streptomyces
 T05416	sfk	Streptomyces formicae	Prokaryotes;Bacteria;Actinobacteria;Streptomyces
+T05839	snz	Streptomyces nigra	Prokaryotes;Bacteria;Actinobacteria;Streptomyces
 T01648	ksk	Kitasatospora setae	Prokaryotes;Bacteria;Actinobacteria;Kitasatospora
 T05009	kab	Kitasatospora albolonga	Prokaryotes;Bacteria;Actinobacteria;Kitasatospora
 T05021	kau	Kitasatospora aureofaciens	Prokaryotes;Bacteria;Actinobacteria;Kitasatospora
@@ -4256,17 +4463,22 @@ T04912	micr	Microbacterium sp. 1.5R	Prokaryotes;Bacteria;Actinobacteria;Microbac
 T04977	maur	Microbacterium aurum	Prokaryotes;Bacteria;Actinobacteria;Microbacterium
 T05238	mhos	Microbacterium hominis	Prokaryotes;Bacteria;Actinobacteria;Microbacterium
 T05657	mfol	Microbacterium foliorum	Prokaryotes;Bacteria;Actinobacteria;Microbacterium
+T05832	moo	Microbacterium oleivorans	Prokaryotes;Bacteria;Actinobacteria;Microbacterium
 T03203	rla	Rhodoluna lacicola	Prokaryotes;Bacteria;Actinobacteria;Rhodoluna
 T04564	rpla	Candidatus Rhodoluna planktonica	Prokaryotes;Bacteria;Actinobacteria;Rhodoluna
 T03670	rtx	Rathayibacter toxicus 70137	Prokaryotes;Bacteria;Actinobacteria;Rathayibacter
 T04269	rtc	Rathayibacter toxicus WAC3373	Prokaryotes;Bacteria;Actinobacteria;Rathayibacter
 T04388	rtn	Rathayibacter tritici	Prokaryotes;Bacteria;Actinobacteria;Rathayibacter
+T05845	rry	Rathayibacter rathayi	Prokaryotes;Bacteria;Actinobacteria;Rathayibacter
+T05878	ria	Rathayibacter iranicus	Prokaryotes;Bacteria;Actinobacteria;Rathayibacter
 T04180	cum	Curtobacterium sp. MR_MD2014	Prokaryotes;Bacteria;Actinobacteria;Curtobacterium
 T04562	cub	Curtobacterium sp. BH-2-1-1	Prokaryotes;Bacteria;Actinobacteria;Curtobacterium
+T05978	cug	Curtobacterium sp. SGAir0471	Prokaryotes;Bacteria;Actinobacteria;Curtobacterium
 T04252	mvd	Microterricola viridarii	Prokaryotes;Bacteria;Actinobacteria;Microterricola
 T04281	frp	Frondihabitans sp. PAMC 28766	Prokaryotes;Bacteria;Actinobacteria;Frondihabitans
 T04413	agy	Agromyces aureus	Prokaryotes;Bacteria;Actinobacteria;Agromyces
-T05411	agm	Agromyces sp. 30A	Prokaryotes;Bacteria;Actinobacteria;Agromyces
+T05411	agm	Agromyces sp. MF30-A	Prokaryotes;Bacteria;Actinobacteria;Agromyces
+T05835	agf	Agromyces sp. FW100M-8	Prokaryotes;Bacteria;Actinobacteria;Agromyces
 T04435	cart	Cryobacterium arcticum	Prokaryotes;Bacteria;Actinobacteria;Cryobacterium
 T04908	cry	Cryobacterium sp. LW097	Prokaryotes;Bacteria;Actinobacteria;Cryobacterium
 T04797	cphy	Cnuibacter physcomitrellae	Prokaryotes;Bacteria;Actinobacteria;Cnuibacter
@@ -4277,9 +4489,14 @@ T05334	psai	Pontimonas salivibrio	Prokaryotes;Bacteria;Actinobacteria;Pontimonas
 T05359	malk	Microcella alkaliphila	Prokaryotes;Bacteria;Actinobacteria;Microcella
 T05409	myl	Mycetocola sp. 449	Prokaryotes;Bacteria;Actinobacteria;Mycetocola
 T05414	salc	Salinibacterium sp. CGMCC 1.16371	Prokaryotes;Bacteria;Actinobacteria;Salinibacterium
+T05816	sala	Salinibacterium sp. UTAS2018	Prokaryotes;Bacteria;Actinobacteria;Salinibacterium
 T05558	hum	Humibacter sp. BT305	Prokaryotes;Bacteria;Actinobacteria;Humibacter
 T05660	gry	Gryllotalpicola sp. 2DFW10M-5	Prokaryotes;Bacteria;Actinobacteria;Gryllotalpicola
 T05661	lyd	Lysinimonas sp. 2DFWR-13	Prokaryotes;Bacteria;Actinobacteria;Lysinimonas
+T05731	plap	Plantibacter sp. PA-3-X8	Prokaryotes;Bacteria;Actinobacteria;Plantibacter
+T05802	leu	Leucobacter sp. DSM 101948	Prokaryotes;Bacteria;Actinobacteria;Leucobacter
+T05843	ltr	Leucobacter triazinivorans	Prokaryotes;Bacteria;Actinobacteria;Leucobacter
+T05973	agg	Agrococcus sp. SGAir0287	Prokaryotes;Bacteria;Actinobacteria;Agrococcus
 T00421	art	Arthrobacter sp. FB24	Prokaryotes;Bacteria;Actinobacteria;Arthrobacter
 T02215	arr	Arthrobacter sp. Rue61a	Prokaryotes;Bacteria;Actinobacteria;Arthrobacter
 T03487	arm	Arthrobacter sp. PAMC 25486	Prokaryotes;Bacteria;Actinobacteria;Arthrobacter
@@ -4302,11 +4519,12 @@ T00834	ach	Pseudarthrobacter chlorophenolicus	Prokaryotes;Bacteria;Actinobacteri
 T01435	apn	Pseudarthrobacter phenanthrenivorans	Prokaryotes;Bacteria;Actinobacteria;Pseudarthrobacter
 T04210	psul	Pseudarthrobacter sulfonivorans	Prokaryotes;Bacteria;Actinobacteria;Pseudarthrobacter
 T01320	aai	Glutamicibacter arilaitensis Re117	Prokaryotes;Bacteria;Actinobacteria;Glutamicibacter
-T04229	gar	Glutamicibacter arilaitensis KLBMP5180	Prokaryotes;Bacteria;Actinobacteria;Glutamicibacter
+T04229	gar	Glutamicibacter halophytocola	Prokaryotes;Bacteria;Actinobacteria;Glutamicibacter
 T00641	rsa	Renibacterium salmoninarum	Prokaryotes;Bacteria;Actinobacteria;Renibacterium
 T00701	krh	Kocuria rhizophila	Prokaryotes;Bacteria;Actinobacteria;Kocuria
 T04045	kpl	Kocuria palustris	Prokaryotes;Bacteria;Actinobacteria;Kocuria
 T04206	kfv	Kocuria flava	Prokaryotes;Bacteria;Actinobacteria;Kocuria
+T05866	kii	Kocuria indica	Prokaryotes;Bacteria;Actinobacteria;Kocuria
 T00918	mlu	Micrococcus luteus	Prokaryotes;Bacteria;Actinobacteria;Micrococcus
 T01144	rmu	Rothia mucilaginosa	Prokaryotes;Bacteria;Actinobacteria;Rothia
 T01343	rdn	Rothia dentocariosa	Prokaryotes;Bacteria;Actinobacteria;Rothia
@@ -4314,6 +4532,7 @@ T05268	raj	Rothia aeria	Prokaryotes;Bacteria;Actinobacteria;Rothia
 T04286	satk	Sinomonas atrocyanea	Prokaryotes;Bacteria;Actinobacteria;Sinomonas
 T04559	nae	Neomicrococcus aestuarii	Prokaryotes;Bacteria;Actinobacteria;Neomicrococcus
 T05590	aul	Auritidibacter sp. NML130574	Prokaryotes;Bacteria;Actinobacteria;Auritidibacter
+T05972	cig	Citricoccus sp. SGAir0453	Prokaryotes;Bacteria;Actinobacteria;Citricoccus
 T00893	bcv	Beutenbergia cavernae	Prokaryotes;Bacteria;Actinobacteria;Beutenbergia
 T00965	bfa	Brachybacterium faecium	Prokaryotes;Bacteria;Actinobacteria;Brachybacterium
 T04713	brx	Brachybacterium sp. P6-10-X1	Prokaryotes;Bacteria;Actinobacteria;Brachybacterium
@@ -4331,6 +4550,8 @@ T01520	iva	Isoptericola variabilis	Prokaryotes;Bacteria;Actinobacteria;Isopteric
 T04384	ido	Isoptericola dokdonensis	Prokaryotes;Bacteria;Actinobacteria;Isoptericola
 T04804	cet	Cellulosimicrobium sp. TH-20	Prokaryotes;Bacteria;Actinobacteria;Cellulosimicrobium
 T04858	cceu	Cellulosimicrobium cellulans	Prokaryotes;Bacteria;Actinobacteria;Cellulosimicrobium
+T05815	xya	Xylanimicrobium sp. FW10M-9	Prokaryotes;Bacteria;Actinobacteria;Xylanimicrobium
+T05814	xyl	Xylanibacterium sp. 2JSPR-7	Prokaryotes;Bacteria;Actinobacteria;Xylanibacterium
 T01214	ske	Sanguibacter keddieii	Prokaryotes;Bacteria;Actinobacteria;Sanguibacter
 T01230	cfl	Cellulomonas flavigena	Prokaryotes;Bacteria;Actinobacteria;Cellulomonas
 T01490	cfi	Cellulomonas fimi	Prokaryotes;Bacteria;Actinobacteria;Cellulomonas
@@ -4340,9 +4561,11 @@ T01385	ica	Intrasporangium calvum	Prokaryotes;Bacteria;Actinobacteria;Intraspora
 T04014	ars	Arsenicicoccus sp. oral taxon 190	Prokaryotes;Bacteria;Actinobacteria;Arsenicicoccus
 T04436	serj	Serinicoccus sp. JLT9	Prokaryotes;Bacteria;Actinobacteria;Serinicoccus
 T04569	jte	Janibacter indicus	Prokaryotes;Bacteria;Actinobacteria;Janibacter
+T05853	jli	Janibacter limosus	Prokaryotes;Bacteria;Actinobacteria;Janibacter
 T05559	orn	Ornithinimicrobium sp. AMA3305	Prokaryotes;Bacteria;Actinobacteria;Ornithinimicrobium
 T04319	bly	Brevibacterium linens BS258	Prokaryotes;Bacteria;Actinobacteria;Brevibacterium
 T04775	blin	Brevibacterium aurantiacum	Prokaryotes;Bacteria;Actinobacteria;Brevibacterium
+T05958	bri	Brevibacterium sp. CS2	Prokaryotes;Bacteria;Actinobacteria;Brevibacterium
 T05038	dco	Dermatophilus congolensis	Prokaryotes;Bacteria;Actinobacteria;Dermatophilus
 T00188	pac	Cutibacterium acnes KPA171202	Prokaryotes;Bacteria;Actinobacteria;Cutibacterium
 T01215	pak	Cutibacterium acnes SK137	Prokaryotes;Bacteria;Actinobacteria;Cutibacterium
@@ -4361,10 +4584,12 @@ T05425	cgrn	Cutibacterium granulosum	Prokaryotes;Bacteria;Actinobacteria;Cutibac
 T01252	pfr	Propionibacterium freudenreichii subsp. shermanii CIRM-BIA1	Prokaryotes;Bacteria;Actinobacteria;Propionibacterium
 T03860	pfre	Propionibacterium freudenreichii subsp. freudenreichii DSM 20271	Prokaryotes;Bacteria;Actinobacteria;Propionibacterium
 T04515	prl	Propionibacterium sp. oral taxon 193	Prokaryotes;Bacteria;Actinobacteria;Propionibacterium
+T05713	pacd	Propionibacterium acidifaciens	Prokaryotes;Bacteria;Actinobacteria;Propionibacterium
 T02180	ppc	Pseudopropionibacterium propionicum	Prokaryotes;Bacteria;Actinobacteria;Pseudopropionibacterium
 T02345	pbo	Acidipropionibacterium acidipropionici ATCC 4875	Prokaryotes;Bacteria;Actinobacteria;Acidipropionibacterium
 T04523	aaci	Acidipropionibacterium acidipropionici CGMCC 1.2230	Prokaryotes;Bacteria;Actinobacteria;Acidipropionibacterium
 T05538	acij	Acidipropionibacterium virtanenii	Prokaryotes;Bacteria;Actinobacteria;Acidipropionibacterium
+T05836	aji	Acidipropionibacterium jensenii	Prokaryotes;Bacteria;Actinobacteria;Acidipropionibacterium
 T01535	mph	Microlunatus phosphovorus	Prokaryotes;Bacteria;Actinobacteria;Microlunatus
 T04688	tfl	Tessaracoccus flavus	Prokaryotes;Bacteria;Actinobacteria;Tessaracoccus
 T04703	tfa	Tessaracoccus flavescens	Prokaryotes;Bacteria;Actinobacteria;Tessaracoccus
@@ -4372,6 +4597,7 @@ T04732	tes	Tessaracoccus aquimaris	Prokaryotes;Bacteria;Actinobacteria;Tessaraco
 T04747	tez	Tessaracoccus sp. T2.5-30	Prokaryotes;Bacteria;Actinobacteria;Tessaracoccus
 T00443	nca	Nocardioides sp. JS614	Prokaryotes;Bacteria;Actinobacteria;Nocardioides
 T04431	ndk	Nocardioides dokdonensis	Prokaryotes;Bacteria;Actinobacteria;Nocardioides
+T05931	noy	Nocardioides sp. MMS17-SY117	Prokaryotes;Bacteria;Actinobacteria;Nocardioides
 T01155	kfl	Kribbella flavida	Prokaryotes;Bacteria;Actinobacteria;Kribbella
 T03528	psim	Pimelobacter simplex	Prokaryotes;Bacteria;Actinobacteria;Pimelobacter
 T04236	aer	Aeromicrobium erythreum	Prokaryotes;Bacteria;Actinobacteria;Aeromicrobium
@@ -4382,6 +4608,7 @@ T00265	tfu	Thermobifida fusca	Prokaryotes;Bacteria;Actinobacteria;Thermobifida
 T01248	nda	Nocardiopsis dassonvillei	Prokaryotes;Bacteria;Actinobacteria;Nocardiopsis
 T02218	nal	Nocardiopsis alba	Prokaryotes;Bacteria;Actinobacteria;Nocardiopsis
 T05022	ngv	Nocardiopsis gilva	Prokaryotes;Bacteria;Actinobacteria;Nocardiopsis
+T05863	strr	Streptomonospora sp. M2	Prokaryotes;Bacteria;Actinobacteria;Streptomonospora
 T01127	tcu	Thermomonospora curvata	Prokaryotes;Bacteria;Actinobacteria;Thermomonospora
 T01137	sro	Streptosporangium roseum	Prokaryotes;Bacteria;Actinobacteria;Streptosporangium
 T04759	noa	Nonomuraea sp. ATCC 55076	Prokaryotes;Bacteria;Actinobacteria;Nonomuraea
@@ -4392,12 +4619,14 @@ T00384	fal	Frankia alni	Prokaryotes;Bacteria;Actinobacteria;Frankia
 T01530	fsy	Frankia symbiont	Prokaryotes;Bacteria;Actinobacteria;Frankia
 T00426	ace	Acidothermus cellulolyticus	Prokaryotes;Bacteria;Actinobacteria;Acidothermus
 T00991	nml	Nakamurella multipartita	Prokaryotes;Bacteria;Actinobacteria;Nakamurella
+T05729	nak	Nakamurella sp. s14-144	Prokaryotes;Bacteria;Actinobacteria;Nakamurella
 T01163	gob	Geodermatophilus obscurus	Prokaryotes;Bacteria;Actinobacteria;Geodermatophilus
 T01752	bsd	Blastococcus saxobsidens	Prokaryotes;Bacteria;Actinobacteria;Blastococcus
 T02167	mmar	Modestobacter marinus	Prokaryotes;Bacteria;Actinobacteria;Modestobacter
 T00562	kra	Kineococcus radiotolerans	Prokaryotes;Bacteria;Actinobacteria;Kineococcus
 T00492	sen	Saccharopolyspora erythraea	Prokaryotes;Bacteria;Actinobacteria;Saccharopolyspora
 T00980	svi	Saccharomonospora viridis	Prokaryotes;Bacteria;Actinobacteria;Saccharomonospora
+T05928	sacc	Saccharomonospora sp. 31sw	Prokaryotes;Bacteria;Actinobacteria;Saccharomonospora
 T01269	amd	Amycolatopsis mediterranei U32	Prokaryotes;Bacteria;Actinobacteria;Amycolatopsis
 T01822	amn	Amycolatopsis mediterranei S699	Prokaryotes;Bacteria;Actinobacteria;Amycolatopsis
 T02190	amm	Amycolatopsis mediterranei S699	Prokaryotes;Bacteria;Actinobacteria;Amycolatopsis
@@ -4449,9 +4678,11 @@ T01242	ahe	Arcanobacterium haemolyticum	Prokaryotes;Bacteria;Actinobacteria;Arca
 T01257	mcu	Mobiluncus curtisii	Prokaryotes;Bacteria;Actinobacteria;Mobiluncus
 T03070	tpy	Trueperella pyogenes TP6375	Prokaryotes;Bacteria;Actinobacteria;Trueperella
 T03579	tpyo	Trueperella pyogenes TP8	Prokaryotes;Bacteria;Actinobacteria;Trueperella
+T05959	tbw	Trueperella bialowiezensis	Prokaryotes;Bacteria;Actinobacteria;Trueperella
 T03214	asg	Actinotignum schaalii	Prokaryotes;Bacteria;Actinobacteria;Actinotignum
-T05430	actt	Actinotignum sp. 313	Prokaryotes;Bacteria;Actinobacteria;Actinotignum
-T04027	amy	Actinomyces meyeri	Prokaryotes;Bacteria;Actinobacteria;Actinomyces
+T05430	actt	Actinobaculum sp. 313	Prokaryotes;Bacteria;Actinobacteria;Actinotignum
+T04027	amy	Schaalia meyeri	Prokaryotes;Bacteria;Actinobacteria;Schaalia
+T05977	soo	Schaalia odontolytica	Prokaryotes;Bacteria;Actinobacteria;Schaalia
 T04083	acq	Actinomyces sp. oral taxon 414	Prokaryotes;Bacteria;Actinobacteria;Actinomyces
 T04280	aos	Actinomyces oris	Prokaryotes;Bacteria;Actinobacteria;Actinomyces
 T04288	ard	Actinomyces radicidentis	Prokaryotes;Bacteria;Actinobacteria;Actinomyces
@@ -4460,6 +4691,8 @@ T04911	actp	Actinomyces gaoshouyii	Prokaryotes;Bacteria;Actinobacteria;Actinomyc
 T05279	actc	Actinomyces sp. Chiba101	Prokaryotes;Bacteria;Actinobacteria;Actinomyces
 T05399	acto	Actinomyces sp. oral taxon 897	Prokaryotes;Bacteria;Actinobacteria;Actinomyces
 T05566	ane	Actinomyces naeslundii	Prokaryotes;Bacteria;Actinobacteria;Actinomyces
+T05752	fsl	Flaviflexus salsibiostraticola	Prokaryotes;Bacteria;Actinobacteria;Flaviflexus
+T05772	flh	Flaviflexus sp. H23T48	Prokaryotes;Bacteria;Actinobacteria;Flaviflexus
 T00094	blo	Bifidobacterium longum NCC2705	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
 T00707	blj	Bifidobacterium longum DJO10A	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
 T00794	bln	Bifidobacterium longum subsp. infantis ATCC 15697 (JGI)	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
@@ -4507,13 +4740,14 @@ T02505	btp	Bifidobacterium thermophilum	Prokaryotes;Bacteria;Actinobacteria;Bifi
 T03236	bcor	Bifidobacterium coryneforme	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
 T03496	bka	Bifidobacterium kashiwanohense PV20-2	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
 T04223	bks	Bifidobacterium kashiwanohense JCM 15439 = DSM 21854	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
+T03931	bcat	Bifidobacterium catenulatum	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
 T03529	bpsp	Bifidobacterium pseudolongum	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
 T03564	bii	Bifidobacterium indicum	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
 T03930	bang	Bifidobacterium angulatum	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
-T03931	bcat	Bifidobacterium catenulatum	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
 T03932	bpsc	Bifidobacterium pseudocatenulatum	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
 T03975	bsca	Bifidobacterium scardovii	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
 T04036	bact	Bifidobacterium actinocoloniiforme	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
+T05748	bcho	Bifidobacterium choerinum	Prokaryotes;Bacteria;Actinobacteria;Bifidobacterium
 T01146	gva	Gardnerella vaginalis 409-05	Prokaryotes;Bacteria;Actinobacteria;Gardnerella
 T01344	gvg	Gardnerella vaginalis ATCC 14019	Prokaryotes;Bacteria;Actinobacteria;Gardnerella
 T01939	gvh	Gardnerella vaginalis HMP9231	Prokaryotes;Bacteria;Actinobacteria;Gardnerella
@@ -4546,9 +4780,11 @@ T04382	ddt	Denitrobacterium detoxificans	Prokaryotes;Bacteria;Actinobacteria;Den
 T00983	apv	Atopobium parvulum	Prokaryotes;Bacteria;Actinobacteria;Atopobium
 T01285	ols	Olsenella uli	Prokaryotes;Bacteria;Actinobacteria;Olsenella
 T04016	olo	Olsenella sp. oral taxon 807	Prokaryotes;Bacteria;Actinobacteria;Olsenella
+T05797	pcat	Parolsenella catena	Prokaryotes;Bacteria;Actinobacteria;Parolsenella
 T01453	cgo	Coriobacterium glomerans	Prokaryotes;Bacteria;Actinobacteria;Coriobacterium
 T05143	caer	Collinsella aerofaciens	Prokaryotes;Bacteria;Actinobacteria;Collinsella
 T03545	cbac	Coriobacteriaceae bacterium 68-1-3	Prokaryotes;Bacteria;Actinobacteria;Unclassified Coriobacteriaceae
+T05860	erz	Egibacter rhizosphaerae	Prokaryotes;Bacteria;Actinobacteria;Egibacter
 T00004	syn	Synechocystis sp. PCC 6803	Prokaryotes;Bacteria;Cyanobacteria;Synechocystis
 T02468	syz	Synechocystis sp. PCC 6803	Prokaryotes;Bacteria;Cyanobacteria;Synechocystis
 T02098	syy	Synechocystis sp. PCC 6803 GT-S	Prokaryotes;Bacteria;Cyanobacteria;Synechocystis
@@ -4580,6 +4816,7 @@ T05303	slw	Synechococcus lividus	Prokaryotes;Bacteria;Cyanobacteria;Synechococcu
 T05693	syv	Synechococcus sp. PCC 73109	Prokaryotes;Bacteria;Cyanobacteria;Synechococcus
 T00090	tel	Thermosynechococcus elongatus	Prokaryotes;Bacteria;Cyanobacteria;Thermosynechococcus
 T02977	thn	Thermosynechococcus sp. NK55	Prokaryotes;Bacteria;Cyanobacteria;Thermosynechococcus
+T05980	tvn	Thermosynechococcus vulcanus	Prokaryotes;Bacteria;Cyanobacteria;Thermosynechococcus
 T02359	cgc	Cyanobium gracile	Prokaryotes;Bacteria;Cyanobacteria;Cyanobium
 T04888	cyi	Cyanobium sp. NIES-981	Prokaryotes;Bacteria;Cyanobacteria;Cyanobium
 T02378	dsl	Dactylococcopsis salina	Prokaryotes;Bacteria;Cyanobacteria;Dactylococcopsis
@@ -4590,6 +4827,7 @@ T04251	let	Leptolyngbya sp. O-77	Prokaryotes;Bacteria;Cyanobacteria;Leptolyngbya
 T04848	lbo	Leptolyngbya boryana	Prokaryotes;Bacteria;Cyanobacteria;Leptolyngbya
 T04928	hhg	Halomicronema hongdechloris	Prokaryotes;Bacteria;Cyanobacteria;Halomicronema
 T02369	pseu	Pseudanabaena sp. PCC 7367	Prokaryotes;Bacteria;Cyanobacteria;Pseudanabaena
+T05820	pser	Pseudanabaena sp. ABRG5-3	Prokaryotes;Bacteria;Cyanobacteria;Pseudanabaena
 T00137	pma	Prochlorococcus marinus subsp. marinus CCMP1375	Prokaryotes;Bacteria;Cyanobacteria;Prochlorococcus
 T00142	pmm	Prochlorococcus marinus subsp. pastoris CCMP1986	Prokaryotes;Bacteria;Cyanobacteria;Prochlorococcus
 T00143	pmt	Prochlorococcus marinus MIT 9313	Prokaryotes;Bacteria;Cyanobacteria;Prochlorococcus
@@ -4660,6 +4898,7 @@ T02367	plp	Pleurocapsa sp. PCC 7327	Prokaryotes;Bacteria;Cyanobacteria;Pleurocap
 T02406	scs	Stanieria cyanosphaera	Prokaryotes;Bacteria;Cyanobacteria;Stanieria
 T05130	stan	Stanieria sp. NIES-3757	Prokaryotes;Bacteria;Cyanobacteria;Stanieria
 T03622	ceo	Cyanobacterium endosymbiont of Epithemia turgida	Prokaryotes;Bacteria;Cyanobacteria;Unclassified Cyanobacteria
+T05747	cer	Cyanobacterium endosymbiont of Rhopalodia gibberula	Prokaryotes;Bacteria;Cyanobacteria;Unclassified Cyanobacteria
 T04546	mbf	Candidatus Melainabacteria bacterium MEL.A1	Prokaryotes;Bacteria;Melainabacteria;Unclassified Melainabacteria
 T00223	det	Dehalococcoides mccartyi 195	Prokaryotes;Bacteria;Chloroflexi;Dehalococcoides
 T00273	deh	Dehalococcoides mccartyi CBDB1	Prokaryotes;Bacteria;Chloroflexi;Dehalococcoides
@@ -4686,9 +4925,11 @@ T00845	tro	Thermomicrobium roseum	Prokaryotes;Bacteria;Chloroflexi;Thermomicrobi
 T01128	sti	Sphaerobacter thermophilus	Prokaryotes;Bacteria;Chloroflexi;Sphaerobacterineae
 T01410	atm	Anaerolinea thermophila	Prokaryotes;Bacteria;Chloroflexi;Anaerolinea
 T04881	abat	Brevefilum fermentans	Prokaryotes;Bacteria;Chloroflexi;Brevefilum
+T05783	psub	Pelolinea submarina	Prokaryotes;Bacteria;Chloroflexi;Pelolinea
 T04463	abao	Anaerolineaceae bacterium oral taxon 439	Prokaryotes;Bacteria;Chloroflexi;Unclassified Anaerolineaceae
 T01797	cap	Caldilinea aerophila	Prokaryotes;Bacteria;Chloroflexi;Caldilinea
 T05438	pbf	Candidatus Promineofilum breve	Prokaryotes;Bacteria;Chloroflexi;Promineofilum
+T05969	kbs	Ktedonobacterales bacterium SCAWS-G2	Prokaryotes;Bacteria;Chloroflexi;Unclassified Ktedonobacterales
 T00025	dra	Deinococcus radiodurans	Prokaryotes;Bacteria;Deinococcus-Thermus;Deinococcus
 T00353	dge	Deinococcus geothermalis	Prokaryotes;Bacteria;Deinococcus-Thermus;Deinococcus
 T00880	ddr	Deinococcus deserti	Prokaryotes;Bacteria;Deinococcus-Thermus;Deinococcus
@@ -4836,13 +5077,16 @@ T00242	cab	Chlamydia abortus S26/3	Prokaryotes;Bacteria;Chlamydiae;Chlamydia
 T03773	cabo	Chlamydia abortus	Prokaryotes;Bacteria;Chlamydiae;Chlamydia
 T00332	cfe	Chlamydia felis Fe/C-56	Prokaryotes;Bacteria;Chlamydiae;Chlamydia
 T04276	cgz	Chlamydia gallinacea	Prokaryotes;Bacteria;Chlamydiae;Chlamydia
+T05716	chla	Chlamydia sp. S15-834C	Prokaryotes;Bacteria;Chlamydiae;Chlamydia
 T00172	pcu	Candidatus Protochlamydia amoebophila	Prokaryotes;Bacteria;Chlamydiae;Protochlamydia
 T04212	pnl	Candidatus Protochlamydia naegleriophila	Prokaryotes;Bacteria;Chlamydiae;Protochlamydia
 T01552	puv	Parachlamydia acanthamoebae	Prokaryotes;Bacteria;Chlamydiae;Parachlamydia
+T05849	ney	Neochlamydia sp. S13	Prokaryotes;Bacteria;Chlamydiae;Neochlamydia
 T01255	wch	Waddlia chondrophila	Prokaryotes;Bacteria;Chlamydiae;Waddlia
 T01559	sng	Simkania negevensis	Prokaryotes;Bacteria;Chlamydiae;Simkania
 T00689	ote	Opitutus terrae	Prokaryotes;Bacteria;Verrucomicrobia;Opitutus
 T04567	obg	Lacunisphaera limnophila	Prokaryotes;Bacteria;Verrucomicrobia;Lacunisphaera
+T05426	vbh	Nibricoccus aquaticus HZ-65	Prokaryotes;Bacteria;Verrucomicrobia;Nibricoccus
 T03683	obt	Opitutaceae bacterium TAV5	Prokaryotes;Bacteria;Verrucomicrobia;Unclassified Opitutaceae
 T01204	caa	Coraliomargarita akajimensis	Prokaryotes;Bacteria;Verrucomicrobia;Coraliomargarita
 T00736	amu	Akkermansia muciniphila	Prokaryotes;Bacteria;Verrucomicrobia;Akkermansia
@@ -4850,7 +5094,6 @@ T04551	agl	Akkermansia glycaniphila	Prokaryotes;Bacteria;Verrucomicrobia;Akkerma
 T04108	xii	Candidatus Xiphinematobacter sp. Idaho Grape	Prokaryotes;Bacteria;Verrucomicrobia;Xiphinematobacter
 T00727	min	Methylacidiphilum infernorum	Prokaryotes;Bacteria;Verrucomicrobia;Methylacidiphilum
 T03830	vba	Verrucomicrobia bacterium IMCC26134	Prokaryotes;Bacteria;Verrucomicrobia;Unclassified Verrucomicrobia
-T05426	vbh	Verrucomicrobia bacterium HZ-65	Prokaryotes;Bacteria;Verrucomicrobia;Unclassified Verrucomicrobia
 T00134	rba	Rhodopirellula baltica	Prokaryotes;Bacteria;Planctomycetes;Rhodopirellula
 T01147	psl	Pirellula staleyi	Prokaryotes;Bacteria;Planctomycetes;Pirellula
 T04360	pir	Pirellula sp. SH-Sr6A	Prokaryotes;Bacteria;Planctomycetes;Pirellula
@@ -4867,8 +5110,8 @@ T02393	saci	Singulisphaera acidiphila	Prokaryotes;Bacteria;Planctomycetes;Singul
 T04622	pbor	Paludisphaera borealis	Prokaryotes;Bacteria;Planctomycetes;Paludisphaera
 T05435	kst	Candidatus Kuenenia stuttgartiensis	Prokaryotes;Bacteria;Planctomycetes;Kuenenia
 T01800	phm	Phycisphaera mikurensis	Prokaryotes;Bacteria;Planctomycetes;Phycisphaera
-T04695	pbu	Phycisphaerae bacterium L21-RPul-D3	Prokaryotes;Bacteria;Planctomycetes;Sedimentisphaera
-T05439	pbp	Phycisphaerae bacterium ST-PulAB-D4	Prokaryotes;Bacteria;Planctomycetes;Sedimentisphaera
+T04695	pbu	Sedimentisphaera cyanobacteriorum L21-RPul-D3	Prokaryotes;Bacteria;Planctomycetes;Sedimentisphaera
+T05439	pbp	Sedimentisphaera salicampi	Prokaryotes;Bacteria;Planctomycetes;Sedimentisphaera
 T04749	pbas	Phycisphaerae bacterium SM-Chi-D1	Prokaryotes;Bacteria;Planctomycetes;Unclassified Phycisphaerae
 T04225	vbl	Kiritimatiella glycovorans	Prokaryotes;Bacteria;Kiritimatiellaeota;Kiritimatiella
 T05502	vbc	Victivallales bacterium CCUG 44730	Prokaryotes;Bacteria;Lentisphaerae;Unclassified Victivallales
@@ -4942,6 +5185,7 @@ T00712	lbf	Leptospira biflexa serovar Patoc Patoc 1 (Ames)	Prokaryotes;Bacteria;
 T03999	lst	Leptospira santarosai	Prokaryotes;Bacteria;Spirochaetes;Leptospira
 T04558	laj	Leptospira alstonii	Prokaryotes;Bacteria;Spirochaetes;Leptospira
 T05598	lmay	Leptospira mayottensis	Prokaryotes;Bacteria;Spirochaetes;Leptospira
+T05705	lkm	Leptospira kmetyi	Prokaryotes;Bacteria;Spirochaetes;Leptospira
 T02157	tpx	Turneriella parva	Prokaryotes;Bacteria;Spirochaetes;Turneriella
 T00865	bhy	Brachyspira hyodysenteriae WA1	Prokaryotes;Bacteria;Spirochaetes;Brachyspira
 T04742	bhd	Brachyspira hyodysenteriae ATCC 27164	Prokaryotes;Bacteria;Spirochaetes;Brachyspira
@@ -5029,9 +5273,11 @@ T05011	parc	Parabacteroides sp. CT06	Prokaryotes;Bacteria;Bacteroidetes;Parabact
 T01682	tfo	Tannerella forsythia	Prokaryotes;Bacteria;Bacteroidetes;Tannerella
 T04474	toh	Tannerella sp. oral taxon HOT-286	Prokaryotes;Bacteria;Bacteroidetes;Tannerella
 T04438	pary	Muribaculum intestinale	Prokaryotes;Bacteria;Bacteroidetes;Muribaculum
+T05963	dun	Duncaniella sp. B8	Prokaryotes;Bacteria;Bacteroidetes;Duncaniella
 T02986	bvs	Barnesiella viscericola	Prokaryotes;Bacteria;Bacteroidetes;Barnesiella
 T04672	psac	Proteiniphilum saccharofermentans	Prokaryotes;Bacteria;Bacteroidetes;Proteiniphilum
 T01428	osp	Odoribacter splanchnicus	Prokaryotes;Bacteria;Bacteroidetes;Odoribacter
+T05785	buy	Butyricimonas sp. H184	Prokaryotes;Bacteria;Bacteroidetes;Butyricimonas
 T00792	aps	Candidatus Azobacteroides pseudotrichonymphae (Coptotermes formosanus)	Prokaryotes;Bacteria;Bacteroidetes;Azobacteroides
 T01212	pru	Prevotella ruminicola	Prokaryotes;Bacteria;Bacteroidetes;Prevotella
 T01286	pmz	Prevotella melaninogenica	Prokaryotes;Bacteria;Bacteroidetes;Prevotella
@@ -5055,7 +5301,7 @@ T01119	rmr	Rhodothermus marinus DSM 4252	Prokaryotes;Bacteria;Bacteroidetes;Rhod
 T01606	rmg	Rhodothermus marinus SG0.5JP17-172	Prokaryotes;Bacteria;Bacteroidetes;Rhodothermus
 T04780	rbar	Rhodothermaceae bacterium RA	Prokaryotes;Bacteria;Bacteroidetes;Unclassified Rhodothermaceae
 T00959	cpi	Chitinophaga pinensis	Prokaryotes;Bacteria;Bacteroidetes;Chitinophaga
-T05360	cbae	Chitinophagaceae bacterium 13	Prokaryotes;Bacteria;Bacteroidetes;Chitinophaga
+T05360	cbae	Chitinophaga caeni	Prokaryotes;Bacteria;Bacteroidetes;Chitinophaga
 T01679	nko	Niastella koreensis	Prokaryotes;Bacteria;Bacteroidetes;Niastella
 T03682	nso	Niabella soli	Prokaryotes;Bacteria;Bacteroidetes;Niabella
 T04418	nia	Niabella ginsenosidivorans	Prokaryotes;Bacteria;Bacteroidetes;Niabella
@@ -5076,6 +5322,7 @@ T01450	shg	Sphingobacterium sp. 21	Prokaryotes;Bacteria;Bacteroidetes;Sphingobac
 T03258	sht	Sphingobacterium sp. ML3W	Prokaryotes;Bacteria;Bacteroidetes;Sphingobacterium
 T04670	sphn	Sphingobacterium sp. B29	Prokaryotes;Bacteria;Bacteroidetes;Sphingobacterium
 T05395	smiz	Sphingobacterium mizutaii	Prokaryotes;Bacteria;Bacteroidetes;Sphingobacterium
+T05967	spsc	Sphingobacterium psychroaquaticum	Prokaryotes;Bacteria;Bacteroidetes;Sphingobacterium
 T02084	scn	Solitalea canadensis	Prokaryotes;Bacteria;Bacteroidetes;Solitalea
 T04335	mup	Mucilaginibacter sp. PAMC 26640	Prokaryotes;Bacteria;Bacteroidetes;Mucilaginibacter
 T05010	muc	Mucilaginibacter sp. BJC16-A31	Prokaryotes;Bacteria;Bacteroidetes;Mucilaginibacter
@@ -5120,6 +5367,8 @@ T04099	rti	Rufibacter tibetensis	Prokaryotes;Bacteria;Bacteroidetes;Rufibacter
 T04326	rud	Rufibacter sp. DG15C	Prokaryotes;Bacteria;Bacteroidetes;Rufibacter
 T01365	mtt	Marivirga tractuosa	Prokaryotes;Bacteria;Bacteroidetes;Marivirga
 T04442	flm	Flammeovirga sp. MY04	Prokaryotes;Bacteria;Bacteroidetes;Flammeovirga
+T05771	fll	Flammeovirga sp. L12M1	Prokaryotes;Bacteria;Bacteroidetes;Flammeovirga
+T05953	fpf	Fabibacter pacificus	Prokaryotes;Bacteria;Bacteroidetes;Fabibacter
 T04058	fbt	Flammeovirgaceae bacterium 311	Prokaryotes;Bacteria;Bacteroidetes;Unclassified Flammeovirgaceae
 T00730	aas	Candidatus Amoebophilus asiaticus	Prokaryotes;Bacteria;Bacteroidetes;Amoebophilus
 T02243	che	Cardinium endosymbiont cEper1 (Encarsia pergandiella)	Prokaryotes;Bacteria;Bacteroidetes;Cardinium
@@ -5160,6 +5409,7 @@ T05393	cspu	Capnocytophaga sputigena	Prokaryotes;Bacteria;Bacteroidetes;Capnocyt
 T05499	ccyn	Capnocytophaga cynodegmi	Prokaryotes;Bacteria;Bacteroidetes;Capnocytophaga
 T05519	caph	Capnocytophaga sp. H4358	Prokaryotes;Bacteria;Bacteroidetes;Capnocytophaga
 T05529	csto	Capnocytophaga stomatis	Prokaryotes;Bacteria;Bacteroidetes;Capnocytophaga
+T05889	capq	Capnocytophaga sp. H2931	Prokaryotes;Bacteria;Bacteroidetes;Capnocytophaga
 T00992	rbi	Robiginitalea biformata	Prokaryotes;Bacteria;Bacteroidetes;Robiginitalea
 T01216	zpr	Zunongwangia profunda	Prokaryotes;Bacteria;Bacteroidetes;Zunongwangia
 T01256	cat	Croceibacter atlanticus	Prokaryotes;Bacteria;Bacteroidetes;Croceibacter
@@ -5173,6 +5423,7 @@ T01306	fbc	Maribacter sp. HTCC2170	Prokaryotes;Bacteria;Bacteroidetes;Maribacter
 T04570	marm	Maribacter sp. 1_2014MBL_MicDiv	Prokaryotes;Bacteria;Bacteroidetes;Maribacter
 T04597	mart	Maribacter sp. T28	Prokaryotes;Bacteria;Bacteroidetes;Maribacter
 T05023	marb	Maribacter cobaltidurans	Prokaryotes;Bacteria;Bacteroidetes;Maribacter
+T05877	mare	Maribacter sp. MJ134	Prokaryotes;Bacteria;Bacteroidetes;Maribacter
 T01404	cao	Cellulophaga algicola	Prokaryotes;Bacteria;Bacteroidetes;Cellulophaga
 T01434	cly	Cellulophaga lytica DSM 7489	Prokaryotes;Bacteria;Bacteroidetes;Cellulophaga
 T03279	clh	Cellulophaga lytica HI1	Prokaryotes;Bacteria;Bacteroidetes;Cellulophaga
@@ -5190,6 +5441,7 @@ T01586	zga	Zobellia galactanivorans	Prokaryotes;Bacteria;Bacteroidetes;Zobellia
 T01598	mrs	Muricauda ruestringensis	Prokaryotes;Bacteria;Bacteroidetes;Muricauda
 T03884	mlt	Muricauda lutaonensis	Prokaryotes;Bacteria;Bacteroidetes;Muricauda
 T02132	asl	Aequorivita sublithincola	Prokaryotes;Bacteria;Bacteroidetes;Aequorivita
+T05794	aev	Aequorivita sp. H23M31	Prokaryotes;Bacteria;Bacteroidetes;Aequorivita
 T02145	orh	Ornithobacterium rhinotracheale DSM 15997	Prokaryotes;Bacteria;Bacteroidetes;Ornithobacterium
 T03303	ori	Ornithobacterium rhinotracheale ORT-UMN 88	Prokaryotes;Bacteria;Bacteroidetes;Ornithobacterium
 T02275	ptq	Psychroflexus torquis	Prokaryotes;Bacteria;Bacteroidetes;Psychroflexus
@@ -5197,6 +5449,7 @@ T02441	ndo	Nonlabens dokdonensis	Prokaryotes;Bacteria;Bacteroidetes;Nonlabens
 T04144	nom	Nonlabens sp. MIC269	Prokaryotes;Bacteria;Bacteroidetes;Nonlabens
 T04875	nsd	Nonlabens sediminis	Prokaryotes;Bacteria;Bacteroidetes;Nonlabens
 T05253	nob	Nonlabens sp. MB-3u-79	Prokaryotes;Bacteria;Bacteroidetes;Nonlabens
+T05856	noj	Nonlabens sp. MJ115	Prokaryotes;Bacteria;Bacteroidetes;Nonlabens
 T02533	pom	Polaribacter sp. MED152	Prokaryotes;Bacteria;Bacteroidetes;Polaribacter
 T04504	pob	Polaribacter vadi	Prokaryotes;Bacteria;Bacteroidetes;Polaribacter
 T04692	prn	Polaribacter reichenbachii	Prokaryotes;Bacteria;Bacteroidetes;Polaribacter
@@ -5222,6 +5475,9 @@ T04952	chry	Chryseobacterium sp. T16E-39	Prokaryotes;Bacteria;Bacteroidetes;Chry
 T05071	cpip	Chryseobacterium piperi	Prokaryotes;Bacteria;Bacteroidetes;Chryseobacterium
 T05512	ctak	Chryseobacterium taklimakanense	Prokaryotes;Bacteria;Bacteroidetes;Chryseobacterium
 T05679	chrs	Chryseobacterium sp. 3008163	Prokaryotes;Bacteria;Bacteroidetes;Chryseobacterium
+T05704	chrz	Chryseobacterium sp. 6424	Prokaryotes;Bacteria;Bacteroidetes;Chryseobacterium
+T05746	carh	Chryseobacterium arthrosphaerae	Prokaryotes;Bacteria;Bacteroidetes;Chryseobacterium
+T05920	csha	Chryseobacterium shandongense	Prokaryotes;Bacteria;Bacteroidetes;Chryseobacterium
 T03603	win	Winogradskyella sp. PG-2	Prokaryotes;Bacteria;Bacteroidetes;Winogradskyella
 T04714	wij	Winogradskyella sp. J14-2	Prokaryotes;Bacteria;Bacteroidetes;Winogradskyella
 T03699	sze	Siansivirga zeaxanthinifaciens	Prokaryotes;Bacteria;Bacteroidetes;Siansivirga
@@ -5249,7 +5505,11 @@ T05562	kos	Kordia sp. SMS9	Prokaryotes;Bacteria;Bacteroidetes;Kordia
 T05592	marf	Mariniflexile sp. TRM1-10	Prokaryotes;Bacteria;Bacteroidetes;Mariniflexile
 T05615	aqb	Aquimarina sp. BL5	Prokaryotes;Bacteria;Bacteroidetes;Aquimarina
 T05625	aqa	Aquimarina sp. AD1	Prokaryotes;Bacteria;Bacteroidetes;Aquimarina
+T05712	aqd	Aquimarina sp. AD10	Prokaryotes;Bacteria;Bacteroidetes;Aquimarina
 T05677	emar	Euzebyella marina	Prokaryotes;Bacteria;Bacteroidetes;Euzebyella
+T05730	cnr	Cloacibacterium normanense	Prokaryotes;Bacteria;Bacteroidetes;Cloacibacterium
+T05825	mur	Muriicola sp. MMS17-SY002	Prokaryotes;Bacteria;Bacteroidetes;Muriicola
+T05945	psyn	Psychroserpens sp. NJDZ02	Prokaryotes;Bacteria;Bacteroidetes;Psychroserpens
 T00953	fba	Flavobacteriaceae bacterium 3519-10	Prokaryotes;Bacteria;Bacteroidetes;Unclassified Flavobacteriaceae
 T04720	fbu	Flavobacteriaceae bacterium UJ101	Prokaryotes;Bacteria;Bacteroidetes;Unclassified Flavobacteriaceae
 T00630	smg	Candidatus Sulcia muelleri GWSS	Prokaryotes;Bacteria;Bacteroidetes;Sulcia
@@ -5269,6 +5529,7 @@ T02109	bbg	Blattabacterium sp. (Blaberus giganteus)	Prokaryotes;Bacteria;Bactero
 T02446	bbq	Blattabacterium sp. (Blatta orientalis)	Prokaryotes;Bacteria;Bacteroidetes;Blattabacterium
 T02525	blp	Blattabacterium cuenoti	Prokaryotes;Bacteria;Bacteroidetes;Blattabacterium
 T02863	blu	Blattabacterium sp. (Nauphoeta cinerea)	Prokaryotes;Bacteria;Bacteroidetes;Blattabacterium
+T05708	blck	Blattabacterium sp. (Cryptocercus kyebangensis)	Prokaryotes;Bacteria;Bacteroidetes;Blattabacterium
 T01455	fte	Fluviicola taffensis	Prokaryotes;Bacteria;Bacteroidetes;Fluviicola
 T05019	flu	Candidatus Fluviicola riflensis	Prokaryotes;Bacteria;Bacteroidetes;Fluviicola
 T01677	oho	Owenweeksia hongkongensis	Prokaryotes;Bacteria;Bacteroidetes;Owenweeksia
@@ -5293,6 +5554,7 @@ T04996	pros	Prosthecochloris sp. GSB1	Prokaryotes;Bacteria;Chlorobi;Prosthecochl
 T00726	cts	Chloroherpeton thalassium	Prokaryotes;Bacteria;Chlorobi;Chloroherpeton
 T01943	ial	Ignavibacterium album	Prokaryotes;Bacteria;Chlorobi;Ignavibacterium
 T02176	mro	Melioribacter roseus	Prokaryotes;Bacteria;Chlorobi;Melioribacter
+T05709	cprv	Candidatus Cyclonatronum proteinivorum	Prokaryotes;Bacteria;Balneolaeota;Cyclonatronum
 T04769	caci	Candidatus Cloacimonas acidaminovorans	Prokaryotes;Bacteria;Cloacimonetes;Cloacimonas
 T00013	aae	Aquifex aeolicus	Prokaryotes;Bacteria;Aquificae;Aquifex
 T00745	hya	Hydrogenobaculum sp. Y04AAS1	Prokaryotes;Bacteria;Aquificae;Hydrogenobaculum
@@ -5345,6 +5607,7 @@ T01188	ddf	Deferribacter desulfuricans	Prokaryotes;Bacteria;Deferribacteres;Defe
 T01189	dap	Denitrovibrio acetiphilus	Prokaryotes;Bacteria;Deferribacteres;Denitrovibrio
 T01364	cni	Calditerrivibrio nitroreducens	Prokaryotes;Bacteria;Deferribacteres;Calditerrivibrio
 T01539	fsi	Flexistipes sinusarabici	Prokaryotes;Bacteria;Deferribacteres;Flexistipes
+T05803	gtl	Geovibrio thiophilus	Prokaryotes;Bacteria;Deferribacteres;Geovibrio
 T04549	caby	Caldithrix abyssi	Prokaryotes;Bacteria;Calditrichaeota;Caldithrix
 T00774	dth	Dictyoglomus thermophilum	Prokaryotes;Bacteria;Dictyoglomi;Dictyoglomus
 T00800	dtu	Dictyoglomus turgidum	Prokaryotes;Bacteria;Dictyoglomi;Dictyoglomus
@@ -5367,7 +5630,11 @@ T04605	sbag	Candidatus Saccharibacteria bacterium GW2011_GWC2_44_17	Prokaryotes;
 T03502	sox	Candidatus Saccharibacteria oral	Prokaryotes;Bacteria;Saccharibacteria;Saccharimonas
 T04147	prf	Candidatus Peribacter riflensis	Prokaryotes;Bacteria;Peregrinibacteria;Peribacter
 T05525	bana	Candidatus Bipolaricaulis anaerobius	Prokaryotes;Bacteria;Bipolaricaulota;Bipolaricaulis
+T05809	bih	Candidatus Bipolaricaulis sp. Ch78	Prokaryotes;Bacteria;Bipolaricaulota;Bipolaricaulis
+T05804	vai	Vampirococcus sp. LiM	Prokaryotes;Bacteria;Other;Vampirococcus
 T02155	mox	Candidatus Methylomirabilis oxyfera	Prokaryotes;Bacteria;Other;Methylomirabilis
+T02948	dpb	Candidatus Babela massiliensis	Prokaryotes;Bacteria;Other;Babela
+T04457	tmg	Candidate division TM6 bacterium GW2011_GWF2_28_16	Prokaryotes;Bacteria;Unclassified Bacteria
 T02946	srb	Candidate division SR1 bacterium RAAC1_SR1_1	Prokaryotes;Bacteria;Unclassified Bacteria
 T04487	srg	Candidate division SR1 bacterium Aalborg_AAW-1	Prokaryotes;Bacteria;Unclassified Bacteria
 T02947	wwe	Candidate division WWE3 bacterium RAAC2_WWE3_1	Prokaryotes;Bacteria;Unclassified Bacteria
@@ -5377,7 +5644,6 @@ T04022	mib	Candidatus Beckwithbacteria bacterium GW2011_GWC1_49_16	Prokaryotes;B
 T04464	wba	Candidatus Woesebacteria bacterium GW2011_GWF1_31_35	Prokaryotes;Bacteria;Unclassified Bacteria
 T04023	pwo	Candidatus Wolfebacteria bacterium GW2011_GWB1_47_1	Prokaryotes;Bacteria;Unclassified Bacteria
 T04488	cgw	Candidatus Campbellbacteria bacterium GW2011_OD1_34_28	Prokaryotes;Bacteria;Unclassified Bacteria
-T04457	tmg	Candidate division TM6 bacterium GW2011_GWF2_28_16	Prokaryotes;Bacteria;Unclassified Bacteria
 T04673	baab	Bacterium AB1	Prokaryotes;Bacteria;Unclassified Bacteria
 T00003	mja	Methanocaldococcus jannaschii	Prokaryotes;Archaea;Euryarchaeota;Methanocaldococcus
 T00976	mfe	Methanocaldococcus fervens	Prokaryotes;Archaea;Euryarchaeota;Methanocaldococcus
@@ -5418,6 +5684,7 @@ T04503	mcub	Methanobacterium congolense	Prokaryotes;Archaea;Euryarchaeota;Methan
 T05275	msub	Methanobacterium subterraneum	Prokaryotes;Archaea;Euryarchaeota;Methanobacterium
 T05317	metn	Methanobacterium sp. MZ-A1	Prokaryotes;Archaea;Euryarchaeota;Methanobacterium
 T05692	mett	Methanobacterium sp. BRmetb2	Prokaryotes;Archaea;Euryarchaeota;Methanobacterium
+T05745	meto	Methanobacterium sp. BAmetb5	Prokaryotes;Archaea;Euryarchaeota;Methanobacterium
 T01351	mfv	Methanothermus fervidus	Prokaryotes;Archaea;Euryarchaeota;Methanothermus
 T00078	mka	Methanopyrus kandleri	Prokaryotes;Archaea;Euryarchaeota;Methanopyrus
 T00011	afu	Archaeoglobus fulgidus DSM 4304	Prokaryotes;Archaea;Euryarchaeota;Archaeoglobus
@@ -5475,6 +5742,7 @@ T05104	ttd	Thermococcus thioreducens	Prokaryotes;Archaea;Euryarchaeota;Thermococ
 T05153	tprf	Thermococcus profundus	Prokaryotes;Archaea;Euryarchaeota;Thermococcus
 T05177	trl	Thermococcus radiotolerans	Prokaryotes;Archaea;Euryarchaeota;Thermococcus
 T05192	tpaf	Thermococcus pacificus	Prokaryotes;Archaea;Euryarchaeota;Thermococcus
+T05739	thy	Thermococcus sp. P6	Prokaryotes;Archaea;Euryarchaeota;Thermococcus
 T03210	ppac	Palaeococcus pacificus	Prokaryotes;Archaea;Euryarchaeota;Palaeococcus
 T00080	mac	Methanosarcina acetivorans	Prokaryotes;Archaea;Euryarchaeota;Methanosarcina
 T00271	mba	Methanosarcina barkeri Fusaro	Prokaryotes;Archaea;Euryarchaeota;Methanosarcina
@@ -5541,7 +5809,9 @@ T02478	nmo	Natronomonas moolapensis	Prokaryotes;Archaea;Euryarchaeota;Natronomon
 T00971	hut	Halorhabdus utahensis	Prokaryotes;Archaea;Euryarchaeota;Halorhabdus
 T02781	hti	Halorhabdus tiamatea	Prokaryotes;Archaea;Euryarchaeota;Halorhabdus
 T00982	hmu	Halomicrobium mukohataei	Prokaryotes;Archaea;Euryarchaeota;Halomicrobium
+T05947	halz	Halomicrobium sp. ZP60	Prokaryotes;Archaea;Euryarchaeota;Halomicrobium
 T04693	hali	Halorientalis sp. IM1011	Prokaryotes;Archaea;Euryarchaeota;Halorientalis
+T05943	hsn	Halapricum salinum	Prokaryotes;Archaea;Euryarchaeota;Halapricum
 T05406	harc	Haloarculaceae archaeon HArcel1	Prokaryotes;Archaea;Euryarchaeota;Unclassified Haloarculaceae
 T00375	hwa	Haloquadratum walsbyi DSM 16790	Prokaryotes;Archaea;Euryarchaeota;Haloquadratum
 T01942	hwc	Haloquadratum walsbyi C23	Prokaryotes;Archaea;Euryarchaeota;Haloquadratum
@@ -5551,16 +5821,23 @@ T04025	hgi	Haloferax gibbonsii	Prokaryotes;Archaea;Euryarchaeota;Haloferax
 T01359	hbo	Halogeometricum borinquense	Prokaryotes;Archaea;Euryarchaeota;Halogeometricum
 T05557	haq	Haloplanus sp. CBA1112	Prokaryotes;Archaea;Euryarchaeota;Haloplanus
 T05613	haj	Haloplanus sp. CBA1113	Prokaryotes;Archaea;Euryarchaeota;Haloplanus
+T05732	haer	Haloplanus aerogenes	Prokaryotes;Archaea;Euryarchaeota;Haloplanus
+T05944	hlm	Halobellus limi	Prokaryotes;Archaea;Euryarchaeota;Halobellus
+T05952	halm	Haloprofundus sp. MHR1	Prokaryotes;Archaea;Euryarchaeota;Haloprofundus
 T00856	hla	Halorubrum lacusprofundi	Prokaryotes;Archaea;Euryarchaeota;Halorubrum
+T05770	halp	Halorubrum sp. PV6	Prokaryotes;Archaea;Euryarchaeota;Halorubrum
+T05834	halb	Halorubrum sp. BOL3-1	Prokaryotes;Archaea;Euryarchaeota;Halorubrum
 T05289	srub	Salinigranum rubrum	Prokaryotes;Archaea;Euryarchaeota;Salinigranum
 T05239	hae	Halohasta litchfieldiae	Prokaryotes;Archaea;Euryarchaeota;Halohasta
 T01603	hah	Halophilic archaeon DL31	Prokaryotes;Archaea;Euryarchaeota;Unclassified Haloferacales
 T01154	htu	Haloterrigena turkmenica	Prokaryotes;Archaea;Euryarchaeota;Haloterrigena
 T04679	hda	Haloterrigena daqingensis	Prokaryotes;Archaea;Euryarchaeota;Haloterrigena
+T05948	hjt	Haloterrigena jeotgali	Prokaryotes;Archaea;Euryarchaeota;Haloterrigena
 T01176	nmg	Natrialba magadii	Prokaryotes;Archaea;Euryarchaeota;Natrialba
 T01532	hxa	Halopiger xanaduensis	Prokaryotes;Archaea;Euryarchaeota;Halopiger
 T02184	nat	Natrinema sp. J7-2	Prokaryotes;Archaea;Euryarchaeota;Natrinema
 T02425	npe	Natrinema pellirubrum	Prokaryotes;Archaea;Euryarchaeota;Natrinema
+T05974	nvr	Natrinema versiforme	Prokaryotes;Archaea;Euryarchaeota;Natrinema
 T02383	nge	Natronobacterium gregoryi	Prokaryotes;Archaea;Euryarchaeota;Natronobacterium
 T02402	hru	Halovivax ruber	Prokaryotes;Archaea;Euryarchaeota;Halovivax
 T02426	nou	Natronococcus occultus	Prokaryotes;Archaea;Euryarchaeota;Natronococcus
@@ -5570,6 +5847,7 @@ T04669	hlc	Halobiforma lacisalsi	Prokaryotes;Archaea;Euryarchaeota;Halobiforma
 T04999	naj	Natronolimnobius aegyptiacus JW/NM-HA 15	Prokaryotes;Archaea;Euryarchaeota;Natronolimnobius
 T05593	nag	Natronolimnobius sp. AArc-Mg	Prokaryotes;Archaea;Euryarchaeota;Natronolimnobius
 T05614	nan	Natronolimnobius sp. AArc1	Prokaryotes;Archaea;Euryarchaeota;Natronolimnobius
+T05942	nbg	Natronorubrum bangense	Prokaryotes;Archaea;Euryarchaeota;Natronorubrum
 T04498	nac	Nanohaloarchaea archaeon SG9	Prokaryotes;Archaea;Nanohaloarchaeota;Unclassified Nanohaloarchaea
 T00023	ape	Aeropyrum pernix	Prokaryotes;Archaea;Crenarchaeota;Aeropyrum
 T02858	acj	Aeropyrum camini	Prokaryotes;Archaea;Crenarchaeota;Aeropyrum
@@ -5590,8 +5868,8 @@ T00062	sto	Sulfurisphaera tokodaii	Prokaryotes;Archaea;Crenarchaeota;Sulfurispha
 T00054	sso	Saccharolobus solfataricus P2	Prokaryotes;Archaea;Crenarchaeota;Saccharolobus
 T02126	sol	Saccharolobus solfataricus 98/2	Prokaryotes;Archaea;Crenarchaeota;Saccharolobus
 T03910	ssoa	Saccharolobus solfataricus SULA	Prokaryotes;Archaea;Crenarchaeota;Saccharolobus
-T03911	ssol	Saccharolobus solfataricus SULB	Prokaryotes;Archaea;Crenarchaeota;Saccharolobus
-T03912	ssof	Saccharolobus solfataricus SULC	Prokaryotes;Archaea;Crenarchaeota;Saccharolobus
+T03911	ssol	Saccharolobus solfataricus SARC-B	Prokaryotes;Archaea;Crenarchaeota;Saccharolobus
+T03912	ssof	Saccharolobus solfataricus SARC-C	Prokaryotes;Archaea;Crenarchaeota;Saccharolobus
 T00251	sai	Sulfolobus acidocaldarius DSM 639	Prokaryotes;Archaea;Crenarchaeota;Sulfolobus
 T02452	sacn	Sulfolobus acidocaldarius N8	Prokaryotes;Archaea;Crenarchaeota;Sulfolobus
 T02453	sacr	Sulfolobus acidocaldarius Ron12/I	Prokaryotes;Archaea;Crenarchaeota;Sulfolobus
@@ -5609,11 +5887,13 @@ T02620	sic	Sulfolobus islandicus LAL14/1	Prokaryotes;Archaea;Crenarchaeota;Sulfo
 T04516	sula	Sulfolobus sp. A20	Prokaryotes;Archaea;Crenarchaeota;Sulfolobus
 T00509	mse	Metallosphaera sedula	Prokaryotes;Archaea;Crenarchaeota;Metallosphaera
 T01467	mcn	Metallosphaera cuprina	Prokaryotes;Archaea;Crenarchaeota;Metallosphaera
-T05471	mhk	Metallosphaera hakonensis	Prokaryotes;Archaea;Crenarchaeota;Metallosphaera
+T05471	mhk	Metallosphaera hakonensis JCM 8857 = DSM 7519	Prokaryotes;Archaea;Crenarchaeota;Metallosphaera
+T05966	mpru	Metallosphaera prunae	Prokaryotes;Archaea;Crenarchaeota;Metallosphaera
 T01493	aho	Acidianus hospitalis	Prokaryotes;Archaea;Crenarchaeota;Acidianus
 T04836	aman	Acidianus manzaensis	Prokaryotes;Archaea;Crenarchaeota;Acidianus
 T05472	abri	Acidianus brierleyi	Prokaryotes;Archaea;Crenarchaeota;Acidianus
 T05487	asul	Acidianus sulfidivorans	Prokaryotes;Archaea;Crenarchaeota;Acidianus
+T05813	sacd	Sulfodiicoccus acidiphilus	Prokaryotes;Archaea;Crenarchaeota;Sulfodiicoccus
 T00073	pai	Pyrobaculum aerophilum	Prokaryotes;Archaea;Crenarchaeota;Pyrobaculum
 T00444	pis	Pyrobaculum islandicum	Prokaryotes;Archaea;Crenarchaeota;Pyrobaculum
 T00483	pcl	Pyrobaculum calidifontis	Prokaryotes;Archaea;Crenarchaeota;Pyrobaculum
@@ -5645,7 +5925,8 @@ T01380	csy	Cenarchaeum symbiosum	Prokaryotes;Archaea;Thaumarchaeota;Cenarchaeum
 T02305	nga	Candidatus Nitrososphaera gargensis	Prokaryotes;Archaea;Thaumarchaeota;Nitrososphaera
 T03200	nvn	Nitrososphaera viennensis	Prokaryotes;Archaea;Thaumarchaeota;Nitrososphaera
 T03224	nev	Candidatus Nitrososphaera evergladensis	Prokaryotes;Archaea;Thaumarchaeota;Nitrososphaera
-T04185	taa	Candidatus Nitrocosmicus oleophilus	Prokaryotes;Archaea;Thaumarchaeota;Nitrosocosmicus
+T04185	taa	Candidatus Nitrosocosmicus oleophilus	Prokaryotes;Archaea;Thaumarchaeota;Nitrosocosmicus
+T05935	nfn	Candidatus Nitrosocosmicus franklandus	Prokaryotes;Archaea;Thaumarchaeota;Nitrosocosmicus
 T05329	ncv	Candidatus Nitrosocaldus cavascurensis	Prokaryotes;Archaea;Thaumarchaeota;Nitrosocaldus
 T02904	csu	Candidatus Caldiarchaeum subterraneum	Prokaryotes;Archaea;Thaumarchaeota;Caldiarchaeum
 T03537	nbv	Candidatus Nitrosopelagicus brevis	Prokaryotes;Archaea;Thaumarchaeota;Nitrosopelagicus
@@ -5653,7 +5934,7 @@ T03883	tah	Candidatus Nitrosotenuis cloacae	Prokaryotes;Archaea;Thaumarchaeota;N
 T04889	ndv	Candidatus Nitrosotalea devanaterra	Prokaryotes;Archaea;Thaumarchaeota;Nitrosotalea
 T00152	neq	Nanoarchaeum equitans	Prokaryotes;Archaea;Nanoarchaeota;Nanoarchaeum
 T04255	naa	Candidatus Nanopusillus acidilobi	Prokaryotes;Archaea;Nanoarchaeota;Nanopusillus
-T05015	marh	Candidatus Micrarchaeota archaeon Mia14	Prokaryotes;Archaea;Micrarchaeota;Unclassified Micrarchaeota
+T05015	marh	Candidatus Micrarchaeota archaeon Mia14	Prokaryotes;Archaea;Micrarchaeota;Candidatus Mancarchaeum
 T00668	kcr	Candidatus Korarchaeum cryptofilum	Prokaryotes;Archaea;Korarchaeota;Korarchaeum
 T04065	barc	Candidatus Bathyarchaeota archaeon BA1	Prokaryotes;Archaea;Bathyarchaeota;Unclassified Bathyarchaeota
 T04066	barb	Candidatus Bathyarchaeota archaeon BA2	Prokaryotes;Archaea;Bathyarchaeota;Unclassified Bathyarchaeota

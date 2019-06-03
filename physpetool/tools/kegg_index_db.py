@@ -28,7 +28,7 @@ from urllib import request
 
 from physpetool.tools.operateDB import operate_db
 
-ko_db = operate_db('/home/yangfang/PhySpeTree/physpetools/physpetool/database/KEGG_DB_2.0.db')
+ko_db = operate_db('/home/yangfang/PhySpeTree/physpetools/physpetool/database/KEGG_DB_3.0.db')
 
 
 def create_table_pro():

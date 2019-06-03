@@ -35,7 +35,7 @@ $ pip install physpetools-*.tar.gz
 # For other operating systems
 
 * for other operating systems such as Windows OS or Mac OS, we packaged all PhySpeTree run environment as a Docker image
-by [docker][https://www.docker.com/] technology.
+by [docker](https://www.docker.com/) technology.
 
 ## Dependence
 
