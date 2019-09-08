@@ -44,7 +44,7 @@ def check_ehcp(input, output):
         os.makedirs(output)
     fw_name = "PhySpeTree_echp_extend.txt"
     open_path = os.path.join(output, fw_name)
-    fw = open(open_path, 'wb')
+    fw = open(open_path, 'w')
 
     # check input names
     input_path = checkFile(input)
@@ -73,7 +73,7 @@ def check_hcp(input, output):
         os.makedirs(output)
     fw_name = "PhySpeTree_hcp_checked.txt"
     open_path = os.path.join(output, fw_name)
-    fw = open(open_path, 'wb')
+    fw = open(open_path, 'w')
 
     input_path = checkFile(input)
     input_list = readIputFile(input_path)
@@ -105,7 +105,7 @@ def check_srna(input, output):
         os.makedirs(output)
     fw_name = "PhySpeTree_srna_checked.txt"
     open_path = os.path.join(output, fw_name)
-    fw = open(open_path, 'wb')
+    fw = open(open_path, 'w')
 
     input_path = checkFile(input)
     input_list = readIputFile(input_path)
