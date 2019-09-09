@@ -24,6 +24,7 @@
 Build tree module: use build tree user should provide the organism highly conserved proteins
 or 16s SSU rRNA.
 """
+import time
 
 from physpetool.convert.concatenate import cocat_path
 from physpetool.convert.fasta2phy import fasta2phy
@@ -37,6 +38,7 @@ from physpetool.phylotree.doraxml import doraxml
 
 # default arguments
 from physpetool.phylotree.dotrimal import dotrimal
+from physpetool.phylotree.log import getLogging
 
 raxmlpara_pro = "-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1"
 raxmlpara_dna = "-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1"
@@ -47,6 +49,7 @@ clustalwpara = None
 trimalpara = "-gt 1"
 mafftpara = "--auto"
 
+build_log = getLogging('Used time')
 
 def build_hcp(in_put, out_put,
               args_muscle, args_muscle_p,
@@ -59,6 +62,7 @@ def build_hcp(in_put, out_put,
               args_iqtree,args_iqtree_p,
               args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
+    start = time.time()
     out_retrieve = in_put
     # set default aligned by muscle if not specify clustalw or mafft
     if args_clustalw:
@@ -84,6 +88,8 @@ def build_hcp(in_put, out_put,
         doiqtree(out_f2p, out_put, args_iqtree_p, args_thread)
     elif args_raxml:
         doraxml(out_f2p, out_put, args_raxml_p, args_thread)
+    end = time.time()
+    build_log.info('Contracting species tree used time: {} Seconds'.format(end - start))
 
 
 def build_srna(in_put, out_put,
@@ -97,6 +103,7 @@ def build_srna(in_put, out_put,
                args_iqtree,args_iqtree_p,
                args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
+    start = time.time()
     out_retrieve = in_put
     # set default aligned by muscle if not specify clustalw or mafft
     if args_clustalw:
@@ -124,3 +131,5 @@ def build_srna(in_put, out_put,
         if args_raxml_p == raxmlpara_pro:
             args_raxml_p = raxmlpara_dna
             doraxml(out_f2p, out_put, args_raxml_p, args_thread)
+    end = time.time()
+    build_log.info('Contracting species tree used time: {} Seconds'.format(end - start))

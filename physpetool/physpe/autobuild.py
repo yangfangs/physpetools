@@ -24,6 +24,8 @@
 The main module as enter point and invoke other
 script as pipeline.
 """
+import time
+
 from physpetool.phylotree.doclustalw import doclustalw_file, doclustalw
 from physpetool.phylotree.dofasttree import doFastTree
 from physpetool.phylotree.doiqtree import doiqtree
@@ -52,7 +54,7 @@ clustalwpara = None
 trimalpara = "-gt 1"
 mafftpara = "--auto"
 
-
+auto_build_log = getLogging('Used time')
 def start_args(input):
     """
 Argument parse
@@ -217,10 +219,15 @@ def starting_hcp(in_put, out_put,
                  args_thread):
     '''reconstruct phylogenetic tree by hcp method'''
     hcp_input, recovery_dic = checkKeggOrganism(in_put)
+    start = time.time()
     out_retrieve = doretrieve(hcp_input, out_put)
+    end = time.time()
+    auto_build_log.info('Retrieving HCP sequences used time: {} Seconds'.format(end - start))
+
     if not recovery_dic == {}:
         recovery(out_retrieve,recovery_dic)
     # set default aligned by muscle if not specify clustalw
+    start2 = time.time()
     if args_clustalw:
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
     elif args_mafft:
@@ -244,6 +251,8 @@ def starting_hcp(in_put, out_put,
         doiqtree(out_f2p, out_put, args_iqtree_p, args_thread)
     elif args_raxml:
         doraxml(out_f2p, out_put, args_raxml_p, args_thread)
+    end2 = time.time()
+    auto_build_log.info('Contracting species tree used time: {} Seconds'.format(end2 - start2))
 
 
 def starting_srna(in_put, out_put,
@@ -258,11 +267,16 @@ def starting_srna(in_put, out_put,
                   args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
     ssu_input,recovery_dic = checkSilvaOrganism(in_put)
+    start = time.time()
     out_retrieve = retrieve16srna(ssu_input, out_put)
+    end = time.time()
+    auto_build_log.info('Retrieving SSU rRNA sequences used time: {} Seconds'.format(end - start))
     if not recovery_dic == {}:
         recovery(out_retrieve,recovery_dic)
 
+
     # set default aligned by muscle if not specify clustalw or mafft
+    start2 = time.time()
     if args_clustalw:
         out_alg = doclustalw(out_retrieve, out_put, args_clustalw_p)
     elif args_mafft:
@@ -289,7 +303,8 @@ def starting_srna(in_put, out_put,
         if args_raxml_p is raxmlpara_pro:
             args_raxml_p = raxmlpara_dna
             doraxml(out_f2p, out_put, args_raxml_p, args_thread)
-
+    end2 = time.time()
+    auto_build_log.info('Contracting species tree used time: {} Seconds'.format(end2 - start2))
 
 def starting_ehcp(in_put, out_put,
                   args_muscle, args_muscle_p,
@@ -303,7 +318,11 @@ def starting_ehcp(in_put, out_put,
                   args_thread, args_extenddata):
     '''reconstruct phylogenetic tree by ehcp method'''
     hcp_input, recovery_dic = checkKeggOrganism(in_put)
+    start = time.time()
     out_retrieve = doretrieve(hcp_input, out_put)
+    end = time.time()
+    auto_build_log.info('Retrieving HCP sequences used time: {} Seconds'.format(end - start))
+
     if not recovery_dic == {}:
         recovery(out_retrieve,recovery_dic)
     retrieve_pro = os.listdir(out_retrieve)
@@ -317,6 +336,8 @@ def starting_ehcp(in_put, out_put,
         fw.close()
 
     # set default aligned by muscle if not specify clustalw or mafft
+    start2 = time.time()
+
     if args_clustalw:
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
     elif args_mafft:
@@ -339,7 +360,8 @@ def starting_ehcp(in_put, out_put,
         doiqtree(out_f2p, out_put, args_iqtree_p, args_thread)
     elif args_raxml:
         doraxml(out_f2p, out_put, args_raxml_p, args_thread)
-
+    end2 = time.time()
+    auto_build_log.info('Contracting species tree used time: {} Seconds'.format(end2 - start2))
 
 def starting_esrna(in_put, out_put,
                    args_muscle, args_muscle_p,
@@ -354,7 +376,10 @@ def starting_esrna(in_put, out_put,
     '''reconstruct phylogenetic tree by ssu rna extend method'''
     extend_check = checkFile(args_extenddata)
     ssu_input,recovery_dic = checkSilvaOrganism(in_put)
+    start = time.time()
     out_retrieve = retrieve16srna(ssu_input, out_put)
+    end = time.time()
+    auto_build_log.info('Retrieving SSU rRNA sequences used time: {} Seconds'.format(end - start))
     if not recovery_dic == {}:
         recovery(out_retrieve,recovery_dic)
     retrieve_srna_path = os.path.join(out_retrieve, 'rna_sequence.fasta')
@@ -366,6 +391,7 @@ def starting_esrna(in_put, out_put,
     fw.close()
 
     # set default aligned by muscle if not specify clustalw
+    start2 = time.time()
     if args_clustalw:
         out_alg = doclustalw(out_retrieve, out_put, args_clustalw_p)
     elif args_mafft:
@@ -391,3 +417,5 @@ def starting_esrna(in_put, out_put,
         if args_raxml_p is raxmlpara_pro:
             args_raxml_p = raxmlpara_dna
             doraxml(out_f2p, out_put, args_raxml_p, args_thread)
+    end2 = time.time()
+    auto_build_log.info('Contracting species tree used time: {} Seconds'.format(end2 - start2))
