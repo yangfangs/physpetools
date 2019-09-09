@@ -304,7 +304,7 @@ def starting_srna(in_put, out_put,
             args_raxml_p = raxmlpara_dna
             doraxml(out_f2p, out_put, args_raxml_p, args_thread)
     end2 = time.time()
-    auto_build_log.info('Contracting species tree used time: {} Seconds'.format(end2 - start2))
+    auto_build_log.info('Constructing species tree used time: {} Seconds'.format(end2 - start2))
 
 def starting_ehcp(in_put, out_put,
                   args_muscle, args_muscle_p,
@@ -361,7 +361,7 @@ def starting_ehcp(in_put, out_put,
     elif args_raxml:
         doraxml(out_f2p, out_put, args_raxml_p, args_thread)
     end2 = time.time()
-    auto_build_log.info('Contracting species tree used time: {} Seconds'.format(end2 - start2))
+    auto_build_log.info('Constructing species tree used time: {} Seconds'.format(end2 - start2))
 
 def starting_esrna(in_put, out_put,
                    args_muscle, args_muscle_p,
@@ -418,4 +418,4 @@ def starting_esrna(in_put, out_put,
             args_raxml_p = raxmlpara_dna
             doraxml(out_f2p, out_put, args_raxml_p, args_thread)
     end2 = time.time()
-    auto_build_log.info('Contracting species tree used time: {} Seconds'.format(end2 - start2))
+    auto_build_log.info('Constructing species tree used time: {} Seconds'.format(end2 - start2))

@@ -89,7 +89,7 @@ def build_hcp(in_put, out_put,
     elif args_raxml:
         doraxml(out_f2p, out_put, args_raxml_p, args_thread)
     end = time.time()
-    build_log.info('Contracting species tree used time: {} Seconds'.format(end - start))
+    build_log.info('Constructing species tree used time: {} Seconds'.format(end - start))
 
 
 def build_srna(in_put, out_put,
@@ -132,4 +132,4 @@ def build_srna(in_put, out_put,
             args_raxml_p = raxmlpara_dna
             doraxml(out_f2p, out_put, args_raxml_p, args_thread)
     end = time.time()
-    build_log.info('Contracting species tree used time: {} Seconds'.format(end - start))
+    build_log.info('Constructing species tree used time: {} Seconds'.format(end - start))
