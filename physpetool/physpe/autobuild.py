@@ -329,7 +329,7 @@ def starting_ehcp(in_put, out_put,
     for reline in retrieve_pro:
         fw_name = os.path.join(out_retrieve, reline)
         fr_name = os.path.join(args_extenddata, reline)
-        fw = open(fw_name, 'ab')
+        fw = open(fw_name, 'a')
         with open(fr_name) as fr:
             for line in fr:
                 fw.write(line)
@@ -384,7 +384,7 @@ def starting_esrna(in_put, out_put,
         recovery(out_retrieve,recovery_dic)
     retrieve_srna_path = os.path.join(out_retrieve, 'rna_sequence.fasta')
 
-    fw = open(retrieve_srna_path, 'ab')
+    fw = open(retrieve_srna_path, 'a')
     with open(extend_check) as read:
         for line in read:
             fw.write(line)
