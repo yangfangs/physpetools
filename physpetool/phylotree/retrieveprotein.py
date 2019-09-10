@@ -58,7 +58,10 @@ def getspecies(name, colname):
         c.execute(query)
         ids = list(c.fetchall())
         idslist = [str(x[0]) for x in ids]
-        if 'None' not in idslist:
+
+        num_none = len([x for x in idslist if x == 'None'])
+
+        if num_none != len(idslist) :
             relist.append(idslist)
             match_ko_name.append(ko)
         else:
@@ -85,7 +88,7 @@ def splist(l, s):
     return [l[i:i + s] for i in range(len(l)) if i % s == 0]
 
 
-def retrieveprotein(proindexlist, outpath, matchlist):
+def retrieveprotein(proindexlist, outpath, matchlist,spelist):
     """
     Retrieve proteins form Kegg DB
     :param proindexlist: a list contain protein index
@@ -100,12 +103,28 @@ def retrieveprotein(proindexlist, outpath, matchlist):
     if not os.path.exists(dirname):
         os.makedirs(dirname)
     p = 1
+
+    # deal with none
+
+
     for index in proindexlist:
+        have_none = False
+        none_num = len([x for x in index if x == 'None'])
+        app_spe = []
+        if none_num != len(index):
+            q_index = [var for var in index if var != 'None']
+            have_spe = [x.split(":")[0] for x in q_index]
+            app_spe = [x for x in spelist if x not in have_spe]
+            have_none = True
+        else:
+            q_index = index
+
+
         hcp_pro_name = hcp_name(matchlist[p - 1])
 
         wfiles = "{0}/p{1}.fasta".format(dirname, p)
         f = open(wfiles, "a")
-        spprolist = splist(index, 10)
+        spprolist = splist(q_index, 10)
         for id in spprolist:
             query = "+".join(id)
             protein = getprotein(query)
@@ -117,6 +136,10 @@ def retrieveprotein(proindexlist, outpath, matchlist):
                     f.write(abbname)
                 else:
                     f.write(i)
+            if have_none:
+                for line in app_spe:
+                    f.write(">" + line +"\n")
+                    f.write("M")
         f.close()
         logretrieveprotein.info(
             "Retrieve and download of highly conserved protein '{0}' was successful store in p{1}.fasta file".format(hcp_pro_name, str(p)))
@@ -132,10 +155,10 @@ def doretrieve(specieslistfile, outpath):
     #     st = line.strip()
     #     spelist.append(st)
     spelist = specieslistfile
-    logretrieveprotein.info("Read organisms names success")
+    logretrieveprotein.info("Reading organisms's names success!")
     colname = getcolname()
     relist, matchlist = getspecies(spelist, colname)
-    dirpath = retrieveprotein(relist, outpath, matchlist)
+    dirpath = retrieveprotein(relist, outpath, matchlist,spelist)
     return dirpath
 
 
@@ -153,3 +176,4 @@ def hcp_name(index):
 if __name__ == '__main__':
     print (getcolname())
     print (getspecies(['zma'], ['K02925']))
+    specieslistfile =['zma',"ath"]

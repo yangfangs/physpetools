@@ -100,6 +100,6 @@ def cocat_path(muscle_alg):
             concat.append(dict.get(j)[index_abb])
         fw.write(i + '\n')
         fw.write(''.join(concat) + '\n')
-
+    fw.close()
     logconcat.info("Concatenate highly conserved proteins was completed")
     return result_path
