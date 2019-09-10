@@ -76,7 +76,7 @@ def rgb2hex(rgb):
         if i == 0:
             h = str(0) + str(0)
         else:
-            h_left = i / 16
+            h_left = i // 16
             h_right = i % 16
             h = convert(h_left) + convert(h_right)
 
