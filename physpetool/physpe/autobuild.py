@@ -231,7 +231,7 @@ def starting_hcp(in_put, out_put,
     if args_clustalw:
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
     elif args_mafft:
-        out_alg = domafft_file(out_retrieve, out_put, args_mafft_p)
+        out_alg = domafft_file(out_retrieve, out_put, args_mafft_p,args_thread)
     elif args_muscle:
         out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p,args_thread)
 
@@ -341,7 +341,7 @@ def starting_ehcp(in_put, out_put,
     if args_clustalw:
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
     elif args_mafft:
-        out_alg = domafft_file(out_retrieve, out_put, args_mafft_p)
+        out_alg = domafft_file(out_retrieve, out_put, args_mafft_p,args_thread)
     elif args_muscle:
         out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p, args_thread)
 

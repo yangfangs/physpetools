@@ -23,7 +23,7 @@
 """
 Module to call mafft to do alignment
 """
-
+import multiprocessing
 import subprocess
 import os
 import os.path
@@ -73,8 +73,10 @@ def domafft(indata, outdata, mafftparas):
         logmafft.info("Multiple sequence alignment by mafft was completed.")
         return out_alg
 
+def run_cmd(cmd):
+    subprocess.call(cmd, shell=True)
 
-def domafft_file(indata_files, outdata, mafftparas):
+def domafft_file(indata_files, outdata, mafftparas,thread):
     """
 call mafft software to do align
     :param indata_files: a directory contain more than one file
@@ -92,10 +94,16 @@ call mafft software to do align
     pro_name = os.listdir(indata_files)
     if not os.path.exists(mafft_dir):
         os.makedirs(mafft_dir)
+    all_cmd = []
     for i in pro_name:
         out_alg = os.path.join(mafft_dir, i.split('.')[0])
         each_pro = os.path.join(indata_files, i)
         cmd = mapath + "/mafft " + mafftparas + " " + each_pro + " > " + out_alg
-        subprocess.call(cmd, shell=True)
+        # subprocess.call(cmd, shell=True)
+        all_cmd.append(cmd)
+
+    pool = multiprocessing.Pool(processes=thread)
+    # method 1: map
+    pool.map(run_cmd, all_cmd)
     logmafft.info("Multiple sequence alignment by mafft was completed.")
     return mafft_dir
