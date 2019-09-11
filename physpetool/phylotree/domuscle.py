@@ -100,7 +100,7 @@ call muscle software to do align
         each_pro = os.path.join(indata_files, i)
         cmd = mupath + "/muscle -in " + each_pro + " -out " + out_alg + " " + muscleparas
         all_cmd.append(cmd)
-        subprocess.call(cmd, shell=True)
+        # subprocess.call(cmd, shell=True)
 
     pool = multiprocessing.Pool(processes=thread)
     # method 1: map
