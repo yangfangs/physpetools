@@ -23,7 +23,7 @@
 """
 Module to call muscle to do alignment
 """
-
+import multiprocessing
 import subprocess
 import os
 import os.path
@@ -73,8 +73,10 @@ def domuscle(indata, outdata, musclepara):
         logdomuscle.info("Multiple sequence alignment by Muscle was completed.")
         return out_alg
 
+def run_cmd(cmd):
+    subprocess.call(cmd, shell=True)
 
-def domuscle_file(indata_files, outdata, musclepara):
+def domuscle_file(indata_files, outdata, musclepara,thread):
     """
 call muscle software to do align
     :param indata_files: a directory contain more than one file
@@ -92,10 +94,17 @@ call muscle software to do align
     pro_name = os.listdir(indata_files)
     if not os.path.exists(muscle_dir):
         os.makedirs(muscle_dir)
+    all_cmd = []
     for i in pro_name:
         out_alg = os.path.join(muscle_dir, i.split('.')[0])
         each_pro = os.path.join(indata_files, i)
         cmd = mupath + "/muscle -in " + each_pro + " -out " + out_alg + " " + muscleparas
+        all_cmd.append(cmd)
         subprocess.call(cmd, shell=True)
+
+    pool = multiprocessing.Pool(processes=thread)
+    # method 1: map
+    pool.map(run_cmd, all_cmd)
+
     logdomuscle.info("Multiple sequence alignment by Muscle was completed.")
     return muscle_dir
