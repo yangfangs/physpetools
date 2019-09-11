@@ -126,6 +126,10 @@ def retrieveprotein(proindexlist, outpath, matchlist,spelist):
         f = open(wfiles, "a")
         spprolist = splist(q_index, 10)
         for id in spprolist:
+
+            get_abb = []
+            id_abb = [x.split(":")[0] for x in id]
+
             query = "+".join(id)
             protein = getprotein(query)
             protein = protein.readlines()
@@ -133,13 +137,21 @@ def retrieveprotein(proindexlist, outpath, matchlist,spelist):
             for i in protein:
                 if i.startswith(">"):
                     abbname = i.split(":")[0] + "\n"
+                    get_abb.append(i.split(":")[0][1:])
                     f.write(abbname)
                 else:
                     f.write(i)
+            # if the abb protein code changed by KEGG DB
+            if len(get_abb) != len(id_abb):
+                loss_abb = [x for x in id_abb if x not in get_abb]
+                for loss in loss_abb:
+                    f.write(">" + loss +"\n")
+                    f.write("M"+"\n")
+            # Deal with None code in KEGG DB
             if have_none:
                 for line in app_spe:
                     f.write(">" + line +"\n")
-                    f.write("M")
+                    f.write("M"+"\n")
         f.close()
         logretrieveprotein.info(
             "Retrieve and download of highly conserved protein '{0}' was successful store in p{1}.fasta file".format(hcp_pro_name, str(p)))
@@ -175,5 +187,9 @@ def hcp_name(index):
 
 if __name__ == '__main__':
     print (getcolname())
-    print (getspecies(['zma'], ['K02925']))
+    print (getspecies(['ath'], ['K01409']))
+    for line in getcolname():
+        if getspecies(['mdm'], [line])[0] != []:
+            proid = getspecies(['mdm'], [line])[0][0][0]
+            print("http://rest.kegg.jp/get/" + proid + "/aaseq")
     specieslistfile =['zma',"ath"]
