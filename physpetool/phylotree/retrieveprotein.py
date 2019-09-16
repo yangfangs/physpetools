@@ -26,7 +26,7 @@ The module retrieve highly conserved proteins and download from KEGG database
 
 
 """
-
+import ftplib
 import os
 import sqlite3
 import time
@@ -102,6 +102,11 @@ def retrieveprotein(proindexlist, outpath, matchlist,spelist):
     dirname = os.path.join(dirname, subdir)
     if not os.path.exists(dirname):
         os.makedirs(dirname)
+
+
+    connect = ftplib.FTP("173.255.208.244")
+    connect.login('anonymous')
+    connect.cwd('/pub/databasehcp')
     p = 1
 
     # deal with none
@@ -123,36 +128,22 @@ def retrieveprotein(proindexlist, outpath, matchlist,spelist):
         hcp_pro_name = hcp_name(matchlist[p - 1])
 
         wfiles = "{0}/p{1}.fasta".format(dirname, p)
-        f = open(wfiles, "a")
-        spprolist = splist(q_index, 10)
-        for id in spprolist:
+        fw = open(wfiles, 'ab')
 
-            get_abb = []
-            id_abb = [x.split(":")[0] for x in id]
+        for id in q_index:
+            not_get_abb = []
+            retrievename = id + '.fasta'
+            remoteFileName = 'RETR ' + os.path.basename(retrievename)
+            connect.retrbinary(remoteFileName, fw.write)
+            fw.write(b'\n')
 
-            query = "+".join(id)
-            protein = getprotein(query)
-            protein = protein.readlines()
-            protein = [x.decode('utf-8') for x in protein]
-            for i in protein:
-                if i.startswith(">"):
-                    abbname = i.split(":")[0] + "\n"
-                    get_abb.append(i.split(":")[0][1:])
-                    f.write(abbname)
-                else:
-                    f.write(i)
-            # if the abb protein code changed by KEGG DB
-            if len(get_abb) != len(id_abb):
-                loss_abb = [x for x in id_abb if x not in get_abb]
-                for loss in loss_abb:
-                    f.write(">" + loss +"\n")
-                    f.write("M"+"\n")
-            # Deal with None code in KEGG DB
             if have_none:
                 for line in app_spe:
-                    f.write(">" + line +"\n")
-                    f.write("M"+"\n")
-        f.close()
+                    name_none = ">" + line +"\n"
+                    fw.write(name_none.encode())
+                    fw.write(b"M"+b"\n")
+        fw.close()
+
         logretrieveprotein.info(
             "Retrieve and download of highly conserved protein '{0}' was successful store in p{1}.fasta file".format(hcp_pro_name, str(p)))
         p += 1
@@ -169,8 +160,8 @@ def doretrieve(specieslistfile, outpath):
     spelist = specieslistfile
     logretrieveprotein.info("Reading organisms's names success!")
     colname = getcolname()
-    relist, matchlist = getspecies(spelist, colname)
-    dirpath = retrieveprotein(relist, outpath, matchlist,spelist)
+    proindexlist, matchlist = getspecies(spelist, colname)
+    dirpath = retrieveprotein(proindexlist, outpath, matchlist,spelist)
     return dirpath
 
 
@@ -188,8 +179,10 @@ def hcp_name(index):
 if __name__ == '__main__':
     print (getcolname())
     print (getspecies(['ath'], ['K01409']))
-    for line in getcolname():
-        if getspecies(['mdm'], [line])[0] != []:
-            proid = getspecies(['mdm'], [line])[0][0][0]
-            print("http://rest.kegg.jp/get/" + proid + "/aaseq")
+    # for line in getcolname():
+    #     if getspecies(['mdm'], [line])[0] != []:
+    #         proid = getspecies(['mdm'], [line])[0][0][0]
+    #         print("http://rest.kegg.jp/get/" + proid + "/aaseq")
     specieslistfile =['zma',"ath"]
+    outpath = "/home/yangfang/test/alg2/"
+    doretrieve(specieslistfile, outpath)
