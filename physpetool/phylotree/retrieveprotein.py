@@ -39,7 +39,7 @@ logretrieveprotein = getLogging('KEGG INDEX DB')
 KEGGDB = "KEGG_DB_3.0.db"
 
 
-def getspecies(name, colname):
+def getspecies(spelist, colname):
     """
     Get species protein index for DB
     :param name: a list contain abbreviation species nam
@@ -53,21 +53,30 @@ def getspecies(name, colname):
     conn = sqlite3.connect(db)
     conn.text_factory = str
     c = conn.cursor()
-    connect = "' OR NAME = '".join(name)
+    if len(spelist) >= 1000:
+        sp = splist(spelist,500)
+    else:
+        sp = [spelist]
+
     for ko in colname:
+        tem_reslist = []
+        tem_none = 0
+        for line in sp:
+            connect = "' OR NAME = '".join(line)
+            query = "SELECT " + ko + " FROM proindex WHERE NAME = '" + connect + "'"
+            c.execute(query)
+            ids = list(c.fetchall())
+            idslist = [str(x[0]) for x in ids]
 
-        query = "SELECT " + ko + " FROM proindex WHERE NAME = '" + connect + "'"
-        c.execute(query)
-        ids = list(c.fetchall())
-        idslist = [str(x[0]) for x in ids]
+            num_none = len([x for x in idslist if x == 'None'])
+            tem_none += num_none
 
-        num_none = len([x for x in idslist if x == 'None'])
+            tem_reslist.extend(idslist)
 
-        if num_none != len(idslist):
-            relist.append(idslist)
+        if tem_none != len(tem_reslist):
+            relist.append(tem_reslist)
             match_ko_name.append(ko)
-        else:
-            pass
+
     c.close()
     return relist, match_ko_name
 
@@ -122,7 +131,7 @@ def retrieveprotein(proindexlist, outpath, matchlist, spelist):
         connect.retrbinary(remoteFileName, fw_.write)
         fw_.write(b'\n')
         fw_.close()
-        logretrieveprotein.info("Retrieve " + line + " highly conserved proteins completely")
+        logretrieveprotein.info("Retrieve " + line + " highly conserved proteins completed")
         # read get sequences
         with open(w_file, 'r') as f:
             for line in f:
@@ -202,7 +211,7 @@ def hcp_name(index):
 
 if __name__ == '__main__':
     print(getcolname())
-    print(getspecies(['ath'], ['K01409']))
+    print(getspecies(['swe'], ['K01409']))
     # for line in getcolname():
     #     if getspecies(['mdm'], [line])[0] != []:
     #         proid = getspecies(['mdm'], [line])[0][0][0]
