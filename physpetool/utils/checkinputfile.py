@@ -64,6 +64,36 @@ def check_organism(input, db_list):
         mislist = originaList
     return inputlist, mislist
 
+
+def check_organism_silva(input, db_list, recovery_list):
+    """
+    check input organism
+    :param input: a list contain species name
+    :param db_list: a list file contain organism in corresponding database
+    :return: inputlist: match in database mislist: can't match in database
+    """
+    originaList = input
+    re_re_list = []
+    inputlist = []
+    mislist = []
+    spelist = os.path.join(dbpath, db_list)
+    spe_name_db = set()
+    for spename in open(spelist):
+        spe_name_list = spename.strip().split('\t')
+        spe_name = spe_name_list[0]
+        spe_name_db.add(spe_name)
+
+    for line in range(len(originaList)):
+        abb = originaList[line].strip()
+        if abb in spe_name_db:
+            inputlist.append(abb)
+            re_re_list.append(recovery_list[line])
+
+    # Get can't match list
+    for che in inputlist:
+        originaList.remove(che)
+        mislist = originaList
+    return inputlist, mislist, re_re_list
 def trans_abb_2_tax_for_surna(input):
     """
 transform kegg abb name to ncbi taxonomy id for SURNA method
@@ -73,7 +103,7 @@ transform kegg abb name to ncbi taxonomy id for SURNA method
     originaList = []
     inputlist = []
     dic_trans_list = {}
-    recovery_dic = {}
+    recovery_list = []
     for line in input:
         st = line.strip()
         originaList.append(st)
@@ -87,11 +117,14 @@ transform kegg abb name to ncbi taxonomy id for SURNA method
                 tem = line.strip().split('\t')
                 dic_trans_list[tem[0]] = tem[1]
         for abb in originaList:
-            inputlist.append(dic_trans_list[abb])
-            recovery_dic[dic_trans_list[abb]] = abb
+            if abb in dic_trans_list.keys():
+                inputlist.append(dic_trans_list[abb])
+                recovery_list.append(abb)
+            else:
+                logchecking.info(abb+"not in SSU rRNA DB and remove it reconstructed species tree.")
     else:
         inputlist = originaList
-    return inputlist, recovery_dic
+    return inputlist, recovery_list
 
 
 def trans_tax_to_abb_for_hcp(input):
@@ -146,14 +179,14 @@ Check input organisms list with SILVA database
     :return: a list contain organisms can be use construct phy tree
     """
     input_trans,recovery_dic = trans_abb_2_tax_for_surna(input)
-    inputlist, mislist = check_organism(input_trans, "support_srna_organism.txt")
+    inputlist, mislist,recovery_dic2 = check_organism_silva(input_trans, "support_srna_organism.txt",recovery_dic)
     if mislist:
         for misabb in mislist:
             logchecking.info("The organism: {0} can't match in SSU rRNA database".format(misabb))
         logchecking.warning(
             "These species can't match in SSU rRNA database so removing and reconstructing phylogenetic tree.")
 
-    return inputlist, recovery_dic
+    return inputlist, recovery_dic2
 
 
 def removeEmptyStr(all):
@@ -207,6 +240,21 @@ def recovery(file_path,re_dic):
                 if line.startswith('>'):
                     name = line.strip()[1:]
                     line = line.replace(name, re_dic[name])
+                file_data += line
+        with open(abs_file,"w") as f2:
+            f2.write(file_data)
+def recovery_silva(file_path,re_dic,ssu_input):
+    all_pre_file = list(filter(lambda f: not f.startswith('.'), os.listdir(file_path)))
+    for i in all_pre_file:
+        file_data = ''
+        abs_file = os.path.join(file_path,i)
+        idx =0
+        with open(abs_file,"r") as f:
+            for line in f:
+                if line.startswith('>'):
+                    name = line.strip()[1:]
+                    line = line.replace(name, re_dic[idx])
+                    idx +=1
                 file_data += line
         with open(abs_file,"w") as f2:
             f2.write(file_data)

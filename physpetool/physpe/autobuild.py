@@ -39,7 +39,7 @@ from physpetool.phylotree.dotrimal import dotrimal
 from physpetool.phylotree.log import getLogging, setlogdir
 from physpetool.phylotree.retrievessurna import retrieve16srna
 from physpetool.phylotree.retrieveprotein import doretrieve
-from physpetool.utils.checkinputfile import checkKeggOrganism, checkSilvaOrganism, checkFile, recovery
+from physpetool.utils.checkinputfile import checkKeggOrganism, checkSilvaOrganism, checkFile, recovery, recovery_silva
 import argparse
 import os
 
@@ -271,8 +271,8 @@ def starting_srna(in_put, out_put,
     out_retrieve = retrieve16srna(ssu_input, out_put)
     end = time.time()
     auto_build_log.info('Retrieving SSU rRNA sequences used time: {} Seconds'.format(end - start))
-    if not recovery_dic == {}:
-        recovery(out_retrieve,recovery_dic)
+    if not recovery_dic == []:
+        recovery_silva(out_retrieve,recovery_dic,ssu_input)
 
 
     # set default aligned by muscle if not specify clustalw or mafft
