@@ -34,8 +34,8 @@ APP_DESC = ""
 raxmlpara_pro = "-f a -m PROTGAMMAJTTX  -p 12345 -x 12345 -# 100 -n T1"
 raxmlpara_dna = "-f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1"
 musclepara = "-maxiters 100"
-gblockspara_pro = "-t=p -e=-gb1"
-gblockspara_dna = "-t=d -e=-gb1"
+gblockspara_pro = '-t=p -b5=h -e=-gb1'
+gblockspara_dna = '-t=d -b5=h -e=-gb1'
 clustalwpara = None
 trimalpara = "-gt 1"
 mafftpara = "--auto"
