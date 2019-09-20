@@ -44,3 +44,11 @@ Combine tree
         os.mkdir(output)
     consensuseCmd = raxmlpath + "/raxmlHPC-PTHREADS-AVX " + " -J " + rule + " -m GTRCAT -z " + input + " -w " + output + " -n T1"
     subprocess.call(consensuseCmd, shell=True)
+
+def do_astral(input,output):
+    astralpath = getlocalpath()
+    if not os.path.exists(output):
+        os.mkdir(output)
+    out_name = "combine.tree"
+    consensuseCmd =  "java -jar " + astralpath + "/astral.5.6.3.jar" + " -i " + input+" -o " + output + out_name
+    subprocess.call(consensuseCmd, shell=True)

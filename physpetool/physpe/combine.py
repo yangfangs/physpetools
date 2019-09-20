@@ -26,7 +26,7 @@ The arguments parse module for combine module.
 """
 
 import os
-from physpetool.phylotree.consensustree import docontree
+from physpetool.phylotree.consensustree import docontree, do_astral
 
 APP_DESC = ""
 
@@ -48,6 +48,8 @@ Arguments parse
                               default=False, help='Compute extended majority rule consensus tree.')
     combine_args.add_argument('--strict', action='store_true', dest="strict",
                               default=False, help='Compute strict consensus tree.')
+    combine_args.add_argument('--astral', action='store_true', dest="astral",
+                              default=False, help='Use astral combine multi gene tree.')
 
 def starting(args):
     """
@@ -67,4 +69,7 @@ Staring run combine
         rule = "MR"
 
     # merge tree
-    docontree(args.inputfile, out_put, rule)
+    if args.astral:
+        do_astral(args.inputfile, out_put)
+    else:
+        docontree(args.inputfile, out_put, rule)
