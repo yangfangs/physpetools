@@ -26,6 +26,7 @@ The module retrieve highly conserved proteins and download from KEGG database
 
 
 """
+import shutil
 import glob
 import ftplib
 import os
@@ -100,7 +101,7 @@ def splist(l, s):
 
 
 
-def retrieveprotein(proindexlist, outpath, matchlist, spelist):
+def retrieveprotein(proindexlist, outpath, matchlist, spelist, local_db):
     """
     Retrieve proteins form Kegg DB
     :param proindexlist: a list contain protein index
@@ -115,33 +116,53 @@ def retrieveprotein(proindexlist, outpath, matchlist, spelist):
     if not os.path.exists(dirname):
         os.makedirs(dirname)
 
-    connect = ftplib.FTP("173.255.208.244")
-    connect.login('anonymous')
-    connect.cwd('/pub/databasehcp')
-    p = 1
-    # deal with none
-    # connect.mkd("tem/")
     fasta = {}
+    p = 1
 
-    for line in spelist:
-        w_file = dirname + "/" + line + ".fa"
-        fw_ = open(w_file, 'ab')
-        retrievename = line + '.fasta'
-        remoteFileName = 'RETR ' + os.path.basename(retrievename)
-        connect.retrbinary(remoteFileName, fw_.write)
-        fw_.write(b'\n')
-        fw_.close()
-        logretrieveprotein.info("Retrieve " + line + " highly conserved proteins completed")
-        # read get sequences
-        with open(w_file, 'r') as f:
-            for line in f:
-                if line != "\n":
-                    tem = line.strip()
-                    if tem[0] == '>':
-                        header = tem[1:]
-                    else:
-                        sequence = tem
-                        fasta[header] = fasta.get(header, '') + sequence
+    # get hcp proteins form ftp server
+    if local_db == "":
+        connect = ftplib.FTP("173.255.208.244")
+        connect.login('anonymous')
+        connect.cwd('/pub/databasehcp')
+
+        for line in spelist:
+            w_file = dirname + "/" + line + ".fa"
+            fw_ = open(w_file, 'ab')
+            retrievename = line + '.fasta'
+            remoteFileName = 'RETR ' + os.path.basename(retrievename)
+            connect.retrbinary(remoteFileName, fw_.write)
+            fw_.write(b'\n')
+            fw_.close()
+            logretrieveprotein.info("Retrieve " + line + " highly conserved proteins completed")
+            # read get sequences
+            with open(w_file, 'r') as f:
+                for line in f:
+                    if line != "\n":
+                        tem = line.strip()
+                        if tem[0] == '>':
+                            header = tem[1:]
+                        else:
+                            sequence = tem
+                            fasta[header] = fasta.get(header, '') + sequence
+    # get protein sequence from local
+    else:
+        for line in spelist:
+            file_name = line +".fasta"
+            file_name_new = line + ".fa"
+            abb_data_path = os.path.join(local_db,file_name)
+            abb_data_path_new = os.path.join(dirname,file_name_new)
+            shutil.copyfile(abb_data_path,abb_data_path_new)
+            logretrieveprotein.info("Retrieve " + line + " highly conserved proteins completed")
+            # read get sequences
+            with open(abb_data_path_new, 'r') as f:
+                for line in f:
+                    if line != "\n":
+                        tem = line.strip()
+                        if tem[0] == '>':
+                            header = tem[1:]
+                        else:
+                            sequence = tem
+                            fasta[header] = fasta.get(header, '') + sequence
 
     for index in proindexlist:
         have_none = False
@@ -184,7 +205,7 @@ def retrieveprotein(proindexlist, outpath, matchlist, spelist):
     return dirname
 
 
-def doretrieve(specieslistfile, outpath):
+def doretrieve(specieslistfile, outpath,local_db):
     '''main to  retrieve protein from kegg db'''
     # spelist = []
     # for line in specieslistfile:
@@ -194,7 +215,7 @@ def doretrieve(specieslistfile, outpath):
     logretrieveprotein.info("Reading organisms's names success!")
     colname = getcolname()
     proindexlist, matchlist = getspecies(spelist, colname)
-    dirpath = retrieveprotein(proindexlist, outpath, matchlist, spelist)
+    dirpath = retrieveprotein(proindexlist, outpath, matchlist, spelist,local_db)
     return dirpath
 
 
@@ -218,4 +239,4 @@ if __name__ == '__main__':
     #         print("http://rest.kegg.jp/get/" + proid + "/aaseq")
     specieslistfile = ['zma', "ath", "eco"]
     outpath = "/home/yangfang/test/alg2/"
-    doretrieve(specieslistfile, outpath)
+    doretrieve(specieslistfile, outpath,local_db="")

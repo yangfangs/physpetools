@@ -55,6 +55,8 @@ trimalpara = "-gt 1"
 mafftpara = "--auto"
 
 auto_build_log = getLogging('Used time')
+
+
 def start_args(input):
     """
 Argument parse
@@ -92,6 +94,9 @@ Argument parse
                                 default=False,
                                 help="The esrna mode is use SSU RNA sequence with extend SSU RNA sequence \
                                 (users provide) to reconstruct phylogenetic tree. ")
+    autobuild_args.add_argument('-db', action='store', dest="db",
+                                default="",
+                                help="The absolute path for local database.")
     advance_args.add_argument('--muscle', action='store_true', dest='muscle',
                               default=True,
                               help="Multiple sequence alignment by muscle. The default multiple sequence \
@@ -134,9 +139,9 @@ def starting(args):
 starting run reconstruct tree
     :param args: arguments
     """
-    print ("Loading organism's names success.....\n")
-    print ("The result are store in:{0}\n".format(args.outdata))
-    print ("Now loading data and constructing phylogenetic tree......")
+    print("Loading organism's names success.....\n")
+    print("The result are store in:{0}\n".format(args.outdata))
+    print("Now loading data and constructing phylogenetic tree......")
 
     in_put = args.spenames
 
@@ -150,7 +155,6 @@ starting run reconstruct tree
             args_extend = os.path.join(pwd, args.extenddata)
     else:
         pass
-
 
     # Reconstruct phylogenetic tree by ssu RNA.
     if args.ssurna:
@@ -178,7 +182,8 @@ starting run reconstruct tree
                       args.raxml, args.raxml_parameter,
                       args.fasttree, args.fasttree_parameter,
                       args.iqtree, args.iqtree_parameter,
-                      args.thread, args.extenddata)
+                      args.thread, args.extenddata,
+                      args.db)
 
     # Reconstruct phylogenetic tree by extend ssu rna method.
     elif args.essurna:
@@ -197,15 +202,16 @@ starting run reconstruct tree
     elif args.HCP:
         setlogdir(out_put)
         starting_hcp(in_put, out_put,
-                 args.muscle, args.muscle_parameter,
-                 args.clustalw, args.clustalw_parameter,
-                 args.mafft, args.mafft_parameter,
-                 args.gblocks, args.gblocks_parameter,
-                 args.trimal, args.trimal_parameter,
-                 args.raxml, args.raxml_parameter,
-                 args.fasttree, args.fasttree_parameter,
-                 args.iqtree, args.iqtree_parameter,
-                 args.thread)
+                     args.muscle, args.muscle_parameter,
+                     args.clustalw, args.clustalw_parameter,
+                     args.mafft, args.mafft_parameter,
+                     args.gblocks, args.gblocks_parameter,
+                     args.trimal, args.trimal_parameter,
+                     args.raxml, args.raxml_parameter,
+                     args.fasttree, args.fasttree_parameter,
+                     args.iqtree, args.iqtree_parameter,
+                     args.thread, args.db)
+
 
 def starting_hcp(in_put, out_put,
                  args_muscle, args_muscle_p,
@@ -215,25 +221,25 @@ def starting_hcp(in_put, out_put,
                  args_trimal, args_trimal_p,
                  args_raxml, args_raxml_p,
                  args_fasttree, args_fasttree_p,
-                 args_iqtree,args_iqtree_p,
-                 args_thread):
+                 args_iqtree, args_iqtree_p,
+                 args_thread, args_db):
     '''reconstruct phylogenetic tree by hcp method'''
     hcp_input, recovery_dic = checkKeggOrganism(in_put)
     start = time.time()
-    out_retrieve = doretrieve(hcp_input, out_put)
+    out_retrieve = doretrieve(hcp_input, out_put,args_db)
     end = time.time()
     auto_build_log.info('Retrieving HCP sequences used time: {} Seconds'.format(end - start))
 
     if not recovery_dic == {}:
-        recovery(out_retrieve,recovery_dic)
+        recovery(out_retrieve, recovery_dic)
     # set default aligned by muscle if not specify clustalw
     start2 = time.time()
     if args_clustalw:
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
     elif args_mafft:
-        out_alg = domafft_file(out_retrieve, out_put, args_mafft_p,args_thread)
+        out_alg = domafft_file(out_retrieve, out_put, args_mafft_p, args_thread)
     elif args_muscle:
-        out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p,args_thread)
+        out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p, args_thread)
 
     out_concat = cocat_path(out_alg)
 
@@ -263,17 +269,16 @@ def starting_srna(in_put, out_put,
                   args_trimal, args_trimal_p,
                   args_raxml, args_raxml_p,
                   args_fasttree, args_fasttree_p,
-                  args_iqtree,args_iqtree_p,
+                  args_iqtree, args_iqtree_p,
                   args_thread):
     '''reconstruct phylogenetic tree by ssu rna method'''
-    ssu_input,recovery_dic = checkSilvaOrganism(in_put)
+    ssu_input, recovery_dic = checkSilvaOrganism(in_put)
     start = time.time()
     out_retrieve = retrieve16srna(ssu_input, out_put)
     end = time.time()
     auto_build_log.info('Retrieving SSU rRNA sequences used time: {} Seconds'.format(end - start))
     if not recovery_dic == []:
-        recovery_silva(out_retrieve,recovery_dic,ssu_input)
-
+        recovery_silva(out_retrieve, recovery_dic, ssu_input)
 
     # set default aligned by muscle if not specify clustalw or mafft
     start2 = time.time()
@@ -306,6 +311,7 @@ def starting_srna(in_put, out_put,
     end2 = time.time()
     auto_build_log.info('Constructing species tree used time: {} Seconds'.format(end2 - start2))
 
+
 def starting_ehcp(in_put, out_put,
                   args_muscle, args_muscle_p,
                   args_clustalw, args_clustalw_p,
@@ -314,17 +320,18 @@ def starting_ehcp(in_put, out_put,
                   args_trimal, args_trimal_p,
                   args_raxml, args_raxml_p,
                   args_fasttree, args_fasttree_p,
-                  args_iqtree,args_iqtree_p,
-                  args_thread, args_extenddata):
+                  args_iqtree, args_iqtree_p,
+                  args_thread, args_extenddata,
+                  args_db):
     '''reconstruct phylogenetic tree by ehcp method'''
     hcp_input, recovery_dic = checkKeggOrganism(in_put)
     start = time.time()
-    out_retrieve = doretrieve(hcp_input, out_put)
+    out_retrieve = doretrieve(hcp_input, out_put,args_db)
     end = time.time()
     auto_build_log.info('Retrieving HCP sequences used time: {} Seconds'.format(end - start))
 
     if not recovery_dic == {}:
-        recovery(out_retrieve,recovery_dic)
+        recovery(out_retrieve, recovery_dic)
     retrieve_pro = os.listdir(out_retrieve)
     for reline in retrieve_pro:
         fw_name = os.path.join(out_retrieve, reline)
@@ -341,7 +348,7 @@ def starting_ehcp(in_put, out_put,
     if args_clustalw:
         out_alg = doclustalw_file(out_retrieve, out_put, args_clustalw_p)
     elif args_mafft:
-        out_alg = domafft_file(out_retrieve, out_put, args_mafft_p,args_thread)
+        out_alg = domafft_file(out_retrieve, out_put, args_mafft_p, args_thread)
     elif args_muscle:
         out_alg = domuscle_file(out_retrieve, out_put, args_muscle_p, args_thread)
 
@@ -363,6 +370,7 @@ def starting_ehcp(in_put, out_put,
     end2 = time.time()
     auto_build_log.info('Constructing species tree used time: {} Seconds'.format(end2 - start2))
 
+
 def starting_esrna(in_put, out_put,
                    args_muscle, args_muscle_p,
                    args_clustalw, args_clustalw_p,
@@ -371,17 +379,17 @@ def starting_esrna(in_put, out_put,
                    args_trimal, args_trimal_p,
                    args_raxml, args_raxml_p,
                    args_fasttree, args_fasttree_p,
-                   args_iqtree,args_iqtree_p,
+                   args_iqtree, args_iqtree_p,
                    args_thread, args_extenddata):
     '''reconstruct phylogenetic tree by ssu rna extend method'''
     extend_check = checkFile(args_extenddata)
-    ssu_input,recovery_dic = checkSilvaOrganism(in_put)
+    ssu_input, recovery_dic = checkSilvaOrganism(in_put)
     start = time.time()
     out_retrieve = retrieve16srna(ssu_input, out_put)
     end = time.time()
     auto_build_log.info('Retrieving SSU rRNA sequences used time: {} Seconds'.format(end - start))
     if not recovery_dic == {}:
-        recovery(out_retrieve,recovery_dic)
+        recovery(out_retrieve, recovery_dic)
     retrieve_srna_path = os.path.join(out_retrieve, 'rna_sequence.fasta')
 
     fw = open(retrieve_srna_path, 'a')
