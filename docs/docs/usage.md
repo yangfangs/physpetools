@@ -17,6 +17,7 @@ $ PhySpeTree -i autobuild organism_example_list.txt [options]*
 |  -o     |  A directory to store outputs. The default is "Outdata".                                                                                 |
 |  -t     |  Number of processing threads (CPUs). The default is 1.                                                     |
 |  -e     |  FASTA format files to extend the tree with the --ehcp or --esrna option.                                                              |
+|  -db     |  The absolute path for local database.                                                             |
 |  --hcp  |  HCP (highly conserved protein) method (default).                                                                                        |
 |  --ehcp |  HCP method with extended HCP sequences.                                                                                               |
 |  --srna |  SSU method.                                                                       |
@@ -473,7 +474,7 @@ $ PhySpeTree combine -i combineTree.tree [options]*
 |  --mr |  Majority rule trees.                   |
 |  --mre |  Extended majority rule trees.                   |
 | --strict |  Strict consensus trees.         |
-
+| --astral |  Use ASTRAL combine multi gene tree.       |
 ### Example
 
 [example_combine_tree.tar.gz][5] contains `tree1.tree` and `tree2.tree` reconstructed by the HCP and SSU rRNA method, respectively.

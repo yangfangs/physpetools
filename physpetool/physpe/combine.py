@@ -49,7 +49,7 @@ Arguments parse
     combine_args.add_argument('--strict', action='store_true', dest="strict",
                               default=False, help='Compute strict consensus tree.')
     combine_args.add_argument('--astral', action='store_true', dest="astral",
-                              default=False, help='Use astral combine multi gene tree.')
+                              default=False, help='Use ASTRAL combine multi gene tree.')
 
 def starting(args):
     """
