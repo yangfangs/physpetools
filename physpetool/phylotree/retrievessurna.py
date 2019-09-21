@@ -28,11 +28,12 @@ import ftplib
 import os
 import time
 from physpetool.phylotree.log import getLogging
+import shutil
 
 log_retrieve = getLogging('SSU rRNA DB')
 
 
-def retrieve16srna(spenamelist, outpath):
+def retrieve16srna(spenamelist, outpath, local_db):
     """
 retrieve 16s rna form bioinfor.scu.edu.cn
     :param spenamelist: a list contain species names
@@ -54,21 +55,38 @@ retrieve 16s rna form bioinfor.scu.edu.cn
     dirname = os.path.join(dirname, subdir)
     if not os.path.exists(dirname):
         os.makedirs(dirname)
-    # connect database
-    connect = ftplib.FTP("173.255.208.244")
-    connect.login('anonymous')
-    connect.cwd('/pub/database16s')
-    # connect.dir()
-    for abb in spelist:
-        retrievename = abb + '.fasta'
-        downloadfilname = 'rna_sequence' + '.fasta'
-        downloadfilnamepath = os.path.join(dirname, downloadfilname)
-        fw = open(downloadfilnamepath, 'ab')
-        remoteFileName = 'RETR ' + os.path.basename(retrievename)
-        connect.retrbinary(remoteFileName, fw.write)
-        fw.write(b'\n')
-        fw.close()
-        log_retrieve.info("Retrieve and download of organism '{0}' SSU rRNA sequence was successful".format(abb))
-    connect.quit()
 
+    # connect ftp database
+
+    if local_db == "":
+        connect = ftplib.FTP("173.255.208.244")
+        connect.login('anonymous')
+        connect.cwd('/pub/database16s')
+        # connect.dir()
+        for abb in spelist:
+            retrievename = abb + '.fasta'
+            downloadfilname = 'rna_sequence' + '.fasta'
+            downloadfilnamepath = os.path.join(dirname, downloadfilname)
+            fw = open(downloadfilnamepath, 'ab')
+            remoteFileName = 'RETR ' + os.path.basename(retrievename)
+            connect.retrbinary(remoteFileName, fw.write)
+            fw.write(b'\n')
+            fw.close()
+            log_retrieve.info("Retrieve and download of organism '{0}' SSU rRNA sequence was successful".format(abb))
+        connect.quit()
+    # local db method
+    else:
+        file_name_new = 'rna_sequence' + '.fasta'
+        abb_data_path_new = os.path.join(dirname, file_name_new)
+        w_ = open(abb_data_path_new, 'a')
+        for abb in spelist:
+            file_name = abb + ".fasta"
+
+            abb_data_path = os.path.join(local_db, file_name)
+
+            seq = open(abb_data_path, "r").read()
+            w_.write(seq + "\n")
+
+            log_retrieve.info("Retrieve and download of organism '{0}' SSU rRNA sequence was successful".format(abb))
+        w_.close()
     return dirname

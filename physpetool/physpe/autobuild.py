@@ -168,7 +168,7 @@ starting run reconstruct tree
                       args.raxml, args.raxml_parameter,
                       args.fasttree, args.fasttree_parameter,
                       args.iqtree, args.iqtree_parameter,
-                      args.thread)
+                      args.thread,args.db)
 
     # Reconstruct phylogenetic tree by extend highly conserved proteins.
     elif args.EHCP:
@@ -197,7 +197,8 @@ starting run reconstruct tree
                        args.raxml, args.raxml_parameter,
                        args.fasttree, args.fasttree_parameter,
                        args.iqtree, args.iqtree_parameter,
-                       args.thread, args.extenddata)
+                       args.thread, args.extenddata,
+                       args.db)
     # Reconstruct phylogenetic tree by highly conserved proteins.
     elif args.HCP:
         setlogdir(out_put)
@@ -270,11 +271,11 @@ def starting_srna(in_put, out_put,
                   args_raxml, args_raxml_p,
                   args_fasttree, args_fasttree_p,
                   args_iqtree, args_iqtree_p,
-                  args_thread):
+                  args_thread,args_db):
     '''reconstruct phylogenetic tree by ssu rna method'''
     ssu_input, recovery_dic = checkSilvaOrganism(in_put)
     start = time.time()
-    out_retrieve = retrieve16srna(ssu_input, out_put)
+    out_retrieve = retrieve16srna(ssu_input, out_put,args_db)
     end = time.time()
     auto_build_log.info('Retrieving SSU rRNA sequences used time: {} Seconds'.format(end - start))
     if not recovery_dic == []:
@@ -370,7 +371,6 @@ def starting_ehcp(in_put, out_put,
     end2 = time.time()
     auto_build_log.info('Constructing species tree used time: {} Seconds'.format(end2 - start2))
 
-
 def starting_esrna(in_put, out_put,
                    args_muscle, args_muscle_p,
                    args_clustalw, args_clustalw_p,
@@ -380,12 +380,13 @@ def starting_esrna(in_put, out_put,
                    args_raxml, args_raxml_p,
                    args_fasttree, args_fasttree_p,
                    args_iqtree, args_iqtree_p,
-                   args_thread, args_extenddata):
+                   args_thread, args_extenddata,
+                   args_db):
     '''reconstruct phylogenetic tree by ssu rna extend method'''
     extend_check = checkFile(args_extenddata)
     ssu_input, recovery_dic = checkSilvaOrganism(in_put)
     start = time.time()
-    out_retrieve = retrieve16srna(ssu_input, out_put)
+    out_retrieve = retrieve16srna(ssu_input, out_put,args_db)
     end = time.time()
     auto_build_log.info('Retrieving SSU rRNA sequences used time: {} Seconds'.format(end - start))
     if not recovery_dic == {}:
