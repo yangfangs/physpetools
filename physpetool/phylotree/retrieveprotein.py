@@ -144,6 +144,7 @@ def retrieveprotein(proindexlist, outpath, matchlist, spelist, local_db):
                         else:
                             sequence = tem
                             fasta[header] = fasta.get(header, '') + sequence
+        connect.quit()
     # get protein sequence from local
     else:
         for line in spelist:
@@ -199,7 +200,7 @@ def retrieveprotein(proindexlist, outpath, matchlist, spelist, local_db):
                 hcp_pro_name, str(p)))
         p += 1
     logretrieveprotein.info("Retrieve from KEGG database " + str(p - 1) + " highly conserved proteins")
-    connect.quit()
+
     for infile in glob.glob(os.path.join(dirname, '*.fa')):
         os.remove(infile)
     return dirname
