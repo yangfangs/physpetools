@@ -143,6 +143,10 @@
 <td align="left">FASTA format files to extend the tree with the --ehcp or --esrna option.</td>
 </tr>
 <tr>
+<td align="left">-db</td>
+<td align="left">The absolute path for local database.</td>
+</tr>
+<tr>
 <td align="left">--hcp</td>
 <td align="left">HCP (highly conserved protein) method (default).</td>
 </tr>
@@ -669,9 +673,16 @@ $ grep '&gt;' example_build_srna.fasta
 <td>--strict</td>
 <td>Strict consensus trees.</td>
 </tr>
+<tr>
+<td>--astral</td>
+<td>Use ASTRAL combine multi gene tree.</td>
+</tr>
+<tr>
+<td>### Example</td>
+<td></td>
+</tr>
 </tbody>
 </table>
-<h3 id="example_2">Example</h3>
 <p><a href="../example/example_combine_tree.tar.gz">example_combine_tree.tar.gz</a> contains <code>tree1.tree</code> and <code>tree2.tree</code> reconstructed by the HCP and SSU rRNA method, respectively.</p>
 <p>Download and decompress the example input file:</p>
 <pre><code class="bash">
@@ -759,7 +770,7 @@ update PhySpeTree work follow fig</p>
 </tr>
 </tbody>
 </table>
-<h3 id="example_3">Example</h3>
+<h3 id="example_2">Example</h3>
 <p>Download the example file:</p>
 <pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/organism_example_list.txt&quot;
 
@@ -907,7 +918,7 @@ aeq     range   #F1A2B7 Adlercreutzia
 </tr>
 </tbody>
 </table>
-<h3 id="example_4">Example</h3>
+<h3 id="example_3">Example</h3>
 <p><strong>Check extended organisms in <code>autobuild</code></strong></p>
 <p>Determine proteins to be prepared in the <code>autobuild</code> module with the <code>--ehcp</code> option, for example, <a href="../example/organism_example_list.txt">organism_example_list.txt</a></p>
 <p>Download the example file:</p>
