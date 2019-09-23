@@ -412,7 +412,7 @@ If SSU rRNA method (`--srna`) is selected, the `temp` folder includes:
   * `rna_alignment`: aligned sequences and conserved blocks.
 
 
-**What classes of HCP are selected?**
+**3.What classes of HCP are selected?**
 
 PhySpeTree uses 31 HCP without horizontal transferred genes according to Ciccarelli *et al.*.
 
@@ -461,10 +461,21 @@ Ribosomal protein S13                                  K02953              K0295
 
 
 
-**2.4.How are SSU rRAN created?**
+**4.How are SSU rRAN created?**
 
 The SSU rRAN sequences are created from the `SILVA <https://www.arb-silva.de/>`_ database (123.1 release). Sequences haven been truncated, which means unaligned nucleotides are removed.
 
+
+**5. How do I use PhySpeTree when I can't connect to the Internet?**
+
+When users can't connect to the Internet. They can download the HCP or SSU rRNA database to local and reconstruct species tree.
+
+  * SSU rRNA database: [database16s.tar.gz](ftp://173.255.208.244/pub/db/database16s.tar.gz)
+  * HCP database: [databasehcp.tar.gz](ftp://173.255.208.244/pub/db/databasehcp.tar.gz)
+
+Use `$ tar -zxvf database16s.tar.gz` decompress the download database.
+
+Use `-db` option setting the absolute path to decompression directory.
 
 
 .. |PyPI version| image:: https://img.shields.io/pypi/v/PhySpeTree.svg?style=flat-square
