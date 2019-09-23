@@ -475,6 +475,7 @@ $ PhySpeTree combine -i combineTree.tree [options]*
 |  --mre |  Extended majority rule trees.                   |
 | --strict |  Strict consensus trees.         |
 | --astral |  Use ASTRAL combine multi gene tree.       |
+
 ### Example
 
 [example_combine_tree.tar.gz][5] contains `tree1.tree` and `tree2.tree` reconstructed by the HCP and SSU rRNA method, respectively.
@@ -516,7 +517,7 @@ PhySpeTree combine -i combine.tree -o combineTree
 ```
 
 Outputs:
-update PhySpeTree work follow fig
+
 ```
 combine/
         RAxML_info.T1
@@ -526,6 +527,19 @@ combine/
 * `RAxML_info.T1`: logs in running RAxML.
 * `RAxML_MajorityRuleConsensusTree.T1`: the majority rule consensus tree.
 
+### Using `--astral`
+> Notice: The `--astral` option call the third-party software ASTRAL. Keeping the JRE was
+> installed in your environment(if not used PhySpeTree in Docker environment).
+
+```bash
+PhySpeTree combine -i combine.tree -o combineTree --astral
+```
+Outputs:
+
+```
+combineTree/
+           combine.tree
+```
 ## iview
 
 PhySpeTree provides the `iview` module to annotate taxonomic information (kingdom, phylum, class, or order) of output trees and to generate configure files linked to [iTol](http://itol.embl.de/).

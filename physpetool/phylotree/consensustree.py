@@ -50,5 +50,5 @@ def do_astral(input,output):
     if not os.path.exists(output):
         os.mkdir(output)
     out_name = "combine.tree"
-    consensuseCmd =  "java -jar " + astralpath + "/astral.5.6.3.jar" + " -i " + input+" -o " + output + out_name
+    consensuseCmd =  "java -jar " + astralpath + "/astral.5.6.3.jar" + " -i " + input+" -o " + output +"/"+ out_name
     subprocess.call(consensuseCmd, shell=True)

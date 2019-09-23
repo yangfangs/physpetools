@@ -70,7 +70,7 @@ Ribosomal protein S13                               |   K02953           |   K02
 The SSU rRAN sequences are created from the [SILVA](<https://www.arb-silva.de/>) database (Release 132, Released: 13.12.2017). Sequences haven been truncated, which means unaligned nucleotides are removed.
 
 
-## 5. How do I use PhySpeTree when I can't connect to the Internet?
+### 5. How do I use PhySpeTree when I can't connect to the Internet?
 
 When users can't connect to the Internet. They can download the HCP or SSU rRNA database to local and reconstruct species tree.
 
