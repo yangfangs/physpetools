@@ -527,9 +527,11 @@ combine/
 * `RAxML_info.T1`: logs in running RAxML.
 * `RAxML_MajorityRuleConsensusTree.T1`: the majority rule consensus tree.
 
-### Using `--astral`
-> Notice: The `--astral` option call the third-party software ASTRAL. Keeping the JRE was
-> installed in your environment(if not used PhySpeTree in Docker environment).
+### Using `--astral` option
+
+> Notice: The --astral option calls the third-party software ASTRAL. Please be aware that JRE has been installed in your running environments.
+> For users who run the Docker image of PhySpeTree, JRE is unnecessary.
+
 
 ```bash
 PhySpeTree combine -i combine.tree -o combineTree --astral
