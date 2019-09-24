@@ -722,10 +722,10 @@ $ cat tree1.tree tree2.tree &gt; combine.tree
 <li><code>RAxML_info.T1</code>: logs in running RAxML.</li>
 <li><code>RAxML_MajorityRuleConsensusTree.T1</code>: the majority rule consensus tree.</li>
 </ul>
-<h3 id="using-astral">Using <code>--astral</code></h3>
+<h3 id="using-astral-option">Using <code>--astral</code> option</h3>
 <blockquote>
-<p>Notice: The <code>--astral</code> option call the third-party software ASTRAL. Keeping the JRE was
-installed in your environment(if not used PhySpeTree in Docker environment).</p>
+<p>Notice: The --astral option calls the third-party software ASTRAL. Please be aware that JRE has been installed in your running environments.
+For users who run the Docker image of PhySpeTree, JRE is unnecessary.</p>
 </blockquote>
 <pre><code class="bash">PhySpeTree combine -i combine.tree -o combineTree --astral
 </code></pre>
