@@ -551,10 +551,32 @@ combineTree/
 Download example tree:
 
 ```
+$ wget "https://yangfangs.github.io/physpetools/example/trees.tree"
+--2019-10-02 15:49:42--  https://yangfangs.github.io/physpetools/example/trees.tree
+Resolving yangfangs.github.io (yangfangs.github.io)... 185.199.108.153, 185.199.109.153, 185.199.110.153, ...
+Connecting yangfangs.github.io (yangfangs.github.io)|185.199.108.153|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 661 [application/octet-stream]
+Saving to: “trees.tree”
 
+trees.tree                100%[=====================================>]     140  --.-KB/s  用时 0s
+
+2019-10-02 15:49:44 (168 MB/s) - saved “trees.tree” [140/140])
 
 ```
 
+`supertree` option:
+
+```bash
+PhySpeTree combine -i trees.tree -o Supertree --supertree
+```
+
+Outputs:
+
+```
+Supertree/
+          spr_supertree.tree
+```
 
 ## iview
 

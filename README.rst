@@ -316,6 +316,8 @@ combine options
 --strict
     Strict consensus trees.
 
+--supertree
+    Use Spr_Supertree combining conflicting evolutionary histories that are due to lateral gene transfer (LGT).
 
 iview
 ^^^^^^^^^^^^^^^^^^^^
