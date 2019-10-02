@@ -101,6 +101,7 @@
             <li><a href="#autobuild">autobuild</a></li>
             <li><a href="#build">build</a></li>
             <li><a href="#combine">combine</a></li>
+            <li><a href="#using-supertree-option">Using --supertree option</a></li>
             <li><a href="#iview">iview</a></li>
             <li><a href="#check">check</a></li>
     </ul>
@@ -677,6 +678,10 @@ $ grep '&gt;' example_build_srna.fasta
 <td>--astral</td>
 <td>Use ASTRAL combine multi gene tree.</td>
 </tr>
+<tr>
+<td>--supertree</td>
+<td>Use Spr_Supertree combining conflicting evolutionary histories that are due to lateral gene transfer (LGT).</td>
+</tr>
 </tbody>
 </table>
 <h3 id="example_2">Example</h3>
@@ -733,6 +738,24 @@ For users who run the Docker image of PhySpeTree, JRE is unnecessary.</p>
 <p>Outputs:</p>
 <pre><code>combineTree/
            combine.tree
+</code></pre>
+
+<h2 id="using-supertree-option">Using <code>--supertree</code> option</h2>
+<ul>
+<li>Use Spr_Supertree combining conflicting evolutionary histories that are due to lateral gene transfer (LGT).</li>
+</ul>
+<p>Download example tree:</p>
+<pre><code>
+
+</code></pre>
+
+<p><code>supertree</code> option:</p>
+<pre><code class="bash">PhySpeTree combine -i trees.tree -o Supertree --supertree
+</code></pre>
+
+<p>Outputs:</p>
+<pre><code>Supertree/
+          spr_supertree.tree
 </code></pre>
 
 <h2 id="iview">iview</h2>
