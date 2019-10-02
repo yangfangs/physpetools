@@ -475,6 +475,7 @@ $ PhySpeTree combine -i combineTree.tree [options]*
 |  --mre |  Extended majority rule trees.                   |
 | --strict |  Strict consensus trees.         |
 | --astral |  Use ASTRAL combine multi gene tree.       |
+| --supertree |  Use Spr_Supertree combining conflicting evolutionary histories that are due to lateral gene transfer (LGT).      |
 
 ### Example
 
@@ -542,6 +543,19 @@ Outputs:
 combineTree/
            combine.tree
 ```
+
+## Using `--supertree` option
+
+* Use Spr_Supertree combining conflicting evolutionary histories that are due to lateral gene transfer (LGT).
+
+Download example tree:
+
+```
+
+
+```
+
+
 ## iview
 
 PhySpeTree provides the `iview` module to annotate taxonomic information (kingdom, phylum, class, or order) of output trees and to generate configure files linked to [iTol](http://itol.embl.de/).

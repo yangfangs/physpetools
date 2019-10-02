@@ -52,3 +52,11 @@ def do_astral(input,output):
     out_name = "combine.tree"
     consensuseCmd =  "java -jar " + astralpath + "/astral.5.6.3.jar" + " -i " + input+" -o " + output +"/"+ out_name
     subprocess.call(consensuseCmd, shell=True)
+
+def do_supertree(input, output):
+    supertreepath = getlocalpath()
+    if not os.path.exists(output):
+        os.mkdir(output)
+    out_name = "spr_supertree.tree"
+    consensuseCmd = supertreepath + "/spr_supertree" + " < " + input+" > " + output +"/"+ out_name
+    subprocess.call(consensuseCmd, shell=True)
