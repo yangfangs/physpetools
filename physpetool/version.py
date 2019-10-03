@@ -26,7 +26,7 @@
 The physpe version and call software in physpe  version and citation.
 
 """
-version = '0.3.7'
+version = '0.3.8'
 
 VERSION_DESC = (
     """
@@ -44,12 +44,14 @@ VERSION_DESC = (
 def version_infor():
     muscle_info = 'v3.8.31'
     clustalw2_info = '2.1'
-    mafft_info = 'v7.407'
+    mafft_info = 'v7.429'
     trimal_info = '1.2rev59'
     gblocks_info = '0.91b'
     raxml_info = 'v8.2.3'
     fasttree_info = '2.1.9'
     iqtree_info = '1.6.9'
+    ASTRAL_info ='5.6.3'
+    SPRSupertrees_info = '1.2.1'
     author_info = 'Author: Yang Fang\n'
     print (VERSION_DESC)
     print (author_info)
@@ -71,6 +73,10 @@ def version_infor():
     print (citation['Gblocks'])
     print ('trimal versin: '), (trimal_info + '\ncite:')
     print (citation['trimal'])
+    print ('ASTRAL versin: '), (ASTRAL_info + '\ncite:')
+    print (citation['ASTRAL'])
+    print ('SPRSupertrees versin: '), (SPRSupertrees_info + '\ncite:')
+    print (citation['SPRSupertrees'])
     print ("===========================CALL SOFTWARE INFO==============================================")
 
 
@@ -101,7 +107,12 @@ citation = {
       772-780.""",
      'iqtree': u"""Nguyen L T, Schmidt H A, von Haeseler A, et al. IQ-TREE: a fast and effective 
      stochastic algorithm for estimating maximum-likelihood phylogenies[J]. Molecular biology and 
-     evolution, 2014, 32(1): 268-274."""
+     evolution, 2014, 32(1): 268-274.""",
+    'ASTRAL': u"""Mirarab S, Reaz R, Bayzid M S, et al. ASTRAL: genome-scale coalescent-based 
+    species tree estimation[J]. Bioinformatics, 2014, 30(17): i541-i548.
+    """,
+    'SPRSupertrees': u"""Whidden C, Zeh N, Beiko R G. Supertrees based on the subtree prune-and-regraft distance[J].
+     Systematic biology, 2014, 63(4): 566-581."""
 }
 
 if __name__ == '__main__':

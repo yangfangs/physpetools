@@ -42,7 +42,7 @@ Combine tree
     # prepare a dir store result
     if not os.path.exists(output):
         os.mkdir(output)
-    consensuseCmd = raxmlpath + "/raxmlHPC-PTHREADS-AVX " + " -J " + rule + " -m GTRCAT -z " + input + " -w " + output + " -n T1"
+    consensuseCmd = raxmlpath + "/raxmlHPC " + " -J " + rule + " -m GTRCAT -z " + input + " -w " + output + " -n T1"
     subprocess.call(consensuseCmd, shell=True)
 
 def do_astral(input,output):

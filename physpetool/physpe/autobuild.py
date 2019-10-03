@@ -389,8 +389,8 @@ def starting_esrna(in_put, out_put,
     out_retrieve = retrieve16srna(ssu_input, out_put,args_db)
     end = time.time()
     auto_build_log.info('Retrieving SSU rRNA sequences used time: {} Seconds'.format(end - start))
-    if not recovery_dic == {}:
-        recovery(out_retrieve, recovery_dic)
+    if not recovery_dic == []:
+        recovery_silva(out_retrieve, recovery_dic, ssu_input)
     retrieve_srna_path = os.path.join(out_retrieve, 'rna_sequence.fasta')
 
     fw = open(retrieve_srna_path, 'a')

@@ -1,7 +1,7 @@
 #! /bin/bash 
 er=0;
 myself=`dirname "$0"`/`basename "$0"`; export myself
-version="v7.407 (2018/Jul/23)"; export version
+version="v7.429 (2019/Jul/1)"; export version
 LANG=C; export LANG
 os=`uname`
 progname=`basename "$0"`
@@ -285,10 +285,13 @@ spfactor="100.0"
 shiftpenaltyspecified=0
 opdistspecified=0
 allowshift=0
-enrich=0
-enrichseq=0
-enrichstr=0
-seektarget=""
+enrich=0        # ato de kezuru
+enrichseq=0     # ato de kezuru
+enrichstr=0     # ato de kezuru
+seektarget=""   # ato de kezuru
+newdash=0
+newdash_originalsequenceonly=0
+exclude_ho=0
 fixthreshold="0.0"
 bunkatsuopt=" "
 npickup=0
@@ -493,9 +496,9 @@ if [ $# -gt 0 ]; then
 		elif [ "$1" = "--nomemsave" ]; then
 			memopt=" -N "
 		elif [ "$1" = "--nuc" ]; then 
-			seqtype=" -D "
+			seqtype="-D" # Deleted space, 2018/Dec
 		elif [ "$1" = "--amino" ]; then 
-			seqtype=" -P "
+			seqtype="-P" # Deleted space, 2018/Dec
 		elif [ "$1" = "--fft" ]; then 
 			fft=1
 			forcefft=1
@@ -878,6 +881,9 @@ if [ $# -gt 0 ]; then
 			shift
 			strdir="$1"
 		elif [ "$1" = "--pdbidlist" ]; then
+			echo "--pdbidlist is temporarily unavailable, 2018/Dec." 1>&2
+			echo "" 1>&2
+			exit
 			shift
 			pdblist="$1"
 			if [ ! -e "$pdblist" ]; then
@@ -886,6 +892,9 @@ if [ $# -gt 0 ]; then
 				exit
 			fi
 		elif [ "$1" = "--pdbfilelist" ]; then
+			echo "--pdbfilelist is temporarily unavailable, 2018/Dec." 1>&2
+			echo "" 1>&2
+			exit
 			shift
 			ownlist="$1"
 			if [ ! -e "$ownlist" ]; then
@@ -893,21 +902,29 @@ if [ $# -gt 0 ]; then
 				echo "" 1>&2
 				exit
 			fi
-		elif [ "$1" = "--enrich" ]; then
-			enrich=1
-			enrichseq=1
-			enrichstr=1
-			seektarget=""
-		elif [ "$1" = "--enrichseq" ]; then
-			enrich=1
-			enrichseq=1
-			enrichstr=0
-			seektarget="-seq"
-		elif [ "$1" = "--enrichstr" ]; then
-			enrich=1
-			enrichseq=0
-			enrichstr=1
-			seektarget="-str"
+#		elif [ "$1" = "--enrich" ]; then
+#			enrich=1
+#			enrichseq=1
+#			enrichstr=1
+#			seektarget=""
+#		elif [ "$1" = "--enrichseq" ]; then
+#			enrich=1
+#			enrichseq=1
+#			enrichstr=0
+#			seektarget="-seq"
+#		elif [ "$1" = "--enrichstr" ]; then
+#			enrich=1
+#			enrichseq=0
+#			enrichstr=1
+#			seektarget="-str"
+		elif [ "$1" = "--dash" ]; then
+			newdash=1
+			distance="global" # can be override
+			iterate=3         # can be override
+		elif [ "$1" = "--originalseqonly" ]; then
+			newdash_originalsequenceonly=1
+		elif [ "$1" = "--excludehomologs" ]; then # works with --dash only
+			exclude_ho=1
 		elif [ "$1" = "--seedtable" ]; then
 			shift
 			seedtable="y"
@@ -1449,6 +1466,7 @@ function removetmpfile() { # for MPI
 		echo "--reorder :      Outorder: aligned, default: input order" 1>&2
 		echo "--quiet :        Do not report progress" 1>&2
 		echo "--thread # :     Number of threads (if unsure, --thread -1)" 1>&2
+		echo "--dash :         Add structural information (Rozewicki et al, submitted)" 1>&2
 #		echo "" 1>&2
 #		echo " % mafft --maxiterate 1000 --localpair in > out (L-INS-i)" 1>&2
 #		echo " most accurate in many cases, assumes only one alignable domain" 1>&2 
@@ -1743,10 +1761,10 @@ function removetmpfile() { # for MPI
 	fi
 
 
-	if [ \( $distance = "ktuples" -o $distance = "ktuplesmulti" \) -a \( $seed = "x" -a $seedtable = "x" -a $ownlist = "/dev/null" -a $pdblist = "/dev/null" -a $enrichstr -eq 0 \) ]; then
+	if [ \( $distance = "ktuples" -o $distance = "ktuplesmulti" \) -a \( $seed = "x" -a $seedtable = "x" -a $ownlist = "/dev/null" -a $pdblist = "/dev/null" -a $enrichstr -eq 0 -a $newdash -eq 0 \) ]; then
 		localparam=""
 		weighti="0.0"
-	elif [ \( $distance = "ktuples" -o $distance = "ktuplesmulti" \) -a \( $seed != "x" -o $seedtable != "x" -o $ownlist != "/dev/null" -o $pdblist != "/dev/null" -o $enrichstr -eq 1 \) ]; then
+	elif [ \( $distance = "ktuples" -o $distance = "ktuplesmulti" \) -a \( $seed != "x" -o $seedtable != "x" -o $ownlist != "/dev/null" -o $pdblist != "/dev/null" -o $enrichstr -eq 1 -o $newdash -eq 1 \) ]; then
 		if [ $cycle -lt 2 ]; then
 			cycle=2                # disttbfast ha seed hi-taiou #  chuui 2014Aug21
 		fi
@@ -2087,6 +2105,10 @@ function removetmpfile() { # for MPI
 	else
 		outputopt="-f"
 	fi
+
+	if [ $newdash_originalsequenceonly -eq 1 ]; then
+		outputopt="$outputopt  -d "
+	fi
 # kokomade
 
 	
@@ -2142,52 +2164,58 @@ function removetmpfile() { # for MPI
 				echo "The combination of --seed and (--pdbidlist or --pdbfilelist) is impossible."  1>>"$progressfile"
 				exit 1
 			fi
-			if [ $enrich -eq 1 ]; then
-				echo "The combination of --seed and (--enrich, --enrichseq or --enrichstr) is impossible at present."  1>>"$progressfile"
+#			if [ $enrich -eq 1 ]; then
+#				echo "The combination of --seed and (--enrich, --enrichseq or --enrichstr) is impossible at present."  1>>"$progressfile"
+#				exit 1
+#			fi
+
+			if [ $newdash -eq 1 ]; then
+				echo "The combination of --seed and --dash is impossible at present."  1>>"$progressfile"
 				exit 1
 			fi
 		fi
 
-		if [ $enrich -eq 1 ]; then
-			if [ $ownlist != "/dev/null" ]; then
-				echo "Warning: Sequence homologs of the structures given with the --pdbfilelist option cannot be collected.\n" 1>>"$progressfile"
-			fi
-			echo "SEEKQUENCER (http://sysimm.ifrec.osaka-u.ac.jp/seekquencer/) is" 1>>"$progressfile"
-			if [ $pdblist != "/dev/null" ]; then
-				echo "collecting homoplogs of the input sequences and the structures given with the --pdbidlist option." 1>>"$progressfile"
-				perl "$prefix/seekquencer_premafft.pl" $seektarget -run thread -trd 2 -seqd uniref90 -blim 1000 -noin -seqf infile -idf pdblist -out seekout -mod mafftash-split 2>>"seekerr"
-				seekres="$?"
-			else
-				echo "collecting homologs of the input sequences." 1>>"$progressfile"
-				perl "$prefix/seekquencer_premafft.pl" $seektarget -run thread -trd 2 -seqd uniref90 -blim 1000 -noin -seqf infile -out seekout -mod mafftash-split 2>>"seekerr"
-				seekres="$?"
-			fi
-			cat seekerr  1>>"$progressfile"
 
-			if [ $seekres -ne "0" ]; then
-				echo "Error in SEEKQUENCER" 1>>"$progressfile"
-				exit 1;
-			fi
-			echo "Done." 1>>"$progressfile"
-
-			if [ $enrichseq -eq 1 ]; then
-#				cat seekout.seq >> infile
-				if [ $anysymbol -eq 1 ]; then
-					"$prefix/replaceu" $seqtype -i seekout.seq -o $nseq >> infile
-					cat seekout.seq >> orig
-				else
-					"$prefix/replaceu" $seqtype -i seekout.seq | sed 's/_os_[0-9]*_oe_//' >> infile
-				fi
-
-			fi
-			if [ $enrichstr -eq 1 ]; then
-				nseekstr=`wc -l < seekout.str`
-				if [ $nseekstr -gt 1 ]; then
-					cat seekout.str >> pdblist
-					pdblist="tsukaimasu"
-				fi
-			fi
-		fi
+#		if [ $enrich -eq 1 ]; then
+#			if [ $ownlist != "/dev/null" ]; then
+#				echo "Warning: Sequence homologs of the structures given with the --pdbfilelist option cannot be collected.\n" 1>>"$progressfile"
+#			fi
+#			echo "SEEKQUENCER (http://sysimm.ifrec.osaka-u.ac.jp/seekquencer/) is" 1>>"$progressfile"
+#			if [ $pdblist != "/dev/null" ]; then
+#				echo "collecting homoplogs of the input sequences and the structures given with the --pdbidlist option." 1>>"$progressfile"
+#				perl "$prefix/seekquencer_premafft.pl" $seektarget -run thread -trd 2 -seqd uniref90 -blim 1000 -noin -seqf infile -idf pdblist -out seekout -mod mafftash-split 2>>"seekerr"
+#				seekres="$?"
+#			else
+#				echo "collecting homologs of the input sequences." 1>>"$progressfile"
+#				perl "$prefix/seekquencer_premafft.pl" $seektarget -run thread -trd 2 -seqd uniref90 -blim 1000 -noin -seqf infile -out seekout -mod mafftash-split 2>>"seekerr"
+#				seekres="$?"
+#			fi
+#			cat seekerr  1>>"$progressfile"
+#
+#			if [ $seekres -ne "0" ]; then
+#				echo "Error in SEEKQUENCER" 1>>"$progressfile"
+#				exit 1;
+#			fi
+#			echo "Done." 1>>"$progressfile"
+#
+#			if [ $enrichseq -eq 1 ]; then
+##				cat seekout.seq >> infile
+#				if [ $anysymbol -eq 1 ]; then
+#					"$prefix/replaceu" $seqtype -i seekout.seq -o $nseq >> infile
+#					cat seekout.seq >> orig
+#				else
+#					"$prefix/replaceu" $seqtype -i seekout.seq | sed 's/_os_[0-9]*_oe_//' >> infile
+#				fi
+#
+#			fi
+#			if [ $enrichstr -eq 1 ]; then
+#				nseekstr=`wc -l < seekout.str`
+#				if [ $nseekstr -gt 1 ]; then
+#					cat seekout.str >> pdblist
+#					pdblist="tsukaimasu"
+#				fi
+#			fi
+#		fi
 
 		if [ $seed != "x" ]; then
 			mv infile infile2
@@ -2228,45 +2256,107 @@ function removetmpfile() { # for MPI
 			fi
 		elif [ $seedtable != "x" ]; then
 			cat _seedtablefile > hat3.seed
-		elif [ $pdblist != "/dev/null" -o $ownlist != "/dev/null" ]; then
-			mv infile infile2
-			if [ $anysymbol -eq 1 ]; then
-				mv orig orig2
-				cat /dev/null > orig
-			fi
-			cat /dev/null > infile
-
-			echo "strdir = " 1>>"$progressfile"
-			echo $strdir 1>>"$progressfile"
-
-			echo "Calling DASH (http://sysimm.ifrec.osaka-u.ac.jp/dash/)" 1>>"$progressfile"
-			perl "$prefix/mafftash_premafft.pl" -p pdblist -o ownlist -d "$strdir" 2>>"dasherr"
-			dashres="$?"
-			cat dasherr  1>>"$progressfile"
-
-			if [ $dashres -ne "0" ]; then
-				echo "Error in DASH" 1>>"$progressfile"
+		elif [ $newdash -eq 1 ]; then
+			seemstobe=`"$prefix/countlen" -i infile | awk '{print $6}'`
+			if [ $seemstobe = "d" -a "x$seqtype" != "x-P" ]; then
+				echo "" 1>>"$progressfile"
+				echo "Error: This data seems to be nucleotide sequences." 1>>"$progressfile"
+				echo "Add the --amino flag if this is surely protein." 1>>"$progressfile"
+				echo "" 1>>"$progressfile"
 				exit 1;
 			fi
+			if [ $anysymbol -eq 1 ]; then
+				mv orig infile # replaceu wo mukouka
+			#else
+			#	Check sequence here
+			fi
+#			mv infile infile2
+#			cat /dev/null > infile
+
+			if [ ! -x "$prefix/dash_client" -o ! -x "$prefix/dash_client" ]; then
+				echo ""       1>&2
+				echo "== Install DASH client =====================================================" 1>&2
+				echo "To use this feature, uncomment the following line in Makefile"                1>&2
+				echo "DASH_CLIENT = dash_client"                                                    1>&2
+				echo "and re-compile the source."                                                   1>&2
+				echo "Note that it requires the 'Go' compiler."                                     1>&2
+				echo "============================================================================" 1>&2
+				echo "" 1>&2
+				exit 1
+			fi
+			
+			echo "Calling DASH (https://sysimm.org/dash/)" 1>>"$progressfile"
+			"$prefix/dash_client" -i infile -sequences dashsequences -hat3 hat3.seed 1>>"$progressfile"
+			dashres="$?"
+			if [ $dashres -ne "0" ]; then
+				echo "Error in DASH" 1>>"$progressfile"
+				echo "To use this feature, compiled with" 1>>"$progressfile"
+				exit 1;
+			fi
+
+			if [ $exclude_ho -eq 1 ]; then # amari yokunai
+				awk 'BEGIN{out=1} !/^>_addedbymaffte_/{if(out) print; out=1} /^>_addedbymaffte_/{out=0}' dashsequences | sed 's/>DASH_/>DASH|/' > ho_excluded
+				mv ho_excluded dashsequences
+			fi
+
+			sed 's/>DASH_/>DASH|/' dashsequences > renamed
+			mv renamed dashsequences
 			echo "Done." 1>>"$progressfile"
-
-			seedoffset=`grep -c '^[>|=]' instr | head -1 ` 
-
+#			cat  hat3.seed
+			seedoffset=`grep -c '^[>|=]' dashsequences | head -1 ` 
 			echo "# of structures = " 1>>"$progressfile"
 			echo $seedoffset 1>>"$progressfile"
-			mv hat3 hat3.seed
-
 			if [ $anysymbol -eq 1 ]; then
-				cat instr >> orig
-				"$prefix/replaceu" $seqtype -i instr -o 0 > clean 2>>"$progressfile" || exit 1
+				cat dashsequences >> orig
+				"$prefix/replaceu" $seqtype -i dashsequences -o 0 > clean 2>>"$progressfile" || exit 1
 				mv clean infile
 
-				"$prefix/replaceu" $seqtype -i orig2 -o $seedoffset >> infile 2>>"$progressfile" || exit 1  # yarinaoshi
-				cat orig2 >> orig
+#				"$prefix/replaceu" $seqtype -i orig2 -o $seedoffset >> infile 2>>"$progressfile" || exit 1  # yarinaoshi
+#				cat orig2 >> orig
 			else
-				cat instr > infile
-				cat infile2 >> infile
+				cat dashsequences > infile
+#				cat infile2 >> infile
 			fi
+
+#		elif [ $pdblist != "/dev/null" -o $ownlist != "/dev/null" ]; then
+#			mv infile infile2
+#			if [ $anysymbol -eq 1 ]; then
+#				mv orig orig2
+#				cat /dev/null > orig
+#			fi
+#			cat /dev/null > infile
+#
+#			echo "strdir = " 1>>"$progressfile"
+#			echo $strdir 1>>"$progressfile"
+#
+#			echo "Calling DASH (http://sysimm.ifrec.osaka-u.ac.jp/dash/)" 1>>"$progressfile"
+#			perl "$prefix/mafftash_premafft.pl" -p pdblist -o ownlist -d "$strdir" 2>>"dasherr"
+#			dashres="$?"
+#			cat dasherr  1>>"$progressfile"
+#
+#			if [ $dashres -ne "0" ]; then
+#				echo "Error in DASH" 1>>"$progressfile"
+#				exit 1;
+#			fi
+#			echo "Done." 1>>"$progressfile"
+#
+#			seedoffset=`grep -c '^[>|=]' instr | head -1 ` 
+#
+#			echo "# of structures = " 1>>"$progressfile"
+#			echo $seedoffset 1>>"$progressfile"
+#			mv hat3 hat3.seed
+#
+#			if [ $anysymbol -eq 1 ]; then
+#				cat instr >> orig
+#				"$prefix/replaceu" $seqtype -i instr -o 0 > clean 2>>"$progressfile" || exit 1
+#				mv clean infile
+#
+#				"$prefix/replaceu" $seqtype -i orig2 -o $seedoffset >> infile 2>>"$progressfile" || exit 1  # yarinaoshi
+#				cat orig2 >> orig
+#			else
+#				cat instr > infile
+#				cat infile2 >> infile
+#			fi
 		else
 			cat /dev/null > hat3.seed
 		fi
@@ -2555,13 +2645,15 @@ function removetmpfile() { # for MPI
 
 		
 		if [ $pdblist != "/dev/null" -o $ownlist != "/dev/null" ]; then
-			cat dasherr >>"$progressfile"
+#			cat dasherr >>"$progressfile"
+			echo '' >>"$progressfile"
 		fi
 
 	popd > /dev/null
 
 	if [ "$outputopt" != "-f" -o "$windows" = "yes" ]; then # Windows deha kaigyo code wo f2cl de modosu.
-		ln -s "$TMPFILE/order" _order$$ # f2cl ga space ari filename ni taiou shiteinainode
+#		ln -s "$TMPFILE/order" _order$$ # f2cl ga space ari filename ni taiou shiteinainode
+		cp "$TMPFILE/order" _order$$ # ln -s no error wo sakeru
 		if [ "$outputfile" = "" ]; then
 			"$prefix/f2cl" -n $namelength $outputopt < "$TMPFILE/pre" 2>"/dev/null" || exit 1
 		else
