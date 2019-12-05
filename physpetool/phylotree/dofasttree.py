@@ -41,12 +41,12 @@ def doFastTree(inputfile, outputfile, FastTreepara, thread):
     if not os.path.exists(outputfile):
         os.mkdir(outputfile)
     if thread_to_str is '1':
-        cmd = FastTreePath + "/FastTree " + FastTreepara + input_fasta + " >" + out_tree_name
+        cmd = FastTreePath + "/FastTree " + FastTreepara  +" "+input_fasta + " >" + out_tree_name
         subprocess.call(cmd, shell=True)
     else:
         # set the threads
         os.environ["OMP_NUM_THREADS"] = thread_to_str
-        cmd = FastTreePath + "/FastTreeMP " + FastTreepara + input_fasta + " >" + out_tree_name
+        cmd = FastTreePath + "/FastTreeMP " + FastTreepara +" "+ input_fasta + " >" + out_tree_name
         subprocess.call(cmd, shell=True)
     logdofasttree.info("Phylogenetic species tree reconstructed by FastTree was completed")
 
