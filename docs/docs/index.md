@@ -1,7 +1,7 @@
 
-# PhySpeTree: automatically reconstructing phylogenetic species tree
+# PhySpeTree: an automated pipeline for reconstructing phylogenetic species trees
 
-**PhySpeTree is implemented in Python language (supports Python2.7+ and Python3+), designed for Linux systems.**
+**PhySpeTree is implemented in Python language (supports Python2.7+ and Python3+), designed for Linux systems (docker forWindows OS or Mac OS).**
 
 ## Introduction
 
@@ -15,7 +15,7 @@ protein complexes and protein-protein interactions.
 Here, we developed an easy-to-use package named PhySpeTree that is convenient to reconstruct species trees by one command line.
 Two independent pipelines were included by using the most adopted small subunit ribosomal RNA (SSU rRNA) and concatenated highly
 conserved proteins (HCP), respectively. A distinct advantage is that users only need to input species names and PhySpeTree
-automatically downloads and analyzes sequences of SSU rRNA or HCP from about 4,000 organisms.
+automatically downloads and analyzes sequences of SSU rRNA about 140,662 species and  HCP about 5,900 organisms.
 
 ## Workflow
 
@@ -43,7 +43,7 @@ automatically downloads and analyzes sequences of SSU rRNA or HCP from about 4,0
 
 - Versatile software with adjustable parameters.
 
-## Modules:
+## Modules
 
 * [autobuild](usage.md#autobuild): automatically reconstruct phylogenetic tree
 
@@ -77,3 +77,6 @@ PhySpeTree check -i organisms.txt -o checkout --protein
 ```
 
 [1]: example/organism_example_list.txt
+
+> cite:Fang, Y., Liu, C., Lin, J. et al. PhySpeTree: an automated pipeline for reconstructing phylogenetic species trees.
+> BMC Evol Biol 19, 219 (2019) doi:10.1186/s12862-019-1541-x

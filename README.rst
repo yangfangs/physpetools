@@ -472,8 +472,8 @@ The SSU rRAN sequences are created from the `SILVA <https://www.arb-silva.de/>`_
 
 When users can't connect to the Internet. They can download the HCP or SSU rRNA database to local and reconstruct species tree.
 
-  * SSU rRNA database: [database16s.tar.gz](ftp://173.255.208.244/pub/db/database16s.tar.gz)
-  * HCP database: [databasehcp.tar.gz](ftp://173.255.208.244/pub/db/databasehcp.tar.gz)
+  * SSU rRNA database: `database16s.tar.gz <ftp://173.255.208.244/pub/db/database16s.tar.gz>`_
+  * HCP database: `databasehcp.tar.gz <ftp://173.255.208.244/pub/db/databasehcp.tar.gz>`_
 
 Use `$ tar -zxvf database16s.tar.gz` decompress the download database.
 

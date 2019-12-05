@@ -52,7 +52,7 @@ call RAxML method to construct species tree
     raxmlpath = getlocalpath()
     if not os.path.exists(outputfile):
         os.mkdir(outputfile)
-    strs = raxmlpath + "/raxmlHPC " + "-T " + threadtostr + " " + raxmlpararet
+    strs = raxmlpath + "/raxmlHPC-PTHREADS-AVX2 " + "-T " + threadtostr + " " + raxmlpararet
     # cmd command
     cmd = strs + " -s " + inputfile + " -w " + outputfile
     subprocess.call(cmd, shell=True)

@@ -23,10 +23,10 @@
 
 
 """
-The physpe version and call software in physpe  version and citation.
+The PhySpeTree version and call software in PhySpeTree  version and citation.
 
 """
-version = '0.3.8'
+version = '0.3.9'
 
 VERSION_DESC = (
     """
@@ -35,7 +35,9 @@ VERSION_DESC = (
           PhySpeTree document: https://yangfangs.github.io/physpetools/       
         
           Citation:
-                  PhySpeTree: automatically reconstructing phylogenetic species tree (submitted)
+                  Fang, Y., Liu, C., Lin, J. et al. PhySpeTree: an automated pipeline for 
+                  reconstructing phylogenetic species trees. BMC Evol Biol 19, 219 (2019) 
+                  doi:10.1186/s12862-019-1541-x
 
           --------------------------------------------------------------------------------------
           """ % (version))
@@ -47,7 +49,7 @@ def version_infor():
     mafft_info = 'v7.429'
     trimal_info = '1.2rev59'
     gblocks_info = '0.91b'
-    raxml_info = 'v8.2.3'
+    raxml_info = 'v8.2.12'
     fasttree_info = '2.1.9'
     iqtree_info = '1.6.9'
     ASTRAL_info ='5.6.3'
