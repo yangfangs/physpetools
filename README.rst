@@ -1,5 +1,5 @@
 PhySpeTree: an automated pipeline for reconstructing phylogenetic species trees
-==============================================================================
+==================================================================================
 
 |PyPI version| |Docs| |License|
 
