@@ -1,7 +1,7 @@
 
 # PhySpeTree: an automated pipeline for reconstructing phylogenetic species trees
 
-**PhySpeTree is implemented in Python language (supports Python2.7+ and Python3+), designed for Linux systems (docker forWindows OS or Mac OS).**
+**PhySpeTree is implemented in Python language (supports Python2.7+ and Python3+), designed for Linux systems (docker for Windows OS or Mac OS).**
 
 ## Introduction
 
@@ -78,5 +78,5 @@ PhySpeTree check -i organisms.txt -o checkout --protein
 
 [1]: example/organism_example_list.txt
 
-> cite:Fang, Y., Liu, C., Lin, J. et al. PhySpeTree: an automated pipeline for reconstructing phylogenetic species trees.
+> Cite: Fang, Y., Liu, C., Lin, J. et al. PhySpeTree: an automated pipeline for reconstructing phylogenetic species trees.
 > BMC Evol Biol 19, 219 (2019) doi:10.1186/s12862-019-1541-x
