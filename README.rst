@@ -1,9 +1,9 @@
-PhySpeTree: automatically reconstructing phylogenetic species tree
+PhySpeTree: an automated pipeline for reconstructing phylogenetic species trees
 ==============================================================================
 
 |PyPI version| |Docs| |License|
 
-**PhySpeTree is implemented in Python language (supports Python2.7+ and Python3+), designed for Linux systems.**
+**PhySpeTree is implemented in Python language (supports Python2.7+ and Python3+), designed for Linux systems (docker for Windows OS or Mac OS).**
 
 **Documents**: `PhySpeTree documentation <https://yangfangs.github.io/physpetools>`_.
 
