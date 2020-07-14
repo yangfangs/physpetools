@@ -756,7 +756,7 @@ Checked result was store in check/PhySpeTree_echp_extend.txt
 
 #### 3. Manually prepare HCP sequences
 
-* According to `check` results, we prepare 6 classes of HCP and store the sequences (p1 ~ p31) into FASTA format files, for example [highly_conserved_protein_loki][7]
+* According to `check` results, we prepare 6 classes of HCP and store the sequences (p1 ~ p31) into FASTA format files, for example [highly_conserved_protein_loki_ath][7]
 * Tip: if we can not retrieve all highly conserved proteins we can use any single letter (for example M) instead of it.
    These incomplete conserved areas will be trimmed out during the reconstructed tree of the downstream.
 Download the example file:
