@@ -670,9 +670,11 @@ highly_conserved_protein_loki/p5.fasta
 highly_conserved_protein_loki/p6.fasta
 ......
 
-$ cd extend_pro_loki
+$ cd highly_conserved_protein_loki
 $ ls
-p1.fasta  p2.fasta  p3.fasta  p4.fasta  p5.fasta  p6.fast
+p10.fasta  p13.fasta  p16.fasta  p19.fasta  p21.fasta  p24.fasta  p27.fasta  p2.fasta   p3.fasta  p6.fasta  p9.fasta
+p11.fasta  p14.fasta  p17.fasta  p1.fasta   p22.fasta  p25.fasta  p28.fasta  p30.fasta  p4.fasta  p7.fasta
+p12.fasta  p15.fasta  p18.fasta  p20.fasta  p23.fasta  p26.fasta  p29.fasta  p31.fasta  p5.fasta  p8.fasta
 
 $ cat p1.fasta 
 >loki
@@ -686,7 +688,7 @@ EV
 #### 3. Insert loki to the tree-of-life
 
 ```
-$ PhySpeTree autobuild -i 191speciesnames.txt -o extend_pro_loki -e highly_conserved_protein_loki --ehcp -t 6
+$ PhySpeTree autobuild -i 191speciesnames.txt -o extend_pro_loki -e highly_conserved_protein_loki --ehcp -t 6 --fasttree
 Loading organisms names success.....
 
 The result are store in:extend_pro_loki
@@ -709,7 +711,7 @@ Now loading data and constructing phylogenetic tree......
 
 ![extend_pro](img/extend_pro.png)
 
-### Extend species tree by the HCP method (more than one organisms)
+### Extend species tree by the HCP method (more than one organism)
 
 * The user can extend the specie tree by more than one organism. The user only needs to prepare the new HCP proteins and stored in
   each highly conserved proteins files (FASTA formate) one by one. The follows is an example, we reconstructed tree-of-life
@@ -720,16 +722,10 @@ Now loading data and constructing phylogenetic tree......
 ```bash
 $ wget "https://yangfangs.github.io/physpetools/example/191speciesnames_remove_ath.txt"
 
---2016-10-30 16:36:48--  https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz
-Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
-Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 1810 (1.8K) [application/octet-stream]
-Saving to: ‘highly_conserved_protein_loki.tar.gz’
+191speciesnames_remove_ath.tx 100%[================================================>]     769  --.-KB/s  in 0s
 
-highly_conserved_protein_lok 100%[==============================================>]   1.77K  --.-KB/s    in 0s
+2020-07-14 20:47:05 (14.7 MB/s) -  “191speciesnames_remove_ath.txt” saved [769/769])
 
-2016-10-30 16:36:50 (623 MB/s) - ‘highly_conserved_protein_loki.tar.gz’ saved [1810/1810]
 ```
 
 
@@ -768,20 +764,14 @@ Download the example file:
 ```bash
 $ wget "https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki_ath.tar.gz"
 
---2016-10-30 16:36:48--  https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz
-Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
-Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 1810 (1.8K) [application/octet-stream]
-Saving to: ‘highly_conserved_protein_loki.tar.gz’
+highly_conserved_protein_loki 100%[================================================>]  11.60K  --.-KB/s  用时 0.001s
 
-highly_conserved_protein_lok 100%[==============================================>]   1.77K  --.-KB/s    in 0s
+2020-07-14 20:49:21 (8.34 MB/s) - “highly_conserved_protein_loki_ath.tar.gz” saved [11879/11879])
 
-2016-10-30 16:36:50 (623 MB/s) - ‘highly_conserved_protein_loki.tar.gz’ saved [1810/1810]
 ```
 
 ```bash
-$ tar -zxvf highly_conserved_protein_loki.tar.gz
+$ tar -zxvf highly_conserved_protein_loki_ath.tar.gz
 
 highly_conserved_protein_loki/
 highly_conserved_protein_loki/p1.fasta
@@ -792,9 +782,11 @@ highly_conserved_protein_loki/p5.fasta
 highly_conserved_protein_loki/p6.fasta
 ......
 
-$ cd extend_pro_loki
+$ cd highly_conserved_protein_loki
 $ ls
-p1.fasta  p2.fasta  p3.fasta  p4.fasta  p5.fasta  p6.fast
+p10.fasta  p13.fasta  p16.fasta  p19.fasta  p21.fasta  p24.fasta  p27.fasta  p2.fasta   p3.fasta  p6.fasta  p9.fasta
+p11.fasta  p14.fasta  p17.fasta  p1.fasta   p22.fasta  p25.fasta  p28.fasta  p30.fasta  p4.fasta  p7.fasta
+p12.fasta  p15.fasta  p18.fasta  p20.fasta  p23.fasta  p26.fasta  p29.fasta  p31.fasta  p5.fasta  p8.fasta
 
 $ cat p1.fasta
 >loki
@@ -808,7 +800,7 @@ EV
 #### 3. Insert loki and ath to the tree-of-life
 
 ```
-$ PhySpeTree autobuild -i 191speciesnames_remove_ath.txt -o extend_pro_loki_ath -e highly_conserved_protein_loki_ath --ehcp -t 6 --fastree
+$ PhySpeTree autobuild -i 191speciesnames_remove_ath.txt -o extend_pro_loki_ath -e highly_conserved_protein_loki_ath --ehcp -t 6 --fasttree
 Loading organisms names success.....
 
 The result are store in:extend_pro_loki
