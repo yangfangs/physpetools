@@ -502,7 +502,7 @@ Here we show how to use PhySpeTree to expand insert a a pre-built species tree w
 
 #### 1. Manually prepare the SSU rRNA sequence
 
-We prepare the SSU rRNA sequence of loki and save it in a FASTA format file, for example [extend_rna_olki.fasta][5].
+We prepare the SSU rRNA sequence of loki and save it in a FASTA format file, for example [extend_rna_loki.fasta][5].
 
 Download the example file:
 
@@ -524,7 +524,7 @@ extend_rna_loki.fasta        100%[==============================================
 check:
 
 ```
-$ cat extend_rna_olki.fasta
+$ cat extend_rna_loki.fasta
 >loki
 GAGAUGGGUACUGAGACAACGACCCAGGCCUUACGAGGCGCAGCAGGCGCGAAACCUCCGCAAUACACGAAAGUGUGACG
 GGGUUACCCAAAGUGUUCAAUUAUGAACUGUGGUAGGUGAGUAAUGUUCCCUACUAGAAAGGAGAGGGCAAGGCUGGUGC
@@ -627,6 +627,7 @@ $ PhySpeTree check -i 191speciesnames.txt --ehcp
 'Ribosomal protein S7' ----------------------------------> p5.fasta
 
 'Arginyl-tRNA synthetase' ----------------------------------> p6.fasta
+......
 
 Checked extend highly conserved proteins is completed.
 Checked result was store in check/PhySpeTree_echp_extend.txt
@@ -635,7 +636,10 @@ Checked result was store in check/PhySpeTree_echp_extend.txt
 
 #### 2. Manually prepare HCP sequences
 
-According to `check` results, we prepare 6 classes of HCP and store the sequences (p1 ~ p6) into FASTA format files, for example [highly_conserved_protein_loki][6]
+* According to `check` results, we prepare 6 classes of HCP and store the sequences (p1 ~ p31) into FASTA format files, for example [highly_conserved_protein_loki][6]
+
+* Tip: if we can not retrieve all highly conserved proteins we can use any single letter (for example M) instead of it.
+   These incomplete conserved areas will be trimmed out during the reconstructed tree of the downstream.
 
 Download the example file:
 
@@ -664,6 +668,7 @@ highly_conserved_protein_loki/p3.fasta
 highly_conserved_protein_loki/p4.fasta
 highly_conserved_protein_loki/p5.fasta
 highly_conserved_protein_loki/p6.fasta
+......
 
 $ cd extend_pro_loki
 $ ls
@@ -703,6 +708,126 @@ Now loading data and constructing phylogenetic tree......
 #### 4. Annotate and view the tree
 
 ![extend_pro](img/extend_pro.png)
+
+### Extend species tree by the HCP method (more than one organisms)
+
+* The user can extend the specie tree by more than one organism. The user only needs to prepare the new HCP proteins and stored in
+  each highly conserved proteins files (FASTA formate) one by one. The follows is an example, we reconstructed tree-of-life
+  (removed ath) and then we extend the tree-of-life with two organisms (ath and loki).
+
+#### 1. Download the example input data (191 species tree remove ath).
+
+```bash
+$ wget "https://yangfangs.github.io/physpetools/example/191speciesnames_remove_ath.txt"
+
+--2016-10-30 16:36:48--  https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1810 (1.8K) [application/octet-stream]
+Saving to: ‘highly_conserved_protein_loki.tar.gz’
+
+highly_conserved_protein_lok 100%[==============================================>]   1.77K  --.-KB/s    in 0s
+
+2016-10-30 16:36:50 (623 MB/s) - ‘highly_conserved_protein_loki.tar.gz’ saved [1810/1810]
+```
+
+
+#### 2. Identify classes of HCP
+
+Use the `check` module to identify what classes of HCP should be prepapred.
+
+```
+$ PhySpeTree check -i 191speciesnames_remove_ath.txt --ehcp
+'Ribosomal protein L1' ----------------------------------> p1.fasta
+
+'Leucyl-tRNA synthetase' ----------------------------------> p2.fasta
+
+'Ribosomal protein L14' ----------------------------------> p3.fasta
+
+'Ribosomal protein L5' ----------------------------------> p4.fasta
+
+'Ribosomal protein S7' ----------------------------------> p5.fasta
+
+'Arginyl-tRNA synthetase' ----------------------------------> p6.fasta
+......
+
+Checked extend highly conserved proteins is completed.
+Checked result was store in check/PhySpeTree_echp_extend.txt
+......
+
+```
+
+#### 3. Manually prepare HCP sequences
+
+* According to `check` results, we prepare 6 classes of HCP and store the sequences (p1 ~ p31) into FASTA format files, for example [highly_conserved_protein_loki][7]
+* Tip: if we can not retrieve all highly conserved proteins we can use any single letter (for example M) instead of it.
+   These incomplete conserved areas will be trimmed out during the reconstructed tree of the downstream.
+Download the example file:
+
+```bash
+$ wget "https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki_ath.tar.gz"
+
+--2016-10-30 16:36:48--  https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz
+Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
+Connecting to yangfangs.github.io (yangfangs.github.io)|151.101.48.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1810 (1.8K) [application/octet-stream]
+Saving to: ‘highly_conserved_protein_loki.tar.gz’
+
+highly_conserved_protein_lok 100%[==============================================>]   1.77K  --.-KB/s    in 0s
+
+2016-10-30 16:36:50 (623 MB/s) - ‘highly_conserved_protein_loki.tar.gz’ saved [1810/1810]
+```
+
+```bash
+$ tar -zxvf highly_conserved_protein_loki.tar.gz
+
+highly_conserved_protein_loki/
+highly_conserved_protein_loki/p1.fasta
+highly_conserved_protein_loki/p2.fasta
+highly_conserved_protein_loki/p3.fasta
+highly_conserved_protein_loki/p4.fasta
+highly_conserved_protein_loki/p5.fasta
+highly_conserved_protein_loki/p6.fasta
+......
+
+$ cd extend_pro_loki
+$ ls
+p1.fasta  p2.fasta  p3.fasta  p4.fasta  p5.fasta  p6.fast
+
+$ cat p1.fasta
+>loki
+MKVDDNLLKQSLNAAIDFSVRKKEGFKDRVRKFDETIDLIINIKDVNLNDPKNRIDKEII
+LTNEIVEEEKLNICVIASGEILLEAKKAGVETLDRDALIKLNNEEKKHKKKFAKKYEFFI
+VEDKMMRDVARYLARFLGPLGKMPKPFPTGYGIISSPGDLRTAVERYKKVIRIQMKKQPI
+IFAKIGKKSMEIDRLFDNMKTVIDFIADQMPHKFNNFKSMYLKSSMGKPIKVTEEFLKSL
+EV
+```
+
+#### 3. Insert loki and ath to the tree-of-life
+
+```
+$ PhySpeTree autobuild -i 191speciesnames_remove_ath.txt -o extend_pro_loki_ath -e highly_conserved_protein_loki_ath --ehcp -t 6 --fastree
+Loading organisms names success.....
+
+The result are store in:extend_pro_loki
+
+Now loading data and constructing phylogenetic tree......
+2016-10-30 18:19:53,951 Checking organisms INFO: The species: ges can't match in KEGG protein index database
+2016-10-30 18:19:53,951 Checking organisms WARNING: These species can't match in KEGG protein index database so removed and reconstruct phylogenetic tree.
+2016-10-30 18:19:53,951 KEGG INDEX DB INFO: Read organisms names success
+2016-10-30 18:20:18,870 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L1' was successful store in p1.fasta file
+2016-10-30 18:20:46,573 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Leucyl-tRNA synthetase' was successful store in p2.fasta file
+2016-10-30 18:21:11,401 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L14' was successful store in p3.fasta file
+2016-10-30 18:21:36,078 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L5' was successful store in p4.fasta file
+2016-10-30 18:22:00,454 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein S7' was successful store in p5.fasta file
+2016-10-30 18:22:27,895 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Arginyl-tRNA synthetase' was successful store in p6.fasta file
+2016-10-30 18:22:27,895 KEGG INDEX DB INFO: Retrieve from KEGG database 6 highly conserved proteins
+......
+```
+
+
 
 ## Run PhySpeTree in other operating systems
 
@@ -788,3 +913,4 @@ log.log  organism_example_list.txt  Outdata  temp
 [4]: example/52plantsnames.txt
 [5]: example/extend_rna_loki.fasta
 [6]: example/highly_conserved_protein_loki.tar.gz
+[7]: example/highly_conserved_protein_loki_ath.tar.gz
