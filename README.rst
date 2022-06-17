@@ -479,6 +479,7 @@ Use `$ tar -zxvf database16s.tar.gz` decompress the download database.
 
 Use `-db` option setting the absolute path to decompression directory.
 
+**Cite**: Fang, Y., Liu, C., Lin, J. et al. PhySpeTree: an automated pipeline for reconstructing phylogenetic species trees. BMC Evol Biol 19, 219 (2019). https://doi.org/10.1186/s12862-019-1541-x 
 
 .. |PyPI version| image:: https://img.shields.io/pypi/v/PhySpeTree.svg?style=flat-square
    :target: https://pypi.python.org/pypi/PhySpeTree
