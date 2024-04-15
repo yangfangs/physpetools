@@ -9,85 +9,69 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Tutorial - Physpetools</title>
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="..">Physpetools</a>
-                </div>
+                <a class="navbar-brand" href="..">Physpetools</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="..">Home</a>
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
                             </li>
-                            <li >
-                                <a href="../install/">Install</a>
+                            <li class="navitem">
+                                <a href="../install/" class="nav-link">Install</a>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documents <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Documents <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li >
-    <a href="../usage/">Usage</a>
+<li>
+    <a href="../usage/" class="dropdown-item">Usage</a>
 </li>
                                     
-<li class="active">
-    <a href="./">Tutorial</a>
+<li>
+    <a href="./" class="dropdown-item active">Tutorial</a>
 </li>
                                 </ul>
                             </li>
-                            <li >
-                                <a href="../faq/">FAQ</a>
+                            <li class="navitem">
+                                <a href="../faq/" class="nav-link">FAQ</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../usage/">
+                            <li class="nav-item">
+                                <a rel="prev" href="../usage/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../faq/">
+                            <li class="nav-item">
+                                <a rel="next" href="../faq/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://github.com/xiaofeiyangyang/physpetools/edit/master/docs/tutorial.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            <li class="nav-item">
+                                <a href="https://github.com/xiaofeiyangyang/physpetools/edit/master/docs/tutorial.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -95,16 +79,42 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#physpetree-tutorial">PhySpeTree Tutorial</a></li>
-            <li><a href="#automatically-reconstruct-the-tree-of-life">Automatically reconstruct the tree-of-life</a></li>
-            <li><a href="#automatically-reconstruct-plantae-species-tree">Automatically reconstruct Plantae species tree</a></li>
-            <li><a href="#extend-species-tree-with-new-organisms">Extend species tree with new organisms</a></li>
-            <li><a href="#run-physpetree-in-other-operating-systems">Run PhySpeTree in other operating systems</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#physpetree-tutorial" class="nav-link">PhySpeTree Tutorial</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#automatically-reconstruct-the-tree-of-life" class="nav-link">Automatically reconstruct the tree-of-life</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#automatically-reconstruct-plantae-species-tree" class="nav-link">Automatically reconstruct Plantae species tree</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#extend-species-tree-with-new-organisms" class="nav-link">Extend species tree with new organisms</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#run-physpetree-in-other-operating-systems" class="nav-link">Run PhySpeTree in other operating systems</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="physpetree-tutorial">PhySpeTree Tutorial</h1>
 <h2 id="automatically-reconstruct-the-tree-of-life">Automatically reconstruct the tree-of-life</h2>
@@ -115,7 +125,7 @@
 <p>The main concept of the HCP method is to concatenate highly conserved proteins into a supermatrix and then build species tree. Here we prepared <a href="../faq/#Physpe_reconstruct_phylogenetic_tree_database">31 classes of HCP</a> to build the tree.</p>
 <h4 id="1-prepare-input-species">1. Prepare input species</h4>
 <p>Download 191 <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG</a> abbreviated species names:</p>
-<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/191speciesnames.txt&quot;
+<pre><code class="language-bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/191speciesnames.txt&quot;
 
 --2016-10-30 15:26:06--  https://yangfangs.github.io/physpetools/example/191speciesnames.txt
 Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
@@ -137,7 +147,6 @@ tac
 afu
 .....
 </code></pre>
-
 <h4 id="2-reconstruct-the-species-tree">2. Reconstruct the species tree</h4>
 <p>Use <code>--hcp</code> option to specify the HCP method.</p>
 <pre><code>$ PhySpeTree autobuild -i 191speciesnames.txt -o 191_pro --hcp
@@ -159,7 +168,6 @@ Now loading data and constructing phylogenetic tree......
 2016-10-30 15:34:41,123 KEGG INDEX DB INFO: Retrieve from KEGG database 6 highly conserved proteins
 ......
 </code></pre>
-
 <h4 id="3-get-the-output-tree">3. Get the output tree</h4>
 <p><img alt="191_species_rna" src="../img/191_species_pro.png" /></p>
 <h4 id="4-annotate-and-view-the-tree">4. Annotate and view the tree</h4>
@@ -194,7 +202,6 @@ mka     Methanopyrus kandleri
 mmp     Methanococcus maripaludis S2
 .....
 </code></pre>
-
 <p><img alt="191_species_rna_full_name" src="../img/191_species_pro_full_name.png" /></p>
 <ul>
 <li>Use the <code>-a</code> option to color branch ranges by phylum (default):</li>
@@ -229,14 +236,13 @@ mmp     range   #996433 Archaea
 mja     range   #996433 Archaea
 .....
 </code></pre>
-
 <p><img alt="191_species_rna_full_color" src="../img/191_species_pro_full_name_color.png" /></p>
 <h3 id="reconstruct-the-tree-of-life-by-the-ssu-rrna-method">Reconstruct the tree-of-life by the SSU rRNA method</h3>
 <p><strong>Concept</strong></p>
 <p><img alt="physpe_concept_hcp" src="../img/physpe_concept_rna.png" /></p>
 <p>PhySpeTree provides <code>--srna</code> option to reconstruct species trees by the SSU rRNA method. The concept of this method is to align SSU rRNA sequences and then reconstruct the specie tree.</p>
 <h4 id="1-prepare-input-species_1">1. Prepare input species</h4>
-<pre><code class="bash">
+<pre><code class="language-bash">
 $ wget &quot;https://yangfangs.github.io/physpetools/example/191speciesnames.txt&quot;
 
 --2016-10-30 15:26:06--  https://yangfangs.github.io/physpetools/example/191speciesnames.txt
@@ -257,7 +263,6 @@ tac
 afu
 .....
 </code></pre>
-
 <h4 id="2-reconstruct-the-species-tree_1">2. Reconstruct the species tree</h4>
 <pre><code>$ PhySpeTree autobuild -i 191speciesnames.txt -o 191_rna --srna
 Loading organisms names success.....
@@ -304,7 +309,6 @@ Now loading data and constructing phylogenetic tree......
 2016-10-30 15:40:41,282 SSU rRNA DB INFO: Retrieve and download of organism 'mac' SSU rRNA sequence was successful
 ......
 </code></pre>
-
 <h4 id="3-get-the-output-tree_1">3. Get the output tree</h4>
 <p><img alt="191_species_rna" src="../img/191_species_rna.png" /></p>
 <h4 id="4-annotate-and-view-the-tree_1">4. Annotate and view the tree</h4>
@@ -338,7 +342,6 @@ mka     Methanopyrus kandleri
 mmp     Methanococcus maripaludis S2
 .....
 </code></pre>
-
 <p><img alt="191_species_rna_full_name" src="../img/191_species_rna_full_name.png" /></p>
 <p>Color branch ranges by phylum:</p>
 <pre><code>$ PhySpeTree iview -i 191speciesnames.txt -o iview --range -a phylum
@@ -371,7 +374,6 @@ mmp     range   #996433 Archaea
 mja     range   #996433 Archaea
 .....
 </code></pre>
-
 <p><img alt="191_species_rna_full_color" src="../img/191_species_rna_full_name_color.png" /></p>
 <p>Color branch ranges by class:</p>
 <pre><code>$ PhySpeTree iview -i 191speciesnames.txt --range -a class
@@ -408,12 +410,11 @@ tps     range   #7DD2ED Stramenopiles
 cho     range   #99A01A Alveolates
 .....
 </code></pre>
-
 <p><img alt="191_species_rna_full_color_class" src="../img/191_species_rna_full_name_color_class.png" /></p>
 <h2 id="automatically-reconstruct-plantae-species-tree">Automatically reconstruct <em>Plantae</em> species tree</h2>
 <p>Here we use PhySpeTree to automatically reconstructed 52 plants species tree by the HCP method. </p>
 <h4 id="1-prepare-input-species_2">1. Prepare input species</h4>
-<pre><code class="bash">
+<pre><code class="language-bash">
 $ wget &quot;https://yangfangs.github.io/physpetools/example/52plantsnames.txt&quot;
 
 --2016-10-30 15:44:25--  https://yangfangs.github.io/physpetools/example/52plantsnames.txt
@@ -443,7 +444,6 @@ cme
 cmo
 .....
 </code></pre>
-
 <h4 id="2-reconstruct-the-plantae-species-tree">2. Reconstruct the <em>Plantae</em> species tree</h4>
 <pre><code>$ PhySpeTree autobuild -i 52plantsnames.txt -o 52plant_pro --hcp -t 6
 
@@ -474,7 +474,6 @@ Now loading data and constructing phylogenetic tree......
 2016-10-30 15:50:19,753 KEGG INDEX DB INFO: Retrieve from KEGG database 18 highly conserved proteins
 ......
 </code></pre>
-
 <h4 id="3-get-the-output-tree_2">3. Get the output tree</h4>
 <p><img alt="52_plants_pro" src="../img/52_plants_pro.png" /></p>
 <h4 id="4-annotate-and-view-the-tree_2">4. Annotate and view the tree</h4>
@@ -509,7 +508,6 @@ csv     Cucumis sativus (cucumber)
 cvr     Chlorella variabilis
 .....
 </code></pre>
-
 <p><img alt="52_plants_pro_full_name" src="../img/52_plants_pro_full_name.png" /></p>
 <p>Color branch ranges by class:</p>
 <pre><code>$ PhySpeTree iview -i 52plantsnames.txt -o iview --range -a phylum
@@ -539,7 +537,6 @@ cre     range   #784CE5 Green algae
 csl     range   #784CE5 Green algae
 .....
 </code></pre>
-
 <p><img alt="52_plants_pro_full_name_color" src="../img/52_plants_pro_full_name_color.png" /></p>
 <h2 id="extend-species-tree-with-new-organisms">Extend species tree with new organisms</h2>
 <p>Here we show how to use PhySpeTree to expand insert a a pre-built species tree with new organisms. We insert the newly identified organism <em>Lokiarchaeum sp. GC14_75</em> (loki) to the tree-of-life.</p>
@@ -549,7 +546,7 @@ csl     range   #784CE5 Green algae
 <h4 id="1-manually-prepare-the-ssu-rrna-sequence">1. Manually prepare the SSU rRNA sequence</h4>
 <p>We prepare the SSU rRNA sequence of loki and save it in a FASTA format file, for example <a href="../example/extend_rna_loki.fasta">extend_rna_loki.fasta</a>.</p>
 <p>Download the example file:</p>
-<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/extend_rna_loki.fasta&quot;
+<pre><code class="language-bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/extend_rna_loki.fasta&quot;
 
 --2016-10-30 15:54:38--  https://yangfangs.github.io/physpetools/example/extend_rna_loki.fasta
 Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.24.133
@@ -562,7 +559,6 @@ extend_rna_loki.fasta        100%[==============================================
 
 2016-10-30 15:54:39 (553 MB/s) - ‘extend_rna_loki.fasta’ saved [1200/1200]
 </code></pre>
-
 <p>check:</p>
 <pre><code>$ cat extend_rna_loki.fasta
 &gt;loki
@@ -582,7 +578,6 @@ GGCUGUAACCCGCCGACAUGAACGUGGAAUCCCUAGUAAUCGUGUGUCAUCAUCGCACGGUGAAUACGUCUCUGCUCCUU
 GCACACACCGCCCGUCGCUCCAUCCGAGUGUGCUAAAAAUGAGGUAUGGUCAGUCUGGUCGUAUCGAAUUUCUAGUAUGC
 GAGGGGGGAGAAGUCGUAACAAGGUAGCCGUAGGGGAACCUGCGGCUGGAUCACCUCCU
 </code></pre>
-
 <h4 id="2-insert-loki-to-the-tree-of-life">2. Insert loki to the tree-of-life</h4>
 <p>Update the tree-of-life by combining the <code>--esrna</code> and <code>-e</code> options.</p>
 <pre><code>$ PhySpeTree autobuild -i 191speciesnames.txt -o extend_rna -e extend_rna_loki.fasta --esrna -t 6
@@ -637,7 +632,6 @@ Now loading data and constructing phylogenetic tree......
 2016-10-30 16:10:07,303 SSU rRNA DB INFO: Retrieve and download of organism 'mka' SSU rRNA sequence was successful
 .....
 </code></pre>
-
 <h4 id="3-annotate-and-view-the-tree">3. Annotate and view the tree</h4>
 <p><img alt="extend_rna" src="../img/extend_rna.png" /></p>
 <h3 id="extend-species-tree-by-the-hcp-method">Extend species tree by the HCP method</h3>
@@ -665,7 +659,6 @@ Checked extend highly conserved proteins is completed.
 Checked result was store in check/PhySpeTree_echp_extend.txt
 ......
 </code></pre>
-
 <h4 id="2-manually-prepare-hcp-sequences">2. Manually prepare HCP sequences</h4>
 <ul>
 <li>
@@ -677,7 +670,7 @@ Checked result was store in check/PhySpeTree_echp_extend.txt
 </li>
 </ul>
 <p>Download the example file:</p>
-<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz&quot;
+<pre><code class="language-bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz&quot;
 
 --2016-10-30 16:36:48--  https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki.tar.gz
 Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
@@ -690,8 +683,7 @@ highly_conserved_protein_lok 100%[==============================================
 
 2016-10-30 16:36:50 (623 MB/s) - ‘highly_conserved_protein_loki.tar.gz’ saved [1810/1810]
 </code></pre>
-
-<pre><code class="bash">$ tar -zxvf highly_conserved_protein_loki.tar.gz
+<pre><code class="language-bash">$ tar -zxvf highly_conserved_protein_loki.tar.gz
 
 highly_conserved_protein_loki/
 highly_conserved_protein_loki/p1.fasta
@@ -716,7 +708,6 @@ VEDKMMRDVARYLARFLGPLGKMPKPFPTGYGIISSPGDLRTAVERYKKVIRIQMKKQPI
 IFAKIGKKSMEIDRLFDNMKTVIDFIADQMPHKFNNFKSMYLKSSMGKPIKVTEEFLKSL
 EV
 </code></pre>
-
 <h4 id="3-insert-loki-to-the-tree-of-life">3. Insert loki to the tree-of-life</h4>
 <pre><code>$ PhySpeTree autobuild -i 191speciesnames.txt -o extend_pro_loki -e highly_conserved_protein_loki --ehcp -t 6 --fasttree
 Loading organisms names success.....
@@ -736,7 +727,6 @@ Now loading data and constructing phylogenetic tree......
 2016-10-30 18:22:27,895 KEGG INDEX DB INFO: Retrieve from KEGG database 6 highly conserved proteins
 ......
 </code></pre>
-
 <h4 id="4-annotate-and-view-the-tree_3">4. Annotate and view the tree</h4>
 <p><img alt="extend_pro" src="../img/extend_pro.png" /></p>
 <h3 id="extend-species-tree-by-the-hcp-method-more-than-one-organism">Extend species tree by the HCP method (more than one organism)</h3>
@@ -746,14 +736,13 @@ Now loading data and constructing phylogenetic tree......
   (removed ath) and then we extend the tree-of-life with two organisms (ath and loki).</li>
 </ul>
 <h4 id="1-download-the-example-input-data-191-species-tree-remove-ath">1. Download the example input data (191 species tree remove ath).</h4>
-<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/191speciesnames_remove_ath.txt&quot;
+<pre><code class="language-bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/191speciesnames_remove_ath.txt&quot;
 
 191speciesnames_remove_ath.tx 100%[================================================&gt;]     769  --.-KB/s  in 0s
 
 2020-07-14 20:47:05 (14.7 MB/s) -  “191speciesnames_remove_ath.txt” saved [769/769])
 
 </code></pre>
-
 <h4 id="2-identify-classes-of-hcp">2. Identify classes of HCP</h4>
 <p>Use the <code>check</code> module to identify what classes of HCP should be prepapred.</p>
 <pre><code>$ PhySpeTree check -i 191speciesnames_remove_ath.txt --ehcp
@@ -775,7 +764,6 @@ Checked result was store in check/PhySpeTree_echp_extend.txt
 ......
 
 </code></pre>
-
 <h4 id="3-manually-prepare-hcp-sequences">3. Manually prepare HCP sequences</h4>
 <ul>
 <li>According to <code>check</code> results, we prepare 6 classes of HCP and store the sequences (p1 ~ p31) into FASTA format files, for example <a href="../example/highly_conserved_protein_loki_ath.tar.gz">highly_conserved_protein_loki_ath</a></li>
@@ -783,15 +771,14 @@ Checked result was store in check/PhySpeTree_echp_extend.txt
    These incomplete conserved areas will be trimmed out during the reconstructed tree of the downstream.
 Download the example file:</li>
 </ul>
-<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki_ath.tar.gz&quot;
+<pre><code class="language-bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/highly_conserved_protein_loki_ath.tar.gz&quot;
 
 highly_conserved_protein_loki 100%[================================================&gt;]  11.60K  --.-KB/s  用时 0.001s
 
 2020-07-14 20:49:21 (8.34 MB/s) - “highly_conserved_protein_loki_ath.tar.gz” saved [11879/11879])
 
 </code></pre>
-
-<pre><code class="bash">$ tar -zxvf highly_conserved_protein_loki_ath.tar.gz
+<pre><code class="language-bash">$ tar -zxvf highly_conserved_protein_loki_ath.tar.gz
 
 highly_conserved_protein_loki/
 highly_conserved_protein_loki/p1.fasta
@@ -816,7 +803,6 @@ VEDKMMRDVARYLARFLGPLGKMPKPFPTGYGIISSPGDLRTAVERYKKVIRIQMKKQPI
 IFAKIGKKSMEIDRLFDNMKTVIDFIADQMPHKFNNFKSMYLKSSMGKPIKVTEEFLKSL
 EV
 </code></pre>
-
 <h4 id="3-insert-loki-and-ath-to-the-tree-of-life">3. Insert loki and ath to the tree-of-life</h4>
 <pre><code>$ PhySpeTree autobuild -i 191speciesnames_remove_ath.txt -o extend_pro_loki_ath -e highly_conserved_protein_loki_ath --ehcp -t 6 --fasttree
 Loading organisms names success.....
@@ -836,7 +822,6 @@ Now loading data and constructing phylogenetic tree......
 2016-10-30 18:22:27,895 KEGG INDEX DB INFO: Retrieve from KEGG database 6 highly conserved proteins
 ......
 </code></pre>
-
 <h2 id="run-physpetree-in-other-operating-systems">Run PhySpeTree in other operating systems</h2>
 <h3 id="1-install-the-docker-in-your-operating-system">1. Install the Docker in your operating system</h3>
 <ul>
@@ -845,32 +830,29 @@ Now loading data and constructing phylogenetic tree......
 <li>For Mac OS, you can <a href="https://docs.docker.com/docker-for-mac/install/">install Docker for Mac</a>.</li>
 </ul>
 <h3 id="2-pull-the-physpetree-image">2. Pull the PhySpeTree image</h3>
-<pre><code class="bash">$ docker pull yangfangs/physpetree:v0.3.4
+<pre><code class="language-bash">$ docker pull yangfangs/physpetree:v0.3.4
 [yangfang@localhost ~]$ docker pull yangfangs/physpetree:v0.3.4
 v0.3.4: Pulling from yangfangs/physpetree
 Digest: sha256:2fef685db22bd18ae0595884bfd6ba7409b15fbb6b7c579e1817ac007cc46cfe
 Status: Downloaded newer image for yangfangs/physpetree:v0.3.4
 </code></pre>
-
 <h3 id="3-check-physpetree-image">3. check PhySpeTree image</h3>
-<pre><code class="bash">[yangfang@localhost ~]$ docker images
+<pre><code class="language-bash">[yangfang@localhost ~]$ docker images
 REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
 yangfangs/physpetree   v0.3.4              ebcdaff79f7c        41 hours ago        683MB
 </code></pre>
-
 <h3 id="4-run-physpetree-image">4. run PhySpeTree image</h3>
 <ul>
 <li>You need to run docker with an interactive bash and mount it in a local directory with a working directory in docker (PhySpeTree_work_dir).</li>
 </ul>
-<pre><code class="bash">[yangfang@localhost ~]$ docker run -it -v /home/yangfang/work_dir/:/PhySpeTree_work_dir yangfangs/physpetree:v0.3.4 bash
+<pre><code class="language-bash">[yangfang@localhost ~]$ docker run -it -v /home/yangfang/work_dir/:/PhySpeTree_work_dir yangfangs/physpetree:v0.3.4 bash
 root@2d68776ac9ad:/PhySpeTree_work_dir#
 </code></pre>
-
 <h3 id="5-run-physpetree-in-docker">5. Run PhySpeTree in Docker</h3>
 <ul>
 <li>Download test file</li>
 </ul>
-<pre><code class="bash">root@2d68776ac9ad:/PhySpeTree_work_dir# wget &quot;https://yangfangs.github.io/physpetools/example/organism_example_list.txt&quot;
+<pre><code class="language-bash">root@2d68776ac9ad:/PhySpeTree_work_dir# wget &quot;https://yangfangs.github.io/physpetools/example/organism_example_list.txt&quot;
 --2018-11-21 02:28:28--  https://yangfangs.github.io/physpetools/example/organism_example_list.txt
 Resolving yangfangs.github.io (yangfangs.github.io)... 185.199.108.153, 185.199.109.153, 185.199.111.153, ...
 Connecting to yangfangs.github.io (yangfangs.github.io)|185.199.108.153|:443... connected.
@@ -883,11 +865,10 @@ organism_example_list.txt    100%[==============================================
 2018-11-21 02:28:30 (2.00 MB/s) - 'organism_example_list.txt' saved [39/39]
 
 </code></pre>
-
 <ul>
 <li>run PhySpeTree</li>
 </ul>
-<pre><code class="bash">root@2d68776ac9ad:/PhySpeTree_work_dir# PhySpeTree autobuild -i organism_example_list.txt --hcp
+<pre><code class="language-bash">root@2d68776ac9ad:/PhySpeTree_work_dir# PhySpeTree autobuild -i organism_example_list.txt --hcp
 Loading organism's names success.....
 
 The result are store in:Outdata
@@ -904,7 +885,6 @@ Now loading data and constructing phylogenetic tree......
 2018-11-21 02:30:36,866 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L13
 .....
 </code></pre>
-
 <ul>
 <li>All output result are in local directory, named <code>`work_dir</code></li>
 </ul>
@@ -912,48 +892,48 @@ Now loading data and constructing phylogenetic tree......
 [yangfang@localhost work_dir]$ ls
 log.log  organism_example_list.txt  Outdata  temp
 </code></pre></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
         <script>
             var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">

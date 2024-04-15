@@ -9,85 +9,69 @@
         
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Usage - Physpetools</title>
-        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
         <link href="../css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/base.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
-        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-        <script src="../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../js/bootstrap-3.0.3.min.js" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
     </head>
 
     <body>
-
-        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-
-                <!-- Collapsed navigation -->
-                <div class="navbar-header">
-                    <!-- Expander button -->
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="..">Physpetools</a>
-                </div>
+                <a class="navbar-brand" href="..">Physpetools</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Expanded navigation -->
-                <div class="navbar-collapse collapse">
+                <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li >
-                                <a href="..">Home</a>
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
                             </li>
-                            <li >
-                                <a href="../install/">Install</a>
+                            <li class="navitem">
+                                <a href="../install/" class="nav-link">Install</a>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Documents <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Documents <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li class="active">
-    <a href="./">Usage</a>
+<li>
+    <a href="./" class="dropdown-item active">Usage</a>
 </li>
                                     
-<li >
-    <a href="../tutorial/">Tutorial</a>
+<li>
+    <a href="../tutorial/" class="dropdown-item">Tutorial</a>
 </li>
                                 </ul>
                             </li>
-                            <li >
-                                <a href="../faq/">FAQ</a>
+                            <li class="navitem">
+                                <a href="../faq/" class="nav-link">FAQ</a>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li >
-                                <a rel="next" href="../install/">
+                            <li class="nav-item">
+                                <a rel="prev" href="../install/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li >
-                                <a rel="prev" href="../tutorial/">
+                            <li class="nav-item">
+                                <a rel="next" href="../tutorial/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
-                            <li>
-                                <a href="https://github.com/xiaofeiyangyang/physpetools/edit/master/docs/usage.md"><i class="fa fa-github"></i> Edit on GitHub</a>
+                            <li class="nav-item">
+                                <a href="https://github.com/xiaofeiyangyang/physpetools/edit/master/docs/usage.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -95,79 +79,110 @@
         </div>
 
         <div class="container">
-                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
-    <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#usage-and-examples">Usage and Examples</a></li>
-            <li><a href="#autobuild">autobuild</a></li>
-            <li><a href="#build">build</a></li>
-            <li><a href="#combine">combine</a></li>
-            <li><a href="#using-supertree-option">Using --supertree option</a></li>
-            <li><a href="#iview">iview</a></li>
-            <li><a href="#check">check</a></li>
-    </ul>
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#usage-and-examples" class="nav-link">Usage and Examples</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#autobuild" class="nav-link">autobuild</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#build" class="nav-link">build</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#combine" class="nav-link">combine</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#using-supertree-option" class="nav-link">Using --supertree option</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#iview" class="nav-link">iview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#check" class="nav-link">check</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
 </div></div>
-                <div class="col-md-9" role="main">
+                    <div class="col-md-9" role="main">
 
 <h1 id="usage-and-examples">Usage and Examples</h1>
 <h2 id="autobuild">autobuild</h2>
 <p>The input of <code>autobuild</code> module is a TXT file containing <a href="http://www.genome.jp/kegg/catalog/org_list.html">KEGG</a> abbreviated species names, for example <a href="../example/organism_example_list.txt">organism_example_list</a>.</p>
-<pre><code class="bash">$ PhySpeTree -i autobuild organism_example_list.txt [options]*
+<pre><code class="language-bash">$ PhySpeTree -i autobuild organism_example_list.txt [options]*
 </code></pre>
-
 <h3 id="options">options</h3>
 <table>
 <thead>
 <tr>
-<th align="left">option</th>
-<th align="left">Description</th>
+<th style="text-align: left;">option</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">-h</td>
-<td align="left">Print help message and exits.</td>
+<td style="text-align: left;">-h</td>
+<td style="text-align: left;">Print help message and exits.</td>
 </tr>
 <tr>
-<td align="left">-i</td>
-<td align="left">Input a TXT file containing abbreviated species names.</td>
+<td style="text-align: left;">-i</td>
+<td style="text-align: left;">Input a TXT file containing abbreviated species names.</td>
 </tr>
 <tr>
-<td align="left">-o</td>
-<td align="left">A directory to store outputs. The default is "Outdata".</td>
+<td style="text-align: left;">-o</td>
+<td style="text-align: left;">A directory to store outputs. The default is "Outdata".</td>
 </tr>
 <tr>
-<td align="left">-t</td>
-<td align="left">Number of processing threads (CPUs). The default is 1.</td>
+<td style="text-align: left;">-t</td>
+<td style="text-align: left;">Number of processing threads (CPUs). The default is 1.</td>
 </tr>
 <tr>
-<td align="left">-e</td>
-<td align="left">FASTA format files to extend the tree with the --ehcp or --esrna option.</td>
+<td style="text-align: left;">-e</td>
+<td style="text-align: left;">FASTA format files to extend the tree with the --ehcp or --esrna option.</td>
 </tr>
 <tr>
-<td align="left">-db</td>
-<td align="left">The absolute path for local database.</td>
+<td style="text-align: left;">-db</td>
+<td style="text-align: left;">The absolute path for local database.</td>
 </tr>
 <tr>
-<td align="left">--hcp</td>
-<td align="left">HCP (highly conserved protein) method (default).</td>
+<td style="text-align: left;">--hcp</td>
+<td style="text-align: left;">HCP (highly conserved protein) method (default).</td>
 </tr>
 <tr>
-<td align="left">--ehcp</td>
-<td align="left">HCP method with extended HCP sequences.</td>
+<td style="text-align: left;">--ehcp</td>
+<td style="text-align: left;">HCP method with extended HCP sequences.</td>
 </tr>
 <tr>
-<td align="left">--srna</td>
-<td align="left">SSU method.</td>
+<td style="text-align: left;">--srna</td>
+<td style="text-align: left;">SSU method.</td>
 </tr>
 <tr>
-<td align="left">--esrna</td>
-<td align="left">SSU rRNA method with extended SSU rRNA sequences.</td>
+<td style="text-align: left;">--esrna</td>
+<td style="text-align: left;">SSU rRNA method with extended SSU rRNA sequences.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="example">Example</h3>
 <p>Download the example input file:</p>
-<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/organism_example_list.txt&quot;
+<pre><code class="language-bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/organism_example_list.txt&quot;
 
 --2016-10-29 19:41:53--  https://yangfangs.github.io/physpetools/example/organism_example_list.txt
 Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.24.133
@@ -192,9 +207,8 @@ adk
 aeh
 aeq
 </code></pre>
-
 <p><strong>Automatically reconstruct species trees by HCP</strong></p>
-<pre><code class="bash">$ PhySpeTree autobuild -i organism_example_list.txt --hcp
+<pre><code class="language-bash">$ PhySpeTree autobuild -i organism_example_list.txt --hcp
 Loading organisms names success.....
 
 The result are store in:Outdata
@@ -212,7 +226,6 @@ Now loading data and constructing phylogenetic tree......
 2016-10-29 19:44:21,333 KEGG INDEX DB INFO: Retrieve and download of highly conserved protein 'Ribosomal protein L14' was successful store in p9.fasta file
 ......
 </code></pre>
-
 <p>Outputs:</p>
 <pre><code>log.log
 Outdata/
@@ -238,7 +251,6 @@ Outdata/
                                   concatenate.fasta-gb1.htm
                                   concatenate.fasta-gb1.phy
 </code></pre>
-
 <ul>
 <li><code>log.log</code>: logs.</li>
 <li>
@@ -269,7 +281,7 @@ Outdata/
 </li>
 </ul>
 <p><strong>Automatically reconstruct species trees by SSU rRNA</strong></p>
-<pre><code class="bash">$ PhySpeTree autobuild -i organism_example_list.txt --srna
+<pre><code class="language-bash">$ PhySpeTree autobuild -i organism_example_list.txt --srna
 Loading organisms names success.....
 
 The result are store in:Outdata
@@ -288,7 +300,6 @@ Now loading data and constructing phylogenetic tree......
 2016-10-29 20:13:18,969 SSU rRNA DB INFO: Retrieve and download of organism 'aeq' SSU rRNA sequence was successful
 
 </code></pre>
-
 <p>Outputs:</p>
 <pre><code>log.log
 Outdata/
@@ -307,7 +318,6 @@ Outdata/
                                   rna_sequence.fasta-gb1.htm
                                   rna_sequence.fasta-gb1.phy
 </code></pre>
-
 <ul>
 <li><code>log.log</code>: logs.</li>
 <li><code>Outdata</code>: tree files like the HCP method.</li>
@@ -330,9 +340,8 @@ Outdata/
 <h3 id="advanced-options">Advanced options</h3>
 <p>Advanced options of internal software called in PhySpeTree can be set. These options are <code>enclosed in single quotes and start with a space</code>.</p>
 <p>Here is an example of setting RAxML advanced options by <code>--raxml_p</code>:</p>
-<pre><code class="bash">$ PhySpeTree autobuild -i organism_example_list.txt -o test --srna --raxml --raxml_p ' -f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
+<pre><code class="language-bash">$ PhySpeTree autobuild -i organism_example_list.txt -o test --srna --raxml --raxml_p ' -f a -m GTRGAMMA  -p 12345 -x 12345 -# 100 -n T1'
 </code></pre>
-
 <p><strong>--muscle</strong></p>
 <blockquote>
 <p>Multiple sequence alignment by MUSCLE (default).</p>
@@ -345,14 +354,14 @@ Outdata/
 <table>
 <thead>
 <tr>
-<th align="left">option</th>
-<th align="left">description</th>
+<th style="text-align: left;">option</th>
+<th style="text-align: left;">description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">-maxiter</td>
-<td align="left">Maximum number of iterations to run. The default is 100.</td>
+<td style="text-align: left;">-maxiter</td>
+<td style="text-align: left;">Maximum number of iterations to run. The default is 100.</td>
 </tr>
 </tbody>
 </table>
@@ -384,18 +393,18 @@ Outdata/
 <table>
 <thead>
 <tr>
-<th align="left">option</th>
-<th align="left">description</th>
+<th style="text-align: left;">option</th>
+<th style="text-align: left;">description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">-t</td>
-<td align="left">Choice type of sequence (default).</td>
+<td style="text-align: left;">-t</td>
+<td style="text-align: left;">Choice type of sequence (default).</td>
 </tr>
 <tr>
-<td align="left">-e</td>
-<td align="left">Generic file extension. The default in PhySpeTree is "-gbl1".</td>
+<td style="text-align: left;">-e</td>
+<td style="text-align: left;">Generic file extension. The default in PhySpeTree is "-gbl1".</td>
 </tr>
 </tbody>
 </table>
@@ -419,30 +428,30 @@ Outdata/
 <table>
 <thead>
 <tr>
-<th align="left">option</th>
-<th align="left">description</th>
+<th style="text-align: left;">option</th>
+<th style="text-align: left;">description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">-f</td>
-<td align="left">select algorithm. The default in PhySpeTree is <code>a</code>, rapid Bootstrap analysis and search for best­scoring ML tree in one program run.</td>
+<td style="text-align: left;">-f</td>
+<td style="text-align: left;">select algorithm. The default in PhySpeTree is <code>a</code>, rapid Bootstrap analysis and search for best­scoring ML tree in one program run.</td>
 </tr>
 <tr>
-<td align="left">-m</td>
-<td align="left">Model of binary (morphological), nucleotide, multi­State, or amino acid substitution. The PhySpeTree default set is PROTGAMMAJTTX.</td>
+<td style="text-align: left;">-m</td>
+<td style="text-align: left;">Model of binary (morphological), nucleotide, multi­State, or amino acid substitution. The PhySpeTree default set is PROTGAMMAJTTX.</td>
 </tr>
 <tr>
-<td align="left">-p</td>
-<td align="left">Specify a random number seed for the parsimony inferences. The default in PhySpeTree is 12345.</td>
+<td style="text-align: left;">-p</td>
+<td style="text-align: left;">Specify a random number seed for the parsimony inferences. The default in PhySpeTree is 12345.</td>
 </tr>
 <tr>
-<td align="left">-x</td>
-<td align="left">Specify an integer number (random seed) and turn on rapid bootstrapping. The default in PhySpeTree is 12345.</td>
+<td style="text-align: left;">-x</td>
+<td style="text-align: left;">Specify an integer number (random seed) and turn on rapid bootstrapping. The default in PhySpeTree is 12345.</td>
 </tr>
 <tr>
-<td align="left">-N</td>
-<td align="left">The same with -# specify the number of alternative runs on distinct starting trees. The default in PhySpeTree is 100.</td>
+<td style="text-align: left;">-N</td>
+<td style="text-align: left;">The same with -# specify the number of alternative runs on distinct starting trees. The default in PhySpeTree is 100.</td>
 </tr>
 </tbody>
 </table>
@@ -464,45 +473,44 @@ Outdata/
 </blockquote>
 <h2 id="build">build</h2>
 <p>The <code>build</code> module is used to reconstruct species trees with manually prepared sequences. Advanced options are the same as <code>autobuild</code> module.</p>
-<pre><code class="bash"># multiple method
+<pre><code class="language-bash"># multiple method
 $ PhySpeTree build -i example_hcp -o output --multiple
 
 # single method
 $ PhySpeTree build -i example_16s_ssurna.fasta -o output --single
 </code></pre>
-
 <h3 id="build-options">build options</h3>
 <table>
 <thead>
 <tr>
-<th align="left">option</th>
-<th align="left">Description</th>
+<th style="text-align: left;">option</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">-h</td>
-<td align="left">Print help message and exits.</td>
+<td style="text-align: left;">-h</td>
+<td style="text-align: left;">Print help message and exits.</td>
 </tr>
 <tr>
-<td align="left">-i</td>
-<td align="left">Input a TXT file containing abbreviated species names.</td>
+<td style="text-align: left;">-i</td>
+<td style="text-align: left;">Input a TXT file containing abbreviated species names.</td>
 </tr>
 <tr>
-<td align="left">-o</td>
-<td align="left">A directory to store outputs. The default is "Outdata".</td>
+<td style="text-align: left;">-o</td>
+<td style="text-align: left;">A directory to store outputs. The default is "Outdata".</td>
 </tr>
 <tr>
-<td align="left">-t</td>
-<td align="left">Number of processing threads (CPUs). The default is 1.</td>
+<td style="text-align: left;">-t</td>
+<td style="text-align: left;">Number of processing threads (CPUs). The default is 1.</td>
 </tr>
 <tr>
-<td align="left">--multiple</td>
-<td align="left">Specify concatenate highly conserved protein method to reconstruct phylogenetic tree.</td>
+<td style="text-align: left;">--multiple</td>
+<td style="text-align: left;">Specify concatenate highly conserved protein method to reconstruct phylogenetic tree.</td>
 </tr>
 <tr>
-<td align="left">--single</td>
-<td align="left">Use SSU rRNA data to reconstruct phylogenetic tree.</td>
+<td style="text-align: left;">--single</td>
+<td style="text-align: left;">Use SSU rRNA data to reconstruct phylogenetic tree.</td>
 </tr>
 </tbody>
 </table>
@@ -510,7 +518,7 @@ $ PhySpeTree build -i example_16s_ssurna.fasta -o output --single
 <p><strong>Build species trees by manually prepared HCP</strong></p>
 <p>The HCP sequences belonging to the same class are prepared in one FASTA format file, and all FASTA format files are stored in the same folder. For example, the folder <a href="../example/example_build_hcp.tar.gz">example_build_hcp</a> contains 10 classes of HCP (p1~p10) corresponding to 10 different organisms. There is no limit number of HCP sequences. We recommend no less than 10 highly conserved proteins to ensure the accuracy of the reconstructed phylogenetic tree.</p>
 <p>Download and decompress the example input file:</p>
-<pre><code class="bash">
+<pre><code class="language-bash">
 $ wget &quot;https://yangfangs.github.io/physpetools/example/example_build_hcp.tar.gz&quot;
 
 --2016-10-29 20:40:41--  https://yangfangs.github.io/physpetools/example/example_build_hcp.tar.gz
@@ -539,9 +547,8 @@ example_build_hcp/p8.fasta
 example_build_hcp/p9.fasta
 example_build_hcp/p10.fasta
 </code></pre>
-
 <p>Check HCP:</p>
-<pre><code class="bash">$ cd  example_build_hcp/
+<pre><code class="language-bash">$ cd  example_build_hcp/
 $ cat p1.fasta 
 &gt;aeh
 MARLTKRQKAIREKIDPAQQYPVAEALGLLRELPGAKFTESVEVAVNLGVDPRKSDQIVR
@@ -594,11 +601,9 @@ GTIVLPHGTGITKRVLVLAVGEKVKEAEDAGADIVGGDDLIQKISTGWLDFDAVIATPDM
 MKSVGRLGKILGPRGLMPSAKAGTVTFDVADAIKEIKAGRVEFRVDKTAIIHNMVGKKSF
 EAEKLFENLKVLYRAILKARPASAKGTYVRSFYIAPTMGVGIKIDPVAASKEVAEA
 </code></pre>
-
 <p>Reconstruct species tree and store outputs in the <code>build_hcp_tree</code> folder:</p>
-<pre><code class="bash">PhySpeTree build -i example_build_hcp -o build_hcp_tree --multiple
+<pre><code class="language-bash">PhySpeTree build -i example_build_hcp -o build_hcp_tree --multiple
 </code></pre>
-
 <p><strong>Build species trees by manually prepared SSU rRNA</strong></p>
 <p>All SSU rRNA sequences are prepared in one FASTA format file, for example <a href="../example/example_build_srna.fasta">example_build_srna</a>.</p>
 <p>Download and decompress the example input file:</p>
@@ -627,20 +632,16 @@ $ grep '&gt;' example_build_srna.fasta
 &gt;aeh
 &gt;aeq
 </code></pre>
-
 <p>Reconstruct species tree and store outputs in the <code>build_srna_tree</code> folder:</p>
-<pre><code class="bash">PhySpeTree build -i example_build_srna.fasta -o build_srna_tree --single --fasttree
+<pre><code class="language-bash">PhySpeTree build -i example_build_srna.fasta -o build_srna_tree --single --fasttree
 </code></pre>
-
 <h2 id="combine">combine</h2>
 <p>The <strong>combine</strong> module is used to combine trees generated from different methods. It contains two steps, at first merge different tree files into the same file. You can use <code>cat</code> bash command in the Linux system, for example:</p>
-<pre><code class="bash">$ cat tree1.tree tree2.tree &gt; combineTree.tree
+<pre><code class="language-bash">$ cat tree1.tree tree2.tree &gt; combineTree.tree
 </code></pre>
-
 <p>Then, use <strong>combine</strong>:</p>
-<pre><code class="bash">$ PhySpeTree combine -i combineTree.tree [options]*
+<pre><code class="language-bash">$ PhySpeTree combine -i combineTree.tree [options]*
 </code></pre>
-
 <h3 id="combine-options">combine options</h3>
 <table>
 <thead>
@@ -687,7 +688,7 @@ $ grep '&gt;' example_build_srna.fasta
 <h3 id="example_2">Example</h3>
 <p><a href="../example/example_combine_tree.tar.gz">example_combine_tree.tar.gz</a> contains <code>tree1.tree</code> and <code>tree2.tree</code> reconstructed by the HCP and SSU rRNA method, respectively.</p>
 <p>Download and decompress the example input file:</p>
-<pre><code class="bash">
+<pre><code class="language-bash">
 $ wget &quot;https://yangfangs.github.io/physpetools/example/example_combine_tree.tar.gz&quot;
 
 --2016-10-30 13:32:06--  https://yangfangs.github.io/physpetools/example/example_combine_tree.tar.gz
@@ -707,22 +708,18 @@ example_combine_tree/
 example_combine_tree/tree2.tree
 example_combine_tree/tree1.tree
 </code></pre>
-
 <p>Merge <code>tree1.tree</code> and <code>tree2.tree</code>:</p>
-<pre><code class="bash">$ cd example_combine_tree/
+<pre><code class="language-bash">$ cd example_combine_tree/
 $ cat tree1.tree tree2.tree &gt; combine.tree
 </code></pre>
-
 <p>Combine trees:</p>
-<pre><code class="bash">PhySpeTree combine -i combine.tree -o combineTree
+<pre><code class="language-bash">PhySpeTree combine -i combine.tree -o combineTree
 </code></pre>
-
 <p>Outputs:</p>
 <pre><code>combine/
         RAxML_info.T1
         RAxML_MajorityRuleConsensusTree.T1
 </code></pre>
-
 <ul>
 <li><code>RAxML_info.T1</code>: logs in running RAxML.</li>
 <li><code>RAxML_MajorityRuleConsensusTree.T1</code>: the majority rule consensus tree.</li>
@@ -732,14 +729,12 @@ $ cat tree1.tree tree2.tree &gt; combine.tree
 <p>Notice: The --astral option calls the third-party software ASTRAL. Please be aware that JRE has been installed in your running environments.
 For users who run the Docker image of PhySpeTree, JRE is unnecessary.</p>
 </blockquote>
-<pre><code class="bash">PhySpeTree combine -i combine.tree -o combineTree --astral
+<pre><code class="language-bash">PhySpeTree combine -i combine.tree -o combineTree --astral
 </code></pre>
-
 <p>Outputs:</p>
 <pre><code>combineTree/
            combine.tree
 </code></pre>
-
 <h2 id="using-supertree-option">Using <code>--supertree</code> option</h2>
 <ul>
 <li>Use Spr_Supertree combining conflicting evolutionary histories that are due to lateral gene transfer (LGT).</li>
@@ -758,63 +753,59 @@ trees.tree                100%[=====================================&gt;]     14
 2019-10-02 15:49:44 (168 MB/s) - saved “trees.tree” [140/140])
 
 </code></pre>
-
 <p><code>supertree</code> option:</p>
-<pre><code class="bash">PhySpeTree combine -i trees.tree -o Supertree --supertree
+<pre><code class="language-bash">PhySpeTree combine -i trees.tree -o Supertree --supertree
 </code></pre>
-
 <p>Outputs:</p>
 <pre><code>Supertree/
           spr_supertree.tree
 </code></pre>
-
 <h2 id="iview">iview</h2>
 <p>PhySpeTree provides the <code>iview</code> module to annotate taxonomic information (kingdom, phylum, class, or order) of output trees and to generate configure files linked to <a href="http://itol.embl.de/">iTol</a>.</p>
-<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range
+<pre><code class="language-bash">$ PhySpeTree iview -i organism_example_list.txt --range
 </code></pre>
-
 <h3 id="iview-options">iview options</h3>
 <table>
 <thead>
 <tr>
-<th align="left">option</th>
-<th align="left">Description</th>
+<th style="text-align: left;">option</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">-h</td>
-<td align="left">Print help message and exits.</td>
+<td style="text-align: left;">-h</td>
+<td style="text-align: left;">Print help message and exits.</td>
 </tr>
 <tr>
-<td align="left">-i</td>
-<td align="left">Input a TXT file containing abbreviated species names.</td>
+<td style="text-align: left;">-i</td>
+<td style="text-align: left;">Input a TXT file containing abbreviated species names.</td>
 </tr>
 <tr>
-<td align="left">-o</td>
-<td align="left">A directory to store outputs. The default is "iview".</td>
+<td style="text-align: left;">-o</td>
+<td style="text-align: left;">A directory to store outputs. The default is "iview".</td>
 </tr>
 <tr>
-<td align="left">-a</td>
-<td align="left">Colored ranges [kingdom, phylum, class or order].</td>
+<td style="text-align: left;">-a</td>
+<td style="text-align: left;">Colored ranges [kingdom, phylum, class or order].</td>
 </tr>
 <tr>
-<td align="left">-r/--range</td>
-<td align="left">Annotating labels with ranges by kingdom, phylum, class or order. The default is phylum.</td>
+<td style="text-align: left;">-r/--range</td>
+<td style="text-align: left;">Annotating labels with ranges by kingdom, phylum, class or order. The default is phylum.</td>
 </tr>
 <tr>
-<td align="left">-c/--color</td>
-<td align="left">Annotating labels without ranges by kingdom, phylum, class or order. The default is phylum.</td>
+<td style="text-align: left;">-c/--color</td>
+<td style="text-align: left;">Annotating labels without ranges by kingdom, phylum, class or order. The default is phylum.</td>
 </tr>
 <tr>
-<td align="left">-l/--labels</td>
-<td align="left">Change species labels from abbreviated names to full names.</td>
+<td style="text-align: left;">-l/--labels</td>
+<td style="text-align: left;">Change species labels from abbreviated names to full names.</td>
 </tr>
 </tbody>
 </table>
 <h3 id="example_3">Example</h3>
 <p>Download the example file:</p>
-<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/organism_example_list.txt&quot;
+<pre><code class="language-bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/organism_example_list.txt&quot;
 
 --2016-10-30 13:40:48--  https://yangfangs.github.io/physpetools/example/organism_example_list.txt
 Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
@@ -827,14 +818,12 @@ organism_example_list.txt    100%[==============================================
 
 2016-10-30 13:40:50 (21.5 MB/s) - ‘organism_example_list.txt’ saved [39/39]
 </code></pre>
-
 <p><strong>Annotate the tree by kingdom</strong></p>
-<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range -a kingdom
+<pre><code class="language-bash">$ PhySpeTree iview -i organism_example_list.txt --range -a kingdom
 Color range by kingdom was complete.
 </code></pre>
-
 <p>The color range file is store in the <code>iview</code> folder:</p>
-<pre><code class="bash">$ cd iview
+<pre><code class="language-bash">$ cd iview
 $ cat range_color_by_kingdom.txt 
 TREE_COLORS
 SEPARATOR TAB
@@ -850,14 +839,12 @@ adk     range   #BEBF5A Prokaryotes
 aeh     range   #BEBF5A Prokaryotes
 aeq     range   #BEBF5A Prokaryotes
 </code></pre>
-
 <p><strong>Annotate the tree by phylum</strong></p>
-<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range -a phylum
+<pre><code class="language-bash">$ PhySpeTree iview -i organism_example_list.txt --range -a phylum
 Color range by phylum was complete.
 </code></pre>
-
 <p>The color range file is store in the <code>iview</code> folder:</p>
-<pre><code class="bash">$ cd iview
+<pre><code class="language-bash">$ cd iview
 $ cat range_color_by_phylum.txt 
 TREE_COLORS
 SEPARATOR TAB
@@ -873,14 +860,12 @@ adk     range   #865142 Bacteria
 aeh     range   #865142 Bacteria
 aeq     range   #865142 Bacteria
 </code></pre>
-
 <p><strong>Annotate the tree by class</strong></p>
-<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range -a class
+<pre><code class="language-bash">$ PhySpeTree iview -i organism_example_list.txt --range -a class
 Color range by class was complete.
 </code></pre>
-
 <p>The color range file is store in the <code>iview</code> folder:</p>
-<pre><code class="bash">$ cd iview
+<pre><code class="language-bash">$ cd iview
 $ cat range_color_by_class.txt 
 TREE_COLORS
 SEPARATOR TAB
@@ -896,14 +881,12 @@ adk     range   #DDC8B7 Betaproteobacteria
 aeh     range   #72E137 Gammaproteobacteria - Others
 aeq     range   #99D1DB Actinobacteria
 </code></pre>
-
 <p><strong>Annotate the tree by order</strong></p>
-<pre><code class="bash">$ PhySpeTree iview -i organism_example_list.txt --range -a order
+<pre><code class="language-bash">$ PhySpeTree iview -i organism_example_list.txt --range -a order
 Color range by order was complete.
 </code></pre>
-
 <p>The color range file is store in the <code>iview</code> folder:</p>
-<pre><code class="bash">$ cd iview
+<pre><code class="language-bash">$ cd iview
 $ cat range_color_by_order.txt 
 TREE_COLORS
 SEPARATOR TAB
@@ -919,44 +902,42 @@ adk     range   #C8184E Alicycliphilus
 aeh     range   #57A569 Alkalilimnicola
 aeq     range   #F1A2B7 Adlercreutzia
 </code></pre>
-
 <h2 id="check">check</h2>
 <p>The <code>check</code> module is used to check whether input organisms are in pre-built databases.</p>
-<pre><code class="bash">$ PhySpeTree check -i organism_example_list.txt --ehcp
+<pre><code class="language-bash">$ PhySpeTree check -i organism_example_list.txt --ehcp
 </code></pre>
-
 <h3 id="check-options">check options</h3>
 <table>
 <thead>
 <tr>
-<th align="left">option</th>
-<th align="left">Description</th>
+<th style="text-align: left;">option</th>
+<th style="text-align: left;">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">-h</td>
-<td align="left">Print help message and exits.</td>
+<td style="text-align: left;">-h</td>
+<td style="text-align: left;">Print help message and exits.</td>
 </tr>
 <tr>
-<td align="left">-i</td>
-<td align="left">Input a TXT file containing abbreviated species names.</td>
+<td style="text-align: left;">-i</td>
+<td style="text-align: left;">Input a TXT file containing abbreviated species names.</td>
 </tr>
 <tr>
-<td align="left">-o</td>
-<td align="left">A directory to store outputs. The default is "check".</td>
+<td style="text-align: left;">-o</td>
+<td style="text-align: left;">A directory to store outputs. The default is "check".</td>
 </tr>
 <tr>
-<td align="left">--hcp</td>
-<td align="left">Check whether organisms are supported in the KEGG database.</td>
+<td style="text-align: left;">--hcp</td>
+<td style="text-align: left;">Check whether organisms are supported in the KEGG database.</td>
 </tr>
 <tr>
-<td align="left">--ehcp</td>
-<td align="left">Check input organisms prepare for extend autobuild tree module.</td>
+<td style="text-align: left;">--ehcp</td>
+<td style="text-align: left;">Check input organisms prepare for extend autobuild tree module.</td>
 </tr>
 <tr>
-<td align="left">--srna</td>
-<td align="left">Check whether organisms are supported in the SILVA database.</td>
+<td style="text-align: left;">--srna</td>
+<td style="text-align: left;">Check whether organisms are supported in the SILVA database.</td>
 </tr>
 </tbody>
 </table>
@@ -964,7 +945,7 @@ aeq     range   #F1A2B7 Adlercreutzia
 <p><strong>Check extended organisms in <code>autobuild</code></strong></p>
 <p>Determine proteins to be prepared in the <code>autobuild</code> module with the <code>--ehcp</code> option, for example, <a href="../example/organism_example_list.txt">organism_example_list.txt</a></p>
 <p>Download the example file:</p>
-<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/organism_example_list.txt&quot;
+<pre><code class="language-bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/organism_example_list.txt&quot;
 
 --2016-10-30 13:40:48--  https://yangfangs.github.io/physpetools/example/organism_example_list.txt
 Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
@@ -977,9 +958,8 @@ organism_example_list.txt    100%[==============================================
 
 2016-10-30 13:40:50 (21.5 MB/s) - ‘organism_example_list.txt’ saved [39/39]
 </code></pre>
-
 <p>Check: </p>
-<pre><code class="bash">$ PhySpeTree check -i organism_example_list.txt --ehcp
+<pre><code class="language-bash">$ PhySpeTree check -i organism_example_list.txt --ehcp
 
 'Ribosomal protein L1' ----------------------------------&gt; p1.fasta
 
@@ -1034,9 +1014,8 @@ organism_example_list.txt    100%[==============================================
 Check extend highly conserved protein is completed.
 
 </code></pre>
-
 <p>The check result is stored in the <code>check</code> folder. In <code>physpe_echp_extend.txt</code> file indicates class of HCP and their corresponding names, which will be used to prepare extended HCP sequences.</p>
-<pre><code class="bash">$ cd check
+<pre><code class="language-bash">$ cd check
 $ cat physpe_echp_extend.txt 
 'Ribosomal protein L1' ----------------------------------&gt; p1.fasta
 'DNA-directed RNA polymerase subunit alpha' ----------------------------------&gt; p2.fasta
@@ -1064,11 +1043,10 @@ $ cat physpe_echp_extend.txt
 'DNA-directed RNA polymerase beta subunit' ----------------------------------&gt; p24.fasta
 'Ribosomal protein S13' ----------------------------------&gt; p25.fasta
 </code></pre>
-
 <p><strong>Check whether input organisms are supported in PhySpeTree</strong></p>
 <p>Check whether input species are supported by the KEGG database when using the <code>--hcp</code> method, for example <a href="../example/191speciesnames.txt">example download</a>.</p>
 <p>Download the example file:</p>
-<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/191speciesnames.txt&quot;
+<pre><code class="language-bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/191speciesnames.txt&quot;
 
 --2016-10-30 14:48:21--  https://yangfangs.github.io/physpetools/example/191speciesnames.txt
 Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
@@ -1081,17 +1059,15 @@ Saving to: ‘191speciesnames.txt’
 
 2016-10-30 14:48:22 (322 MB/s) - ‘191speciesnames.txt’ saved [773/773]
 </code></pre>
-
 <p>The check results show one organism named 'ges' is not supported in PhySpeTree:</p>
-<pre><code class="bash">$ PhySpeTree check -i 191speciesnames.txt --hcp
+<pre><code class="language-bash">$ PhySpeTree check -i 191speciesnames.txt --hcp
 WARNING: The following species are not supported by KEGG DATABASE:
 ges
 Checked  whether the input species names in KEGG DATABASE completed.
 </code></pre>
-
 <p>Check whether input species are supported by SILVA database when using the <code>--srna</code> metho, for example <a href="../example/191speciesnames.txt">example download</a></p>
 <p>Download the example file:</p>
-<pre><code class="bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/191speciesnames.txt&quot;
+<pre><code class="language-bash">$ wget &quot;https://yangfangs.github.io/physpetools/example/191speciesnames.txt&quot;
 
 --2016-10-30 14:48:21--  https://yangfangs.github.io/physpetools/example/191speciesnames.txt
 Resolving yangfangs.github.io (yangfangs.github.io)... 151.101.48.133
@@ -1104,9 +1080,8 @@ Saving to: ‘191speciesnames.txt’
 
 2016-10-30 14:48:22 (322 MB/s) - ‘191speciesnames.txt’ saved [773/773]
 </code></pre>
-
 <p>The check results show 28 organisms are not supported in PhySpeTree:</p>
-<pre><code class="bash">
+<pre><code class="language-bash">
 (progect) [yangfang@localhost test_check] $ PhySpeTree check -i 191speciesnames.txt --srna
 WARNING: The following species are not supported by SILVA DATABASE:
 neq
@@ -1139,50 +1114,49 @@ bpa
 ppr
 Checked  whether the input species names in SILVA DATABASE completed.
 </code></pre>
-
 <p>For organisms not in the pre-built list, PhySpeTree provides extend options (<code>--echp</code> or <code>--esrna</code>) to insert manually prepared sequences.</p></div>
+            </div>
         </div>
 
         <footer class="col-md-12">
             <hr>
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
         <script>
             var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="../js/base.js" defer></script>
-        <script src="../search/main.js" defer></script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
-    <div class="modal-dialog">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
-                <p>
-                    From here you can search these documents. Enter
-                    your search terms below.
-                </p>
-                <form role="form">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
-                <div id="mkdocs-search-results"></div>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
             </div>
             <div class="modal-footer">
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
