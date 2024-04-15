@@ -76,6 +76,7 @@ When users can't connect to the Internet. They can download the HCP or SSU rRNA 
 
 * SSU rRNA database: [database16s.tar.gz](ftp://173.255.208.244/pub/db/database16s.tar.gz)
 * HCP database: [databasehcp.tar.gz](ftp://173.255.208.244/pub/db/databasehcp.tar.gz)
+> If you can not clink the hyperlink to obtain SSU rRNA and HCP databases, you can download from `ftp://23.105.208.65` by FTP tools.
 
 Use `$ tar -zxvf database16s.tar.gz` decompress the download database.
 
